@@ -1,0 +1,55 @@
+<div class="portfolioSection">
+   <div class="modal fade" id="add_portfolio" role="dialog" tabindex="-1">
+      <div class="modal-dialog">
+         <!-- Modal content-->
+         <form name="portfolioFrm" id="portfolioFrm" method="post" enctype="multipart/form-data">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                  </button>
+                  <h4 class="modal-title">
+                     {FD_ADD_PROJECT}
+                  </h4>
+               </div>
+               <div class="modal-body add_portfolio">
+                 
+                     <div class="form-group text-center">
+                        <div class="file-input-wrapper">
+                           <label for="upload-file" class="file-input-button">
+                           {FD_CHOOSE_IMAGE}
+                           </label>
+                           <input id="upload-file" type="file" name="portFolioimage" accept="image/x-png,image/jpeg,image/jpeg"/>
+                           <input type="hidden" name="old_image" id="old_image" value="%OLD_IMG%">
+                           %PORTFOLIO_IMG%
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label class="control-label">{FD_PROJECT_TITLE}</label>
+                        <input class="form-control" name="projectTitle" id="projectTitle" value="%PROJECT_TITLE%"/>
+                     </div>
+                     <div class="form-group">
+                        <label class="control-label">{FD_PROJECT_DURATION}</label>
+                        <input class="form-control" name="projectDuration" id="projectDuration" value="%PROJECT_DURATION%"/>
+                     </div>
+                     <div class="form-group">
+                        <label class="control-label">{FD_PROJECT_SKILLS}</label>
+                        <select data-placeholder="skill list"  class="form-control skill_choose" multiple tabindex="4" name="project_skill_name[]" id="project_skill_name">%PROJECT_SKILL_LIST%</select>
+                     </div>
+                     <div class="form-group">
+                        <label class="control-label">{FD_PROJECT_DESCRIPTION}</label>
+                        <textarea class="form-control" name="projectDesc" id="projectDesc">%PROJECT_DESC%</textarea>
+                     </div>
+               </div>
+               <div class="modal-footer">
+                  <div class="theme-button">
+                     <input type="hidden" name="action" id="action" value="addPortfolio">
+                     <input type="hidden" name="id" id="id" value="%ID%">
+                     <button type="submit" name="addPorfolio" id="addPorfolio" class="btn btn-system">{FD_SAVE}</button>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

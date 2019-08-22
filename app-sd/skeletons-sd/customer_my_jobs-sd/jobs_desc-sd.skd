@@ -1,0 +1,137 @@
+<li class="cm-job-item job_%JOB_ID%">
+    <div class="cmj-title-wrap">
+        <h4 class="cmj-title"><a href="%DETAIL_LINK%">%JOB_TITLE%</a></h4>
+        <span class="cmj-deadline">%BIDDING_DEADLINE%</span>
+    </div>
+    <ul class="cmj-breadcrumb">
+        <li>%JOB_CATEGORY%</li>
+        <li>%JOB_SUB_CATEGORY%</li>
+    </ul>
+    <div class="cmj-budget">{CMJ_EST_BUDGET} : <div class="amount-wrap">%JOB_BUDGET%</div></div>
+    <div class="cmj-details">%JOB_DESC%</div>
+    <ul class="cmj-skills clearfix">
+        %JOB_SKILLS%
+    </ul>
+    <ul class="cmj-status clearfix">
+        <li>{CMJ_NO_OF_BIDS} : <span>%JOB_APPLICANT%</span></li>
+        <li><span>%JOB_TYPE%</span></li>
+        <li>Job acceptance status : <span>%JOB_STATUS%</span></li>
+        <li><span>%JOB_LEVEL%</span></li>
+    </ul>
+    <div class="cmj-footer">
+        <div class="cmj-action-wrap clearfix">
+            <ul class="cmj-post-status">
+                <li><span class="badge badge-pill badge-success">%APPR_STATUS%</span></li>
+                <li>Posted : <span>%JOB_POSTED_TIME%</span></li>
+            </ul>
+            <ul class="cmj-post-action pull-right">
+                <li class="%FEATURED_LBL_CLASS%">Featured <span><i class="fa fa-check-square"></i></span></li>
+                <li class="%HIDE_CLASS% %EDIT_BTN_HIDE%"><a class="edit %HIDE_CLASS% %EDIT_BTN_HIDE%" title="Edit" href="{SITE_URL}c/post-job/%JOB_SLUG%" id="job_edit" data-id="%JOB_ID%"><i class="fa fa-edit" aria-hidden="true"></i></a></li>
+                <li class="%HIDE_CLASS%"><a class="delete %HIDE_CLASS%" data-id="%JOB_ID%" id="job_delete" title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="cmj-button-wrap">
+            <!-- <a class="btn btn-secondary" href="">Pay featured Fee</a> -->
+            <div class="cmj-button %IS_REJECTED% %FEATURE_HIDE% %EDIT_BTN_HIDE% ask_feature" data-id="%JOB_ID%">
+                <a class="btn btn-secondary btn-md" href="javascript:void(0)">{CMJ_MAKE_FEATURED}</a>
+            </div>
+            <div class="cmj-button %PAY_FEATURE_HIDE% payNow" data-id="%JOB_ID%" data-dur="%DATA_DURATION%">
+                <a class="btn btn-secondary btn-md" href="javascript:void(0)">{CMJ_PAY_FEATURED_FEE}</a>
+            </div>
+            <div class="cmj-button %BID_HIDE%">
+                <a class="btn btn-primary" href="{SITE_URL}proposals/%JOB_SLUG%">{CMJ_VIEW_BIDS}</a>
+            </div>
+            <div class="cmj-button %WORKROOM_HIDE%">
+                <a class="btn btn-primary" href="{SITE_URL}job/workroom/%JOB_SLUG%/%BID_ID%">{CMJ_WORKROOM}</a>
+            </div>
+            <div class="cmj-button %INVITATION%">
+                <a class="btn btn-primary" href="{SITE_URL}c/my-jobs/job-invitation/%JOB_SLUG%"> {CMJ_VIEW_INVITED_FREELANCER} </a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- <li class="card-block job_%JOB_ID%">
+  <div class="%FEATURED_LBL_CLASS%">
+      <span class="">
+      %FEATURED_LBL%
+      </span>
+  </div>
+  <h4 class="card-title">
+    <a href="%DETAIL_LINK%" target="_blank">%JOB_TITLE%</a>
+  </h4>
+  <div class="edit_remove">
+    <a class="delete %HIDE_CLASS%" data-id="%JOB_ID%" id="job_delete" title="Delete">
+      <img src="{SITE_IMG}icon/garbage.png" alt="">
+    </a>
+    <a class="edit %HIDE_CLASS% %EDIT_BTN_HIDE%" title="Edit" href="{SITE_URL}c/post-job/%JOB_SLUG%" id="job_edit" data-id="%JOB_ID%">
+      <i class="fa fa-pencil" aria-hidden="true"></i>
+    </a>
+  </div>
+  <div class="category_subcategory">
+    <span>
+      %JOB_CATEGORY%
+      <i class="fa fa-angle-right" aria-hidden="true">
+      </i>
+      %JOB_SUB_CATEGORY%
+    </span>
+  </div>
+  <ul class="project-desc list-inline">
+    <li class="theme-color">
+     %JOB_LEVEL%
+   </li>
+   <li>
+    {CMJ_EST_BUDGET} : %JOB_BUDGET%
+  </li>
+  <li>
+    %JOB_POSTED_TIME%
+  </li>
+  <li>
+    %JOB_TYPE%
+  </li>
+  <li>%JOB_STATUS%</li>
+</ul>
+
+<p class="job_desc">
+  %JOB_DESC%
+</p>
+<ul class="recevied_addons">
+  <li>
+    <label>{CMJ_NO_OF_BIDS} : </label>
+    <span>%JOB_APPLICANT%</span>
+  </li>
+  <li>
+    <label>{CMJ_BIDDING_DEADLINE} : </label>
+    <span>%BIDDING_DEADLINE%</span>
+  </li>
+  <li>
+    <label>{CMJ_APPROVAL_STATUS} : </label>
+    <span>%APPR_STATUS%</span>
+  </li>
+</ul>
+<div class="services">
+  <label>{JOB_SKILLS_LBL}</label><br>
+  <ul class="list-inline">
+    %JOB_SKILLS%
+  </ul>
+</div>
+<div class="row">
+  <div class="col-md-12 col-sm-12 text-right">
+    <div class="theme-button make-feature %IS_REJECTED% %FEATURE_HIDE% %EDIT_BTN_HIDE% ask_feature" data-id="%JOB_ID%">
+      <a href="javascript:void(0)">{CMJ_MAKE_FEATURED}</a>
+    </div>
+    <div class="theme-button %PAY_FEATURE_HIDE% make-feature payNow" data-id="%JOB_ID%" data-dur="%DATA_DURATION%">
+      <a href="javascript:void(0)">{CMJ_PAY_FEATURED_FEE}</a>
+    </div>
+    <div class="theme-button %BID_HIDE%">
+      <a href="{SITE_URL}proposals/%JOB_SLUG%">{CMJ_VIEW_BIDS}</a>
+    </div>
+    <div class="theme-button %WORKROOM_HIDE%">
+      <a href="{SITE_URL}job/workroom/%JOB_SLUG%">{CMJ_WORKROOM}</a>
+    </div>
+    <div class="theme-button %INVITATION%">
+      <a href="{SITE_URL}c/my-jobs/job-invitation/%JOB_SLUG%"> {CMJ_VIEW_INVITED_FREELANCER} </a>
+    </div>
+  </div>
+</div>
+</li> -->

@@ -1,0 +1,222 @@
+<form action="" id="payOrderForm" data-order-id="%OID%" name="payOrderForm" method="post">
+  <section class="payment-section">
+   <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pay-order-summary-wrap">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">{ORDER_ITEMS}</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="order-summery-item-wrap">
+                                        <ul class="osi-lists liststyle-none orderData" id="orderData">
+                                            %ORDER_LOOP%
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">{ORDER_SUMMARY_LBL}</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="ospay-wrap">
+                                        <label>{ORDER_PAYABLE_AMNT_LBL}</label>
+                                        <div class="amount-wrap TotalPay">%FINAL_PRICE%</div>
+                                        <div class="order-pay-btn-wra %FINAL_PRICE_CLASS%">
+                                           <input type="hidden" name="action" id="action" value="payforOrder">
+                                           <button type="button" class="btn btn-primary btn-block btn-lg payNow">{PAY_NOW_LBL}</button>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?/* <div class="theme-form">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="main-heading">{ORDER_SUMMARY_LBL}</h3>
+              <div class=" table-responsive">
+                <table class="table table-striped table-bordered" id="orderTable">
+                  <thead class="thead-default">
+                    <tr>
+                      <th>
+                        {IMG_LBL}
+                      </th>
+                      <th class="title">
+                        {TITLE_LBL}
+                      </th>
+                      <th>
+                        {ORDER_PRICE_LBL}
+                      </th>
+                      <th>
+                        {ORDER_QTY_LBL}
+                      </th>
+                      <th>
+                         {DELIVERY_DETAILS_LBL}
+                      </th>
+                      <th>
+                         <!-- {ORDER_CANCEL_LBL} -->
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="orderData">
+                    %ORDER_LOOP%
+                  </tbody>
+                </table>
+              </div>
+              <div class="row %FINAL_PRICE_CLASS%">
+                <div class="col-md-4 pull-right">
+                  <div class="total-price">
+                   <p><label>{ORDER_PAYABLE_AMNT_LBL} </label><span class="TotalPay">%FINAL_PRICE%</span></p>
+                 </div>
+                </div>
+              </div>
+              <div class="theme-button pull-right %FINAL_PRICE_CLASS%">
+               <input type="hidden" name="action" id="action" value="payforOrder">
+               <button type="button" class="btn btn-system payNow">{PAY_NOW_LBL}</button>
+              </div>
+            </div>
+          </div>
+        </div> */ ?>
+    </div>
+  </section>
+</form>
+     <script type="text/javascript">
+      var url = "{SITE_URL}ajaxConfirmServiceOrder";
+      $(document).ready(function(){
+        $(document).on("change",".quantity",function(){
+          var dataId = $(this).attr("data-id"),qty = Number($(this).val()),price = Number($("#price_"+dataId).val()),addOnPrice = Number($("#addOnPrice_"+dataId).val()),Qday = Number($("#deliveryDays_"+dataId).val()),addOnDay =Number( $("#addOndeliveryDays_"+dataId).val()) ;
+          var finalPrice = (qty * price) + addOnPrice;
+          var Deliveryday =  (qty * Qday) + addOnDay;
+          $(".totalPrice_"+dataId).text(finalPrice);
+          $(".totalDays_"+dataId).text(Deliveryday);
+
+          var rowCount = $('#orderData li').length,FinalTotal=0;
+          for(var i=1;i<rowCount;i++)
+          {
+            FinalTotal += Number($(".totalPrice_"+i).text());
+          }
+          $(".TotalPay").text("{CURRENCY_SYMBOL}"+FinalTotal)
+
+        });
+
+        $(document).on("click",".CancelOrder",function(){
+
+          var id = $(this).attr("data-id");
+          swal({
+            title: "{ORDER_CANCEL_MSG_LBL}",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonClass: "btn-system",
+            confirmButtonText: "Yes",
+            closeOnConfirm: false
+          },
+          function(inputValue)
+          {
+            if(inputValue)
+            {
+              $.post(url,{"action":"cancelOrder",id:id},function(data){
+                location.reload();
+              },'json');
+              swal("{CANCELED_MSG_LBL}", "{CANCEL_CONFIRM_MSG_LBL}", "success");
+            }
+
+          });
+        });
+
+        /*Cancel addon*/
+
+        $(document).on("click",".cancel_addOn",function(){
+
+          var id = $(this).attr("data-id"),oId = $(this).attr("data-order-id"),Qday = Number($("#deliveryDays_"+id).val()),qty=$("#quantity_1").val(),addOnDay =Number( $("#addOndeliveryDays_"+id).val()), Deliveryday =  (qty * Qday) - addOnDay;
+          swal({
+            title: "{CANCEL_CONFIRMATION_MSG_LBL}",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonClass: "btn-system",
+            confirmButtonText: "Yes",
+            closeOnConfirm: false
+          },
+          function(inputValue){
+            if(inputValue)
+            {
+              $.post(url,{"action":"cancelAddOn",id:id,oId:oId},function(data){
+                $(".orderData").html(data.content);
+                $(".TotalPay").text("{CURRENCY_SYMBOL}"+data.finalPrice);
+              },'json');
+              $(".totalDays_"+id).text(Deliveryday);
+              swal("{CANCELED_MSG_LBL}", "{ADDON_CANCEL_MSG}", "success");
+            }
+          });
+        });
+
+        $(document).on("click",".payNow",function(){
+          var price = $(".TotalPay").text();
+
+          swal({
+            title: "{PAY_CONFIRMATIONMSG_LBL}",
+            text: "{BY_CLICKING_ON_CONFIRM} "+price+" {FMS_AMOUNT_WILL_BE_DEDUCTED}",
+            type: "info",
+            showCancelButton: true,
+            confirmButtonClass: "btn-system",
+            confirmButtonText: "Yes",
+            closeOnConfirm: false
+          },
+          function(inputValue)
+          {
+            if(inputValue)
+            {
+             addOverlay();
+             $("#payOrderForm").submit();
+           }
+         });
+        });
+        $(document).on("keypress",".quantity",function(e){
+          if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+            return false;
+          }
+        });
+
+      });
+
+
+
+      $(document).on('click','.sp-plus a, .sp-minus a', function(e){
+       getCartData();
+     });
+      $(document).on('blur','.quntity-input', function(e){
+       getCartData();
+     });
+
+      function getCartData(){
+       var id = $('#payOrderForm').attr("data-order-id");
+       var val = $('.quntity-input').val();
+       val = Math.ceil(val);
+       console.log(val);
+       if(val <= 0){
+         val = 1;
+       }
+       if(val > 30){
+         val = 30;
+       }
+       $('.sp-input input').val(val);
+       addOverlay();
+       $.post(url,{"action":"update_qty",oId:id,qty:$('.quntity-input').val()},function(data){
+
+        $(".orderData").html(data.content);
+        $(".TotalPay").text("{CURRENCY_SYMBOL}"+data.finalPrice);
+        removeOverlay();
+      },'json');
+     }
+
+
+   </script>

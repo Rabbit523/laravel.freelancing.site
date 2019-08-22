@@ -1,0 +1,20 @@
+<li class="msg-item">
+  <a href="javascript:void(0);" class="cancel-noti"></a>
+  <a href="#">
+      <div class="media">
+        <div class="media-left">
+          <div class="noti-img">
+              <img src="{SITE_IMG}team/4.jpg" alt="">
+          </div>
+        </div>
+        <div class="media-body">
+          <h6 class="msg-user">%USER_NAME%</h6>
+          <p>%MESSAGE%</p>
+          <div class="date-time">
+              <span class="msgdate">%DATE%</span>
+              <span class="msgtime">%TIME%</span>
+          </div>
+        </div>
+      </div>
+  </a>
+</li>

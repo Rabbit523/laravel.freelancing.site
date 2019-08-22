@@ -1,0 +1,14 @@
+<section class="page-not-found-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 align="center">Oops!</h1>
+                <div class="error-img">
+                    <img src="{SITE_THEME}images-sd/404.png">
+                </div>
+                <h3 align="center">{PAGE_NOT_FOUND}</h3>
+                <h4 align="center">{WE_COULDNT_FIND_THE_PAGE_YOU}</h4>       
+            </div>
+        </div>
+    </div>
+ </section>

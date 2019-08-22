@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demo of Display Browser Web Push Notification in web application</title>
+<script type="text/javascript">
+
+var articles = [
+["10 JQuery Plugins for Creating Dynamic Layouts","http://www.discussdesk.com/10-jquery-plugins-for-creating-dynamic-layouts.htm","10 JQuery Plugins for Creating Dynamic Layouts",],
+["Multiple image upload and resize using AJAX","http://www.discussdesk.com/multiple-image-upload-and-resize-using-ajax.htm","Multiple image upload and resize using AJAX"],
+["Server Side Filtering using jQuery Ajax PHP and MySQL","http://www.discussdesk.com/server-side-filtering-using-jquery-ajax-php-and-mysql.htm","Server Side Filtering using jQuery Ajax PHP and MySQL"],
+["Autocomplete Places Search Box using Google Maps JavaScript API","http://www.discussdesk.com/autocomplete-places-search-box-using-google-maps-javaScript-api.htm","Autocomplete Places Search Box using Google Maps JavaScript API"],
+["ReactJS And AngularJS Comparison - Which One Is The Best","http://www.discussdesk.com/comparison-between-reactjs-and-angularjs.htm","ReactJS And AngularJS Comparison - Which One Is The Best"],
+["Submit a Form without Refreshing page with jQuery and Ajax","http://www.discussdesk.com/submit-form-without-refreshing-page-with-jquery-and-ajax.htm","Submit a Form without Refreshing page with jQuery and Ajax"],
+["How to Create Custom Social Share Links","http://www.discussdesk.com/how-to-create-custom-social-share-links.htm","How to Create Custom Social Share Links"],
+["Adding Google Map on Your Website within 5 Minutes","http://www.discussdesk.com/adding-google-map-on-your-website-within-five-minutes.htm","Adding Google Map on Your Website within 5 Minutes"],
+["How to Create the Best AdWords Expanded Text Ads to Boost Your Sales","http://www.discussdesk.com/create-best-adwords-expanded-text-ads-to-boost-your-sales.htm","How to Create the Best AdWords Expanded Text Ads to Boost Your Sales"],
+["Send Beautiful HTML Email using PHP","http://www.discussdesk.com/send-beautiful-html-email-using-php.htm","Send Beautiful HTML Email using PHP"]
+];
+
+
+setTimeout(function(){ 
+var outputParameter = Math.floor((Math.random() * 10) + 1);
+var setTitle=articles[outputParameter][0];
+var setDescription=articles[outputParameter][2];
+var setUrl=articles[outputParameter][1];
+sendNotificationToBrowser(setTitle,setDescription,setUrl);
+}, 3000);
+
+document.addEventListener('DOMContentLoaded', function () 
+{
+  
+    if (Notification.permission !== "granted")
+    {
+    Notification.requestPermission();
+    }
+
+    document.querySelector("#sendNotifyMessage").addEventListener("click", function(e)
+    {
+        var outputParameter = Math.floor((Math.random() * 10) + 1);
+        var setTitle=articles[outputParameter][0];
+        var setDescription=articles[outputParameter][2];
+        var setUrl=articles[outputParameter][1];
+
+        sendNotificationToBrowser(setTitle,setDescription,setUrl);
+        e.preventDefault();
+    });
+});
+
+function sendNotificationToBrowser(setTitle,setDescription,setUrl) 
+{
+    if (!Notification) {
+        console.log('Desktop notification is currently not available in your browser.'); 
+        return;
+    }
+
+    
+
+    if (Notification.permission !== "granted")
+    {
+        Notification.requestPermission();
+    }
+    else {
+        
+        var notification = new Notification(setTitle, {
+            icon:'http://www.discussdesk.com/view/assets/images/logo.png',
+            body: setDescription,
+        });
+
+// After clicking notification open that target url.
+        notification.onclick = function () {
+            window.open(setUrl);      
+        };
+
+// This is a Callback function for notification closed.
+        notification.onclose = function () {
+            console.log('Notification closed');
+        };
+
+    }
+}
+</script>
+
+<style type="text/css">
+.hover{background-color: #cc0000}
+ .mainDiv{ margin:0px auto; width: 700px} 
+.button {
+ background: #4485fe none repeat scroll 0 0;
+    border-radius: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    height: 33px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+	-moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.authorBlock{border-top:1px solid #cc0000;}
+</style>
+</head>
+<body>
+<div class="mainDiv">
+<h1>Display Browser Web Push Notification in web application</h1>  
+
+<div>Click to send notification</div>
+<a href="javascript:void(0);"  id="sendNotifyMessage" class="button">Send Notification</a>
+</div>
+
+
+</body>
+</html>

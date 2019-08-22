@@ -1,0 +1,7 @@
+<div class="no-records theme-box">
+	<div class="record-img">
+		<img src="{SITE_IMG}no-results/loupe.png" alt="">
+	</div>
+	<h2>{FS_WE_DIDNT_FIND_ANY_RESULTS}</h2>
+	<p class="search-line">{FS_TO_FIND_THE_SERVICE_YOU_NEED}</p>
+</div>

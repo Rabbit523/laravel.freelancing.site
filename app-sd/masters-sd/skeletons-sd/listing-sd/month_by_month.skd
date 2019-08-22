@@ -1,0 +1,7 @@
+<div class="col-md-6 col-sm-12">
+	<label for="%MONTH_ID%" class="col-md-3 col-sm-6" >%MONTH_LABLE%</label>
+	<div class=" input-group col-md-9">
+    	<div class="input-group-addon">$</div>
+    	<input type="text" name="%MONTH_NAME%" id="%MONTH_ID%" class="form-control" value="%VALUE%"  %DISABLE%>
+	</div>
+</div>

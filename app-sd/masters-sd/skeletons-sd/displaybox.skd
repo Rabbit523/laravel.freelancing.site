@@ -1,0 +1,13 @@
+
+<div class="form-group clearfix" id="123">
+  <label class="control-label col-md-4">%LABEL%</label>
+  <div class="col-md-8">
+  	<div class="ckeditor_content_display clearfix" >
+  		<div class="ck-editor">
+    		<div class="%CLASS% ck-editor-image">%VALUE%</div>
+    	</div>
+  	</div>
+  </div>
+  
+</div>
+<div class="clearfix"></div>

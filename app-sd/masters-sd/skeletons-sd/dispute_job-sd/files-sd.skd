@@ -1,0 +1,13 @@
+<li class="gallery-item  filter %TYPE%" style="display: block;">
+   <a href="%FILE_NM%" class="file-name " download="">
+      <div class="img-preview "%FILE_CLASS%>
+      	%FILE_PATH%
+      </div>
+      <span>%FILE_NAME%</span>
+      <i class="fa fa-download"></i>
+   </a>
+
+   <span class="time-right">
+   	%TIME%
+   </span>
+</li>

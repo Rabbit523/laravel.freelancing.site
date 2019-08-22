@@ -1,0 +1,60 @@
+<?php 
+$dashboardActive = $savedActive = '';
+$currModule = $this->module;  
+if($currModule == 'messages-sd' ||
+    $currModule == 'notification-sd' || 
+    $currModule == 'wallet-sd' ||
+    $currModule == 'dashboard-sd' || 
+    $currModule == 'watched_list-sd' ||
+    $currModule == 'mybids-sd' || 
+    $currModule == 'offers-sd' || 
+    $currModule == 'my_orders-sd' || 
+    $currModule == 'watched_category-sd' || 
+    $currModule == 'watched-sellers-sd' || 
+    $currModule == 'listings-sd' || 
+    $currModule == 'my_orders_sales-sd' || 
+    $currModule == 'public_profile-sd' || 
+    $currModule == 'account_settings-sd')
+    {
+        $dashboardActive = 'active';
+    }   
+    elseif($currModule == 'saved_search-sd')
+       $savedActive = 'active'; 
+
+   $messActive = ($currModule == 'messages-sd')?'active':'';
+   $notiActive = ($currModule == 'notification-sd')?'active':'';
+   $walletActive = ($currModule == 'wallet-sd')?'active':'';
+   $dashActive = ($currModule == 'dashboard-sd' || 
+    $currModule == 'mybids-sd' || 
+    $currModule == 'offers-sd' || 
+    $currModule == 'my_orders-sd' || 
+    $currModule == 'watched_category-sd' || 
+    $currModule == 'watched-sellers-sd' || 
+    $currModule == 'listings-sd' || 
+    $currModule == 'my_orders_sales-sd' || 
+    $currModule == 'public_profile-sd' || 
+    $currModule == 'account_settings-sd' ||     $currModule == 'saved_search-sd')?'active':'';
+   $watchedActive = ($currModule == 'watched_list-sd')?'active':'';
+?>
+<li class="dropdown <?php echo $dashboardActive;?>">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <i class="fa fa-bell" aria-hidden="true" style="font-size:17px;"></i>
+         %USER_NAME%
+    <i class="fa fa-angle-down"></i>
+    <i class="badge bg-green">%COUNT%</i>
+    </a>
+    
+    <ul class="dropdown-menu">
+        <li class="<?php echo $dashActive;?>"><a href="{SITE_URL}dashboard">{DASHBOARD_LABEL}</a></li>
+        <li class="<?php echo $savedActive;?>"><a href="{SITE_URL}saved_search">{SAVED_SEARCHES_LABEL}</a></li>
+        <li class="<?php echo $messActive;?>"><a href="{SITE_URL}message">{NAV_PMB_LBL}</a></li>
+        <li class="<?php echo $notiActive;?>"><a href="{SITE_URL}notification">{NOTIFICATIONS_LABEL}</a></li>
+        <li class="<?php echo $walletActive;?>"><a href="{SITE_URL}wallet">{MY_WALLET_LABEL}</a></li>
+        <li class="<?php echo $watchedActive;?>"><a href="{SITE_URL}watched_list">{WATCH_LIST_LABEL}</a></li>
+        <li><a href="{SITE_URL}logout">{SIGN_OUT_LABEL}</a></li>    
+    </ul>
+</li>
+<!-- <li class="<?php echo $savedActive;?>"><a href="{SITE_URL}saved_search">Saved Searches</a></li> -->
+
+
+<li class="btnsell"><a class="btn btn-success btn-starts" href="{SITE_URL}sell">{START_SELLING}</a></li>

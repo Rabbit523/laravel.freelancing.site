@@ -1,0 +1,309 @@
+/* ================ user_freelancer #29a7df ============= */
+.user_customer .switch-wrap .switch-btn.btn-flr{color: #177daa;}
+/* ---- Background Color ---- */
+.theme-button .btn-system,
+.signin-check input:checked ~ .checkmark,
+input[type="checkbox"]:checked + label::after,
+.material-switch > input[type="checkbox"]:checked + label::before{
+	background-color:#177daa;
+}
+.extra-note .alert-default{
+	background: rgba(31, 167, 226, 0.15);
+}
+/* ---- */
+
+/* ---- text Color ---- */
+a{
+	color:#177daa;
+}
+
+a:hover, a:focus,
+.faq-panel .panel-heading a:focus, 
+.faq-panel .panel-heading a:hover,
+.sub-category-section ul.category-listing h4 a:hover,
+.sub-category-section ul.category-listing h4 a:focus {
+	color:#177daa;
+}
+
+/* ---- */
+
+/* ---- border Color ---- */
+.btn-system:hover, 
+.btn-system:focus, 
+.btn-system:active{
+	border-color: #177daa;
+}
+.extra-note .alert-default{
+	border-color: rgba(31, 168, 228, 0.5);
+}
+/* ---- */
+
+/* ==== End Freelancer ==== */
+
+
+/* ================ user_customer #5dcca7 ============= */
+.user_customer a.btn,
+.user_customer a.btn:focus,
+.user_customer a.btn:hover{color: #ffffff;}
+
+/* ---- Background Color ---- */
+.user_customer .btn-primary,
+.user_customer .btn-system,
+.user_customer .theme-button .btn-system,
+.user_customer .filter-menu button,
+.user_customer .signin-check input:checked ~ .checkmark,
+.user_customer input[type="checkbox"]:checked + label::after,
+.user_customer .material-switch > input[type="checkbox"]:checked + label::before,
+.user_customer .sawlii-check input:checked ~ .checkmark,
+.user_customer .dashboard-navigation,
+.user_customer h1.main-heading:after,
+.user_customer .account_setting h3:after,
+.user_customer ul.dashboard-navbar > li.active > a:after, 
+.user_customer .box-header .box-title:after,
+.user_customer .myskills-box .skills-title:after,
+.user_customer .service-featured, 
+.user_customer .related-service-slider.owl-theme .owl-nav [class*="owl-"]:hover,
+.user_customer .range_slider #slider-range span,
+.user_customer .service-quantity-wrap .sp-quantity .sp-minus,
+.user_customer .service-quantity-wrap .sp-quantity .sp-plus,
+.user_customer .osi-item .sp-quantity .sp-minus,
+.user_customer .osi-item .sp-quantity .sp-plus,
+.user_customer .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.user_customer .page-title:after, 
+.user_customer .savefl-item .savefl-cat-wrap span,
+.user_customer input[type="radio"]:not(:checked) + label:after,
+.user_customer input[type="radio"]:checked + label:after, 
+.user_customer .ctrp-item .ctrp-invt-wrap .ctrp-invited,
+.user_customer .save_PickGeeks a, 
+.user_customer .Report_PickGeeks a, 
+.user_customer .fl-services .fl-services-item .like a.save_service, 
+.user_customer .addons-item-wrap .checkbox-container input:checked ~ .addons-label .check-icon{
+	background-color: #5dcca7;
+	background: #5dcca7;
+}
+.user_customer .dashboard-navigation,
+.user_customer ul.dashboard-navbar > li.active > a:after{
+	background-color: #5dcca7;
+	background: #5dcca7;
+}
+
+.user_customer .extra-note .alert-default{
+	background: rgba(134, 199, 119, 0.15);
+}
+.user_customer .notification ul li.unread, 
+.user_customer .notification-sec ul li.unread{
+	background: rgba(134, 199, 119, 0.07);
+}
+
+.user_customer .switch-wrap .switch-btn.btn-ctm.active, 
+.user_customer .user-avatar-wrap .update-camera a{
+	background-color:#5ecba6;
+	background:#5ecba6;
+	color: #ffffff;
+}
+/* ---- */
+
+/* ---- text Color ---- */
+.user_customer a,
+.user_customer input[type="checkbox"]:checked + label:after,
+.user_customer .main-dashboard .profile ul.dropdown-menu li a:hover,
+.user_customer .main-dashboard .profile ul.dropdown-menu li a:focus,
+.user_customer .main-dashboard .profile ul.dropdown-menu li a:active,
+.user_customer .sawlii-tabs-wrap .nav-tabs > li.active > a,
+.user_customer span.mobile-bars a,
+.user_customer .sts-item-wrap .sts-label, 
+.user_customer .pbox .pbox-header .pbox-breadcrumb, 
+.user_customer .cm-job-item .cmj-skills li, 
+.user_customer .cmj-action-wrap .cmj-post-action li span, 
+.user_customer .service-box .service-desc .services-cat, 
+.user_customer .top-skills-section ul li a:hover,
+.user_customer .btn-primary.btn-bordered, 
+.user_customer .searchbar-form .main-input i, 
+.user_customer .searchbar-form .location-input-group i,
+.user_customer .range_slider input,
+.user_customer .flu-lists .flu-earning span.like a,
+/*.user_customer .flu-lists .flu-search-item .flu-skills li,*/
+.user_customer .cif-item .cif-skills li, 
+.user_customer .personal-details-wrap .cust-user-location span,
+.user_customer .notification-sec ul li .notificaiton_body span.name a, 
+.user_customer .savefl-item .savefl-skills li, 
+.user_customer .savefl-item .like.active a,
+.user_customer .main-work-room .work-room-tabs .tabs-left > li.active a,
+.user_customer .workroom-job-details .card-title a,
+.user_customer .theme-color,
+.user_customer .main-work-room .filttering .filter-button, 
+.user_customer .main-work-room .escrow-funding .terms-milestone-table .text-center a, 
+.user_customer .main-work-room .msg-area button, 
+.user_customer .personal-details-wrap .user-location-detail li span,
+.user_customer .flu-lists .flu-search-item .pbox-body span.like a,
+.user_customer .badge.badge-primary, 
+.user_customer .navbar .pmb-menu .msg-item .msg-user, 
+.user_customer .section-messagebox .chatbox-head h4 a, 
+.user_customer .messagebox-pack .single-chat.msg-active .chat-name .media-heading a, 
+.user_customer .messagebox-pack .single-chat.msg-active .chat-name .msglist-time, 
+.user_customer header .navbar-default .navbar-nav > .open > a, 
+.user_customer header .navbar-default .navbar-nav > .open > a:focus, 
+.user_customer header .navbar-default .navbar-nav > .open > a:hover{
+	color: #5dcca7;
+}
+/* ---- */
+
+/* ---- border Color ---- */
+.user_customer .btn-primary,
+.user_customer .btn-system:hover, 
+.user_customer .btn-system:focus, 
+.user_customer .btn-system:active,
+.user_customer .form-control:focus,
+.user_customer .select2-container--default.select2-container--focus .select2-selection--multiple,
+.user_customer .theme-form .open .dropdown-toggle.bs-placeholder.btn-default:hover, 
+.user_customer .theme-form .dropdown-toggle.bs-placeholder.btn-default:focus, 
+.user_customer .theme-form .dropdown-toggle.bs-placeholder.btn-default:active, 
+.user_customer .theme-form .dropdown-toggle.bs-placeholder.btn-default.active, 
+.user_customer .theme-form .open > .dropdown-toggle.btn-default,
+.user_customer .btn-group.bootstrap-select.show-tick.form-control.dropup button:focus, 
+.user_customer .service-featured:after,
+.user_customer .range_slider #slider-range span,
+.user_customer .main-work-room .filttering .filter-button, 
+.user_customer .main-work-room .work-room-tabs .tabs-left > li.active a,
+.user_customer .badge.badge-primary, 
+.user_customer .jssort03 .w{
+	border-color: #5dcca7;
+}
+.user_customer .extra-note .alert-default{
+	border-color: rgba(134, 199, 119, 0.7);
+}
+.user_customer .chatbox-body .chat-msgs-ul li.chat-msg-other .msg-body-sender,
+.user_customer .main-work-room .message-content .msg-detail li.customer .msg-inner-detail{background-color: rgba(134, 199, 119, 0.2);}
+.user_customer .messagebox-pack .single-chat.msg-active,
+.user_customer .navbar .pmb-menu .msg-item:hover{background-color: rgba(134, 199, 119, 0.07); }
+/* ---- */
+
+/* Hover Color */
+.user_customer a:hover, 
+.user_customer a:focus, 
+.user_customer a:active, 
+.user_customer .footer-widget .social-widget li a,
+.user_customer .cmj-action-wrap .cmj-post-action li a:hover,
+.user_customer .services-list-wrap .service-box .service-desc .service-title a:hover, 
+.user_customer .services-list-wrap .service-box .freelancer-details h5 a:hover,
+/*.user_customer header .navbar-default .navbar-nav>li>a:hover,*/
+.user_customer header .navbar-right .dropdown-menu > li > a:hover, 
+.user_customer .savefl-item .like.active a:hover,
+.user_customer .main-work-room .work-room-tabs .tabs-left > li:hover a, 
+.user_customer .main-work-room .work-room-tabs .tabs-left > li:active a, 
+.user_customer .main-work-room .work-room-tabs .tabs-left > li:focus a, 
+.user_customer .main-work-room .work-room-tabs .tabs-left > li.active a,
+.user_customer .main-work-room .filttering .filter-button:hover,
+.user_customer .footer-widget .widget-content ul.widget-menu li a:hover, 
+.user_customer .footer-widget .widget-content ul.widget-menu li a:focus, 
+.user_customer .main-work-room .msg-area button:hover, 
+.user_customer .chatbox-body .chat-msgs-ul li a.delete_chat:hover,
+.user_customer .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, 
+.user_customer .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, 
+.user_customer .faq-panel .panel-heading a:hover, 
+.user_customer .faq-panel .panel-heading a:focus,
+.user_customer .sub-category-section ul.category-listing h4 a:hover,
+.user_customer .sub-category-section ul.category-listing h4 a:focus{
+	color:#5dcca7;
+}
+
+.user_customer .btn-primary:hover,
+.user_customer .btn-primary:focus,
+.user_customer .btn-system:hover,
+.user_customer .btn-system:focus,
+.user_customer .service-quantity-wrap .sp-quantity .sp-minus:hover,
+.user_customer .service-quantity-wrap .sp-quantity .sp-plus:hover,
+.user_customer .osi-item .sp-quantity .sp-minus:hover,
+.user_customer .osi-item .sp-quantity .sp-plus:hover,
+.user_customer .user-avatar-wrap .update-camera a:hover, 
+.user_customer .switch-wrap .switch-btn.btn-ctm.active:hover,
+.user_customer .main-work-room .filttering .filter-button.active{
+	background-color:#5dcca7;
+	border-color:#5dcca7;
+}
+
+.user_customer .service-featured:before{
+	border-color:#5dcca7;
+}
+
+.user_customer .btn-primary.btn-bordered{
+	border-color:#5dcca7;
+	background-color: transparent;
+}
+.user_customer .btn-primary.btn-bordered:hover,
+.user_customer .btn-primary.btn-bordered:focus
+.user_customer .btn-primary.btn-bordered:active{
+	border-color:#5dcca7;
+	background-color: #5dcca7;
+	color: #ffffff;
+}
+/*---- */
+
+/* ==== End Customer ==== */
+
+/* ================ Button Secondary ============= */
+.btn-secondary{background-color: #666666; border-color: #666666; color: #ffffff; transition: all 0.2s ease-in-out;}
+.btn-secondary:hover, 
+.btn-secondary:focus, 
+.btn-secondary:active,
+a.btn-secondary:hover, 
+a.btn-secondary:focus, 
+a.btn-secondary:active{background-color: #5a5a5a; color: #ffffff;}
+/* ==== */
+
+a.btn-primary, 
+a.btn-secondary, 
+.user_customer .Report_PickGeeks a,
+.user_customer .save_PickGeeks a, 
+.user_customer a.btn-primary:hover,
+.user_customer a.btn-primary:focus{color: #ffffff;}
+
+@media(max-width:991px){
+	.user_customer .sawlii-tabs-wrap > .panel-group > .panel.panel-default > .panel-heading .panel-title a[aria-expanded="true"]{color: #5dcca7;}
+}
+@media(max-width:767px){
+	/*.user_customer .newsletter-wrap .newsletter-content{
+		background-color:#5dcca7;
+		background:#5dcca7;
+	}*/
+}
+@media(max-width: 420px){
+	.user_customer .fl-services .fl-services-item .like a.save_service{color: #5dcca7;}
+}
+
+
+
+
+/*new css*/
+.user_customer .flu-lists .flu-search-item .flu-skills li{ background-color: #5dcca7; }
+.user_customer .flu-lists .flu-search-item .pbox-body span.like a{ color: #5dcca7; }
+.user_customer .above-fold-section .left-section form .btn{ color: #aaaaaa; }
+.user_customer .newsletter-wrap .newsletter-form .form-group .btn{ border-color: #5dcca7; background-color: #5dcca7; }
+.user_customer .newsletter-wrap .newsletter-form .form-group .btn span{ background-color: transparent; }
+.user_customer .newsletter-wrap .newsletter-form .form-group .btn:hover{ border-color: #5dcca7; }
+.user_customer .footer-widget .social-widget li a:hover{ background-color: #5dcca7; color: #ffffff; }
+.user_customer .service-box .service-img .save-service a{ color: #5dcca7; }
+.user_customer .view-more-button a{ background-color: #5dcca7; color: #ffffff; }
+/*.user_customer .top-skills-section ul li a{ background-color: rgba(93, 204, 167, 0.2); }*/
+.user_customer .ctso-item .service-featured{ top: 0; }
+.user_customer .sawlii-tabs-wrap .nav-tabs > li.active > a{ background-color: #ffffff; color: #5dcca7; }
+.user_customer .sawlii-tabs-wrap .nav-tabs > li.active > a:hover{ background-color: #ffffff; }
+.user_customer .sawlii-tabs-wrap .nav-tabs > li > a{ background-color: #5dcca7; }
+.user_customer .sawlii-tabs-wrap .nav-tabs > li > a:hover{ background-color: #5ecba6; }
+.user_customer .sts-item-wrap .sts-label{ color: #ffffff; }
+.user_customer .dashboard-btn a.btn { background-color: #2e8517; border-color: #2e8517; }
+
+.user_customer header .navbar-default .navbar-nav>li>a:hover,
+.user_customer header .navbar-default.affix .navbar-nav > li > a:hover { color: #5dcca7; }
+
+.user_customer header .navbar-default.affix-top .navbar-nav>.open>a, 
+.user_customer header .navbar-default.affix-top .navbar-nav>.open>a:focus, 
+.user_customer header .navbar-default.affix-top .navbar-nav>.open>a:hover,
+.user_customer header .navbar-default.affix-top .navbar-nav> li > a:hover,
+.user_customer header .navbar-default.affix-top .navbar-nav> li > a:focus{
+    color: #353535;
+}
+
+@media (max-width: 767px){
+	.account_setting .sawlii-tabs-wrap .nav-tabs > li > a{ color: #5dcca7; background-color: #ffffff; }
+}

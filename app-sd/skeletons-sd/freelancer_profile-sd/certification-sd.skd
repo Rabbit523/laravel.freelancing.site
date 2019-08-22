@@ -1,0 +1,38 @@
+<!-- <li class="media">
+  <div class="pull-left">
+    <div class="dashboard-icon customIcon">
+       <img src="{SITE_UPD}certificate.png" />
+    </div>
+  </div>
+  <div class="media-body">
+    <p>
+      %TITLE%
+    </p>
+    <div class="edit_remove">
+      <a class="edit editRecord" data-entity="add_certificate" data-id="%ID%" data-div="certificateSection" title="Edit" >
+        <img src="{SITE_IMG}icon/edit.png" alt="">
+      </a>
+      <a href="javascript:void(0)" class="delete delRecord" data-entity="certificate" data-id="%ID%" title="Delete">
+        <img src="{SITE_IMG}icon/garbage.png" alt="">
+      </a>
+    </div>
+  </div>
+</li> -->
+
+<li class="media  fl-certi-item">
+  <div class="media-left media-middle">
+      <div class="fl-certi-thumb">
+          <img src="{SITE_UPD}certificate.png" />
+      </div>
+  </div>
+  <div class="media-body media-middle fl-certi-info">
+      <div class="fl-certi-heading">
+        <h4 class="main-title">%TITLE%</h4>
+        <div class="userdetail-itemaction">
+          <a href="javascript:void(0)" class="edit editRecord" data-entity="add_certificate" data-id="%ID%" data-div="certificateSection" title="Edit" ><i class="fa fa-pencil"></i></a>
+          <a href="javascript:void(0)" class="delete delRecord" data-entity="certificate" data-id="%ID%" title="Delete"> <i class="fa fa-trash-o"></i></a>
+        </div>
+      </div>
+
+  </div>
+</li>

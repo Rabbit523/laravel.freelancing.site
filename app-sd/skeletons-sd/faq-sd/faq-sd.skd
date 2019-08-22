@@ -1,0 +1,84 @@
+<section class="inner-section">
+   <div class="about-us-img">
+      <img src="{SITE_UPD}faq.png">
+      <div class="overlay">
+         <div class="table-heading">
+            <h3>{FAQ_HEADER}</h3>
+            <div class="row">
+               <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+                  <div class="input-group">
+                     <input type="text" class="form-control input-lg" name="keyword" id="keyword" placeholder=" {FAQ_SEARCH_PLACEHOLDER}">
+                     <span class="input-group-btn">
+                     <button class="btn btn-system search_faq" type="button"><i class="fa fa-search"></i></button>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="main-faq">
+     <div class="container">
+        <div class="theme-form">
+          <h3>{FAQ}</h3>
+           <div class="row">
+              <div class="col-md-3 col-sm-4">
+                 <div class="left-box">
+                    <ul class="nav nav-pills">
+                       %FAQ_CATEGORY%
+                    </ul>
+                 </div>
+              </div>
+              <div class="col-md-9 col-sm-8">
+                 <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                      <div class="panel-group faq_question_list" id="accordion1">
+                        %QUESTION%
+                      </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+         </div>
+     </div>
+   </div>
+</section>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+    $( ".detail_faq" ).click(function() {
+        var cat_id = $(this).attr("data-id");
+        var a = $("#keyword").val();
+        $.ajax({
+                "dataType": 'json',
+                "type" : "POST",
+                "url"  : "{SITE_URL}units-sd/faq-sd/ajax.<?php echo $this->module; ?>.php",
+                "data" : {"action":"get-faq","faq_category":cat_id,"keyword":a},
+                "success": function(data)
+                {
+                    $(".faq_question_list").html(data.content);
+                }
+            });
+    });
+});
+$( ".search_faq" ).click(function() 
+{       
+        var a = $("#keyword").val();
+        var cat = $("ul.nav-tabs li.active a").attr("data-id");
+        if(a!=''){
+            $.ajax({
+                "dataType": 'json',
+                "type" : "POST",
+                "url"  : "{SITE_URL}units-sd/faq-sd/ajax.<?php echo $this->module; ?>.php",
+                "data" : {"action":"search-faq","keywrd":a,"cat":cat},
+                "success": function(data)
+                {
+                    $(".faq_question_list").html(data.content);
+                }
+            });
+        }
+
+        
+});
+</script>

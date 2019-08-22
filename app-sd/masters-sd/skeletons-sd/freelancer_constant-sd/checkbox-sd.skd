@@ -1,0 +1,5 @@
+<div class="checkbox-list">
+    <label class="">
+        <input class="radioBtn-bg" id="" name="" type="checkbox" value="<?php echo $this->id; ?>" />&nbsp;<?php echo $this->title; ?>
+    </label>
+</div>

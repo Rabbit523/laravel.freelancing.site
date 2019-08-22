@@ -1,0 +1,6 @@
+<div class="form-group">
+	<label for="%F_NAME%" class="control-label col-md-3">{MEND_SIGN}%F_TITLE%: &nbsp;</label>
+	<div class="col-md-4">
+		<input type="text" class="form-control logintextbox-bg required" data-msg-required="Please enter  subcategory name" name="%F_NAME%" id="%F_NAME%" value="%F_VALUE%" placeholder="Enter subcategory name here">
+	</div>
+</div>  

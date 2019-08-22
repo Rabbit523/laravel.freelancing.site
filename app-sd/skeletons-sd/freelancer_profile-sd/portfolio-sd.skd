@@ -1,0 +1,23 @@
+<div class="fl-portfolio-item">
+  <div class="media">
+      <div class="media-left">
+          <div class="fl-portfolio-thumb">
+             <img src="%PORTFOLIO_IMG%" title="%TITLE%">
+          </div>
+      </div>
+      <div class="media-body fl-portfolio-info">
+          <div class="fl-portfolio-heading">
+              <h4 class="main-title">%TITLE% </h4>
+              <span>%DURATION%</span>
+          </div>
+          <div class="pull-right userdetail-itemaction">
+             <a href="javascript:void(0)" class="edit editRecord" data-entity="add_portfolio" data-id="%ID%" data-div="portfolioSection" title="Edit"><i class="fa fa-pencil"></i></a>
+             <a href="javascript:void(0)" class="delete delRecord" data-entity="portfolio" data-id="%ID%" title="Delete"><i class="fa fa-trash-o"></i></a>
+          </div>
+          <div class="fl-portfolio-sort-info">%DESC%</div>
+          <ul class="fl-portfolio-skils">
+            %SKILLS%
+          </ul>
+      </div>
+  </div>
+</div>

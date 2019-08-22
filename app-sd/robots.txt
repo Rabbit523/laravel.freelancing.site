@@ -1,0 +1,74 @@
+User-agent: *
+
+Disallow: /core-sd/
+Disallow: /frames-sd/
+Disallow: /dspaces-sd/
+Disallow: /dspaces-sd/product/
+Allow: /frames-sd/css-sd/
+Allow: /frames-sd/images-sd/
+Allow: /frames-sd/fonts-sd/
+Disallow: /confirm-booking/*
+Disallow: /masters-sd/
+Allow: /masters-sd/requires-sd/plugins-sd/bootstrap-toastr/
+Disallow: /requires-sd/
+Allow: /requires-sd/javascript-sd/
+Disallow: /skeletons-sd/
+Allow: /skeletons-sd/head-sd.skd
+Disallow: /units-sd/
+Allow: /units-sd/signup-sd/captcha.php
+
+User-Agent: Mediapartners-Google
+Allow: /
+
+User-Agent: Googlebot
+Allow: /
+
+User-Agent: Adsbot-Google
+Allow: /
+
+User-Agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: YahooSeeker/M1A1-R2D2
+Allow: /
+
+User-agent: MSNBOT-MOBILE
+Allow: /
+
+
+Disallow: /units-sd/job_workroom-sd/index.php?slug=edit-job-test-case
+Disallow: /units-sd/job_workroom-sd/index.php?slug=edit-job-test-case
+Disallow: /units-sd/job_workroom-sd/index.php?slug=edit-job-test-case
+Disallow: /units-sd/job_workroom-sd/index.php?slug=edit-job-test-case
+Disallow: /units-sd/job_workroom-sd/index.php?slug=edit-job-test-case
+Disallow: /units-sd/job_workroom-sd/index.php?slug=edit-job-test-case
+Disallow: /units-sd/job_workroom-sd/index.php?slug=edit-job-test-case
+Disallow: /units-sd/job_workroom-sd/index.php?slug=edit-job-test-case
+Disallow: /units-sd/job_workroom-sd/index.php?slug=edit-job-test-case
+Disallow: /units-sd/job_workroom-sd/index.php?slug=edit-job-test-case
+Disallow: /units-sd/job_workroom-sd/index.php?slug=edit-job-test-case
+Disallow: /units-sd/job_workroom-sd/index.php?slug=job-delete-test
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-1
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-1
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-1
+Disallow: /units-sd/job_workroom-sd/index.php?slug=aaa-job
+Disallow: /units-sd/job_workroom-sd/index.php?slug=aaa-job
+Disallow: /units-sd/job_workroom-sd/index.php?slug=aaa-job
+Disallow: /units-sd/job_workroom-sd/index.php?slug=aaa-job
+Disallow: /units-sd/job_workroom-sd/index.php?slug=aaa-job
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4
+Disallow: /units-sd/job_workroom-sd/index.php?slug=test-4

@@ -1,0 +1,700 @@
+<section class="email-subscribe-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="newsletter-wrap">
+                    <div class="newsletter-object"></div>
+                    <div class="row">
+                      <div class="col-md-6 col-sm-7">
+                        <div class="newsletter-content">
+                          <h2 class="main-title">{SUBSCRIBE_TO_NEWSLETTER}</h2>
+                          <div class="title-info">{NEWSLETTER_DESC}</div>
+                          <form class="newsletter-form" action="#" method="post" name="newsletterFrm" id="newsletterFrm">
+                              <div class="form-group">
+                                      <input class="form-control" name="email" id="email" placeholder="{NEWSLETTER_EMAIL_PLACE_HOLDER}"/>
+                                      <input type="hidden" name="action" id="action" value="subscribeUser">
+                                      <button type="submit" name="newsletterSubscriber" id="newsletterSubscriber" class="btn btn-primary"><span>{SUBSCRIBE}</span></button>
+                              </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="sawlii-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-widget">
+                    <h4 class="widget-title">{COMP_TITLE_LBL}</h4>
+                    <div class="widget-content">
+                        <ul class="widget-menu">
+                            <li><a href="">{BTN_BUY}</a></li>
+                            <li><a href="">{BTN_SELL}</a></li>
+                            <li><a href="">{BTN_BECOME_FREELANCER}</a></li>
+                            <li><a href="{SITE_URL}contact-us">{CONTACT_US_LBL}</a></li>
+                            <li><a href="{SITE_URL}faq">{FAQ_LBL}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-widget">
+                    <h4 class="widget-title">{HELP_LBL}</h4>
+                    <div class="widget-content">
+                        <ul class="widget-menu">
+                            %FOOTER_LOOP%
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-widget">
+                    <h4 class="widget-title">{CONTACT_US_LBL}</h4>
+                    <div class="widget-content">
+                        <p>{ADDRESS_LBL}</p>
+                        <p>{PHONE_LBL}</p>
+                        <p>{EMAIL_LBL}</p>
+                        <?php if(!empty(FOOTER_LOGO)){ ?>
+                          <a href="<?php echo PARTNER_WEBSITE_LINK; ?>" target="_blank" title="<?php echo SITE_NM; ?>" class="footer-logo">
+                            <?php if(!empty(SITE_FAVICON)){ ?> 
+                              <img src="<?php echo SITE_IMG.FOOTER_LOGO; ?>" alt="<?php echo SITE_NM; ?>"/>
+                            <?php } ?>
+                          </a>
+                        <?php } ?>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-widget">
+                    <div class="widget-logo">
+                        <?php if(!empty(SITE_LOGO)){ ?>
+                          <img src="{SITE_IMG}{SITE_LOGO}" />
+                        <?php } ?>
+                    </div>
+                    <div class="widget-content">
+                        <p>{DESCRIPTION}</p>
+                        <ul class="list-inline social-widget">
+                            <li>
+                                <a href="{FB_LINK}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="{TWIITER_LINK}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="{GPLUS_LINK}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="{LINKEDIN_LINK}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                        <p><a title="{CLONE_SCRIPT_TEXT}" href="{CLONE_SCRIPT_LINK}" target="_blank" class="readymade">{CLONE_SCRIPT_TEXT}</a></p>
+                        <div class="language-selection">
+                          <select class="form-control change_language">
+                            <option value="Default">English</option>
+                            <option value="1"> Arabic </option> 
+                          </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sawlii-footer-strip">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="footer-strip-content text-center">
+                      {COPY_RIGHT_LINE} %YEAR%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- /.container -->
+</footer>
+
+<div class="modal fade" id="userTypeSelectionModal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <form name="userTypesetForm" id="userTypesetForm" method="post" action="{SITE_URL}userTypeSubmit">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">{SIGNUP_HEAD_II}</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <select name="userTypeS" id="userTypeS" class="form-control">
+              <option value="">{SELECT_USER_TYPE}</option>
+              <option value="C">Hire</option>
+              <option value="F">Work</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" name="userTypesetbtn" id="userTypesetbtn" class="btn btn-primary">{FD_SUBMIT}</button>
+          <button type="button" name="loginCancel" id="loginCancel" class="btn btn-info">{LOGIN_CANCEL}</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- End Registration modal -->
+
+<script>
+  $(document).ready(function(){
+
+    jQuery.validator.addMethod("noSpace", function(value, element) {
+      return value.indexOf(" ") < 0 && value != "";
+    }, "Space is not allowed and don't leave it empty");
+
+    $(document).on('click', '#submitAdd', function (e) {
+
+      e.preventDefault();
+
+      $changefrm="#changefrm";
+      $($changefrm).validate({
+
+        ignore: [],
+        errorClass: 'help-block',
+        errorElement: 'label',
+        highlight: function (element) {
+          $(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function (element) {
+          $(element).closest('.form-group').removeClass('has-error');
+        },
+        rules:
+        {
+          password1:{noSpace: true,required:true,minlength:6,maxlength:12},
+          cPassword:{equalTo: "#password1",required:true}
+        },
+
+        messages:
+        {
+          password1:{noSpace:"{FAS_PLEASE_ENTER_PASSWORD}",required:"{FAS_PLEASE_ENTER_PASSWORD}",minlength:"{CPASS_MINLENGTH}",maxlength:"{CPASS_MAXLENGTH}"},
+          cPassword:{required:"{CPASS_PLEASE_ENTER_CONFIRM_PASSWORD}",equalTo:"&nbsp;{PASSWORD_DOESNT_MATCH}"}
+        },
+        errorPlacement: function (error, element) {
+          if (element.attr("data-error-container")) {
+            error.appendTo(element.attr("data-error-container"));
+          } else {
+            error.insertAfter(element);
+          }
+        }
+      });
+
+      if($("#changefrm").valid())
+      {
+        $("#changefrm").submit();
+      }
+
+    });
+
+    $(document).on('click', '#userTypesetbtn', function (e) {
+
+      e.preventDefault();
+
+      $userTypesetForm="#userTypesetForm";
+      $($userTypesetForm).validate({
+
+        ignore: [],
+        errorClass: 'help-block',
+        errorElement: 'label',
+        highlight: function (element) {
+          $(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function (element) {
+          $(element).closest('.form-group').removeClass('has-error');
+        },
+        rules:
+        {
+          userTypeS:{required:true},
+        },
+
+        messages:
+        {
+          userTypeS:{required:"{PLEASE_SELECT_USER_TYPE}"},
+        },
+        errorPlacement: function (error, element)
+        {
+          if (element.attr("data-error-container")) {
+            error.appendTo(element.attr("data-error-container"));
+          } else {
+            error.insertAfter(element);
+          }
+        }
+      });
+
+      if($("#userTypesetForm").valid())
+      {
+        $("#userTypesetForm").submit();
+      }
+
+    });
+
+    $(document).on("click","#loginCancel",function(){
+      $.post("{SITE_MOD}home-sd/ajax.home-sd.php",{"action":"cancelLogin"},function(){
+        window.location.href="{SITE_URL}";
+      });
+    });
+
+
+  });
+
+</script>
+
+<script type="text/javascript" src="{SITE_ADM_PLUGIN}ckeditor/ckeditor.js"></script>
+
+<script type="text/javascript">
+  function loadCKE(id) {
+    var instance = CKEDITOR.instances[id];
+    if (instance) {
+      CKEDITOR.remove(instance);
+    }
+    CKEDITOR.replace(id,{
+      filebrowserUploadUrl: '<?php echo SITE_URL;?>requires-sd/upload.php',
+      toolbar : 'MyToolbar'
+    });
+  }
+</script>
+
+<script>
+  window.fbAsyncInit = function() {
+    // FB JavaScript SDK configuration and setup
+
+    FB.init({
+      appId      : '<?php echo FB_APP_ID;?>',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.11'
+    });
+    FB.AppEvents.logPageView();
+
+  };
+
+// Load the JavaScript SDK asynchronously
+(function(d, s, id)
+{
+ var js, fjs = d.getElementsByTagName(s)[0];
+ if (d.getElementById(id)) {return;}
+ js = d.createElement(s); js.id = id;
+ js.src = "http://connect.facebook.net/en_US/sdk.js";
+ fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+// Facebook login with JavaScript SDK
+
+
+
+
+</script>
+<!-- Facebook login start -->
+<script>
+  function facebookLogin(userType) {
+
+    FB.login(function (response) {
+      if (response.authResponse) {
+            // Get and display the user profile data
+
+            FB.api('/me', {locale: 'en_US', fields: 'id,first_name,last_name,email,link,gender,locale,picture'},
+              function (response) {
+                var email =  (response.email==undefined) ? '0' : response.email;
+
+                addOverlay();
+                $.ajax({
+                  "dataType": 'json',
+                  "type" : "POST",
+                  "url"  : "{SITE_URL}ajaxSignup",
+                  "data" : {"action":"facebook-record","fid":response.id,"firstName":response.first_name,"lastName":response.last_name,"email":email,"loginWith": 'Facebook',"userType":userType},
+                  "success": function(data)
+                  {
+                    removeOverlay();
+                    if(data.userType=='' && data.userTypeCheck=='n')
+                    {
+                      $("#userTypeSelectionModal").modal("show");
+                    }
+                    else
+                    {
+                      toastr[data.type](data.messages);
+                      window.location.href = data.url;
+                    }
+
+                  }
+                });
+              });
+          }
+        }, {scope: 'email'});
+  }
+/*if (grecaptcha.getResponse() == ""){
+    alert("You can't proceed!");
+} else {
+    alert("Thank you");
+  }*/
+
+</script>
+<!-- facebook login end -->
+<!-- Google login start -->
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    function renderButton() {
+
+      var userType = $('.customGPlusSignIn').attr("data-user-type");
+        //console.log(userType);
+
+        $('.customGPlusSignIn').each(function(index, el) {
+          var id = $(el).attr('id');
+            //console.log(id);
+            gapi.load('auth2', function(){
+                // Retrieve the singleton for the GoogleAuth library and set up the client.
+                auth2 = gapi.auth2.init({
+                  client_id: '{GOOGLE_APP_ID}',
+                  cookiepolicy: 'single_host_origin',
+                  scope: 'profile email'
+                });
+                google_on_success(document.getElementById(id),userType);
+              });
+          });
+      }
+      renderButton();
+      function google_on_success(element,userType)
+      {
+        auth2.attachClickHandler(element, {}, function(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          var name = profile.getName();
+          var first_name = name.substring(0, name.indexOf(' ')),
+          last_name = name.substring(name.indexOf(' ')+1);
+
+          var data = {
+            first_name: first_name,
+            last_name: last_name,
+            email: profile.getEmail(),
+            gender: '',
+            image: profile.getImageUrl(),
+            userType:userType
+          };
+            // addOverlay();
+            addOverlay();
+
+            $.ajax({
+              url: '{SITE_URL}login-gp',
+              type: 'POST',
+              dataType: 'json',
+              data: data,
+            })
+            .done(function(data) {
+
+              if(data.userType=='' && data.userTypeCheck=='n')
+              {
+                $("#userTypeSelectionModal").modal("show");
+              }
+              else
+              {
+                toastr[data.type](data.messages);
+                window.location.href = data.url;
+              }
+            })
+            .always(function() {
+             $("#overlayDocument").hide();
+                // removeOverlay();
+              });
+          }, function(error) {
+            // alert(JSON.stringify(error, undefined, 2));
+          });
+      }
+    });
+  </script>
+  <!-- Google login end -->
+
+  <!-- Home page script -->
+  <script>
+    $(document).on('click',"#newsletterSubscriber",function (e){
+      e.preventDefault();
+      /*Check Url With http or without http*/
+      $.validator.addMethod('ChkUrl', function (value, element) {
+        return this.optional(element) || /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/g.test(value);
+      }, '{THIS_URL_IS_INVALID}'
+      );
+
+      $("#newsletterFrm").validate({
+        ignore: [],
+        errorClass: 'help-block',
+        errorElement: 'label',
+        highlight: function (element) {
+          $(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function (element) {
+          $(element).closest('.form-group').removeClass('has-error');
+        },
+        errorPlacement: function (error, element) {
+          if (element.attr("data-error-container")) {
+            error.appendTo(element.attr("data-error-container"));
+          } else {
+            error.insertAfter(element);
+          }
+        },
+        rules: {
+          email: { required : true,email:true}
+        },
+        messages: {
+          email: { required: "{PLEASE_ENTER_EMAIL_ADDRESS}",email:"{PLEASE_ENTER_VALID_EMAIL}"},
+        }
+      });
+      if($("#newsletterFrm").valid())
+      {
+        $("#newsletterFrm").submit();
+      }
+    });
+
+    $('.search-panel .dropdown-menu').find('a').click(function(e) {
+      e.preventDefault();
+      var param = $(this).attr("href").replace("#","");
+      var concept = $(this).text();
+      $('.search-panel span#search_concept').text(concept);
+      $('.input-group #search_param').val(param);
+    });
+
+    /*==tooltip==*/
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $("#search_type").change(function(){
+      /*$(this).parents(".dropdown.fix-width").find('.btn').html($(this).text() + ' <span class="angle-down"><i class="fa fa-caret-down"></i></span>');
+      $(this).parents(".dropdown.fix-width").find('.btn').val($(this).data('value'));*/
+      $(".topSearch").attr("data-url",$(this).val());
+      $("#searchKeyword").attr("Placeholder","Find "+$(this).val());
+    });
+
+    $(document).on("keypress","#searchKeyword",function(e){
+      var charCode = (typeof e.which == "undefined") ? e.keyCode : e.which;
+      if (charCode == 13){
+        setTimeout(function(){
+          $(".topSearch").trigger("click");
+        }, 200);
+        return false;
+      }
+    });
+
+    $(document).on("click",".topSearch",function(){
+      var slug = $("#search_type").val(),
+      field = $(this).attr("id"),
+      keyword = (field=='full') ? $("#searchKeyword").val() : $("#MsearchKeyword").val(),category=$("#category").val(),subcategory=$("#subcategory").val(),location=$("#search_location").val(),url=$params="";
+      var user_rype = $(".search_user_type").val();
+      var param = [];
+      if(keyword!='' && keyword!=undefined){
+        param.push("keyword="+keyword); 
+      }
+      if(location!='' && location!=undefined){
+        param.push("location="+location); 
+      }
+      if(category!='' && category!=undefined){
+        param.push("category="+category); 
+      }
+      if(subcategory!='' && subcategory!=undefined){
+        param.push("subcategory="+subcategory); 
+      }
+      if(param.length > 0){
+        $.each(param,function(key,val){
+          var sign = "&";
+          if(key==0){
+            sign="?";
+          }
+          $params += sign+val;
+        });
+      }
+
+      if(slug == 'Jobs')
+      {
+        url = "{SITE_URL}search/"+"jobs/"+$params;
+      }
+      else if(slug == 'Services')
+      {
+        url = "{SITE_URL}search/"+"service/"+$params;
+      }
+      else
+      {
+        if(user_rype=="Freelancer"){
+          url = "{SITE_URL}search/"+"jobs/";
+        }else{
+          url = "{SITE_URL}search/"+"freelancer/";          
+        }
+      }
+      window.location.href = url;
+    });
+
+    $(document).on("click",".topMSearch",function(){
+
+      var slug = $(this).attr("data-url"),field = $(this).attr("id"),
+      keyword = (field=='full') ? $("#searchKeyword").val() : $("#MsearchKeyword").val(),url;
+
+      if(slug == 'Jobs')
+      {
+        url = (keyword=='') ? "{SITE_URL}search/"+"jobs/" : "{SITE_URL}search/"+"jobs/"+"?keyword="+keyword;
+      }
+      else if(slug == 'Services')
+      {
+        url = (keyword=='') ? "{SITE_URL}search/"+"service/" : "{SITE_URL}search/"+"service/"+"?keyword="+keyword;
+      }
+      else
+      {
+        url = (keyword=='') ? "{SITE_URL}search/"+"freelancer/" : "{SITE_URL}search/"+"freelancer/"+"?keyword="+keyword;
+      }
+      window.location.href = url;
+
+    });
+
+
+
+    $(document).ready(function(e){
+
+      scaleVideoContainer();
+
+      initBannerVideoSize('.video-container .poster img');
+      initBannerVideoSize('.video-container .filter');
+      initBannerVideoSize('.video-container video');
+
+      $(window).on('resize', function() {
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
+      });
+
+      $('.search-panel .dropdown-menu').find('a').click(function(e) {
+        e.preventDefault();
+        var param = $(this).attr("href").replace("#","");
+        var concept = $(this).text();
+        $('.search-panel span#search_concept').text(concept);
+        $('.input-group #search_param').val(param);
+      });
+    });
+
+    function scaleVideoContainer() {
+
+      var height = $(window).height() + 5;
+      var unitHeight = parseInt(height) + 'px';
+
+      if ( $(window).width() > 767 ) {
+        $('.homepage-hero-module').css('height','600px');
+      }
+      else{
+        $('.homepage-hero-module').css('height','440px');
+      }
+
+    }
+
+    function initBannerVideoSize(element){
+
+      $(element).each(function(){
+        $(this).data('height', $(this).height());
+        // $(this).data('width', $(this).width());
+      });
+
+      scaleBannerVideoSize(element);
+
+    }
+
+    function scaleBannerVideoSize(element){
+
+
+      var windowWidth;
+      var windowHeight = $(window).height() + 5,
+      videoHeight;
+
+
+      $(element).each(function(){
+        var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+        $(this).width(windowWidth);
+
+        if(windowWidth < 1000){
+          videoHeight = windowHeight;
+          videoWidth = videoHeight / videoAspectRatio;
+          $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+          $(this).width(videoWidth).height(videoHeight);
+        }
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+      });
+    }
+
+
+    (function( $ ) {
+
+        //Function to animate slider captions
+        function doAnimations( elems ) {
+
+            //Cache the animationend event in a variable
+            var animEndEv = 'webkitAnimationEnd animationend';
+
+            elems.each(function () {
+              var $this = $(this),
+              $animationType = $this.data('animation');
+              $this.addClass($animationType).one(animEndEv, function () {
+                $this.removeClass($animationType);
+              });
+            });
+          }
+
+        //Variables on page load
+        var $myCarousel = $('#carousel-example-generic'),
+        $firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
+
+        //Initialize carousel
+        $myCarousel.carousel();
+
+        //Animate captions in first slide on page load
+        doAnimations($firstAnimatingElems);
+
+        //Pause carousel
+        $myCarousel.carousel('pause');
+
+
+        //Other slides to be animated on carousel slide event
+        $myCarousel.on('slide.bs.carousel', function (e) {
+          var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
+          doAnimations($animatingElems);
+        });
+        $('#carousel-example-generic').carousel({
+          interval:3000,
+          pause: "false"
+        });
+
+      })(jQuery);
+
+      $('.load_ggl_autocomplete').each(function(){
+
+        var _this = $(this)[0];
+        return new google.maps.places.Autocomplete(_this, {types: ["geocode"]});
+
+      });
+
+      $(document).on('change','.change_language',function(e){
+        $url = window.location.href;
+        $.ajax({
+          "type" : "POST",
+          "url"  : "{SITE_URL}app-sd/units-sd/home-sd/ajax.home-sd.php",
+          "data" : {"action":"change_language","id":$(this).val()},
+          success: function(data)
+          {
+            removeOverlay();
+            if($url!=""){
+              window.location.href = $url;
+            }else{
+              window.location.href = "{SITE_URL}";
+            }
+          }
+        });
+      });
+    </script>
+    <!-- end -->

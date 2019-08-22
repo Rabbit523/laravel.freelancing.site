@@ -1,0 +1,122 @@
+<section class="inner-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="sign-form">
+          <div class="theme-form">
+            <div class="sign_up_main">
+              <div class="sign_up_header">
+                <h3>
+                  {SIGN_IN_AND_GET_TO_WORK}
+                  <span>
+                    or
+                    <a href="{SITE_URL}signup">{BTN_SIGN_UP}</a>
+                  </span>
+                </h3>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-sm-6 box-block">
+                  <div class="seperator_form">
+                    <span class="text">
+                      OR
+                    </span>
+                  </div>
+                  <div class="responsive_socialicon">
+                    <div class="sign_social">
+                      <div class="fb_login">
+                        <a href="#" class="btn-block"> {SIGN_IN_WITH_FACEBOOK} </a>
+                      </div>
+                      <div class="gp_login">
+                        <a href="javascript:void(0)" id="login_google2" class="customGPlusSignIn btn-block" data-user-type="all"> {SIGNUP_LBL_GOOGLE}</a>
+                      </div>
+                    </div>
+                    <div class="responsive_or">
+                      OR
+                    </div>
+                  </div>
+                  <div class="sign_up_form">
+                    <form method="post" action="" name="loginForm" id="loginForm">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input class="form-control" type="text"  value="%EAMIL_COOKIE%" tabindex=1 name="email" id="email" placeholder="Username or Email"/>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input class="form-control" type="password" placeholder="Password" name="password" id="password" value="%PASSWORD_COOKIE%" tabindex=2/>
+                            <span class="danger %ERROR_CLASS%">{PASSWORD_DID_NOT_MATCH}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="forget_password">
+                        <div class="terms-condition">
+                          <ul>
+                            <li>
+                              <!-- <input type="checkbox" name="isRemember" id="isRemember" value="y" %COOKIE_CHECKED% tabindex=3>
+                              <label for="term6">
+                                Remember me
+                              </label> -->
+                              <label class="signin-check">{REMEMBER_ME}
+                                <input type="checkbox" name="isRemember" id="isRemember">
+                                <span class="checkmark"></span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="forget_pw">
+                          <a href="{SITE_URL}forgetPassword">{FORGOT_PASSWORD}?</a>
+                        </div>
+                      </div>
+                      <div class="get_started">
+                          <input type="hidden" name="action" value="login">
+                          <button type="submit" name="submitForm" id="submitForm" class="btn btn-block btn-system">Sign In</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <div class="sign_social">
+                    <div class="fb_login">
+                      <a href="javascript:void(0)" onclick="facebookLogin('all')" class="btn-block"> {SIGN_IN_WITH_FACEBOOK}</a>
+                    </div>
+                    <div class="gp_login">
+                      <a href="javascript:void(0)" id="login_google" class="customGPlusSignIn btn-block" data-user-type="all"> {SIGNUP_LBL_GOOGLE} </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+
+  jQuery.validator.addMethod("emailvalidate", function(value, element) {
+              return this.optional(element) || /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i.test(value);
+          }, "{ONLY_LETTERS_NUMBERS}");
+  $('#submitForm').click(function(){
+
+          $loginForm="#loginForm";
+          $($loginForm).validate({
+              ignore: [],
+              errorClass: 'help-block',
+              errorElement: 'label',
+              highlight: function (element) {
+                  $(element).closest('.form-group').addClass('has-error');
+              },
+              unhighlight: function (element) {
+                  $(element).closest('.form-group').removeClass('has-error');
+              },
+              rules: { email: { required:true }, password:{ required:true,minlength:6 } },
+              messages: {
+                  email: { required:"{PLEASE_ENTER_EMAIL_ADDRESS}", emailvalidate:"{PLEASE_ENTER_VALID_EMAIL}" },
+                  password: { required:"{FAS_PLEASE_ENTER_PASSWORD}",min: "{PLEASE_ENTER_MINIMUM_DIGITS}" }
+              }
+            });
+    });
+</script>

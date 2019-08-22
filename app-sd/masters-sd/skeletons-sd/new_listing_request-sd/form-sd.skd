@@ -1,0 +1,56 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+    <div class="form-body">
+        <div class="form-group">
+            <label for="file_status" class="control-label col-md-3"><font color="#FF0000">*</font>Listing Approval Status &nbsp;</label>
+            <div class="col-md-4">
+                    %FILE_STATUS%
+            </div>
+        </div>
+        <!-- <div class="form-group editor_choice %EDITOR_CHOICE%">
+            <div class="checkbox col-md-4 col-md-offset-3">                            
+                <label for="editor_choice"  class="control-label "><input type="checkbox" name="editor_choice" id="editor_choice"  value="y" %EDITOR_Y%>{EXPERTS_CHOICE}</label>
+            </div>
+        </div> -->
+        <div class="form-group reason %REASON_SHOW%">                          
+            <label for="reason"  class="control-label col-md-3"><font color="#FF0000">*</font>Reject Reason &nbsp;</label>
+            <div class="col-md-4">
+                <textarea name="reason" id="reason" class="form-control">%REASON%</textarea>
+            </div>
+        </div>
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="type" id="type" value="%TYPE%">
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="id" id="id" value="%ID%">
+        <input type="hidden" name="email" id="email" value="%EMAIL%">
+        <input type="hidden" name="userName" id="userName" value="%USER_NAME%">
+        <div class="padtop20"></div>
+    </div>
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <button type="submit" name="submitAddForm" class="btn green" id="submitAddForm">Submit</button>
+            <button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+    
+$(document).ready(function() {
+    $("#approve_status").click(function(event) 
+    {
+
+        if($(this).val() == "rejected")
+        {
+            $(".editor_choice").hide();
+            $(".reason").show();
+            $('.reason').removeClass("hide");
+        }
+        else
+        {
+            $('.editor_choice').removeClass("hide");
+            $(".editor_choice").show();
+            $(".reason").hide();
+        }
+    });    
+});
+</script>

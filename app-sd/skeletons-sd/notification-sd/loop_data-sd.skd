@@ -1,0 +1,35 @@
+<li class="noti_%ID%">
+  <div class="media">
+    <div class="media-left">
+      <div class="remove_note">
+         <a href="javascript:void(0)" class="delete_record" title="Remove">
+           <img src="{SITE_IMG}icons/multiply.png" alt="">
+         </a>
+      </div>
+    </div>
+    <div class="media-body notificaiton_body">
+      <p>
+        <a href="%LINK%" target="_blank">%DESC%</a>
+        <span class="name"><a href="javascript:void(0);">Anna Patrick</a></span>
+        <span>%TIME%</span>
+      </p>
+    </div>
+  </div>
+</li>
+
+<!-- <li class="noti_%ID%">
+  <div class="media">
+     <div class="pull-left">
+        <div class="notification_img">%AVATAR%</div>
+     </div>
+     <div class="media-body notificaiton_body">
+        <a href="%LINK%" target="_blank"><p> %DESC%</p></a>
+        <span>%TIME%</span>
+        <div class="remove_note">
+           <a href="javascript:void(0)" class="delete_record" title="Remove Notification">
+             <img src="{SITE_IMG}icon/cancel.png" alt="">
+           </a>
+        </div>
+     </div>
+  </div>
+</li> -->

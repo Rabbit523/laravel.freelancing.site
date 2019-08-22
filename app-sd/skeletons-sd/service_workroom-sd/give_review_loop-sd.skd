@@ -1,0 +1,90 @@
+<div class="rating">
+      <div class="form-group">
+         <label for="message" class="control-label msg">
+         {SW_YOUR_REVIEW_LBL}*
+         <span>
+         {SW_TIPS_AND_GUIDE_LBL}
+         </span>
+         </label>
+         <textarea class="form-control" name="review" id="description" rows="3" placeholder="Your review goes here..."></textarea>
+      </div>
+</div>
+<div class="rating">
+   <div class="row">
+      <div class="col-md-6">
+         <label for="dispute-amount">
+         %RATE1%*
+         </label>
+      </div>
+      <div class="col-md-6">
+         <span class="star" id="rate1">
+         </span>
+         <input name='rate1Val' type='hidden' id='rate1Val' />
+      </div>
+   </div>
+</div>
+<div class="rating">
+   <div class="row">
+      <div class="col-md-6">
+         <label for="dispute-amount">
+         %RATE2%*
+         </label>
+      </div>
+      <div class="col-md-6">
+         <div class="">
+            <span class="star" id="rate2">
+            </span>
+            <input name='rate2Val' type='hidden' id='rate2Val' />
+         </div>
+      </div>
+   </div>
+</div>
+<div class="rating">
+   <div class="row">
+      <div class="col-md-6">
+         <label for="dispute-amount">
+         %RATE3%*
+         </label>
+      </div>
+      <div class="col-md-6">
+         <div class="">
+            <span class="star" id="rate3">
+            </span>
+            <input name='rate3Val' type='hidden' id='rate3Val' />
+         </div>
+      </div>
+   </div>
+</div>
+<div class="rating">
+   <div class="row">
+      <div class="col-md-6">
+         <label for="dispute-amount">
+         %RATE4%*
+         </label>
+      </div>
+      <div class="col-md-6">
+         <div class="">
+            <span class="star" id="rate4">
+            </span>
+            <input name='rate4Val' type='hidden' id='rate4Val' />
+         </div>
+      </div>
+   </div>
+</div>
+<div class="rating %RATE5_CLASS%">
+   <div class="row">
+      <div class="col-md-6">
+         <label for="dispute-amount">
+         %RATE5%*
+         </label>
+      </div>
+      <div class="col-md-6">
+         <div class="">
+            <span class="star" id="rate5">
+            </span>
+            <input name='rate5Val' type='hidden' id='rate5Val' />
+         </div>
+      </div>
+   </div>
+</div>
+<input type="hidden" name="userType" id="userType" value="%USER_TYPE%">

@@ -1,0 +1,43 @@
+<!-- new design -->
+<section class="main-dashboard">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default theme-box no-bg no-padding">
+					<h1 class="main-heading">{CMJ_INVITED_FREELANCER}</h1>
+					<div class="cif-wrap">
+						<ul class="cif-lists">
+							%USERS%
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- new design end-->
+
+<!-- old design -->
+<? php /* <section class="main-dashboard">
+	<div class="container">
+		<div class="profile">
+			<div class="featurette-job job-detail-invited">
+				<div class="sub_featured">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="job_feed_heading">
+								<h1 class="main-heading">
+									{CMJ_INVITED_FREELANCER}
+								</h1>
+							</div>
+							<ul class="dash-job">
+								%USERS%
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> */ ?>
+<!-- old design end -->

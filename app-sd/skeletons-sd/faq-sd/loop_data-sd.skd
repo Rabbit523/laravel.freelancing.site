@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+   <div class="panel-heading">
+      <h4 class="panel-title">
+         <a data-toggle="collapse" data-parent="#accordion" href="#%ID%" class="%collapsed%">
+           %QUESTION%
+    	 </a>
+      </h4>
+   </div>
+   <div id="%ID%" class="panel-collapse collapse %IN%">
+      <div class="panel-body">%DESCRIPTION%</div>
+   </div>
+</div>
+    
+ 

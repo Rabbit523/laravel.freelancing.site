@@ -1,0 +1,1624 @@
+<!-- Dashboard Navigation -->
+%SUB_HEADER_CONTENT%
+<!-- Dashboard Navigation End -->
+<!-- Page Content -->
+<section class="main-dashboard">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dashboard-wrap">
+                    %PERSONAL_DETAIL%
+                    <?/*<div class="row">
+                        <div class="col-md-4 col-sm-4 col-lg-3">
+                            <div class="dashboard-sidebar">
+                                <div class="box box-primary theme-box ">
+                                    <div class="box-body">
+                                        <div class="myskills-box">
+                                            <h4 class="skills-title">{MY_SKILL_BTN_LBL}</h4>
+                                            <ul class="skills-list clearfix">
+                                                %SKILL_LIST%
+                                                <li>
+                                                  <a href="#" data-toggle="modal" data-target="#skills" title="Add Skills">
+                                                    {FP_ADD_MORE_SKILLS}
+                                                  </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="myskills-box">
+                                            <h4 class="skills-title">{MY_LANG_BTN_LBL}</h4>
+                                            <ul class="skills-list clearfix">
+                                                %LANG_LIST%
+                                                <li>
+                                                    <a href="#" data-toggle="modal" data-target="#languages" title="Add Language">
+                                                      {FP_ADD_MORE_LANGUAGES}
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="myskills-box">
+                                            <h4 class="skills-title">{F_CAT_LBL}</h4>
+                                            <ul class="skills-list clearfix">
+                                                %SUBCAT_LIST%
+                                                <li>
+                                                  <a href="javascript:void(0)" class="addRecord" title="Add subcategory" data-entity="categories">
+                                                    {FP_ADD_MORE_CATEGORIES}
+                                                  </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="myskills-box">
+                                            <h4 class="skills-title">{FP_VIDEO}</h4>
+                                            <ul class="skills-list clearfix">                                                
+                                              <div class="add_video">
+                                                %VIDEO_IFRAME%
+                                                <a href="#" data-toggle="modal" data-target="#myModal">
+                                                  {PLACE_VIDEO_LBL}
+                                                </a>
+                                              </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-lg-9 col-sm-8 ">
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">{OVERVIEW_LBL}</h3>
+                                    <div class="box-tools pull-right">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#overview"></a>
+                                    </div>
+                                </div>
+                                <div id="overview" class="panel-collapse collapse in" >
+                                    <div class="box-body" >
+                                        <p>Praesent vel dapibus urna, nec imperdiet nunc. Sed vel tortor consequat, placerat nulla in, venenatis massa. Sed sit amet elit nisl. Aenean pulvinar tortor non ligula dictum, at rhoncus risus pulvinar. Fusce luctus convallis hendrerit. Donec id mattis lorem. Nullam fringilla metus euismod mauris ultricies, in hendrerit nisi mollis.</p>
+                                        <p>Curabitur euismod mauris id tellus mattis tristique. Vivamus rhoncus suscipit lacus in cursus. Fusce vitae varius ex.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Recently Added Products</h3>
+                                    <div class="box-tools pull-right">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#our-video"></a>
+                                    </div>
+                                </div>
+                                <div id="our-video" class="panel-collapse collapse in" >
+                                    <div class="box-body" >
+                                        <iframe  style="width:100%; min-height: 450px;" src="https://www.youtube.com/embed/kC9twgwBvq8?controls=0" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sawlii-tabs-wrap">
+                                <ul class="nav nav-tabs" id="dasTabs">
+                                    <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">My Services</a></li>
+                                    <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">Portfolio</a></li>
+                                    <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="false">Education Details</a></li>
+                                    <li class=""><a href="#tab_4" data-toggle="tab" aria-expanded="false">Certifications</a></li>
+                                    <li class=""><a href="#tab_5" data-toggle="tab" aria-expanded="false">Experience</a></li>
+                                    <li class=""><a href="#tab_6" data-toggle="tab" aria-expanded="false">Reviews</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="tab_1">
+                                        <div class="panel theme-box no-bg no-padding">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">Services</h4>
+                                                <div class="panel-tools pull-right">
+                                                    <a href="#">Add More <i class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="fl-services ">
+                                                    <div class="fl-services-item">
+                                                        <div class="like active %FAV_CLASS%">
+                                                            <a href="javascript:void(0)" class="save_service" data-id="%SERVICE_ID%"><i class="fa fa-heart-o"></i></a>
+                                                         </div>
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <div class="fl-service-thumb">
+                                                                    <img src="{SITE_IMG}services/fl-service-1.png">
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body fl-service-info">
+                                                                <div class="fl-service-heading">
+                                                                    <a href="#"><h4 class="main-title">Tutoring Website </h4></a>
+                                                                    <span>Delivery in 1 Day(s)</span>
+                                                                </div>
+                                                                <div class="fl-service-price"><label>Price:</label> 160<sub>KWD</sub></div>
+                                                                <div class="fl-service-sort-info">Vestibulum eget libero a risus sollicitudin rutrum. Praesent sit amet augue eget nibh mattis dapibus non quis mauris.</div>
+                                                                <div class="fls-status-wrap">
+                                                                    <div class="fls-status-box">
+                                                                        <span class="fls-status bg-success">Active</span>
+                                                                        <span class="fls-post-date">Posted : 15<sup>th</sup> Dec, 2018</span>
+                                                                    </div>
+                                                                    <ul class="fls-featured-edit">
+                                                                        <li class="mark-ftr">
+                                                                            <label class="signin-check">Mark as Featured
+                                                                                <input type="checkbox" name="isRemember" id="isRemember">
+                                                                                <span class="checkmark"></span>
+                                                                            </label>
+                                                                        </li>
+                                                                        <li class="fls-edit"><a href="#"><i class="fa fa-edit"></i></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade " id="tab_2">
+                                        <div class="panel theme-box no-bg no-padding">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">Portfolio</h4>
+                                                <div class="panel-tools pull-right">
+                                                    <a href="#">Add More <i class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="fl-portfolio ">
+                                                    <div class="fl-portfolio-item">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <div class="fl-portfolio-thumb">
+                                                                    <img src="{SITE_IMG}portfolio/portfolio-1.png">
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body fl-portfolio-info">
+                                                                <div class="fl-portfolio-heading">
+                                                                    <h4 class="main-title">Tutoring Website </h4>
+                                                                    <span>Delivery in 1 Day(s)</span>
+                                                                </div>
+                                                                <div class="fl-portfolio-sort-info">Vestibulum eget libero a risus sollicitudin rutrum. Praesent sit amet augue eget nibh mattis dapibus non quis mauris. Vivamus justo sapien, viverra quis lectus vel, vestibulum egestas dolor.</div>
+                                                                <ul class="fl-portfolio-skils">
+                                                                    <li class="flp-skil">PHP</li>
+                                                                    <li class="flp-skil">Node Js</li>
+                                                                    <li class="flp-skil">UX Designers</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fl-portfolio-item">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <div class="fl-portfolio-thumb">
+                                                                    <img src="{SITE_IMG}portfolio/portfolio-1.png">
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body fl-portfolio-info">
+                                                                <div class="fl-portfolio-heading">
+                                                                    <h4 class="main-title">Tutoring Website </h4>
+                                                                    <span>Delivery in 1 Day(s)</span>
+                                                                </div>
+                                                                <div class="fl-portfolio-sort-info">Vestibulum eget libero a risus sollicitudin rutrum. Praesent sit amet augue eget nibh mattis dapibus non quis mauris. Vivamus justo sapien, viverra quis lectus vel, vestibulum egestas dolor.</div>
+                                                                <ul class="fl-portfolio-skils">
+                                                                    <li class="flp-skil">PHP</li>
+                                                                    <li class="flp-skil">Node Js</li>
+                                                                    <li class="flp-skil">UX Designers</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fl-portfolio-item">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <div class="fl-portfolio-thumb">
+                                                                    <img src="{SITE_IMG}portfolio/portfolio-1.png">
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body fl-portfolio-info">
+                                                                <div class="fl-portfolio-heading">
+                                                                    <h4 class="main-title">Tutoring Website </h4>
+                                                                    <span>Delivery in 1 Day(s)</span>
+                                                                </div>
+                                                                <div class="fl-portfolio-sort-info">Vestibulum eget libero a risus sollicitudin rutrum. Praesent sit amet augue eget nibh mattis dapibus non quis mauris. Vivamus justo sapien, viverra quis lectus vel, vestibulum egestas dolor.</div>
+                                                                <ul class="fl-portfolio-skils">
+                                                                    <li class="flp-skil">PHP</li>
+                                                                    <li class="flp-skil">Node Js</li>
+                                                                    <li class="flp-skil">UX Designers</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade " id="tab_3">
+                                        <div class="panel  theme-box no-bg no-padding">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">Education Details</h4>
+                                                <div class="panel-tools pull-right">
+                                                    <a href="#">Add More <i class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="fl-edu">
+                                                    <div class="fl-edu-item">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <div class="fl-edu-icon">
+                                                                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body fl-edu-info">
+                                                                <div class="fl-edu-heading">
+                                                                    <h4 class="main-title">Master of Computer Application <span>T.N.Rao College</span></h4>
+                                                                    <div class="edu-years"><span>2013</span> - <span>2017</span></div>
+                                                                    <div class="edu-department">Computer Science</div>
+                                                                </div>
+                                                                <div class="fl-edu-sort-info">Vestibulum eget libero a risus sollicitudin rutrum. Praesent sit amet augue eget nibh mattis dapibus non quis mauris. Vivamus justo sapien, viverra quis lectus vel, vestibulum egestas dolor.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fl-edu-item">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <div class="fl-edu-icon">
+                                                                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body fl-edu-info">
+                                                                <div class="fl-edu-heading">
+                                                                    <h4 class="main-title">Master of Computer Application <span>T.N.Rao College</span></h4>
+                                                                    <div class="edu-years"><span>2013</span> - <span>2017</span></div>
+                                                                    <div class="edu-department">Computer Science</div>
+                                                                </div>
+                                                                <div class="fl-edu-sort-info">Vestibulum eget libero a risus sollicitudin rutrum. Praesent sit amet augue eget nibh mattis dapibus non quis mauris. Vivamus justo sapien, viverra quis lectus vel, vestibulum egestas dolor.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fl-edu-item">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <div class="fl-edu-icon">
+                                                                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body fl-edu-info">
+                                                                <div class="fl-edu-heading">
+                                                                    <h4 class="main-title">Master of Computer Application <span>T.N.Rao College</span></h4>
+                                                                    <div class="edu-years"><span>2013</span> - <span>2017</span></div>
+                                                                    <div class="edu-department">Computer Science</div>
+                                                                </div>
+                                                                <div class="fl-edu-sort-info">Vestibulum eget libero a risus sollicitudin rutrum. Praesent sit amet augue eget nibh mattis dapibus non quis mauris. Vivamus justo sapien, viverra quis lectus vel, vestibulum egestas dolor.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade " id="tab_4">
+                                        <div class="panel theme-box no-bg no-padding">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">Certifications</h4>
+                                                <div class="panel-tools pull-right">
+                                                    <a href="#">Add More <i class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <ul class="fl-certi">
+                                                    <li class="media  fl-certi-item">
+                                                        <div class="media-left media-middle">
+                                                            <div class="fl-certi-thumb">
+                                                                <img src="{SITE_UPD}certificate.png" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="media-body media-middle fl-certi-info">
+                                                            <div class="fl-certi-heading">
+                                                                <h4 class="main-title">ActionScript 3.0</h4>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="media  fl-certi-item">
+                                                        <div class="media-left media-middle">
+                                                            <div class="fl-certi-thumb">
+                                                                <img src="{SITE_UPD}certificate.png" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="media-body media-middle fl-certi-info">
+                                                            <div class="fl-certi-heading">
+                                                                <h4 class="main-title">Android Development</h4>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="media  fl-certi-item">
+                                                        <div class="media-left media-middle">
+                                                            <div class="fl-certi-thumb">
+                                                                <img src="{SITE_UPD}certificate.png" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="media-body media-middle fl-certi-info">
+                                                            <div class="fl-certi-heading">
+                                                                <h4 class="main-title">3DsMax</h4>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="media  fl-certi-item">
+                                                        <div class="media-left media-middle">
+                                                            <div class="fl-certi-thumb">
+                                                                <img src="{SITE_UPD}certificate.png" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="media-body media-middle fl-certi-info">
+                                                            <div class="fl-certi-heading">
+                                                                <h4 class="main-title">Digital Signal Processing (DSP)</h4>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab_5">
+                                        <div class="panel theme-box no-bg no-padding">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">Experience</h4>
+                                                <div class="panel-tools pull-right">
+                                                    <a href="#">Add More <i class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="fl-experience">
+                                                    <div class="fl-experience-item">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <div class="fl-experience-icon">
+                                                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body fl-experience-info">
+                                                                <div class="fl-experience-heading">
+                                                                    <h4 class="main-title">Web Designer <span>Sukhadaam Infotech</span></h4>
+                                                                    <div class="experience-years"><span>April 2005</span> - <span>February 2018</span></div>
+                                                                    <div class="experience-location"><span><i class="fa fa-map-marker"></i></span>Rajkot, Gujarat(India)</div>
+                                                                </div>
+                                                                <div class="fl-experience-sort-info">Integer mattis eros vitae elit pharetra viverra. Integer ut nisi efficitur, sollicitudin quam efficitur, tempus ligula.Integer mattis eros vitae elit pharetra viverra. Integer ut nisi efficitur, sollicitudin quam efficitur, tempus ligula.Integer mattis er</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fl-experience-item">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <div class="fl-experience-icon">
+                                                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body fl-experience-info">
+                                                                <div class="fl-experience-heading">
+                                                                    <h4 class="main-title">Web Designer <span>Sukhadaam Infotech</span></h4>
+                                                                    <div class="experience-years"><span>April 2005</span> - <span>February 2018</span></div>
+                                                                    <div class="experience-location"><span><i class="fa fa-map-marker"></i></span>Rajkot, Gujarat(India)</div>
+                                                                </div>
+                                                                <div class="fl-experience-sort-info">Integer mattis eros vitae elit pharetra viverra. Integer ut nisi efficitur, sollicitudin quam efficitur, tempus ligula.Integer mattis eros vitae elit pharetra viverra. Integer ut nisi efficitur, sollicitudin quam efficitur, tempus ligula.Integer mattis er</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fl-experience-item">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <div class="fl-experience-icon">
+                                                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body fl-experience-info">
+                                                                <div class="fl-experience-heading">
+                                                                    <h4 class="main-title">Web Designer <span>Sukhadaam Infotech</span></h4>
+                                                                    <div class="experience-years"><span>April 2005</span> - <span>February 2018</span></div>
+                                                                    <div class="experience-location"><span><i class="fa fa-map-marker"></i></span>Rajkot, Gujarat(India)</div>
+                                                                </div>
+                                                                <div class="fl-experience-sort-info">Integer mattis eros vitae elit pharetra viverra. Integer ut nisi efficitur, sollicitudin quam efficitur, tempus ligula.Integer mattis eros vitae elit pharetra viverra. Integer ut nisi efficitur, sollicitudin quam efficitur, tempus ligula.Integer mattis er</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab_6">
+                                        <div class="panel theme-box no-bg no-padding">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">Reviews</h4>
+                                                <div class="panel-tools pull-right">
+                                                    <a href="#">View More <i class="fa fa-angle-right"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <ul class="fl-avg-review clearfix">
+                                                    <li class="fl-avg-review-item">
+                                                        <label>Punctuality</label>
+                                                        <div class="star-ratings-sprite">
+                                                            <span style="width:100%" class="star-ratings-sprite-rating"></span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="fl-avg-review-item">
+                                                        <label>Work Clarification</label>
+                                                        <div class="star-ratings-sprite">
+                                                            <span style="width:100%" class="star-ratings-sprite-rating"></span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="fl-avg-review-item">
+                                                        <label>Communication</label>
+                                                        <div class="star-ratings-sprite">
+                                                            <span style="width:100%" class="star-ratings-sprite-rating"></span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="fl-avg-review-item">
+                                                        <label>Work Quality</label>
+                                                        <div class="star-ratings-sprite">
+                                                            <span style="width:100%" class="star-ratings-sprite-rating"></span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="fl-avg-review-item">
+                                                        <label>Expertise</label>
+                                                        <div class="star-ratings-sprite">
+                                                            <span style="width:100%" class="star-ratings-sprite-rating"></span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Bootstrap Accordion -->
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div>
+                                <!-- /Bootstrap Accordion -->
+                            </div>
+                        </div>
+                    </div> */ ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?/*
+<section class="main-dashboard">
+  <div class="container">
+
+    <div class="profile freelancer-profile ">
+      <div class="theme-form">
+        <div class="row">
+          <div class="col-md-9 col-md-push-3 col-sm-8 col-sm-push-4">
+            %PERSONAL_DETAIL%
+          </div>
+          <div class="col-md-3 col-md-pull-9 col-sm-4 col-sm-pull-8">
+            <div class="basic-info desktop-img">
+              <div class="profile-img">
+                <img src="%USER_IMG%" class="preview_profile">
+                <span class="camera">
+                  <a href="javascript:void(0)" id="profile_image_trigger" title="Update Profile Picture">
+                    <i class="fa fa-camera"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div class="skills">
+             <h3>
+              {MY_SKILL_BTN_LBL}
+            </h3>
+            <ul class="skill_listing">
+             %SKILL_LIST%
+             <li>
+              <a href="#" data-toggle="modal" data-target="#skills" title="Add Skills">
+                {FP_ADD_MORE_SKILLS}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="skills">
+         <h3>
+          {MY_LANG_BTN_LBL}
+        </h3>
+        <ul class="skill_listing">
+          %LANG_LIST%
+
+          <li>
+            <a href="#" data-toggle="modal" data-target="#languages" title="Add Language">
+              {FP_ADD_MORE_LANGUAGES}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="skills">
+        <h3>Category</h3>
+        <div class="subcategory">
+          <ul class="skill_listing">
+            %SUBCAT_LIST%
+
+            <li>
+              <a href="javascript:void(0)" class="addRecord" title="Add subcategory" data-entity="categories">
+                {FP_ADD_MORE_CATEGORIES}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="skills">
+        <h3>{FP_VIDEO}</h3>
+        <div class="add_video">
+         %VIDEO_IFRAME%
+         <a href="#" data-toggle="modal" data-target="#myModal">
+          {PLACE_VIDEO_LBL}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section> */ ?>
+<!-- /.container -->
+<div class="modal fade video-modal" id="myModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <form method="post" name="videoFrm" id="videoFrm">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                  </button>
+                  <h4 class="modal-title">
+                    {ADD_VIDEO_LBL}
+                  </h4>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label>
+                      {ENTER_LINK_LBL}
+                    </label>
+                    <div class="input-group">
+                      <input type="text" class="form-control videoUrl" name="videoUrl" id="videoUrl">
+                      <span class="input-group-btn">
+                        <button type="button" class="videoPlay btn btn-system">{FP_UPDATE}</button>
+                      </span>
+                    </div>
+                    <label class="red_error link_val"></label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                    <!--  <div class="theme-button-default">
+                        <a href="#" data-dismiss="modal">Cancel</a>
+                    </div> -->
+                    <div class="theme-button">
+                        <input type="hidden" name="action" value="videoAdd">
+                        <button type="button" class="btn btn-system btnSaveVideo">{FD_SAVE}</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal fade" id="skills" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <form name="skillFrm" id="skillFrm" method="post">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+          <h4 class="modal-title">
+            {ADD_SKILL_MODAL_HEADER}
+          </h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group add-skill-form-group">
+            <select data-placeholder="Skill list" class="form-control skill_choose_skillList" multiple tabindex="4" name="skill_name[]" id="skill_name">%SKILL_SELECTION_LIST%</select>
+          </div>
+        </div>
+        <div class="modal-footer">
+        <!-- <div class="theme-button-default">
+            <a href="#" data-dismiss="modal">Cancel</a>
+          </div> -->
+          <div class="theme-button">
+            <input type="hidden" name="action" value="skillAdd">
+            <button type="submit" class="btn btn-system">{FD_SAVE}</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal fade" id="languages" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <form name="langFrm" id="langFrm" method="post">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+          <h4 class="modal-title">
+            {ADD_LANG_MODAL_HEADER}
+          </h4>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group">
+            <div class="form-group">
+              <select data-placeholder="Language list" class="form-control" name="language_name" id="language_name">%LANG_SELECTION_LIST%</select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group">
+              <select data-placeholder="Language list" class="form-control" name="language_type" id="language_type">
+                <option value="">--{FP_SELECT_LANGUAGE_LEVEL}--</option>
+                <option value="Basic">Basic</option>
+                <option value="Conversational">Conversational</option>
+                <option value="Fluent">Fluent</option>
+                <option value="Native">Native</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="theme-button">
+            <input type="hidden" name="action" value="langAdd">
+            <button type="submit" class="btn btn-system" name="saveLang" id="saveLang">{FD_SAVE}</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal fade" id="profile_name" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <form method="post" name="profileFrm" id="profileFrm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+          <h4 class="modal-title">
+            {ADD_NAME_MODAL_HEADER}
+          </h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>
+              {FIRST_NM_LBL}
+            </label>
+            <input type="text" name="firstName" id="firstName" value="%FIRST_NAME%" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label>
+              {LAST_NM_LBL}
+            </label>
+            <input type="text" name="lastName" id="lastName" value="%LAST_NAME%" class="form-control" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="theme-button">
+            <input type="hidden" name="action" id="action" value="addUserName">
+            <button type="submit" class="btn btn-system" id="saveFnm">{FD_SAVE}</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal fade" id="profile_location" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <form method="post" name="profilelocationFrm" id="profilelocationFrm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+              <h4 class="modal-title">
+               {LOCATION_LBL}
+             </h4>
+           </div>
+           <div class="modal-body">
+            <div class="form-group">
+              <input type="text" class="form-control load_ggl_autocomplete" name="userLocation" id="userLocation" value="%LOCATION%" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="theme-button">
+              <input type="hidden" name="action" id="action" value="addLocation">
+              <button type="submit" class="btn btn-system" id="locationSave">{FD_SAVE}</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="modal fade" id="UserLevel" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <form method="post" name="lvlFrm" id="lvlFrm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h4 class="modal-title">
+              {ADD_EXP_MODAL_HEADER}
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <select class="form-control" name="userLvl">
+                <option value="f" %B_LVL%>Beginner</option>
+                <option value="e" %P_LVL%>Pro</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="theme-button">
+              <input type="hidden" name="action" id="action" value="addExpLvl">
+              <button type="submit" class="btn btn-system">{FD_SAVE}</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="modal fade" id="delete" role="dialog" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <form name="deleteFrm" id="deleteFrm" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                      &times;
+                    </button>
+                    <h4 class="modal-title">
+                      {REMOVE_CONFIRM_MODAL_HEADER}
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                      {REMOVE_CONFIRMATION_MSG}
+                    </p>
+                </div>
+                <div class="modal-footer">                   
+                  <div class="theme-button">
+                    <input type="hidden" name="entityType" id="entityType" value="">
+                    <input type="hidden" name="entityVal" id="entityVal" value="">
+                    <input type="hidden" name="action" value="deleteRecord">
+                    <button type="submit" name="deleteRecord" class="btn btn-system">{FPS_DELETE}</button>
+                  </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+%PORTFOLIO_MODAL% 
+%EDUCATION_MODAL% 
+%CERTIFICATION_MODAL% 
+%EXP_MODAL% 
+%CATEGORY_MODAL% 
+%OVERVIEW_MODAL% 
+%PROFESSIONAL_TITLE_MODAL% 
+%SHARE_LINK_MODAL%
+
+<script>
+    $("#dashboardMenu").click(function(){
+        $("#mySidenav").css("left","0px");
+         $("#mySidenav").addClass("open");
+    });
+    $("#mySidenav .closebtn").click(function(){
+        $("#mySidenav").css("left","-250px");
+        $("#mySidenav").removeClass("open");
+    });
+    $(document).ready(function(){
+        getAccordion("#dasTabs",992);
+        $(".profile-button").click(function(){
+           $(".edit_remove").toggle();
+           $(".edit_img").toggle();
+        });
+        $(".skill_choose").select2({
+          tags:true,
+          dropdownParent: $('#add_portfolio')
+        });
+
+        $(".skill_choose_skillList").select2({
+          tags:true,
+          dropdownParent: $('#skills')
+        });
+        $(".language_choose").select2({});
+
+        $(document).on("click",".videoPlay",function(e){
+          var exp = new RegExp("^(http[s]?:\\/\\/(www\\.)?){1}([0-9A-Za-z-\\.@:%_\+~#=]+)+((\\.[a-zA-Z]{2,3})+)(/(.)*)?(\\?(.)*)?");                  
+          if(exp.test(url))
+          {                 
+            var url = $("#videoUrl").val();
+            if(url=="" || url==null){
+              $(".link_val").html("{FP_PLEASE_USE_VALID_SRC}.");
+              return false;
+            }
+            var new_url;
+            if (url.indexOf("iframe")>0){
+
+              $("#videoUrl").val("");
+              toastr["error"]("{FP_INVALID_FORMAT_FOR_VIDEO_URL}");
+              return false;
+            }
+            else if(url.indexOf("youtube")>0 && url.indexOf("watch")>0){
+
+              new_url = url.split("=");
+              url=new_url[1];
+              url = "https://www.youtube.com/embed/"+url;
+              $("#videoUrl").val(url);
+            }
+            else if(url.indexOf("/vimeo")>0){
+
+              new_url = url.split("/");
+
+              url=new_url[3];
+              url = "https://player.vimeo.com/video/"+url;
+              $("#videoUrl").val(url);
+            }
+            $("#playVideo").attr("src",url);
+            return false;
+          }
+          else
+          { 
+              $(".link_val").html("{FP_PLEASE_USE_VALID_SRC}.");
+              return false;
+          }
+          
+        });
+
+        function readURL(input) {
+          if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              $('.imgPrev').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+          }
+        }
+        $(".imgData").change(function(){
+          readURL(this);
+          $('.imgPrev').removeClass("hide");
+        });
+
+        $(document).on("click",".btnSaveVideo",function(e){
+          var url = $("#videoUrl").val();
+          if(url=="" || url==null){
+            $(".link_val").html("{FP_PLEASE_USE_VALID_SRC}.");
+            return false;
+          }
+          if (~url.indexOf("iframe")){
+            $(".link_val").html("{FP_INVALID_FORMAT_FOR_VIDEO_URL}.");
+            return false;
+          }
+          $("#playVideo").attr("src",url);
+          $("#videoFrm").submit();
+
+        });
+
+        $('.modal').on('hidden.bs.modal', function () {
+          var _this = $(this);
+          var form = _this.find('form');
+          var form_id = _this.find('form').attr('id');
+          form[0].reset();
+
+          $('#'+form_id+' .form-group').each(function(index, element) {
+            if($(element).hasClass('has-error')) {
+              $(element).removeClass('has-error')
+            }
+          });
+
+          $('#'+form_id+' .help-block').each(function(index, element) {
+            $(element).remove();
+          });
+        });
+
+        jQuery.validator.addMethod("startingSpaceNotAllow", function(value, element)
+        {
+          return this.optional(element) || /^\S.*$/.test(value);
+        }, "Space is not allowed");
+
+        $(document).on("click","#addPorfolio",function(){
+            $("#portfolioFrm").validate({
+              ignore: [],
+              errorClass: 'help-block',
+              errorElement: 'label',
+              highlight: function (element)
+              {
+                $(element).closest('.form-group').addClass('has-error');
+              },
+              unhighlight: function (element)
+              {
+                $(element).closest('.form-group').removeClass('has-error');
+              },
+              rules:
+              {
+                portFolioimage:{extension: "jpg|jpeg|png|JPG|JPEG|PNG"},
+                projectTitle:{required:true,minlength:2,startingSpaceNotAllow:true,
+                  normalizer: function(value) {
+                    value = value.replace("something", "new thing");
+                    return $.trim(value);
+                  }
+                },
+                projectDuration:{required:true},
+                'project_skill_name[]':{required:true},
+                projectDesc:
+                {
+                  required:true, startingSpaceNotAllow:true,startingSpaceNotAllow:true,
+                  normalizer: function(value) {
+                    value = value.replace("something", "new thing");
+                    return $.trim(value);
+                  }
+                }
+              },
+
+              messages:
+              {
+                portFolioimage:{extension:"{FP_PLEASE_SELECT_VALID_IMAGE}"},
+                projectTitle:{required:"{FP_PLEASE_ENTER_PROJECT_TITLE}"},
+                projectDuration:{required:"{FP_PLEASE_ENTER_PROJECT_DURATION}"},
+                'project_skill_name[]': { required:"{FP_PLEASE_SELECT_SKILL}"},
+                projectDesc:{required:"{FP_PLEASE_ENTER_PROJECT_DESCRIPTION}"}
+              },
+              errorPlacement: function(error, element) {
+                if (element.attr("name") == "project_skill_name[]" )
+                  error.insertAfter(".selection");
+                else
+                  error.insertAfter(element);
+              },
+              unhighlight: function (element, errorClass, validClass) {
+                var elem = $(element);
+                if (elem.hasClass('select2-offscreen')) {
+                  $('#s2id_' + elem.attr('id') + ' ul').removeClass(errorClass);
+                } else {
+                  elem.removeClass(errorClass);
+                }
+              }
+
+            });
+            if($("#portfolioFrm").valid()){
+                addOverlay();
+                $("#portfolioFrm").submit();
+            }
+        });
+        $(document).on("click","#saveLang",function(){
+            $("#langFrm").validate({
+              ignore: [],
+              errorClass: 'help-block',
+              errorElement: 'label',
+              highlight: function (element)
+              {
+                $(element).closest('.form-group').addClass('has-error');
+              },
+              unhighlight: function (element)
+              {
+                $(element).closest('.form-group').removeClass('has-error');
+              },
+              rules:
+              {
+                language_type:{required:true},
+                language_name:{required:true}
+              },
+              messages:
+              {
+                language_type:{required:"{FP_PLEASE_SELECT_LANGUAGE_TYPE}"},
+                language_name:{required:"{FP_PLEASE_SELECT_LANGUAGE}"}
+              },
+            });
+            if($("#langFrm").valid())
+            {
+              addOverlay();
+              $("#langFrm").submit();
+            }
+        });
+        $(document).on("click","#addCertification",function(){
+            $("#certificateFrm").validate({
+              ignore: [],
+              errorClass: 'help-block',
+              errorElement: 'label',
+              highlight: function (element)
+              {
+                $(element).closest('.form-group').addClass('has-error');
+              },
+              unhighlight: function (element)
+              {
+                $(element).closest('.form-group').removeClass('has-error');
+              },
+              rules:
+              {
+                certiName:{required:true,
+                  normalizer: function(value) {
+                    value = value.replace("something", "new thing");
+                    return $.trim(value);
+                  }
+                }
+              },
+              messages:
+              {
+                certiName:{required:"{FP_PLEASE_ENTER_CERTIFICATE_NAME}"}
+              },
+            });
+            if($("#certificateFrm").valid())
+            {
+                addOverlay();
+                $("#certificateFrm").submit();
+            }
+        });
+        $(document).on("click","#addEducation",function(){
+            $("#educationFrm").validate({
+              ignore: [],
+              errorClass: 'help-block',
+              errorElement: 'label',
+              highlight: function (element)
+              {
+                $(element).closest('.form-group').addClass('has-error');
+              },
+              unhighlight: function (element)
+              {
+                $(element).closest('.form-group').removeClass('has-error');
+              },
+              rules:
+              {
+                instituteName:{required:true,
+                  normalizer: function(value) {
+                    value = value.replace("something", "new thing");
+                    return $.trim(value);
+                  }
+                },
+                start_year:{required:true},
+                end_year:{required:true,min:$("#start_year").val()},
+                degree:{required:true},
+                study:{required:true},
+                desc:{required:true,
+                  normalizer: function(value) {
+                    value = value.replace("something", "new thing");
+                    return $.trim(value);
+                  }
+                }
+              },
+              messages:
+              {
+                instituteName:{required:"{FP_PLEASE_ENTER_INSTITUTE_NAME}"},
+                start_year:{required:"{FP_PLEASE_ENTER_START_YEAR}"},
+                end_year:{required:"{FP_PLEASE_ENTER_END_YEAR}"},
+                degree:{required:"{FP_PLEASE_ENTER_DEGREE}"},
+                study:{required:"{FP_PLEASE_ENTER_STUDY}"},
+                desc:{required:"{FP_PLEASE_ENTER_DESCRIPTION}"}
+              },
+            });
+            if($("#educationFrm").valid())
+            {
+               addOverlay();
+               $("#educationFrm").submit();
+            }
+        });
+    });
+
+    $(".edit_button").click(function(){
+        $(".edit_remove").toggle();
+    });
+</script>
+<script>      
+    $(document).ready(function(){
+        jQuery.validator.addMethod("startdatelessthantoday", function(value, element){
+            return true;
+        }, "{FP_AVOID_SELECTING_FUTURE_DATES}");
+        jQuery.validator.addMethod("enddatelessthantoday", function(value, element){
+            return true;
+        }, "{FP_AVOID_SELECTING_FUTURE_DATES}");
+        $(document).on("click","#addExperience",function(){
+            var fm = $(this).closest('form');
+            var start_month = fm.find('#start_month').val();
+            var start_year = fm.find('#start_yr').val();
+            var end_month = fm.find('#end_month').val();
+            var end_year = fm.find('#end_yr').val();
+            var months = ["January","February","March","April","May","June","July","August","September","October","November", "December"];
+            if(start_year != '' && start_month != '' ){
+                start_month = months.indexOf(start_month);
+                //console.log(new Date(start_year,start_month));
+                if(new Date(start_year,start_month) > new Date()){
+                  toastr['error']('{FP_AVOID_SELECTING_FUTURE_DATES_IN_START_DATES}');
+                  return false;
+                }
+            }
+            if(end_year != '' && end_month != ''){
+                end_month = months.indexOf(end_month);
+                if(new Date(end_year,end_month) > new Date()){
+                  toastr['error']('{FP_AVOID_SELECTING_FUTURE_DATES_IN_END_DATES}');
+                  return false;
+                }
+            }
+            $("#experienceform").validate({
+                ignore: [],
+                errorClass: 'help-block',
+                errorElement: 'label',
+                highlight: function (element)
+                {
+                  $(element).closest('.form-group').addClass('has-error');
+                },
+                unhighlight: function (element)
+                {
+                  $(element).closest('.form-group').removeClass('has-error');
+                },
+
+                rules:
+                {
+                  cmp_nm:{required:true,
+                    normalizer: function(value) {
+                      value = value.replace("something", "new thing");
+                      return $.trim(value);
+                    }
+                  },
+                  location:{required:true,
+                    normalizer: function(value) {
+                      value = value.replace("something", "new thing");
+                      return $.trim(value);
+                    }
+                  },
+                  title:{required:true,
+                    normalizer: function(value) {
+                      value = value.replace("something", "new thing");
+                      return $.trim(value);
+                    }
+                  },
+                  start_month:{required:true,startdatelessthantoday:true},
+                  start_yr:{required:true},
+                  end_month:{required:true,enddatelessthantoday:true},
+                  end_yr:{required:true,min:$("#start_yr").val()},
+                  desc:{required:true,
+                    normalizer: function(value) {
+                      value = value.replace("something", "new thing");
+                      return $.trim(value);
+                    }
+                  }
+                },
+                messages:
+                {
+                  cmp_nm:{required:"{FP_PLEASE_ENTER_COMPANY_NAME}"},
+                  location:{required:"{FP_PLEASE_ENTER_LOCATION}"},
+                  title:{required:"{FP_PLEASE_ENTER_DEGREE}"},
+                  start_month:{required:"{FP_PLEASE_ENTER_START_MONTH}"},
+                  start_yr:{required:"{FP_PLEASE_ENTER_START_YEAR}"},
+                  end_month:{required:"{FP_PLEASE_ENTER_END_MONTH}"},
+                  end_yr:{required:"{FP_PLEASE_ENTER_END_YEAR}",min:"{FP_PLEASE_SELECT_END_YEAR_GREATER_THAN_START_YEAR}"},
+                  desc:{required:"{FP_PLEASE_ENTER_DESCRIPTION}"}
+                },
+            });
+
+            if($("#experienceform").valid())
+            {
+               addOverlay();
+              $("#experienceform").submit();
+            }
+        });
+        $(document).on("click","#saveFnm",function(){
+            $("#profileFrm").validate({
+              ignore: [],
+              errorClass: 'help-block',
+              errorElement: 'label',
+              highlight: function (element)
+              {
+                $(element).closest('.form-group').addClass('has-error');
+              },
+              unhighlight: function (element)
+              {
+                $(element).closest('.form-group').removeClass('has-error');
+              },
+              rules:
+              {
+                firstName:{required:true,
+                  normalizer: function(value) {
+                    value = value.replace("something", "new thing");
+                    return $.trim(value);
+                  }
+                },
+                lastName:{required:true,
+                  normalizer: function(value) {
+                    value = value.replace("something", "new thing");
+                    return $.trim(value);
+                  }
+                },
+              },
+
+              messages:
+              {
+                firstName:{required:"{FP_PLEASE_ENTER_FIRST_NAME}"},
+                lastName:{required:"{CP_PLEASE_ENTER_LAST_NAME}"}
+              },
+            });
+            if($("#profileFrm").valid())
+            {
+               addOverlay();
+               $("#profileFrm").submit();
+            }
+        });
+        $(document).on("click","#locationSave",function(){
+            $("#profilelocationFrm").validate({
+                ignore: [],
+                errorClass: 'help-block',
+                errorElement: 'label',
+                highlight: function (element)
+                  {
+                    $(element).closest('.form-group').addClass('has-error');
+                  },
+                unhighlight: function (element)
+                {
+                    $(element).closest('.form-group').removeClass('has-error');
+                  },
+                normalizer: function(value) {
+                    // Trim the value of every element
+                      return $.trim(value);
+                },
+                rules:
+                {
+                  userLocation:{
+                    required:true,
+                    normalizer: function(value) {
+                    value = value.replace("something", "new thing");
+                    return $.trim(value);
+                    }
+                  }
+                },
+                messages:
+                  {
+                    userLocation:{required:"{FP_PLEASE_ENTER_LOCATION}"}
+                  },
+            });
+             if($("#profilelocationFrm").valid())
+             {
+               addOverlay();
+               $("#profilelocationFrm").submit();
+             }
+        });
+
+                $(document).on("click","#addTitle",function(){
+
+                 $("#proFrm").validate({
+                  ignore: [],
+                  errorClass: 'help-block',
+                  errorElement: 'label',
+                  highlight: function (element)
+                  {
+                    $(element).closest('.form-group').addClass('has-error');
+                  },
+                  unhighlight: function (element)
+                  {
+                    $(element).closest('.form-group').removeClass('has-error');
+                  },
+                  rules:
+                  {
+                    professional_title:{required:true,
+                      normalizer: function(value) {
+                        value = value.replace("something", "new thing");
+                        return $.trim(value);
+                      }
+                    }
+                  },
+
+                  messages:
+                  {
+                    professional_title:{required:"{FP_PLEASE_ENTER_PROFESSIONAL_TITLE}"}
+                  },
+                });
+
+
+                 if($("#proFrm").valid())
+                 {
+                   addOverlay();
+                   $("#proFrm").submit();
+                 }
+               });
+
+                $(document).on("click","#overviewAdd",function(){
+
+                 $("#overviewFrm").validate({
+                  ignore: [],
+                  errorClass: 'help-block',
+                  errorElement: 'label',
+                  highlight: function (element)
+                  {
+                    $(element).closest('.form-group').addClass('has-error');
+                  },
+                  unhighlight: function (element)
+                  {
+                    $(element).closest('.form-group').removeClass('has-error');
+                  },
+                  rules:
+                  {
+                    overview:{required:true,
+                      normalizer: function(value) {
+                        value = value.replace("something", "new thing");
+                        return $.trim(value);
+                      }
+                    }
+                  },
+
+                  messages:
+                  {
+                    overview:{required:"{CP_PLEASE_ENTER_OVERVIEW}"}
+                  },
+                });
+
+
+                 if($("#overviewFrm").valid())
+                 {
+                   addOverlay();
+                   $("#overviewFrm").submit();
+                 }
+               });
+
+                $(document).on("click",".delRecord",function(){
+                  var entityId = $(this).attr("data-id");
+                  var entityType = $(this).attr("data-entity");
+                  $("#entityType").val(entityType);
+                  $("#entityVal").val(entityId);
+                  $("#delete").modal("show");
+                });
+                var Fileurl = "{SITE_URL}AjaxFprofile";
+
+                $(document).on("click",".addRecord",function()
+                {
+                  var entityType = $(this).attr("data-entity");
+                  /*alert($("#"+entityType).closest('form').attr("id"));*/
+                  $("#"+entityType).modal("show");
+                });
+                $(document).on("click",".editRecord",function(){
+
+                  var entityId = $(this).attr("data-id");
+                  var entityType = $(this).attr("data-entity");
+
+                  var dataDiv = $(this).attr("data-div");
+                  addOverlay();
+                  $.post(Fileurl,{"action":"load_data","entityType":entityType,"entityId":entityId},function(data){
+                    removeOverlay();
+                    $(".portfolioSection").html(data.content);
+                    $("#"+entityType).modal("show");
+                  },'json');
+                });
+
+                var professional_title_tarea_len = $("#professional_title_tarea").val().length;
+                var allowed_len = 100;
+                var curr_len = allowed_len - professional_title_tarea_len;
+                $(".char_cnt").html("<strong>"+curr_len+"</strong>");
+
+                $('#professional_title_tarea').bind('input',function() {
+                  var $t=$(this);
+                  var max= 100;
+                  if ($t.val().length>max) {
+                    $t.val($t.val().substr(0,max));
+                  }
+                  var professional_title_tarea_len = $("#professional_title_tarea").val().length;
+                  var allowed_len = 100;
+                  var curr_len = allowed_len - professional_title_tarea_len;
+                  $(".char_cnt").html("<strong>"+curr_len+"</strong>");
+
+                });
+
+                $(document).on("keypress","#professional_title_tarea",function(e){
+
+                  var professional_title_tarea_len = $("#professional_title_tarea").val().length;
+                  var allowed_len = 100;
+                  var curr_len = allowed_len - professional_title_tarea_len;
+                  if(curr_len<0){
+                    return false;
+                  }
+                  $(".char_cnt").html("<strong>"+curr_len+"</strong>");
+                  return true;
+                });
+
+              });
+
+
+/*$('body').on('hidden.bs.modal', '.modal', function () {
+  $(this).removeData('bs.modal');
+});*/
+
+
+
+$(document).on("click","#profile_image_trigger",function(e){
+  e.preventDefault();
+  $("#avatar-modal").modal('show');
+});
+$(document).on("click",".avatar-cancel",function(e){
+  e.preventDefault();
+  $("#avatar-modal").modal('hide');
+});
+
+
+/*$(document).on("change","#profile_image",function(){
+
+  var value = $(this).val();
+  var allowedFiles = ["jpg", "jpeg", "png"];
+  var extension = value.split('.').pop().toLowerCase();
+  if ($.inArray(extension, allowedFiles) < 0)
+  {
+    toastr['warning']("Please upload only .jpg,.jpeg,.png files");
+  }
+  else if (this.files[0].size > 4194304)
+  {
+    toastr['warning']("Image size must be less then 4MB");
+  }
+  else
+  {
+    var file_data = $(this).prop("files")[0];
+    var form_data = new FormData();
+    form_data.append("file", file_data)
+    form_data.append("action", "move_image");
+    $.ajax({
+      url: "{SITE_URL}AjaxFprofile",
+      cache: false,
+      contentType: false,
+      processData: false,
+      data: form_data,
+      type: 'post',
+      dataType: 'json',
+      success:function(data)
+      {
+        var url = data.content;
+        $('.preview_profile').attr('src',url);
+      }
+    });
+  }
+});*/
+$(document).on("click",".delete_data",function(){
+  var entityType = $(this).attr("data-item-type");
+  var entityId = $(this).attr("data-id");
+  var parent = $(this).closest('ul');
+  var $this = $(this);
+  swal({
+    title: "Are you sure you want to delete?",
+    type: "warning",
+    showCancelButton: true,
+    confirmButtonClass: "btn-danger",
+    confirmButtonText: "Yes",
+    closeOnConfirm: false
+  },
+  function(inputValue)
+  {
+    if(inputValue)
+    {
+      addOverlay();
+      $.post("{SITE_URL}AjaxFprofile",{"action":"delete_data",id:entityId,"type":entityType},function(data){
+        removeOverlay();
+        //parent.html(data.div_content);
+        $this.closest('li').remove();
+      },'json');
+      swal("Deleted!", "{FP_RECORD_DELETED_SUCCESSFULLY}", "success");
+    }
+
+  });
+
+
+});
+
+$(document).on('click','#remove_profile_image',function(e){
+  e.preventDefault();
+  if(confirm("{CP_TO_REMOVE_PROFILE_IMAGE}?")){
+    var form_data = new FormData();
+    form_data.append("action", "remove_profile_image");
+    $.ajax({
+      url: "{SITE_URL}AjaxFprofile",
+      cache: false,
+      contentType: false,
+      processData: false,
+      data: form_data,
+      type: 'post',
+      dataType: 'json',
+      success:function(data)
+      {
+        console.log(data);
+        var url = data.url;
+        $('#remove_profile_image').css('display','none');
+        $('.preview_profile').attr('src',url);
+      }
+    });
+  }
+});
+
+function remove_profile_image(){
+
+}
+
+function crop_image_file_upload(){
+  var inp = document.getElementById('avatarInput');
+  if(inp.files.length == 0){
+    alert('Please select atleast one file');
+    return false;
+  }
+  var $avatarForm = $('.avatar-form');
+  addOverlay();
+  var url = $avatarForm.attr('action');
+  var data = new FormData($avatarForm[0]);
+
+  $.ajax(url, {
+    type: 'post',
+    data: data,
+    dataType: 'json',
+    processData: false,
+    contentType: false,
+
+    beforeSend: function () {
+      console.log('before send');
+    },
+
+    success: function (data) {
+      //console.log(data);
+      if(data.state == 200){
+        var img = data.result.replace('{DIR_USER_PROFILE}','{SITE_USER_PROFILE}');
+        $('.preview_profile').attr('src',img);
+        $('#avatar-modal').modal('hide');
+        $('#remove_profile_image').css('display','block');
+        removeOverlay();
+      }else{
+        alert('{SOMETHING_WENT_WRONG}');
+        removeOverlay();
+      }
+    },
+
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+      console.log('error');
+      removeOverlay();
+    },
+
+    complete: function () {
+      console.log('complete');
+      removeOverlay();
+    }
+  });
+}
+</script>
+
+
+<link rel="stylesheet" href="{SITE_JS}cropper-master_new/dist/cropper.min.css">
+<link rel="stylesheet" href="{SITE_JS}cropper-master_new/examples/crop-avatar/css/main.css">
+
+<script src="{SITE_JS}cropper-master_new/dist/cropper.min.js"></script>
+<script src="{SITE_JS}cropper-master_new/examples/crop-avatar/js/main.js"></script>
+<div class="container" id="crop-avatar">
+  <div class="avatar-view" title="Change the avatar" style="display: none;">
+    <img src="images/picture.jpg" alt="Avatar">
+  </div>
+  <div class="modal fade profile_modal" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <form class="avatar-form" action="{SITE_URL}app-sd/units-sd/freelancer_profile-sd/ajax.freelancer_profile-sd.php" enctype="multipart/form-data" method="post">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="avatar-modal-label">{CP_EDIT_PROFILE_IMAGE}</h4>
+          </div>
+          <div class="modal-body">
+            <div class="avatar-body">
+
+              <!-- Upload image and data -->
+              <div class="avatar-upload">
+                <input type="hidden" class="avatar-src" name="avatar_src" value="{DIR_USER_PROFILE}">
+                <input type="hidden" class="avatar-data" name="avatar_data">
+                <label class="btn btn-primary" for="avatarInput">{CP_LOCAL_UPLOAD}</label>
+                <input type="file" class="avatar-input" id="avatarInput" name="avatar_file">
+              </div>
+              <!-- Crop and preview -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="avatar-wrapper"></div>
+                </div>
+                <!-- <div class="col-md-3">
+                  <div class="avatar-preview preview-lg"></div>
+                  <div class="avatar-preview preview-md"></div>
+                  <div class="avatar-preview preview-sm"></div>
+                </div> -->
+              </div>
+
+              <div class="row avatar-btns">
+                <button type="submit" class="btn btn-system avatar-save">{FD_SUBMIT}</button>
+                <!-- <a type="submit" class="btn btn-danger avatar-cancel" >Cancel</a> -->
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div><!-- /.modal -->
+
+</div>

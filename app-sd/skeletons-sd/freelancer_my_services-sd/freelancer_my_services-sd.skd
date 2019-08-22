@@ -1,0 +1,602 @@
+
+%SUB_HEADER_CONTENT%
+<script type="text/javascript" src="{SITE_JS}URI.js"></script>
+<!-- Searchbar Section -->
+<section class="serchbar-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="searchbar-form filters-search">
+                    <form class="form" action="" method="POST" id="frmMyJobs" name="frmMyJobs">
+                        <div class="input-group">
+                            <!-- <input type="text" class="form-control" placeholder="Find Jobs (eg. Web Design)">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button">Search</button>
+                            </span> -->
+                            <input type="text" class="form-control" placeholder="Search for Service" name="keyword" id="keyword" value="%KEYWORD%">
+                           <span class="input-group-btn search_record">
+                                <a href="javascript:void(0)" class="btn btn-primary search_record">Search</a>
+                                <!-- <button class="btn btn-primary search_record" type="button">Search</button> -->
+                           </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Searchbar Section End -->
+
+<section class="main-dashboard ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="service-listing-wrap">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                            <div class="left-sidebar filters-search" id="sidebarMenu">
+                                <div class="panel panel-default theme-box">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">{FS_FILTERS}</h3>
+                                        <div class="panel-tools pull-right">
+                                            <a href="{SITE_URL}my-services">{FMS_CLEAR} <i class="fa fa-refresh" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="filter-box">
+                                            <h5 class="filter-title">{FS_APPROVAL_STATUS}</h5>
+                                            <div class="filter-body">
+                                                <ul class="filter-lists">
+                                                    <li>
+                                                       <input type="radio" id="test1" name="approval_status" value="p" %PENDING_STATUS%/>
+                                                       <label for="test1">
+                                                            {FMS_PENDING}
+                                                       </label>
+                                                    </li>
+                                                    <li>
+                                                       <input type="radio" id="test2" name="approval_status" value="a" %APPROVED_STATUS%/>
+                                                       <label for="test2">
+                                                            {FMS_APPROVED}
+                                                       </label>
+                                                    </li>
+                                                    <li>
+                                                       <input type="radio" id="test9" name="approval_status" value="r" %REJECT_STATUS%/>
+                                                       <label for="test9">
+                                                            {FMS_REJECTED}
+                                                       </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="filter-box">
+                                            <h5 class="filter-title">{FMS_STATUS}</h5>
+                                            <div class="filter-body">
+                                                <ul class="filter-lists">
+                                                    <li>
+                                                       <input type="radio" id="test12" name="status" value="y"  %ACTIVE_STATUS%/>
+                                                       <label for="test12">
+                                                            {FMS_ACTIVE}
+                                                       </label>
+                                                    </li>
+                                                    <li>
+                                                       <input type="radio" id="test13" name="status" value="n"  %DACTIVE_STATUS%/>
+                                                       <label for="test13">
+                                                            {FMS_DEACTIVE}
+                                                       </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-menu">
+                              <button>
+                                <i class="fa fa-sliders" aria-hidden="true">
+                                </i>
+                                {FMS_FILTER}
+                              </button>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-8">
+                            <div class="cm-job-lists-wrap">
+                                <div class="panel panel-default theme-box">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">{FMS_POSTED_SERVICES}</h3>
+                                        <div class="panel-tools pull-right">
+                                            <a href="{SITE_URL}post-services" title="Post A Service"><span>Post New Service</span> <i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                       <ul class="fl-service-item-lists " id="services_data">
+                                            <!-- <li class="fl-posted-service">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3 flps-image">
+                                                        <div class="flps-image">
+                                                            <a href="#"><img src="images/fps1.jpg" alt="images"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9 col-sm-9 flps-details">
+                                                        <div class="flps-title-wrap">
+                                                            <h4 class="flps-title">
+                                                                <a href="#">Tutoring Website </a>
+                                                            </h4>
+                                                            <span class="flps-delivery">Delivery in 1 Day(s)</span>
+                                                        </div>
+                                                        <ul class="post-breadcrumbs">
+                                                            <li>Mobile Development</li>
+                                                            <li>Ecommerce Development</li>
+                                                        </ul>
+                                                        <div class="flps-bdgt">Price : <div class="amount-wrap">100<span>KWD</span></div></div>
+
+                                                        <div class="flps-status-wrap">
+                                                            <div class="flps-status status-item flps-active">Active</div>
+                                                            <div class="flps-posted status-item">Posted : <span>15th Dec 2018</span></div>
+                                                            <div class="flps-operation status-item"><span>Approved</span></div>
+                                                            <div class="flps-posted status-item">Add-Ons : <span>2</span></div>
+                                                        </div>
+                                                         <div class="flps-featured-wrap">
+                                                            <div class="flps-featured">
+                                                                <div class="add-feature flps-f-item">
+                                                                    <label class="sawlii-check">Mark as Featured
+                                                                        <input type="checkbox" name="feature" id="feature">
+                                                                        <span class="checkmark"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="mark-feature flps-f-item">
+                                                                    <label>Featured Price <div class="amount-wrap">10<span>KWD</span></div></label>
+                                                                    <button class="btn btn-primary btn-sm">Make Featured</button>
+                                                                </div>
+                                                                <div class="item-featured flps-f-item">
+                                                                    <label class="">Featured <i class="fa fa-check-square"></i></label>
+                                                                </div>
+                                                                <div class="item-edits flps-f-item"><a href="#"><i class="fa fa-edit"></i></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li> -->
+                                            %SERVICE_LOOP%
+                                        </ul>
+                                        <div class="view-more-button">
+                                          <div class="theme-button">
+                                           <a href="javascript:void(0)" class="load_more_data %LOAD_CLASS" data-page="1">{FMS_VIEW_MORE_BIDS}</a>
+                                         </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?/*
+<!-- ================= Old Design =================== -->
+
+<section class="main-dashboard">
+ <div class="container">
+  <div class="profile">
+   <div class="featurette-job posted-service-section" id="filters-search">
+    <div class="job-find">
+     <div class="row">
+      <div class="col-md-3 col-sm-4">
+
+      </div>
+      <div class="col-md-9 col-sm-8">
+        <div class="input-group">
+         <input type="text" class="form-control" placeholder="Search for Service" name="keyword" id="keyword" value="%KEYWORD%">
+         <span class="input-group-btn">
+          <div class="theme-button search_record">
+           <a href="javascript:void(0)" class="btn btn-block search_record"><i class="fa fa-search"></i></a>
+         </div>
+       </span>
+     </div>
+   </div>
+ </div>
+</div>
+<div class="sub_featured">
+ <div class="row">
+  <div class="col-md-3 col-sm-4">
+   <div class="left-sidebarmenu">
+    <div class="theme-form">
+      <h4>{FS_FILTERS}</h4>
+      <div class="clear_fltr">
+       <a href="{SITE_URL}my-services">{FMS_CLEAR}<i class="fa fa-refresh" aria-hidden="true"></i></a>
+     </div>
+     <div class="search_sidebar">
+       <h3>
+        {FS_APPROVAL_STATUS}
+      </h3>
+      <ul class="status">
+        <li>
+         <input type="radio" id="test1" name="approval_status" value="p" %PENDING_STATUS%/>
+         <label for="test1">
+           {FMS_PENDING}
+         </label>
+       </li>
+       <li>
+         <input type="radio" id="test2" name="approval_status" value="a" %APPROVED_STATUS%/>
+         <label for="test2">
+           {FMS_APPROVED}
+         </label>
+       </li>
+       <li>
+         <input type="radio" id="test9" name="approval_status" value="r" %REJECT_STATUS%/>
+         <label for="test9">
+           {FMS_REJECTED}
+         </label>
+       </li>
+     </ul>
+   </div>
+   <div class="search_sidebar">
+     <h3>
+      {FMS_STATUS}
+    </h3>
+    <ul class="status">
+      <li>
+       <input type="radio" id="test12" name="status" value="y"  %ACTIVE_STATUS%/>
+       <label for="test12">
+         {FMS_ACTIVE}
+       </label>
+     </li>
+     <li>
+       <input type="radio" id="test13" name="status" value="n"  %DACTIVE_STATUS%/>
+       <label for="test13">
+         {FMS_DEACTIVE}
+       </label>
+     </li>
+   </ul>
+ </div>
+</div>
+</div>
+<div class="filter-menu">
+  <button>
+    <i class="fa fa-sliders" aria-hidden="true">
+    </i>
+    {FMS_FILTER}
+  </button>
+</div>
+<div class="left-sidebarmenu-responsive" style="display:none">
+  <div class="theme-form">
+    <h4>{FMS_FILTER}</h4>
+    <div class="clear_fltr">
+      <a href="{SITE_URL}my-services">Clear <i class="fa fa-refresh" aria-hidden="true"></i></a>
+    </div>
+    <div class="search_sidebar">
+      <h3>
+       {FMS_APPROVAL_STATUS}
+     </h3>
+     <ul class="status">
+       <li>
+        <input type="radio" id="test1" name="approval_status" value="p"/>
+        <label for="test1">
+          {FMS_PENDING}
+        </label>
+      </li>
+      <li>
+        <input type="radio" id="test2" name="approval_status" value="a"/>
+        <label for="test2">
+          {FMS_APPROVED}
+        </label>
+      </li>
+      <li>
+        <input type="radio" id="test9" name="approval_status" value="r"/>
+        <label for="test9">
+          {FMS_REJECTED}
+        </label>
+      </li>
+    </ul>
+  </div>
+  <div class="search_sidebar">
+    <h3>
+     {FMS_STATUS}
+   </h3>
+   <ul class="status">
+     <li>
+      <input type="radio" id="test12" name="status" value="y"/>
+      <label for="test12">
+        {FMS_ACTIVE}
+      </label>
+    </li>
+    <li>
+      <input type="radio" id="test13" name="status" value="n"/>
+      <label for="test13">
+        {FMS_DEACTIVE}
+      </label>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+<div class="seperator" style="display:none">
+</div>
+<div class="col-md-9 col-sm-8">
+  <div class="theme-form">
+   <div class="job_feed_heading">
+    <h1 class="main-heading">
+     {FMS_POSTED_SERVICES}
+   </h1>
+   <div class="remove_saved">
+     <div class="post_services">
+      <div class="theme-button">
+       <a href="{SITE_URL}post-services" title="Post new service">
+         <img src="{SITE_IMG}icon/add.png" alt="">
+       </a>
+     </div>
+   </div>
+ </div>
+</div>
+<ul class="dash-job" id="services_data">
+  %SERVICE_LOOP%
+</ul>
+</div>
+<div class="view-more-button">
+  <div class="theme-button">
+   <a href="javascript:void(0)" class="load_more_data %LOAD_CLASS" data-page="1">{FMS_VIEW_MORE_BIDS}</a>
+ </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>  */ ?>
+
+<div class="modal fade" id="delete" role="dialog" data-backdrop="static" tabindex="-1">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <h4 class="modal-title">
+          {FMS_DELETE}
+        </h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <p>
+            {FMS_ARE_YOU_SURE_YOU_WANT_TO_DELETE} ?
+          </p>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="theme-button-default">
+          <a href="#" data-dismiss="modal">Cancel</a>
+        </div>
+        <div class="theme-button">
+          <a href="javascript:void(0)" class="delete_record">{FMS_DELETE}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+  var url = "{SITE_URL}ajaxFreelancerMyServices";
+  $(document).ready(function(){
+    $(document).on("click",".load_more_data",function()
+    {
+      var pageNo = $(this).attr("data-page");
+      var p_no = parseInt(pageNo)+1;
+      var status = $("input[name=status]:checked").val();
+      var approval_status = $("input[name=approval_status]:checked").val();
+      status = (status == undefined) ? '' : status;
+      approval_status = (approval_status == undefined) ? '' : approval_status;
+
+      addOverlay();
+      $.post(url,{"action":"load_more_data","page_no":p_no,"status":status,"approval_status":approval_status},function(data){
+        removeOverlay();
+        $("#services_data").append(data.content);
+        $(".load_more_data").addClass(data.btn);
+        $(".load_more_data").attr("data-page",data.pageno);
+      },'json');
+    });
+  });
+
+  $(document).on('change', 'input[name=status]:radio', function(e) {
+    search_record(1);
+  });
+
+  $(document).on('change', 'input[name=approval_status]:radio', function(e) {
+    search_record(1);
+  });
+
+  $(document).on("click",".search_record",function(){
+   var keyword = $("#keyword").val();
+   search_record(1);
+ });
+  $(document).on("keypress","#keyword",function(e){
+    var charCode = (typeof e.which == "undefined") ? e.keyCode : e.which;
+    if (charCode == 13){
+      var keyword = $("#keyword").val();
+      search_record(1);
+      return false;
+    }
+  });
+
+  function search_record(p_no)
+  {
+    var query_param = $(".filters-search input").serialize()+"&action=load_search_data&page_no="+p_no;
+    var new_serialized_url = URI(url+'/?'+query_param),
+    curr_uri = URI(window.location.href),
+    new_serialized_params = new_serialized_url.search(true);
+
+    ((new_serialized_params.approval_status!=undefined) ? curr_uri.setSearch("approval_status", new_serialized_params.approval_status) : curr_uri.removeSearch("approval_status"));
+    ((new_serialized_params.status!=undefined) ? curr_uri.setSearch("status", new_serialized_params.status) : curr_uri.removeSearch("status"));
+
+    ((new_serialized_params.keyword!='') ? curr_uri.setSearch("keyword", new_serialized_params.keyword) : curr_uri.removeSearch("keyword"));
+
+    history.pushState({}, null, '?'+curr_uri._parts.query);
+    $.ajax({
+      url: url,
+      type: 'POST',
+      dataType: 'json',
+      data: query_param,
+      success : function(data)
+      {
+        $('#services_data').html(data.content);
+        $(".load_more_data").addClass(data.btn);
+        $(".load_more_data").attr("data-page",data.pageno);
+      }
+    });
+  }
+
+  /*delete record*/
+  $(document).on("click",".delete_service",function(){
+  	$(".delete_record").attr("data-id",$(this).attr("data-id"));
+  	$("#delete").modal("show");
+  });
+  $(document).on("click",".delete_record",function(){
+  	var id = $(this).attr("data-id");
+    addOverlay();
+    $.post(url,{"action":"delete_record",id:id},function(data){
+      removeOverlay();
+      toastr['success']("{FMS_SERVICE_HAS_BEEN_DELETED_SUCCESSFULLY}");
+      $(".services_"+id).hide();
+      $("#delete").modal("hide");
+    },'json');
+  });
+
+  $(document).on("click",".payNow",function(){
+  	var id = $(this).attr("data-id"),$this = $(this);
+    var this_price = $(this).attr("data-price");
+    swal({
+      title: "Confirmation!",
+      text: "{FMS_BY_CONFIRMING} {CURRENCY_SYMBOL}"+this_price+" {FMS_AMOUNT_WILL_BE_DEDUCTED} ",
+      showCancelButton: true,
+      closeOnConfirm: false,
+      inputPlaceholder: "{FMS_ENTER_DAYS}"
+    },
+    function (inputValue) {
+      if(inputValue)
+      {
+        $.post(url,{"action":"payFeaturedFees","id":id},function(data){
+         $this.hide();
+         //swal(data.initial, data.msg);
+         swal({
+          title: data.initial,
+          text: data.msg,
+          type: "success",
+          confirmButtonText: "Ok",
+          closeOnConfirm: true
+        });
+         setTimeout(function(){ window.location.href = data.link; }, 3000);
+         
+       },'json');
+      }
+    });
+  });
+
+  $(document).on("click",".make_featured",function(){
+      $id = $(this).data("id");
+      if($(this).prop("checked")){
+        var id = $(this).attr("data-id");
+        swal({
+          title: "Confirmation!",
+          text: "{FMS_IT_WILL_COST_YOU} : {CURRENCY_SYMBOL}{SERVICE_FEATURED_FEES} /day",
+          showCancelButton: true,
+          closeOnConfirm: false,
+          inputPlaceholder: "{CMJ_WRITE_SOMETHING}"
+        },
+        function (inputValue) {
+          if(inputValue)
+          {
+           swal({
+            title: "{FMS_OF_DAYS_YOU_WANT_TO_GET_IT_FEATURED}",
+            /* text: "Write something interesting:",*/
+            type: "input",
+            showCancelButton: true,
+            closeOnConfirm: false,
+            inputPlaceholder: "{FMS_ENTER_DAYS}"
+          },
+          function (inputValue)
+          {
+            if (inputValue === false) return false;
+
+            if (inputValue === "" ) {
+              swal.showInputError("{FMS_ENTER_NO_OF_DAYS}");
+              return false
+            }
+            if (inputValue < 1) {
+              swal.showInputError("{FMS_DAYS_SHOULD_BE_GREATER_THAN_OR_EQUAL_TO} 1.");
+              return false
+            }
+            if(isNaN(parseInt(inputValue))){
+              swal.showInputError("{FMS_ENTER_VALID_NUMERIC_VALUES}");
+              return false;
+            }
+            inputValue = parseInt(inputValue);
+            if(inputValue > 30){
+              swal.showInputError("{FMS_SERVICE_CAN_BE_FEATURED_FOR_MAX}");
+              return false;
+            }
+
+            $.post(url,{"action":"makeFeatured","id":id,"days":inputValue},function(data){
+              if(data.content==1)
+              {
+                var msg = "{FMS_YOU_HAVE_INSUFFICIENT_BALANCE_TO_PAY}";
+                //swal("Warning!", msg);
+                swal({
+                  title: "Warning!",
+                  text: msg,
+                  type: "warning",
+                  confirmButtonText: "Ok",
+                  closeOnConfirm: true
+                });
+                return false;
+              }
+              else
+              {
+                // var total_fee = inputValue * "{SERVICE_FEATURED_FEES}";
+                // var msg = "{FMS_AMOUNT_OF} {CURRENCY_SYMBOL}"+total_fee+ " {FMS_HAS_BEEN_DEDUCTED_FROM_YOUR_WALLET}";
+                var msg = "{FEATURED_DAYS_ADDED}"
+                //swal("Success!", msg);
+                swal({
+                  title: "Success!",
+                  text: msg,
+                  type: "success",
+                  confirmButtonText: "Ok",
+                  closeOnConfirm: true
+                });
+                $("#make_feature_"+$id).addClass("hide");
+                $("#featured_div_"+$id).removeClass("hide");
+              }
+              setTimeout(function(){ location.reload(); }, 3000);
+              //location.reload();
+            },'json');
+          });
+           /**/
+         }
+      });
+    }
+  });
+
+
+  $(document).on('click','.already_approve',function(e){
+
+    var link = $(this).attr('href');
+    swal({
+      title: "Confirmation!",
+      text: "{FMS_YOU_SERVICE_WILL_BE_DISAPPEARED_FROM_SEARCH}",
+      showCancelButton: true,
+      closeOnConfirm: false,
+    },
+    function (inputValue) {
+      if(inputValue == true){
+        window.location.href = link;
+      }
+    });
+    e.preventDefault();
+  });
+
+</script>

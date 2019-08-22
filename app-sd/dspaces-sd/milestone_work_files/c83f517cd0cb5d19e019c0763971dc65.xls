@@ -1,0 +1,1419 @@
+	
+ConstantName	value_1MENU_MESSAGING	Messaging
+MENU_NOTIFICATION	Notification
+MENU_MY_PROFILE	View Profile
+MENU_MY_ACCOUNT	ACCOUNT
+MY_DASHBOARD	Dashboard
+MY_SETTING_AND_PRIVACY	Settings and Privacy
+MY_MEMBERSHIP_PLAN	Membership Plan
+MY_PAYMENT_HISTORY	Payment History
+MANAGE_TITLE	MANAGE
+SIGN_OUT	Sign Out
+MENU_MORE	More
+MY_POSTED_JOB	Posted Job
+MY_GROUPS	Groups
+MY_COMPANIES	Companies
+MY_CREATE_COMPANY_PAGE	Create Company Page
+MY_CREATE_GROUP	Create Group
+HEADER_LOGIN_EMAIL	Email
+HEADER_LOGIN_PASSWORD	Password
+HEADER_SIGN_IN	Sign In
+HEADER_FORGOT_PASSWORD_TITLE	Forgot Password?
+FACEBOOK_TITLE	Facebook
+GOOGLE_PLUS_TITLE	Google plus
+TWITTER_TITLE	Twitter
+FAQ_TITLE	Have Questions?
+BLOG_TITLE	Blogs
+CONTACT_US_TITLE	Contact US
+FOOTER_COPYRIGHT	2017
+REMEMBER_ME_LABEL	Remember me
+NOT_A_MEMBER	Not a member?
+LOGIN_JOIN_NOW_TITLE	Join now
+SIGN_IN_OR	or
+LOGIN_WITH_FACEBOOK	Login With Facebook
+LOGIN_WITH_GOOGLE	Login With Google
+REG_IMAGE_TITLE	Make the most of your professional life
+REG_FIRST_NAME_TITLE	First Name
+REG_LAST_NAME_TITLE	Last Name
+REG_CONFIRM_PASSWORD_TITLE	Confirm Password
+REG_CAPTCHA_CODE	Captcha Code
+REG_USER_AGREEMENT	User Agreement
+REG_PRIVACY_POLICY	Privacy Policy
+REG_COOKIE_POLICY	Cookie Policy
+REG_REQUIRED_FIRST_NAME	Please enter your first name
+REG_REQUIRED_ONLY_ALPHA_FOR_USERNAME	Please enter only characters
+REG_REQUIRED_MINLENGTH_CHAR_FOR_USERNAME	Please enter atleast 2 characters
+REG_REQUIRED_LAST_NAME	Please enter your last name
+REG_REQUIRED_EMAIL	Please enter your email
+REG_VALID_EMAIL	Please enter valid email
+REG_REQUIRED_CAPTCHA_CODE	Please enter captcha code
+REG_REQUIRED_PASSOWRD	Please enter your password
+REG_REQUIRED_MINLENGTH_CHAR_FOR_PASSWORD	Please enter atleast 6 characters
+REG_REQUIRED_MAXLENGTH_CHAR_FOR_PASSWORD	Password should not more than 12 characters
+REG_REQUIRED_CONFIRM_PASSWORD	Please enter your confirm new password
+REG_PASSWORD_DO_NOT_MATCH	Password do not match
+FORGOT_PASSWORD_HEADING	Let’s find your account
+FORGOT_PASSWORD_CONTENT	Please enter your  Email address<br> to retrieve your password
+FORGOT_PASSWORD_SUBMIT	Submit
+RESET_PASSWORD	Reset Password
+RESET_PASSWORD_PWD	Enter password
+RESET_PASSWORD_CONFIRM_PWD	Enter confirm password
+ACTIVATE_ACCOUNT	Activate your account
+ACTIVATE_ACCOUNT_CONTENT	Please enter your email address<br> to activate your account.
+ACTIVATE_ACCOUNT_COPYRIGHT	 All rights reserved
+REACTIVATE_ACCOUNT_CONTENT	Please enter your PIN number<br>to activate your account.
+REACTIVATE_ACCOUNT_PIN_NUMBER	PIN Number
+CONTACT_US_CONTENT	Get In Touch!
+CONTACT_US_LOCATION	Location
+CONTACT_US_MESSAGE	Message
+CONTACT_US_CAPTCHA_CODE	Enter Captcha Code
+FAQ_SECTION_HEADING	How can we help you?
+FAQ_SEARCH_TITLE	Search for help with...
+FAQ_HEADING	Welcome to FAQ!
+FAQ_CONTENT	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ACCOUNT_SETTINGS_HEADING	Account Settings
+ACCOUNT_SETTING_CHANGE_PASSWORD	Change Password
+ACCOUNT_SETTING_CURRENT_PASSWORD	Current Password
+ACCOUNT_SETTING_NEW_PASSWORD	New Password
+ACCOUNT_SETTING_CHNAGE_PASSWORD_SAVE	Save
+ACCOUNT_SETTING_EMAIL_NOTIFICATION_TITLE	Manage Email Notification Settings
+CONNECTION_REQUEST_LABEL	Connection Request
+REQUEST_GROUP_JOIN_LABEL	Request Group Join
+SKILL_ENDORSEMENT_LABEL	Skill Endorsement
+DEACTIVATE_ACCOUNT_CONTENT	If you want to deactivate your account
+CLICK_HERE_LINK	Click Here
+MEMBERSHIP_PLAN_CONTENT	Hello,
+MEMBERSHIP_PLAN_MONTH	Month
+SEND_INMAILS_FEATURE	No. of InMails
+CRETAE_COMPANY_PAGE_FEATURE	No. of Company Pages Creation
+JOB_POST_FEATURE	No. of Job Posts
+FEATURED_JOB_POST_FEATURE	No. of Featured Job Posts
+PROFILE_VIEWS_FEATURE	View All Profile Views of Last 90 Days
+PREMIUM_MEMBER_FEATURE	Become a 'Premium' Member
+MEMBERSHIP_PLAN_SUBSCRIPTION_DATE	Subscription Date
+MEMBERSHIP_PLAN_UPGRADE	Upgrade
+MEMBERSHIP_CURRENT_PLAN	Current Plan
+TABLE_HEADING_TABLE	Name
+TABLE_HEADING_TRANSACTION_ID	Transaction ID
+TABLE_HEADING_AMOUNT	Amount
+TABLE_HEADING_PAYMENT_DATE	Payment Date
+TABLE_HEADING_STATUS	Status
+PAYMMENT_HISTORY_BLANK_DATA_CONTENT	No Payment History Found.
+MY_NETWORK_PROFILE_VIEWS	Views
+MY_NETWORK_CONNECTIONS	Connections
+MY_NETWORK_PENDING_INVITATION_TITLE	Pending Invitation
+MY_NETWORK_MANAGE_ALL_TITLE	Manage All
+PENDING_INVITATION_MUTUAL_CONN	Mutual Connection
+PENDING_INVITATION_IGNORE_BTN	Ignore
+PEOPLE_U_MAY_KNOW_TITLE	People You May Know
+PEOPLE_U_MAY_KNOW_DISMISS_BTN	Dismiss
+PEOPLE_U_MAY_KNOW_CONNECT_BTN	Connect
+PENDING_INVITATION_BLANK_DATA_CONTENT	No Connection Found.
+PEOPLE_U_MAY_KNOW_BLANK_DATA_CONTENT	No Record Found.
+MANAGE_INVITATION_TITLE	Manage Invitation
+INVITATION_PENDING_TAB	Pending
+INVITATION_SENT_TAB	Sent
+LOAD_MORE_BTN	Load More
+SENT_REMOVE_BTN	Remove
+BLOCK_UNBLOCK_BTN	Unblock
+MSG_DELETE_CONVERSATION	Delete Conversation
+MSG_DELETE_CONFORM_CONTENT	Are you sure you want to delete this conversation?
+MSG_DELETE_BTN	Delete
+MSG_CANCEL_BTN	Cancel
+USER_CONV_BLANK_CONTENT	No message found for this user
+NO_CONTACT_FOUND_CONTENT	No Any Contact Found.
+NO_USER_MSG_FOUND_CONTENT	No Any Message Found With This User.
+MSG_DELETE_CONTENT	Are you sure to want to delete this message ?
+MSG_REMOVE_CONTENT	Are you sure to want to remove this message ?
+MSG_BACK_LINK	back
+MSG_FILE_UPLOAD_TITLE	Choose File for upload
+MSG_IMAGE_UPLOAD_TITLE	Choose Image for upload
+CONV_CLEAR_TITLE	Clear chat conversation
+MSG_TYPE_CONTENT	Type Message...
+NOTI_BLANK_DATA_CONTENT	No Notification Found.
+NOTI_TITLE	Notifications
+CONN_SHOW_ALL	Show All
+CONN_SEARCH	Search Connection
+CONN_NEW_MSG_TITLE	New Message
+CONN_MSG_CONTENT	Enter Your Message
+CONN_MSG_SEND_BTN	Send
+CONN_REMOVE_CONTENT	Are you sure you want to remove ?
+HOME_JOB_CONTENT	Jobs recommended for you.
+HOME_COMPANY_CONTENT	Company recommended for you.
+HOME_COMMENT_CONTENT	commented on this.
+HOME_REPORT_POST_LINK	Report this Post
+HOME_EDIT_POST_LINK	Edit Post
+HOME_LIKE_POST_TITLE	Like
+HOME_COMMENT_POST_TITLE	Comment
+HOME_SHARE_POST_TITLE	Share
+HOME_SEE_PREV_COMMENT	See Previous Comments
+HOME_COMMENT_TITLE	Add a Comment....
+HOME_COMMENT_POST_BTN	Post
+HOME_POST_REPORT_CONTENT	Why are you reporting this?
+HOME_POST_REPORT_TITLE	Enter your Report...
+HOME_POST_REPORT_CLOSE_BTN	Close
+HOME_USER_CONN_TITLE	User Connections
+HOME_USER_PROFILE_VIEWS_TITLE	User Viewers
+HOME_ARTICLE_CONTENT	Share a Photo, or Update
+ARTICLE_LINK	Write an article
+HOME_SHARE_POST_CONTENT	Write here Something
+HOME_PUBLIC_POST_BTN	Public
+HOME_PUBLIC_POST_CONTENT	Anyone on
+HOME_CONN_POST_LINK	Connected
+HOME_CONN_POST_CONTENT	Your Connections on
+HOME_SUBSCRIBE_NEWSLETTER_TITLE	Subscribe to Newsletter
+HOME_EMAIL_TITLE	Enter Email Id
+HOME_SUBSCRIBE_BTN	Subscribe
+HOME_SHARE_FEED_TAB	Share to Feed
+HOME_SEND_MSG_TITLE	Send as Message
+HOME_SHARE_FEED_TITLE	write something here
+HOME_LIKES_TITLE	Likes
+HOME_SHARE_UPDATE_TITLE	Click here to Share an update
+HOME_ARTICLE_TITLE	Click here to write an article
+HOME_EDIT_POST_BTN	Edit
+ARTICLE_CRAFT_PUBLISH_POST_TITLE	Publish Post
+NEW_ARTICLE_LINK	Start a new article
+ARTICLE_DRAFT_LINK	Drafts
+ARTICLES_LINK	Articles
+ARTICLE_CONTENT	Write here, add image or video for impact
+ARTICLE_IMAGE_TITLE	Choose Article Image
+ARTICLE_DRAFT_TITLE	Draft
+ARTICLE_SAVE_CONTENT	Are you sure want to save this record?
+SHARE_FEED_FOLLOWING_BTN	Following
+SHARE_FEED_UNFOLLOW_BTN	Unfollow
+SHARE_FEED_FOLLOW_BTN	Follow
+SHARE_FEED_DELETE_CONTENT	Are you sure want to delete this record?
+DASHBOARD_USER_ACTIVITY_TITLE	's Activity
+DASHBOARD_POSTS_TAB	Posts
+DASHBOARD_PEOPLE_U_MAY_KNOW_TITLE	Pepole You May Know
+SEARCH_TITLE	Search for users, jobs, companies, group, and all...
+SEARCH_BTN	Search
+USERS_SEARCH_TAB	Users
+JOBS_SEARCH_TAB	Jobs
+ALL_SEARCH_SHARED_CONN	2 Shared Connections
+USER_SEARCH_FILTER_TITLE	Filter People By
+USER_SEARCH_CONN_TITLE	Connection
+USER_SEARCH_FIRST_CONN_LBL	1st
+USER_SEARCH_SECOND_CONN_LBL	2nd
+USER_SEARCH_PREMIUM_TITLE	Premium
+USER_SEARCH_LOCATION_CONTENT	Type a location name
+USER_SEARCH_INDUSTRIES_TITLE	Industries
+USER_SEARCH_CURRENT_CMP_TITLE	Current Companies
+USER_SEARCH_GROUP_TITLE	Group
+USER_SEARCH_MUTUAL_CONN_LBL	Mutual Connection :
+USER_SEARCH_SEND_INMAIL_BTN	Send InMail
+GROUP_SEARCH_FILTER_TITLE	Filter Groups By
+GROUP_SEARCH_MEMBER_TITLE	Member:
+GROUP_SEARCH_FOLLOWER_TITLE	Follower:
+JOB_SEARCH_FILTER_TITLE	Filter Jobs By
+JOB_SEARCH_FEATURED_TITLE	Featured
+JOB_SEARCH_CATEGORY_TITLE	Category
+JOB_SEARCH_FUNCTION_TITLE	Designation
+JOB_SEARCH_DATE_POSTED_TITLE	Date Posted
+JOB_SEARCH_PAST_HOUR_LBL	Past 24 hours
+JOB_SEARCH_PAST_WEEK_LBL	Past 6 Week
+JOB_SEARCH_PAST_MONTH_LBL	Past 2 Month
+JOB_SEARCH_ANY_TIME_LBL	Any Time
+JOB_SEARCH_CMP_CONTENT	Type a Company name
+JOB_SEARCH_SKILL_TITLE	Skill
+JOB_SEARCH_SKILL_NAME	Skill:
+JOB_SEARCH_CREATED_DATE_TITLE	Created Date:
+JOB_SEARCH_LAST_DATE_TITLE	Last Date:
+JOB_SEARCH_EXPERIENCE_TITLE	Experience:
+CMP_SEARCH_FILTER_TITLE	Filter
+CMP_SEARCH_EMPLOYEE_TITLE	Employee:
+USER_PROFILE_SEE_CONN_TITLE	See Connection
+USER_PROFILE_EXP_BLANK_DATA_CONTENT	No Experience Found.
+USER_PROFILE_EDU_BLANK_DATA_CONTENT	No Education Found.
+USER_PROFILE_FOLLOWING_BLANK_DATA_CONTENT	No Following Found.
+USER_PROFILE_LANGUAGE_BLANK_DATA_CONTENT	No Languages Found.
+USER_PROFILE_VIEWER_BLANK_DATA_CONTENT	No Profile Viewer Found.
+USER_PROFILE_MUTUAL_CONN_BLANK_DATA_CONTENT	No Mutual Connection Found.
+USER_PROFILE_CONN_BLANK_DATA_CONTENT	 No Connection Found.
+USER_PROFILE_SKILL_ENDORSE_BLANK_DATA_CONTENT	No Skills & Endorsements Found.
+USER_PROFILE_ENDORSE_BLANK_DATA_CONTENT	No endorsement found.
+USER_PROFILE_SHARE_WITH_FB	Facebook
+USER_PROFILE_SHARE_WITH_GOOGLE	Google +
+USER_PROFILE_GOOGLE_TITLE	Google
+USER_PROFILE_SHARE_WITH_TWITTER	Twitter
+USER_PROFILE_REMOVE_CONN_LINK	Remove Connection
+USER_PROFILE_REPORT_LINK	Report
+USER_PROFILE_BLOCK_LINK	Block
+USER_PROFILE_MUTUAL_CONN_TITLE	Mutual Connections
+USER_PROFILE_EXP_TITLE	Experience
+USER_PROFILE_EDU_TITLE	Education
+USER_PROFILE_LAN_TITLE	Language
+USER_PROFILE_SKILL_ENDORSE_TITLE	Skills & Endrosements
+USER_PROFILE_SEE_ALL_TITLE	See All
+USER_PROFILE_VIEWER_TITLE	People Also Viewed
+USER_PROFILE_CONN_TITLE	's Connections
+USER_PROFILE_SHARED_CONN_TAB	Shared
+USER_PROFILE_ALL_CONN_TAB	All
+USER_PROFILE_MSG_TITLE	Enter your message...
+USER_PROFILE_CMP_FOLLOWING	Followers
+EDIT_PROFILE_SELECT_OPTION	--- Select ---
+EDIT_PROFILE_OTHER_OPTION	Other
+EDIT_PROFILE_EXP_PRESENT_STATUS	Present
+EDIT_PROFILE_EXP_CMP_TITLE	Enter company name here
+EDIT_PROFILE_SKILL_BLANK_DATA_CONTENT	No Skill Found.
+EDIT_PROFILE_SKILL_ENDORSE_BLANK_DATA_CONTENT	No Endorsed Skill Found.
+EDIT_PROFILE_LAN_BLANK_DATA_CONTENT	No Language Found.
+EDIT_PROFILE_BACKGROUND_PHOTO_TITLE	Update a background photo
+EDIT_PROFILE_TOTAL_CONN_TITLE	Total Connections
+EDIT_PROFILE_USER_DASHBOARD_TITLE	User Dashboard
+EDIT_PROFILE_VIEWER_TITLE	People Viewed your Profile
+EDIT_PROFILE_ADD_EXP_TITLE	Add Experience
+EDIT_PROFILE_ADD_LAN_TITLE	Add Language
+EDIT_PROFILE_SKILL_TITLE	Skills
+EDIT_PROFILE_ADD_SKILL_TITLE	Add New Skill
+EDIT_PROFILE_TITLE	Edit profile
+EDIT_PROFILE_HEADLINE_LBL	Headline
+EDIT_PROFILE_INDUSTRY_LBL	Industry
+EDIT_PROFILE_SUMMARY_LBL	Summary
+EDIT_PROFILE_PHOTO_TITLE	Edit Photo
+EDIT_PROFILE_CHOOSE_PHOTO_TITLE	Choose a photo
+EDIT_PROFILE_PHOTO_CONTENT	You can upload a JPEG or PNG file (File size limit is 4 MB).
+EDIT_PROFILE_PREVIEW_TITLE	Preview
+EDIT_PROFILE_PREVIEW_CONTENT	How you appear across
+EDIT_PROFILE_EXP_CMP_NAME_LBL	Company Name
+EDIT_PROFILE_EXPERIENCE_TITLE	Enter Designation Title
+EDIT_PROFILE_EXP_TIME_PERIOD_LBL	Time Period
+EDIT_PROFILE_EXP_FROM_LBL	From
+EDIT_PROFILE_EXP_CURRENTY_WORK_TITLE	I currenty Work here
+EDIT_PROFILE_EXP_DESC_LBL	Description
+EDIT_PROFILE_EXP_DESC_TITLE	Enter Description
+EDIT_PROFILE_ADD_EDU_HEADING	Add Education
+EDIT_PROFILE_EDU_SCHOOL_LBL	School
+EDIT_PROFILE_EDU_SCHOOL_TITLE	Enter School Name
+EDIT_PROFILE_EDU_DEGREE_LBL	Degree
+EDIT_PROFILE_EDU_DEGREE_TITLE	--- User Degree ---
+EDIT_PROFILE_EDU_STUDY_LBL	Field of Study
+EDIT_PROFILE_EDU_STUDY_TITLE	Enter Field Of Study
+EDIT_PROFILE_EDU_GRADE_LBL	Grade
+EDIT_PROFILE_EDU_GRADE_TITLE	Enter Grade
+EDIT_PROFILE_EDU_ACTIVITY_LBL	Activities and Societies
+EDIT_PROFILE_EDU_ACTIVITY_TITLE	Enter Activities and Societies
+EDIT_PROFILE_EDU_EX_CONTENT	Examples: Alpha Phi Omega, Chamber Chorale, Debate Team
+EDIT_RPOFILE_EDU_FROM_YEAR_LBL	From Year
+EDIT_PROFILE_EDU_TO_YEAR_LBL	To Year (or expected)
+EDIT_PROFILE_LAN_PROFICIENCY_LBL	Language Proficiency
+EDIT_PROFILE_LAN_PROFI_BEGINNER_OPTION	Beginner
+EDIT_PROFILE_LAN_PROFI_MODERATE_OPTION	Moderate
+EDIT_PROFILE_LAN_PROFI_EXPERT_OPTION	Expert
+EDIT_PROFILE_LAN_PROFI_NATIVE_OPTION	Native
+EDIT_PROFILE_ADD_SKILL_HEADING	add skill
+EDIT_PROFILE_CHOOOSE_SKILL	--- Choose Skills ---
+EDIT_PROFILE_SKILL_ADD_BTN	Add
+PROFILE_EDIT_SKILL_TITLE	Edit skill
+PROFILE_EDIT_SKILL_UPDATE_BTN	Update
+EDIT_PROFILE_CROP_PHOTO_TITLE	Change Background Image
+EDIT_PROFILE_CROP_BTN	Crop
+EDIT_PROFILE_EDU_DELETE_CONTENT	Are you sure want to delete this education detail?
+EDIT_PROFILE_EXP_DELETE_CONTENT	Are you sure want to delete this experience detail?
+EDIT_PROFILE_LAN_DELETE_CONTENT	Are you sure want to delete this language detail?
+PROFILE_EDIT_EXP_TITLE	Edit Experience
+EDIT_PROFILE_EXP_TO_LBL	To
+PROFILE_EDIT_EDU_TITLE	Edit Education
+PROFILE_EDIT_LAN_TITLE	Edit Language
+EDIT_PROFILE_LAN_OPTION	--- Language ---
+EDIT_PROFILE_LAN_PROFI_OPTION	--- Language Proficiency ---
+CMP_DETAIL_FOLLOWER_BLANK_DATA_CONTENT	No Followers Found.
+CMP_DETAIL_CMP_CONN_BLANK_DATA_CONTENT	No Connection Found In This Company.
+CMP_DETAIL_SIMILAR_CMP_BLANK_DATA_CONTENT	No Similar Company Found.
+CMP_DETAIL_CONTACT_NO_TITLE_I	Contact No:
+CMP_DETAIL_EMAIL_TITLE	Email ID:
+CMP_DETAIL_JOBS_TITLE	Jobs for this company
+CMP_DETAIL_CMP_INDUSTRY_TITLE	Company Industry
+CMP_DETAIL_CMP_SIZE_TITLE	Company Size
+CMP_DETAIL_CMP_TITLE	Company
+CMP_DETAIL_CMP_LOCATION_TITLE	Company Location
+CMP_DETAIL_FOUNDED_TITLE	Founded
+CMP_DETAIL_WEBSITE_URL_TITLE	Website URL
+CMP_DETAIL_CONTACT_NO_TITLE	Contact Number
+CMP_DETAIL_CMP_CONN_TITLE	Connections at this company
+CMP_DETAIL_SIMILAR_CMP_TITLE	Similar Companies
+CMP_DETAIL_CHOOSE_USER_TITLE	Choose users
+CMP_DETAIL_COPY_POST_LINK	Copy link to Post
+CMP_DETAIL_DELETE_POST_LINK	Delete Post
+CMP_DETAIL_JOB_DETAIL_BTN	Detail
+CREATE_CMP_LOGO_TITLE	Upload Company Logo
+CREATE_CMP_INDUSTRY_OPTION	--- Company Industry ---
+CREATE_CMP_DESC_TITLE	Company Description
+CREATE_CMP_SIZE_OPTION	--- Company Size ---
+CREATE_CMP_FOUNDED_TITLE	--- Company Founded Year ---
+CREATE_CMP_WEBSITE_URL_TITLE	Company Website URL
+CREATE_CMP_EMAIL_TITLE	Company Email
+CREATE_CMP_NO_TITLE	Company Number
+CMP_LIST_BLANK_DATA_CONTENT	No Created Company Found.
+CMP_LIST_DEACTIVE_ADMIN_TITLE	Deactivated By Admin
+CMP_LIST_DELETE_ADMIN_TITLE	Deleted By Admin
+CMP_LIST_FOLLOWING_CMP_LINK	Following Companies
+CMP_LIST_CREATE_CMP_LINK	Create New Company
+CMP_LIST_DELETE_CONTENT	Are you sure want to delete this created company?
+CMP_LIST_VIEW_DETAIL_LINK	View Detail
+FOLLOW_CMP_BLANK_DATA_CONTENT	No Following Companies Found.
+FOLLOW_CMP_UNFOLLOW_CONTENT	Are you sure want to unfollow this company ?
+FOLLOW_CMP_EMP_TITLE	Employees:
+CMP_FOLLOW_TITLE	Followers:
+JOB_DETAIL_APPLICANT_BLANK_DATA_CONTENT	No Applicant Detail Found.
+JOB_DETAIL_UNSAVE_BTN	Unsave
+JOB_DETAIL_EXPIRED_BTN	Expired
+JOB_DETAIL_APPLIED_BTN	Applied
+JOB_DETAIL_APPLY_BTN	Apply
+JOB_DETAIL_SIMILAR_JOB_BLANK_DATA_CONTENT	No Similar Job Found.
+JOB_DETAIL_POSTED_DATE_TITLE	Posted Date :
+JOB_DETAIL_DESC_TITLE_I	Job description
+JOB_DETAIL_KEY_RESPONSE_TITLE	Key Responsibilities
+JOB_DETAIL_CATEGORY_TITLE	Job Catagory
+JOB_DETAIL_EMP_TYPE_TITLE	Employment Type
+JOB_DETAIL_LAST_DATE_TITLE	Last date of Job application
+JOB_DETAIL_EMPLOYEE_TITLE	Employee :
+JOB_DETAIL_SIMILAR_JOB_TITLE	Similar Jobs
+JOB_DETAIL_APPLICANT_DETAIL_TITLE	Applicants Details
+JOB_DETAIL_RESUME_TITLE	Download Resume
+JOB_DETAIL_WORK_EXP_TITLE	Work Experience:
+JOB_DETAIL_CURRENT_SALARY_TITLE	Current Salary:
+JOB_DETAIL_EXPECTED_SALARY_TITLE	Expected Salary :
+JOB_DETAIL_APPLY_JOB_TITLE	Apply to Job
+JOB_DETAIL_UPLOAD_RESUME_TITLE	Upload Resume
+JOB_DETAIL_WORK_EXPERIENCE_TITLE	Work Experience
+JOB_DETAIL_TITLE	Job Title
+JOB_DETAIL_WORK_EXP_OPTION	--- Work Experience In Year ---
+JOB_DETAIL_CURR_SALARY_TITLE	Current Salary
+JOB_DETAIL_EXPECT_SALARY_TITLE	Expected Salary
+APPLIED_JOB_SAVEDJOB_LINK	Saved Jobs
+APPLIED_JOB_INTERESTEDJOB_LINK	Interested Jobs
+APPLIED_JOB_POSTJOB_LINK	Post New Job
+APPLIED_JOB_POSTED_DATE_TITLE	Posted Date
+APPLIED_JOB_LAST_DATE_TITLE	Last Date
+APPLIED_JOB_DATE_TITLE	Applied Date
+INTEREST_JOB_TITLE	Posted jobs
+POSTED_JOB_BLANK_DATA_CONTENT	No Posted Job Found.
+POSTED_JOB_TITLE	Posted Jobs
+POSTED_JOB_LAST_DATE_TITLE	Last Date Of Application:
+CREATE_POSTJOB_EMP_TYPE_FULLTIME	Full Time
+CREATE_POSTJOB_EMP_TYPE_PARTTIME	Part Time
+CREATE_POSTJOB_EMP_TYPE_CONTRACT	Contract
+CREATE_POSTJOB_EMP_TYPE_TEMPORARY	Temporary
+CREATE_POSTJOB_DESIG_OPTION	--- Job Designation ---
+CREATE_POSTJOB_TITLE	Post a New Job
+CREATE_POSTJOB_CMP_NAME_OPTION	--- Company Name ---
+CREATE_POSTJOB_CATEGORY_OPTION	--- Job Category ---
+CREATE_POSTJOB_SKILL_TITLE	Job Skills
+CREATE_POSTJOB_LOCATION_TITLE	Job Location
+CREATE_POSTJOB_EMP_TYPE_OPTION	--- Job Employment Type ---
+CREATE_POSTJOB_KEY_RESPONSE_TITLE	Job Key Responsibilities
+CREATE_POSTJOB_WORK_EXP_OPTION	--- Job Total Work Experience(In Years) ---
+CREATE_POSTJOB_FEATURED_LBL	Mark As Featured
+SAVEDJOB_APPLIEDJOB_LINK	Applied Jobs
+SAVEDJOB_UNSAVE_CONTENT	Are you sure want to unsave this job?
+CREATE_GROUP_IMAGE_MSG	Please select image
+CREATE_GROUP_NAME_MSG	Please enter group name
+CREATE_GROUP_INDUSTRY_MSG	Please select group industry
+CREATE_GROUP_DESC_MSG	Please enter description
+CREATE_GROUP_INVITE_MSG	Please select users
+CREATE_GROUP_PRIVACY_MSG	Please select group privacy
+CREATE_GROUP_TYPE_MSG	Please select group type
+CREATE_GROUP_TITLE	Create New Group
+CREATE_GROUP_PROFILE_TITLE	Upload Group Profile
+CREATE_GROUP_NAME_TITLE	Group Name
+CREATE_GROUP_INDUSTRY_OPTION	---Group Industry---
+CREATE_GROUP_TYPE_OPTION	--- Group Type ---
+CREATE_GROUP_TYPE_PR_TITLE	Private
+CREATE_GROUP_PRIVACY_OPTION	--- Group Privacy ---
+CREATE_GROUP_AUTO_JOIN_TITLE	 Auto Join
+CREATE_GROUP_REQUEST_JOIN_TITLE	Request To Join
+CREATE_GROUP_INVITE_USER_TITLE	Invite Users
+CREATE_GROUP_DESC_TITLE	Group Description
+CONTACT_US_FIRST_NAME_MSG	Please enter firstname
+CONTACT_US_LAST_NAME_MSG	Please enter lastname
+CONTACT_US_EMAIL_MSG	Please enter email
+CONTACT_US_LOCATION_MSG	Please enter location
+CONTACT_US_MSG	Please enter message
+REG_PASSWORD_MSG	Please enter password
+GROUP_DETAIL_MEMBER_BLANK_DATA_CONTENT	No Group Member Found.
+GROUP_DETAIL_FOLLOWER_BLANK_DATA_CONTENT	No Group Follower Found.
+GROUP_DETAIL_REQ_PENDING_BTN	Request Pending
+GROUP_DETAIL_JOINED_BTN	Joined
+GROUP_DETAIL_JOIN_BTN	Join
+GROUP_DETAIL_REQ_BLANK_DATA_CONTENT	No Group Request Found.
+GROUP_DETAIL_LEAVE_GROUP_BTN	Leave Group
+GROUP_DETAIL_MEMBER_TAB	Group Member
+GROUP_DETAIL_FOLLOWER_TAB	Group Follower
+GROUP_DETAIL_REQUEST_TAB	Group Request
+GROUP_DETAIL_CONV_CONTENT	Start a conversation with your group
+GROUP_DETAIL_CONV_TITLE	Enter a conversation title...
+GROUP_DETAIL_SIMILAR_GROUP_TITLE	Similar Group
+GROUP_DETAIL_ACCPET_BTN	Accept
+GROUP_DETAIL_INVITE_OTHER_TITLE	Invite Others
+GROUP_DETAIL_JOIN_CONTENT	Choose concat for join group
+GROUP_DETAIL_DELETE_CONTENT	Are you sure want to leave this group?
+GROUP_DETAIL_COMMENT_TITLE	Comments
+GROUP_DETAIL_REMOVE_CONTENT	Are you sure want to remove this member?
+GROUPS_CREATE_BLANK_DATA_CONTENT	No Created Group Found.
+GROUPS_FOLLOWING_BLANK_DATA_CONTENT	No Following Group Found.
+GROUPS_REQ_REJECTED_LBL	Request Rejected
+GROUPS_JOINED_BLANK_DATA_CONTENT	No Joined Group Found.
+GROUPS_CREATED_TAB	Created Groups
+GROUPS_JOINED_TAB	Joined Groups
+GROUPS_FOLLOWING_TAB	Following Groups
+GROUPS_DELETE_CONTENT	Are you sure want to delete this group?
+GROUPS_UNFOLLOW_CONTENT	Are you sure want to unfollow this group?
+GROUPS_CREATE_PRIVACY_TITLE	Privacy:
+GROUPS_MEMBER_TITLE	Members:
+GROUPS_VIEW_TITLE	View
+ACCOUNT_SETTING_DEACTIVE_ACCOUNT	Deactive Account
+ACCOUNT_SETTING_DEACTIVE_CONTENT	Do You Want to Deactivate Your Account?
+ACCOUNT_SETTING_DEACTIVE_BTN	Deactive
+ACCOUNT_SETTING_WINTITLE	My Account Setting
+ACTIVATE_ACCOUNT_WINTITLE	Activate User
+APPLIED_JOB_WINTTILE	My AppliedJob
+CREATE_CMP_WINTITLE	My CompanyPage
+CONN_WINTITLE	My Connection
+CMP_LIST_WINTITLE	My Created Company
+CREATE_GROUP_WINTITLE	My CreateGroup
+FAQ_WINTITLE	Faq
+FOLLOW_CMP_WINTITLE	My Following Companies
+FORGOT_PASSWORD_WINTITLE	Forgot Password
+GROUPS_WINTITLE	My Groups
+HOME_WINTITLE	Welcome to
+LOGIN_WINTITLE	Login
+MY_NETWORK_WINTITLE	My Network
+MEMBERSHIP_PLAN_WINTITLE	MembershipPlan
+MSG_WINTITLE	My Messages
+NOTI_WINTITLE	My Notification
+PAYMENT_HISTORY_WINTITLE	My Payment
+POSTED_JOB_WINTITLE	My PostedJob
+CREATE_POSTJOB_WINTITLE	Create Post Job
+REG_WINTITLE	Registration
+SAVEDJOB_WINTITLE	My SavedJob
+SHARE_FEED_WINTITLE	Share Feeds
+ARTICLE_WINTITLE	UserPost
+USER_PROFILE_WINTITLE	User Profile
+ACCOUNT_SETTING_OLD_PASS_MSG	Please enter valid old password.
+ACCOUNT_SETTING_CHANGE_PASS_MSG	We are not getting any change in password, Same as old password.
+ACCOUNT_SETTING_UPDATE_PASS_MSG	Password has been updated successfully.
+ACCOUNT_SETTING_SAME_PASS_MSG	New password and confirm new password should be same.
+ACCOUNT_SETTING_NOTI_RESPONSE_MSG	Your response has been submitted successfully.
+ACCOUNT_SETTING_DEACTIVATE_MSG	Your account has been deactivated successfully.
+CMP_DETAIL_MSG	Your message has been sent successfully.
+CMP_DETAIL_REPORT_MSG	Your report has been submitted successfully
+CMP_DETAIL_REPORT_ERR_MSG	Please enter report message.
+ACTIVATE_ACCOUNT_EMAIL_MSG	Please check your email for PIN number.
+ACTIVATE_ACCOUNT_NOT_FOUND_MSG	Account has not been found.
+ACTIVATE_ACCOUNT_PIN_MSG	Either your PIN is empty or invalid.
+USER_ACCOUNT_DELETED_MSG	Your account has been deleted by admin, Please contact to admin.
+USER_ALREADY_ACTIVATE_ACCOUNT_MSG	You have already activated your account.
+REACTIVATE_ACCOUNT_MSG	Your account has been successfully activated.
+ACTIVATE_ACCOUNT_INVALID_PIN_MSG	You have already done this process, Please try to login and continue.
+ACTIVATE_ACCOUNT_INVALID_LINK	Sorry invalid link.
+CMP_DETAIL_SHARE_POST_ERR	Please login to share post.
+BLACKLIST_ALERT	Something went wrong, Please try again.
+CREATE_CMP_PAGE_UPDATE_MSG	Company page has been updated successfully.
+CREATE_CMP_FREE_PLAN_MSG	Please upgrade your plan.
+CREATE_CMP_UPGRADE_PLAN	Please upgrade your next plan.
+CREATE_CMP_MSG	Your company has been created successfully.
+TOKEN_MSG	Please enter valid value.
+IMAGE_EXTENSION_MSG	Please select valid format (e.g. jpg, jpeg, png)
+IMAGE_SIZE_MSG	Image size must be less then 4MB
+CONN_DELETE_MSG	Connection Deleted.
+CAPTCHA_INCORRECT_MSG	Sorry, the CAPTCHA code entered was incorrect
+REGISTRATION	Dear user, Please check your email account to confirm.
+REG_ADMIN_DEACTIVATE_MSG	Dear user, Your account has been deactivated.
+REG_DEACTIVATE_MSG	Dear user, Your account has been deactivated, Please follow these steps to activate your account.
+REG_INVALID_MSG	Invalid login, Email or Password does not match.
+REG_FILL_ALL_VALUE_MSG	Please fill the required details.
+CREATE_CMP_DEL	Company has been deleted successfully.
+CREATE_CMP_ERR	There seems to be an issue while deleting company page.
+CREATE_GROUP_SUCC_MSG	Your group has been updated successfully.
+CREATE_GROUP_MSG	Your group has been created successfully.
+CREATE_GRP_INVI_USER	No connection found for invite user.
+ALREADY_SUBSCRIBE_MSG	You have already subscribed to newsletter.
+SUBSCRIBE_SUCC_MSG	You have successfully subscribed to newsletter.
+SUBSCRIBE_EMAIL_MSG	Please enter email address first.
+DASHBOARD_DELETE_COMM_ERR	There seems to be an issue deleting comment.
+DASHBOARD_DELETE_COMM_SUCC_MSG	Your comment has been deleted successfully
+DASHBOARD_DELETE_POST_SUCC	Delete post successfully
+EDIT_PROFILE_EXP_SUCC_MSG	Your experience has been submitted successfully.
+EDIT_PROFILE_EDU_SUCC_MSG	Your education has been submitted successfully.
+EDIT_PROFILE_SKILL_SUBMIT_MSG	Your skill has been submitted successfully.
+EDIT_PROFILE_UPDATE_MSG	Your profile has been updated successfully.
+EDIT_PROFILE_EXP_UPDATE_MSG	Your experience has been updated successfully.
+EDIT_PROFILE_EDU_UPDATE_MSG	Your education has been updated successfully.
+EDIT_PROFILE_BACKIMG_CHNG_MSG	Your background image changed successfully.
+EDIT_PROFILE_SKILL_DEL	Your skill has been updated successfully.
+EDIT_PROFILE_SKILL_ENDORSE_SUCC	Update Status.
+EDIT_PROFILE_EDU_DELETE_MSG	Education has been deleted successfully.
+EDIT_PROFILE_EXP_DELETE	Experience has been deleted successfully.
+EDIT_PROFILE_LAN_DELETE_MSG	Language has been deleted successfully.
+EDIT_PROFILE_END_YEAR_MSG	Your end date can’t be earlier than your start date.
+FOLLOW_CMP_UNFOLLOW	Company has been unfollowed successfully.
+FORGOT_PWD_ACC_DEC	Your account has been deactivated.
+FORGOT_PASSWORD_SENT_MSG	Password has been changed successfully.
+FORGOT_PASWORD_LINK_MSG	Please check your email for reset your password.
+FORGOT_PASSWORD_INVALID_MSG	Invalid email address.
+GROUP_DETAIL_SUCC_MSG	Your group has been submitted successfully.
+GROUP_DETAIL_POST_MSG	The post content can\'t be empty.
+GROUP_DETAIL_INVITATION_MSG	Your invitation has been sent successfully.
+GROUP_DETAIL_INVI_ACCEPT	Invitation Accepted.
+GROUP_DETAIL_INVI_REJECT	Invitation Rejected.
+GROUP_DETAIL_LEAVE_MSG	Group has been leaved successfully.
+GROUP_DETAIL_UNFOLLOW_MSG	Unfollowed this group.
+GROUP_DETAIL_FOLLOW_MSG	Followed this group.
+GROUP_DETAIL_UPDATE_MSG	Your group conversation has been updated successfully.
+GROUP_DETAIL_POST_EMPTY_MSG	Post can\'t be empty.
+GROUP_DETAIL_JOINED_MSG	You have joined this group successfully.
+GROUP_DETAIL_DELETED_POST_MSG	Your group post has been deleted successfully.
+GROUP_DETAIL_ERR	There seems to be an issue deleting groups
+GROUPS_DELETE_MSG	Group has been deleted successfully.
+GROUPS_UNFOLLOW_MSG	Group has been unfollowed successfully.
+HOME_POST_SUCC_MSG	Your post has been submitted successfully.
+JOB_DETAIL_DELETE_MSG	Posted Job has been deleted successfully.
+LOGIN_CONFIRM_MSG	Dear user, Please check you email account to confirm.
+LOGIN_ACCOUNT_DEACTIVATE_MSG	Your account has been deactivated by admin.
+LOGIN_REG_FAIL_MSG	Your account has not been registred so please register again.
+MY_NETWORK_INVI_BLOCK_MSG	User has been unblock.
+MY_NETWORK_REQ_DISMISS_MSG	Request dismiss successfully.
+MY_NETWORK_ALREADY_REQ_SENT_MSG	The user has already sent you a friend request.
+MY_NETWORK_REQ_SENT_SUCC_MSG	Request send successfully.
+MEMBERSHIP_PLAN_FREE_SUBSCRIBE_MSG	Your free plan has been subscribed successfully.
+MEMBERSHIP_PLAN_PURCHASE_MSG	You have already purchased this plan.
+MEMBERSHIP_PLAN_UPGRADE_MSG	You have already upgraded free plan.
+MEMBERSHIP_PLAN_ACTIVATE_MSG	Plan activated successfully.
+MEMBERSHIP_PLAN_ALREADY_ACTIVATE_MSG	You have already activated this plan.
+MEMBERSHIP_PLAN_SECURITY_TOKEN	Security token mismatch!
+MEMBERSHIP_PLAN_PAYMENT_FAIL_MSG	Payment has been failed, Please try again.
+MSG_SIGN_IN_CONTINUE	Please Sign in to continue!
+NOTIFI_REMOVE_MSG	Notification has been removed successfully.
+POST_JOB_UPDATE_MSG	Your new job has been updated successfully.
+POST_JOB_SUCC_MSG	Your new job has been posted successfully.
+SAVED_JOB_UNSAVE_MSG	Job has been unsaved successfully.
+USER_POST_SUC_MSG	Your article has been submitted successfully.
+USER_POST_ART_EMPTY_MSG	Article content can\'t be empty
+USER_POST_SAVE_MSG	Your article has been saved successfully.
+ARTICLE_DELETE_MSG	Article deleted.
+ARTICLE_SAVE_MSG	Article saved.
+USER_PROFILE_SKILL_ENDORSE_SUCC	Skill endorsed successfully.
+USER_PROFILE_SKILL_ENDORSE_REMOVED	Skill endorsement removed.
+USER_PROFILE_STATUS_UPDATE_MSG	Status has been updated successfully.
+USER_PROFILE_CONN_BLOCK_MSG	Connection blocked.
+FACEBOOK_LOGIN_SUCC_MSG	You are already registered with your email.
+FACEBOOK_LOGIN_EMAIL_MSG	Sorry Credenatial's does not match.
+FILE_EXTENSION_MSG	Please select valid File (e.g. txt, exe, docs, pdf)
+FILE_SIZE_MSG	File size must be less then 4MB
+PLEASE_SELECT_GENDER	Please select gender
+PLEASE_SELECT_TYPE	Please select type
+PLEASE_SELECT_SUBTYPE	Please select subtype
+PLEASE_SELECT_SPECIALTY	Please select specialty
+PLEASE_SELECT_AT_LEAST_ONE_SUB_SPECIALTY	Please select at least one sub specialty
+PLEASE_ENTER_REGISTRATION_NUMBER	Please enter registration number
+PLEASE_SELECT_AT_LEAST_ONE_UPLOAD_ID	Please select at least one upload Id
+PLEASE_SELECT_AT_LEAST_ONE_UPLOAD_CERTIFICATE	Please select at least one Upload Certificate
+REG_EMAIL_MSG	Please enter email
+INVALID_LINK	invalid link
+YOUR_PREF_MANAGE_NOTI_CHANGE_SUCCESS	Your preference for  manage notifications is changed successfully
+MANAGE_NOTIFICATIONS	Manage Notifications
+MANAGE_EMAIL_NOTIFICATIONS	Manage Email Notifications
+OWNERSHIP_TRANSFER_REQUEST	Notify me when I receive Ownership transfer request
+APPOINTMENT_BOOKING_REQUEST	Notify me when I receives appointment booking request
+NOTIFY_WHEN_PATIENT_CANCELS_BOOKING_REQ	Notify me when Patient cancels my appointment booking request
+NOTIFY_SOMEONE_MARKED_GROUP_ADMIN	Notify me when someone has marked me as Group admin
+ALLOW_DIRECT_MESSAGING	Allow Direct messaging
+YES	Yes
+NO	No
+REQUEST_TO_DEACTIVATE_ACCOUNT	Request admin to deactivate your account
+PASSWORD_SHOULD_CONTAIN_CHARACTER_AT_LEAST	Password should contain 6 characters atleast
+PLEASE_ENTER_NEW_PASSWORD	Please enter new password
+PLEASE_ENTER_OLD_PASSWORD	Please enter old password
+ACCOUNT_SETTING_UNSUBSCRIBE_MSG	You have successfully unsubscribed to newsletter.
+YOU_ARE_NOT_SUBSCRIBE_USING_THIS_EMAIL	You are not subscribe this site using this email
+IMAGE	Image
+VIDEO	Video
+UPLOAD_VIDEO	Upload Video
+SHARE_AS_MESSAGE	Share as Message
+PLEASE_ENTER_EMBED_VIDEO_URLCODE	Please enter embed Video Url/Code
+PLEASE_SELECT_ATLEAST_ONE_USER_MESSAGE_FEED	Please select atleast one user message feed
+HOME_PAGE_POST_LINE	Write here or use @ to mention someone
+ENTER_EMBED_VIDEO_URL_CODE	Enter Embed Video URL/Code
+YOU_CANT_ACCESS_THIS_PAGE	You can't access this page
+PLEASE_ENTER_ADDRESS	Please enter address
+PLEASE_ENTER_USER_NAME	Please enter user name
+PLEASE_ENTER_ZIP_CODE	Please enter zip code
+CONNECTION_SUCESS	Connection successfully
+REJECT	Reject
+PLEASE_ENTER_PROF_TITLE	Please enter professional title
+PLESE_SELECT_SUB_SPECIALITY	Please select sub speciality
+PLEASE_ENTER_ATLIST_TWO_CHARECTER	Min length of group name is two
+MAXIMUM_LENGTH_OF_DESC_IS	Maximum length of group description is 6000
+BANNER_DELETE_CONTENT	Are you sure you want to delete this banner ?
+BANNER_RELAUNCH_SUCCESS	Banner relaunched successfully.
+BANNER_DELETED_SUCCESS	Banner is deleted successfully
+BANNER_ADVERTISEMENT_LIST	Banner Advertisement list
+ADD_NEW_ADVERTISEMENT	Add New Advertisement
+BANNER_ADVERTISE_MANAGEMENT	Banner Advertise Management
+BANNER_DETAIL_PAGE_CONTENT	Medoxie.com is the only platform that provides targeted advertisement within the healthcare sector. Whether you are advertising new healthcare products to professionals or healthcare services to patients we have the solution for you. The advertisement can be set up with any budget depending on the size of your advertising campaign. It couldn't be simpler to start your campaign. Simply choose from the advertising options below.
+AD_TITLE	Ad. Title
+RELAUNCH	Relaunch
+SEE_MORE	See More
+ADVERTISEMENT_FOR	Advertisement For
+ADVERTISMENT_KEYWORDS	Advertisment Keywords
+AD_TYPE	Ad. Type
+SELECTED_SLOT	Selected Slot
+LOCATION_PREFERENCE	Location Preference
+SELECTED_PAGE	Selected Page
+NO_OF_CLICKS	No. of Clicks
+REDIRECTION_URL	Redirection URL
+PAYABLE_AMOUNT	Payable amount
+TYPE	Type
+SPECIALTY	Specialty
+APPROVAL_STATUS	Approval Status
+SEE_LESS	See Less
+PAY	Pay
+PUBLIC_HEALTHCARE	Public Healthcare
+PRIVATE_HEALTHCARE	Private Healthcare
+UNIVERSITY_HEALTHCARE	University Healthcare
+YOU_HAVE_NOT_POSTED_ANYTHING_YET	You have not posted anything yet
+SEND_IN_MAIL	send in mail
+PATIENT	Industry
+HEALTHCARE_PROVIDER	Healthcare Provider
+BOTH	Both
+APPROVED	Approved
+REJECTED	Rejected
+IMPRESSION_WISE	Impression wise
+CLICK_WISE	Click wise
+NA	N/A
+SELECT_CAREER_GRADE	Please Select Career Grade
+MALE	Male
+FEMALE	Female
+CLICK_HERE_FOR_ACTIVATE_ACCOUNT	Click here for activate account
+HAS_REGISTERED_IN	has registered in
+NOT_FOUND	404 not found
+PAGE_NOT_FOUND	Page Not Found
+IT_MAY_HAVE_MOVED	It may have been moved or deleted. Go to
+HOME	Home
+NOTIFICATION_PATIENT_I	Notify me when my appointment is Accepted/Rejected/Cancelled by healthcare Provider
+NOTIFICATION_PATIENT_II	Notify me when doctor has accepted my connection request
+UNSUBSCRIBE	Unsubscribe
+SUBSCRIBE_CONTENT	We are sorry to see you go! Enter your email address to unsubscribe from this list
+ENTER_EMAIL_ADDRESS	Enter Email Address
+SEARCH_BY_NAME	Search by name
+SEND_MESSAGE	Send Message
+ADD_NEW_GROUP	Add New Group
+GROUP_DETAIL	Group Detail
+GROUP_TYPE	Group Type
+GROUP_IS_FOR	Group is For
+SELECT_SPECIALTY	Select Specialty
+SELECT_SUB_SPECIALTY	Select Sub specialty
+INVITES	Invites
+GROUPPRIVACY	Group Privacy
+PLEASE_SELECT_OTHER_SPECIALITY	Please select other speciality
+MEMBERS	Members
+GROUP_MANAGEMENT	Group Management
+HERE_YOU_CAN_ADD_EDIT_DELETE_GRP	Create, join and contribute to Groups
+SIGNUP	Signup
+BANNER_ADVERTISEMENT	Banner Advertisement
+APPOINTMENT_REQUESTS	Appointment Requests
+LOGOUT	Logout
+JOURNAL	Journals
+MANAGE_AVAILABILITY	Manage Availability
+SUBSCRIPTION_PLAN	Subscription Plan
+CLINICS_MANAGEMENT	Clinics Management
+CONFERENCE_ORGANIZATION	Conferences
+DEPARTMENT_MANAGEMENT	Department Management
+RECOMMENDATION_INVITATIONS	Recommendations
+CLINICS_DEPARTMENT_INVITATIONS	Invitations
+TRANSFER_OWNERSHIP	Transfer Ownership
+MODERATORS_MANAGEMENT	Moderators Management
+YOUR_CONNECTIONS	Your Connections
+INVITE_FRIENDS	Send Invite
+INVITATIONS	Invitations
+MANAGE_INVITATAIONS	Manage Invitataions
+RECEIVED	Received
+NEWSFEEDS	Newsfeeds
+SIGNUP_AS_HEALTHCARE_PROVIDER	Signup as Healthcare Provider
+MARKED_AS	Marked as
+ARE_MANDATORY_FIELDS	are mandatory fields
+GENDER	Gender
+EMAIL_ID	Email Id
+SELECT_TYPE	Select Type
+SELECT_CAREER_GRADE_TITLE	Select Career Grade
+REGISTRATION_NUMBER	Registration number
+UPLOAD_ID	Upload ID
+UPLOAD	Upload
+MEDICAL_REGISTRATION_CERTIFICATES	Medical Registration Certificates
+CERTIFICATES_OF	Certificates of proof of registration with relevant medical council accepted
+BY_SIGNING_UP_I_AGREE_TO	By signing up, I agree to
+TERMS	terms
+SIGNUP_WITH_FACEBOOK	Signup with Facebook
+SIGNUP_WITH_GOOGLE	Signup with Google
+ALREADY_ON	Already on
+LOGIN_NOW	Login now
+OR	OR
+REGISTER_NOW	Register now
+PLEASE_ENTER_FORGOT_MODEL	Please enter your registered email address, will send you a link to reset your password.
+STAFF	Staff
+FOLLOWERS	Followers
+YOUR_GLOBAL_HEALTHCARE_NETWORK	Your Global Healthcare Network
+IN	IN
+BOOK_APPOINTMENT	Book Appointment
+HIDE_THIS_POST	Hide this Post
+RECOMMENDED	Recommend
+COMMON_CONNNECTIONS	Common Connnections
+ABOUT_ME	About Me
+USER_NAME	User Name
+PROF_HEADLINE	Prof. Headline
+ADDRES_LINE_ONE	Addres Line 1
+ADDRES_LINE_TWO	Addres Line 2
+ZIP_CODE	Zip Code
+HOSPITALS	Hospitals
+DEPARTMENTS	Departments
+PROFESSIONALS	Professionals
+BANNER_PAYMENT_DONE	You are successfully paid #AMOUNT# for banner Ad
+CHOOSE_PAYMENT_METHOD	Choose Payment Method
+PAYPAL	PayPal
+STRIPE	Stripe
+PAY_WITH_CARDS	Pay With Card
+CREDIT_OR_DEBIT_CARD	Credit or Debit card
+SUBMIT_PAYMENT	Pay
+BANNER_PAYMENT_SUCCESS	Payment done for banner successfully
+APPROVAL_PENDING	Approval Pending
+SELECT_SUB_CATEGORY	Select sub category
+ADD_NEW_BANNER_ADVERTISEMENT	Add New Banner Advertisement
+BANNER_DETAIL	Banner Detail
+ADVERTISEMENT_IS_FOR	Advertisement is For
+SELECT_USER_TYPE	Select User Type
+CLINIC_DETAIL_PAGE_CONTENT	Here you can add, edit and delete  your clinic or hospital details
+CLINIC_HOSPITAL_LIST	Your Clinics or Hospitals list
+ADD_NEW_CLINIC	Add New Clinic
+PHONE	Phone
+PATIENT_INFO_MANAGEMENT	Patient Info Management
+ADD_PROFESSIONALS_TO_CLINIC_PROFILE	Add Professionals to Clinic Profile
+PLEASE_SELECT_OTHER_TYPE	Please select other type
+GLOBAL	Global
+NATIONAL_USA	National
+ENTER_TARGET_LOCATION	Enter Target Location
+ENTER_BANNER_KEYWORD	Enter Advertisment Keywords
+BANNER_AD_TITLE	Ad Title
+ENTER_AD_TITLE	Enter Ad Title
+SELECT_AD_TYPE	Select Ad Type
+SELECT_PAGE	Select Page
+DELETE_CLINIC	Are you sure you want to delete this clinic ?
+HOME_PAGE	Home Page
+DETAIL_PAGE	Detail Page
+CLINIC_DELETED_SUCCESS	Clinic is deleted successfully
+PROFILE_PAGE	Profile Page
+SELECTE_SLOT	Select Slot
+LEFT	Left
+RIGHT	Right
+TOP	Top
+BOTTOM	Bottom
+CENTER	Center
+NO_OF_IMPRESSION	No. Of Impression
+ADD_NEW_CLINIC_OR_HOSPITAL	Add New Clinic or Hospital
+CLINIC_DETAIL	Clinic Detail
+CLINIC_OR_HOSPITAL_NAME	Clinic/Hospital Name
+CONTACT_NUMBER_ONE	Contact Number 1
+CONTACT_NUMBER_TWO	Contact Number 2
+FAX_NUMBER	Fax Number
+CLINIC_DESCRIPTION	Clinic Description
+PRACTICE_SETTING	Practice Setting
+CLINIC_OR_HOSPITAL_ADDRESS	Clinic/Hospital address
+ADDRESS_LINE_FIRST	Address Line 1
+ADDRESS_LINE_SECOND	Address Line 2
+ADDRESS_LINE_THREE	Address Line 3 
+CERTIFICATES_AND_AWARDS	Certificates and Awards
+AWARDS_NAME	Award Name
+AWARDS_DESCRIPTION	Award Description
+ADD_IMAGES_FOR_GALLERY	Add Images for Gallery
+CLICK_TO_ADD	Click to Add
+ADD_NEW	Add New
+LIST_OF_INSURANCE_SCHEMES	List of Insurance Schemes
+ADD_IMAGE	Add Image
+PRICE	Price
+INSURANCE_COMPANY_NAME	Insurance Company name
+ADD_MORE	Add More
+ENTER_PRICE	Enter Price
+ENTER_REDIRECTION_URL	Enter Redirection Url
+SOCIAL_MEDIA_LINKS	Social Media Links
+OPERATING_HOURS_OF_CLINIC_OR_HOSPITAL	Operating Hours of Clinic/Hospital
+OPERATING_HOURS_INPUT_DETAILS	Set up your Opening Hours in this form. You can add serveral periods per day
+OPEN_24_HOURS	Open 24 hours
+PATIENT_LISTS	Patient Info
+PLEASE_ENTER_AD_TITLE	Please enter Ad title
+PLEASE_ENETR_AD_USER_TYPE	Please select Ad user type
+PLEASE_SELECT_AD_TYPE	Please select Ad type
+PLEASE_SELECT_PAGE	Please select page
+PLEASE_SELECT_SLOT	Please select slot
+PLEASE_ENTER_NO_OF_CLICK_IMP	Please enter no of click or impression
+PLEASE_ENTER_PAYABLE_AMOUNT	Please enter amount
+PLEASE_ENTER_REDIRECTION_URL	Please enter redirection url
+DELETE_PATIENT	Are you sure you want to delete this patient info ?
+PATIENT_DELETED_SUCCESS	Patient is deleted successfully
+PLEASE_ENTER_KEYWORD	Please enter advertisment keywords
+ADD_PROFESSIONALS_MESSAGE	Add Professionals to Clinic Profile
+ENTER_USER_NAME	Enter User name
+ENTER_USER_ID	Enter User ID
+ADD_PATIENT	Add Patient
+TITLE	Title
+PLEASE_ENTER_TITLE	Please enter title
+PLEASE_LOGIN_TO_CONTINUE_YOUR_PROCEDURE	Please login to continue your procedure
+CHECKIFISACTIVE_STMT	You have not verified the email address that is registered with us. Please try logging in again after verifying your email address.
+CHECKIFISACTIVE_STMT_TWO	Your account has been deactivated by Admin. Please contact Site Admin to re-activate your account.
+THERE_SEEMS_TO_BE_ISSUE	There seems to be an issue. Please try logging in again.
+FILE_NOT_FOUND	File Not Found
+PLEASE_LOGIN_TO_UPLOAD_POST	Please login to upload post
+YOUR_POST_HAS_BEEN_SUBMITTED_SUCCESSFULLY	Your post has been submitted successfully
+PLEASE_CHOOSE_AN_IMAGE_FOR_POST	Please choose an image for post
+YOU_HAVE_ALREADY_REPORTED	You have already reported
+ADD_PATIENT_NOTIFICATION	You are added on #CLINIC_NAME#.
+MANAGE_APPOINTMENTS	Manage Appointments
+HERE_YOU_CAN_VIEW_YOUR_PENDING_AND_PREVIOUS_APPOINTMENTS	Here you can view your pending and previous appointments
+APPOINTMENT_REQUEST_LIST	Appointment request list
+PLEASE_ENTER_USER_ID	Please enter user id
+APPOINTMENT_DATE	Appointment Date
+TIMESLOT	Timeslot
+BOOKING_STATUS	Booking Status
+PREVIOUS	Previous
+CANCELLED_BY_PATIENT	Cancelled by Patient
+CANCELLED_BY_DOCTOR	Cancelled by Doctor
+CLINIC_NAME	Clinic Name
+ACCEPTED_YOUR_INVITATION	accepted your invitation
+APPOINTMENT_CANCEL_BY	Appointment cancel by
+APPOINTMENT_REQUEST_CANCLED_SUCCESSFULLY	Appointment Request cancled successfully
+MSG_EDIT_BTN	Edit
+SELECT_PATIENT	Select any Patient
+ADD_PATIENT_MSG	Patient successfully added on this clinic
+UPDATE_PATIENT_MSG	Clinic's Patient details successfully updated
+SELECT_PROFESSIONAL	Select any Professional
+OPEN	Open
+REGULAR_TIME	Regular Time
+BASIC_FILTERS	Basic Filters
+DATE_RANGE	Date Range
+ACCEPTED	Accepted
+PLEASE_ENTER_WEBSITE_URL	Please enter website url
+PLEASE_ENTER_CONTACT_NUMBER	Please enter contact number
+PLEASE_SELECT_PRACTICE_SETTING	Please select practice setting
+PLEASE_ENTER_FACEBOOK_LINK	Please enter facebook link
+PLEASE_ENTER_AWARD_NAME	Please enter award name
+PLEASE_ENTER_AWARD_DESCRIPTION	Please enter award description
+MANAGE_AVAILIBILITY	Availibility
+AVAILABILITY_CHECK	Availability check
+VIEW_SERVICE_CHARGES	View Service Charges
+VIEW_MEDICAL_CERTIFICATES	View Medical Certificates
+PLEASE_SELECT_SCHEDULE	Please select schedule
+YOUR_SOCIAL_MEDIA_PROFILE	Your Social Media Profile
+YOUR_PROFILE_LINK	Your Profile Link
+PLEASE_ENTER_SOCIAL_LINK	Please enter social link
+PLEASE_ENTER_PROPRT_URL	Please enter proper URL
+CREATED_BANNER	has created banner in
+CREATE_CLINIC_MSG	Your clinic has been created successfully.
+SERVICE_CHARGES_SUCCESSFULLY_ADDED	Service Charges Successfully added
+PLEASE_ENTER_SERVICE_DETAIL	Please enter service detail
+START_FEES_MUST_BE_LESS_THAN_END_FEES	Min. Fees must be less than Max. Fees
+SERVICE_DELETED_SUCCESS	Service charge deleted successfully
+PLEASE_SELECT_CERTIFICATE_DATE	Please select certificate date
+PLEASE_ENTER_CERTIFICATE_TITLE	Please enter certificate title 
+CERTIFICATE_DELETED_SUCCESSFULLY	Certificate deleted successfully
+CERTIFICATE_ADDED_SUCCESSFULLY	Certificate added successfully
+CERTIFICATE_EDITED_SUCCESSFULLY	Certificate edited successfully
+CLINICAL	Clinical
+DOWNLOAD	Download
+MEDICAL_CERTIFICATES	Medical Certificates
+ADD_NEW_CERTIFICATE	Add New Certificate
+CERTIFICATE_DATE	certificate date
+CERTIFICATE_IMG	Certificate Image
+SERVICE_CHARGES	Service Charges
+SERVICE	Service
+START_FEES	Min. Fees
+END_FEES	Max. Fees
+ACTION	Action
+CLINICAL_APPOINTMENTS	Clinical Appointments
+ADDED_SUCCESSFULLY	added successfully
+DELETED_SUCCESSFULLY	deleted successfully
+EDITED_SUCCESSFULLY	Edited Successfully
+ARTICLES_IN_THE_PRESS_AND_POPULAR_MEDIA	Articles in the Press and Popular Media
+SPOKEN_LANGUAGES	Spoken Languages
+DEPARTMENT_DETAIL_PAGE_CONTENT	Here you can add, edit and delete your department details
+ADD_NEW_DEPARTMENT	Add New Department
+DEPARTMENT_LIST	Your Department list
+SORT_BY_CLINIC_NAME	Sort by Clinic name
+RECENT	Recent
+ADD_PROFESSIONALS_TO_DEPARTMENT_PROFILE	Add Professionals to Department Profile
+SELECT_LEVEL	--- Level ---
+NATIVE	Native
+FLUENT	Fluent
+CONVERSATIONAL	Conversational
+VIA_TRANSLATOR	Via Translator
+DEPARTMENT_DELETED_SUCCESS	Department is deleted successfully
+DELETE_DEPARTMENT	Are you sure you want to delete this Department ?
+DEPARTMENT_DETAIL	Department Detail
+DEPARTMENT_NAME	Enter Department Name
+CONTACT_PERSON	Contact Person
+ENTER_CONTACT_EMAIL	Enter Contact Email
+DEPARTMENT_SERVICES	Department Services
+MEDICAL_COUNCIL_REGISTRATIONS	Medical Council Registrations
+THIS_LANGUAGE_IS_ALREADY_EXIST	This language is already exist
+PLEASE_ENTER_MEDICAL_COUNCIL_REGISTRATION	Please enter medical council registration
+PLEASE_SELECT_SERVICE	Please select service
+ENTER_SERVICE_TITLE	Enter Service Title
+DISEASES_AND_PROCEDURES_OF_SPECIALIST_INTEREST	Diseases and procedures of specialist interest
+DISEASES	Diseases
+PLEASE_SELECT_CLINIC	Please select clinic
+YOU_REACH_MAX_LIMIT_DISEASE	You can add maximum 10 disease
+PROCEDURES	Procedures
+PLEASE_ENTER_PROCEDURE	Please enter procedure
+PLEASE_ENTER_DISEASE	Please enter disease
+ENTER_START_TIME	Enter start time
+ENTER_END_TIME	Enter end time
+EMPLOYMENT_HISTORY	Employment History
+PLEASE_SELECT_END_MONTH	Please select end month
+PLEASE_SELECT_END_YEAR	Please select end year
+PLEASE_SELECT_START_MONTH	Please select start month
+PLEASE_SELECT_START_YEAR	Please select start year
+PLEASE_ENTER_PROPER_DATA	Please enter proper title
+PLEASE_ENTER_DEPARTMENT_NAME	Please enter Department Name
+PLEASE_ENTER_CONTACT_PERSON	Please enter contact person
+PLEASE_ENTER_CONTACT_EMAIL	Please enter contact email
+TO	To
+I_AM_WORKING_HERE	I am working here
+PROFESSIONAL_QUALIFICATIONS	Professional Qualifications
+QUALIFICATION	Qualification
+SCHOOL_NAME	School Name
+PLEASE_ENTER_QUALIFICATION	Please enter qualification
+PLEASE_ENTER_SCHOOL_NAME	Please enter school name
+PLEASE_ENTER_GOT_YEAR	Please enter year
+YEARS_TITLE	years
+MONTHS	Months
+CLINICAL_AWARDS_AND_PRIZES	Clinical Awards and Prizes
+AWARDS_YEAR	Award Year
+CHARITY_AND_VOLUNTARY_WORK	Charity and Voluntary Work
+WORK_TITLE	Work Title
+CLINICAL_MANAGEMENT_POSITIONS	Clinical Management Positions
+PROFESSIONAL_MEMBERSHIP	Professional Membership
+CLINICAL_AUDIT	Clinical Audit / Contnuous Quality Improvement Projects
+CREATE_DEPARTMENT_MSG	Your clinic has been created successfully.
+CPD_CME_POINTS	CPD / CME points
+DATE	Date
+CMEACTIVITY	CME activity
+CREDIT	Credit
+CERTIFICATE	Certificate
+PLEASE_SELECT_YEAR	Please select year
+PLEASE_SELECT_LANGYAGE	Please select language
+PLEASE_SELECT_LEVEL	Please select level
+PLEASE_ENTER_CPM_ACTIVITY	Please enter CPM activity
+PLEASE_ENTER_COMPANY_NAME	Please enter company name
+PLEASE_SELECT_DATE	Please select date
+PLEASE_ENTER_CREDIT	Please enter credit
+PLEASE_SELECT_PATIENT	Please select patient
+SELECT_INSURANCE_COMPANY_NAME	Select insurance Company name
+ACADEMIC_APPOINTMENTS	Academic Appointments
+INSTITUTION	Institution
+AREAS_OF_RESEARCH_INTERES	Areas of Research Interes
+PLEASE_ENTER_VALID_TIME	Please enter valid time
+CLINICAL_TRIALS	Clinical Trials
+PROGRESS	Progress
+NOW_RECRUTING	Now Recruiting
+COMPLETED	Completed
+PLEASE_SELECT_STATUS	Please select status
+APPOINTMENT_ACCEPTED_BY	Appointment accepted by
+APPOINTMENT_SUCCESSFULLY_ACCEPTED	Appointment successfully accepted
+APPOINTMENT_REQUEST_REJECTED_SUCCESSFULLY	Appointment Request rejected successfully
+APPOINTMENT_REJECTED_BY	Appointment rejected by	
+ACADEMIC_EMPLOYMENT	Academic Employment
+LINKS	Links
+LINK	Link
+FAQ_CONTENT_TWO	Duis porta, leo nec ultricies commodo
+FAQ_CONTENT_THREE	nibh magna facilisis odio, at ullamcorper lectus lorem sed quam.
+FAQ_CONTENT_FOUR	nibh magna facilisis odio, at ullamcorper lectus lorem sed quam.
+PLEASE_ENTER_LINK	Please enter link
+ACCEPT_TERMS_CONDITIONS	I accept all terms & conditions
+TERMS_AND_CONDITIONS	Terms & Conditions
+REASON_FOR_REJECT	Reason for reject
+PLEASE_ENTER_ACTIVITIES	Please enter activities
+PLEASE_ENTER_FIELD_OF_STUDY	Please enter field of study
+PLEASE_SELECT_DEGREE	Please select degree
+PLEASE_ENTER_GRADE	Please enter grade
+STANDARD	Standard
+NUMBER_OF_BOOKING	Number of booking
+USER_CAN_ADD_MULTIPLE_HOSPITALS_CLINICS	Attract patients to your practice
+USER_CAN_POST_UPDATES_OF_HOSPITAL_AND_DEPARTMENT	Keep track of CPD/CME points
+UNLIMITED_BOOKING	Unlimited Booking
+SUBSCRIPTION_PREMIUM_PLAN_FEATURES_FOUR	Become a premium member & display on top of search result page along with Premium tag in User’s profile
+SUBSCRIPTION_PREMIUM_PLAN_FEATURES_FIVE	Facility to Post Banner Advertisement
+PER_MONTH	Per Month
+ACTIVITIES_STUDY	Activities & Study
+SUBSCRIPTION_PAYMENT_SUCCESS	Payment Successfully processed for Subscription
+SUBSCRIPTION_PAYMENT_DONE	You are successfully paid #AMOUNT# for subscription
+GRANTS_AWARDS_PRIZES_AND_PATENTS	Grants, Awards, Prizes and Patents
+TRANSFER_OWNERSHIP_MSG	You can only transfer ownership of a clinic or department profile page. A personal profile page cannot be transferred to another user. We suggest to hand over a profile page if there is a new clinical lead, chief of service or a new chief executive for a department or a clinic.
+USER_ID	User ID
+HOSPITAL_NAME	Hospital Name
+DEPT_NAME	Department Name
+REQUEST_SENT_DATE	Request sent Date
+ENTER_FULL_NAME	Enter Full name
+SELECT_DEPARTMENT	Select Department
+DOCTOR_SPECIALTY	Doctor Specialty
+TRANSFER	Transfer
+PLEASE_SELECT_MONTH	Please select month
+PLEASE_ENTER_FULL_NAME	Please enter full name
+COURSES_AND_CONFERENCES_ATTENDED	Courses and conferences attended
+SELECT_DEPARTMENT_LIST	--- Department Name ---
+INVITED_SPEAKER_AND_NAMED_LECTURES	Invited Speaker and Named Lectures
+INSTRUCTION_COURSES_AT_ACADEMIC_MEETINGS	Instruction Courses at academic meetings
+ACADEMIC_COURSE_CONFERENCE_ORGANISING_POSITION	Academic course / conference organising position
+PUBLICATIONS	Publications
+CLINIC_LIST	Select Clinic
+SELECT_CLINIC_LIST	--- Clinic Name ---
+OWNERSHIP_TRANSFER_REQUEST_SENT	Your ownership transfer request is sent
+TRANSACTION_NOT_FOUND	Transaction ownership not found
+NAMED_LECTURE	Named Lecture
+PLENARY_LECTURE	Plenary Lecture
+KEYNOTE_LECTURE	Keynote Lecture
+INVITED_LECTURE	Invited Lecture
+CONTRIBUTED_LECTURE	Contributed Lecture
+PLEASE_SELECT_PUBLICATION_TYPE	Please select publication type
+PLEASE_ENTER_AUTHOR_NAME	Please enter author name
+PLEASE_ENTER_JOURNAL_NAME	Please enter journal name
+PLEASE_SELECT_PUBLICATION_DATE	Please select publication date
+PLEASE_ENTER_PAGE_NO	Please enter page no.
+PLEASE_ENTER_ISSUE_NO	Please enter issue number
+OWNERSHIP_ACCEPTED_BY	Ownership accepted by
+OWNERSHIP_SUCCESSFULLY_ACCEPTED	Ownership successfully accepted
+OWNERSHIP_REJECTED_BY	Ownership rejected by
+OWNERSHIP_REQUEST_REJECTED_SUCCESSFULLY	Ownership Request rejected successfully
+TEACHING_AND_TRAINING_APPOINTMENTS	Teaching and Training appointments
+INVITATIONS_MSG	Here you can send, accept or cancel invitations
+ENER_USERID_NAME	Enter User ID/User name
+ENTER_PROFILE_URL	Enter Profile URL
+TEACHING_EXPERIENCE	Teaching Experience
+PROFILE_URL	Profile URL
+INVITATION_SENT_DATE	Invitation Sent Date
+RECOMMENDATION_STATUS	Recommendation Status
+TEACHING_DEGREES_AWARDS_AND_PRIZES	Teaching Degrees, Awards and Prizes
+INSTRUCTION_COURSES	Instruction Courses
+PLEASE_ENTER_COURSE_NAME	Please enter course name
+EXAMINATION_COMMITTEES_AND_PANELS	Examination committees and panels
+MPHIL_AND_PHD_STUDENTSSUPERVISED	MPhil and PhD students supervised
+RECOMMENDATION_INVITATION_SENT	Recommendation Invitation sent successfully
+INVITATION_ACCEPTED_BY	Recommendation invitations accepted by
+INVITATION_SUCCESSFULLY_ACCEPTED	Recommendation invitations successfully accepted
+ACCEPTED_INVITATIONS	Accepted Invitations
+CLINICAL_FELLOWS_TRAINED	Clinical Fellows trained
+PUBLIC_EDUCATION_SEMINARS	Public Education Seminars
+CLINICS_DEPARTMENT_INVITATIONS_MSG	Here you can accept, reject and cancel Clinics/Department Invitations
+UPLOAD_IMAGE	Upload Image
+JOURNAL_EDITORIAL_BOARDS	Journal Editorial Boards
+PUBLICATION_TYPE	Publication Type
+AUTHOR_NAME	Author Name
+JOURNAL_NAME	Journal Name
+PUBLICATION_DATE	Publication Date
+ISSUE_NUMBER	Issue Number
+PAGE_NUMBER	Page Number
+PRESTIGIOUS_PUBLICATION	Prestigious Publication
+CME_ACTIVITY	CME activity
+UPLOAD_CERTIFICATE	Upload Certificate
+NAME	Name
+CURRENT_WORKING	Current Working
+INVITATION_STATUS	Invitation Status
+INVITATION_CANCELLED_SUCCESSFULLY	Invitation cancelled successfully.
+INVITATION_REJECTED_BY	Invitation Rejected by 
+INVITATION_REQUEST_REJECTED_SUCCESSFULLY	Invitation Request rejected successfully
+REJECT_RECOMMENDATION_INVITATION	Are you sure, You want to reject Recommendation Invitation?
+CANCEL_INVITATION_QS	Are you sure, You want to reject Cancel Invitation?
+REJECT_INVITATION_QS	Are you sure, You want to reject Invitation?
+REGULAR_HOURS	Regular Hours
+ABOUT_HOSPITAL	About Hospital
+PHOTOS	Photos
+NEWSFEED	News feed
+PATIENT_INFO	Patient Info
+CONTACT	Contact
+WORKING_TIME	Working Time
+SOCIAL_PROFILE	Social Profile
+CONTACT_INFO	Contact Info
+SIMILAR_HOSPITALS	Similar Hospitals
+MY_BUSINESS_CARD	My business card
+UPLOAD_CARD	Upload Card
+DOCTORS	Doctors
+MY_QR_CODE	My QR code
+SUPPORTED_INSURANCE_SCHEMES	Supported Insurance Schemes
+OPEN_ONLY	OPEN
+CLOSED	CLOSED
+ACADEMIA	Academia
+TEACHING	Teaching
+ADVANCED_SEARCH	Advanced Search
+SET_AVAILABILITY	Set Availability
+REMAIN_ANONYMOUS	are you wants to remain anonymous?
+CONTACTDETAIL	Contact Detail
+PLEASE_VERIFY_THE_CAPTCHA_PROCEDURE	Please Verify the Captcha procedure
+EMERGENCY_HOURS	Emergency Hours
+SERVICES	Services
+SIMILAR_DEPARTMENTS	Similar Departments in  other Hospital
+SELECT_ANY_OPTION	Please Select any one option
+CONTACT_PRESON	Contact Preson
+CLINICAL_SERVICES	Clinical Services
+PLEASE_ENTER_TIME_FIRST	Please enter time first
+HOME_DELETE_COMMENT_CONTENT	Are you sure, want to delete comment?
+MANAGE_CLINIC	Manage Clinic
+MANAGE_DEPARTMENT	Manage Department
+ADD_DEPARTMENT	Add Department
+CLINIC_DEPARTMENT_INVITATIONS	Clinic/Department Invitation
+CLINIC_DEPARTMENT_DETAILS	Clinic Department Details
+CLINIC_CONTACT_DETAILS	Clinic Contact Details
+CLINIC_DETAILS	Clinic Details
+CLINIC_FOLLOWER_DETAILS	Clinic Follower Details
+CLINIC_PATIENT_DETAILS	Clinic Patient Details
+CLINIC_PROFESSIONAL_DETAILS	Clinic Professional Details
+DEPARTMENT_PROFESSIONAL_DETAILS	Department Professional Details
+DEPARTMENT_CONTACT_DETAILS	Department Contact Details
+DEPARTMENT_DETAILS	Department Details
+DEPARTMENT_FOLLOWER_DETAILS	Department Follower Details
+DEPARTMENT_PATIENT_DETAILS	Department Patient Details
+CREATE_JOB	Create Job
+JOB_REQUIREMENT	Job Requirement
+SELECT_JOB_SECTOR	Select Job Sector
+TYPE_OF_CONTRACT	Type of Contract
+ENTER_SALARY	Enter Salary
+YEARS_OF_EXPERIENCE	Years of Experience
+SELECT_RECRUITMENT	Select Recruitment
+SELECT_CLINIC	---Select Clinic---
+SELECT_DEPARTMENT_OPT	---Select Department---
+UNIVERSITY_LABEL	University
+PERMANENT	Permanent
+SHORT_TERM	Short-term
+LOCUM	Locum
+SELECT_YEARS_OF_EXPERIENCE	---Select Years Of Experience---
+DIRECT_FROM_EMPLOYER	Direct From Employer
+RECRUITMENT_AGENCY	Recruitment Agency
+ENTER_JOB_TITLE	Please Enter Job title
+PLEASE_SELECT_DEPARTMENT	Please Select Department
+PLEASE_SUB_TYPE	Please select Career Grade
+PLEASE_SELECT_SECTOR	Please select Job sector
+PLEASE_SELECT_CONTRACT	Please Select Contract
+ENTER_START_SALARY	Please Enter Start Salary
+ENTER_TO_SALARY	Please Enter To Salary
+PLEASE_SELECT_SALARY_DURATION	Please select Salary Duration
+PLEASE_ENTER_LAST_DATE	Please Enter last date
+PLEASE_SELECT_YEARS_OF_EXPERIANCE	Please Select Years Of Experiance
+MONTHLY	Monthly
+PER_ANNUM	Per Annum
+CREATE_JOB_MSG	Job is created successfully
+SELECT_CONTRACT	---Select Contract---
+SELECT_DURATION	---Select Duration---
+UPDATE_JOB_MSG	Job is updated successfully
+SAVE_JOB	Save Job
+APPLY_NOW	Apply Now
+TYPE_OF_PROFESSIONAL_LBL	Type of Professional
+CAREER_GRADE_LBL	Career grade
+SUB_SPECIALTY_LBL	SUB Specialty
+JOB_SECTOR_LBL	Job sector
+SALARY_LBL	Salary
+RECRUITMENT_LBL	Recruitment
+JOB_DETAILS	Job Details
+HOSPITAL_PROFILE	Hospital Profile
+WEBSITE_LBL	Website
+VIEW_CLINIC_BTN	View Hospital Profile Page
+JOB_DETAIL_REPORT_TITLE	Report this job
+JOB_DETAIL_APPLY_RESPONSE_MSG	Your response has been submitted successfully.
+MANAGE_JOBS	Manage Jobs
+HOSPITAL_LABEL	Hospital
+JOB_ALERT	Job Alert
+POST_JOB_ALERT	Post a New Alert Job
+ALERT_JOB_LABEL	Alert Job
+ENTER_ALERT_TITLE	Enter Alert Title
+ENTER_CLINIC_HOSPITAL_NAME_LABEL	Enter Clinic/Hospital Name
+CREATE_JOB_ALERT_MSG	Job Alert is created successfully
+UPDATE_JOB_ALERT_MSG	Job Alert is updated successfully
+ALERT_CREATED_DATE_LABEL	Alert Created Date
+JOB_ALERT_DELETED_SUCCESS	Job Alert is deleted successfully
+DELETE_JOB_ALERT_MSG	Are you sure, You want to delete Job Alert?
+ADD_JOB_ALERT_BTN	Add Job Alert
+CLINIC_JOB_DETAILS	Clinic Job Details
+PLEASE_SELECT_VALID_TIME	Please select valid time
+ADD_PERIOD	Add Period
+UPFRONT_DEPOSIT_REQUIRED	Upfront Deposit Required
+DEPOSIT_AMOUNT	Deposit amount
+SET_AVAILABLITY	Set Availablity
+SUNDAY	Sunday
+CLOSED_LBL	Closed
+MONDAY	Monday
+AM	AM
+PM	PM
+TUESDAY	Tuesday
+WEDNESDAY	Wednesday
+THURSDAY	Thursday
+FRIDAY	Friday
+SATURDAY	Saturday
+DEPARTMENT_JOB_DETAILS	Department Job Details
+GROUP_OWNER_LABEL	Group Owner
+FOLLOW_BTN	Follow
+GROUP_REPORT_TITLE	Report this group
+GROUP_MEMBERS_TITLE	Group Members
+SIMILAR_GROUPS_TITLE	Similar Groups
+REPLY_LABEL	Reply
+GROUP_FLLOWERS_TITLE	Group Followers
+ALL_RESULTS	All results
+CHOOSE_PROFESSIONALS	Choose Professionals
+CALL_NOW	Call Now
+FOLLOWED_GROUP	Followed
+SUB_SPECIALTY	Sub Specialty
+GROUP_REQUEST_ACCEPTED	Join Group Request accepted
+NO_SIMILAR_GROUPS_FOUND	No Similar Groups Found.
+MATCHES_FOUND_FOR	matches found for
+WITH_KEYWORD	with keyword
+SORT_BY	Sort by
+OLD	Old
+SEARCH_BY_GROUP_NAME	Search by Group Name
+MODERATORS_MANAGEMENT_TEXT	Here, You can manage the list of moderators (i.e. Sub-admins) from list
+ADD_NEW_MODERATOR_BTN	Add New Moderator
+CURRENT_STATUS_OF_MODERATOR	Current Status of Moderator
+ASSIGNED_PRIVILEGES_LABEL	Assigned Privileges
+EDIT_BTN	Edit
+ADD_MODERATOR_TITLE	Add Moderator
+MANAGE_DOCTOR_PROFILE	Manage Doctor Profile
+ADD_BTN	Add
+DELETE_MODERATOR	Are you sure you want to delete this moderator ?
+MODERATOR_DELETE_SUCCESSFULLY	Moderator is deleted successfully
+DEPARTMENT	Department
+PLEASE_SELECT_YOUR_RESUME	Please select your resume
+PLEASE_SELECT_VALID_FILE	Please select valid file
+PLEASE_ENTER_CLINIC_NAME	Please enter clinic name
+PLEASE_SELECT_EXPERIENCE	Please select experience
+PLEASE_ENTER_CURRENT_SALARY	Please enter current salary
+PLEASE_ENTER_EXP_SALARY	Please enter expected salary
+DO_NOT_ACCESS_SEARCH	You don't have access to search.
+VIEW_DOCTOR_PROFILE_LABEL	View Doctor Profile
+MODEARATOR_HAS_NO_ACCESS	You have not access for this site.
+SELECT_CLINIC_MANAGEMENT	Please Select Clinic Management
+SELECT_DEPARTMENT_MANAGEMENT	Please Select Department Management
+BOOK_AN_APPOINTMENT	Book an appointment
+PLEASE_SELECT_TIME_SLOT	Please select time slot
+PLEASE_AGREE_WITH_TERMS_AND_CONDITION	Please agree with terms and condition 
+PRACTICE_SETTINGS	Practice Settings
+ADVANCED_FILTERS_LBL	Advanced Filters
+INSURANCE_SUPPORT_LBL	Insurance Support
+SELECT_TIME_SLOT	Select Time Slot
+FEES	Fees
+REMINDER_ME	Send SMS Reminder
+MIN	min
+APPOINTMENT_IS_ALREADY_CANCELED	Appointment is already canceled
+ONLINE_BOOKING_LBL	Online Booking
+AVAILABLE_TODAY_LBL	Available Today
+LEVEL_LBL	Level
+SEARCH_PAGE	Search Page
+MILES_LBL	miles
+NATIONAL_LBL	national
+WORLDWIDE_LBL	worldwide
+SIGNUP_AS_PATIENT	Signup as Industry Provider
+ADVERTISEMENT_ADDED_SUCCESSFULLY	Advertisement added successfully
+PLEASE_ENTER_VALID_REGISTRATION_NUMBER	Please enter valid registration number
+MINUTES_LBL	minutes
+FEES_FOR	Fees For 
+FROM_EVERYONE	from everyone
+PROFESSIONALS_ONLY	from other healthcare professionals only
+FROM_NO_ONE	from no one
+SHARE_ON_TWITTER_LBL	Share on Twitter
+SHARE_ON_LINKEDIN_LBL	Share on LinkedIn
+PROFESSIONAL_DETAILS_LBL	Professional Details
+LINKEDIN_LBL	linkedin
+SHARE_ON_SOCIAL_NETWORK	Share to Social Network
+GROUP_PENDING_STATUS	Pending
+VALIDATE_IMPRESSION_LENGTH	Please enter no up to 7
+POSTED_JOBS	Posted jobs
+NO_CERTIFICATE_FOUND	No any certificate found
+JOB_DELETED_SUCCESS	Job deleted Successfully
+ADD_INFO	Add Info
+ADD_INFO_FOR_PATIENT	Add info for patient
+SIGNUP_WITH_LINKEDIN	Signup with LinkedIn
+LOGIN_WITH_LINKEDIN	Login With LinkedIn
+PATIENT_INFO_DELETED_SUCCESS	Patient info deleted successfully
+ADD_PATIENT_INFO_MSG	Patient info successfully added on this clinic	
+KEEP_AN_UPDATED_ONLINE_PORTFOLIO	Keep an updated online portfolio
+PROMOTE_YOUR_CLINICAL_SKILLSET	Promote your clinical skillset
+BUILD_PROFESSIONAL_NETWORK	Build a professional network
+APPEAR_AT_THE_TOP_OF_MEDOXIE_SEARCH_RESULTS	Appear at the top of medoxie search results
+POST_BANNER_ADVERTISEMENT	Post a banner advertisement
+SUBSCRIBED	Subscribed
+DOCTOR_NOT_AVAILABLE	Sorry, no availability!
+BOOKING_SUBMITTED_SUCCESSFULLY	Your Booking has been submitted successfully
+USER_PROFILE_BLOCKED_LINK	Blocked
+GROUPS_LBL	Groups
+PRESTIGIOUS_PRESENTATIONS	Prestigious Presentations
+INVITATION_SENT	Invitation Sent
+SUBSCRIBE_MEDOXIE_NEWSLETTER	Subscribe to Medoxie Newsletter
+NOT_VALID_VIDEO_URL	Please enter valid video url
+ALLOW_ONLINE_BOOKING	Allow Online Booking
+JOB_DETAIL_REPORT_MSG	Job Detail Report is added Successfully
+GROUP_DETAIL_REPORT_SUCC_MSG	Group Report added Successfully
+BANNER_ADVT_BLANK_DATA_CONTENT	No Banner Advertisement Found.
+PLEASE_ENTER_ALERT_TITLE	Please enter Alert Title
+PLEASE_ENTER_CLINIC	Please enter Clinic/Hospital Name
+SHARE_FEED_POST_CONN_LINK	Connected
+SHARE_FEED_POST_PUBLIC_LINK	Public
+EDIT_PROFILE_COU_FROM_LBL	From
+PRICE_IS_REQUIRED	Price is Required
+SELECT_PROFESSIONAL_LABEL	Select Professional
+PLEASE_SELECT_PROF_TITLEL	Please select professional title
+INVITATIONS_NOT_FOUND	Invitations not found
+BLOCKED_PAGE_MSG	Can't Open This Page
+OWNERSHIP_TRANSFER_REQUEST_RECEIVED	One new ownership transfer request received.
+REGISTRATION_NUMBER_VALIDATE	Registration number is not added in directory
+RELAUNCH_BANNER	has relaunch banner in
+ENTER_ONLY_NUMBER	Please enter only number
+PLEASE_ADD_PROF_NAME	Please add Professional Full name
+PLEASE_ADD_TITLE	Please add title
+POST_ADDED_SUCCESSFULLY	Post added successfully
+POST_ERROR	Post not added
+ENDING_ON	Ending On
+PLEASE_ENTER_BETWEEN_CLINIC_SCHEDULE	Please enter time between clinic schedule
+MAKE_GROUP_ADMIN	Make Group Admin
+MAKE_ADMIN	Select Group Admin
+GROUP_ADMIN_SUCCESS	Group admin create successfully
+GROUP_ADMIN_ERROR	Group admin can't created
+CANCEL_APPOINTMENT_QS	Are you sure, you wish to cancel an appointment?
+NOT_ELIGIBLE_FOR_ACCEPT_APPOINTMENTS	You are not eligible for accept more appointments 
+NOT_ELIGIBLE_FOR_BANNER_ADVERTISEMENT	You are not eligible for banner advertisement
+RECORD_FORUND	matches found
+LBL_DOCTOR	Doctor
+LBL_NURSE	Nurse
+NOT_ELIGIBLE_FOR_ACCEPT_BOOKING	You have an online booking request but have reached the maximum number of bookings on your current membership plan. Please click the link below to upgrade your account to proceed with the booking
+CLINICS	Clinics
+TOTAL_NUMBER_RECOMMENDATIONS_NOT_ACHIEVED	Total number of recommendations are not achieved
+LOGIN_ALREADY_ACTIVATED_MSG	Your login is already activated 
+UPGRADE_YOUR_PLAN	Please upgrade your subscription plan
+DEACTIVATE_LBL	Deactivate
+ACTIVATE_LBL	Activate
+CANCEL_PENDING_DEPARTMENT_TRANSFER_REQUEST	Cancel pending department transfer request
+STANDARD_PLAN_EXPIRED	Your Standard plan is expired, please purchase Premium plan
+MONTHLY_PREMIUM_PLAN_EXPIRED	Your monthly premium plan is expired, Update your plan
+CENTER_AD_WIDTH	800
+CENTER_AD_HEIGHT	90
+RIGHT_AD_WIDTH	250
+RIGHT_AD_HEIGHT	250
+PLEASE_ADD_DEPOSIT_AMOUNT	Please add deposit amount
+MOST_RECENTLY_ADDED	Most Recently added
+DISTANCE	Distance
+SENIORITY	Seniority
+ALPHABETICALLY	Alphabetically (A-Z)
+TWO_STEP_AUTHENTICATOR	2-Step Verification using Google Authenticator
+GOOGLE_AUTHENTICATOR_LABEL	Enter the verification code generated by Google Authenticator app on your phone.
+GET_GOOGLE_AUTHENTICATOR_ON_YOUR_PHONE	Get Google Authenticator on your phone
+ENTER_AUTHENTICATOR_CODE	Enter Google Authenticator Code
+TWO_FACTOR_AUTHENTICATION	Two Factor Authentication
+ENABLE_TWO_FACTOR_AUTHENTICATION	Enable Two Factor Authentication
+TWO_FACTOR_AUTHENTICATION_UPDATED	Two Factor Authentication allow is updated
+INDUSTRY_SECTOR_LBL	Industry Sector
+SELECT_INDUSTRY_SECTOR	Select Industry Sector
+PLEASE_SELECT_INDUSTRY_SECTOR	Please select Industry Sector
+NAME_OF_PATIENT	Name of Patient
+EMAIL_OF_PATIENT	E-mail of Patient
+NUMBER_OF_PATIENT	Telephone number of Patient
+ENTER_PATIENT_NAME	Please enter patient name
+ENTER_PATIENT_EMAIL	Please enter patient email
+ENTER_PATIENT_PHONE	Please enter patient phone number
+PATIENT_NAME	Patient name
+PATIENT_EMAIL	Patient Email
+PATIENT_PHONE	Patient Phone
+RETYPE_EMAIL	Confirm E-mail
+ENTER_SAME_PATIENT_EMAIL	Please enter same patient email
+DOCTOR_NAME	Doctor Name
+PROFESSIONALS_INDUSTRY_ONLY	From healthcare professionals and industry providers only

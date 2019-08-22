@@ -1,0 +1,89 @@
+<!-- Dashboard Navigation -->
+%SUB_HEADER_CONTENT%
+<!-- Dashboard Navigation End -->
+
+<section class="main-dashboard">
+    <div class="container">
+        <div class="account_setting my-jobs-wrap">
+            <div class="sawlii-tabs-wrap">
+                <ul class="nav nav-tabs">
+                    <li class=" active">
+                        <a href="{SITE_URL}my-bids" class=" active">{FMS_MY_BIDS}</a>
+                    </li>
+                    <li>
+                        <a href="{SITE_URL}my-jobs">{FMJ_MY_JOBS}</a>
+                    </li>
+                    <li>
+                        <a href="{SITE_URL}saved-jobs">{NAV_SAVE_JOB_LBL}</a>
+                    </li>
+                </ul>
+                <div class="tab-content">  
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="panel panel-default theme-box">
+                              <div class="panel-heading">
+                                  <h3 class="panel-title">{FMS_MY_BIDS}</h3>
+                              </div>
+                              <div class="panel-body">
+                                  <div class="fl-job-bid-wrap">
+                                      <ul class="fjb-lists" id="bids_data">
+                                          %LOOP_DATA%
+                                      </ul>
+                                  </div>
+                                  <div class="view-more-button">
+                                      <div class="theme-button">
+                                          <a href="javascript:void(0)" class="load_more_data %LOAD_CLASS%" data-page="1">{FMS_VIEW_MORE_BIDS}</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+                <?php /*  <div class="profile">
+         <div class="featurette-job dashboard-my-jobs">
+            <div class="sub_featured">
+              <div class="theme-form">
+                 <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                       <div class="job_feed_heading">
+                          <h1 class="main-heading">
+                             {FMS_MY_BIDS}
+                          </h1>
+                       </div>
+                       <ul class="dash-job" id="bids_data">
+                                %LOOP_DATA%
+                       </ul>
+                       <div class="view-more-button">
+                          <div class="theme-button">
+                             <a href="javascript:void(0)" class="load_more_data %LOAD_CLASS%" data-page="1">{FMS_VIEW_MORE_BIDS}</a>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+            </div>
+         </div>
+      </div> */ ?>
+            
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+  var url = "{SITE_URL}ajaxFreelancerBids";
+  $(document).on("click",".load_more_data",function()
+  {
+      var pageNo = $(this).attr("data-page");
+      var p_no = parseInt(pageNo)+1;
+      addOverlay();
+      $.post(url,{"action":"load_more_data","page_no":p_no},function(data){
+        removeOverlay();
+        $("#bids_data").append(data.content);
+        $(".load_more_data").addClass(data.btn);
+        $(".load_more_data").attr("data-page",data.pageno);
+      },'json');
+  });
+</script>

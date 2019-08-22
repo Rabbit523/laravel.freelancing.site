@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><?php echo $winTitle;?></title>
+<noscript>
+	<div style="border: 1px solid purple; padding: 10px;text-align:center">
+        <span style="color:red;">Javascript is disabled in your web browser.</span>
+    </div>
+	<?php if($module!='404'){ ?>
+  	  <meta http-equiv="refresh" content="0; url=<?php echo SITE_URL; ?>404.html">
+	<?php } ?>
+</noscript>
+<?php echo isset($metaTag) ? $metaTag : ''; ?>
+<?php echo preg_replace('/\<br(\s*)?\/?\>/i', PHP_EOL, SITE_ANALYTIC_SCRIPT); ?>
+<link rel="shortcut icon" type="image/ico" href="<?php echo SITE_IMG; ?>favicon.ico">
+<link rel="stylesheet" href="<?php echo SITE_FONT; ?>font-awesome/css/font-awesome.css">
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:300,300italic,400,700'>
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700'>
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700'>
+
+<link rel="stylesheet" href="<?php echo SITE_CSS; ?>bootstrap.css">
+<link rel="stylesheet" href="<?php echo SITE_CSS; ?>app.css">
+<link rel="stylesheet" href="<?php print SITE_JS;?>plugins/icheck/skins/minimal/blue.css">
+<link href="<?php echo SITE_ADM_PLUGIN; ?>bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css"/>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!--<script src="<?php echo SITE_ADM_PLUGIN; ?>jquery-1.10.2.min.js" type="text/javascript"></script>-->
+
+<!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
+<script src="<?php print SITE_JS;?>plugins/bootstrap/bootstrap.js"></script>
+<script src="<?php print SITE_JS;?>plugins/rendro-countdown/jquery.countdown.js"></script>
+<script src="<?php print SITE_JS;?>plugins/icheck/icheck.min.js"></script>
+<script src="<?php print SITE_JS;?>scripts/app.js"></script>
+<!--<script src="<?php print SITE_JS;?>jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php print SITE_JS;?>jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="<?php echo SITE_ADM_PLUGIN; ?>jquery-validation/dist/jquery.validate.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo SITE_ADM_PLUGIN; ?>jquery-validation/dist/additional-methods.min.js"></script>
+
+<script language="javascript" type="text/javascript">
+	var SITE_URL = '<?php echo SITE_URL; ?>';
+	var SITE_NM = '<?php echo SITE_NM;?>';
+	var REDIRECT_URI = 'http://<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>';
+</script>
+<script type="text/javascript" src="<?php echo SITE_ADM_PLUGIN; ?>bootstrap-toastr/toastr.min.js"></script>
+<script type="text/javascript">
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "positionClass": "toast-top-full-width",
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+//toastr['error']('Hello test', '');
+</script>
+<?php if($msgType != ""){ echo $msgType;} ?>
+
+</head>
+<body class="<?php echo ($module!='home')?'body-common':''; ?>">
+	<?php if ($header_panel == true){
+		require_once(DIR_THEME."header-panel.php");
+	}
+	?>	
+	<?php require_once(DIR_TMPL.$module.".nct"); ?>
+	<?php if ($footer_panel == true){
+            require_once(DIR_THEME."footer-panel.php");
+    } ?>
+ 
+		
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script type="text/javascript">
+function loadCKE(id){
+	var instance = CKEDITOR.instances[id];
+    if(instance){ CKEDITOR.remove(instance); }CKEDITOR.replace(id);
+}
+</script>
+<!--<style>
+	.formmain input, textarea, select{	max-width:300px;}
+</style>-->
+<?php if(isset($msgType) && !empty($msgType)){ echo $msgType;} ?>
+</body>
+</html>

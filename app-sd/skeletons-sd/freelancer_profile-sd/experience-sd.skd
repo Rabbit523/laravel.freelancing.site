@@ -1,0 +1,21 @@
+<div class="fl-experience-item">
+  <div class="media">
+      <div class="media-left">
+          <div class="fl-experience-icon">
+              <i class="fa fa-briefcase" aria-hidden="true"></i>
+          </div>
+      </div>
+      <div class="media-body fl-experience-info">
+          <div class="fl-experience-heading">
+              <h4 class="main-title">%TITLE% <span>%CMP_NAME%</span></h4>
+              <div class="experience-years">%DURATION%</div>
+              <div class="experience-location"><span><i class="fa fa-map-marker"></i></span>%LOCATION%</div>
+          </div>
+          <div class="userdetail-itemaction">
+            <a href="javascript:void(0)" class="edit editRecord" data-entity="add_experience" data-id="%ID%" data-div="expSection" title="Edit"><i class="fa fa-pencil"></i></a>
+            <a href="javascript:void(0)" class="delete delRecord" data-entity="experience" data-id="%ID%" title="Delete"><i class="fa fa-trash-o"></i></a>
+          </div>
+          <div class="fl-experience-sort-info">%DESC%</div>
+      </div>
+  </div>
+</div>

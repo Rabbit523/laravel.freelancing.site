@@ -1,0 +1,5 @@
+<div class="adon-item">
+   <p>%ADDON_TITLE%</p>
+   <span>{ADDITIONAL_LABEL} %DAYS% {WORKING_DAYS}</span>
+   <div class="amount-wrap">%ADDON_PRICE%</div>
+</div>

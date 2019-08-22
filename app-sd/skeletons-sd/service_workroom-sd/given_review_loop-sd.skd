@@ -1,0 +1,116 @@
+
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+               &times;
+            </button>
+            <h4 class="modal-title">
+             {SW_FEEDBACK_DETAILS_LIST_LBL}
+            </h4>
+         </div>
+         <div class="modal-body">
+            <div class="rating">
+               <p class="desc">%REVIEW%</p>
+               <p class="date">%REVIEW_TIME%</p>
+            </div>
+            <div class="rating">
+               <div class="row">
+                  <div class="col-md-6">
+                     <label for="dispute-amount">
+                        %RATE1%
+                     </label>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="star-ratings-sprite">
+                        <span style="width:%RATE1_VAL%%" class="star-ratings-sprite-rating">
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="rating">
+               <div class="row">
+                  <div class="col-md-6">
+                     <label for="dispute-amount">
+                        %RATE2%
+                     </label>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="star-ratings-sprite">
+                        <span style="width:%RATE2_VAL%%" class="star-ratings-sprite-rating">
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="rating">
+               <div class="row">
+                  <div class="col-md-6">
+                     <label for="dispute-amount">
+                        %RATE3%
+                     </label>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="star-ratings-sprite">
+                        <span style="width:%RATE3_VAL%%" class="star-ratings-sprite-rating">
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="rating">
+               <div class="row">
+                  <div class="col-md-6">
+                     <label for="dispute-amount">
+                        %RATE4%
+                     </label>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="star-ratings-sprite">
+                        <span style="width:%RATE4_VAL%%" class="star-ratings-sprite-rating">
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="rating %RATE5_CLASS%">
+               <div class="row">
+                  <div class="col-md-6">
+                     <label for="dispute-amount">
+                        %RATE5%
+                     </label>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="star-ratings-sprite">
+                        <span style="width:%RATE5_VAL%%" class="star-ratings-sprite-rating">
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="rating">
+               <div class="row">
+                  <div class="col-md-6">
+                     <label for="dispute-amount">
+                        {AVERAGE_RATING}
+                     </label>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="star-ratings-sprite">
+                        <span style="width:%AVG%%" class="star-ratings-sprite-rating">
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--modal-body-->
+         <div class="modal-footer">
+            <div class="theme-button-default" data-dismiss="modal">
+                      <a href="#">{FD_CANCEL}</a>
+                  </div>
+              </div>
+      </div>
+      <!--modal-content-->
+   </div>

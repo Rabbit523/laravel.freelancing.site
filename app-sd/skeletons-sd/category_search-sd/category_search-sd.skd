@@ -1,0 +1,68 @@
+<script type="text/javascript" src="{SITE_JS}URI.js"></script>
+<!--start inner section-->
+<section class="browse-section" id="filters-search">
+  <div class="overlay"></div>
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+            <h1>{SEARCH_CATEGORY_LABEL}</h1>
+            <div class="input-group">
+               <input type="text" class="form-control input-lg" placeholder="{SEARCH_YOUR_DESIRED_SKILL}" name="keyword" id="keyword" value="%KEYWORD%">
+               <span class="input-group-btn">
+               <button class="btn btn-secondary search_record" type="button"><i class="fa fa-search"></i></button>
+               </span>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="categories-section">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12" id="category_search">
+            %LOOP_DATA%
+         </div>
+      </div>
+   </div>
+</section>
+<!--end inner section-->
+
+<script type="text/javascript">
+   var url = "{SITE_URL}ajaxCategorySearch";
+   
+   $(document).ready(function(){
+      $(document).on("click",".search_record",function(){
+         search_record(1);
+      });
+      $(document).on("input","#keyword",function(){
+         search_record(1);
+      });
+   });
+
+   function search_record(p_no,loadType='load') 
+   {
+
+       var query_param = $("#filters-search select").serialize()+"&"+$("#filters-search input").serialize()+"&action=load_seach_data&page_no="+p_no;
+       var new_serialized_url = URI(url+'/?'+query_param),
+           curr_uri = URI(window.location.href),
+           new_serialized_params = new_serialized_url.search(true);
+
+       ((new_serialized_params.keyword!= '' && new_serialized_params.keyword!=undefined) ? curr_uri.setSearch("keyword", new_serialized_params.keyword) : curr_uri.removeSearch("keyword"));
+
+       history.pushState({}, null, '?'+curr_uri._parts.query);
+       $.ajax({
+           url: url,
+           type: 'POST',
+           dataType: 'json',
+           data: query_param,
+           success : function(data)
+           {     
+             (loadType=='load_append') ? $('#category_search').append(data.content) : $('#category_search').html(data.content);
+             (data.btn=='') ? $(".load_more_data").removeClass("hide") : $(".load_more_data").addClass(data.btn);
+             $(".load_more_data").attr("data-page",data.pageno);
+           }
+       });
+   }
+
+   
+</script>

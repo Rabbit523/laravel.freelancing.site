@@ -1,0 +1,2529 @@
+@media only screen and (max-width : 1470px) {  }
+
+@media only screen and (max-width : 1388px) {
+    .profile .profile-detail {
+        width:100%;
+        position:relative;
+        display: inline-block;
+    }
+     .logo-header img{
+        margin: 0;
+    }
+    .logo-header{
+        margin-top: 7px;
+    }
+}
+
+@media(min-width: 1280px){
+    .modal {    
+        text-align: center; 
+        padding: 0!important;   
+    }
+    .modal:before { 
+        content: '';    
+        display: inline-block;  
+        /*height: 100%;   */
+        vertical-align: middle; 
+        margin-right: -4px;
+    }
+    .modal-dialog { 
+        display: inline-block;  
+        text-align: right;   
+        vertical-align: middle;
+    }
+}
+
+@media (max-width: 1280px){
+    #main-content{
+        margin-top: 70px;
+    }
+}
+
+@media (min-width: 1024px){
+    .featurette-job .sub_featured .service_info .group-service{
+        min-height: 485px;
+    }
+    .home-featured-jobs .featured-box{
+        min-height: 305px;
+    }
+}
+
+@media only screen and (max-width: 1025px) and (min-width: 767px){
+    .msglist-time{
+        float:none!important;
+        display: block;
+        text-align: left!important;
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width : 1199px) {  }
+
+@media (min-width: 1024px) and (max-width: 1280px){
+    .featurette-job .sub_featured ul li.card-block .PickGeeks_detail ul li.loc{
+        margin-top: 10px;
+    }
+    .banner-section .banner-desc{
+        width: 53%;
+    }
+    .public-profile .all-sections ul.nav li a{
+        padding: 15px 17px;
+    }
+    .main-dashboard .profile.freelancer-profile .basic-info .profile-img{
+        height: 200px;
+    }
+    .main-dashboard .profile .basic-info .profile_left p{
+        margin-right: 30px !important;
+    }
+    /*.notification .number{
+        top: 11px;
+    }*/
+    .file-names .attachment-img{
+        width: 65px;
+        height: 65px;
+    }
+    .work-job-section .media-main .media-body p{
+        height: 98px;
+    }
+    .work-job-section .work-no{
+        font-size: 18px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .banner-section .banner-desc h1{
+        width: 100%;
+    }
+    /*header .navbar-default .navbar-nav>li>a{
+        padding: 15px 20px;
+    }*/
+}
+
+@media only screen and (max-width : 1024px) { 
+    .profile .profile-detail {
+        width: 100%;
+		position: relative;
+		display: inline-block;
+    }
+    .profile .profile-detail .profile-img {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+    }
+    .sign_up_main .sign_up_form ul.nav-tabs li a{
+        font-size:13px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1280px){
+    .main-dashboard .profile ul.cust-purchase .edit_remove a{
+        margin-left:0px !important;
+    }
+}
+
+@media (min-width:992px){
+
+    
+
+    .job-detail-section .col-md-9,
+    .service-detail-page .col-md-9{
+        width: 70%;
+    }
+    .job-detail-section .sub_featured .col-md-3,
+    .service-detail-page .sub_featured .col-md-3{
+        width: 30%;
+    }
+    .section-img{
+        background: #fff;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        position: relative;
+        border-radius: 50px;
+        text-align: center;
+        vertical-align: middle;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+        padding-top: 15px;
+    }
+
+}
+
+@media only screen and (max-width : 991px) {
+    .tip-section{
+        margin-top: 15px;
+    }
+    .banner-section{min-height:400px;}
+    .banner-section .banner-desc{top:50px; width:70%;}
+    .logos-section-block{ border:0; }
+    .footer-social-block { margin-bottom:20px; }
+    .slider-heading { width:80%; }
+    .slider-heading h1 { font-size:36px;  }
+    .slider-heading h2 { font-size:26px;  }
+    .work-room-tabs h3.left-heading {
+        border-bottom:1px solid #ddd;
+        padding:10px 0px;
+        font-size: 26px;
+    }
+    .work-room-tabs .tabs-left > li > a .fa {
+        font-size:16px;
+        margin-right: 2px;
+    }
+    .btn-feedback .btn {
+        font-size: 14px;
+    }
+    .pro-filter .filttering > li {
+        margin:0;
+        padding: 0;
+    }
+    .filttering .filter-button{ 
+        padding: 6px 20px; 
+    }
+    #files h4.right-heading,
+    .main-work-room .right-heading{
+        font-size: 20px;
+        padding-bottom: 6px;
+    }
+    .main-dashboard .profile ul.cust-purchase .mobile-view{
+        display: block;
+        position: absolute;
+        top:15px;
+        right:15px;
+    }
+    .main-dashboard .profile ul.cust-purchase .mobile-view .edit_remove a{
+        display: block;
+    }
+    .main-dashboard .profile ul.cust-purchase .mobile-view .edit_remove a i{
+        font-size:18px;
+    }
+    .main-dashboard .profile ul.cust-purchase .desktop-view{
+        display: none;
+    }
+    .featurette-job .sub_featured .service_sidebar .featured{
+			display:none;
+	}
+    .video-section .banner-section{
+        position: absolute;
+        top: 20%;
+        margin-top: 0;
+        z-index: 7;
+    }
+    .video-container video{
+        top: 0;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1280px){
+    .range_slider input#amount{
+        width: 70%;
+    }
+    /*.login-img > a{
+        padding: 8px 20px 0px !important;
+    }*/
+    .logo-header{
+        width: 135px;
+        margin-top: 4px;
+    }
+    .featurette-job .sub_featured ul.extra-info li{
+        font-size: 13px;
+        margin: 0 8px;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    footer .language-selection{
+        width: 100%;
+    }
+    .home-featured-jobs .featured-box p.desc{
+        max-height: 40px;
+    }
+    .home-featured-jobs .featured-box{
+        min-height: 280px;
+    }
+    .featurette-job.service-detail-page .sub_featured .service_info .group-service{
+        min-height: 400px;
+    }
+    .featurette-job .sub_featured .service_info .group-service{
+        min-height: 500px;
+    }
+    .main-dashboard .profile ul.dash-job li.card-block .star-ratings-sprite{
+        margin-top: 0;
+    }
+    footer .cc-logo-img{
+        width: 50%;
+        margin-top: 0;
+    }
+    .main-dashboard .profile ul.dash-job li.card-block .posted_service{
+        height: 80px;
+        width: 80px;
+        margin-bottom: 10px;
+    }
+    .data_freelancer .media .media-body,
+    .main-dashboard .profile ul#fav_service_div .media .media-body{
+        width: inherit !important;
+    }
+    .main-dashboard .profile ul.dash-job li.card-block .media-body{
+        width: 100%;
+        display: block;
+    }
+    .main-work-room .filttering .filter-button{
+        padding: 8px 15px;
+    }
+    .main-work-room .message-content .msg-detail{
+        max-height: 330px;
+        height: 330px
+    }
+    .featurette-job .sub_featured .service_desc .attached_file ul li{
+        width: 24%;
+    }
+    .featurette-job.job-detail-section .sub_featured .sale-fav li:first-child,
+    .featurette-job.job-detail-section .sub_featured .sale-fav li:last-child{
+        width: 100%;
+    }
+    .main-dashboard .profile.public-profile ul.dash-job li.card-block .like{
+        top: 0;
+        right: 0;
+    }
+    .all-sections-btn{
+        display: block;
+        text-align: right;
+        margin-bottom: 20px;
+    }
+    .all-sections-btn a{
+        border: 1px solid #ddd;
+        width: 30px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        display: inline-block;
+        color: #29a7df;
+    }
+    .all-sections ul.nav{
+        display: none;
+        position: absolute;
+        background: #fff;
+        z-index: 9;
+        border-bottom: none;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+        border: 1px solid #eee;
+        width: 53%;
+        right: 0;
+        top: 42px;
+    }
+    .all-sections ul.nav:after{
+        background: #fff;
+        border: 1px solid #eee;
+        content: "";
+        height: 10px;
+        width: 10px;
+        position: absolute;
+        top: -5px;
+        right: 10px;
+        transform: rotate(-45deg);
+        border-left: none;
+        border-bottom: none;
+    }
+    .all-sections ul.nav li.active,
+    .all-sections ul.nav li.active:hover{
+        border-bottom: 2px solid transparent;
+    }
+    .all-sections ul.nav li{
+        display: block;
+        float: inherit;
+    }
+    .all-sections ul.nav li.active a{
+        color: #29a7df;
+    }
+    .all-sections ul.nav li a{
+        padding: 6px 20px;
+    }
+    .main-dashboard .profile ul.dash-job li.card-block h5{
+        margin-bottom: 10px;
+    }
+    .featurette-job .sub_featured ul li.card-block .PickGeeks_detail ul li.loc{
+        display: block;
+        margin-top: 5px;
+    }
+    .profile-before-edit .star-rating{
+        margin-top: 5px;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+    .profile-before-edit .star-rating .stars{
+        float: left;
+        margin-right: 42px;
+    }
+    .main-dashboard .profile .basic-info .profile-img{
+        height: 215px;
+    }
+    h1.main-heading{
+        font-size: 22px;
+    }
+    .notification .number{
+        top: 11px;
+        left: 28px;
+    }
+    .job-detail-section .sub_featured .col-md-3{
+        padding-left: 0;
+    }
+    .featurette-job .sub_featured .service_sidebar{
+        padding-right: 15px;
+    }
+    .featurette-job .sub_featured .serive_PickGeeks .service_free_img{
+        width: 50px;
+        height: 50px;
+    }
+    .no-records h2{
+        font-size: 22px;
+    }
+    .no-records p.search-line{
+        width: 80%;
+    }
+    .featurette-job .sub_featured .service_info h1{
+        font-size: 30px;
+    }
+    .work-job-section .media-main .media-body p{
+        height: 60px;
+        padding: 10px;
+        text-align: left;
+    }
+    .ps-timeline-sec .container ol.ps-timeline{
+        margin: 175px 0;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li .img-handler-top{
+        margin-bottom: 100px;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li .img-handler-bot{
+        margin-top: 35px;
+    }
+    .section-img{
+        width: 55px;
+        height: 55px;
+        margin: 0 auto;
+    }
+    .section-img img{
+        width: 100%;
+        height: 100%;
+    }
+    #first-slider .carousel .item{
+        height: 440px;
+    }
+    .banner-section .banner-desc p{
+        font-family: 16px;
+    }
+    .banner-section .banner-desc h1{
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li p{
+        width: 95%;
+    }
+    .category-section .category-item{
+        margin-bottom: 15px;
+        height: 160px;
+    }
+    .sign_up_main .for_customer h4{
+        font-size: 20px;
+    }
+    ul.tl li .timestamp{
+        left: -25%;
+    }
+    .featurette-job .sub_featured ul li.card-block h4 a{
+        font-size: 16px;
+    }
+    header .navbar-default .navbar-nav>li>a{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .featurette-job .sub_featured ul.project-desc li:last-child{
+        margin-left:0px;
+    }
+    .banner-section{
+        background-position:top;
+    }
+    .banner-section .banner-desc{
+        top:-1px;
+    }
+    .video-section .banner-section .banner-desc{
+        top: 10px;
+    }
+    .category-section .category-item{
+        padding:20px 10px;
+    }
+    .category-section .category-item p{
+        font-size:13px;
+    }
+    .works-section .works-icon{
+        height:45px;
+        width:45px;
+    }
+    .works-section .works-icon img{
+        width:100% !important;
+        height:100% !important;
+    }
+    .works-section .main-content{
+        margin-left:20px;
+    }
+    .works-section .main-content h4{
+        font-size:16px;
+    }
+    /*header .navbar-default .navbar-nav>li>a{
+        padding: 15px;
+    }*/
+    .slider-content{
+        top: 13%;
+    }
+    footer ul.contact-us li .pull-left{
+        display: none;  
+    }
+    .workroom-job-details p{display: block; margin: 0 0 5px; padding: 0;}
+    .workroom-job-details p:after{display: none; }
+}
+
+@media only screen and (min-width : 768px) {
+    .navbar-default .navbar-brand{
+        padding-right: 0;
+    }
+    /*.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+        float: right;
+    }*/
+    .navbar-header{
+        float: right;
+    }
+    .navbar-right{
+        float: left !important;
+    }
+    .navbar-nav.navbar-right li:hover .dropdown-menu{
+        display: block;
+        -webkit-animation: fadeInUp 400ms;
+        animation: fadeInUp 400ms;
+        right: auto;
+        left: 0;
+    }
+	.filter-menu{
+		display:none;
+	}
+	.responsive_bid{
+		display:none;
+	}
+   .responsive_socialicon{
+        display:none;
+        text-align:center;
+    }
+	
+}
+@media only screen and (max-width : 767px) {
+    .navbar-nav.navbar-right{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar-nav.navbar-right:last-child {
+        margin-left: -15px;
+    }
+    .home-featured-jobs .recevied_addons{
+        position: relative;
+        bottom: inherit;
+    }
+    .mobile-invite{
+        display: block !important;
+        margin-bottom: 0 !important;
+    }
+    .notification .number{
+        top: 12px;
+    }
+    .home-featured-jobs{
+        padding-bottom: 20px;
+    }
+    .freelancer-profile.public-profile .skills:last-child{
+        margin-bottom: 0;
+    }
+    .categories-section .catgory-item{
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
+    .main-work-room .work-room-tabs{
+        padding-bottom: 0;
+    }
+    .workroom-freelancer, .workroom-customer{margin-bottom: 0;}
+    .main-work-room .work-room-tabs .tabs-left{width: 100%;}
+    .main-work-room .work-room-tabs .tabs-left li{
+        display: table-cell;
+        float: none;
+        width: 1%;
+        text-align: center;
+        vertical-align: bottom;
+    }
+    .main-work-room .work-room-tabs .tabs-left > li.active a{
+        border-bottom: 3px solid #29a7df;
+        border-right: none;
+    }
+    .main-work-room .work-room-tabs .tabs-left > li a{
+        border-bottom: 3px solid transparent;
+        border-right: none;
+    }
+    .featurette-job .sub_featured .service_desc .attached_file ul li .file-img{
+        width: 60px;
+        height: 60px;
+    }
+    .freelancer-profile .basic-info h2{
+        display: block !important;
+        margin-right: 0 !important;
+    }
+    .freelancer-profile .edit_button{
+        position: absolute;
+        top: 27px;
+        right: -26px;
+    }
+    .freelancer-profile .edit_button a{
+        font-size: 20px;
+    }
+    .freelancer-profile .profile-name{
+        display: block;
+    }
+    .main-dashboard .profile.freelancer-profile .basic-info .profile_left p{
+        margin-right: 25px !important;
+    }
+    .main-dashboard .profile .professtional-link{
+        padding: 7px 5px 0 5px;
+    }
+    .login-img > a{
+        padding: 6px 20px 5px !important;
+    }
+    .main-dashboard .profile .basic-info.desktop-img{
+        display: none !important;
+    }
+    .main-dashboard .profile .basic-info .profile-img.responsive-img{
+        display: block;
+    }
+    .posted-service-section .remove_saved{
+        float: right!important; 
+    }
+    .featurette-job .sub_featured ul li.card-block .PickGeeks_detail{
+        padding-bottom: 10px;
+    }
+    .navbar-default .navbar-brand{
+        float: right;
+    }
+    .navbar-toggle{
+        float: left;
+    }
+    /*.search_sort{
+        width: 50%;
+    }*/
+    .main-dashboard .profile ul.dash-job li.card-block h4{
+        margin-right: 0;
+    }
+    .main-dashboard .profile .other-info .statics-info{
+        margin-bottom: 15px;
+        padding-bottom: 7px;
+        border-bottom: 1px solid #eee;
+    }
+    /*h1.main-heading{
+        margin-bottom: 10px;
+    }*/
+    header .navbar-default .navbar-nav>li.notification a.dropdown-toggle,
+    header .navbar-default .navbar-nav>li.notification .dropdown-menu{
+        display: none;
+    }
+    .mobile-noti{
+        display: inline-block !important;
+    }
+    .about-us-img{
+        height: 190px;
+    }
+    .con_seperator{
+        margin-bottom: 40px;
+    }
+    .no-records h2{
+        font-size: 20px;
+    }
+    .no-records p.search-line{
+        width: 100%;
+    }
+    .modal .modal-header button{
+        top: -7px;
+        right: -8px;
+    }
+    .featurette-job .sub_featured ul.extra-info{
+        padding: 24px 0 20px !important;
+        box-shadow: none;
+        margin: 8px 0 8px;
+        background: no-repeat;
+        border-bottom: 1px solid #eee;
+    }
+    .group-info{
+        display: none;
+    }
+    .job-detail-section .group-info-mobile{
+        padding: 0;
+    }
+    .group-info-mobile{
+        display: block;
+        text-align: center;
+        padding: 0 20px;
+        margin-bottom: 10px;
+    }
+    .group-info-mobile .form-group{
+        display: inline-block;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    .group-info-mobile .sp-quantity{
+        margin: 0;
+    }
+    .job-detail-section .buy_now{
+        width: 100% !important;
+        float: inherit !important;
+    }
+    .featurette-job .sub_featured .buy_now{
+        width: 50%;
+        float: right;
+    }
+    .featurette-job .sub_featured .service_sidebar{
+        padding: 0px 15px 0 20px;
+    }
+    .material-switch{
+        float: right;
+    }
+    label.featured_yn{
+        margin-bottom: 15px !important;
+    }
+    header .navbar-default .navbar-nav li ul.dropdown-menu{
+        border: none !important;
+    }
+    header .navbar-default .navbar-nav li ul.dropdown-menu li a{
+        padding: 15px 15px;
+    }
+    header .navbar-default .navbar-nav li ul.dropdown-menu:before{
+        content: none;
+    }
+    .work-job-section .media-main .media-body p{
+        height: inherit;
+        text-align: left;
+        padding: 10px 15px;
+    }
+    .section-img{
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+    }
+    .section-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li span{
+        margin-left: -4px !important;
+        top: -25px !important;
+    }
+    .ps-timeline-sec .container ol:before {
+        background: #1aa9e6;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        position: absolute;
+        top: 80px !important;
+        left: 36px !important;
+    }
+    .ps-timeline-sec .container ol:after {
+        background: #1aa9e6;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        position: absolute;
+        top: inherit !important;
+        left: 36px;
+    }
+    .ps-timeline-sec .container ol.ps-timeline {
+        margin: 55px 0 !important;
+        border-left: 1px dotted #1aa9e6;
+        padding-left: 0 !important;
+        padding-top: 105px !important;
+        border-top: 0 !important;
+        margin-left: 25px !important;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li:last-child .img-handler-bot{
+        bottom: 60px !important;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li:last-child{
+        height: 70px;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li {
+        height: 115px;
+        float: none !important;
+        width: inherit !important;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li span {
+        left: 0 !important;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li span.ps-sp-top:before {
+        content: none !important;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li span.ps-sp-top:after {
+        content: none !important;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li span.ps-sp-bot:before {
+        content: none !important;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li span.ps-sp-bot:after {
+        content: none !important;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li .img-handler-top {
+        position: absolute !important;
+        bottom: 100px !important;
+        width: 20% !important;
+        float: left !important;
+        margin-left: 35px !important;
+        margin-bottom: 0 !important;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li .img-handler-bot {
+        position: absolute !important;
+        bottom: 105px !important;
+        width: 20% !important;
+        float: left !important;
+        margin-left: 35px !important;
+        margin-bottom: 0 !important;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li p {
+        text-align: left !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        margin-top: 0px !important;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li .ps-top {
+        width: 60% !important;
+        float: right !important;
+        right: 0;
+        top: -40px;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li .ps-bot {
+        width: 60% !important;
+        float: right !important;
+        right: 0;
+        top: -40px;
+    }
+    .banner-section .banner-desc h1{
+        width: 100%;
+    }
+    .main-dashboard .profile .profile-after-edit .profile-img{
+        width: 163px;
+        margin: 0 auto 15px;
+    }
+    .work-job-section{
+        padding-bottom: 0;
+    }
+    .main-work-room #terms a.btn-common, #dispute-mgmt a.btn-common{
+        padding: 2px 12px;
+    }
+    .main-dashboard .profile ul.cust-purchase .PickGeeks_detail li .star-ratings-sprite{
+        margin-top: 3px;
+    }
+    .col-sm-8.col-xs-12.main-chat-border{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .main-chat-border:before{
+        content: none;
+    }
+    .section-messagebox .messagebox-pack .col-sm-4.col-xs-12{
+        padding-right: 15px;
+    }
+    .section-messagebox .messagebox-pack .single-chat:last-child{
+        border-bottom: none;
+    }
+    .chat-msgbox, .chat-new-msgbox{
+        display: none;
+    }
+    .main-dashboard .profile .basic-info .profile-name span{
+        font-size: 18px;
+    }
+    .featurette-job.posted-service-section .remove_saved{
+        float: inherit;
+        margin-bottom: 15px;
+    }
+    .banner-section .mobile-view h1{
+        font-size: 26px;
+        line-height: 40px;
+    }
+    .newsletter-section form .col-xs-10{
+        padding-right: 0;
+    }
+    .newsletter-section form .col-xs-2{
+        padding-left: 0;
+    }
+    .newsletter-section .form-control{
+        border-radius: 5px 0 0 5px;
+    }
+    .newsletter-section form button{
+        border-radius: 0 5px 5px 0;
+        padding: 12px;
+        text-align: center;
+    }
+    .newsletter-section form button span.large-icon{
+        display: none;
+    }
+    .newsletter-section form button span.small-icon{
+        display: block;
+    }
+    /*.navbar-nav{
+        border-top: 1px solid #eee;
+    }*/
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+        border: none;
+        max-height: 280px;
+        overflow: auto;
+    }
+    .navbar-default .navbar-toggle{
+        border: none;
+        margin-right: 5px;
+    }
+    header .navbar-default .navbar-toggle:focus, 
+    header .navbar-default .navbar-toggle:hover,
+    header .navbar-default .navbar-toggle:active{
+        background-color: #fff;
+    }
+    .banner-section{min-height:350px; background-position:left top;}
+    .banner-section .banner-desc{position:static; width:80%; margin:0 auto; text-align:center; display: block; z-index: 9;}
+    .banner-section .mobile-view .theme-button a{
+        border-radius:0 5px 5px 0;
+        padding:2px 15px;
+    }
+    .banner-section .mobile-view .input-group input{
+        height: 40px;
+    }
+    .border-right-bottom,
+    .border-bottom,
+    .border-right{
+        border:none;
+    }
+    .featured-service .service-heading{
+        padding:0px 15px;
+    }
+    .featured-service .service-heading .media-body h3{
+        font-size:18px;
+    }
+	.msg-area  textarea{
+		margin-bottom: 10px;
+	}
+    .seperator_form{
+        display:none;
+    }
+    .responsive_socialicon .sign_social{
+        display:block !important;
+        text-align:center;
+    }
+    
+    .main-work-room .border {
+        border-left:none;
+        border-top: 1px solid #ddd;
+    }
+	.left-sidebarmenu{
+		display:none;
+	}
+	.filter-menu{
+        position: fixed;
+        z-index: 99;
+        left: 15px;
+        bottom: 15px;
+
+	}
+    .filter-menu button i{
+        font-size: 20px;
+        line-height: 40px;
+    }
+	.filter-menu button{
+        background-color: #29a7df;
+        border: none;
+        color: #ffffff;
+        margin-bottom: 0px;
+        font-weight: 600;
+        width: 40px;
+        height: 40px;
+        font-size: 0;
+        line-height: 42px;
+        border-radius: 50px;
+        box-shadow: 0px 1px 9px #989898;
+        cursor: pointer;
+	}
+	.clear_fltr{
+		display:inline-block;
+	}
+	header .navbar-default .navbar-nav>.open>a, 
+    header .navbar-default .navbar-nav>.open>a:focus, 
+    header .navbar-default .navbar-nav>.open>a:hover{
+		background-color:transparent;
+	}
+    /*header .navbar-default .navbar-nav>.open>a{
+        padding-bottom: 0;
+    }*/
+    header .navbar-default .navbar-nav .open .dropdown-menu > li > a{
+        border-bottom: none;
+        text-align: right;
+        padding-left: 30px;
+    }
+	.main-dashboard .profile .sub_featured .job_search h1{
+		text-align:left !important;
+		margin-bottom:10px;
+	}
+	.main-dashboard .profile{
+		padding:30px 0;
+	}
+	.logo-header{
+		width: 135px;
+		transition: 0.3s ease;
+		height: auto;
+		margin-top: 3px;
+	}
+	.main-dashboard .profile .sub_featured  .left-sidebarmenu-responsive h3{
+		border:none;
+		text-align:left;
+	}
+	.seperator{
+		margin-bottom:30px;
+		display:block;
+	}
+	.featurette-job .sub_featured .received_bid ul.dash-job li.card-block .media-body {
+		clear: both;
+        display: block;
+        position: relative;
+        width: auto;
+        padding-top:20px;
+	}
+    .main-dashboard .profile .featurette-job.posted-service-section ul.dash-job li.card-block .media .media-body{
+        padding-top:0px !important;
+    } 
+    .main-dashboard .profile ul.dash-job li.card-block .category_subcategory span{
+        font-size:13px;
+    }
+	.featurette-job .sub_featured .received_bid  ul.dash-job li.card-block .posted_service, 
+    .featurette-job .sub_featured .serive_PickGeeks .service_free_img{
+		margin-bottom:15px;
+	}
+    .main-dashboard .profile ul.dash-job li.card-block .media.question_f .pull-left,
+    .main-dashboard .profile ul.dash-job li.card-block .media.answer_f .pull-left{
+        width:inherit;
+    }
+    .main-dashboard .profile .featurette-job.posted-service-section ul.dash-job li.card-block .posted_service{
+        margin:0 0 15px;
+    }
+    .main-dashboard .profile ul.dash-job.cust-purchase li.card-block .posted_service{
+        margin:inherit;
+        margin-bottom:10px;
+    }
+	.main-dashboard .profile .sub_featured .job_search h1{
+		text-align:left;
+	}
+	.main-dashboard .profile ul.dash-job li.card-block .media.question_f  .media-body{
+		display: table-cell;
+	}
+	.main-dashboard .profile ul.dash-job li.card-block .media.answer_f  .media-body{
+		display: table-cell;
+	}
+	.featurette-job .sub_featured ul.project-desc li{
+		display:block;
+		margin-left:0;
+	}
+	.featurette-job .sub_featured ul.project-desc li + li, 
+    .featurette-section .sub_featured ul.project-desc li + li{
+		margin:0;
+	}
+	.bid_job, .unbid{
+		display:none;
+	}
+	.responsive_bid .bid_job, 
+    .responsive_bid .unbid{
+		display:block;
+	}
+	.responsive_bid .bid_job, 
+    .responsive_bid .unbid{
+		position: inherit;
+		text-align: right;
+	}
+	.responsive_bid .bid_job a, .responsive_bid .unbid a{
+		    display: inline-block;
+	}
+	.responsive_bid .bid_job .resend_invite, 
+    .responsive_bid .unbid .resend_invite{
+		display: inline-block;
+		margin-left: 10px;
+	}
+	.featurette-job .sub_featured ul li.card-block  h4 a, 
+    .main-dashboard .profile ul.dash-job li.card-block h4 a{
+		font-size:15px;
+	}
+    .main-dashboard .profile ul.dash-job li.card-block a.delete{
+        top:21px;
+    }
+	.sign_up_main .for_customer .customer_img{
+	    height: 90px;
+		width: 90px;
+	}
+	.sign_up_main .for_customer h4{
+		font-size:19px;
+	}
+	.sign_up_main .select_or{
+		display:none;
+	}
+    .notification-sec .media .pull-left{
+        display: block;
+        margin-right: 0;
+    }
+    .notification-sec ul li .notification_img{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+    }
+    /*.notification-sec ul li .notificaiton_body p{
+        margin-right: 10px;
+    }*/
+    .main-dashboard .profile ul.cust-purchase li.card-block .media .media-body{
+        padding-top:0px;
+    } 
+    .featurette-job .sub_featured ul.cust-purchase li.card-block .PickGeeks_detail ul li,
+    .main-dashboard .profile ul.dash-job.cust-aftr-login .PickGeeks_detail ul li{
+        margin-bottom:10px;
+    }
+    .featurette-job .sub_featured ul.cust-purchase li.card-block .PickGeeks_detail ul li:last-child{
+        margin-bottom:0px;
+    }
+    .featurette-job .find-work{
+        text-align:left;
+        font-size:16px;
+        margin-bottom:5px;
+    }
+    .featurette-job.job-detail-section .sub_featured .service_info h1{
+        font-size:24px;
+        line-height: 32px;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+    .featurette-job .sub_featured .service_price{
+        margin-top: 10px;
+    }
+    .sub_featured .service-adon .adon h4{
+        font-size: 15px;
+        width: 70%;
+    }
+    .sub_featured .service-adon span.price{
+        font-size: 20px;
+    }
+    .featurette-job.job-detail-section ul.list-inline li.media{
+        margin-bottom:10px;
+    }
+    .sign_up_main .sign_social{
+        padding:0px;
+    }
+    .sign_up_main h3{
+        font-size:22px;
+    }
+    .sign_up_main .sign_up_header{
+        margin-bottom:35px;
+    }
+    .sign_up_main .sign_up_form form .forget_password .forget_pw{
+        font-size:13px;
+    }
+    .sign_up_main .sign_up_form form .terms-condition ul li label{
+        font-size:13px;
+    }
+    .seperator.seperator-signup{
+        border:none;
+        margin:0px;
+    }
+    .sign_up_main .seperator.seperator-signup:before{
+        padding:0px;
+        width:115px;
+        height:1px;
+        left:0px;
+        top:7px;
+    }
+    .sign_up_main .seperator.seperator-signup:after{
+        padding:0px;
+        width:115px;
+        height:1px;
+        right:0;
+        left:inherit;
+        top:7px;
+    }
+    .sign_up_main .seperator.seperator-signup h4{
+        padding:0px;   
+    }
+
+    .sign-form .signin-mockup{position: absolute; bottom: 0; padding: 0; margin: 0; left: 0; width: 60%; z-index: 0; opacity: 0.3;}
+    .sign_up_main .sign_up_header, .sign_up_main .sign_up_form{position: relative; z-index: 1;} 
+    .featurette-job.service-detail-page .sub_featured .service_desc .addons-detail ul.addons_service li{
+        margin-bottom:20px;
+    }
+    .featurette-job.service-detail-page .sub_featured .service_desc .addons-detail ul.addons_service li:last-child{
+        margin-bottom:0px;
+    }
+    .responsive-hide{
+        display: none;
+    }
+    .browse-section{
+        padding: 65px 0;
+    }
+    .browse-section h1{
+        font-size:26px;
+    }
+    .payment-section p.adon span.price, 
+    .payment-section p.price span{
+        position: relative;
+        margin-top:5px;
+        top:0;
+        right:0;
+        display: block;
+    }
+    footer .sub-footer p{
+        text-align: center;
+    }
+    footer .sub-footer ul{
+        display: block;
+        text-align: center;
+        float: inherit;
+    }
+    footer h4{
+        margin-top: 30px;
+    }
+    .slider-content{
+        top: 20%;
+    }
+    #first-slider .carousel-control.right, #first-slider .carousel-control.left{
+        display: none;
+    }
+    footer .cc-logo-img,
+    footer .footer-logo{
+        width: 20%;
+    }
+    .main-dashboard .profile  .professtional-link > a{
+        width: 85%;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .main-dashboard .profile  .professtional-link .share_link{
+        float: right;
+        display: inline-block;
+    }
+    .wallet-margin-top-20,
+    .financemain .col-md-4.col-sm-4{
+        text-align: center !important;
+    }
+
+}
+@media (max-width:639px){
+    .banner-section .banner-desc{
+        display: none;
+    }
+    .banner-section .mobile-view{
+        display: block;
+    }
+}
+
+@media only screen and (max-width : 650px) {
+    .slider-heading{ top: 20%; }
+    .slider-heading h1 { font-size: 28px; }
+    .slider-heading h2 { font-size: 21px; }
+    #terms .payment-detail .col-xs-4 { width: 33.33%; }
+    .escrow-funding .payment-detail .terms-divider:after { display: none; }
+	.main-dashboard .profile .dashboard-icon{
+		margin-bottom:10px;
+	}
+	.carousel .item{
+		height:350px;
+	}
+	
+}
+
+@media (min-width: 576px){
+    .modal-dialog { 
+        max-width: 700px; 
+    }
+    #terms .terms-milestone-table tbody tr td .btn-common {
+        font-size: 14px;
+        height: 40px;
+        width: 130px;
+    }
+}
+
+@media(max-width: 567px){
+    .main-dashboard .profile ul.review_data .star-rating .col-md-2{
+        width: 100%;
+    }
+    .main-dashboard .profile ul.dash-job .freelancer-detail .freelancer-img{
+        margin-bottom: 10px;
+    }
+    .main-dashboard .profile ul.dash-job .pull-right.jobAction{
+        float: inherit !important;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+    .freelancer-profile .edit_button{
+        display: none;
+    }
+    .freelancer-profile .profile-button a{
+        width: 100%;
+    }
+    .featurette-job.posted-service-section .remove_saved .post_services .theme-button a{
+        padding: 0 10px;
+        line-height: 32px;
+    }
+    .msg-detail .no-msg{
+        padding: 50px 15px;
+    }
+    .msg-detail .no-msg h2{
+        font-size: 26px;
+    }
+    .main-dashboard .profile ul.dash-job li ul.project-desc li{
+        margin-bottom: 3px;
+    }
+    .main-work-room #terms a.btn-system, #dispute-mgmt a.btn-system{
+        float: left;
+        margin-bottom: 30px;
+    }
+    .pro-filter .filttering > li {
+        margin:0px ;
+    }
+    .main-work-room .pro-filter .filttering > li{
+        margin: 0 1px 5px 1px;
+    }
+    .main-work-room .filttering .filter-button{
+        margin-bottom: 0;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    .workroom-job-details .media .media-body{
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+    }
+    .main-work-room .chatting-person .user-nm{
+        width: 50%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .main-work-room .message-content .msg-detail{
+        max-height: 315px;
+        height: 315px;
+    }
+    .main-work-room .work-room-tabs .tabs-left > li > a{
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+/*    .workroom-freelancer, .workroom-customer{
+        margin-bottom: 15px;
+    }
+*/    
+    .main-work-room .gallery-list .gallery-item .download{top: inherit; bottom: 15px;}
+    .main-work-room .gallery-list .gallery-item:last-child .download{bottom: 0;}
+    .featurette-job .sub_featured .service_desc .attached_file ul li{
+        width: 48%;
+    }
+    .featurette-job.job-detail-section .sub_featured ul.extra-info li{
+        margin: 0;
+        width: 48%;
+        float: left;
+    }
+    .featurette-job .sub_featured ul.extra-info li{
+        margin-bottom: 15px;
+    }
+    .main-dashboard .profile.public-profile ul.dash-job li.card-block h4 a{
+        margin-right: 35px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    .main-dashboard .profile .service_PickGeeks.dash-port ul.dash-job li.card-block .like{
+        top: 10px !important;
+    }
+    .main-dashboard .profile.public-profile ul.dash-job li.card-block .like{
+        top: 10px;
+        right: 0;
+    }
+    .right_side_btn {
+        display: none;
+    }
+    .portfolio .media-body{
+        width: 100%;
+        display: block;
+    }
+    .all-sections-btn{
+        display: block;
+        text-align: right;
+        margin-bottom: 20px;
+    }
+    .all-sections-btn a{
+        border: 1px solid #ddd;
+        width: 30px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        display: inline-block;
+        color: #29a7df;
+    }
+    .all-sections ul.nav{
+        display: none;
+        position: absolute;
+        background: #fff;
+        z-index: 9;
+        border-bottom: none;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+        border: 1px solid #eee;
+        width: 85%;
+        right: 0;
+        top: 42px;
+    }
+    .all-sections ul.nav:after{
+        background: #fff;
+        border: 1px solid #eee;
+        content: "";
+        height: 10px;
+        width: 10px;
+        position: absolute;
+        top: -5px;
+        right: 10px;
+        transform: rotate(-45deg);
+        border-left: none;
+        border-bottom: none;
+    }
+    .all-sections ul.nav li.active,
+    .all-sections ul.nav li.active:hover{
+        border-bottom: 2px solid transparent;
+    }
+    .all-sections ul.nav li{
+        display: block;
+        float: inherit;
+    }
+    .all-sections ul.nav li.active a{
+        color: #29a7df;
+    }
+    .all-sections ul.nav li a{
+        padding: 6px 20px;
+    }
+    .main-dashboard .profile .portfolio-img{
+        margin-bottom: 15px;
+    }
+    .freelancer-profile .last-seen span{
+        display: none;
+    }
+    .main-dashboard .profile .basic-info h2{
+        font-size: 26px !important;
+    }
+    .saved-service .job_feed_heading .col-md-8,
+    .saved-service .job_feed_heading .col-md-4{
+        width: 100%;
+    }
+     .main-dashboard .profile .sub_featured .job_feed_heading .unsave{
+        float: inherit;
+        margin-bottom: 15px;
+    }
+    .featurette-job .sub_featured ul.project-desc li:after{
+        content: none;
+    }
+    .main-dashboard .profile ul.cust-purchase li.card-block .media .pull-left{
+        width:100%;
+    }
+     .main-dashboard .profile ul.dash-job li.card-block .media .pull-left{
+        width:100%;
+    }
+    .featurette-job .sub_featured ul li.card-block .PickGeeks_detail ul li.loc{
+        display: block;
+    }
+    .featurette-job .sub_featured ul li.card-block  .PickGeeks_detail ul li{
+        display:inline-block;
+    }
+    .main-faq .left-box{
+        border-bottom: 1px solid #ddd;
+        border-left: none;
+        margin-bottom: 30px;
+    }
+    .main-faq .left-box ul li{
+        width: inherit;
+        display: inline-block;
+    }
+    .main-faq .left-box ul.nav-pills > li > a{
+        padding: 10px 20px;
+        border-bottom: 2px solid transparent;
+    }
+    .main-faq .left-box ul.nav-pills > li.active > a{
+        border-left: none;
+        border-bottom: 2px solid #29a7df;
+    }
+    .category-section .category-item{
+        margin-bottom: 15px;
+    }
+    .sign-form .theme-form{
+        padding: 30px;
+    }
+    .avatar-upload input{
+        margin-left: 0 !important;
+    }
+    #first-slider .carousel .item{
+        height: 440px;
+    }
+    footer .cc-logo-img, footer .footer-logo{
+        width: 35%;
+    }
+    .newsletter-section h2,
+    .category-section h1,
+    .works-section h2,
+    .browse-skills h2,
+    .work-job-section h2,
+    .work-service-section h2{
+        font-size: 26px;
+        text-align: center;
+    }
+    .featurette-job .my-jobs .make-feature{
+        float: inherit;
+        margin-bottom: 15px;
+    }
+    .featurette-job .my-jobs h4{
+        display: block !important;
+    }
+    .about-us-img .overlay h3{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 767px){
+    .sign_up_main.sign-steps{
+        width: 100%;
+        margin: 0;
+    }
+    .sign-steps .seperator_form{
+        display: inline-block;
+    }
+    .sign-steps .col-md-6{
+        width: 50%;
+    }
+}
+
+@media (min-width: 568px){
+    .mobile-hr{
+        display: none;
+    }
+    .freelancer-profile .edit_button{
+        position: absolute;
+        top: -21px;
+        right: -19px;
+    }
+    .freelancer-profile .edit_button a{
+        font-size: 14px;
+        color: #fff;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: #29a7df;
+        line-height: 32px;
+        text-align: center;
+        border-radius: 50px;
+    }
+    
+    .save_PickGeeks a,
+    .Report_PickGeeks a{
+        color: #fff;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: #29a7df;
+        line-height: 32px;
+        text-align: center;
+        border-radius: 50px;
+        margin: 0 3px;
+    }
+    .save_PickGeeks a:hover,
+    .save_PickGeeks a:focus,
+    .save_PickGeeks a:active,
+    .Report_PickGeeks a:hover,
+    .Report_PickGeeks a:focus,
+    .Report_PickGeeks a:active{
+        color: #fff;
+    }
+}
+
+@media(min-width: 568px) and (max-width: 767px){
+    footer .language-selection{
+        width: 40%;
+    }
+    .main-work-room .work-room-tabs .tabs-left > li > a{
+        padding: 12px 20px;
+    }
+    .featurette-job .sub_featured .service_desc .attached_file ul li{
+        width: 19%;
+    }
+    .freelancer-profile .edit_button{
+        top: 34px;
+        right: -16px;
+    }
+    .main-dashboard .profile ul.dash-job li ul.project-desc li, 
+    .featurette-section .sub_featured ul.project-desc li{
+        margin-right:20px;
+        display:inline-block;
+    }
+    .featurette-job .sub_featured ul.project-desc li:after{
+        right: 3px;
+    }
+    .featured-service .service-item{
+        width: 46%;
+        margin-left: 15px;
+        float: left;
+    }
+    .sign_up_main{
+        width: 70%;
+        margin: 0 auto;
+    }
+    #first-slider .carousel .item{
+        height: 500px;
+    }
+    .banner-section .banner-desc p{
+        font-size: 16px;
+    }
+    .category-section .category-item{
+        width: 47%;
+        margin-left: 12px;
+        float: left;
+        margin-bottom: 12px;
+        height: inherit;
+    }
+    .browse-skills p{
+        float: left;
+        width: 49%;
+    }
+    .newsletter-section .col-md-8.col-md-offset-2{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .video-section .banner-section{
+        top: 15%;
+    }
+}
+
+@media(min-width: 567px) and (max-width: 767px){
+    .main-dashboard .profile .basic-info .profile-img.responsive-img{
+        width: 83% !important;
+    }
+    .featurette-job.job-detail-section .sub_featured .service_price{
+        display: inline-block;
+    }
+    .job-detail-section .buy_now{
+        width: 50% !important;
+        margin-top: 8px;
+        float: right !important;
+    }
+    .ps-timeline-sec .container ol.ps-timeline li .ps-top,
+    .ps-timeline-sec .container ol.ps-timeline li .ps-bot{
+        width: 74% !important;
+    }
+    .main-faq .col-md-3{
+        width: 35%;
+        float: right;
+    }
+    .main-faq .col-md-9{
+        width: 65%;
+        float: right;
+    }
+    .main-dashboard .profile.public-profile .basic-info .profile-img{
+        width: 44%;
+    }
+    .main-dashboard .profile .basic-info .profile-img{
+        width: 45%;
+        margin: -50px 0 17px;
+    }
+    .main-dashboard .profile .basic-info .profile_left p{
+        text-align: left;
+    }
+    .all-sections ul.nav li a{
+        padding: 15px 16px;
+    }
+    .public-profile .all-sections ul.nav li a{
+        padding: 15px 10px;
+    }
+}
+
+@media (min-width:567px) and (max-width:568px){
+    .banner-section{
+        min-height:361px;
+    }
+}
+
+@media (min-width:640px) and (max-width:767px){
+    .banner-section{
+        min-width:309px;
+        background-position:top;
+    }
+    /*.mobile-view .form-group{
+        padding:0px 60px;
+    }*/
+    .banner-section .banner-desc .input-group{
+        background: none;
+    }
+    .banner-section .theme-button a{
+        padding: 4px 35px;
+    }
+}
+
+@media (max-width:480px){
+    .main-work-room .msg-detail .media-body .msg-inner-detail{
+        width:97%;
+    }
+    .workroom-job-details p{display: block; margin: 0 0 5px; padding: 0;}
+    .workroom-job-details p:after{display: none; }
+    .main-work-room .work-room-tabs{overflow-x: scroll; z-index: 1;}
+    .main-work-room .work-room-tabs .tabs-left li a {min-width: 60px;}
+    .main-work-room .work-room-tabs .tabs-left > li > a{padding: 10px 14px;}
+    .main-work-room .message-content .msg-detail{padding: 0px;}
+    .main-work-room .message-content .msg-detail li.detail_notice .msg-inner-detail{max-width: 100%; padding: 0;}
+}
+
+@media only screen and (max-width : 479px) {
+	
+	.slider-heading h1{
+		font-size:23px;
+	}
+	.slider-heading h2{
+		font-size: 18px;
+	}
+	.slider-heading .get_started a{
+		padding: 8px 30px;
+	}
+    .input-group .search-panel { display:none; }
+    .main-work-room .border {
+        border-left:none;
+        border-top: 1px solid #ddd;
+    }
+    #messages h4.right-heading { font-size: 20px; }
+    .message-content .msg-detail .msg-img {
+        height:auto;
+        width: 40px;
+    }
+    .msg-detail .media-body .msg-inner-detail {
+        width: 96%;
+        background-color:#F0F0F0;
+        padding:8px 15px;
+        text-align: justify;
+        float: right;
+    }
+    .msg-detail .cust-img { margin-right: 0px; }
+    .filttering .filter-button { padding: 4px 10px;  }
+    #dispute-mgmt .common-heading h4.tab-pane-heading { font-size: 20px; }
+    #dispute-mgmt .table { font-size: 14px; }
+    #terms .common-heading h4.tab-pane-heading { font-size:20px; }
+    #terms .terms-milestone-table tbody tr td .btn-common {
+        font-size: 14px;
+        height: 40px;
+        width: 130px;
+    }
+	.featurette-section .sub_featured ul li.card-block .card{
+		height:40px;
+		width:40px;
+		margin: 0 auto;
+	}
+	.featurette-section .sub_featured ul li.card-block .media-body p{
+		display:block;
+	}
+	
+}
+
+@media(max-width: 414px){
+    .section-messagebox .chat-msgs .chat-msg-other p,
+     .section-messagebox .chat-msgs .chat-msg-me p{
+        font-size: 13px;
+     }
+     .chat-msgs .sent-img{
+        padding: 5px;
+        height: 100px;
+        width: 100px;
+     }
+     .sign-form .theme-form{padding: 30px 15px;}
+}
+
+@media only screen and (max-width : 359px) {
+    #terms .common-heading h4.tab-pane-heading { font-size:20px; }
+    #terms .terms-milestone-table tbody tr td .btn-common {
+        font-size: 14px;
+        height: 40px;
+        width: 130px;
+    }
+	.slideThree:before{
+		left:-107px;
+		font-size:16px;
+	}
+	.slideThree:after{
+		    right: -104px;
+			font-size: 16px;
+	}
+	.main-dashboard  h2{
+		font-size:18px;
+	}
+	.main-dashboard .profile .sub_featured .job_feed_heading .remove_saved .post_services a{
+		font-size:12px;
+	}
+	.edit_button{
+		height: 30px;
+		width: 30px;
+	    line-height: 30px;
+	}
+    .sign_up_main .sign_social .fb_login a,  .sign_up_main .sign_social .gp_login a{
+            padding: 10px 39px 10px 56px;
+    }
+    .main-work-room .chatting-person .remove{float: none;}
+
+}
+@media only screen and (max-width : 320px){
+    .sign-form .theme-form{
+        padding: 25px;
+    }
+    .main-dashboard .profile .sub_featured .job_feed_heading .remove_saved .search_sort select{
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        height: 28px;
+    }
+}
+
+
+/**************************************/
+/******new design******/
+@media (max-width: 1280px){
+
+	/*start common section*/
+	.common-section{
+		padding: 40px 0;
+	}
+	/*end common section*/
+
+}
+
+@media (min-width: 1024px) and (max-width: 1280px){
+
+	/*start mockup section*/
+	.above-fold-section .left-section h1{
+		font-size: 38px;
+	}
+	.above-fold-section .mockup{
+		margin-left: 40px;
+	}
+	/*end mockup section*/
+
+	
+
+    
+
+    /*start credit package*/
+    .membership_plan #monthly .box1{
+        padding: 40px;
+    }
+    .membership_plan .box1 .box-heading .price-month{
+        padding: 15px 40px 40px;
+    }
+    /*end credit package*/
+
+    /*start sub category*/
+    .sub-category-section .category-item .category-img{
+        height: 140px;
+    }
+    /*end sub category*/
+
+   
+
+}
+
+@media(max-width: 991px){
+
+	/*start common section*/
+	.common-section h2.main-title{
+		font-size: 26px;
+	}
+	/*end common section*/
+
+    
+    /*end notification*/
+
+    /*start freelancer search*/
+    .flu-lists .flu-search-item .pbox-body .flu-media, 
+    .flu-lists .flu-search-item .pbox-body .flu-earning{
+        display: block;
+    }
+    .flu-lists .flu-search-item .pbox-body span.like{
+        left: 0;
+    }
+    .flu-lists .flu-search-item .pbox-body .flu-media{
+        border-left: none;
+        border-bottom: 1px solid #ddd;
+        padding-left: 0;
+        padding-bottom: 10px;
+    }
+    .flu-lists .flu-search-item .pbox-body .flu-earning{
+        padding-right: 0;
+        padding-top: 10px;
+        width: 100%;
+    }
+    .flu-lists .flu-search-item .flu-title-wrap{
+        margin-bottom: 7px;
+    }
+    .flu-lists .flu-search-item .star-ratings-sprite{
+        margin-bottom: 4px;
+    }
+    /*end freelancer search*/
+
+}
+
+@media(min-width: 768px) and (max-width: 991px){
+
+    .login-img span{
+        max-width: 35px;
+    }
+
+	/*start mockup section*/
+	.above-overlay{
+		width: 900px;
+		height: 680px;
+		right: -400px;
+	}
+	.above-fold-section .mockup{
+		padding: 150px 0 0;
+		margin-left: 20px;
+	}
+	.above-fold-section{
+		height: 550px;
+	}
+	.above-fold-section .section-desc{
+		height: 550px;
+		padding-top: 50px;
+	}
+	.above-fold-section .left-section h1{
+		font-size: 34px;
+		line-height: 50px;
+	}
+	.above-fold-section .left-section h4{
+		margin: 30px 0;
+	}
+	/*end mockup section*/
+
+	
+
+	/*start job section*/
+	.workjob-section .rb-border,
+	.workjob-section .b-border,
+	.workjob-section .r-border{
+		border: none;
+	}
+	.workjob-section .job-item{
+		height: auto;
+        padding: 30px 30px
+	}
+	/*end job section*/
+
+	/*start service section*/
+	.workservice-section .service-mockup{
+		width: 365px;
+		margin-top: 50px;
+        margin-right: -110px;
+	}
+	.workservice-section ul li span.count{
+		width: 45px;
+		height: 45px;
+		line-height: 43px;
+		font-size: 24px;
+	}
+	.workservice-section{
+		padding-bottom: 80px;
+	}
+	/*end service section*/
+
+	/*start select section*/
+	.select-section .main-select-box .select-box .text{
+		padding: 80px 40px;
+	}
+	.select-section .main-select-box .select-box h3{
+		font-size: 32px;
+		line-height: 48px;
+	}
+	/*end select section*/
+
+	/*start app section*/
+	.app-section{
+		padding: 80px 0;
+	}
+	.app-section h2{
+		font-size: 26px;
+		line-height: 40px;
+	}
+	/*end app section*/
+
+	/*start skills section*/
+	.top-skills-section ul li{
+		width: 33.33%;
+	}
+	/*end skills section*/
+
+    /*start review*/
+    .review-box ul.review_data .stars{
+        text-align: right;
+        margin-bottom: 15px;
+    }
+    .review-box ul.review_data .btn-primary{
+        width: 25%;
+    }
+    /*end review*/
+
+    /*start sub category*/
+    .sub-category-section .category-item .category-img{
+        height: 140px;
+    }
+    /*end sub category*/
+
+    /*start search jobs*/
+    .cmj-footer .cmj-action-wrap .cmj-post-action{
+        float: inherit !important;
+        margin-top: 10px;
+    }
+    /*end search jobs*/
+    .main-work-room .profile .profile-detail{padding: 15px;}
+    .main-work-room .work-room-tabs .tabs-left > li > a{padding-left: 15px;}
+    .workroom-freelancer, .workroom-customer{margin-bottom: 15px;}
+    .main-work-room .work-room-tabs{padding-bottom: 15px;}
+    .workroom-freelancer .Report_PickGeeks{top: 15px;}
+    .main-work-room .filttering .filter-button {padding: 6px 15px;font-size: 14px;}
+    .main-work-room .pro-filter .filttering > li{margin: 0 1px 5px 1px;}
+    .main-work-room .gallery-list .gallery-item .download{top: inherit; bottom: 15px;}
+    .main-work-room .gallery-list .gallery-item:last-child .download{bottom: 0;}
+}
+
+@media(max-width: 767px){
+
+    .about-us-img .overlay .table-heading{
+        padding: 0 15px;
+    }
+
+    .homepage_class .navbar-default .notification .number, 
+    .customer_home .navbar-default .notification .number, 
+    .freelancer_home .navbar-default .notification .number{
+        top: 12px !important;
+        left: 30px;
+    }
+	/*start header*/
+	.homepage_class header .navbar-brand{
+		height: 70px;
+		padding: 10px 15px;
+	}
+	.homepage_class header .navbar-default.affix .navbar-brand{
+		padding: 10px 15px;
+	}
+	.navbar-default .navbar-toggle{
+		padding: 13px 10px;
+	    margin-top: 15px;
+	    margin-bottom: 15px;
+        margin-left: 5px;
+	}
+	.navbar-nav{
+		background: #fff;
+		margin: 0 -15px;
+	}
+	.homepage_class header .navbar-default .navbar-nav > li > a,
+	.homepage_class header .navbar-default.affix .navbar-nav > li > a{
+		padding: 15px;
+        padding-left: 30px;
+	}
+	header .navbar-default .navbar-nav li ul.dropdown-menu{
+		box-shadow: none;
+	}
+	/*end header*/
+
+	/*start mockup section*/
+	.above-overlay{
+	    width: 700px;
+	    height: 450px;
+	    right: -300px;
+	    top: 0;
+	}
+	.above-fold-section .section-desc{
+		padding-top: 70px;
+	}
+	.above-fold-section,
+	.above-fold-section .section-desc{
+		height: 500px;
+	}
+	.above-fold-section .left-section{
+		text-align: center;
+	}
+	.above-fold-section .left-section h1{
+		font-size: 36px;
+		line-height: 52px;
+	}
+	.above-fold-section .left-section h4{
+		margin: 30px 0;
+	}
+	.above-fold-section .mockup{
+		display: none;
+	}
+	/*end mockup section*/
+
+	/*start common section*/
+	.common-section h2.main-title{
+		font-size: 24px;
+	}
+	/*end common section*/
+
+	
+
+	/*start job section*/
+	.workjob-section .rb-border,
+	.workjob-section .b-border,
+	.workjob-section .r-border{
+		border: none;
+	}
+	/*end job section*/
+
+	/*start work section*/
+	.workservice-section{
+		padding-bottom: 80px;
+	}
+	.workservice-section .service-mockup{
+		width: 200px;
+		margin-right: 0;
+		margin-bottom: 40px;
+	}
+	.workservice-section ul li span.count{
+		width: 40px;
+		height: 40px;
+		font-size: 20px;
+		line-height: 38px;
+	}
+	.workservice-section ul li{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.workservice-section ul li:last-child{
+		margin-bottom: 0;
+	}
+	.workservice-section ul li:nth-child(even){
+		margin-right: 0;
+	}
+	/*end work section*/
+
+	/*start app section*/
+	.app-section{
+		padding: 80px 0;
+	}
+	.app-section h4{
+		font-size: 14px;
+	}
+	.app-section h2{
+		font-size: 24px;
+		line-height: 34px;
+	}
+	.app-section .app-button{
+		margin-bottom: 10px;
+	}
+	.app-section .app-mockup{
+		position: absolute;
+		bottom: -65px;
+		left: 0;
+		width: 140px;
+	}
+	.app-section p{
+		font-size: 14px;
+		padding: 30px 0;
+	}
+	/*end app section*/
+
+    /*start review*/
+    .review-box ul.review_data .stars{
+        margin-bottom: 15px;
+        text-align: right;
+    }
+    /*end review*/
+
+    /*start account settings tabs*/
+    ul.theme-tabs > li > a{
+        background: #fff;
+    }
+    /*end account settings tabs*/
+
+   
+    /*start sawlii tabs*/
+    .account_setting .sawlii-tabs-wrap .nav-tabs > li > a{
+        background: #fff;
+    }
+    .account_setting .sawlii-tabs-wrap .nav-tabs > li.active > a{
+        box-shadow: none;
+    }
+    /*end sawlii tabs*/
+
+    /*start search jobs*/
+    .panel .panel-heading select.form-control{
+        margin-top: -10px;
+    }
+    /*end search jobs*/
+
+    /*start freelancer search*/
+    .flu-lists .flu-search-item .flu-img{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    .flu-lists .flu-search-item .pbox-body .flu-earning{
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+    }
+    .flu-lists .flu-search-item .flu-skills li{
+        margin-bottom: 5px;
+    }
+    /*end freelancer search*/
+
+}
+
+@media (min-width: 568px) and (max-width: 767px){
+
+	/*start top skills*/
+	.top-skills-section ul li{
+		width: 50%;
+	}
+	/*end top skills*/
+
+	
+
+	/*start job section*/
+	.workjob-section .job-item{
+		float: left;
+		width: 48%;
+		margin-left: 10px;
+		padding: 30px;
+		border-bottom: 1px solid #ededed;
+		height: 190px;
+	}
+	/*end job section*/
+
+	/*start select section*/
+	.select-section .main-select-box .select-box .text{
+		padding: 80px 20px;
+	}
+	.select-section .main-select-box .select-box h3{
+		font-size: 32px;
+		line-height: 48px;
+	}
+	/*end select section*/
+
+    /*start review*/
+    .review-box ul.review_data .btn-primary{
+        width: 30%;
+    }
+    /*end review*/
+
+    /*start credit package*/
+    .membership_plan .box1 .box-heading .price-month{
+        text-align: center;
+    }
+    /*end credit package*/
+
+    
+    /*start listing page*/
+    .search-page .item-box{
+        width: 47%;
+        float: left;
+        margin-left: 12px;
+    }
+    /*end listing page*/
+
+    /*start sub category*/
+    .sub-category-section .category-item{
+        width: 45%;
+        float: left;
+        margin-left: 20px;
+    }
+    /*end sub category*/
+
+}
+
+@media(max-width: 567px){
+
+	/*start top skills*/
+	.top-skills-section ul li{
+		width: 100%;
+	}
+	/*end top skills*/
+
+	/*start mockup section*/
+	.above-overlay{
+	    width: 700px;
+	    height: 450px;
+	    right: -475px;
+	    top: 0;
+	}
+	.above-fold-section .left-section form button{
+		padding: 8px 18px;
+	}
+	.above-fold-section,
+	.above-fold-section .section-desc{
+		height: 600px;
+	}
+	/*end mockup section*/
+
+	
+
+	/*start job section*/
+	.workjob-section .job-item{
+		height: auto;
+		padding: 30px;
+		border-bottom: 1px solid #ededed;
+	}
+	.workjob-section .col-md-3:last-child .job-item{
+		border-bottom: none;
+	}
+	/*end job section*/
+
+	/*start select section*/
+	.select-section .main-select-box .select-box{
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.select-section .main-select-box .select-box .text{
+		padding: 40px;
+	}
+	.select-section .main-select-box .select-box h3{
+		font-size: 34px;
+		line-height: 48px;
+	}
+	/*end select section*/
+
+	/*start app section*/
+	.app-section p{
+		width: 100%;
+	}
+	/*start app section*/
+
+        
+    /*start review*/
+    .seperator-l{
+        display: none;
+    }
+    /*end review*/
+
+   
+
+    /*start top search bar*/
+    .searchbar-form input{
+        padding-left: 12px;
+    }
+    /*end top search bar*/
+
+    /*start search jobs*/
+    
+    /*end search jobs*/
+
+    /*start freelancer search*/
+    .flu-lists .flu-search-item .pbox-body .flu-media .media-body{
+        display: block;
+        width: 100%;
+    }
+    .flu-lists .flu-search-item .flu-title-wrap{
+        margin-bottom: 7px;
+    }
+    .flu-lists .flu-search-item .star-ratings-sprite{
+        margin-bottom: 4px;
+    }
+    /*end freelancer search*/
+
+}
+@media (max-width: 480px){
+    .above-fold-section, .above-fold-section .section-desc { height: 500px; }
+    .above-fold-section .left-section h1{font-size: 30px; line-height: 42px;}
+}
+@media(max-width: 360px){
+        .above-fold-section .section-desc { padding-top: 50px; }
+       .above-fold-section .left-section h1{font-size: 26px; line-height: 38px;}
+    /*start review*/
+    .full-review .star-rating p{
+        display: block;
+    }
+    .full-review .star-ratings-sprite{
+        float: inherit;
+        margin-top: 5px;
+    }
+    /*end review*/
+
+}
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: right;
+}
+
+@media (min-width: 768px) {
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+        float: right;
+    }
+    .col-sm-offset-12 {
+    margin-right: 100%;
+    margin-left: inherit;
+  }
+  .col-sm-offset-11 {
+    margin-right: 91.66666667%;
+    margin-left: inherit;
+  }
+  .col-sm-offset-10 {
+    margin-right: 83.33333333%;
+    margin-left: inherit;
+  }
+  .col-sm-offset-9 {
+    margin-right: 75%;
+    margin-left: inherit;
+  }
+  .col-sm-offset-8 {
+    margin-right: 66.66666667%;
+    margin-left: inherit;
+  }
+  .col-sm-offset-7 {
+    margin-right: 58.33333333%;
+    margin-left: inherit;
+  }
+  .col-sm-offset-6 {
+    margin-right: 50%;
+    margin-left: inherit;
+  }
+  .col-sm-offset-5 {
+    margin-right: 41.66666667%;
+    margin-left: inherit;
+  }
+  .col-sm-offset-4 {
+    margin-right: 33.33333333%;
+    margin-left: inherit;
+  }
+  .col-sm-offset-3 {
+    margin-right: 25%;
+    margin-left: inherit;
+  }
+  .col-sm-offset-2 {
+    margin-right: 16.66666667%;
+    margin-left: inherit;
+  }
+  .col-sm-offset-1 {
+    margin-right: 8.33333333%;
+    margin-left: inherit;
+  }
+  .col-sm-offset-0 {
+    margin-right: 0%;
+    margin-left: inherit;
+  }
+}
+@media(min-width: 992px){
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+        float: right;
+    }
+    /*column*/
+    .col-md-offset-12 {
+    margin-right: 100%;
+    margin-left: inherit;
+  }
+  .col-md-offset-11 {
+    margin-right: 91.66666667%;
+    margin-left: inherit;
+  }
+  .col-md-offset-10 {
+    margin-right: 83.33333333%;
+    margin-left: inherit;
+  }
+  .col-md-offset-9 {
+    margin-right: 75%;
+    margin-left: inherit;
+  }
+  .col-md-offset-8 {
+    margin-right: 66.66666667%;
+    margin-left: inherit;
+  }
+  .col-md-offset-7 {
+    margin-right: 58.33333333%;
+    margin-left: inherit;
+  }
+  .col-md-offset-6 {
+    margin-right: 50%;
+    margin-left: inherit;
+  }
+  .col-md-offset-5 {
+    margin-right: 41.66666667%;
+    margin-left: inherit;
+  }
+  .col-md-offset-4 {
+    margin-right: 33.33333333%;
+    margin-left: inherit;
+  }
+  .col-md-offset-3 {
+    margin-right: 25%;
+    margin-left: inherit;
+  }
+  .col-md-offset-2 {
+    margin-right: 16.66666667%;
+    margin-left: inherit;
+  }
+  .col-md-offset-1 {
+    margin-right: 8.33333333%;
+    margin-left: inherit;
+  }
+  .col-md-offset-0 {
+    margin-right: 0%;
+    margin-left: inherit;
+  }
+  /*column*/
+}
+
+
+@media (min-width: 1200px) {
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+        float: right;
+    }
+    .col-lg-offset-12 {
+    margin-right: 100%;
+    margin-left: inherit;
+  }
+  .col-lg-offset-11 {
+    margin-right: 91.66666667%;
+    margin-left: inherit;
+  }
+  .col-lg-offset-10 {
+    margin-right: 83.33333333%;
+    margin-left: inherit;
+  }
+  .col-lg-offset-9 {
+    margin-right: 75%;
+    margin-left: inherit;
+  }
+  .col-lg-offset-8 {
+    margin-right: 66.66666667%;
+    margin-left: inherit;
+  }
+  .col-lg-offset-7 {
+    margin-right: 58.33333333%;
+    margin-left: inherit;
+  }
+  .col-lg-offset-6 {
+    margin-right: 50%;
+    margin-left: inherit;
+  }
+  .col-lg-offset-5 {
+    margin-right: 41.66666667%;
+    margin-left: inherit;
+  }
+  .col-lg-offset-4 {
+    margin-right: 33.33333333%;
+    margin-left: inherit;
+  }
+  .col-lg-offset-3 {
+    margin-right: 25%;
+    margin-left: inherit;
+  }
+  .col-lg-offset-2 {
+    margin-right: 16.66666667%;
+    margin-left: inherit;
+  }
+  .col-lg-offset-1 {
+    margin-right: 8.33333333%;
+     margin-left: inherit;
+  }
+  .col-lg-offset-0 {
+    margin-right: 0%;
+    margin-left: inherit;
+  }
+}

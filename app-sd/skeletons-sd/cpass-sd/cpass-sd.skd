@@ -1,0 +1,72 @@
+<h1>{CHANGE_PASSWORD}</h1>
+
+<div>
+    <form id="change-password" name="change-password" method="post" action="" autocomplete="off">
+        <div>
+                <div>
+                    <label>{CURRENT_PASSWORD}: </label>
+                    <input type="password" class="" name="cur_password" id="cur_password">
+                </div>
+                <div>
+                    <label>{NEW_PASSWORD}: </label>
+                    <input type="password" class="" name="new_password" id="new_password" >
+                </div>
+                <div>
+                    <label>{CONFIRM_PASSWORD}: </label>
+                    <input type="password" class="" name="conf_password" id="conf_password">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <button type="submit" name="sbtcPass" id="sbtcPass" value="{CHANGE_PASSWORD_LABEL}" class="">{CHANGE_PASSWORD_LABEL}</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    $(function(e){
+        $changePasswordId="change-password";
+        $changePassword="#"+$changePasswordId;
+        {
+            $($changePassword).validate(
+            {
+                rules:
+                {
+                    cur_password: 
+                    {
+                        required:true,
+                        minlength:6
+                    },
+                    new_password: 
+                    {
+                        required:true,
+                        minlength:6
+                    },
+                    conf_password: 
+                    {
+                        required:true,
+                        equalTo:"#new_password"
+                    }
+                },
+                messages:
+                {
+                    cur_password: 
+                    {
+                        required: "{PLEASE_ENTER_CURRENT_PASSWORD_CPASS}"
+                    },
+                    new_password: 
+                    {
+                        required: "{CPASS_PLEASE_ENTER_NEW_PASSWORD}",
+                       minlength: "{CPASS_MINLENGTH}",maxlength: "{CPASS_MAXLENGTH}"
+                    },
+                    conf_password: 
+                    {
+                        required: "{CPASS_PLEASE_ENTER_CONFIRM_PASSWORD}",
+                        equalTo: "{CPASS_PASSWORD_DOESN'T_MATCH}"
+                    }
+                }
+            });
+        }
+    });
+</script>

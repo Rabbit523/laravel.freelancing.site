@@ -1,0 +1,7 @@
+<li>
+   	<p>%ITEM_NM% 
+	   	<a href="javascript:void(0);" data-id="%ITEM_ID%" data-item-type="%ITEM_TYPE%" class="delete_data" title="delete">
+	   		<i class="fa fa-times"></i>
+	   	</a>
+	</p>
+</li>

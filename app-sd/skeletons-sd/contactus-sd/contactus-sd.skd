@@ -1,0 +1,201 @@
+<!-- Page Content -->
+<section class="inner-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="contact-form">
+                    <div class="theme-form">
+                        <h3 class="main-heading">
+                            {CONTACT_PICKGEEKS}
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 con_seperator">
+                                <form id="frmContactUs" name="frmContactUs" method="POST" id="frmContactUs">
+                                    <input type="hidden" name="chkpoint" value="<?php echo generateToken('frmContactUs'); ?>"/>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input type="text" name="firstName" id="firstName" class="form-control" value="%FIRSTNAME%" placeholder="First name*"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input type="text" value="%LASTNAME%" name="lastName" id="lastName" class="form-control" placeholder="Last name*"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input type="text" value="%EMAIL%" name="email" id="email" class="form-control" placeholder="Email Address*"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input type="text" name="contactNo" value="%CONTACTNO%" id="contactNo" class="form-control" placeholder="Contact Number"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" name="location" value="%LOCATION%" id="location" class="form-control" placeholder="Location*"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="form-group">
+                                                <textarea rows="5" name="message" id="message" class="form-control" placeholder="Type your Message"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="theme-button">
+                                            <input type="submit" name="submitCnt" value="Submit" id="submitCnt" class="btn btn-block btn-system">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <h4>
+                                    {SITE_NM}
+                                </h4>
+                                <div class="head_email">
+                                  <i class="fa fa-envelope-o"></i>&nbsp; {CONTACT_US_EMAIL}
+                                </div>
+                                <div id="map_div" class="map_div"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-wrap-section">    
+                    <div class="contact-wrap">
+                        <h3 class="main-heading">Address</h3>
+                        <ul class="contact-address">
+                            <li>{ADDRESS_LBL}</li>
+                            
+                            <li class="contact-link"><a href="tel:{PHONE_LBL}">{PHONE_LBL}</a></li>
+                            <li class="contact-link"><a href="mailto:{EMAIL_LBL}">{EMAIL_LBL}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.container -->
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $(document).on('focus','#location',function(){
+          var places = document.getElementById('location');
+          var option = {};
+          autocomplete= new google.maps.places.Autocomplete(places,option);
+        });
+
+        jQuery.validator.addMethod("startingSpaceNotAllow", function(value, element)
+        {
+            return this.optional(element) || /^\S.*$/.test(value);
+        }, "Space is not allowed");
+
+
+        $(document).on("click","#submitCnt",function(){
+            $("#frmContactUs").validate({
+                ignore: [],
+                errorClass: 'help-block',
+                errorElement: 'label',
+                highlight: function (element)
+                {
+                    $(element).closest('.form-group').addClass('has-error');
+                },
+                unhighlight: function (element)
+                {
+                    $(element).closest('.form-group').removeClass('has-error');
+                },
+                rules:
+                {
+                    firstName : {required:true,startingSpaceNotAllow:true,minlength:4},
+                    lastName : {required:true,startingSpaceNotAllow:true,minlength:4},
+                    location : {required:true,startingSpaceNotAllow:true,minlength:3},
+                    email : {required:true,email:true},
+                    contactNo : {required:true,number:true,minlength:10},
+                    message : {required:true,startingSpaceNotAllow:true}
+                },
+                messages:
+                {
+                    firstName : {required:"Please enter first name",startingSpaceNotAllow:"Space is not allowed",minlength:"Please enter valid first name"},
+                    lastName : {required:"Please select last name",startingSpaceNotAllow:"Space is not allowed",minlength:"Please enter valid last name"},
+                    location : { required: "Please enter location",startingSpaceNotAllow:"Space is not allowed",minlength:"Please enter valid location"},
+                    email : { required :"Please enter email",email:"Please enter valid email"},
+                    contactNo : {required:"Please enter contact number",number:"Please enter number only",minlength:"Please enter valid number"},
+                    message : {required:"Please enter message",startingSpaceNotAllow:"Space is not allowed"}
+                }
+            });
+
+            if($("#frmContactUs").valid())
+            {
+                addOverlay();
+                $("#frmContactUs").submit();
+            }
+        });
+        /* End code */
+    });
+
+    function initialize(latitude,longitude) {
+            var i;
+            var marker;
+            var bounds = new google.maps.LatLngBounds();
+            var myOptions = {
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var i;
+            var map = new google.maps.Map(document.getElementById("map_div"), myOptions);
+
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(latitude,longitude),
+                map: map,
+                animation: google.maps.Animation.DROP
+            });
+            bounds.extend(marker.position);
+            map.setZoom(18);
+            map.setCenter(bounds.getCenter());
+            //map.fitBounds(bounds);
+    }
+
+    $(window).load(function() {
+        latitude = '';
+        longitude = '';
+        getLatitudeLongitude(showResult, "{ADMIN_ADDRESS}")
+        /* Getting long and latitude using address */
+        function showResult(result) {
+            latitude = result.geometry.location.lat();
+            longitude = result.geometry.location.lng();
+        }
+
+        function getLatitudeLongitude(callback, address) {
+            // If adress is not supplied, use default value 'Ferrol, Galicia, Spain'
+            address = address || 'Ferrol, Galicia, Spain';
+            // Initialize the Geocoder
+            geocoder = new google.maps.Geocoder();
+            if (geocoder) {
+                geocoder.geocode({
+                    'address': address
+                }, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        callback(results[0]);
+                    }
+                });
+            }
+        }
+        setTimeout(function() {
+            initialize(latitude,longitude);
+        }, 2000);
+
+
+    });
+</script>

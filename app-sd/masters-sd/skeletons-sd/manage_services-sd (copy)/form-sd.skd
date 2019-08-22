@@ -1,0 +1,167 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+    <div class="form-body">
+        
+        <div class="form-group">
+            <label for="jobtitle" class="control-label col-md-3">{MEND_SIGN}Services Title: &nbsp;</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control logintextbox-bg" name="servicesTitle" id="servicesTitle" value="%SERVICES_TITLE%" placeholder="Enter services title">
+                </div>
+        </div>      
+        
+        <div class="form-group">
+            <label for="servicesCategory" class="control-label col-md-3">{MEND_SIGN}Services Category: &nbsp;</label>
+                <div class="col-md-6">  
+                    <select class="form-control" name="servicesCategory" id="servicesCategory">
+                        <option value="">--select category--</option>
+                        %CATEGORY%                        
+                    </select>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="servicesSubCategory" class="control-label col-md-3">Services Sub Category: &nbsp;</label>
+                <div class="col-md-6">  
+                    <select class="form-control" name="servicesSubCategory" id="servicesSubCategory">
+                        <option value="">--select Subcategory--</option>
+                        %SUB_CATEGORY%                        
+                    </select>
+                </div>
+        </div>  
+
+        
+        <div class="form-group">
+            <label for="description" class="control-label col-md-3">{MEND_SIGN}Description: &nbsp;</label>
+                <div class="col-md-6">
+                    <textarea class="form-control ckeditor" name="description" id="description">%DESC%</textarea>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="old_image" class="control-label col-md-3">{MEND_SIGN}Services Image: &nbsp;</label>
+                <div class="col-md-6">
+                    <input type="file" class="form-control file_upload" name="services_image[]" id="services_image" value=""  accept=".png,.jpg,.jpeg" multiple>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3"></label>
+            %IMG_LIST%
+        </div>
+
+        <div class="form-group">
+            <label for="noDayDelivery" class="control-label col-md-3">{MEND_SIGN}No of Day Delivery : &nbsp;</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control logintextbox-bg" name="noDayDelivery" id="noDayDelivery" value="%NO_DELIVERY%" placeholder=" Enter no of day delivery">
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="noDayDelivery" class="control-label col-md-3">{MEND_SIGN}Services Price : &nbsp;</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control logintextbox-bg" name="servicesPrice" id="servicesPrice" value="%SERVICES_PRICE%" placeholder=" Enter services price">
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="requiredDetails" class="control-label col-md-3">{MEND_SIGN}Required Details : &nbsp;</label>
+                <div class="col-md-6">
+                    <textarea name="requiredDetails" id="requiredDetails" class="form-control logintextbox-bg ckeditor">%REQUIRED_DETAILS%</textarea>
+                </div>
+        </div>
+
+        <script type="text/javascript">$(function () {
+                loadCKE("description");
+                loadCKE("requiredDetails");
+            });</script>
+
+
+        <div class="form-group">
+            <label class="control-label col-md-3">{MEND_SIGN}Featured: &nbsp;</label>
+            <div class="col-md-6">
+                <div class="radio-list" data-error-container="#error_one">
+                    <label class="">
+                        <input class="radioBtn-bg" id="y" name="featured" type="radio" value="y" %FEATURED_Y%>
+                        Yes</label>
+                    <span for="status" class="help-block"></span>
+                    <label class="">
+                        <input class="radioBtn-bg" id="n" name="featured" type="radio" value="n" %FEATURED_N% %BYDEFAULT%>
+                        No</label>
+                    <span for="status" class="help-block"></span> </div>
+                <div id="error_one"></div>
+            </div>
+        </div> 
+
+        <div class="form-group">
+            <div class="col-md-3"></div>
+            <div class="col-md-6"><h3>Add on Details</h3></div>
+            <div class="col-md-3">
+                <a href="javascript:void(0)" class="add_new btn btn-primary">Add New</a>
+            </div>
+        </div>
+
+        %ADDON_CONTENT%
+        <div class="Addon-Div">
+            <div class="Addon-Div1">
+                <div class="form-group">
+                    <label for="serviceAdonTitle" class="control-label col-md-3">Services Add on Title : &nbsp;</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control logintextbox-bg" name="serviceAdonTitle[]" id="serviceAdonTitle" value="%SERVICE_ADON_TITLE%" placeholder=" Enter Services Add On Title">
+                        </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceAdondayRequired" class="control-label col-md-3">Services Add on Day Required : &nbsp;</label>
+                        <div class="col-md-6">
+                            <input type="number" class="form-control logintextbox-bg" name="serviceAdondayRequired[]" id="serviceAdondayRequired" value="%SERVICE_ADON_REQUIRED%" placeholder=" Enter Add on day required" min="1">
+                        </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceAdonPrice" class="control-label col-md-3">Services Add on Price : &nbsp;</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control logintextbox-bg" name="serviceAdonPrice[]" id="serviceAdonPrice" value="%SERVICE_ADON_PRICE%" placeholder=" Enter Add on price">
+                        </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceAdonDesc" class="control-label col-md-3">Services Add on Description : &nbsp;</label>
+                        <div class="col-md-6">
+                            <textarea name="serviceAdonDesc[]" id="serviceAdonDesc" class="form-control logintextbox-bg" placeholder="Enter services Add on Description">%SERVICE_ADON_DESC%</textarea>
+                        </div>
+                </div>
+            <hr>
+            </div>
+        </div>
+        
+
+        <div class="flclear clearfix"></div>
+            <input type="hidden" name="type" id="type" value="%TYPE%">
+        <div class="flclear clearfix"></div>
+            <input type="hidden" name="id" id="id" value="%ID%">
+        <div class="padtop20"></div>
+    
+    </div>
+
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <button type="submit" name="submitAddForm" class="btn green" id="submitAddForm">Submit</button>
+            <button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+        </div>
+    </div>
+    
+</form>
+<script type="text/javascript">
+    $('#skills').selectpicker();
+
+$("#biddingDeadline").datepicker(
+{
+    autoclose: true,
+    format: "dd-mm-yyyy",
+    startDate: 'd'
+});
+
+
+$(document).on("click",".add_new",function()
+{
+    $(".Addon-Div1").children().clone().find("input:text").val("").end().find("textarea").val("").end().appendTo(".Addon-Div");
+});
+</script>

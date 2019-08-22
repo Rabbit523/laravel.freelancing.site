@@ -1,0 +1,12 @@
+<li>
+    <div class="block">
+        <div class="block_content">
+            <h2 class="title">
+                <a href="%LINK%" target="_blank">%MSG%</a>
+            </h2>
+            <div class="byline">
+                <span>%TIME%</span>
+            </div>
+        </div>
+    </div>
+</li>

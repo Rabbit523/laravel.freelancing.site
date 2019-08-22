@@ -1,0 +1,125 @@
+<div class="col-md-6 freelancerid_%FID%">
+    <div class="pbox ">
+        <div class="pbox-body no-padding">
+            <div class="savefl-item">
+                <div class="like active">
+                    <a href="#" title="Remove freelancer" data-id="%FID%" class="trash" >
+                        <i class="fa fa-heart"></i>
+                    </a>
+                </div>
+                <div class="savefl-table">
+                    <div class="savefl-cell cell-user">
+                        <div class="media">
+                            <div class="media-left">
+                                <div class="user-avatar">
+                                    <a href="%USER_LINK%"><img src="%USER_IMG%" /></a>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <div class="savefl-title">
+                                    <h3 class="savefl-name"><a href="%USER_LINK%">%USER_NAME%</a></h3>
+                                    <span>(%USER_LVL%)</span>
+                                </div>
+                                <div class="star-ratings-sprite">
+                                   <span style="width:%USER_RATINGS%%" class="star-ratings-sprite-rating"></span>
+                                </div>
+                                <div class="savefl-location" title="%USER_LOCATION%"><span><i class="fa fa-map-marker"></i></span>%USER_LOCATION%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="savefl-cell cell-details">
+                        <ul class="savefl-work-lists liststyle-none clearfix">
+                            <li>{CSF_JOB_COMPLETED} : <label>%JOB_COMPLETED%</label></li>
+                            <li>{CSF_SOLD_SERVICE} : <label>%SOLD_SERVICES%</label></li>
+                            <li>{CSF_EARNED} : <label class="amount-wrap">%TOTAL_EARN%</label></li>
+                            <li>{CSF_RESPONSE_TIME} : <label>%RESP_TIME%</label></li>
+                            <li>{CSF_PORTFOLIO} : <label>%PORTFOLIO%</label></li>
+                        </ul>
+                        <ul class="savefl-skills liststyle-none">
+                            %SKILLS%
+                        </ul>
+                    </div>
+                </div>
+                <div class="savefl-cat-wrap clearfix">
+                    %SUB_CAT%
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php /* <li class="card-block freelancerid_%FID%" >
+    <div class="row %DELETED_CLASS%">
+      <div class="col-md-12">
+         <div class="deleted-class">
+            <span class="">
+            {CP_DELETED}
+            </span>
+         </div>
+      </div>
+    </div>
+    <div class="like active">
+        <a href="#" title="Remove freelancer" data-id="%FID%" class="trash" >
+            <i class="fa fa-heart"></i>
+        </a>
+    </div>
+    <div class="media">
+        <div class="pull-left">
+            <div class="posted_service">
+                <img src="%USER_IMG%" />
+            </div>
+            <div class="star-ratings-sprite">
+                <span style="width:%USER_RATINGS%%" class="star-ratings-sprite-rating">
+                </span>
+            </div>
+        </div>
+        <div class="media-body">
+            <h4 class="card-title">
+                <a href="%USER_LINK%">%USER_NAME%</a>
+            </h4>
+            <div class="category_subcategory">
+                <span>
+                   %PROF_TITLE%
+                </span>
+            </div>
+            <div class="subcategory">
+                %SUB_CAT%
+            </div>
+            <ul class="project-desc list-inline">
+                <li>
+                    {CSF_JOB_COMPLETED} : %JOB_COMPLETED%
+                </li>
+                <li>
+                    {CSF_SOLD_SERVICE} : %SOLD_SERVICES%
+                </li>
+                <li>
+                    {CSF_EARNED} : %TOTAL_EARN%
+                </li>
+                <li>
+                    {CSF_RESPONSE_TIME} : %RESP_TIME%
+                </li>
+                <li>
+                    {CSF_PORTFOLIO} : %PORTFOLIO%
+                </li>
+            </ul>
+            <ul class="project-desc list-inline">
+                <li class="%PROF_TITLE_CLASS%">
+                    %PROF_TITLE%
+                </li>
+                <li class="theme-color">
+                    %USER_LVL%
+                </li>
+                <li>
+                    <i class="fa fa-globe" aria-hidden="true">
+                    </i>
+                    %USER_LOCATION%
+                </li>
+            </ul>
+            <div class="services">
+                <ul class="list-inline">
+                   %SKILLS%
+                </ul>
+            </div>
+        </div>
+    </div>
+</li> */ ?>

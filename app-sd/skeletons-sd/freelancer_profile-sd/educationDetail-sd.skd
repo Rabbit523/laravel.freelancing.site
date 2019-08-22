@@ -1,0 +1,46 @@
+<!-- <li class="media">
+  <div class="pull-left">
+     <div class="dashboard-icon customIcon">
+        <img src="{SITE_UPD}education.png" />
+     </div>
+  </div>
+  <div class="media-body">
+     <h6>
+        %DEGREE% | %INSTITUTE% &middot; <span>%START_YR% - %END_YR%</span>
+     </h6>
+     <div class="edit_remove">
+        <a class="edit editRecord" data-entity="add_education" data-id="%ID%" data-div="educationSection" title="Edit">
+          <img src="{SITE_IMG}icon/edit.png" alt="">
+        </a>
+        <a href="javascript:void(0)" class="delete delRecord" data-entity="education" data-id="%ID%" title="Delete">
+          <img src="{SITE_IMG}icon/garbage.png" alt="">
+        </a>
+     </div>
+    <p class="area-study">%AREA_STUDY%</p>
+     <p>
+        %DESC%
+     </p>
+  </div>
+</li> -->
+
+<div class="fl-edu-item">
+  <div class="media">
+    <div class="media-left">
+      <div class="fl-edu-icon">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="media-body fl-edu-info">
+      <div class="fl-edu-heading">
+          <h4 class="main-title">%DEGREE% <span>%INSTITUTE%</span></h4>
+          <div class="userdetail-itemaction">
+            <a href="javascript:void(0)" class="edit editRecord" data-entity="add_education" data-id="%ID%" data-div="educationSection" title="Edit"><i class="fa fa-pencil"></i></a>
+            <a href="javascript:void(0)" class="delete delRecord" data-entity="education" data-id="%ID%" title="Delete"><i class="fa fa-trash-o"></i></a>
+          </div>
+          <div class="edu-years">%START_YR% - %END_YR%</div>
+          <div class="edu-department">%AREA_STUDY%</div>
+      </div>      
+      <div class="fl-edu-sort-info">%DESC%</div>
+    </div>
+  </div>
+</div>

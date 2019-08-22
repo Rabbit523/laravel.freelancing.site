@@ -1,0 +1,5 @@
+<div class="item %ACTIVE_CLASS% slide%NO%">
+	<div class="img-overlay"></div>
+    <img src="%IMAGE%" alt="">
+</div>
+            

@@ -1,0 +1,691 @@
+<section>
+   <div class="main-dashboard">
+      <div class="container">
+         <div class="profile">
+            <form name="servicesFrm" id="servicesFrm" method="post" enctype="multipart/form-data">
+                <div class="featurette-job">
+                   <div class="row">
+                     <div class="col-md-8">
+                       <div class="theme-form">
+                          <h2 class="main-heading">
+                            {FPS_EDIT_SERVICE}
+                         </h2>
+                         <div class="post-serviceimg form-group">
+                            <label>
+                            {F_UPLOAD_SERVICE_IMG_LBL}
+                            </label>
+                            <div class="file-input-wrapper">
+                              <label for="upload-file" class="file-input-button">
+                                  {F_CHOOSE_IMG_LBL}
+                              </label>
+                              <input id="upload-file" type="file" name="services_file">
+                            </div>
+                            <ul class="file-names clearfix" id="attchments">
+                              %SERVICES_IMG%
+                            </ul>
+                         </div>
+                         <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                               <div class="form-group">
+                                  <label>
+                                  {F_ENTER_TITLE_LBL} :
+                                  </label>
+                                  <input class="form-control" name="serviceTitle" id="serviceTitle" value="%SERVICES_TITLE%" / >
+                               </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <label>
+                                  {F_SELECT_CATEGORY_LBL} :
+                                </label>
+                                <div class="form-group">
+                                  <select class="form-control" name="category" id="category">
+                                     %CATEGORY%
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <label>
+                                  {F_SELECT_SUB_CAT_LBL} :
+                                </label>
+                                <div class="form-group">
+                                  <select class="form-control" name="subcategory" id="subcategory">
+                                  %SUBCATEGORY%
+                                  </select>
+                                </div>
+                            </div>
+                          </div>
+                         <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                               <div class="form-group">
+                                  <label>
+                                  {F_NO_DAYS_LBL} :
+                                  </label>
+                                  <!-- <input class="form-control" name="noDayDelivery" id="noDayDelivery" value="%NO_DAYS%" type="number" min="1"/ > -->
+                                  <div class="sp-quantity">
+                                      <div class="sp-minus sp-minus-delivery"> <a class="ddd" href="javascript:void(0)">-</a>
+                                      </div>
+                                      <div class="sp-input">
+                                          <input type="text" class="quntity-input" value="%NO_DAYS%" name="noDayDelivery" id="noDayDelivery" min="1">
+                                      </div>
+                                      <div class="sp-plus sp-plus-delivery"> <a class="ddd" href="javascript:void(0)">+</a>
+                                      </div>
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                               <div class="form-group">
+                                  <label>
+                                  {F_SERVICE_PRICE_LBL} ({CURRENCY_SYMBOL}) :
+                                  </label>
+                                  <input class="form-control" name="servicesPrice" id="servicesPrice" maxlength="6" value="%SERVICE_PRICE%" / >
+                               </div>
+                            </div>
+                         </div>
+                         <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                               <div class="form-group">
+                                  <label>
+                                  {F_SERVICE_DESC_LBL}
+                                  </label>
+                                  <textarea rows="3" class="form-control ckeditor" name="description" id="description">%DESC%</textarea>
+                                  <label id="description-error" class="help-block" for="description"></label>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                               <div class="form-group">
+                                  <label>
+                                  {F_REQUIRED_DETAILS_LBL} :
+                                  </label>
+                                    <textarea class="form-control" rows="3" name="requiredDetails" id="requiredDetails">%REQUIRED_DETAILS%</textarea>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                               <div class="form-group">
+                                  <label class="featured_yn">
+                                  {F_WANT_TO_MAKE_FEATURED_LBL}
+                                  </label>
+                                  <div class="material-switch ">
+                                     <input id="someSwitchOptionPrimary" name="featured" type="checkbox" value="y" %FEATURED% class="make_featured"/>
+                                     <label for="someSwitchOptionPrimary" class="label-primary">
+                                     </label>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="row days_div" style="display: %DISPLAY_TYPE%">
+                            <div class="col-md-4 col-sm-4">
+                              <div class="form-group">
+                                   <label class="featured_yn">
+                                     {F_FEATURED_DAYS_LBL} :
+                                  </label>
+                                  <!-- <input type="number" name="no_of_days" id="no_of_days" min=0 class="form-control no_of_days" value="%FETURED_DAYS%"> -->
+                                  <div class="sp-quantity">
+                                    <div class="sp-minus sp-minus-featured"> <a class="ddd" href="javascript:void(0)">-</a>
+                                    </div>
+                                    <div class="sp-input">
+                                        <input name="no_of_days" id="no_of_days" min=0 value="%FETURED_DAYS%" type="text" class="quntity-input no_of_days">
+                                    </div>
+                                    <div class="sp-plus sp-plus-featured"> <a class="ddd" href="javascript:void(0)">+</a>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-8 col-sm-8">
+                              <label>{F_PAYABLE_AMNT_LBL} : </label>
+                              <div class="featured_amount">%FEATURED_AMOUNT%</div>
+                            </div>
+                         </div>
+                         <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                               <div class="addOnMainDiv addon_display %ADDON_HIDE_CLASS%">
+                                 <div class="addonDiv">
+                                    %ADDON_DETAIL%
+                                 </div>
+                               </div>
+                               <div class="add_addons">
+                                  <a href="javascript:void(0)" class="add_more_addon">
+                                    {ADD_ADDONTITLE_LBL}
+                                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                                  </a>
+                               </div>
+                            </div>
+                         </div>
+                         <input type="hidden" name="frmToken" id="frmToken" value="%RANDOM%">
+                         <div class="text-right">
+                           <div class="theme-button">
+                              <a class="btn btn-default delete_service" href="{SITE_URL}my-services" title="{CUST_CANCEL}" >{CUST_CANCEL}</a>
+                              <a class="btn btn-default delete delete_service" title="Delete" data-id="%ID%">{FPS_DELETE}</a>
+                              <input type="hidden" name="id" id="id" value="%ID%">
+                              <input type="hidden" name="action" id="action" value="editData">
+                              <button type="submit" class="btn btn-system"  name="saveServices" id="saveServices">{FPS_EDIT}
+                              </button>
+                           </div>
+                         </div>
+                        <!--  <div class="theme-button-default">
+                           <a href="{SITE_URL}my-services" class="btn-back">Back</a>
+                         </div> -->
+                       </div>
+                     </div>
+                     <div class="col-md-4">
+                          <div class="tip-section">
+                              <div class="tip-box">
+                                  <div class="box-corner"></div>
+                                  <h3>{FPS_USEFUL_TIPS}</h3>
+                                  <ol>
+                                      <li>
+                                           {FPS_DRAW_ON_EXPERIENCE}
+                                      </li>
+                                      <li>
+                                          {FPS_BE_FLEXIBLE}
+                                      </li>
+                                      <li>
+                                          {FPS_DONT_FORGET_TO_PROMOTE}
+                                      </li>
+                                  </ol>
+                              </div>
+                          </div>
+                      </div>
+                   </div>
+                </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>
+
+<script type="text/javascript">
+  var url = "{SITE_URL}ajaxFreelancerPostServices";
+  $(document).ready(function(){
+    function goBack() {
+        window.history.back();
+    }
+    /*subcategory load start*/
+    $(document).on("change","#category",function(){
+        var cat = $(this).val();
+        addOverlay();
+        $.post(url,{"action":"load_sub_category","maincat_id":cat},function(data){
+            removeOverlay();
+            $("#subcategory").html(data.content);
+        },'json');
+    });
+
+    $(document).on("click",".remove_div",function(e){
+      e.preventDefault();
+      var id = $(this).attr("id");
+      var dataId = $(this).attr("data-id"),serviceId = "%ID%";
+
+      if(dataId!="1")
+      {
+        addOverlay();
+        $.post(url,{"action":"remove_addOn","id":id,"index":0,"serviceId":serviceId},function(data)
+        {
+          removeOverlay();
+          $("#"+id).parent().parent().remove();
+          if(data.content!='')
+            $(".addonDiv").html(data.content);
+        },'json');
+      }
+      else
+      {
+        addOverlay();
+        $.post(url,{"action":"remove_addOn","id":id,"index":1,"serviceId":serviceId},function(data)
+        {
+          removeOverlay();
+          $(".addon_display").addClass("hide");
+          if(data.content!='')
+            $(".addonDiv").html(data.content);
+        },'json');
+      }
+    });
+
+    /*Add more addon*/
+
+    $(document).on("keypress",".addon_price",function(e){
+        if($(".addon_price").val().length>4){
+            return false;
+        }
+    });
+    $(document).on("keypress",".addon_dur",function(e){
+        if($(".addon_dur").val().length>1){
+            return false;
+        }
+    });
+
+    $(document).on("click",".add_more_addon",function(){
+
+        if($(".addOnMainDiv").hasClass("hide"))
+        {
+          $(".addOnMainDiv").removeClass("hide");
+        }
+        else
+        {
+          var $buttton = $('a[id^="remove_div"]:last');
+          var no = parseInt( $buttton.prop("id").match(/\d+/g), 10 );
+          var num = parseInt( $buttton.prop("id").match(/\d+/g), 10 ) +1;
+          $(".addonDiv").children().clone().find("input[type=number]").val("").end().find("input:text").val("").end().find("textarea").val("").end().appendTo(".addOnMainDiv").find("a").prop("id","remove_div"+num);
+          var id = parseInt($("#remove_div"+no).attr("data-id"));
+          $("#remove_div"+num).attr("data-id",id+1);
+        }
+    });
+
+       /* Delete file attachments */
+       $(document).on("click",".delAttachment", function(e){
+            var id = $(this).attr("data_id");
+
+            e.preventDefault();
+            if (confirm("{FPS_ARE_YOU_SURE_YOU_WANT_TO_DELETE_ATTACHMENT}?")) {
+                $.ajax({
+                        url: url,
+                        type: "POST",
+                        dataType: "json",
+                        data:{'action':'file_delete','id':id,'type':'edit'},
+                        beforeSend: function () {
+                           addOverlay();
+                        },
+                        success: function (response) {
+                            if(response['status'] == 'true'){
+                                $('.attchFile_'+id).remove();
+                                toastr['success']('{FPS_ATTACHMENT_DELETED_SUCCESSFULLY}.');
+                            } else {
+                                toastr['error']('{FPS_THERE_IS_AN_ISSUE_DELETING}.');
+                            }
+                        },
+                        complete: function (xhr) {
+                            removeOverlay();
+                        }
+                    });
+            }
+       });
+       /* End code */
+
+       /* File upload using ajax */
+        $('#avatarInput').change(function(event) {
+             var file_data = $(this).prop('files')[0];
+             var fileTagId = $(this).attr('id');
+             var ImageId = fileTagId.split(',');
+             var img = ImageId[1];
+
+             var imagPath = $(this).val();
+             var files = event.target.files;
+             var fileName = files[0].name;
+             var lastdotval = imagPath.lastIndexOf(".");
+             var res = imagPath.substr(lastdotval + 1, 4);
+
+             if (res != 'png' && res != 'PNG' && res != 'JPG' && res != 'jpg' && res != 'JPEG' && res != 'jpeg') {
+                $('#avatarInput').val('');
+                toastr["error"]("{PLEASE_SELECT_A_VALID_FILE}");
+                return false;
+             } 
+        });
+        /* End code */
+
+       /* File upload using ajax */
+       // $('#upload-file').change(function(event) {
+       //      var file_data = $(this).prop('files')[0];
+       //      var fileTagId = $(this).attr('id');
+       //      var ImageId = fileTagId.split(',');
+       //      var img = ImageId[1];
+
+       //      var imagPath = $(this).val();
+       //      var files = event.target.files;
+       //      var fileName = files[0].name;
+       //      var lastdotval = imagPath.lastIndexOf(".");
+       //      var res = imagPath.substr(lastdotval + 1, 4);
+
+       //      if (this.files[0].size > 5242880) {
+       //          toastr['info']("Image size must be less then 5MB");
+       //          return false;
+       //      }
+       //      if (res != 'png' && res != 'PNG' && res != 'JPG' && res != 'jpg' && res != 'JPEG' && res != 'jpeg') {
+       //          toastr["error"]("Please select a valid file");
+       //          return false;
+
+       //      } else {
+       //          token = $('#frmToken').val();
+       //          var img_form_data = new FormData();
+       //          img_form_data.append("file", file_data);
+       //          img_form_data.append("action", "move_image");
+       //          img_form_data.append("token",token);
+       //          img_form_data.append("extention",res);
+
+       //          $.ajax({
+       //              url: url,
+       //              cache: false,
+       //              contentType: false,
+       //              processData: false,
+       //              data: img_form_data,
+       //              type: 'post',
+       //              dataType: 'json',
+       //              beforeSend: function () {
+       //                     addOverlay();
+       //              },
+       //              success:function(data)
+       //              {
+       //                  $('#attchments').append(data);
+       //              },
+       //              complete: function (xhr) {
+       //                  removeOverlay();
+       //              }
+       //         });
+
+       //      }
+       // });
+       /* End code */
+
+
+
+    /*validation*/
+
+    jQuery.validator.addMethod("required_text", function(value, element) {
+         if(!$(".addon_display").hasClass('hide')){
+            return value != '';
+         }else{
+            return true;
+         }
+    },"{FPS_PLEASE_ENTER_ADDON_TITLE}");
+    jQuery.validator.addMethod("required_desc", function(value, element) {
+         if(!$(".addon_display").hasClass('hide')){
+            return value != '';
+         }else{
+            return true;
+         }
+    },"{FPS_PLEASE_ENTER_ADDON_DESCRIPTION}");
+    jQuery.validator.addMethod("required_price", function(value, element) {
+         if(!$(".addon_display").hasClass('hide')){
+            return value != '';
+         }else{
+            return true;
+         }
+    },"{FPS_PLEASE_ENTER_ADDON_PRICE}");
+    jQuery.validator.addMethod("required_dur", function(value, element) {
+         if(!$(".addon_display").hasClass('hide')){
+            return value != '';
+         }else{
+            return true;
+         }
+    },"{FPS_PLEASE_ENTER_ADDON_DURATION}");
+
+    jQuery.validator.addClassRules("addon_text", { required_text: true });
+    jQuery.validator.addClassRules("addon_desc", { required_desc: true });
+    jQuery.validator.addClassRules("addon_price", { required_price: true });
+    jQuery.validator.addClassRules("addon_dur", { required_dur: true });
+
+    $(document).on("keydown","#no_of_days",function(event){
+           var charCode = event.which || event.keyCode || event.charCode;
+           return false;
+       });
+    /*$(document).on("keydown","#noDayDelivery",function(event){
+         var charCode = event.which || event.keyCode || event.charCode;
+         return false;
+    });*/
+    $(document).on("click", ".sp-plus-featured", function() {
+      var days = $("#no_of_days").val();
+      if(days > 30){
+        $("#no_of_days").val("30");
+        return false;
+      }
+      var payableAmount = days * {SERVICE_FEATURED_FEES};
+      $('.featured_amount').text("{CURRENCY_SYMBOL}" + payableAmount);
+    });
+    $(document).on("click", ".sp-minus-featured", function() {
+      var days = $("#no_of_days").val();
+      if(days < 1){
+        $("#no_of_days").val("1");
+        return false;
+      }
+      var payableAmount = days * {SERVICE_FEATURED_FEES};
+      $('.featured_amount').text("{CURRENCY_SYMBOL}" + payableAmount);
+    });
+    $(document).on("click", ".sp-minus-delivery", function() {
+      var days = $("#noDayDelivery").val();
+      if(days < 1){
+        $("#noDayDelivery").val("1");
+        return false;
+      }
+    });
+    $(document).on("click", ".sp-plus-delivery", function() {
+      var days = $("#noDayDelivery").val();
+      if(days > 30){
+        $("#noDayDelivery").val("30");
+        return false;
+      }
+    });
+
+    jQuery.validator.addMethod("startingSpaceNotAllow", function(value, element)
+    {
+        return this.optional(element) || /^\S.*$/.test(value);
+    }, "{FPS_SPACE_IS_NOT_ALLOWED}");
+
+    $(document).on("click","#saveServices",function(){
+        $("#servicesFrm").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'label',
+            highlight: function (element)
+            {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element)
+            {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            rules:
+            {
+                serviceTitle:{required:true},
+                category:{required:true},
+                noDayDelivery:{required:true},
+                servicesPrice:{required:true,number:true,min :1},
+                description:{required:true},
+                requiredDetails:{required:true},
+                no_of_days:
+                {
+                  required:{
+                    depends: function(element) {
+                      return $('#someSwitchOptionPrimary').is(':checked')
+                    }
+                  }
+                }
+            },
+            messages:
+            {
+                serviceTitle:{required:"{FPS_PLEASE_ENTER_SERVICES_TITLE}"},
+                category:{required:"{FPS_PLEASE_SELECT_CATEGORY}"},
+                noDayDelivery:{required:"{FPS_PLEASE_ENTER_NUMBER_OF_DAYS}"},
+                servicesPrice: { required:"{FPS_PLEASE_ENTER_SERVICES_PRICE}",number:"{FPS_PLEASE_ENTER_NUMBER_ONLY}",startingSpaceNotAllow:"{FPS_SPACE_IS_NOT_ALLOWED}",min: "{FPS_PLEASE_ENTER_AMOUNT_GREATER}"},
+                description:{required:"{FPS_PLEASE_ENTER_DESCRIPTION}"},
+                requiredDetails:{required:"{FPS_PLEASE_ENTER_REQUIRED_DETAILS_FOR_SERVICE}"},
+                no_of_days:{
+                  required: "{FPS_PLEASE_ENTER_FEATURED_DAYS}"
+                }
+            }
+        });
+
+        if($("#servicesFrm").valid())
+        {
+            addOverlay();
+            $("#servicesFrm").submit();
+        }
+    });
+
+    $(document).on("change",".make_featured",function(){
+      if($(this).prop("checked"))
+      {
+          $(".days_div").css("display","block");
+      }
+      else
+      {
+          $("#no_of_days").val("");$(".featured_amount").text({SERVICE_FEATURED_FEES});
+          $(".days_div").css("display","none");
+      }
+    });
+
+
+  });
+$(document).on("click",".file-input-button",function(e){
+  e.preventDefault();
+  document.getElementById('avatarInput').value = "";
+  $("#avatar-modal").modal('show');
+});
+$(document).on("click",".avatar-cancel",function(e){
+  e.preventDefault();
+  $("#avatar-modal").modal('hide');
+});
+function crop_image_file_upload(){
+  var inp = document.getElementById('avatarInput');
+  if(inp.files.length == 0){
+    alert('{FPS_PLEASE_SELECT_ATLEAST_ONE_FILE}');
+    return false;
+  }
+  var $avatarForm = $('.avatar-form');
+  addOverlay();
+  var url = $avatarForm.attr('action');
+  var data = new FormData($avatarForm[0]);
+  data.append('token',$('#frmToken').val());
+  $.ajax(url, {
+    type: 'post',
+    data: data,
+    dataType: 'json',
+    processData: false,
+    contentType: false,
+
+    beforeSend: function () {
+      console.log('before send');
+    },
+
+    success: function (data) {
+      //console.log(data);
+      if(data.state == 200){
+        $('#attchments').append(data.result);
+        $('#avatar-modal').modal('hide');
+        document.getElementById('upload-file').files = document.getElementById('avatarInput').files;
+        //document.getElementById('avatarInput').value = "";
+        removeOverlay();
+      }else{
+        removeOverlay();
+        alert('{SOMETHING_WENT_WRONG}');
+      }
+    },
+
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+      console.log('error');
+      removeOverlay();
+    },
+
+    complete: function () {
+      removeOverlay();
+      console.log('complete');
+    }
+  });
+}
+</script>
+
+
+<link rel="stylesheet" href="{SITE_JS}cropper-master_new/dist/cropper.min.css">
+<link rel="stylesheet" href="{SITE_JS}cropper-master_new/examples/crop-avatar/css/main.css">
+
+<script src="{SITE_JS}cropper-master_new/dist/cropper.min.js"></script>
+<script src="{SITE_JS}cropper-master_new/examples/crop-avatar/js/main2.js"></script>
+<div class="container" id="crop-avatar">
+  <div class="avatar-view" title="Change the avatar">
+    <img src="images/picture.jpg" alt="Avatar">
+  </div>
+  <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <form class="avatar-form" action="{SITE_URL}app-sd/units-sd/freelancer_post_services-sd/ajax.freelancer_post_services-sd.php" enctype="multipart/form-data" method="post">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="avatar-modal-label">{FPS_ADD_UPDATE_SERVICE_IMAGES}</h4>
+          </div>
+          <div class="modal-body">
+            <div class="avatar-body">
+
+              <!-- Upload image and data -->
+              <div class="avatar-upload">
+                <input type="hidden" class="avatar-src" name="avatar_src" value="{DIR_SERVICES_FILE}">
+                <input type="hidden" class="avatar-data" name="avatar_data">
+                <!-- <label for="avatarInput">{FPS_SELECT_FILE}</label> -->
+                <label class="choose-img" for="avatarInput">Choose Image</label>
+                <input type="file" class="avatar-input" id="avatarInput" name="avatar_file">
+              </div>
+              <!-- Crop and preview -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="avatar-wrapper"></div>
+                </div>
+                <!-- <div class="col-md-3">
+                  <div class="avatar-preview preview-lg"></div>
+                  <div class="avatar-preview preview-md"></div>
+                  <div class="avatar-preview preview-sm"></div>
+                </div> -->
+              </div>
+
+              <div class="row avatar-btns">
+                  <button type="submit" class="btn btn-system avatar-save">{FD_SUBMIT}</button>
+                  <a type="submit" class="btn btn-danger avatar-cancel" >{FD_CANCEL}</a>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div><!-- /.modal -->
+
+</div>
+
+<script type="text/javascript">
+  /*delete record*/
+  $(document).on("click",".delete",function(){
+    $(".delete_record").attr("data-id",$(this).attr("data-id"));
+    $("#delete").modal("show");
+  });
+  $(document).on("click",".delete_record",function(){
+    var id = $(this).attr("data-id");
+    addOverlay();
+    $.post("{SITE_URL}ajaxFreelancerMyServices",{"action":"delete_record",id:id},function(data){
+      removeOverlay();
+      //toastr['success']("service has been deleted successfully");
+      /*$(".services_"+id).hide();
+      $("#delete").modal("hide");*/
+      window.location.href = $.trim(data);
+    },'html');
+  });
+</script>
+
+<div class="modal fade" id="delete" role="dialog" data-backdrop="static" tabindex="-1">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <h4 class="modal-title">
+          {FPS_DELETE}
+        </h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <p>
+            {FMS_ARE_YOU_SURE_YOU_WANT_TO_DELETE}?
+          </p>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="theme-button-default">
+          <a href="javascript:void(0)" data-dismiss="modal">{FD_CANCEL}</a>
+        </div>
+        <div class="theme-button">
+            <a href="javascript:void(0)" class="delete_record">{FPS_DELETE}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<tr style="%WINNER%">
+    <td>%USER% %IS_WON%</td>
+    <td>%MSG%</td>
+    <td>%DATE% %APPROVED_DATE%</td>
+    <td>%IS_RESERVED%</td>
+</tr>
+

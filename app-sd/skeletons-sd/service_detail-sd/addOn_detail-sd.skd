@@ -1,0 +1,17 @@
+<li class="addons-item-wrap">
+    <label class="checkbox-container">
+    <input type="checkbox" value="%ADDON_ID%" name="addOn[]" id="addOn_%ADDON_ID%" data-days="%DAYS%" data-id="%ADDON_PRICE_A%" data-id="%ADDON_ID%" data-price="%ADDON_PRICE%" class="addOnSelect">
+      <div class="addons-label">
+        <div class="addons-icon-wrap">
+            <span class="check-icon"></span>
+        </div>
+        <div class="addons-detail-wrap">
+          <div class="addons-title-wrap">
+            <h5 class="addons-title">%ADDON_TITLE% <span>(%DAYS% {CMJ_DAYS})</span></h5>
+            <div class="price-tag-wrap amount-wrap">%ADDON_PRICE%<span>{CURRENCY_SYMBOL}</span></div>
+          </div>
+          <div class="addons-desc">%ADDON_DESC%</div>
+        </div>
+      </div>
+    </label>
+</li>

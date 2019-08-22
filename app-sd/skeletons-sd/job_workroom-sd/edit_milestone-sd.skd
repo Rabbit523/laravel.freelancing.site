@@ -1,0 +1,33 @@
+<div class="sub_milestone well" id="sub_milestone%KEY%" >
+    <span class="remove-mls">
+        <a href="javascript:void(0)" class="remove_div" data-id="%ID%">
+            <i class="fa fa-times"></i>
+        </a>
+    </span>
+    <div class="form-group">
+        <label for="dispute-amount">
+            {ENTER_MILESTONE_TITLE}
+        </label>
+        <input type="text" name="milestoneTitle[%KEY%]" class="form-control milestone_title" value="%MILESTONETITLE%" >
+    </div>
+    <div class="form-group">
+        <label for="message">
+            {MILESTONE_DESCRIPTION}
+        </label>
+        <textarea class="form-control milestone_desc" name="milestoneDesc[%KEY%]" rows="3">%MILESTONEDESC%</textarea>
+    </div>
+    <div class="form-group">
+        <label for="message">
+            {MILESTONE_COMPLETION_DATE}
+        </label>
+        <input class="form-control milestone_date datepicker" value="%COMPLETIONDATE%" name="milestone_date[%KEY%]"  rows="3">
+    </div>
+    <div class="form-group">
+        <label for="message">
+            {MILESTONE_AMOUNT}
+        </label>
+        <input type="text" name="amount[%KEY%]" value="%AMOUNT%" class="form-control milestone_amount">
+    </div>
+    <input type='hidden' name="mid[%KEY%]" value="%ID%">
+</div>
+

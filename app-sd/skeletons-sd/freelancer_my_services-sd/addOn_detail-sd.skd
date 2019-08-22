@@ -1,0 +1,6 @@
+<li>
+   <p>%ADDONTITLE%</p>
+   <p class="adon-desc">%ADDON_DESC%</p>
+   <span>{FS_ADDITIONAL_WORKING} %ADDONDAYREQUIRED% day(s)</span>
+   <span class="price">%ADDON_PRICE%</span>
+</li>

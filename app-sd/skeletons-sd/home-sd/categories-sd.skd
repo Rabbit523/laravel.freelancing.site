@@ -1,0 +1,13 @@
+<div class="col-md-2 col-sm-4">
+	<div class="service-box %CAT_CLASS%">
+		<a href="%CAT_LINK%">
+			<div class="service-img">
+				<img src="%CAT_IMAGE%" alt="">
+			</div>
+			<h3>%CAT_NAME%</h3>
+			<?php /* <span class="arrow">
+				<i class="fa fa-angle-down"></i>
+			</span> */ ?>
+		</a>
+	</div>
+</div>

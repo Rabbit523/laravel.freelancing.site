@@ -1,0 +1,448 @@
+<script type="text/javascript" src="{SITE_JS}URI.js"></script>
+<!-- Searchbar Section -->
+%SEARCH_SECTION%
+<? /*
+<section class="serchbar-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="searchbar-form filters-search">
+                    <form class="form" action="" method="POST" id="frmMyJobs" name="frmMyJobs">
+                        <div class="input-group">
+                           <span class="input-group-btn">
+                              <select class="btn">
+                                <option>Jobs</option>
+                                <option>Freelancers</option>
+                                <option>Services</option>
+                              </select>
+                           </span>
+                            <!-- <input type="text" class="form-control" placeholder="Find Jobs (eg. Web Design)">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button">Search</button>
+                            </span> -->
+                            <span class="main-input">
+                              <input type="text" class="form-control" placeholder="Search" name="keyword" id="keyword" value="%KEYWORD%">
+                              <i class="fa fa-search desktop-view"></i>
+                            </span>
+                            <span class="input-group-btn location-input-group desktop-view">
+                              <input type="text" class="form-control" placeholder="Location">
+                              <i class="fa fa-map-marker"></i>
+                            </span>
+                           <span class="input-group-btn">
+                                 <a href="javascript:void(0)" class="btn btn-primary">
+                                    <i class="fa fa-search mobile-view"></i> 
+                                    <span class="desktop-view">Search</span>
+                                 </a>
+                                <!-- <button class="btn btn-primary search_record" type="button">Search</button> -->
+                           </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ */?>
+<!-- Searchbar Section End -->
+<section class="main-dashboard">
+    <div class="container">
+        <div class="" id="filters-search">
+            <div class="featurette-job search-page">
+                <div class="sub_featured">
+                 
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <div id="sidebarMenu" class="left-sidebar filters-search">
+                            <div class="panel panel-default theme-box">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">{CMJ_FILTERS}</h4>
+                                    <div class="panel-tools pull-right">
+                                        <a href="{SITE_URL}search/service/">{FMS_CLEAR} <i class="fa fa-refresh" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="filter-box">
+                                        <h5 class="filter-title">{S_CAT_LBL}</h5>
+                                        <div class="filter-body">
+                                            <div class="form-group">
+                                                <select class="form-control category" name="category" id="category" data-id="">
+                                                    %CATEGORY%
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-box">
+                                        <h5 class="filter-title">{S_SUB_CAT_LBL}</h5>
+                                        <div class="filter-body">
+                                            <div class="form-group">
+                                                <select class="form-control subcategory" name="subcategory" id="subcategory">%SUBCATEGORY%</select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-box">
+                                        <h5 class="filter-title">{S_EXP_LBL}</h5>
+                                        <div class="filter-body">
+                                            <ul class="filter-lists">
+                                                 <li>
+                                                    <input type="radio" id="test1" name="exp_lvl" value="beginner" %BEGINNER_CLASS%>
+                                                    <label for="test1">
+                                                    {S_BEGINNER_LBL}
+                                                    </label>
+                                                 </li>
+                                                 <li>
+                                                    <input type="radio" id="test3" name="exp_lvl" value="intermediate" %IM_CLASS%>
+                                                    <label for="test3">
+                                                    Intermediate
+                                                    </label>
+                                                 </li>
+                                                 <li>
+                                                    <input type="radio" id="test2" name="exp_lvl" value="pro" %PRO_CLASS%>
+                                                    <label for="test2">
+                                                    {S_PRO_LBL}
+                                                    </label>
+                                                 </li>
+                                              </ul>
+                                        </div>
+                                    </div>
+                                    <div class="filter-box">
+                                        <h5 class="filter-title">{S_DELIVERY_TYPE}</h5>
+                                        <div class="filter-body">
+                                            <div class="form-group">
+                                                 <input type="number" class="form-control deliveryTime" name="deliveryTime" id="deliveryTime" min=0 value="%DELIVERY_TIME%">
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-box">
+                                        <h5 class="filter-title">{S_SERVICE_PRICE_LBL}</h5>
+                                        <div class="filter-body">
+                                            <div class="range_slider">
+                                                 <div>
+                                                    <input type="text" id="amount" name="start_amount" value="%START_AMOUNT%" readonly style="border:0; font-weight:bold;">
+                                                    <input type="text" id="amount2" name="end_amount" value="%END_AMOUNT%" readonly style="border:0; font-weight:bold;">
+                                                 </div>
+                                                 <div id="slider-range">
+                                                 </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-box">
+                                        <h5 class="filter-title">{S_LEFT_SORT_LBL}</h5>
+                                        <div class="filter-body">
+                                            <div class="form-group">
+                                                 <select class="form-control serviceType" name="serviceType" id="serviceType">
+                                                    <option value="">--Select Service Type--</option>
+                                                    <option value="featured" %SERVICETYPE_FEATURED%>
+                                                       {S_ONLY_FEATURED_LBL}
+                                                    </option>
+                                                    <option value="new" %SERVICETYPE_NEW%>
+                                                       {S_NEW_SERVICE_LBL}
+                                                    </option>
+                                                 </select>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-box mobile-view">
+                                        <h5 class="filter-title">{FREELANCER_LOCATION}</h5>
+                                        <div class="filter-body">
+                                            <div class="location_search">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control load_ggl_autocomplete location" name="location" id="location" value="%LOCATION%"/>
+                                                <i class="fa fa-map-marker" aria-hidden="true">
+                                                </i>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-menu">
+                            <button>
+                            <i class="fa fa-sliders" aria-hidden="true">
+                            </i>
+                            <?php /* {FS_FILTERS}*/ ?>
+                            </button>
+                        </div>
+                    </div>
+                  <div class="col-md-9 col-sm-8">
+                        <div class="panel panel-default theme-box no-bg no-padding">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Services</h4>
+                                <div class="search_sort panel-tools pull-right">
+                                  <select class="form-control" name="sorting" id="sorting">
+                                     <option value="">
+                                        {S_SORT_BY_LBL}
+                                     </option>
+                                     <option value="Newest" %NEWEST%>
+                                        {S_NEWEST_SORT_LBL}
+                                     </option>
+                                     <option value="lTohSold" %LTOHSOLD%>
+                                        {S_LTOH_SOLD_SORT_LBL}
+                                     </option>
+                                     <option value="hTolSold" %HTOLSOLD%>
+                                        {S_HTOL_SOLD_SORT_LBL}
+                                     </option>
+                                     <option value="lTohPrice" %LTOHPRICE%>
+                                        {S_PRICE_LTOH_SORT_LBL}
+                                     </option>
+                                     <option value="hTolPrice" %HTOLPRICE%>
+                                        {S_PRICE_HTOL_SORT_LBL}
+                                     </option>
+                                     <option value="lTohRate" %LTOHRATE%>
+                                        {S_RATE_LTOH_SORT_LBL}
+                                     </option>
+                                     <option value="hTolRate" %HTOLRATE%>
+                                        {S_RATE_HTOL_SORT_LBL}
+                                     </option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="services-list-wrap">
+                                    <div class="row dash-job cust-purchase" id="service_data">
+                                        %SERVICES_DATA%
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                        <!-- Old Design Service -->
+                     <div class="theme-form" style=" display: none;">
+                        <div class="job_feed_heading">
+                           <div class="row">
+                              <div class="col-md-8 col-sm-7">
+                                 <h1 class="main-heading">
+                                    {S_SERVICES_LBL}
+                                 </h1>
+                              </div>
+                              <div class="col-md-4 col-sm-5">
+                                 <?php /*<div class="search_sort">
+                                    <select class="form-control" name="sorting" id="sorting">
+                                       <option value="">
+                                          {S_SORT_BY_LBL}
+                                       </option>
+                                       <option value="Newest" %NEWEST%>
+                                          {S_NEWEST_SORT_LBL}
+                                       </option>
+                                       <option value="lTohSold" %LTOHSOLD%>
+                                          {S_LTOH_SOLD_SORT_LBL}
+                                       </option>
+                                       <option value="hTolSold" %HTOLSOLD%>
+                                          {S_HTOL_SOLD_SORT_LBL}
+                                       </option>
+                                       <option value="lTohPrice" %LTOHPRICE%>
+                                          {S_PRICE_LTOH_SORT_LBL}
+                                       </option>
+                                       <option value="hTolPrice" %HTOLPRICE%>
+                                          {S_PRICE_HTOL_SORT_LBL}
+                                       </option>
+                                       <option value="lTohRate" %LTOHRATE%>
+                                          {S_RATE_LTOH_SORT_LBL}
+                                       </option>
+                                       <option value="hTolRate" %HTOLRATE%>
+                                          {S_RATE_HTOL_SORT_LBL}
+                                       </option>
+                                    </select>
+                                 </div> */ ?>
+                              </div>
+                           </div>
+                        </div>
+                        <ul class="dash-job cust-purchase" id="service_data">
+                           %SERVICES_DATA%
+                        </ul>
+                     </div> 
+                     <!-- Old design service End -->
+                     <div class="view-more-button">
+                        <div class="theme-button">
+                           <a href="javascript:void(0)" class="load_more_data %LOAD_CLASS%" data-page="1">{S_VIEW_MORE_BTN_LBL}</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+<script type="text/javascript">
+   var url = "{SITE_URL}ajaxServiceSearch";
+   $(document).ready(function(){
+
+      /*sorting change*/
+      $(document).on("change","#sorting",function(){
+         search_record(1);
+      });
+      /*category change*/
+      $(document).on("change",".category",function(){
+         var catId = $(this).val(),divId = $(this).attr("data-id");
+         $.post(url,{"action":"subcateLoad",cat:catId},function(data){
+            (divId=='')  ? $("#subcategory").html(data.content) : $("#Rsubcategory").html(data.content);
+            search_record(1);
+         },'json');
+      });
+      /*sub category change*/
+      $(document).on("change",".subcategory",function(){
+         search_record(1);
+      });
+
+      /*skill change*/
+
+      $(document).on("change","input[type=radio]",function(){
+         search_record(1);
+      });
+
+      $(document).on("keyup",".deliveryTime",function(){
+         search_record(1);
+      });
+      $(document).on("change",".deliveryTime",function(){
+         search_record(1);
+      });
+
+
+      $(document).on("click",".load_more_data",function()
+      {
+           var pageNo = $(this).attr("data-page");
+           var p_no = parseInt(pageNo)+1;
+           search_record(p_no,"load_append");
+      });
+
+      $(document).on("click",".search",function(){
+         search_record(1);
+      });
+
+      $(document).on("change",".serviceType",function(){
+         search_record(1);
+      });
+      /*freelancer location*/
+
+      $(document).on("change","#location",function(){
+         setTimeout(function() {
+            search_record(1);
+         }, 200);
+      });
+   });
+
+   function search_record(p_no,loadType='load')
+   {
+       var query_param = $("#filters-search select").serialize()+"&"+$("#filters-search input").serialize()+"&action=load_seach_data&page_no="+p_no;
+       var new_serialized_url = URI(url+'/?'+query_param),
+           curr_uri = URI(window.location.href),
+           new_serialized_params = new_serialized_url.search(true);
+
+       ((new_serialized_params.category!= '' && new_serialized_params.category!=undefined) ? curr_uri.setSearch("category", new_serialized_params.category) : curr_uri.removeSearch("category"));
+       ((new_serialized_params.subcategory!= '' && new_serialized_params.subcategory!=undefined) ? curr_uri.setSearch("subcategory", new_serialized_params.subcategory) : curr_uri.removeSearch("subcategory"));
+
+       ((new_serialized_params.sorting!= '') ? curr_uri.setSearch("sorting", new_serialized_params.sorting) : curr_uri.removeSearch("sorting"));
+       ((new_serialized_params.serviceType!= '') ? curr_uri.setSearch("serviceType", new_serialized_params.serviceType) : curr_uri.removeSearch("serviceType"));
+       ((new_serialized_params.exp_lvl!= '' && new_serialized_params.exp_lvl!=undefined) ? curr_uri.setSearch("exp_lvl", new_serialized_params.exp_lvl) : curr_uri.removeSearch("exp_lvl"));
+       ((new_serialized_params.deliveryTime!= '' && new_serialized_params.deliveryTime!= undefined) ? curr_uri.setSearch("deliveryTime", new_serialized_params.deliveryTime) : curr_uri.removeSearch("deliveryTime"));
+       ((new_serialized_params.start_amount!= '' && new_serialized_params.start_amount!=undefined) ? curr_uri.setSearch("start_amount", new_serialized_params.start_amount) : curr_uri.removeSearch("start_amount"));
+       ((new_serialized_params.end_amount!= '' && new_serialized_params.end_amount!= undefined) ? curr_uri.setSearch("end_amount", new_serialized_params.end_amount) : curr_uri.removeSearch("end_amount"));
+
+       ((new_serialized_params.searchKeyword!= '' && new_serialized_params.searchKeyword!=undefined) ? curr_uri.setSearch("searchKeyword", new_serialized_params.searchKeyword) : curr_uri.removeSearch("searchKeyword"));
+       ((new_serialized_params.location!= '' && new_serialized_params.location!=undefined) ? curr_uri.setSearch("location", new_serialized_params.location) : curr_uri.removeSearch("location"));
+
+       /*responsive field*/
+       ((new_serialized_params.Rstart_amount!= '' && new_serialized_params.Rstart_amount!=undefined) ? curr_uri.setSearch("Rstart_amount", new_serialized_params.Rstart_amount) : curr_uri.removeSearch("Rstart_amount"));
+       ((new_serialized_params.Rend_amount!= '' && new_serialized_params.Rend_amount!= undefined) ? curr_uri.setSearch("Rend_amount", new_serialized_params.Rend_amount) : curr_uri.removeSearch("Rend_amount"));
+
+       ((new_serialized_params.Rcategory!= '' && new_serialized_params.Rcategory!=undefined) ? curr_uri.setSearch("Rcategory", new_serialized_params.Rcategory) : curr_uri.removeSearch("Rcategory"));
+       ((new_serialized_params.Rsubcategory!= '' && new_serialized_params.Rsubcategory!=undefined) ? curr_uri.setSearch("Rsubcategory", new_serialized_params.Rsubcategory) : curr_uri.removeSearch("Rsubcategory"));
+       ((new_serialized_params.Rexp_lvl!= '' && new_serialized_params.Rexp_lvl!=undefined) ? curr_uri.setSearch("Rexp_lvl", new_serialized_params.Rexp_lvl) : curr_uri.removeSearch("Rexp_lvl"));
+       ((new_serialized_params.RdeliveryTime!= '' && new_serialized_params.RdeliveryTime!= undefined) ? curr_uri.setSearch("RdeliveryTime", new_serialized_params.RdeliveryTime) : curr_uri.removeSearch("RdeliveryTime"));
+       ((new_serialized_params.RserviceType!= '') ? curr_uri.setSearch("RserviceType", new_serialized_params.RserviceType) : curr_uri.removeSearch("RserviceType"));
+       ((new_serialized_params.Rlocation!= '' && new_serialized_params.Rlocation!=undefined) ? curr_uri.setSearch("Rlocation", new_serialized_params.Rlocation) : curr_uri.removeSearch("Rlocation"));
+
+
+
+
+
+
+
+       history.pushState({}, null, '?'+curr_uri._parts.query);
+       $.ajax({
+           url: url,
+           type: 'POST',
+           dataType: 'json',
+           data: query_param,
+           success : function(data)
+           {
+             (loadType=='load_append') ? $('#service_data').append(data.content) : $('#service_data').html(data.content);
+             $(".load_more_data").addClass(data.btn);
+             $(".load_more_data").attr("data-page",data.pageno);
+           }
+       });
+   }
+
+   /*slider search*/
+
+   $( function() {
+        $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: "%MAX_PRICE%",
+        values: [ 0, "%MAX_PRICE%" ],
+        slide: function( event, ui ) {
+         $( "#amount" ).val( ui.values[ 0 ]);
+         $( "#amount2" ).val( ui.values[ 1 ] );
+         search_record(1);
+       }
+     });
+     $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) );
+      $( "#amount2" ).val( $( "#slider-range" ).slider( "values", 1 ) );
+
+    } );
+   $( function() {
+        $( "#slider-range2" ).slider({
+        range: true,
+        min: 0,
+        max: "%MAX_PRICE%",
+        values: [ 0, "%MAX_PRICE%" ],
+        slide: function( event, ui ) {
+         $( "#amount3" ).val( ui.values[ 0 ]);
+         $( "#amount4" ).val(ui.values[ 1 ] );
+         search_record(1);
+       }
+     });
+     $( "#amount3" ).val( $( "#slider-range2" ).slider( "values", 0 ) );
+      $( "#amount4" ).val($( "#slider-range2" ).slider( "values", 1 ) );
+
+    } );
+
+   /*datepicker*/
+
+   $('.datepicker').datetimepicker({
+        format: 'DD-MM-YYYY'
+   })
+
+
+   $('.datepicker').on('dp.change', function(e){
+      search_record(1);
+   });
+
+   /*Add to favourite */
+   $(document).on("click",".save_service",function(){
+      $(this).find('i').removeClass("fa fa-heart-o").addClass("fa fa-heart");
+      var id = $(this).attr("data-id");
+      $.post(url,{"action":"saveServices","id":id},function(data){
+         if(data.type == 'error')
+         {
+            window.location.href = "{SITE_URL}SignIn";
+            toastr[data.type](data.msg);
+         }
+         else
+         {
+            toastr[data.type](data.msg);
+         }
+      },'json');
+   });
+
+   /*$(".dropdown-menu li a").click(function(){
+      $(this).parents(".dropdown.fix-width").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+      var dataVal = $(this).attr('data-url');
+      var keyword = $("#keyword").val();
+
+      window.location.href = (keyword!='') ? dataVal+"/?keyword="+keyword : dataVal+"/";
+    }); */
+
+</script>

@@ -1,0 +1,19 @@
+<div class="single-chat %ACTIVE_CLASS% old-chat-option">
+   <div class="media">
+      <div class="media-left media-middle ">
+         <div class="chat-img">
+            <img src="%USER_IMG%" class="media-object" alt="%USER_NM%">
+         </div>
+      </div>
+      <div class="media-body media-middle ">
+         <div class="chat-name">
+            <h4 class="media-heading clearfix"><a href="javascript:void(0);" alt="%USER_NM%" class="load_chat" data-id="%USER_ID%"><span>%USER_NM%</span><span class="msglist-time">%TIME%</span></a>
+            </h4>
+            
+            <p>%MSG%</p>
+         </div>
+      </div>
+   </div>
+</div>
+               
+                       

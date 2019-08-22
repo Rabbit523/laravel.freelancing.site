@@ -1,0 +1,134 @@
+<li class="fjb-item %DELETED_JOB_MAIN_CLASS%">
+  <div class="service-featured %FEATURED_LBL_CLASS%"><span><i class="fa fa-star"></i></span></div>
+  <h3 class="fjb-title"><a href="%DETAIL_LINK%">%JOB_TITLE%</a></h3>
+  <ul class="post-breadcrumbs clearfix">
+      <li>%CATEGORY%</li>
+      <li>%SUBCATEGORY%</li>
+  </ul>
+  <ul class="fjb-details-list">
+      <li>{FMS_EST_BUDGET} : <span class="amount-wrap">%BUDGET%</span></li>
+      <li>{BID_AMOUNT} : <span class="amount-wrap">%BID_AMOUNT%</span></li>
+  </ul>
+  <div class="fjb-desc">%JOB_DESC%</div>
+  <ul class="fjb-cat">
+      %SKILL_LIST%
+  </ul>
+  <ul class="fjb-details-list">
+      <li><span>%USER_LVL%</span></li>
+      <li>{FMS_NO_OF_APPLICANTS} : <span>%APPLICANTS%</span></li>
+      <li>{FMS_BIDDING_DEADLINE} : <span>%REMAIN_DAYS%</span></li>
+      <li>{FMS_BID_ACCEPTANCE_STATUS} : <span>%BID_STATUS%</span></li>
+  </ul>
+  <div class="fjb-status">
+      <div class="fjb-status-item"><span class="badge badge-pill %JOB_CLASS%">%JOB_STATUS%</span></div>
+      <div class="fjb-status-item fjb-post-time">Posted : <span>%POSTED_TIME%</span></div>
+  </div>
+  <div class="fjb-user-profile">
+      <div class="profile-img-wrap">
+      <div class="profile-img">
+          <img src="%CUST_IMG%" title="%CUST_NAME%">
+      </div>
+      </div>
+      <div class="profile-details">
+          <div class="profile-name"><a href="{SITE_URL}profile/%USRE_SLUG%">%CUST_NAME%</a></div>
+          <div class="star-ratings-sprite start-ratings">
+              <span style="width:%AVG_REVIEW%%" class="star-ratings-sprite-rating"></span>
+          </div>
+          <div class="fjb-location"><i class="fa fa-map-marker"></i> %LOCATION%</div>
+      </div>
+  </div>
+</li>
+
+<?php /*
+<li class="card-block %DELETED_JOB_MAIN_CLASS%">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="%FEATURED_LBL_CLASS%">
+            <span class="">
+            %FEATURED_LBL%
+            </span>
+         </div>
+      </div>
+   </div>
+
+   <h4 class="card-title">
+      <a href="%DETAIL_LINK%">%JOB_TITLE%</a>
+      <div class="like active">
+         <a href="%DETAIL_LINK%"></a>
+      </div>
+   </h4>
+   <div class="category_subcategory">
+      <span>
+      %CATEGORY%
+      <i class="fa fa-angle-right" aria-hidden="true">
+      </i>
+      %SUBCATEGORY%
+      </span>
+   </div>
+   <ul class="project-desc list-inline">
+      <li>
+         %USER_LVL%
+      </li>
+      <li>
+         {FMS_EST_BUDGET} : %BUDGET%
+      </li>
+      <li>
+         %POSTED_TIME%
+      </li>
+      <li>
+        {FMS_JOB_STATUS} :-  %JOB_STATUS%
+      </li>
+   </ul>
+   <p>
+      %JOB_DESC%
+   </p>
+   <ul class="recevied_addons">
+      <li>
+         <label>{FMS_NO_OF_APPLICANTS} : </label>
+         <span>%APPLICANTS%</span>
+      </li>
+      <li>
+         <label>{FMS_BIDDING_DEADLINE} : </label>
+         <span>%REMAIN_DAYS%</span>
+      </li>
+      <li>
+         <label>{FMS_BID_ACCEPTANCE_STATUS} : </label>
+         <span class="theme-color">%BID_STATUS%</span>
+      </li>
+   </ul>
+   <div class="services bottom-line">
+      <label>{JOB_SKILLS_LBL}</label><br>
+      <ul class="list-inline">
+         %SKILL_LIST%
+      </ul>
+   </div>
+   <div class="PickGeeks_detail">
+      <ul>
+         <li>
+            <div class="PickGeeks_img">
+               <img src="%CUST_IMG%">
+            </div>
+         </li>
+         <li>
+            <h5>
+               <a href="{SITE_URL}f/profile/%USRE_SLUG%">%CUST_NAME%</a>
+            </h5>
+         </li>
+         <li>
+            <div class="star-ratings-sprite">
+               <span style="width:%AVG_REVIEW%%" class="star-ratings-sprite-rating">
+               </span>
+            </div>
+         </li>
+         <li>
+            %CUST_SPEN% {FMS_SPENT}
+         </li>
+         <li>
+            <i class="fa fa-map-marker" aria-hidden="true">
+            </i>
+            %LOCATION%
+         </li>
+      </ul>
+   </div>
+</li> */ ?>
+

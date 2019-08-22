@@ -1,0 +1,83 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+    <div class="form-body">
+        
+        <div class="form-group">
+            <label for="page_title" class="control-label col-md-3">Project: &nbsp;</label>
+            <div class="col-md-4">
+               <select name="listingId" id="listingId" class="form-control">
+                   %PROJECT_CAT%
+               </select>
+            </div>
+        </div>
+
+        <div class="padtop10 flclear"></div>
+
+        <div class="form-group">
+            <label for="page_title" class="control-label col-md-3">User: &nbsp;</label>
+            <div class="col-md-4">
+               <select name="userId" id="userId" class="form-control">
+                   %USERS%
+               </select>
+            </div>
+        </div>
+
+        <div class="padtop10 flclear"></div>
+        
+        <div class="form-group">
+            <label for="meta_desc" class="control-label col-md-3">Project Comment: &nbsp;</label>
+            <div class="col-md-4">
+                <textarea class="form-control textarea-bg" name="listingRatingDesc" id="listingRatingDesc">%RATING_DESC%</textarea>
+            </div>
+        </div>
+
+        <div class="padtop10 flclear"></div>
+
+        <div class="form-group">
+            <label for="meta_desc" class="control-label col-md-3">Ratings: &nbsp;</label>
+            <div class="col-md-4">
+                <div id="star" name="listingRating" value="%RATING%"></div>
+                <!-- <input type="text" class="form-control textarea-bg" name="rating" id="rating" value="%RATING%"> -->
+            </div>
+        </div>
+        
+        <div class="padtop10 flclear"></div>
+        
+        
+        <div class="form-group">
+            <label class="control-label col-md-3">Status: &nbsp;</label>
+            <div class="col-md-4">
+                <div class="radio-list" data-error-container="#form_2_Status: _error">
+                    <label class="radio-inline">
+                        <input class="radioBtn-bg required" id="y" name="isActive" type="radio" value="y" %STATIC_A%>
+                        Active</label>
+                    <label class="radio-inline">
+                        <input class="radioBtn-bg required" id="n" name="isActive" type="radio" value="n" %STATIC_D%>
+                        Inactive</label>
+                    <span for="status" class="help-block"></span> </div>
+                <div id="form_2_Status: _error"></div>
+            </div>
+        </div>
+
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="type" id="type" value="%TYPE%">
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="id" id="id" value="%ID%">
+        <div class="padtop20"></div>
+    </div>
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <button type="submit" name="submitAddForm" class="btn green" id="submitAddForm">Submit</button>
+            <button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+        </div>
+    </div>
+</form>
+
+
+<script type="text/javascript">
+     $(function(){
+        var total = $("#star").attr("value");
+        $("div#star").raty({
+            score:total
+        });
+     }); 
+</script>

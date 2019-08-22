@@ -1,0 +1,652 @@
+<div class="row">                       
+    <div class="sell">
+        <h1>Sell %WEBSITEURL% on {SITE_NM}</h1>
+    </div>                        
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-tabs tabs-left" width="justify">
+                <li class="app active"><a data-toggle="tab" id="app_href" href="#app">Website</a></li>
+                <li class="revenue" data-id="revenue"><a id="revenue_href" data-toggle="tab">Revenue</a></li>
+                <li class="pitch" data-id="pitch"><a data-toggle="tab" id="pitch_href">The Pitch</a></li>
+                <li class="sale" data-id="sale"><a id="sale_href" data-toggle="tab">Sale</a></li>
+                <li class="promote" data-id="promote"><a id="promote_href" data-toggle="tab">Promote</a></li>
+                <li class="verify" data-id="verify"><a id="verify_href" data-toggle="tab">Verify Ownership</a></li>
+                <li class="nda" data-id="nda"><a id="nda_href" class="text-center agree" data-toggle="tab">Add A Non-Disclosure Agreement</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <form name="frmCont" id="frmCont" method="post" enctype="multipart/form-data">
+                <div class="tab-content">                                
+                    <!--website Tab panes -->
+                    <div class="tab-pane active" id="app">
+                        <h2 class="title-name">App Details</h2>
+                        <p>Get in front of buyers looking for apps like your by categorizing it accurately, and letting them know how long the apps has been live.</p>
+                        <div class="col-md-12 col-sm-12 form-group" tab-data-id="website">
+                            <label class="">App Category <span class="red">*</span></label> 
+                            <select class="form-control parentNiche" name="parentNiche" id="parentNiche">
+                                <option value="">--- Select Category     ---</option>
+                                %PARENT_NICHE%
+                            </select>
+                            <span class="parentNicheError red"></span>
+                        </div>
+                        
+                        <div class="col-md-12 col-sm-12 websiteLiveDate form-group">
+                            <label class=" col-md-12 col-sm-12">When did the website go live?</label>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="col-md-3 month">
+                                    <select class="form-control" name="websiteLiveMonth" id="websiteLiveMonth">
+                                        %PUBLISH_MONTH%
+                                    </select>
+                                </div>
+                                <div class="col-md-3 month">
+                                    <select class="form-control" name="websiteLiveYear" id="websiteLiveYear">
+                                        %PUBLISH_YEAR%
+                                    </select>
+                                </div>
+                            </div> 
+                            <span class="liveDateYear red"></span>      
+                        </div>
+                        <div class="col-md-12 col-sm-12 form-group %HIDE_ANDROID%" id="averageDownloadId">
+                            <label class=" col-md-12 col-sm-12">Average Downloads</label>
+                                <input type="text" name="averageDownload" id="averageDownload" class="form-control averageDownload" value="%AVERAGE_DOWNLOAD%">
+                                <span class="averageDownloadError red"></span>
+                        </div>
+                         <div class="col-md-12 col-sm-12 form-group %HIDE_IOS%">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="isIos" value="ios" id="isIos" %IOS_CHECK%>I am also including an iOS APP of the same name with this sale</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 form-group %HIDE_ANDROID%">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="isAndroid" value="android" id="isAndroid" %ANDROID_CHECK%>I am also including an Android APP of the same name with this sale</label>
+                            </div>
+                        </div>
+                        
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-success" data-id="revenue" id="next_revenue">Next</button>
+                        </div>
+                    </div>            
+                    <!--Revenue Tab panes -->
+                    <div class="tab-pane revenue-part" id="revenue">
+                        <h2 class="title-name">Revenue</h2>
+                        <p>If your app is generating revenue, let buyer know</p>
+                        <div class="col-md-12 col-sm-12">
+                            <label class=" col-md-12 col-sm-12">Does the site generate revenue?</label>
+                            <div class="radio-inline">
+                                <label><input type="radio" name="isRevenueGenerate" value="y" class="isRevenueGenerate" %REVENUE_Y%>Yes</label>
+                            </div>
+                            <div class="radio-inline">
+                                <label><input type="radio" name="isRevenueGenerate"  value="n" class="isRevenueGenerate" %REVENUE_N%>No</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 monthRevenueTable form-group" style="%REVENUE_TABLE%">
+                        <label class="col-md-2 col-sm-6" >Month</label><label class="col-md-5 col-sm-12">Gross Revenue</label><label class="col-md-5 col-sm-12">Net Revenue</label>
+                            %PREVIOUS_MONTH_YEAR%
+                        </div>       
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-success" data-id="pitch" id="next_pitch">Next</button>
+                        </div>
+                    </div>                    
+                    <!--pitch Tab panes -->
+                    <div class="tab-pane pitch-part" id="pitch">
+                        <h2 class="title-name">The Pitch</h2>
+                        <p>Attract attention to your listing by detailing all the great things about your site. Include any impressive facts and figures and use words that you think your buyers would search for when lookings like yours.</p>
+                        <div class="col-md-12 col-sm-12 form-group"  tab-data-id="pitch">
+                            <label for="tagline">Tagline <span class="red">*</span></label>
+                            <textarea class="form-control" rows="2" id="tagline" name="tagline" maxlength="80">%TAGLINE%</textarea>
+                            <span><span id="taglne_character">80</span> characters remaining</span>
+                            <span class="taglineError help-block"></span>   
+                        </div>
+                        <div class="col-md-12 col-sm-12 form-group" tab-data-id="pitch">
+                            <label for="editor1">Description(Seller's Note) <span class="red">*</span></label>
+                            <textarea class="form-control" rows="2" id="editor1" name="description">%DESCRIPTION%</textarea>
+                            <span class="editor1Error help-block"></span>   
+                        </div>
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-success" data-id="sale" id="next_sale">Next</button>
+                        </div>
+                    </div>                    
+                    <!--sale Tab panes -->
+                    <div class="tab-pane sale-part" id="sale">
+                        <h2 class="title-name">Sale</h2>
+                        <p>Attract attention to your listing by detailing all the great things about your app. Include any impressive facts and figures and use words that you think your buyers would search for when lookings like yours.</p>
+                        <div class="col-md-12 col-sm-12 sale-type form-group">
+                            <label class="">Sale type and length? <span class="red">*</span></label>
+                            <div class="input-group col-md-12 col-sm-12">
+                                <div class="input-group-addon">My %SELL_TYPE% will run for</div><input type="text" class="form-control"  size="2" id="listDurationDate"  name="listDurationDate" value="%DURATION_TIME%" maxlength="2" /><div class="input-group-addon">days</div>
+                            </div>
+                            <span class="listDurationDate red"></span>
+                        </div>
+                        <div class="col-md-12 col-sm-12 reserve %hideFromClasified% form-group">
+                            <label class="">Reserve</label>
+                            <div class="input-group col-md-12 col-sm-12">
+                                <div class="input-group-addon">{CURRENCY_SYMBOL}</div>
+                                <input type="text" class="form-control" size="5" id="reservePrice" placeholder="Reserve Price" name="reservePrice" value="%RESERVE_PRICE%" disabled="disabled">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 reserve form-group">
+                            <label class="">Buy It Now Price</label>
+                            <div class="input-group col-md-12 col-sm-12">
+                                <div class="input-group-addon">{CURRENCY_SYMBOL}</div>
+                                <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon1" name="buyNowPrice" id="buyNowPrice" value="%BUYNOW_PRICE%" disabled="disabled">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 %hideFromAuction%">
+                            <label class="">Minimum Offer</label>
+                            <div class="input-group col-md-12 col-sm-12">
+                                <div class="input-group-addon">{CURRENCY_SYMBOL}</div>
+                                <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon1" name="minimumOffer" id="minimumOffer" value="%MINIMUM_PRICE%" disabled="disabled">
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-success listingNext" data-id="promote" id="next_promote">Next</button>
+                        </div>
+                    </div>
+                    <!--promote Tab panes -->
+                    <div class="tab-pane promote-part" id="promote">
+                        <h2 class="title-name">Promote</h2>
+                        <div class="bidder">
+                            <h5>Want even more bidders?</h5>
+                            <p>Customize your auction to stand out and attract even more Buyers to your listings:</p>                                        
+                            <div class="col-sm-12 col-md-12 well">
+                                %EXTRA_FEES%                                            
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            Total: {CURRENCY_SYMBOL}<span class="totalPrice">%TOTAL_PRICE%</span> <br>
+                            <button type="button" class="btn btn-success listingNext" data-id="verify" id="next_verify">Next</button>
+                        </div>
+                    </div>
+                     <!--NDA Tab panes -->
+                    <div class="tab-pane verify-part" id="verify">
+                        <h2 class="title-name">Verify Ownership</h2>
+                        <div>
+                            <b>%WEBSITEURL% app already verified.</b>
+                        </div>
+                        <div class="checkbox text-center">                            
+                            <label for="editor_choice"  class=""><input type="checkbox" name="editor_choice" id="editor_choice"  value="y" %EDITOR_Y%>{EXPERTS_CHOICE}</label>
+                            </div>
+                        <div class="pull-right ">
+                            <button type="button" class="btn btn-success verifyText" data-id="nda" id="next_nda">Next</button>
+                        </div>
+                    </div>
+                    <!--NDA Tab panes -->
+                    <div class="tab-pane nda-part" id="nda">
+                        <h2 class="title-name">Privacy Setting</h2>
+                        <div class="col-md-12 col-sm-12">
+                             <label class=""> Add a Non-Disclosure Agreement</label>
+                            <textarea class="form-control" rows="2" id="editor2" name="disclosureAgreement">%DISCLAUSER%</textarea>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="dropzone_uploader">
+                                <label class="">Drag multiple files to the box below for multi upload or click to select files.</label>                
+                                <div class="dropzone" id="dropzone_image"></div>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="uploaded_images" style="%UPLOAD_DISPLAY%">
+                            <label> Uploaded Documents</label>
+                            <table class="table table-responsive table-bordered">
+                            %UPLOADED_IMAGES%
+                            </table>
+                            <br>
+                        </div>
+                        <div class="text-right">
+                            <button type="submit" id="submitAddForm" name="submitAddForm" value="submitAddForm" class="btn btn-success">Update</button> 
+                             <button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="finalPrice" class="finalPrice" value="%TOTAL_PRICE%" />
+                <input type="hidden" name="siteId" value="%LAST_INSERTED_ID%" id="siteId"/>
+                <input type="hidden" name="saleTypeId" id="saleTypeId" value="%SALETYPEID%">
+                <input type="hidden" name="website_url" id="website_url" value="%WEBSITEURL%">
+                <input type="hidden" name="type" id="type" value="%TYPE%">
+                <input type="hidden" name="action" value="%ACTION%">
+                <span id="status" style="display: none">success</span>
+            </form>
+        </div> 
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(window).keydown(function(event){
+             if(event.keyCode == 13) {
+               event.preventDefault();
+               return false;
+             }
+        });
+    });
+    var saleTypeId=$("#saleTypeId").val();
+   
+    $(function () {
+        loadCKE("editor1");
+        loadCKE("editor2");
+    });
+    $('.feesCheckbox').change(function(){
+        var isChecked = $(this).prop('checked');
+        var priceVal = parseInt($(this).attr('price-id'));
+        var totalPrice = parseInt($('.totalPrice').html());
+        if(isChecked == true)
+        {
+            $('.totalPrice').html(totalPrice + priceVal);
+            $('.finalPrice').val(totalPrice + priceVal);            
+        }
+        else
+        {
+            $('.totalPrice').html(totalPrice - priceVal);
+            $('.finalPrice').val(totalPrice - priceVal);
+        }
+    });
+    $('.isRevenueGenerate').change(function(){
+        var revVal = $(this).val();
+        if(revVal == 'y'){ 
+            $('.monthRevenueTable').show();
+            $('.monetization_class').show();
+        }else{
+            $('.monthRevenueTable').hide();        
+            $('.monetization_class').hide();
+        }
+    });
+     
+    var next_val=(saleTypeId==1)?'#next_traffic':'#next_pitch';
+    var next_val_href=(saleTypeId==1)?'#traffic_href':'#pitch_href';
+    var val_href=(saleTypeId==1)?'#traffic':'#pitch';
+    var val_class=(saleTypeId==1)?'.traffic':'.pitch';
+
+    $("#next_revenue").add(".revenue").click(function(e){
+        var parentNiche = $('#parentNiche').val();
+        var saleTypeId=$("#saleTypeId").val();
+        checkempty("#parentNiche",parentNiche,'.parentNicheError','Website Category');
+        checklivedate($("#websiteLiveYear").val(),$("#websiteLiveMonth").val());
+        if($("#averageDownloadId").is(":visible")){
+            checkempty("#averageDownload",averageDownload,'.averageDownloadError','Average Downloads');
+        }
+        var if_condition=(saleTypeId==1)?$('#status').html()=='success':($('#status').html()=='success' || $('#status').html()=='');
+        if($("#parentNiche").val() != '' && !$('.form-group').hasClass('has-error') && !$('#websiteLiveYear').parent().hasClass('has-error')){
+            var data_id = $(this).attr('data-id');
+            $('.nav-tabs li').removeClass('active');
+            $('.'+data_id).addClass('active');
+            $('.tab-pane').removeClass('active');
+            $('#'+data_id).addClass('active');
+            $("#revenue_href").attr('href','#revenue');
+            $("#app_href").attr('href','#app');
+        }else if($("#parentNiche").val() != '' && !$('#websiteLiveYear').parent().hasClass('has-error')){
+            var data_id = $(this).attr('data-id');
+            $('.nav-tabs li').removeClass('active');
+            $('.'+data_id).addClass('active');
+            $('.tab-pane').removeClass('active');
+            $('#'+data_id).addClass('active');
+            $("#revenue_href").attr('href','#revenue');
+        }
+        else{
+            $("#revenue_href").removeAttr('href');
+            var editor1 = CKEDITOR.instances.editor1.getData();
+            if(($('#tagline').val() == '' || editor1 == '' ) && ($("#parentNiche").val() != '' && !$('#websiteLiveYear').parent().hasClass('has-error'))){
+                $("#revenue_href").attr('href','#revenue');
+            }
+            $("#pitch_href").removeAttr('href'); 
+            $("#sale_href").removeAttr('href');  
+            $("#verify_href").removeAttr('href');
+            // $("#revenue_href").removeAttr('href');  
+            $("#nda_href").removeAttr('href');
+            $("#promote_href").removeAttr('href');  
+        }
+       
+    });
+   
+    $('#next_pitch').add('.pitch').click(function(e){
+        e.preventDefault(); 
+        var parentNiche = $('#parentNiche').val();
+        var saleTypeId=$("#saleTypeId").val();
+        checkempty("#parentNiche",parentNiche,'.parentNicheError','Website Category');
+        checklivedate($("#websiteLiveYear").val(),$("#websiteLiveMonth").val());
+        if($("#parentNiche").val() != '' && !$('.form-group').hasClass('has-error') && !$('#websiteLiveYear').parent().hasClass('has-error'))
+        {
+            var data_id = $(this).attr('data-id');
+            $('.nav-tabs li').removeClass('active');
+            $('.'+data_id).addClass('active');
+            $('.tab-pane').removeClass('active');
+            $('#'+data_id).addClass('active');
+            $("#pitch_href").attr('href','#pitch');
+        }else if($("#parentNiche").val() != '' && !$('#websiteLiveYear').parent().hasClass('has-error')){
+            var data_id = $(this).attr('data-id');
+            $('.nav-tabs li').removeClass('active');
+            $('.'+data_id).addClass('active');
+            $('.tab-pane').removeClass('active');
+            $('#'+data_id).addClass('active');
+            $("#pitch_href").attr('href','#pitch');
+        }else{
+            var editor1 = CKEDITOR.instances.editor1.getData();
+            if(($('#tagline').val() != '' && editor1 != '') && ($("#parentNiche").val() != '' && !$('#websiteLiveYear').parent().hasClass('has-error'))){
+                $("#pitch_href").attr('href','#pitch');
+            }else{
+                $("#sale_href").removeAttr('href');  
+                $("#verify_href").removeAttr('href');
+                $("#pitch_href").removeAttr('href'); 
+                $("#revenue_href").attr('href','#revenue');
+                $("#app_href").attr('href','#app')
+                $("#nda_href").removeAttr('href');
+                $("#promote_href").removeAttr('href');
+            }
+        }
+    });
+    $('#next_nda').add('.nda').click(function(){
+        var data_id = $(this).attr('data-id');
+         var editor1 = CKEDITOR.instances.editor1.getData();
+        var parentNiche = $('#parentNiche').val();
+        var saleTypeId=$("#saleTypeId").val();
+        checkempty("#parentNiche",parentNiche,'.parentNicheError','Website Category');
+        checklivedate($("#websiteLiveYear").val(),$("#websiteLiveMonth").val());
+        if($("#parentNiche").val() != '' && editor1 != '' && !$('.form-control').parent().hasClass('has-error') && !$('#websiteLiveYear').parent().hasClass('has-error')){
+            $('.nav-tabs li').removeClass('active');
+            $('.'+data_id).addClass('active');
+            $('.tab-pane').removeClass('active');
+            $('#'+data_id).addClass('active');
+            $("#nda_href").attr('href','#nda');
+        }else{
+            $("#nda_href").removeAttr('href');
+            // $("#app_href").removeAttr('href');
+        }
+    });
+    $('#next_sale').add('.sale').click(function(e){
+        e.preventDefault();  
+        var parentNiche = $('#parentNiche').val();
+        var saleTypeId=$("#saleTypeId").val();
+        checkempty("#parentNiche",parentNiche,'.parentNicheError','Website Category');
+        checklivedate($("#websiteLiveYear").val(),$("#websiteLiveMonth").val());
+        var tagline=($('#tagline').val()).replace(/^\s+|\s+$/g,'');
+        var editor1 = CKEDITOR.instances.editor1.getData();
+        checkempty("#tagline",tagline,'.taglineError','Tagline');
+        checkempty("#editor1",editor1,'.editor1Error','Description');
+        if(($('#parentNiche').val() != '') && !$('.form-group').hasClass('has-error') && !$('#websiteLiveYear').parent().hasClass('has-error'))
+        {
+            var data_id = $(this).attr('data-id');
+            $('.nav-tabs li').removeClass('active');
+            $('.'+data_id).addClass('active');
+            $('.tab-pane').removeClass('active');
+            $('#'+data_id).addClass('active');
+            $("#sale_href").attr('href','#sale');
+
+        }
+        else{ 
+            $("#sale_href").removeAttr('href');  
+            $("#verify_href").removeAttr('href');
+            $("#promote_href").removeAttr('href');  
+            $("#nda_href").removeAttr('href');
+            // $("#app_href").removeAttr('href');
+
+        }
+        
+    });
+    $('#next_verify').add('.verify').click(function(e){
+        e.preventDefault();  
+        var editor1 = CKEDITOR.instances.editor1.getData();
+        var parentNiche = $('#parentNiche').val();
+        checkempty("#parentNiche",parentNiche,'.parentNicheError','Website Category');
+        checklivedate($("#websiteLiveYear").val(),$("#websiteLiveMonth").val());
+        if($("#parentNiche").val() != '' && editor1 != '' && !$('.form-control').parent().hasClass('has-error') && !$('#websiteLiveYear').parent().hasClass('has-error'))
+        {
+            var data_id = $(this).attr('data-id');
+            $('.nav-tabs li').removeClass('active');
+            $('.'+data_id).addClass('active');
+            $('.tab-pane').removeClass('active');
+            $('#'+data_id).addClass('active');
+            $("#verify_href").attr('href','#verify');
+        }
+        else
+        {
+            $('.has-error').children().focus();
+            $("#verify_href").removeAttr('href');
+            $("#nda_href").removeAttr('href');
+            // $("#app_href").removeAttr('href');
+        }
+    });
+
+
+    $("#next_promote").add('.promote').click(function(e){
+        e.preventDefault();
+        var editor1 = CKEDITOR.instances.editor1.getData();
+        var parentNiche = $('#parentNiche').val();
+        checkempty("#parentNiche",parentNiche,'.parentNicheError','Website Category');
+        checklivedate($("#websiteLiveYear").val(),$("#websiteLiveMonth").val());
+        checkempty("#listDurationDate",$("#listDurationDate").val(),'.listDurationDate','Duration Days');
+        
+        if((($("#listDurationDate").val()<=0 || $('#listDurationDate').val() > 90) || ($('#reservePrice').val()<=0 && $('#reservePrice').val()!= '') || ($('#buyNowPrice').val()<=0 && $('#buyNowPrice').val()!= '')))
+        {
+            
+            if($('#listDurationDate').val() > 90){                
+                $('#listDurationDate').parent().addClass('has-error');
+                $('.listDurationDate').html('');
+                $('.listDurationDate').html('List Duration Date should be maximum 90 days');
+            }
+            if($('#listDurationDate').val() <= 0){                
+                $('#listDurationDate').parent().addClass('has-error');
+                $('.listDurationDate').html('');
+                $('.listDurationDate').html('List Duration Date should be greater than 0');
+            }if($('#reservePrice').val() <= 0 && $('#reservePrice').val()!= '' && !$('#reservePriceSpan').hasClass('hide')){       
+                $('#reservePrice').parent().addClass('has-error');
+                $('.reservePrice').html('');
+                $('.reservePrice').html('Reserve Price should be greater than 0');
+            }
+            if($('#buyNowPrice').val() <= 0 && $('#buyNowPrice').val()!= ''){  
+                $('#buyNowPrice').parent().addClass('has-error');
+                $('.buyNowPrice').html('');
+                $('.buyNowPrice').html('Buy It Now Price should be greater than 0');
+            }  
+            $('.has-error').children().focus();
+            $("#promote_href").removeAttr('href');  
+            $("#verify_href").removeAttr('href');
+            $("#nda_href").removeAttr('href');   
+        }else {
+            if($("#parentNiche").val() != '' && editor1 != '' && !$('.form-control').parent().hasClass('has-error') && !$('#websiteLiveYear').parent().hasClass('has-error'))
+            {
+                $('#listDurationDate').parent().removeClass('has-error');
+                $('.listDurationDate').html('');
+                var data_id = $("#next_promote").attr('data-id'); 
+                $('.nav-tabs li').removeClass('active');
+                $('.'+data_id).addClass('active');
+                $('.tab-pane').removeClass('active');
+                $('#'+data_id).addClass('active');
+                $("#promote_href").attr('href','#promote');
+                
+            }else{
+                $('.has-error').children().focus();
+                $("#promote_href").removeAttr('href');  
+                $("#verify_href").removeAttr('href');
+                $("#nda_href").removeAttr('href');
+            }
+            
+        }
+
+        
+        
+    });
+    $("#websiteLiveYear").change(function(){
+            checklivedate($(this).val(),$("#websiteLiveMonth").val());
+    });
+    $("#websiteLiveMonth").change(function(){
+         checklivedate($("#websiteLiveYear").val(),$(this).val());
+    });
+    /*$("#averageDownload").keyup(function(e){
+        checkempty("#averageDownload",$(this).val(),'.averageDownloadError','Average Downloads');
+    });*/
+    function checklivedate(year,month){
+        $.ajax({
+              dataType: 'json',
+              type: "POST",
+              url: 'ajax.<?php echo $this->module; ?>.php?action=check_date',
+              data: {month:month,year:year,saleType:saleTypeId},
+              success: function(resultData){ 
+                if(resultData==false){
+                    $('#websiteLiveYear').parent().addClass('has-error');
+                    $('#websiteLiveMonth').parent().addClass('has-error');
+                    $('.liveDateYear').html('');
+                    $('.liveDateYear').html('App age should be less than current date'); 
+                    $('#status').html('error');
+                }
+                else{
+                     $('#websiteLiveYear').parent().removeClass('has-error');
+                     $('#websiteLiveMonth').parent().removeClass('has-error');
+                     $('.liveDateYear').html('');
+                     $('#status').html('success');
+                }
+              }
+            });
+    }
+    
+    
+    $("#tagline").keyup(function(e){
+        var max_size=80;
+        var length=$(this).val().length;
+        $("#taglne_character").html(max_size-length);
+        checkempty("#tagline",($(this).val()).replace(/^\s+|\s+$/g,''),'.taglineError','Tagline');
+    });
+    
+    $(function(e){
+       var ck=CKEDITOR.instances['editor1'];
+        ck.on('keyup', function( event ) {
+            checkempty("#editor1",CKEDITOR.instances.editor1.getData(),'.editor1Error','Description');
+        });
+    });
+
+
+    $("#listDurationDate").keyup(function(e){
+        checkempty("#listDurationDate",$(this).val(),'.listDurationDate','Duration Days');
+    });
+    function checkempty(id_name,value,class_name,field_name){
+        if(value ==''|| value== 0)
+        {
+            $(id_name).parent().addClass('has-error');
+            $(class_name).html('');
+            $(class_name).html('Please enter '+field_name);
+        }else{
+            $(id_name).parent().removeClass('has-error');
+            $(class_name).html('');
+        }
+    }
+    $('.listingNext').click(function(e){
+        var data_id = $(this).attr('data-id');
+        $('.nav-tabs li').removeClass('active');
+        $('.'+data_id).addClass('active');
+
+    });
+    Dropzone.autoDiscover = false;
+    $("div#dropzone_image").dropzone({
+        acceptedFiles: ".jpeg,.jpg,.png,.pdf,.doc,.docx,.txt,.xls",
+        url: "ajax.<?php echo $this->module;?>.php?action=upload&listingId=%LAST_INSERTED_ID%"
+    });
+    $(".attachment_class").click(function(e){
+        var message=confirm("Are you sure to delete this attachment?");
+        var id=$(this).attr('id');
+        var file_name=$(this).data('name');
+        if(message==true){
+            $.ajax({
+              dataType: 'json',
+              type: "POST",
+              url: 'ajax.<?php echo $this->module; ?>.php',
+              data: {action:'delete_attach','listingId':%LAST_INSERTED_ID%,'file_name':file_name},
+              success: function(resultData){
+                if(resultData==true){
+
+                    $("#row_"+id).hide();
+                    toastr["success"]("The File deleted successfully");
+                }
+                else{
+                    toastr["error"]("There seems to be an issue deleting the File");
+                }
+                
+              }
+            });
+        }
+    });
+
+     $('.grossRevenueCls').keyup(function(){
+        var grossRevenueVal =  parseInt($(this).val());
+        var grossRevenueId =  $(this).attr('id');
+
+        this.value = this.value.replace(/[^0-9\.]/g,'');
+        netRevenueId = grossRevenueId.replace("gross_","net_");
+        grossErrorId = grossRevenueId.replace("gross_","grossError_");
+
+        if($('#'+netRevenueId).val() != '')
+        {
+            if(parseInt($('#'+netRevenueId).val()) > grossRevenueVal)
+            {
+                $('#'+netRevenueId).parent().addClass('has-error');
+                $('#'+grossRevenueId).parent().addClass('has-error');
+                $('#'+grossErrorId).html('Must be grater than Net Profit');
+            }
+            else
+            {
+                $('#'+netRevenueId).parent().removeClass('has-error');
+                $('#'+grossRevenueId).parent().removeClass('has-error');
+                $('#'+grossErrorId).html('');
+            }
+        }
+        else
+        {
+            $('#'+netRevenueId).parent().removeClass('has-error');
+            $('#'+grossRevenueId).parent().removeClass('has-error');
+            $('#'+grossErrorId).html('');
+        }
+    });
+    
+    $('.netRevenueCls').keyup(function(){
+
+        var netRevenueVal =  parseInt($(this).val());
+        var netRevenueId =  $(this).attr('id');
+
+        this.value = this.value.replace(/[^0-9\.]/g,'');
+        grossRevenueId = netRevenueId.replace("net_","gross_");
+        grossErrorId = netRevenueId.replace("net_","grossError_");
+
+        //if($('#'+grossRevenueId).val() != '')
+        //{
+            if(parseInt($('#'+grossRevenueId).val()) < netRevenueVal)
+            {
+                $('#'+grossRevenueId).parent().addClass('has-error');
+                $('#'+netRevenueId).parent().addClass('has-error');
+                $('#'+grossErrorId).html('Must be grater than Net Profit');
+            }
+            else
+            {
+                $('#'+grossRevenueId).parent().removeClass('has-error');
+                $('#'+netRevenueId).parent().removeClass('has-error');
+                $('#'+grossErrorId).html('');
+            }
+        
+    });
+
+    $('#listDurationDate').keyup(function (){
+        if($('#listDurationDate').val()>90){
+            $('#listDurationDate').parent().addClass('has-error');
+            $('.listDurationDate').html('');
+            $('.listDurationDate').html('List Duration Date should be maximum 90 days');
+        }else if($('#listDurationDate').val() == 0){
+            $('#listDurationDate').parent().addClass('has-error');
+            $('.listDurationDate').html('');
+            $('.listDurationDate').html('List Duration Date should be greater than 0');
+        }
+     this.value = this.value.replace(/[^0-9]/g,'');
+});
+
+   $('#buyNowPrice').keyup(function () {     
+  this.value = this.value.replace(/[^0-9\.]/g,'');
+});
+
+    $('#minimumOffer').keyup(function () {     
+  this.value = this.value.replace(/[^0-9\.]/g,'');
+});
+
+//     $('#listDurationDate').keyup(function () {     
+//   this.value = this.value.replace(/[^0-9]/g,'');
+// });
+   
+    $('#reservePrice').keyup(function () {     
+  this.value = this.value.replace(/[^0-9\.]/g,'');
+});
+    $('#averageDownload').keyup(function () {     
+        this.value = this.value.replace(/[^0-9\.]/g,'');
+    });
+</script>

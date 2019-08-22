@@ -1,0 +1,666 @@
+<!-- Dashboard Navigation -->
+%SUB_HEADER_CONTENT%
+<!-- Dashboard Navigation End -->
+<!-- Page Content -->
+<section class="main-dashboard">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dashboard-wrap">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="personal-dashboard-wrap">
+                                <div class="box box-primary theme-box">
+                                    <div class="box-body ">
+                                        <div class="profile-before-edit media">
+                                            <div class="media-left">
+                                                <div class="user-switch-wrap">
+                                                    <div class="user-avatar-wrap">
+                                                        <div class="user-avatar">
+                                                            <img src="%IMG%" class="preview_profile">
+                                                        </div>
+                                                        <span class="update-camera %EDIT_IMAGE%">
+                                                            <a href="javascript:void(0)" id="profile_image_trigger" title="Update Profile Picture"><i class="fa fa-camera"></i></a>
+                                                        </span>    
+                                                    </div>
+                                                    <div class="switch-wrap  %EDIT_SWAP%">
+                                                        <a class="switch-btn btn-flr " href="%FR_SWITCH_URL%">{FREELANCER_LBL}</a>
+                                                        <a class="switch-btn btn-ctm active" href="%CS_SWITCH_URL%">{CUSTOMER_LABEL}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="user-details-wrap customer-user">
+                                                    <div class="personal-details-wrap">
+                                                        <div class="user-title-wrap">
+                                                            <h3 class="user-name">%USERNAME%</h3>
+                                                            <div class="star-ratings-sprite">
+                                                                <span style="width:%OVERVIEW%%" class="star-ratings-sprite-rating"></span>
+                                                            </div>
+                                                            
+                                                            <ul class="user-since-detail liststyle-none">
+                                                                <li>{MEMBER_SINCE} %JOINED_DATE%</li>
+                                                                <li>{LAST_SEEN_LBL} %LAST_LOGIN%</li>
+                                                            </ul>
+                                                            <div class="%EDIT_DETAILS%">
+                                                                <a href="#" class="edit_button user-profile-edit">Edit <i class="fa fa-edit"></i></a>
+                                                            </div>
+                                                            <div class="cust-user-location"><span><i class="fa fa-map-marker"></i></span>%LOCATION%</div>
+                                                                                                                        <div class="cust-user-email" ><span><i class="fa fa-envelope-open" aria-hidden="true" style="color: #5ecba6;"></i></span>    %EMAIL%</div>
+
+                                                            <div class="cust-user-desc">%ABOUT_ME%</div>
+                                                            
+                                                 
+                                                        </div>
+                                                        <ul class="cust-user-rating-lists liststyle-none">
+                                                            <li>
+                                                                <div class="star-ratings-sprite">
+                                                                    <span style="width:%REQ_CLARIFICATION%%" class="star-ratings-sprite-rating"></span>
+                                                                </div><span>{CUST_REQ_CLA}</span>
+                                                            </li>
+                                                            <li>
+                                                                <div class="star-ratings-sprite">
+                                                                    <span style="width:%ON_TIME_PAYMENT%%" class="star-ratings-sprite-rating"></span>
+                                                                </div><span>{CUST_ON_TIME_PAYMENT}</span>
+                                                            </li>
+                                                            <li>
+                                                                <div class="star-ratings-sprite">
+                                                                    <span style="width:%ON_TIME_RESPONSE%%" class="star-ratings-sprite-rating"></span>
+                                                                </div><span>{CUST_ON_TIME_RESPONSE}</span>
+                                                            </li>
+                                                            <li>
+                                                                <div class="star-ratings-sprite">
+                                                                    <span style="width:%COMMUNICATION%%" class="star-ratings-sprite-rating"></span>
+                                                                </div><span>{CUST_COMMUNICATION}</span>
+                                                            </li>
+                                                            <li class="cur-more %VIEW_MORE_LI%"><a href="{SITE_URL}c/review">{VIEW_ALL_REVIEWS_LBL} <i class="fa fa-angle-double-right"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="work-detail-wrap">
+                                                        <ul class="work-detail-total liststyle-none">
+                                                            <li>{CUST_JOB_POSTED} : <span>%JOBS%</span></li>
+                                                            <li>{CUST_OPEN_JOB} : <span>%OPEN_JOBS%</span></li>
+                                                            <li>{CUST_TOTAL_AMT_SPENT} : <span class="kwdamount">%TOTAL_AMOUNT%</span></li>
+                                                            <li>{CUST_AMOUNT_IN_WALLET} : <span class="kwdamount">%WALLET_AMOUNT%</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-after-edit">
+                                            <div class="box box-primary no-bg no-padding">
+                                                <div class="box-header">
+                                                    <h3 class="box-title">{CUST_EDIT_PROFILE}</h3>
+                                                </div>
+                                                <div class="box-body">
+                                                    <form class="form" action="" name="frmCustomer" id="frmCustomer" method="POST" enctype="multipart/form-data">
+                                                        <div class="profile-edit-wrap media">
+                                                            <div class="media-left">
+                                                                <div class="user-switch-wrap">
+                                                                    <div class="user-avatar-wrap">
+                                                                        <div class="user-avatar">
+                                                                            <img src="%IMG%" class="preview_profile" />
+                                                                        </div>
+                                                                        <span class="update-camera">
+                                                                            <a href="javascript:void(0)" id="profile_image_trigger" title="{CP_UPDATE_PROFILE_PICTURE}">
+                                                                                <i class="fa fa-camera"></i>
+                                                                            </a>
+                                                                        </span>    
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                      <div class="form-group">
+                                                                        <input type="text" class="form-control" name="firstName" placeholder="First Name" id="firstName" value="%FIRSTNAME%">
+                                                                      </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                      <div class="form-group">
+                                                                        <input type="text" class="form-control" placeholder="Last Name" name="lastName" id="lastName" value="%LASTNAME%">
+                                                                      </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" name="location" value="%LOCATION%" id="location" id="location" placeholder="Location">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <textarea class="form-control" name="aboutme" id="aboutme" rows="2" placeholder="Overview">%ABOUT_ME%</textarea>
+                                                                </div>
+                                                                <div class="form-group text-right">
+                                                                    <label class="red_error char_cnt"><strong>100</strong></label> <span> {CP_CHARACTERS_REMAINING} </span>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="text-right">
+                                                                        <div class="theme-button-default">
+                                                                            <!-- <input type="cancel" name="cancel" value="{CUST_CANCEL}"> -->
+                                                                            <a href="{SITE_URL}profile">{CUST_CANCEL}</a>
+                                                                        </div>
+                                                                        <div class="theme-button">
+                                                                            <input type="submit" name="submitFrmCust" value="Save" id="subminFrmCust" class="btn btn-block btn-system">
+                                                                            <!-- <a href="#" class="save">Save Changes</a> -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<?php /* <section class="main-dashboard">
+  <div class="container">
+    <div class="row">
+     <div class="col-md-12 text-right">
+
+   </div>
+ </div>
+ <div class="profile">
+  <div class="customer-profile">
+    <div class="profile-before-edit">
+      <div class="row">
+        <div class="col-md-3 col-sm-4">
+            <div class="basic-info">
+                <div class="profile-img">
+                  <img src="%IMG%" class="preview_profile"/>
+                </div>
+                <div class="profile_left">
+                  <p>{MEMBER_SINCE} %JOINED_DATE%</p>
+                  <p>{LAST_SEEN_LBL} %LAST_LOGIN%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-8">
+          <div class="other-info">
+            <div class="basic-info">
+              <h2>%USERNAME% </h2>
+              <div class="edit_button">
+                 <a href="javascript:void(0);">
+                   <i class="fa fa-pencil-square-o" aria-hidden="true">
+                   </i>
+                 </a>
+               </div>
+              <p><i class="fa fa-map-marker" aria-hidden="true"></i> %LOCATION%</p>
+              <div id="starRatings"></div>
+                <!-- <div class="statics-info">
+                 <div class="row">
+                  <div class="col-md-6">
+                   <h5>
+                    <label>Joined on : </label>
+                    <span>%JOINED_DATE%</span></h5>
+                  </div>
+                  <div class="col-md-6">
+                   <h5>
+                    <label>Last Login Date  : </label>
+                    <span>%LAST_LOGIN%</span></h5>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <div class="professtional-review">
+             <!-- <h6>{CUST_OVERVIEW}</h6> -->
+             <p>%ABOUT_ME%</p>
+           </div>
+           <div class="statics-info">
+             <div class="row">
+              <div class="col-md-6 col-sm-6">
+               <p>
+                <label>{CUST_JOB_POSTED} : </label>
+                <span>%JOBS%</span>
+              </p>
+              </div>
+              <div class="col-md-6 col-sm-6">
+               <p>
+                <label>{CUST_OPEN_JOB} : </label>
+                <span>%OPEN_JOBS%</span>
+              </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+               <p>
+                <label>{CUST_TOTAL_AMT_SPENT} : </label>
+                <span>%TOTAL_AMOUNT%</span>
+              </p>
+              </div>
+              <div class="col-md-6 col-sm-6">
+               <p>
+                <label>{CUST_AMOUNT_IN_WALLET} :</label>
+                <span>%WALLET_AMOUNT%</span>
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12">
+          <div class="star-rating">
+              <div class="stars">
+                <p>{CUST_REQ_CLA}</p>
+                <div id="reqClarification"></div>
+              </div>
+              <div class="stars">
+                  <p>{CUST_ON_TIME_PAYMENT}</p>
+                  <div id="onTimePymt"></div>
+              </div>
+              <div class="stars">
+                  <p>{CUST_ON_TIME_RESPONSE}</p>
+                  <div id="onTimeRes"></div>
+              </div>
+              <div class="stars">
+                  <p>{CUST_COMMUNICATION}</p>
+                  <div id="comm"></div>
+              </div>
+              <div class="review">
+                <a href="{SITE_URL}c/review">{VIEW_ALL_REVIEWS_LBL} <i class="fa fa-angle-double-right"></i></a>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+<div class="profile-after-edit">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>{CUST_EDIT_PROFILE}</h4>
+        </div>
+        <form class="form" action="" name="frmCustomer" id="frmCustomer" method="POST" enctype="multipart/form-data">
+            <div class="col-md-2 col-sm-3">
+                <div class="profile-img basic-info">
+                    <img src="%IMG%" class="preview_profile" />
+                      <!-- <span class="delete-pic">
+                        <a href="javascript:void(0);" id="remove_profile_image" %USER_IMAGE_VISIBILITY% title="Delete Profile Picture">
+                         <i class="fa fa-trash"></i>
+                       </a>
+                     </span> -->
+                     <span class="camera">
+                      <!-- <input type="file" name="profile_image" id="profile_image" class="inputfile inputfile-1" > -->
+                      <a href="javascript:void(0)" id="profile_image_trigger" title="{CP_UPDATE_PROFILE_PICTURE}">
+                        <i class="fa fa-camera"></i>
+                      </a>
+                    </span>
+                </div>
+               <!-- <div class="fileUpload upload-img">
+                <div class="btn btn-default btn-block profile_image_trigger" id="profile_image_trigger">
+                  <span>{CUST_UPLOAD_IMAGE}</span>
+                  <input type="file" class="upload" name="profile_image" id="profile_image">
+                </div>
+              </div> -->
+            </div>
+            <div class="col-md-6 col-sm-8">
+                <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="firstName" placeholder="First Name" id="firstName" value="%FIRSTNAME%">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name" name="lastName" id="lastName" value="%LASTNAME%">
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                <input type="text" class="form-control" name="location" value="%LOCATION%" id="location" id="location" placeholder="Location">
+                </div>
+                <div class="form-group">
+                <textarea class="form-control" name="aboutme" id="aboutme" rows="2" placeholder="Overview">%ABOUT_ME%</textarea>
+                </div>
+                <div class="form-group text-right">
+                <label class="red_error char_cnt"><strong>100</strong></label> <span> {CP_CHARACTERS_REMAINING} </span>
+                </div>
+                <div>
+                  <div class="text-right">
+                    <div class="theme-button-default">
+                      <!-- <input type="cancel" name="cancel" value="{CUST_CANCEL}"> -->
+                      <a href="{SITE_URL}profile">{CUST_CANCEL}</a>
+                    </div>
+                    <div class="theme-button">
+                      <input type="submit" name="submitFrmCust" value="Save" id="subminFrmCust" class="btn btn-block btn-system">
+                      <!-- <a href="#" class="save">Save Changes</a> -->
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</section> */ ?>
+<!-- /.container -->
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $(document).on('focus','#location',function(){
+      var places = document.getElementById('location');
+      var option = {};
+      autocomplete= new google.maps.places.Autocomplete(places,option);
+    });
+
+    $(".profile-after-edit").hide();
+    $(".edit_button").click(function(){
+      $(".profile-before-edit").hide();
+      $(".profile-after-edit").show();
+    });
+
+    $(".save").click(function(){
+      $(".profile-after-edit").hide();
+      $(".profile-before-edit").show();
+    });
+
+    jQuery.validator.addMethod("startingSpaceNotAllow", function(value, element)
+    {
+      return this.optional(element) || /^\S.*$/.test(value);
+    }, "{SPACE_IS_NOT_ALLOWED}");
+
+    jQuery.validator.addMethod("spaceNotAllow", function(value, element)
+    {
+      return this.optional(element) || /^\S*$/.test(value);
+    }, "{SPACE_IS_NOT_ALLOWED}");
+
+    jQuery.validator.addMethod("alphanumeric", function(value, element)
+    {
+      return this.optional(element) || /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/.test(value);
+    }, "{PLEASE_ENTER_LETTERS_ONLY}");
+
+    $(document).on('click', '#subminFrmCust', function (e) {
+
+      $("#frmCustomer").validate({
+        ignore: [],
+        errorClass: 'help-block',
+        errorElement: 'label',
+        highlight: function (element)
+        {
+          $(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function (element)
+        {
+          $(element).closest('.form-group').removeClass('has-error');
+        },
+        rules:
+        {
+          firstName:{required:true,minlength:2,alphanumeric:true},
+          lastName:{required:true,minlength:2,alphanumeric:true},
+          location:{required:true,startingSpaceNotAllow:true},
+          aboutme : {required:true}
+        },
+        messages:
+        {
+          firstName:{required:"{CP_PLEASE_ENTER_FIRST_NAME}", minlength:"{CP_PLEASE_ENTER_AT_LEAST_CHARACTERS}",alphanumeric:"{CP_PLEASE_ENTER_VALID_FIRST_NAME}"},
+          lastName:{required:"{CP_PLEASE_ENTER_LAST_NAME}", minlength:"{CP_PLEASE_ENTER_AT_LEAST_CHARACTERS}",alphanumeric:"{CP_PLEASE_ENTER_VALID_LAST_NAME}"},
+          location:{ required:"{CP_PLEASE_ENTER_LOCATION}"},
+          aboutme: { required:"{CP_PLEASE_ENTER_OVERVIEW}"}
+        }
+      });
+
+      if($("#subminFrmCust").valid())
+      {
+                  //addOverlay();
+                  $("#subminFrmCust").submit();
+                }
+              });
+
+    /* code for star ratings */
+    $('#starRatings').raty({
+      readOnly: true,
+      score: %OVERVIEW%,
+      starOff: '{SITE_IMG}star-off.png',
+      starOn: '{SITE_IMG}star-on.png',
+    });
+
+    $('#reqClarification').raty({
+      readOnly: true,
+      score: %REQ_CLARIFICATION%,
+      starOff: '{SITE_IMG}star-off.png',
+      starOn: '{SITE_IMG}star-on.png',
+    });
+
+    $('#onTimePymt').raty({
+      readOnly: true,
+      score: %ON_TIME_PAYMENT%,
+      starOff: '{SITE_IMG}star-off.png',
+      starOn: '{SITE_IMG}star-on.png',
+    });
+
+    $('#onTimeRes').raty({
+      readOnly: true,
+      score: %ON_TIME_RESPONSE%,
+      starOff: '{SITE_IMG}star-off.png',
+      starOn: '{SITE_IMG}star-on.png',
+    });
+
+    $('#comm').raty({
+      readOnly: true,
+      score: %COMMUNICATION%,
+      starOff: '{SITE_IMG}star-off.png',
+      starOn: '{SITE_IMG}star-on.png',
+    });
+
+    /* End code */
+
+  });
+
+  /*$(document).on("change","#profile_image",function(){
+
+    var value = $(this).val();
+    var allowedFiles = ["jpg", "jpeg", "png"];
+    var extension = value.split('.').pop().toLowerCase();
+    if ($.inArray(extension, allowedFiles) < 0)
+    {
+      toastr['warning']("Please upload only .jpg,.jpeg,.png files");
+    }
+    else if (this.files[0].size > 4194304)
+    {
+      toastr['warning']("Image size must be less then 4MB");
+    }
+    else
+    {
+      var file_data = $(this).prop("files")[0];
+      var form_data = new FormData();
+      form_data.append("file", file_data)
+      form_data.append("action", "move_image")
+      $.ajax({
+        url: "{SITE_URL}AjaxFprofile",
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: form_data,
+        type: 'post',
+        dataType: 'json',
+        beforeSend: function() {
+          addOverlay();
+        },
+        success:function(data)
+        {
+          var url = data.content;
+          $('.preview_profile').attr('src',url);
+        },
+        complete: function()
+        {
+          removeOverlay();
+        }
+      });
+    }
+  });*/
+
+  $(document).ready(function(){
+    var aboutme_len = $("#aboutme").val().length;
+    var allowed_len = 100;
+    var curr_len = allowed_len - aboutme_len;
+    $(".char_cnt").html("<strong>"+curr_len+"</strong>");
+
+    $('#aboutme').bind('input',function() {
+      var $t=$(this);
+      var max= 100;
+      if ($t.val().length>max) {
+        $t.val($t.val().substr(0,max));
+      }
+      var aboutme_len = $("#aboutme").val().length;
+      var allowed_len = 100;
+      var curr_len = allowed_len - aboutme_len;
+      $(".char_cnt").html("<strong>"+curr_len+"</strong>");
+    });
+
+    $(document).on("keypress","#aboutme",function(e){
+
+      var aboutme_len = $("#aboutme").val().length;
+      var allowed_len = 100;
+      var curr_len = allowed_len - aboutme_len;
+      if(curr_len<0){
+        return false;
+      }
+      $(".char_cnt").html("<strong>"+curr_len+"</strong>");
+      return true;
+    });
+
+  });
+  function crop_image_file_upload(){
+    //if($('#avatarInput').files)
+    var inp = document.getElementById('avatarInput');
+    if(inp.files.length == 0){
+      alert('{CP_PLEASE_SELECT_ATLEAST_ONE_FILE}');
+      return false;
+    }
+    addOverlay();
+    var $avatarForm = $('.avatar-form');
+    var url = $avatarForm.attr('action');
+    var data = new FormData($avatarForm[0]);
+
+    $.ajax(url, {
+      type: 'post',
+      data: data,
+      dataType: 'json',
+      processData: false,
+      contentType: false,
+
+      beforeSend: function () {
+        console.log('before send');
+      },
+
+      success: function (data) {
+
+        if(data.state == 200){
+          var img = data.result.replace('{DIR_USER_PROFILE}','{SITE_USER_PROFILE}');
+          $('.preview_profile').attr('src',img);
+          $('#avatar-modal').modal('hide');
+          $('#remove_profile_image').css('display','block');
+          removeOverlay();
+        }else{
+          alert('Something went wrong');
+          removeOverlay();
+        }
+      },
+
+      error: function (XMLHttpRequest, textStatus, errorThrown) {
+        console.log('error');
+        removeOverlay();
+      },
+
+      complete: function () {
+        console.log('complete');
+        removeOverlay();
+      }
+    });
+  }
+  $(document).on("click","#profile_image_trigger",function(e){
+    e.preventDefault();
+    $("#avatar-modal").modal('show');
+  });
+  $(document).on("click",".avatar-cancel",function(e){
+    e.preventDefault();
+    $("#avatar-modal").modal('hide');
+  });
+  $(document).on('click','#remove_profile_image',function(e){
+    e.preventDefault();
+    if(confirm("{CP_TO_REMOVE_PROFILE_IMAGE}?")){
+      var form_data = new FormData();
+      form_data.append("action", "remove_profile_image");
+      $.ajax({
+        url: "{SITE_URL}AjaxFprofile",
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: form_data,
+        type: 'post',
+        dataType: 'json',
+        success:function(data)
+        {
+          console.log(data);
+          var url = data.url;
+          $('#remove_profile_image').css('display','none');
+          $('.preview_profile').attr('src',url);
+        }
+      });
+    }
+  });
+</script>
+
+<link rel="stylesheet" href="{SITE_JS}cropper-master_new/dist/cropper.min.css">
+<link rel="stylesheet" href="{SITE_JS}cropper-master_new/examples/crop-avatar/css/main.css">
+
+<script src="{SITE_JS}cropper-master_new/dist/cropper.min.js"></script>
+<script src="{SITE_JS}cropper-master_new/examples/crop-avatar/js/main.js"></script>
+<div class="container" id="crop-avatar">
+  <div class="avatar-view" title="Change the avatar" style="display: none;">
+    <img src="images/picture.jpg" alt="Avatar">
+  </div>
+  <div class="modal fade profile_modal" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <form class="avatar-form" action="{SITE_URL}app-sd/units-sd/freelancer_profile-sd/ajax.freelancer_profile-sd.php" enctype="multipart/form-data" method="post">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="avatar-modal-label">{CP_EDIT_PROFILE_IMAGE}</h4>
+          </div>
+          <div class="modal-body">
+            <div class="avatar-body">
+
+              <!-- Upload image and data -->
+              <div class="avatar-upload">
+                <input type="hidden" class="avatar-src" name="avatar_src" value="{DIR_USER_PROFILE}">
+                <input type="hidden" class="avatar-data" name="avatar_data">
+                <label for="avatarInput" class="btn btn-primary">{CP_LOCAL_UPLOAD}</label>
+                <input type="file" class="avatar-input" id="avatarInput" name="avatar_file">
+              </div>
+              <!-- Crop and preview -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="avatar-wrapper"></div>
+                </div>
+                <!-- <div class="col-md-3">
+                  <div class="avatar-preview preview-lg"></div>
+                  <div class="avatar-preview preview-md"></div>
+                  <div class="avatar-preview preview-sm"></div>
+                </div> -->
+              </div>
+
+              <div class="avatar-btns">
+                  <button type="submit" class="btn btn-system avatar-save">{CP_SUBMIT}</button>
+                  <!-- <a type="submit" class="btn btn-danger avatar-cancel">Cancel</a> -->
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div><!-- /.modal -->
+
+</div>

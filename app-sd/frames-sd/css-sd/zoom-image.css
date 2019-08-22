@@ -1,0 +1,34 @@
+/* zoom image */
+.zoom-image{
+	position: relative;
+	margin: 0;
+	background-size: cover;
+}
+.zoom-image > figure{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	background-repeat: no-repeat;
+	opacity: 0;
+	-o-transition: opacity 200ms ease-out;
+	-moz-transition: opacity 200ms ease-out;
+	-webkit-transition: opacity 200ms ease-out;
+	transition: opacity 200ms ease-out;
+}
+.zoom-image > figure:hover{
+	opacity: 1;
+}
+.zoom-image,  .zoom-image > figure { 
+    background-image: url("images/1ef105df129a560e2fb64bd3c447b123.jpg");/* note: these images can be defined separately for each element if desired */
+      /* these images can also be of any (web-friendly) type, not just base64, as above */
+}
+
+.zoom-image {
+  width: 500px;
+  height: 500px;
+}
+figcaption { position:relative; top:20px; left:20px; color:#fff;}
+h1 { margin:150px auto 50px auto;}

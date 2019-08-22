@@ -1,0 +1,28 @@
+<div class="form-group">
+    <label for="serviceAdonTitle" class="control-label col-md-3">Services Add on Title : &nbsp;</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control logintextbox-bg" name="serviceAdonTitle[]" id="serviceAdonTitle" value="%ADDONTITLE%" placeholder=" Enter Services Add On Title">
+        </div>
+</div>
+
+<div class="form-group">
+    <label for="serviceAdondayRequired" class="control-label col-md-3">Services Add on Day Required : &nbsp;</label>
+        <div class="col-md-6">
+            <input type="number" class="form-control logintextbox-bg" name="serviceAdondayRequired[]" id="serviceAdondayRequired" value="%ADDONDAYREQUIRED%" min="1" placeholder=" Enter Add on day required">
+        </div>
+</div>
+
+<div class="form-group">
+    <label for="serviceAdonPrice" class="control-label col-md-3">Services Add on Price : &nbsp;</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control logintextbox-bg" name="serviceAdonPrice[]" id="serviceAdonPrice" value="%ADDONPRICE%" placeholder=" Enter Add on price">
+        </div>
+</div>
+
+<div class="form-group">
+    <label for="serviceAdonDesc" class="control-label col-md-3">Services Add on Description : &nbsp;</label>
+        <div class="col-md-6">
+            <textarea name="serviceAdonDesc[]" id="serviceAdonDesc" class="form-control logintextbox-bg" placeholder="Enter services Add on Description">%ADDONDESC%</textarea>
+        </div>
+</div>
+<hr>

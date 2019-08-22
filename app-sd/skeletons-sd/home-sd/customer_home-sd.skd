@@ -1,0 +1,183 @@
+%TOP_HOMEPAGE_SECTION%
+<!-- start service section -->
+<section class="service-section common-section">
+  <div class="container">
+    <h2 class="main-title">
+      {HIRE_SOMEONE_PERFECT}
+    </h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="service-mcat-wrap">
+          <div class="row">
+            %HOME_CATEGORY_LIST%
+            <div class="col-md-3 col-sm-4">
+              <div class="service-box yellow">
+                <a href="{SITE_URL}search/sub-category/1">
+                  <div class="service-img">
+                    <img src="{SITE_IMG}icon/yellow.png" alt="">
+                  </div>
+                  <h3>{SEE_ALL_CATEGORIES_LABEL}</h3>
+                  <?php /* <span class="arrow">
+                    <i class="fa fa-angle-down"></i>
+                  </span> */ ?>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end service section -->
+
+<section class="category-section" style="display: none;">
+  <div class="container">
+    <h1>{HIRE_SOMEONE_PERFECT}</h1>
+    <div class="row">
+      %HOME_CATEGORY_LIST%
+      <div class="col-md-2 col-sm-3">
+        <a href="{SITE_URL}search/sub-category/1">
+          <div class="category-item">
+            <div class="category-icon">
+              <img src="{SITE_IMG}icon/see-all.png" title="{SEE_ALL_CATEGORIES_LABEL}"/>
+            </div>
+            <p>{SEE_ALL_CATEGORIES_LABEL}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- <div class="row %LOAD_MORE_CAT_CLASS%">
+      <div class="col-md-12">
+        <div class="view-more-button">
+          <div class="theme-button">
+            <a href="{SITE_URL}search/category/">See All Categories</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</section>
+
+<section class="featured-service common-section %FEATURED_SERVICES_CLASS%">
+    <div class="container">
+        <h2 class="main-title">{FEATURED_SERVICES}</h2>   
+        <div class="row">
+            <div class="col-md-12">
+                <div class="services-list-wrap">
+                    <div class="row cust-purchase">
+                        %FEATURED_SERVICES%
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</section>
+
+<!-- start top skills section -->
+<section class="top-skills-section common-section">
+    <div class="container">
+        <h2 class="main-title">
+            {TOP_SKILLS}
+        </h2>
+        <ul class="clearfix">
+            %SKILL_LIST%
+        </ul>
+    </div>
+</section>
+<!-- end top skills section -->
+
+<section class="browse-skills" style="display: none;">
+  <div class="container"> 
+    <h2>{TOP_SKILLS}</h2>
+    <div class="row">
+      %SKILL_LIST%
+    </div>
+  </div>
+</section>
+
+<!--start newsletter-->
+<section class="newsletter-section" style="display: none;">
+ <div class="container">
+  <h2>{SUBSCRIBE_TO_NEWSLETTER}</h2>
+  <p>{NEWSLETTER_DESC}</p>
+  <form class="form" action="#" method="post" name="newsletterFrm" id="newsletterFrm_demo">
+   <div class="row">
+    <div class="col-md-7 col-sm-8">
+
+      <div class="form-group">
+        <div class = "input-group">
+         <input class="form-control input-lg" name="email" id="email" placeholder="{NEWSLETTER_EMAIL_PLACE_HOLDER}"/>
+         <span class = "input-group-btn">
+          <input type="hidden" name="action" id="action" value="subscribeUser">
+          <button type="submit" name="newsletterSubscriber" id="newsletterSubscriber" class="btn btn-primary btn-lg btn-block"><span class="large-icon">{SUBSCRIBE_BTN_CAPTION}</span><span class="small-icon"><i class="fa fa-paper-plane"></i></span></button>
+        </span>
+      </div>
+    </div>
+    <p class="privacy">{NEWSLETTER_BOTTOM_LINE_DESC}</p>
+  </div>
+</div>
+</form>
+</div>
+</section>
+<!--end newsletter-->
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $(document).on("click",".save_service",function(){
+      $(this).children().find('i').removeClass("fa fa-heart-o").addClass("fa fa-heart");
+      var id = $(this).attr("data-id");
+      $.post("{SITE_URL}ajaxServiceSearch",{"action":"saveServices","id":id},function(data){
+        toastr[data.type](data.msg);
+      },'json');
+    });   
+
+    
+
+
+    $(document).on('input','#searchKeyword',function(){
+      var str = $(this).val();
+      if($.trim(str) != ""){
+        $.ajax({
+          url: "{SITE_URL}ajaxFreelancerSearch",
+          cache: false,
+          async : true,
+          type: "GET",
+          dataType: "json",
+          data: { action:"get_typehead", query: $.trim(str),type : 'customer'},
+          success: function(result){
+
+            var strdata = '';
+            $.each(result,function(i,data){
+
+              if(data.type == 'title'){
+                strdata += '<div class="auto_complete_item auto_complete_title"  data-url="#">'+data.name+'</div>';
+              }else if(data.type == 'subtitle'){
+                strdata += '<div class="auto_complete_item auto_complete_subtitle"  data-url="{SITE_URL}'+data.slug+'">'+data.name+'</div>';
+              }else{
+                strdata += '<div class="auto_complete_item auto_complete_record"  data-url="{SITE_URL}'+data.slug+'">'+data.name+'</div>';
+              }
+            });
+          //console.log(strdata);
+          $('.auto_complete_results').html(strdata);
+          $('.auto_complete_results').css('display','block');
+          $(".auto_complete_results").mCustomScrollbar();
+        }
+      });
+      }else{
+        $('.auto_complete_results').css('display','none');
+        $('.auto_complete_results').html('');
+      }
+    }); 
+    $(document).on('click','.auto_complete_subtitle, .auto_complete_record',function(e){
+      window.location.href = $(this).attr('data-url');
+    });
+
+
+  });
+</script>
+
+<script type="text/javascript">
+  var freelancer_home = true;
+</script>

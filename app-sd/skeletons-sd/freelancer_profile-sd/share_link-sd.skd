@@ -1,0 +1,46 @@
+<div class="modal fade" id="share_link" role="dialog" tabindex="-1">
+   <div class="modal-dialog">
+      <!-- Modal content-->
+      <form method="post" name="share_linkFrm" id="share_linkFrm">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">
+               &times;
+               </button>
+               <h4 class="modal-title">
+                  {ADD_SHARE_LINK_LBL}
+               </h4>
+            </div>
+            <div class="modal-body">
+               
+                  <div class="form-group">
+                     <strong class="control-label">{ADD_LINK_LBL}</strong>
+                     : <label>%URL%</label>
+                  </div>
+               
+               <div class="share_fg">
+                  <ul class="list-inline">
+                     <li>
+                        <!-- <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> -->
+                        <a href="javascript:void(0);" class="wbshare-icon facebook" onclick="window.open('http://www.facebook.com/dialog/feed?display=popup&amp;app_id={FB_APP_ID}&amp;link=%URL%&amp;name=%USERNM%&amp;caption=%USERNM% ')" title="Share Via Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                     </li>
+                     <li>
+                        <!-- <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> -->
+                        <a href="https://plus.google.com/share?url=%URL%" class="google" onclick="javascript:window.open(this.href, '%URL%', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Share Via Google"><i class="fa fa-google-plus"></i></a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!-- <div class="modal-footer">
+               <div class="theme-button-default">
+                  <a href="#" data-dismiss="modal">Cancel</a>
+               </div>
+               <div class="theme-button">
+                  <input type="hidden" name="action" id="action" value="addlink">
+                  <button type="submit" name="addLink" id="addLink" class="btn btn-system">Save</button>
+               </div>
+            </div> -->
+         </div>
+      </form>
+   </div>
+</div>

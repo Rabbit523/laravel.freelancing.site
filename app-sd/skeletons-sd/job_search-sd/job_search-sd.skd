@@ -1,0 +1,505 @@
+<script type="text/javascript" src="{SITE_JS}URI.js"></script>
+<!-- Searchbar Section -->
+<? /* 
+<section class="serchbar-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="searchbar-form filters-search">
+                    <form class="form" action="" method="POST" id="frmMyJobs" name="frmMyJobs">
+                        <div class="input-group">
+                           <span class="input-group-btn">
+                              <select class="btn">
+                                <option>Jobs</option>
+                                <option>Freelancers</option>
+                                <option>Services</option>
+                              </select>
+                           </span>
+                            <!-- <input type="text" class="form-control" placeholder="Find Jobs (eg. Web Design)">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button">Search</button>
+                            </span> -->
+                            <span class="main-input">
+                              <input type="text" class="form-control" placeholder="Search" name="keyword" id="keyword" value="%KEYWORD%">
+                              <i class="fa fa-search desktop-view"></i>
+                            </span>
+                            <span class="input-group-btn location-input-group desktop-view">
+                              <input type="text" class="form-control" placeholder="Location">
+                              <i class="fa fa-map-marker"></i>
+                            </span>
+                           <span class="input-group-btn">
+                                 <a href="javascript:void(0)" class="btn btn-primary">
+                                    <i class="fa fa-search mobile-view"></i> 
+                                    <span class="desktop-view">Search</span>
+                                 </a>
+                                <!-- <button class="btn btn-primary search_record" type="button">Search</button> -->
+                           </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> */ ?>
+%SEARCH_SECTION%
+<!-- Searchbar Section End -->
+<section class="main-dashboard">
+   <div class="container">
+      <div class="" id="filters-search">
+         <div class="search-page">
+            <div class=" service-listing-wrap">
+               <div class="job-find">
+                  <div class="row">
+                  </div>
+               </div>
+               <div class="row ">
+                  <div class="col-md-3 col-sm-4">
+                     <div class="left-sidebar filters-search" id="sidebarMenu">
+                        <div class="panel panel-default theme-box">
+                           <div class="panel-heading">
+                              <h3 class="panel-title">{FS_FILTERS}</h3>
+                              <div class="panel-tools pull-right">
+                                 <a href="{SITE_URL}search/jobs/">Clear <i class="fa fa-refresh" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                           <div class="panel-body">
+                              <div class="filter-box">
+                                 <h5 class="filter-title">
+                                    {JOB_SEARCH_CAT_LBL}
+                                 </h5>
+                                 <div class="filter-body">
+                                    <div class="form-group">
+                                       <select class="form-control category" name="category" id="category">
+                                          %CATEGORY%
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="filter-box">
+                                 <h5 class="filter-title">
+                                    {JOB_SEARCH_SUB_CAT_LBL}
+                                 </h5>
+                                 <div class="filter-body">
+                                    <div class="form-group">
+                                       <select class="form-control subcategory" name="subcategory" id="subcategory">
+                                          %SUBCATEGORY%
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="filter-box">
+                                 <h5 class="filter-title">
+                                    {JOB_SKILLS_LBL}
+                                 </h5>
+                                 <div class="filter-body">
+                                    <div class="form-group">
+                                       <select class="form-control skills" name="skills" id="skills">
+                                          %SKILLS%
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="filter-box">
+                                 <h5 class="filter-title">
+                                    {EXP_LEVEL_LBL}
+                                 </h5>
+                                 <div class="filter-body">
+                                    <ul class="filter-lists">
+                                       <li>
+                                          <input type="radio" id="test1" name="exp_lvl" value="beginner" %BEGINNER_CLASS%>
+                                          <label for="test1">
+                                          {BEGINNER_LBL}
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <input type="radio" id="test3" name="exp_lvl" value="intermediate" %IM_CLASS%>
+                                          <label for="test3">
+                                          {INTERMEDIATE_LABEL}
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <input type="radio" id="test2" name="exp_lvl" value="pro" %PRO_CLASS%>
+                                          <label for="test2">
+                                          {PRO_LABEL}
+                                          </label>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <!-- <div class="filter-box">
+                                 <h5 class="filter-title">
+                                   {NO_OF_APPLICANTS_LBL}
+                                 </h5>
+                                 <div class="filter-body">
+                                    <div class="form-group">
+                                       <input type="number" name="no_applicants" id="no_applicants" min=0 value="%NO_APPLICANTS%" class="form-control" placeholder="No of Applicants">
+                                    </div>
+                                 </div>
+                              </div> -->
+                              <div class="filter-box">
+                                 <h5 class="filter-title">
+                                    {CLIENT_BUDGET_LBL}
+                                 </h5>
+                                 <div class="filter-body">
+                                    <div class="range_slider">
+                                       <div>
+                                          <input type="text" id="amount" name="start_amount" readonly style="border:0; font-weight:bold;">
+                                          <input type="text" id="amount2" name="end_amount" readonly style="border:0; font-weight:bold;">
+                                       </div>
+                                       <div id="slider-range">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="filter-box">
+                                 <h5 class="filter-title">
+                                    {SORT_BY_LBL}
+                                 </h5>
+                                 <div class="filter-body">
+                                    <div class="form-group">
+                                       <select class="form-control jobType" name="jobType" id="jobType">
+                                          <option value="">{SELECT_JOBS}</option>
+                                          <option value="featured" %FEATURED_CLASS%>
+                                             {ONLY_FEATURED_JOB_LBL}
+                                          </option>
+                                          <option value="new" %NEW_JOBS_CLASS%>
+                                             {NEWS_JOBS_LBL}
+                                          </option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="filter-box mobile-view">
+                                 <h5 class="filter-title">
+                                    {CUST_LOCATION_LBL}
+                                 </h5>
+                                 <div class="filter-body">
+                                    <div class="location_search">
+                                       <div class="form-group">
+                                          <input type="text" class="form-control load_ggl_autocomplete location" name="location" id="location" value="%LOCATION%"/>
+                                          <i class="fa fa-map-marker" aria-hidden="true">
+                                          </i>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="filter-box">
+                                 <h5 class="filter-title">
+                                    {BIDDING_DEADLINE_LBL}
+                                 </h5>
+                                 <div class="filter-body">
+                                    <div class="date-select">
+                                       <div class="form-group">
+                                          <label>
+                                          {FROM_LBL} :
+                                          </label>
+                                          <input type="text" id="startdate" name="startdate" class="form-control datepicker" value="%START_DATE%" placeholder="From date">
+                                       </div>
+                                       <div class="form-group">
+                                          <label>
+                                          {TO_LBL} :
+                                          </label>
+                                          <input type="text" id="enddate" name="enddate" class="form-control datepicker" value="%END_DATE%" placeholder="To date">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filter-menu">
+                        <button>
+                        <i class="fa fa-sliders" aria-hidden="true">
+                        </i>
+                        {F_FILTER_LBL}
+                        </button>
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-9 col-sm-8">
+                     <div class="cm-job-lists-wrap">
+                        <div class="panel panel-default theme-box">
+                           <div class="panel-heading">
+                              <h3 class="panel-title">
+                                 {JOBS_SORTING_LBL}
+                              </h3>
+                              <div class="panel-tools pull-right">
+                                 <select class="form-control" name="sorting" id="sorting">
+                                    <option value=''>
+                                       {SORT_BY_LBL}
+                                    </option>
+                                    <option value="newest" %NEWEST%>
+                                       {NEWEST_OPTION_I_LBL}
+                                    </option>
+                                    <option value="lTOhRating" %LTIHRATE%>
+                                       {NEWEST_OPTION_II_LBL}
+                                    </option>
+                                    <option value="hTOlRating" %HTOLRATE%>
+                                       {NEWEST_OPTION_III_LBL}
+                                    </option>
+                                    <option value="lTohInvest" %LTOHINV%>
+                                       {NEWEST_OPTION_IV_LBL}
+                                    </option>
+                                    <option value="hTolInvest" %HTOLINV%>
+                                       {NEWEST_OPTION_V_LBL}
+                                    </option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="panel-body">
+                              <ul class="cm-job-item-lists my-jobs" id="job_data"><!-- class="dash-job" id="job_data" -->
+                                 %JOB_DATA%
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="view-more-button">
+                        <div class="theme-button">
+                            <a href="javascript:void(0)" class="load_more_data %LOAD_CLASS%" data-page="1">View More</a>
+                        </div>
+                     </div>
+
+
+
+                    <?php /* <div class="theme-form">
+                        <div class="job_feed_heading">
+
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="row">
+                                 <div class="col-md-8 col-sm-7">
+                                    <h1 class="main-heading">
+                                       {JOBS_SORTING_LBL}
+                                    </h1>
+                                 </div>
+                                 <div class="col-md-4 col-sm-5">
+                                    <div class="search_sort">
+                                       <select class="form-control" name="sorting" id="sorting">
+                                          <option value=''>
+                                             {SORT_BY_LBL}
+                                          </option>
+                                          <option value="newest" %NEWEST%>
+                                             {NEWEST_OPTION_I_LBL}
+                                          </option>
+                                          <option value="lTOhRating" %LTIHRATE%>
+                                             {NEWEST_OPTION_II_LBL}
+                                          </option>
+                                          <option value="hTOlRating" %HTOLRATE%>
+                                             {NEWEST_OPTION_III_LBL}
+                                          </option>
+                                          <option value="lTohInvest" %LTOHINV%>
+                                             {NEWEST_OPTION_IV_LBL}
+                                          </option>
+                                          <option value="hTolInvest" %HTOLINV%>
+                                             {NEWEST_OPTION_V_LBL}
+                                          </option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <ul class="dash-job" id="job_data">
+                        %JOB_DATA%
+                     </ul>
+                     </div>
+                     <div class="view-more-button">
+                        <div class="theme-button">
+                            <a href="javascript:void(0)" class="load_more_data %LOAD_CLASS%" data-page="1">View More</a>
+                        </div>
+                     </div> */ ?>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+<script type="text/javascript">
+   var url = "{SITE_URL}ajaxJobSearch";
+   $(document).ready(function(){
+
+      $(document).on("click",".job_details", function(e){
+         $msg = $(this).data("msg");
+         toastr["error"]($msg);
+         return false;
+      }); 
+
+      /*sorting change*/
+      $(document).on("change","#sorting",function(){
+         search_record(1);
+      });
+      /*category change*/
+      $(document).on("change",".category",function(){
+         var catId = $(this).val();
+         $.post(url,{"action":"subcateLoad",cat:catId},function(data){
+            $("#subcategory").html(data.content);
+            search_record(1);
+         },'json');
+      });
+      /*sub category change*/
+      $(document).on("change",".subcategory",function(){
+         search_record(1);
+      });
+
+      /*skill change*/
+      $(document).on("change",".skills",function(){
+         search_record(1);
+      });
+      $(document).on("change","input[type=radio]",function(){
+         search_record(1);
+      });
+      $(document).on("keyup","#no_applicants",function(){
+         search_record(1);
+      });
+      $(document).on("change","#no_applicants",function(){
+         search_record(1);
+      });
+
+      $(document).on("click",".load_more_data",function()
+      {
+           var pageNo = $(this).attr("data-page");
+           var p_no = parseInt(pageNo)+1;
+           search_record(p_no,"load_append");
+      });
+
+      $(document).on("click",".search",function(){
+         search_record(1);
+      });
+
+      $(document).on("change",".jobType",function(){
+         search_record(1);
+      });
+
+      $(document).on("change","#location",function(){
+         setTimeout(function() {
+            search_record(1);
+         }, 200);
+      });
+
+
+   });
+
+   function search_record(p_no,loadType='load')
+   {
+       var query_param = $("#filters-search select").serialize()+"&"+$("#filters-search input").serialize()+"&action=load_seach_data&page_no="+p_no;
+       var new_serialized_url = URI(url+'/?'+query_param),
+           curr_uri = URI(window.location.href),
+           new_serialized_params = new_serialized_url.search(true);
+
+       ((new_serialized_params.category!= '' && new_serialized_params.category!=undefined) ? curr_uri.setSearch("category", new_serialized_params.category) : curr_uri.removeSearch("category"));
+       ((new_serialized_params.subcategory!= '' && new_serialized_params.subcategory!=undefined) ? curr_uri.setSearch("subcategory", new_serialized_params.subcategory) : curr_uri.removeSearch("subcategory"));
+
+       ((new_serialized_params.Rcategory!= '' && new_serialized_params.Rcategory!=undefined) ? curr_uri.setSearch("Rcategory", new_serialized_params.Rcategory) : curr_uri.removeSearch("Rcategory"));
+       ((new_serialized_params.Rsubcategory!= '' && new_serialized_params.Rsubcategory!=undefined) ? curr_uri.setSearch("Rsubcategory", new_serialized_params.Rsubcategory) : curr_uri.removeSearch("Rsubcategory"));
+
+
+       ((new_serialized_params.skills!= '' && new_serialized_params.skills!=undefined) ? curr_uri.setSearch("skills", new_serialized_params.skills) : curr_uri.removeSearch("skills"));
+       ((new_serialized_params.Rskills!= '' && new_serialized_params.Rskills!=undefined) ? curr_uri.setSearch("Rskills", new_serialized_params.Rskills) : curr_uri.removeSearch("Rskills"));
+
+       ((new_serialized_params.sorting!= '') ? curr_uri.setSearch("sorting", new_serialized_params.sorting) : curr_uri.removeSearch("sorting"));
+       ((new_serialized_params.exp_lvl!= '' && new_serialized_params.exp_lvl!=undefined) ? curr_uri.setSearch("exp_lvl", new_serialized_params.exp_lvl) : curr_uri.removeSearch("exp_lvl"));
+       ((new_serialized_params.Rexp_lvl!= '' && new_serialized_params.Rexp_lvl!=undefined) ? curr_uri.setSearch("Rexp_lvl", new_serialized_params.Rexp_lvl) : curr_uri.removeSearch("Rexp_lvl"));
+
+       ((new_serialized_params.location!= '' && new_serialized_params.location!=undefined) ? curr_uri.setSearch("location", new_serialized_params.location) : curr_uri.removeSearch("location"));
+       ((new_serialized_params.Rlocation!= '' && new_serialized_params.Rlocation!=undefined) ? curr_uri.setSearch("Rlocation", new_serialized_params.Rlocation) : curr_uri.removeSearch("Rlocation"));
+
+
+       ((new_serialized_params.no_applicants!= '' && new_serialized_params.no_applicants!= undefined) ? curr_uri.setSearch("no_applicants", new_serialized_params.no_applicants) : curr_uri.removeSearch("no_applicants"));
+       ((new_serialized_params.Rno_applicants!= '' && new_serialized_params.Rno_applicants!= undefined) ? curr_uri.setSearch("Rno_applicants", new_serialized_params.Rno_applicants) : curr_uri.removeSearch("Rno_applicants"));
+
+       ((new_serialized_params.start_amount!= '' && new_serialized_params.start_amount!=undefined) ? curr_uri.setSearch("start_amount", new_serialized_params.start_amount) : curr_uri.removeSearch("start_amount"));
+       ((new_serialized_params.end_amount!= '' && new_serialized_params.end_amount!= undefined) ? curr_uri.setSearch("end_amount", new_serialized_params.end_amount) : curr_uri.removeSearch("end_amount"));
+
+       ((new_serialized_params.Rstart_amount!= '' && new_serialized_params.Rstart_amount!=undefined) ? curr_uri.setSearch("Rstart_amount", new_serialized_params.Rstart_amount) : curr_uri.removeSearch("Rstart_amount"));
+       ((new_serialized_params.Rend_amount!= '' && new_serialized_params.Rend_amount!= undefined) ? curr_uri.setSearch("Rend_amount", new_serialized_params.Rend_amount) : curr_uri.removeSearch("Rend_amount"));
+
+
+       ((new_serialized_params.startdate!= '' && new_serialized_params.startdate!=undefined) ? curr_uri.setSearch("startdate", new_serialized_params.startdate) : curr_uri.removeSearch("startdate"));
+       ((new_serialized_params.enddate!= '' && new_serialized_params.enddate!=undefined) ? curr_uri.setSearch("enddate", new_serialized_params.enddate) : curr_uri.removeSearch("enddate"));
+       ((new_serialized_params.Rstartdate!= '' && new_serialized_params.Rstartdate!=undefined) ? curr_uri.setSearch("Rstartdate", new_serialized_params.Rstartdate) : curr_uri.removeSearch("Rstartdate"));
+       ((new_serialized_params.Renddate!= '' && new_serialized_params.Renddate!=undefined) ? curr_uri.setSearch("Renddate", new_serialized_params.Renddate) : curr_uri.removeSearch("Renddate"));
+
+
+       ((new_serialized_params.searchKeyword!= '' && new_serialized_params.searchKeyword!=undefined) ? curr_uri.setSearch("searchKeyword", new_serialized_params.searchKeyword) : curr_uri.removeSearch("searchKeyword"));
+       ((new_serialized_params.jobType!= '' && new_serialized_params.jobType!=undefined) ? curr_uri.setSearch("jobType", new_serialized_params.jobType) : curr_uri.removeSearch("jobType"));
+       ((new_serialized_params.RjobType!= '' && new_serialized_params.RjobType!=undefined) ? curr_uri.setSearch("RjobType", new_serialized_params.RjobType) : curr_uri.removeSearch("RjobType"));
+
+
+       history.pushState({}, null, '?'+curr_uri._parts.query);
+       $.ajax({
+           url: url,
+           type: 'POST',
+           dataType: 'json',
+           data: query_param,
+           success : function(data)
+           {
+             (loadType=='load_append') ? $('#job_data').append(data.content) : $('#job_data').html(data.content);
+             $(".load_more_data").addClass(data.btn);
+             $(".load_more_data").attr("data-page",data.pageno);
+           }
+       });
+   }
+
+   $( function() {
+        $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: "%MAX_BUDGET%",
+        values: [ 0, "%MAX_BUDGET%" ],
+        slide: function( event, ui ) {
+         $( "#amount" ).val( ui.values[ 0 ]);
+         $( "#amount2" ).val( ui.values[ 1 ] );
+         search_record(1);
+       }
+     });
+     $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) );
+      $( "#amount2" ).val( $( "#slider-range" ).slider( "values", 1 ) );
+
+    } );
+   $( function() {
+        $( "#slider-range2" ).slider({
+        range: true,
+        min: 0,
+        max: 100,
+        values: [ 0, 100 ],
+        slide: function( event, ui ) {
+         $( "#amount3" ).val( "$" + ui.values[ 0 ]);
+         $( "#amount4" ).val( "  $" + ui.values[ 1 ] );
+       }
+     });
+     $( "#amount3" ).val( "$" + $( "#slider-range2" ).slider( "values", 0 ) );
+      $( "#amount4" ).val( "$" + $( "#slider-range2" ).slider( "values", 1 ) );
+
+    } );
+
+
+   $('.datepicker').datetimepicker({
+        format: 'DD-MM-YYYY'
+   })
+
+
+   $('.datepicker').on('dp.change', function(e){
+      search_record(1);
+   });
+
+   /*Add to favourite */
+   $(document).on("click",".add_favourite",function(){
+      $(this).find('i').removeClass("fa fa-heart-o").addClass("fa fa-heart");
+      var jobId = $(this).attr("data-id");
+      $.post(url,{"action":"addToFav","jobId":jobId},function(data){
+         if(data.type == "error")
+         {
+            window.location.href = "{SITE_URL}SignIn";
+            toastr[data.type](data.msg);
+         }
+         else
+         {
+            toastr[data.type](data.msg);
+         }
+      },'json');
+   });
+
+</script>

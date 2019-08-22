@@ -1,0 +1,160 @@
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                 <div class="nav navbar-right panel_toolbox portlet-toggler">
+                   <a href="ajax.new_listing_request-sd.php?action=export_excel" class="btn chng-btn btn-success btn-sm"><i class="fa fa-dowload"></i> Export as Excel</a>
+                </div>
+                <div class="nav navbar-right panel_toolbox portlet-toggler">
+                   <a href="ajax.new_listing_request-sd.php?action=export_csv" class="btn chng-btn btn-warning btn-sm"><i class="fa fa-dowload"></i> Export as CSV</a>
+                </div>
+                <div class="nav navbar-right panel_toolbox btn-back">
+                    <a href="<?php echo SITE_ADM_MOD; ?>new_listing_request-sd" class="btn btn-success btn-sm" title="Back"><i class="fa fa-arrow-left"></i></a>
+                </div> 
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="actions portlet-toggler">
+                    <div class="btn-group"></div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 pull-right" >
+                                <div class="row">
+                                   <div class="col-md-6">
+                                        <select name='filtering_type' id='filtering_type' class='form-control input-inline'>
+                                            <option selected='' value='0'>All Site Type</option>
+                                            <option value='1'>Established Site</option>
+                                            <option value='2'>Starter Site</option>
+                                           <option value='3'>Domain</option>
+                                            <option value='4'>App</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select name='status_listing' id='status_listing' class='form-control input-inline'>
+                                            <option selected='' value=''>All Status</option>
+                                            <option value='pending'>Pending</option>
+                                            <option value='approved'>Approved</option>
+                                            <option value='rejected'>Rejected</option>
+                                        </select>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="portlet-body portlet-toggler ">
+                <table id="example123" class="table table-striped table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        OTable = $('#example123').dataTable({
+            "dom": '<"toolbar">frtip',
+        "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                "fnServerData": function (sSource, aoData, fnCallback) {
+                    $.ajax({
+                        "dataType": 'json',
+                        "type": "POST",
+                        "url": sSource,
+                        "data": aoData,
+                        "success": fnCallback
+                    });
+                },
+                "aaSorting" : [],
+                "aoColumns": [
+                { "sName": "listingId", "sTitle" : 'Listing Id', bVisible: false},
+                { "sName": "userName", 'sTitle' : 'User Name'},
+                { "sName": "listingUrl", 'sTitle' : 'Listing URL'},
+                { "sName": "listingTypeName", 'sTitle' : 'Listing Type'}
+<?php if (in_array('status', $this->Permission)) { ?>
+                    , { "sName": "isAdminApproved", 'sTitle' : 'Approval Status', bSearchable:false}
+<?php } ?>
+<?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+                    , {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}
+<?php } ?>
+                ],
+                "fnServerParams": function(aoData) {
+                setTitle(aoData, this)
+                aoData.push( { name: "filtering_type", value: $("#filtering_type").val() },{ name: "status_listing", value: $("#status_listing").val()});
+                },
+                "fnDrawCallback": function(oSettings) 
+                {  
+                    $('.make-switch').bootstrapSwitch();
+                    $('.make-switch').bootstrapSwitch('setOnClass', 'success');
+                    $('.make-switch').bootstrapSwitch('setOffClass', 'danger'); 
+                }
+
+    });
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+    $(document).on('change', '#filtering_type', function(e) 
+        {
+            OTable.fnDraw();
+        });
+    $(document).on('change', '#status_listing', function(e) 
+        {
+            OTable.fnDraw();
+        });
+    $(document).on('click', '#submitAddForm', function (e) {
+        e.preventDefault();
+        CKEDITOR.config.autoParagraph = false;
+        for (var instanceName in CKEDITOR.instances) {
+            CKEDITOR.instances[instanceName].updateElement();
+        }
+        
+        $("#frmCont").validate({
+            ignore: ':not(:visible)',
+            errorClass: 'help-block',
+            errorElement: 'span',
+            highlight: function (element) {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element) {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorPlacement: function (error, element) {
+                if (element.attr("data-error-container")) {
+                    error.appendTo(element.attr("data-error-container"));
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+            rules: {
+                approve_status: {required: true},
+                reason :{required:true}
+            },
+            messages: {
+                approve_status: {required: '&nbsp;Please select Listing Approval Status'},
+                reason :{required:'&nbsp;Please enter reason'}
+            }
+        });
+        
+        if ($("#frmCont").valid()) {
+            ajaxFormSubmit("#frmCont");
+        } else {
+            return false;
+        }
+        
+    });
+    });
+</script>

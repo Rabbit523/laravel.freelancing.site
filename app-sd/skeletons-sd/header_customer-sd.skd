@@ -1,0 +1,262 @@
+<header class="sub-header index-header">
+            <!-- Navigation -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">
+                        {TOGGLE_NAVIGATION}
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                </button>
+                <a class="navbar-brand" href="{SITE_URL}">
+                <div class="logo-header">
+                    <?php if(!empty(SITE_LOGO)){ ?>
+                <!--<img src="images/pickgeeks-logo.png" />-->
+                        <img src="{SITE_IMG}{SITE_LOGO}" />
+                    <?php } ?>
+                </div>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <?php /* <li class="">
+                        <a href="#" data-toggle="dropdown" aria-expanded="false">{NAV_BUY_LBL} <i class="fa fa-angle-down"></i></a>
+                         <ul class="dropdown-menu">
+                            <li><a href="{SITE_URL}search/service/">{NAV_BROWSE_SERVICE_LBL}</a></li>
+                            <!-- <li><a href="{SITE_URL}search/freelancer/">{NAV_FIND_FREELANCER_LBL}</a></li> -->
+                        </ul> 
+                    </li> */ ?>
+                    <li>
+                        <a href="{SITE_URL}search/service/">{NAV_BROWSE_SERVICE_LBL}</a>
+                    </li>
+                    
+                    <li class="login-img">
+                        <a href="#" data-toggle="dropdown">
+                            <div class="login-usr-img">
+                                <img src="%USER_IMG%">
+                            </div>
+                            <span>%USERNAME%</span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- <li><a href="{SITE_URL}switchprofile">Switch as Freelancer</a></li> -->
+                            <li><a href="{SITE_URL}profile">{F_NAV_MY_PROFILE_LBL}</a></li>
+                            <!-- <li><a href="{SITE_URL}c/my-jobs">{F_NAV_MY_JOBS_LBL}</a></li> -->
+                            <!-- <li><a href="{SITE_URL}c/wallet">{F_NAV_WALLET_LBL}</a></li> -->
+                            <!-- <li><a href="{SITE_URL}c/review">{F_NAV_MY_REVIEW_LBL}</a></li> -->
+                            <!-- <li><a href="{SITE_URL}c/financial-dashboard">{CST_FIN_DASHBOARD}</a></li> -->
+                            <!-- <li><a href="{SITE_URL}c/service-order">{F_NAV_SERVICE_ORDER_LBL}</a></li> -->
+                            <!-- <li><a href="{SITE_URL}c/saved-freelancer">{F_NAV_SAVED_FREELANCER_LBL}</a></li> -->
+                            <!-- <li><a href="{SITE_URL}c/favorite-services">{F_NAV_FAV_SERVICE_LBL}</a></li> -->
+                            <li><a href="{SITE_URL}c/account-setting">{F_NAV_ACCNT_SETTING_LBL}</a></li>
+                            <li class="%PMB_LINK%"><a href="{SITE_URL}pmb">{NAV_PMB_LBL}</a></li>
+                            <li><a href="{SITE_URL}logout">{F_NAV_LOGOUT_LBL}</a></li>
+                        </ul>
+                    </li>
+                    <li class="notification">
+                        <a href="{SITE_URL}notification" class="mobile-noti">
+                            <div class="noti-img">
+                                <img src="{SITE_IMG}ring.png" alt="">
+                            </div>
+                            <div class="number %NOTI_BELL%"></div>
+                        </a>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            <div class="noti-img">
+                                <img src="{SITE_IMG}ring.png" alt="">
+                            </div>
+                            <div class="number %NOTI_BELL%"></div>
+                        </a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <!-- <li class="noti-item">
+                                    <a href="javascript:void(0);" class="cancel-noti">
+                                        <img src="{SITE_IMG}icon/cancel.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <div class="media">
+                                          <div class="media-left">
+                                            <div class="noti-img">
+                                                <img src="{SITE_IMG}team/4.jpg" alt="">
+                                            </div>
+                                          </div>
+                                          <div class="media-body">
+                                            <p>Your service request has been accepted by PickGeeks V2</p>
+                                            <span class="date">22nd May 2018</span>
+                                          </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="noti-item">
+                                    <a href="javascript:void(0);" class="cancel-noti">
+                                        <img src="{SITE_IMG}icon/cancel.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <div class="media">
+                                          <div class="media-left">
+                                            <div class="noti-img">
+                                                <img src="{SITE_IMG}team/11.jpg" alt="">
+                                            </div>
+                                          </div>
+                                          <div class="media-body">
+                                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                                            <span class="date">22nd May 2018</span>
+                                          </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="noti-item">
+                                    <a href="javascript:void(0);" class="cancel-noti">
+                                        <img src="{SITE_IMG}icon/cancel.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <div class="media">
+                                          <div class="media-left">
+                                            <div class="noti-img">
+                                                <img src="{SITE_IMG}team/3.jpg" alt="">
+                                            </div>
+                                          </div>
+                                          <div class="media-body">
+                                            <p>Your service request has been accepted by PickGeeks V2</p>
+                                            <span class="date">22nd May 2018</span>
+                                          </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="noti-item">
+                                    <a href="javascript:void(0);" class="cancel-noti">
+                                        <img src="{SITE_IMG}icon/cancel.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <div class="media">
+                                          <div class="media-left">
+                                            <div class="noti-img">
+                                                <img src="{SITE_IMG}team/1.jpg" alt="">
+                                            </div>
+                                          </div>
+                                          <div class="media-body">
+                                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                                            <span class="date">22nd May 2018</span>
+                                          </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="noti-item">
+                                    <a href="javascript:void(0);" class="cancel-noti">
+                                        <img src="{SITE_IMG}icon/cancel.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <div class="media">
+                                          <div class="media-left">
+                                            <div class="noti-img">
+                                                <img src="{SITE_IMG}team/12.jpeg" alt="">
+                                            </div>
+                                          </div>
+                                          <div class="media-body">
+                                            <p>Your service request has been accepted by PickGeeks V2</p>
+                                            <span class="date">22nd May 2018</span>
+                                          </div>
+                                        </div>
+                                    </a>
+                                </li>-->
+                                %NOTIFICATION_LIST%
+                                <li class="text-center">
+                                    <a href="{SITE_URL}notification">
+                                        <i class="fa fa-angle-down"></i>&nbsp; {SHOW_ALL_NOTIFICATIONS}
+                                    </a>
+                                </li>                                 
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="pmb-menu notification">
+                        <a href="{SITE_URL}pmb" class="mobile-noti">
+                            <div class="message-icon">
+                                <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                            </div>
+                            <div class="number "></div>
+                        </a>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            <div class="message-icon">
+                                <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                            </div>
+                            <div class="number "></div>
+                        </a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                %GET_PMB_MESSAGES%
+                                <!-- <li class="msg-item">
+                                    <a href="javascript:void(0);" class="cancel-noti"></a>
+                                    <a href="#">
+                                        <div class="media">
+                                          <div class="media-left">
+                                            <div class="noti-img">
+                                                <img src="{SITE_IMG}team/4.jpg" alt="">
+                                            </div>
+                                          </div>
+                                          <div class="media-body">
+                                            <h6 class="msg-user">Vishal Patel</h6>
+                                            <p>Your service request has been accepted by PickGeeks V2</p>
+                                            <div class="date-time">
+                                                <span class="msgdate">22nd May 2018</span>
+                                                <span class="msgtime">12:45 PM</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="msg-item">
+                                    <a href="javascript:void(0);" class="cancel-noti"></a>
+                                    <a href="#">
+                                        <div class="media">
+                                          <div class="media-left">
+                                            <div class="noti-img">
+                                                <img src="{SITE_IMG}team/4.jpg" alt="">
+                                            </div>
+                                          </div>
+                                          <div class="media-body">
+                                            <h6 class="msg-user">Vishal Patel</h6>
+                                            <p>Your service request has been accepted by PickGeeks V2</p>
+                                            <div class="date-time">
+                                                <span class="msgdate">12nd May 2018</span>
+                                                <span class="msgtime">12:30 PM</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </a>
+                                </li> -->
+                                <li class="text-center">
+                                    <a href="{SITE_URL}pmb">
+                                        <i class="fa fa-angle-down"></i>&nbsp; {SHOW_ALL_MESSAGES}
+                                    </a>
+                                </li>                                
+                            </ul>
+                        </div>
+                    </li>  
+
+                    <li class="post-a-job-wrap">
+                        <a href="{SITE_URL}c/post-job">{C_POST_JOB_LBL}</a>
+                    </li>
+
+                    <?php /* <li>
+                        <div class="language-selection">
+                          <select class="form-control change_language">
+                            <option value="Default">English</option>
+                            %L_CONTENT%
+                          </select>
+                        </div>
+                    </li> */ ?>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    $("header .navbar-default .navbar-nav>li.notification .dropdown-menu").mCustomScrollbar();
+</script>

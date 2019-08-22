@@ -1,0 +1,127 @@
+<li class="pbox ctfs-item service_%ID%">
+    <div class="pbox-body no-padding">
+        <div class="media">
+            <div class="media-left ctfs-thumb-wrap">
+                <div class="ctfs-like-btn">
+                    <a href="javascript:void(0)" data-id="%ID%" title="Remove from favourites">
+                        <i class="fa fa-heart"></i>
+                    </a>
+                </div>
+                <div class="ctfs-thumb">
+                    <img src="%SERVICE_IMG%" class="media-object"/>
+                </div>
+            </div>
+            <div class="media-body">
+                <div class="ctfs-wrap">
+                    <div class="ctfs-wrap-left-block ctfs-block">
+                        <h4 class="ctfs-title">
+                            <a href="%SERVICE_LINK%" target="_blank">%SERVICE_NAME%</a>
+                        </h4>
+                        <ul class="post-breadcrumbs clearfix">
+                            <li>%CAT_NAME%</li>
+                            <li>%SUB_CAT_NAME%</li>
+                        </ul>
+                        <ul class="ctfs-details-list mobile-view">
+                            <li>Price : <span class="amount-wrap">%PRICE%</span>
+                            </li>
+                            <li>Sales : <span>%SOLD_SERVICES%</span></li>
+                        </ul>
+                        <div class="media author-details">
+                            <div class="media-left">
+                                <div class="ctfs-author">
+                                    <img src="%USER_IMAGE%" class="media-object">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">%USER_NAME%</h4>
+                                <div class="star-ratings-sprite">
+                                    <span style="width:%USER_RATINGS%%" class="star-ratings-sprite-rating">
+                                </span>
+                                </div>
+                                <div class="ctfs-item-location"> <i class="fas fa-map-marker-alt"></i> %USER_LOCATION%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ctfs-wrap-right-block ctfs-block desktop-view">
+                        <div class="ctfs-bgdt-wrap">
+                            <div class="ctfs-bgdt amount-wrap">%PRICE%</div>
+                            <div class="ctfs-sales">Service Sold : %SOLD_SERVICES%</div>
+                        </div>
+                        <div class="view-more-btn">
+                            <a href="%SERVICE_LINK%" target="_blank" class="btn btn-primary btn-block btn-bordered">View More Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+
+
+<?php /* <li class="card-block service_%ID%">
+    <div class="like active">
+        <a href="javascript:void(0)" data-id="%ID%" title="Remove Favorite Service">
+            <i class="fa fa-heart"></i>
+        </a>
+    </div>
+    <div class="%FEATURED_LBL_CLASS%">
+        <span>
+          %FEATURED_LBL%
+        </span>
+    </div>
+    <div class="media">
+        <div class="pull-left">
+            <div class="posted_service">
+                <img src="%SERVICE_IMG%" />
+            </div>
+        </div>
+        <div class="media-body">
+            <h4 class="card-title">
+                <a href="%SERVICE_LINK%" target="_blank">%SERVICE_NAME%</a>
+            </h4>
+            
+            <div class="category_subcategory">
+                <span>
+                    %CAT_NAME%
+                    <i class="fa fa-angle-right" aria-hidden="true">
+                    </i>
+                    %SUB_CAT_NAME%
+                </span>
+            </div>
+            <ul class="project-desc list-inline">
+                <li>
+                    Price : %PRICE%
+                </li>
+                <li>
+                    Service Sold : %SOLD_SERVICES%
+                </li>
+            </ul>
+            <div class="PickGeeks_detail">
+                <ul>
+                    <li>
+                        <div class="PickGeeks_img">
+                            <img src="%USER_IMG%" />
+                        </div>
+                    </li>
+                    <li>
+                        <h5>
+                            <a href="#">%USER_NAME%</a>
+                        </h5>
+                    </li>
+                    <li>
+                        <div class="star-ratings-sprite">
+                            <span style="width:%USER_RATINGS%%" class="star-ratings-sprite-rating">
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa fa-map-marker" aria-hidden="true">
+                        </i>
+                        %USER_LOCATION%
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</li> */ ?>

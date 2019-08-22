@@ -1,0 +1,122 @@
+<li class="ctso-item %DELETED_SERVICE_MAIN_CLASS%">
+    <div class="ctso-item-wrap">
+        <div class="ctso-wrap ctso-details">
+            <div class="service-featured %FEATURED_LBL_CLASS%"><span><i class="fa fa-star"></i></span></div>
+            <h3 class="ctso-title"><a href="%DETAIL_LINK%" target="_blank">%SERVICE_TITLE%</a></h3>
+            <ul class="post-breadcrumbs clearfix">
+                <li>%SERVICE_CAT%</li>
+                <li>%SERVICE_SUBCAT%</li>
+            </ul>
+            <ul class="ctso-details-list clearfix">
+                <li>{CSO_PRICE} : <span class="amount-wrap">%SERVICE_PRICE%</span></li>
+                <li>{CSO_QUANTITIES_SELECTED} : <span>%SERVICE_QUANTITY%</span></li>
+                <li>{CSO_DURATION} : <span>%SERVICE_DURATION%</span></li>
+            </ul>
+            <div class="ctso-addon %ADD_ON_DETAIL_CLASS%">{CSO_ADD_ONS} : <span>%ADD_ON_DETAIL%</span></div>
+        </div>
+        <div class="ctso-wrap ctso-order">
+            <ul class="ctso-order-lists liststyle-none">
+                <li>{CSO_PAID_AMOUNT} : <label class="amount-wrap">%SERVICE_PAID_AMNT%</label></li>
+                <li>{CSO_ORDER_PLACED} : <label>%ORDER_PLACED%</label></li>
+                <li>{CSO_ORDER_STATUS} : <label>%ORDER_STATUS%</label></li>
+                <li>{CSO_DELIVERY_IN} : <label>%DELIVERY_DAYS%</label></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ctso-btn-wrap">
+        <div class="ctso-btn">
+            <a href="javascript:void(0)" data-id="%SERVICES_ID%" data-userid="%U_ID%" class="btn btn-primary give_deadline">%DEADLINE_DETAILS_LBL%</a>
+        </div>
+        <div class="ctso-btn">
+            <a href="{SITE_URL}service/workroom/%ORDER_ID%/%SERVICE_SLUG%" target="_blank" class="btn btn-primary send_message">{CSO_WORKROOM}</a>
+        </div>
+        <div class="ctso-btn askForRefund %ASK_REFUND_HIDE%">
+            <a href="javascript:void(0)" data-id="%SERVICES_ID%" class="btn btn-primary ask_for_refund">{CP_ASK_FOR_REFUND}</a>
+        </div>
+        <div class="ctso-btn %REFUND_HIDE% refundDetails" data-id="%SERVICES_ID%">
+            <a href="javascript:void(0)" class="refund_details btn btn-primary">{CP_REFUND_DETAILS}</a>
+        </div>
+        <input type="hidden" name="rejectValue" id="rejectValue" value="%REJECT_STATUS%">
+    </div>
+</li>
+
+<?php /*
+<li class="card-block %DELETED_SERVICE_MAIN_CLASS%">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="%FEATURED_LBL_CLASS%">
+            <span class="">
+            %FEATURED_LBL%
+            </span>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-md-12">
+         <h4 class="card-title">
+            <a href="%DETAIL_LINK%" target="_blank">%SERVICE_TITLE%</a>
+         </h4>
+      </div>
+   </div>
+
+   <div class="category_subcategory">
+      <span>
+         %SERVICE_CAT%
+         <i class="fa fa-angle-right" aria-hidden="true">
+         </i>
+         %SERVICE_SUBCAT%
+      </span>
+   </div>
+   <ul class="project-desc list-inline">
+      <li>
+         {CSO_PRICE} : %SERVICE_PRICE%
+      </li>
+      <li>
+         <strong>%SERVICE_QUANTITY%</strong> {CSO_QUANTITIES_SELECTED}
+      </li>
+      <!-- <li>
+         Paid Amount : %SERVICE_PAID_AMNT%
+      </li> -->
+      <li>
+         {CSO_DURATION} : %SERVICE_DURATION%
+      </li>
+   </ul>
+   <h5 class="%ADD_ON_DETAIL_CLASS%">{CSO_ADD_ONS}</h5>
+   <ul class="addons-list %ADD_ON_DETAIL_CLASS%">
+         %ADD_ON_DETAIL%
+   </ul>
+   <!-- <ul class="recevied_addons">
+      <li>
+         <label>Order Placed : </label>
+         <span>%ORDER_PLACED%</span>
+      </li>
+      <li>
+         <label>Order Status : </label>
+         <span>%ORDER_STATUS%</span>
+      </li>
+   </ul> -->
+   <p class="delivery">{CSO_ORDER_PLACED} : <span style="margin-right: 20px">%ORDER_PLACED%</span> {CSO_ORDER_STATUS} : <span>%ORDER_STATUS%</span></p>
+   <p class="delivery">{CSO_PAID_AMOUNT} <span style="margin-right: 20px">%SERVICE_PAID_AMNT%</span> {CSO_DELIVERY_IN} <span>%DELIVERY_DAYS%</span></p>
+   <!-- <p class="delivery">Paid Amount <span>%SERVICE_PAID_AMNT%</span></p> -->
+
+
+   <div class="row">
+      <div class="col-md-12 col-sm-12 text-right">
+         <div class="theme-button">
+            <a href="javascript:void(0)" data-id="%SERVICES_ID%" data-userid="%U_ID%" class="give_deadline">%DEADLINE_DETAILS_LBL%</a>
+         </div>
+
+         <div class="theme-button">
+            <a href="{SITE_URL}service/workroom/%ORDER_ID%/%SERVICE_SLUG%" target="_blank" class="send_message">{CSO_WORKROOM}</a>
+         </div>
+         <div class="theme-button askForRefund %ASK_REFUND_HIDE%">
+            <a href="javascript:void(0)" data-id="%SERVICES_ID%" class="ask_for_refund">{CP_ASK_FOR_REFUND}</a>
+         </div>
+         <div class="theme-button %REFUND_HIDE% refundDetails" data-id="%SERVICES_ID%">
+            <a href="javascript:void(0)" class="refund_details">{CP_REFUND_DETAILS}</a>
+         </div>
+         <input type="hidden" name="rejectValue" id="rejectValue" value="%REJECT_STATUS%">
+      </div>
+   </div>
+</li>*/ ?>
+

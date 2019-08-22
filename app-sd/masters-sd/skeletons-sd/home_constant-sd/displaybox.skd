@@ -1,0 +1,6 @@
+<div class="form-group clearfix" id="123">
+  <label class="control-label col-md-4">%LABEL%</label>
+  <div class="col-md-8">
+    <div class="%CLASS%">%VALUE%</div>
+  </div>
+</div>

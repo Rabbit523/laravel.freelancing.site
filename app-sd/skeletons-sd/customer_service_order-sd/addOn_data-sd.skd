@@ -1,0 +1,6 @@
+<li class="addon_item">
+   <p>%ADDON_TITLE%</p>
+   <!-- <span>%ADDONPRICE%</span>
+   <span>%DAY_REQUIRED% Day(s)</span> -->
+   <p class="delivery">{CSO_PAID_AMOUNT} : <span style="margin-right: 20px">%ADDONPRICE%</span> {CSO_DELIVERY_IN} <span>%DAY_REQUIRED% Day(s)</span></p>
+</li>

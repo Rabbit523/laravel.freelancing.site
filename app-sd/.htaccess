@@ -1,0 +1,328 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+Options -Indexes
+
+RewriteEngine On
+
+ErrorDocument 404 /units-sd/page_not_found-sd/index.php
+
+RewriteBase /pickgeeks_mabilis/app-sd/
+# RewriteBase /
+AddDefaultCharset UTF-8
+
+### Home ###
+RewriteRule ^/?$ units-sd/home-sd/index.php [L]
+RewriteRule ^test/?$ units-sd/test.php [L]
+RewriteRule ^wrong-turn/?$ requires-sd/functions-sd/data/wrong_turn.php [L]
+
+### SIGN UP AND LOGIN ###
+RewriteRule ^signup/?$ units-sd/signup-sd/index.php [L]
+RewriteRule ^Signup/(.*)/?$ units-sd/signup-sd/index.php?type=$1 [L]
+
+RewriteRule ^activationLink/(.*)/?$ units-sd/signup-sd/index.php?slug=$1 [L]
+RewriteRule ^(login-process)/?$ units-sd/login-sd/index.php?action=login [L]
+RewriteRule ^(forgetPassword)/?$ units-sd/login-sd/index.php?action=forgetPass [L]
+RewriteRule ^(reset-password)/?$ units-sd/login-sd/index.php?action=forgetPassProcess [L,QSA]
+RewriteRule ^(reset_password)/(.*)/?$ units-sd/login-sd/?slug=$2&action=change_password [L,QSA]
+RewriteRule ^(change-password)/?$ units-sd/login-sd/index.php?action=changePassword [L,QSA]
+
+RewriteRule ^ajaxSignup/?$ units-sd/signup-sd/ajax.signup-sd.php [L,QSA]
+RewriteRule ^userTypeSubmit/?$ units-sd/home-sd/index.php?action=userTypeSubmit [L,QSA]
+
+RewriteRule ^login-gp/?$ units-sd/signup-sd/ajax.signup-sd.php?action=google_login [L,QSA]
+RewriteRule ^(SignIn|forget)/(.*)/?$ units-sd/login-sd/index.php?abc=$1&last_page=$2 [L,QSA]
+RewriteRule ^(SignIn|forget)/?$ units-sd/login-sd/index.php [L,QSA]
+RewriteRule ^switchprofile/?$ units-sd/login-sd/index.php?action=switchprofile [L,QSA]
+
+###Dashboard ###
+RewriteRule ^dashboard/?$ units-sd/dashboard-sd/index.php [L]
+RewriteRule ^edit-profile/?$ units-sd/edit_profile-sd/index.php [L]
+
+### Post Job  ###
+RewriteRule ^c/post-job?$ units-sd/post_job-sd/index.php [L]
+RewriteRule ^c/post-job/(.*)/?$ units-sd/post_job-sd/index.php?slug=$1 [L,QSA]
+RewriteRule ^ajaxPostJob?$ units-sd/post_job-sd/ajax.post_job-sd.php [L]
+
+### Customer Profile  ###
+RewriteRule ^profile/(.*)?$ units-sd/customer_profile-sd/index.php?slug=$1 [L]
+
+### Customer Profile  ###
+RewriteRule ^profile?$ units-sd/customer_profile-sd/index.php [L]
+RewriteRule ^ajaxCustomerProfile?$ units-sd/customer_profile-sd/ajax.customer_profile-sd.php [L]
+
+### Freelancer Profile  ###
+RewriteRule ^f/profile?$ units-sd/freelancer_profile-sd/index.php [L]
+RewriteRule ^AjaxFprofile?$ units-sd/freelancer_profile-sd/ajax.freelancer_profile-sd.php [L]
+
+
+### Posted Services ###
+RewriteRule ^f/posted-services?$ units-sd/posted_services-sd/index.php [L]
+
+### Freelancer Public Profile  ###
+RewriteRule ^f/profile/(.*)?$ units-sd/freelancer_detailPage-sd/index.php?slug=$1 [L]
+RewriteRule ^AjaxPublicFprofile?$ units-sd/freelancer_detailPage-sd/ajax.freelancer_detailPage-sd.php [L]
+
+### Job Workroom ###
+RewriteRule ^job/workroom/(.*)/(.*)?$ units-sd/job_workroom-sd/index.php?slug=$1&bidId=$2 [L]
+RewriteRule ^AjaxJobWorkroom?$ units-sd/job_workroom-sd/ajax.job_workroom-sd.php [L]
+
+### Service Workroom ###
+RewriteRule ^service/workroom/(.*)/(.*)?$ units-sd/service_workroom-sd/index.php?id=$1&slug=$2 [L]
+RewriteRule ^AjaxServiceWorkroom?$ units-sd/service_workroom-sd/ajax.service_workroom-sd.php [L]
+
+### Freelancer Account Setting  ###
+RewriteRule ^f/account-setting?$ units-sd/freelancer_account_setting-sd/index.php [L]
+RewriteRule ^AjaxAccountSetting?$ units-sd/freelancer_account_setting-sd/ajax.freelancer_account_setting-sd.php [L]
+
+### Customer Account Setting  ###
+RewriteRule ^c/account-setting?$ units-sd/customer_account_setting-sd/index.php [L]
+RewriteRule ^AjaxCAccountSetting?$ units-sd/customer_account_setting-sd/ajax.customer_account_setting-sd.php [L]
+
+### Freelancer review  ###
+RewriteRule ^f/review?$ units-sd/freelancer_review-sd/index.php [L]
+RewriteRule ^f/review/(.*)?$ units-sd/freelancer_review-sd/index.php?slug=$1 [L]
+RewriteRule ^ajaxFreelancerReview?$ units-sd/freelancer_review-sd/ajax.freelancer_review-sd.php [L]
+
+### Customer review  ###
+RewriteRule ^c/review?$ units-sd/customer_review-sd/index.php [L]
+RewriteRule ^ajaxCustomerReview?$ units-sd/customer_review-sd/ajax.customer_review-sd.php [L]
+
+### Customer Received Jobs ###
+RewriteRule ^proposals/(.*)/?$ units-sd/received_job-sd/index.php?slug=$1 [L]
+RewriteRule ^ajaxProposal?$ units-sd/received_job-sd/ajax.received_job-sd.php [L]
+
+### Freelancer Job Invitation  ###
+RewriteRule ^job-invitations?$ units-sd/freelancer_jobInvitation-sd/index.php [L]
+RewriteRule ^ajaxFreelancerjobInvitation?$ units-sd/freelancer_jobInvitation-sd/ajax.freelancer_jobInvitation-sd.php [L]
+
+### Freelancer My bids  ###
+RewriteRule ^my-bids?$ units-sd/freelancer_mybids-sd/index.php [L]
+RewriteRule ^ajaxFreelancerBids?$ units-sd/freelancer_mybids-sd/ajax.freelancer_mybids-sd.php [L]
+
+### Freelancer My Jobs  ###
+RewriteRule ^my-jobs?$ units-sd/freelancer_myjobs-sd/index.php [L]
+RewriteRule ^ajaxFreelancerJobs?$ units-sd/freelancer_myjobs-sd/ajax.freelancer_myjobs-sd.php [L]
+
+### Freelancer My Saved Jobs  ###
+RewriteRule ^saved-jobs?$ units-sd/freelancer_savedJobs-sd/index.php [L]
+RewriteRule ^ajaxFreelancerSavedJobs?$ units-sd/freelancer_savedJobs-sd/ajax.freelancer_savedJobs-sd.php [L]
+
+### Freelancer My Services Order  ###
+RewriteRule ^f/services-order?$ units-sd/freelancer_services_order-sd/index.php [L]
+RewriteRule ^ajaxFreelancerServicesOrder?$ units-sd/freelancer_services_order-sd/ajax.freelancer_services_order-sd.php [L]
+
+
+### Freelancer Post Services  ###
+RewriteRule ^post-services?$ units-sd/freelancer_post_services-sd/index.php [L]
+RewriteRule ^post-services/(.*)/?$ units-sd/freelancer_post_services-sd/index.php?slug=$1 [L,QSA]
+RewriteRule ^ajaxFreelancerPostServices?$ units-sd/freelancer_post_services-sd/ajax.freelancer_post_services-sd.php [L]
+
+### Freelancer My Services  ###
+RewriteRule ^my-services?$ units-sd/freelancer_my_services-sd/index.php [L]
+RewriteRule ^ajaxFreelancerMyServices?$ units-sd/freelancer_my_services-sd/ajax.freelancer_my_services-sd.php [L]
+
+### Freelancer Financial Dashboard  ###
+RewriteRule ^financial-dashboard?$ units-sd/freelancer_financial_dashboard-sd/index.php [L]
+RewriteRule ^ajaxFreelancerFinancialDashboard?$ units-sd/freelancer_financial_dashboard-sd/ajax.freelancer_financial_dashboard-sd.php [L]
+
+### Customer Financial Dashboard  ###
+RewriteRule ^c/financial-dashboard?$ units-sd/customer_financial_dashboard-sd/index.php [L]
+RewriteRule ^ajaxCustomerFinancialDashboard?$ units-sd/customer_financial_dashboard-sd/ajax.customer_financial_dashboard-sd.php [L]
+
+### Freelancer Wallet  ###
+RewriteRule ^f/wallet?$ units-sd/freelancer_wallet-sd/index.php [L]
+RewriteRule ^ajaxFreelancerWallet?$ units-sd/freelancer_wallet-sd/ajax.freelancer_wallet-sd.php [L]
+
+
+### Service Detail  ###
+RewriteRule ^service/(.*)/?$ units-sd/service_detail-sd/index.php?slug=$1 [L]
+RewriteRule ^ajaxServiceDetail?$ units-sd/service_detail-sd/ajax.service_detail-sd.php [L]
+
+
+### Job Detail ###
+RewriteRule ^job/(.*)/?$ units-sd/job_detail-sd/index.php?slug=$1 [L]
+RewriteRule ^ajaxJobDetail?$ units-sd/job_detail-sd/ajax.job_detail-sd.php [L]
+
+RewriteRule ^customer_review_all/(.*)/?$ units-sd/customer_review_all-sd/index.php?id=$1 [L]
+RewriteRule ^ajaxCustomerReviewAll?$ units-sd/customer_review_all-sd/ajax.customer_review_all-sd.php [L]
+
+### Customer Wallet ###
+RewriteRule ^c/wallet?$ units-sd/customer_wallet-sd/index.php [L]
+RewriteRule ^ajaxCustomerWallet?$ units-sd/customer_wallet-sd/ajax.customer_wallet-sd.php [L]
+
+### Customer  Service Order  ###
+RewriteRule ^c/service-order?$ units-sd/customer_service_order-sd/index.php [L]
+RewriteRule ^ajaxCustomerServiceOrder?$ units-sd/customer_service_order-sd/ajax.customer_service_order-sd.php [L]
+
+### Customer Confirmation Service Order  ###
+RewriteRule ^confirm-order?$ units-sd/service_confirmation_order-sd/index.php [L]
+RewriteRule ^ajaxConfirmServiceOrder?$ units-sd/service_confirmation_order-sd/ajax.service_confirmation_order-sd.php [L]
+
+### Customer Favorite Services ###
+RewriteRule ^c/favorite-services?$ units-sd/customer_fav_services-sd/index.php [L]
+RewriteRule ^ajaxCustomerFavServices?$ units-sd/customer_fav_services-sd/ajax.customer_fav_services-sd.php [L]
+
+### Customer Saved Freelancer ###
+RewriteRule ^c/saved-freelancer?$ units-sd/customer_saved_freelancer-sd/index.php [L]
+RewriteRule ^ajaxSavedFreelancer?$ units-sd/customer_saved_freelancer-sd/ajax.customer_saved_freelancer-sd.php [L]
+
+### Job Search ###
+RewriteRule ^(search)/(job-feeds)/(.*)/?$ units-sd/job_search-sd/index.php?type=feed [L]
+RewriteRule ^(search)/(jobs)/(.*)/?$ units-sd/job_search-sd/index.php?type=jobs [L]
+RewriteRule ^ajaxJobSearch?$ units-sd/job_search-sd/ajax.job_search-sd.php [L]
+
+### Freelancer Search ###
+RewriteRule ^(search)/(freelancer)/(.*)/?$ units-sd/freelancer_search-sd/index.php?type=freelancer [L]
+RewriteRule ^ajaxFreelancerSearch?$ units-sd/freelancer_search-sd/ajax.freelancer_search-sd.php [L]
+
+### Service Search ###
+RewriteRule ^(search)/(service)/(.*)/?$ units-sd/service_search-sd/index.php?type=service [L]
+RewriteRule ^ajaxServiceSearch?$ units-sd/service_search-sd/ajax.service_search-sd.php [L]
+
+### Category Search ###
+RewriteRule ^(search)/(category)/(.*)/?$ units-sd/category_search-sd/index.php?type=service [L]
+RewriteRule ^ajaxCategorySearch?$ units-sd/category_search-sd/ajax.category_search-sd.php [L]
+
+### Sub Category Search ###
+RewriteRule ^(search)/(sub-category)/(.*)/?$ units-sd/sub_category_search-sd/index.php?id=$3 [L]
+RewriteRule ^ajaxSubCategorySearch?$ units-sd/sub_category_search-sd/ajax.sub_category_search-sd.php [L]
+
+###credit plan###
+RewriteRule ^creditPlan?$ units-sd/credit_plan-sd/index.php [L]
+RewriteRule ^ajaxCreditPlan?$ units-sd/credit_plan-sd/ajax.credit_plan-sd.php [L]
+
+
+
+### Customer Received Jobs ###
+RewriteRule ^ajaxProposalals/(.*)/?$ units-sd/received_job-sd/index.php?slug=$1 [L]
+RewriteRule ^ajaxProposal?$ units-sd/received_job-sd/ajax.received_job-sd.php [L]
+
+## For Freelancer payment history page ##
+RewriteRule ^f/payment_history/?$ units-sd/freelancer_payment_history-sd/index.php
+
+### PMB ###
+RewriteRule ^pmb/?$ units-sd/pmb-sd/index.php [L]
+RewriteRule ^pmb/(.*)/?$ units-sd/pmb-sd/index.php?id=$1
+RewriteRule ^ajaxPmb?$ units-sd/pmb-sd/ajax.pmb-sd.php [L]
+
+### PMS ###
+RewriteRule ^pms/?$ units-sd/pms-sd/index.php [L]
+RewriteRule ^pms/([A-Za-z0-9._-]+)/?$ units-sd/pms-sd/ajax.pms-sd.php?action=$1
+
+###Change Password###
+RewriteRule ^change-password/?$ units-sd/cpass-sd/index.php [L]
+
+### SIGN OUT ###
+RewriteRule ^(sign-out|logout)/?$ units-sd/logout-sd/index.php [L]
+
+### For captcha ###
+RewriteRule ^auth-varification/?$ requires-sd/captcha-sd.php [L]
+
+## For content static pages ##
+RewriteRule ^content/([A-Za-z0-9._-]+)/?$ units-sd/content-sd/index.php?slug=$1
+
+## For Reset Password##
+RewriteRule ^reset/(.*)/?$ units-sd/reset_password-sd/index.php?id=$1 [L,QSA]
+
+## For website pages (serach & filtering)##
+RewriteRule ^website/([A-Za-z_]+)/?$ units-sd/website-sd/index.php
+
+## For websites pages ##
+RewriteRule ^websites/?$ units-sd/websites-sd/index.php
+
+## For my bids pages ##
+RewriteRule ^mybids/?$ units-sd/mybids-sd/index.php
+
+## Customer My Jobs ##
+RewriteRule ^c/my-jobs/?$ units-sd/customer_my_jobs-sd/index.php
+RewriteRule ^c/my-jobs/job-invitation/([A-Za-z0-9._-]+)/?$ units-sd/customer_my_jobs-sd/index.php?slug=$1
+RewriteRule ^ajaxMyJobs?$ units-sd/customer_my_jobs-sd/ajax.customer_my_jobs-sd.php [L]
+
+### Maintenance Mode ###
+RewriteRule ^maintenance/?$ units-sd/maintenance_mode-sd/index.php [L,QSA]
+
+
+## For my orders pages ##
+RewriteRule ^my_orders/?$ units-sd/my_orders-sd/index.php
+
+## For saved search pages ##
+RewriteRule ^saved_search/?$ units-sd/saved_search-sd/index.php
+
+## For watched lists pages ##
+RewriteRule ^watched_list/?$ units-sd/watched_list-sd/index.php
+
+## For wathed category pages ##
+RewriteRule ^watched_category/?$ units-sd/watched_category-sd/index.php
+
+## For watched seller pages ##
+RewriteRule ^watched_sellers/?$ units-sd/watched_sellers-sd/index.php
+
+## For my order sales pages ##
+RewriteRule ^my_orders_sales/?$ units-sd/my_orders_sales-sd/index.php
+
+## For offers pages ##
+RewriteRule ^offers/?$ units-sd/offers-sd/index.php
+
+## For public profile pages ##
+RewriteRule ^public_profile/?$ units-sd/public_profile-sd/index.php
+
+## For messages pages ##
+RewriteRule ^message/?$ units-sd/messages-sd/index.php
+
+## For notification pages ##
+RewriteRule ^notification/?$ units-sd/notification-sd/index.php
+
+## For ContactUs ##
+RewriteRule ^contact-us/?$  units-sd/contactus-sd/index.php
+
+## For Faq ##
+RewriteRule ^faq/?$  units-sd/faq-sd/index.php
+RewriteRule ^ajaxFaq?$ units-sd/faq-sd/ajax.faq-sd.php [L]
+
+### point Mastrs-sd as Admin ###
+RewriteRule ^admin/?$ masters-sd/units-sd/login-sd/index.php?slug=$1 [L]
+
+### tim thumb rule ###
+RewriteRule ^thumb/?$ requires-sd/thumb-sd.php [L]
+
+### 404 ###
+#RewriteRule ^404/?$ skeletons-sd/404.php
+ErrorDocument 404 /units-sd/page_not_found-sd/index.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ skeletons-sd/404.gif [QSA,L]
+RewriteCond %{THE_REQUEST} skeletons-sd/404.gif[?\s] [NC]
+RewriteRule ^ skeletons-sd/404.gif [R=302,L,NE]
+#RewriteRule ^(.*)$ index.php?/$1 [QSA,L]
+</IfModule>
+
+<ifModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
+
+<ifModule mod_headers.c>
+  <filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </filesMatch>
+  <filesMatch "\.(css)$">
+    Header set Cache-Control "max-age=604800, public"
+  </filesMatch>
+  <filesMatch "\.(js)$">
+    Header set Cache-Control "max-age=216000, private"
+  </filesMatch>
+  <filesMatch "\.(xml|txt)$">
+    Header set Cache-Control "max-age=216000, public, must-revalidate"
+  </filesMatch>
+  <filesMatch "\.(html|htm|php)$">
+    Header set Cache-Control "max-age=1, private, must-revalidate"
+  </filesMatch>
+</ifModule>
+

@@ -1,0 +1,134 @@
+<!-- <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+
+		</div>
+	</div>
+</div> -->
+
+
+
+<?php /* <section class="main-dashboard">
+    <div class="container">
+        <div class="">
+            <div class=" service-order">
+                <div class=" after-login-wrap">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                            <div id="sidebarMenu" class="left-sidebar filters-search">
+                                <div class="panel panel-default theme-box" id="filters-search">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">{FS_FILTERS}dtgy</h4>
+                                        <div class="panel-tools pull-right">
+                                            <a href="{SITE_URL}f/services-order">{FMS_CLEAR} <i class="fa fa-refresh" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="filter-box">
+                                            <h5 class="filter-title">{CSO_ORDER_STATUS}</h5>
+                                            <div class="filter-body">
+                                                <ul class="filter-lists">
+                                                    <li>
+                                                      <input type="radio" id="test1" name="status" value="new_order" %NEWORDER_STATUS% />
+                                                      <label for="test1">
+                                                        {C_SO_NEW_ORDER_LBL}
+                                                      </label>
+                                                    </li>
+                                                    <li>
+                                                      <input type="radio" id="test3" name="status" value="in_progress" %INPRO_STATUS%/>
+                                                      <label for="test3">
+                                                        {C_SO_IN_PROGRESS_LBL}
+                                                      </label>
+                                                    </li>
+                                                   <li>
+                                                     <input type="radio" id="test4" name="status" value="ask_refund" %AR_STATUS%/>
+                                                     <label for="test4">
+                                                       {FSO_ASKED_FOR_REFUND}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test5" name="status" value="closed" %CLOSED_STATUS%/>
+                                                     <label for="test5">
+                                                       {CMJ_CLOSED}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test6" name="status" value="payment_pending" %PENDING_STATUS%/>
+                                                     <label for="test6">
+                                                       {C_SO_PAYMENT_PENDING}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test7" name="status" value="completed" %COMP_STATUS%/>
+                                                     <label for="test7">
+                                                       {C_SO_COMPLETED_LBL}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test8" name="status" value="under_dispute" %UD_STATUS%/>
+                                                     <label for="test8">
+                                                       {C_SO_UNDER_DISPUTE_LBL}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test9" name="status" value="dispute_solved" %DS_STATUS%/>
+                                                     <label for="test9">
+                                                       {C_SO_DISPUTE_IS_SOLVED}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test10" name="status" value="dispute_solved_closed" %DSC_STATUS%/>
+                                                     <label for="test10">
+                                                       {C_SO_DISPUTE_IS_SOLVED_AND_CLOSED}
+                                                     </label>
+                                                   </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-menu">
+                                <button><i class="fa fa-sliders" aria-hidden="true"></i>{FMS_FILTER}</button>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-8">
+                            <div class="panel panel-default theme-box">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">{C_SO_SERVICE_ORDER_LBL}</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="fl-service-lists-wrap">
+                                        <ul class="fl-service-order-list" id="services_data">
+                                            %LOOP_DATA%
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                         <?php /* <div class="theme-box">
+                            <div class="panel no-bg">
+                             <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 {C_SO_SERVICE_ORDER_LBL}
+                               </h4>
+                             </div>
+                             <div class="panel-body">
+                               <ul class="dash-job" id="services_data">
+                                %LOOP_DATA%
+                               </ul>
+                             </div>
+                            </div>
+                          </div> */ ?>
+                        <div class="view-more-button %LOAD_CLASS%">
+                          <div class="theme-button">
+                           <a href="javascript:void(0)" class="load_more_data %LOAD_CLASS%" data-page="1">{C_SO_VIEW_MORE_ORDER_LBL}</a>
+                         </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> */ ?>

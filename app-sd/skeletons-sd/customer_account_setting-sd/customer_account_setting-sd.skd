@@ -1,0 +1,413 @@
+<section class="main-dashboard">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="account-settings-wrap">
+                <div class="main-heading-wrap">
+                    <h1 class="main-heading">{C_ACCOUNT_SETTING_LBL}</h1>
+                    <div class="main-heading-tool pull-right ">
+                        <span class="mobile-bars">
+                            <a href="javascript:void(0);">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </span>
+                    </div>    
+                </div>
+                
+                <div class="account_setting">
+                    <div class="sawlii-tabs-wrap">
+                        <ul class="nav nav-tabs">
+                            <li class=" active">
+                                <a href="#tab_a" data-toggle="tab">{C_CHANGE_PWD_LBL}</a>
+                            </li>
+                            <li>
+                                <a href="#tab_d" data-toggle="tab">{C_PAYPAL_ID_LBL}</a>
+                            </li>
+                            <li>
+                                <a href="#tab_b" data-toggle="tab">{C_UNSUBSCRIBER_LBL}</a>
+                            </li>
+                            <li>
+                                <a href="#tab_c" data-toggle="tab">{C_EMAIL_NOTI_SETTING_LBL}</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="tab_a">
+                                <div class="box box-primary">
+                                    <div class="box-header">
+                                        <h3 class="box-title">Change Password</h3>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <form name="pwdFrm" id="pwdFrm" method="post">
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {C_CURRENT_PWD_LBL}
+                                                        </label>
+                                                        <input type="password" class="form-control" name="currentPassword" id="currebtPassword" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {C_ENTER_PWD_LBL}
+                                                        </label>
+                                                        <input type="password" class="form-control" name="password" id="password" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {C_CONFIRM_PWD_LBL}
+                                                        </label>
+                                                        <input type="password" class="form-control" name="cPassword" id="cPassword" />
+                                                    </div>
+                                                    <div class="text-right">
+                                                        <div class="theme-button">
+                                                            <input type="hidden" name="action" id="action" value="changePwd">
+                                                            <button class="btn btn-system" name="passwordSave" id="passwordSave">{C_SAVE_CHANGE_BTN_LBL}</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab_d">
+                                <div class="box box-primary">
+                                    <div class="box-header">
+                                        <h3 class="box-title">PayPal Settings</h3>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <form name="paypalFrm" id="paypalFrm" method="post">
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {C_ENTER_PAYPAL_ID_LBL}
+                                                        </label>
+                                                        <input type="hidden" name="hidden_paypal_email" id="hidden_paypal_email" value="%PAYPAL_EMAIL%">
+                                                        <input type="text" class="form-control" name="paypal_email" id="paypal_email" value="%PAYPAL_EMAIL%" />
+                                                        <div class="paypal_content">
+                                                            %PAYPAL_CONTENT%
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group paypal_password" style="display: none;">
+                                                        <label>
+                                                            Enter your pickgeeks password
+                                                        </label>
+                                                        <input type="paypal_password" class="form-control" name="paypal_password" id="paypal_password" value="" />
+
+                                                    </div>
+                                                    <div class="text-right">
+                                                        <div class="theme-button">
+                                                            <button class="btn btn-system" type="button" name="paypalSave" id="paypalSave">{C_SAVE_CHANGES_LBL}</button>
+                                                            <!-- <a class="btn btn-system" data-toggle="modal" data-target="#pwdModal" href="#">Open Modal</a> -->
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab_b">
+                                <div class="box box-primary">
+                                    <div class="box-header">
+                                        <h3 class="box-title">Newsletter Settings</h3>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>
+                                                    {C_NEWSLETTER_CONTENT_LBL}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding: 8px"></div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="signin-check">&nbsp;{C_UNSUBSCRIBE_NEWLETTER_LBL}
+                                                        <input type="checkbox" name="unsubscribe" class="notifyChange" data-val="subscribe_email" value="y" %NEWSLETTER%>
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab_c">
+                                <div class="box box-primary">
+                                    <div class="box-header">
+                                        <h3 class="box-title">{EMAIL_NOTIFICATION_SETTINGS_LABEL}</h3>
+                                    </div>
+                                    <div class="box-body">
+                                        <p>{C_NOTIFICATION_CONTENT_LBL}</p>
+                                        <form method="post" name="notifyFrm" id="notifyFrm">
+                                            <ul class="email-notification liststyle-none">
+                                                <li>
+                                                    <label class="signin-check" for="test1">&nbsp;{C_NOTI_I_LBL}
+                                                        <input type="checkbox" id="test1" name="NotifyJobAcceptReject" value="y" %JOB_STATUS% class="notifyChange" data-val="NotifyJobAcceptReject">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="signin-check" for="test2">&nbsp;{C_NOTI_II_LBL}
+                                                        <input type="checkbox" id="test2" name="NotifyFreelancerBidOnJob" value="y" %BID_STATUS% class="notifyChange" data-val="NotifyFreelancerBidOnJob">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="signin-check" for="test9">&nbsp;{C_NOTI_III_LBL}
+                                                        <input type="checkbox" id="test9" name="NotifyFreelancerReview" value="y" %REVIEW_STATUS% class="notifyChange" data-val="NotifyFreelancerReview">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="signin-check" for="test13">&nbsp;{C_NOTI_IV_LBL}
+                                                        <input type="checkbox" id="test13" name="NotifyWorkRRoomMsg" value="y" %WORKROOM_STATUS% class="notifyChange" data-val="NotifyWorkRRoomMsg">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="signin-check" for="test14">&nbsp;{C_NOTI_V_LBL}
+                                                        <input type="checkbox" id="test14" name="NotifyMilestoneAcceptReject" value="y" %MILESTONE_STATUS% class="notifyChange" data-val="NotifyMilestoneAcceptReject">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- paypal modal -->
+<div id="pwdModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form" action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Password">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- paypal modal -->
+
+<div class="modal fade" id="deactivateAccount" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4>
+     {C_DEACTIVATE_ACNT_LBL}
+   </h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    {C_CONFIRMATION_DEACTIVATE_LBL}
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="theme-button-default">
+                    <a href="#" data-dismiss="modal">No</a>
+                    <a href="javascript:void(0)" class="deactivateAccountSubmit">Yes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var url = "{SITE_URL}AjaxCAccountSetting";
+    $(document).ready(function() {
+
+        /*password validation*/
+        $(document).on("click", "#passwordSave", function() {
+            $("#pwdFrm").validate({
+                ignore: [],
+                errorClass: 'help-block',
+                errorElement: 'label',
+                highlight: function(element) {
+                    $(element).closest('.form-group').addClass('has-error');
+                },
+                unhighlight: function(element) {
+                    $(element).closest('.form-group').removeClass('has-error');
+                },
+                rules: {
+                    currentPassword: {
+                        required: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 6
+                    },
+                    cPassword: {
+                        required: true,
+                        minlength: 6
+                    }
+                },
+
+                messages: {
+                    currentPassword: {
+                        required: "{CAS_PLEASE_ENTER_CURRENT_PASSWORD}"
+                    },
+                    password: {
+                        required: "{CAS_PLEASE_ENTER_PASSWORD}",
+                        minlength: "{CAS_PLEASE_ENTER_ATLEAST_CHARACTERS}"
+                    },
+                    cPassword: {
+                        required: "{CAS_PLEASE_CONFIRM_PASSWORD}",
+                        minlength: "{CAS_PLEASE_ENTER_ATLEAST_CHARACTERS}"
+                    }
+                }
+            });
+
+            if ($("#pwdFrm").valid()) {
+                addOverlay();
+                $("#pwdFrm").submit();
+            }
+        });
+
+        $(document).on('input', '#paypal_email', function() {
+            var value = $(this).val();
+            var h_value = $('#hidden_paypal_email').val();
+            console.log('called');
+            if (value != h_value) {
+                $('.paypal_password').css('display', 'block');
+            } else {
+                $('.paypal_password').css('display', 'none');
+            }
+        });
+
+        $("#paypalFrm").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'label',
+            highlight: function(element) {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function(element) {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            rules: {
+                paypal_email: {
+                    required: true
+                },
+                paypal_password: {
+                    required: {
+                        depends: function(element) {
+                            var value = $('#paypal_email').val();
+                            var h_value = $('#hidden_paypal_email').val();
+                            return value != h_value ? true : false;
+                        }
+                    },
+                },
+            },
+
+            messages: {
+                paypal_email: {
+                    required: "{CAS_PLEASE_ENTER_PAYPALID}"
+                },
+                paypal_password: {
+                    required: "{PLEASE_ENTER_SITE_NM_PASSWORD}"
+                }
+            }
+        });
+
+        /*Paypal verification*/
+        $(document).on("click", "#paypalSave", function() {
+
+            if ($("#paypalFrm").valid()) {
+                addOverlay();
+                var paypal_email = $("#paypal_email").val();
+                $.post(url, {
+                    "action": "verify_paypalId",
+                    "paypal_email": paypal_email,
+                    "old_paypal_email": $("#hidden_paypal_email").val(),
+                    'paypal_password': $('#paypal_password').val()
+                }, function(data) {
+                    location.reload();
+                    //removeOverlay();
+                    /*if(data==true){
+       toastr["success"]("Paypal Account verified successfully");
+       msg='success';
+
+       $(".paypal_content").html("<span class='green'>verified.</span> <span class='glyphicon glyphicon-ok-circle green'></span>");
+
+     }
+     else{
+
+       toastr["error"]("Paypal Account does not verified, Please check it and try again");
+       msg='failure';
+       $(".paypal_content").html("<span class='green'>Not verified.</span> <span class='glyphicon glyphicon-ok-circle green'></span>");
+
+     }  */
+                }, 'json');
+
+            }
+
+        });
+
+        /*newsletter subscriber*/
+        $(document).on('change', '.notifyChange', function() {
+            var status = ($(this).prop("checked") == true) ? 'y' : 'n';
+            var type = $(this).attr("data-val");
+
+            if (type == "subscribe_email" && status == "n") {
+                swal({
+                        title: "Confirmation!",
+                        text: "{CAS_ARE_YOU_SURE_YOU_WANT_TO_UNSUBSCRIBE_NEWSLETTER}",
+                        showCancelButton: true,
+                        closeOnConfirm: false,
+                        inputPlaceholder: "Write something"
+                    },
+                    function(inputValue) {
+
+                        if (inputValue) {
+                            $.post(url, {
+                                "action": "change_status",
+                                "type": type,
+                                "status": status
+                            }, function(data) {
+                                //toastr['success']('Newsletter unsubscibe successfully');
+                            }, 'json');
+                            swal("Done!", "{CAS_NEWSLETTER_UNSUBSCRIBED_SUCCESSFULLY}");
+                        } else {
+                            $('.notifyChange').prop('checked', true);
+                        }
+                    });
+            } else {
+                $.post(url, {
+                    "action": "change_status",
+                    "type": type,
+                    "status": status
+                }, function(data) {
+                    toastr['success']('{CAS_STATUS_CHANGED_SUCCESSFULLY}');
+                }, 'json');
+            }
+
+        });
+
+    });
+</script>

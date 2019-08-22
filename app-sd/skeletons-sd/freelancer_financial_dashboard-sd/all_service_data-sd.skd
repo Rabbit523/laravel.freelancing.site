@@ -1,0 +1,40 @@
+<tr>
+   <td>%TITLE%</td>
+   <td>%CUSTOMER_NM%</td>
+   <td>%DATE%</td>
+   <td>%STATUS%</td>
+   <td class="t-amount">%PENDING_AMOUNT%</td>
+   <td class="t-amount">%RECEIVED_AMOUNT%</td>
+  <!--  <td class="t-amount">%ADMIN_COMMISSION%</td> 
+   <td class="t-amount">%TOTAL_AMOUNT%</td> -->
+   <td><a href="#">%LINK%</a></td>
+</tr>
+<!-- <tr>
+   <td>
+      %TITLE%
+   </td>
+   <td>
+      %CUSTOMER_NM%
+   </td>
+   <td>
+      %PENDING_AMOUNT%
+   </td>
+   <td>
+      %RECEIVED_AMOUNT%
+   </td> 
+   <td>
+      %ADMIN_COMMISSION%
+   </td> 
+   <td>
+      %TOTAL_AMOUNT%
+   </td>
+   <td>
+      %DATE%
+   </td>
+   <td>
+      %STATUS%
+   </td>
+   <td>
+      %LINK%
+   </td>
+</tr> -->

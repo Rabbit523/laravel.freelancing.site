@@ -1,0 +1,75 @@
+<!-- Dashboard Navigation -->
+%SUB_HEADER_CONTENT%
+<!-- Dashboard Navigation End -->
+
+<section class="main-dashboard">
+  <div class="container">
+      <div class="">
+          <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <h1 class="main-heading">{C_REVIEW_TITLE_LBL}</h1>
+                <div class="review-box">
+                    <div class="review_rating reviews">
+                        <ul class="review_data liststyle-none">
+                           %REVIEW_LOOP%
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="view-more-button %LOAD_CLASS%">
+                      <div class="">
+                          <a href="javascript:void(0)" class="btn btn-primary load_more_data" data-page="1">{C_VIEW_MORE_BTN_LBL}</a>
+                      </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- start full review modal -->
+<div id="fullReview" class="modal fade full-review" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <img src="{SITE_IMG}icon/cancel.png" alt="">
+        </button>
+        <h4 class="modal-title">All Reviews</h4>
+      </div>
+      <div class="modal-body all_review_div">
+        
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+  </div>
+</div>
+</div>
+<!-- end full review modal -->
+
+<script type="text/javascript">
+  var url = "{SITE_URL}ajaxCustomerReview";
+  $(document).on("click",".load_more_data",function()
+  {
+      var pageNo = $(this).attr("data-page");
+      var p_no = parseInt(pageNo)+1;   
+      addOverlay();     
+      $.post(url,{"action":"load_more_data","page_no":p_no},function(data){
+        removeOverlay();
+        $(".review_data").append(data.content);
+        $(".load_more_data").addClass(data.btn);
+        $(".load_more_data").attr("data-page",data.pageno);
+      },'json');
+  });
+  $(document).on("click",".all_review",function()
+  {
+    var rid = $(this).attr("data-id");
+    addOverlay();
+    $.post(url,{"action":"all_review","rid":rid},function(data){
+      removeOverlay();
+      $(".all_review_div").html(data.content);
+      $("#fullReview").modal("toggle");
+    },'json');
+  });
+</script>

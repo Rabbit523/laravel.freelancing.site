@@ -1,0 +1,88 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<?php echo $this->metaTag; ?>
+<title><?php echo $this->title; ?></title>
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN THEME STYLES -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="<?php echo SITE_ADMIN_VENDOR; ?>bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="<?php echo SITE_ADMIN_VENDOR; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="<?php echo SITE_ADMIN_VENDOR; ?>nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="<?php echo SITE_ADMIN_VENDOR; ?>iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="<?php echo SITE_ADMIN_VENDOR; ?>bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="<?php echo SITE_ADMIN_VENDOR; ?>jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="<?php echo SITE_ADMIN_VENDOR; ?>bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <link href="<?php echo SITE_ADMIN_VENDOR; ?>bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{SITE_JS}dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+
+    <link href="<?php echo SITE_ADMIN_VENDOR; ?>malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Custom Theme Style -->
+    <link href="<?php echo SITE_ADM_CSS; ?>custom.css" rel="stylesheet">
+    <link href="<?php echo SITE_ADM_CSS; ?>responsive.css" rel="stylesheet">
+    
+
+ <!-- Custom Switch Style -->
+<link href="<?php echo SITE_ADM_CSS; ?>custom_switch.css" rel="stylesheet">
+
+     
+    <script src="<?php echo SITE_ADM_PLUGIN; ?>jquery-1.10.2.min.js" type="text/javascript"></script>
+   <!--  <script src="<?php echo SITE_ADM_PLUGIN; ?>bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script> -->
+     <script src="<?php echo SITE_ADM_PLUGIN; ?>daterange_picker/moment.min.js"></script>
+     <script src="<?php echo SITE_ADM_PLUGIN; ?>daterange_picker/daterangepicker.js"></script>
+    <script src="<?php echo SITE_PLUGIN; ?>jQuery-form/js/jquery.form.js"></script>
+    <script src="<?php echo SITE_ADM_JS; ?>jquery.numeric.js"></script>
+      <script src="<?php echo SITE_ADMIN_VENDOR; ?>malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="{SITE_JS}dropzone/dist/dropzone.js"></script>
+     
+    <script src="<?php echo SITE_ADM_JS; ?>custom.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- END THEME STYLES -->
+<?php if(!empty(SITE_FAVICON)){ ?>
+    <link rel="shortcut icon" type="image/ico" href="<?php echo ('' != SITE_FAVICON) ? SITE_IMG . SITE_FAVICON : ""; ?>" />
+<?php } ?>
+
+<?php echo load_css($this->styles); ?>
+
+<script language="javascript" type="text/javascript">
+    var SITE_URL = '<?php echo SITE_URL; ?>';
+    var SITE_ADM_URL = '<?php echo SITE_ADMIN_URL; ?>';
+    var SITE_ADM_MOD_URL = '<?php echo SITE_ADM_MOD; ?>';
+
+    var SITE_ADM_URL_USERS = SITE_ADM_MOD_URL + 'users-sd/';
+
+    var siteName = '<?php echo SITE_URL; ?>';
+    var SITE_ADM_IMG = '<?php echo SITE_ADM_IMG; ?>';
+    $(function () {
+        var mBar = $('.page-sidebar-menu').find('li.sm-<?php echo $this->module; ?>');
+        mBar.addClass('current-page');
+        mBar.parents('ul.sub-menu').slideDown();
+        mBar.parents('ul.sub-menu').parent('li').addClass('active');
+    });
+
+    var CURRENCY_SYMBOL = '<?php echo CURRENCY_SYMBOL; ?>';
+    var CURRENCY_CODE = '<?php echo PPL_CURRENCY_CODE; ?>';
+    var MONTH_NAMES
+            = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var MONTH_NAMES_SHORT
+            = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+</script>
+<?php //echo GOOGLE_ANA_CODE_COM; ?>

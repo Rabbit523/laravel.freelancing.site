@@ -1,0 +1,182 @@
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+	<div class="col-md-12">
+		<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+		<?php echo $this->breadcrumb; ?>
+		<!-- END PAGE TITLE & BREADCRUMB-->
+	</div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<div class="x_panel">
+			<div class="x_title">
+				<h2><?php echo $this->headTitle; ?></h2>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_content">
+				<div class="actions portlet-toggler">
+					<div class="btn-group"></div>
+				</div>
+			</div>
+			<div class="portlet-body portlet-toggler ">
+
+				<table id="example123" class="table table-bordered table-hover">
+				</table>
+			</div>
+			<div class="portlet-toggler pageform" style="display:none;"></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(function () {
+		OTable = $('#example123').dataTable({
+			"bProcessing": true,
+			"bServerSide": true,
+			"bFilter":false,
+			"fixedHeader": {
+                    header: true
+                },
+			"sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+			"fnServerData": function (sSource, aoData, fnCallback) {
+				$.ajax({
+					"dataType": 'json',
+					"type": "POST",
+					"url": sSource,
+					"data": aoData,
+					"success": fnCallback
+				});
+			},
+			"aaSorting" : [],
+			"aoColumns": [
+				{ "sName": "id", "sTitle" : 'Id', bVisible: false },
+				{ "sName": "icon", 'sTitle' : 'Icon', bSortable:false, bSearchable:false },
+				/*{ "sName": "title", 'sTitle' : 'Title', bSortable:false, bSearchable:false },*/
+				{ "sName": "content", 'sTitle' : 'Content', bSortable:false, bSearchable:false }
+				<?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+					, {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}
+				<?php } ?>
+			],
+			"fnServerParams": function(aoData){setTitle(aoData, this)},
+			"fnDrawCallback": function(oSettings) {
+
+			}
+		});
+		$('.dataTables_filter').css({float: 'right'});
+		$('.dataTables_filter input').addClass("form-control input-inline");
+
+		$(document).on('click', '#submitAddForm', function (e) {
+	        e.preventDefault();
+
+	        $("#frmCont").validate({
+	            ignore: [],
+	            errorClass: 'help-block',
+	            errorElement: 'span',
+	            highlight: function (element) {
+	            	if($(element).attr('id')=="slider_image") {
+	            		$('#upload_image').addClass('has-error');
+	            	} else {
+                    	$(element).closest('.form-group').addClass('has-error');
+	            	}
+                },
+                unhighlight: function (element) {
+                	if($(element).attr('id')=="slider_image") {
+                		$('#upload_image').removeClass('has-error');
+	            	} else {
+                    	$(element).closest('.form-group').removeClass('has-error');
+	            	}
+                },
+	            rules: {
+	            	testiImage: {
+	            		extension: "jpg|jpeg|png|JPG|JPEG|PNG"
+	            	},
+	            	slider_image: {
+	            		required: {
+	            			depends: function(element) {
+	            				if($('input[type="radio"][name="slider_type"]:checked').val()=='i') {
+	            					return true;
+	            				}
+	            				return false;
+	            			}
+	            		}
+	            	},
+	            	slider_video : {
+	            		required: {
+	            			depends: function(element) {
+	            				if(($('input[type="radio"][name="slider_type"]:checked').val()=='v')) {
+	            					if($('#type').val()=='add') {
+	            						return true;
+	            					} else if($('#type').val()=='edit' && ($('#slider_image').val()!='')) {
+	            						return true;
+	            					}
+	            				}
+	            				return false;
+	            			}
+	            		},
+        				extension: "mp4|MP4"
+	            	}
+	            },
+	            messages: {
+	            	testiImage: { required: 'Please select image to upload', extension: 'Please select valid image type' },
+	            	slider_video: { required: 'Please select video to upload', extension: 'Please select valid video type' },
+	            	slider_image: { required: 'Please select image to upload' }
+	            },
+	            errorPlacement: function (error, element) {
+	                if(element.attr("id")=="slider_image")
+	                {
+                		$('#testiImage').closest('.form-group').addClass('has-error');
+						error.css('color', '#a94442');
+                		error.insertAfter($('#testiImage'));
+                		error.insertAfter($ele);
+                		error.insertAfter($element);
+					} else {
+	                    error.insertAfter(element);
+	                }
+	            }
+	        });
+
+	        if ($("#frmCont").valid()) {
+	            ajaxFormSubmit("#frmCont", false);
+	        } else {
+	            return false;
+	        }
+	    });
+
+		$(document).on('change', 'input[type="radio"][name="slider_type"]', function(e) {
+			$('#upload_image').slideToggle('fast');
+			$('#upload_video').slideToggle('fast');
+		});
+	});
+	$(document).ready(function() {
+        /*$.validator.addMethod("cRequired", $.validator.methods.required, "Please enter content");
+        $.validator.addClassRules("required", { cRequired: true });
+*/
+		$("#frmCont").validate({
+			ignore: [],
+			errorClass: 'help-block',
+			errorElement: 'span',
+			highlight: function (element) {
+				$(element).closest('.form-group').addClass('has-error');
+			},
+			unhighlight: function (element) {
+				$(element).closest('.form-group').removeClass('has-error');
+			},
+			errorPlacement: function (error, element) {
+				error.appendTo(element.attr("data-error-container"));
+			}
+		});
+
+		$(document).on('submit', '#frmCont', function(e) {
+			for (var instanceName in CKEDITOR.instances) {
+                CKEDITOR.instances[instanceName].updateElement();
+            }
+
+            if($("#frmCont").valid()) {
+            	return true;
+            } else {
+            	return false;
+            }
+		});
+	});
+</script>

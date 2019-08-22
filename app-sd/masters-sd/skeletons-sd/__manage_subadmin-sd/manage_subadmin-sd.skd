@@ -1,0 +1,217 @@
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                <div class="nav navbar-right panel_toolbox portlet-toggler">
+                   <?php if (in_array('add', $this->Permission)) { ?>
+                            <a href="ajax.<?php echo $this->module; ?>.php?action=add" class="btn btn-success btn-add" title="Add"><i class="fa fa-plus"></i></a>
+                        <?php } ?>
+                </div>
+                <!-- <div class="nav navbar-right panel_toolbox btn-back">
+                    <a href="<?php echo SITE_ADM_MOD; ?>manage_subadmin-sd" class="btn btn-success btn-sm" title="Back"><i class="fa fa-arrow-left"></i></a>
+                </div> -->
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content">
+                <div class="actions portlet-toggler">
+                    <div class="btn-group"></div>
+                </div>
+            </div>
+            <div class="portlet-body portlet-toggler ">
+                <table id="example123" class="table table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function() 
+    {
+        OTable = $('#example123').dataTable({
+            "bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": "ajax.<?php echo $this->module;?>.php",
+            "fnServerData": function (sSource, aoData, fnCallback) 
+            {
+                $.ajax({
+                   "dataType": 'json',
+                   "type": "POST",
+                   "url": sSource,
+                   "data": aoData,
+                   "success": fnCallback
+                });
+             },
+             "aoColumns": [
+                { "sName": "id", 'sTitle' : 'Id', bVisible: false },
+                { "sName": "uName", 'sTitle' : 'Name' },
+                { "sName": "uEmail", 'sTitle' : 'Email' },
+                { "sName": "created_date", 'sTitle' : 'Created Date' }
+
+<?php if(in_array('status',$this->Permission)){ ?>
+                    ,{ "sName": "isActive", 'sTitle' : 'Status', bSearchable:false,bSortable:true }
+                <?php } ?>
+<?php if(in_array('edit',$this->Permission) || in_array('delete',$this->Permission) || in_array('view',$this->Permission) ){ ?>
+                    ,{ "sName": "operation", 'sTitle' : 'Operation', bSortable:false, bSearchable:false }<?php } ?>
+            ],
+            "fnServerParams": function(aoData){setTitle(aoData, this)},
+            "fnDrawCallback": function( oSettings ) 
+            {
+                // $('.make-switch').bootstrapSwitch();
+                // $('.make-switch').bootstrapSwitch('setOnClass', 'success');
+                // $('.make-switch').bootstrapSwitch('setOffClass', 'danger');
+            }
+        });
+
+        $('.dataTables_filter').css({float:'right'});
+        $('.dataTables_filter input').addClass("form-control input-inline");
+
+        $.validator.addMethod('pagenm',function (value, element) 
+        {
+            return /^[a-zA-Z0-9][a-zA-Z0-9\_\-]*$/.test(value);
+        },
+        'Page name is not valid. Only alphanumeric and _ are allowed'
+        );
+
+        $(document).on('click','#submitAddForm', function(e) 
+        {
+            e.preventDefault();
+            $(".chk_group").prop('disabled',false);
+
+            $("#frmCont").validate({
+                ignore: 'input:hidden',
+                errorClass: 'help-block',
+                errorElement: 'span',
+                highlight: function (element) 
+                {
+                    $(element).closest('.form-group').addClass('has-error');
+                },
+                unhighlight: function (element) 
+                {
+                    $(element).closest('.form-group').removeClass('has-error');
+                },
+                errorPlacement: function (error, element) {
+                    if (element.attr("data-error-container")) {
+                        error.appendTo(element.attr("data-error-container"));
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                rules:
+                {
+                    txt_uname:
+                    {
+                        required: true, pagenm: true,
+                        remote:{
+                        url:"<?php echo SITE_ADM_MOD.$this->module ?>/ajax.<?php echo $this->module;?>.php",
+                        type: "post",
+                        async:false,
+                        data: {ajaxvalidate_uname:true,txt_uname: function() {return $("#txt_uname").val();},id: function() {return $("#id").val();}},
+                        complete: function(data){
+                            return data;
+                        }
+                        }
+                    },
+                    txt_email:
+                    {
+                        required: true, email: true,
+                        remote:{
+                            url:"<?php echo SITE_ADM_MOD.$this->module ?>/ajax.<?php echo $this->module;?>.php",
+                            type: "post",
+                            async:false,
+                            data: {ajaxvalidate_email:true,txt_email: function() {return $("#txt_email").val();},id: function() {return $("#id").val();}},
+                            complete: function(data){
+                                return data;
+                            }
+                        }
+                    },
+                    txt_password:
+                    {
+                        required: 
+                        {
+                            depends: function(element) 
+                            {
+                                return (($('#type').val()=='add') ? true : false);
+                            }
+                        },
+                        minlength: 6,maxlength : 12
+                    },
+                    txt_cnf_password:
+                    {
+                        required: 
+                        {
+                            depends: function(element) 
+                            {
+                                return (($('#type').val()=='add') ? true : false);
+                            }
+                        }
+                        ,equalTo: "#txt_password"
+                    }
+                },
+                messages:
+                {
+                    txt_uname:{ required:'&nbsp;Please enter User Name', remote:'User Name already exist', pagenm: 'Please enter valid User Name' },
+                    txt_email:{ required:'Please enter Email', email:'Please enter valid Email', remote:'Please choose another Email, This Email already exist' },
+                    txt_password:{ required:'Please enter Password', minlength: "Password length should be greater than or equal to 6 characters",maxlength: "Password length should be less than or equal to 12 characters"},
+                    txt_cnf_password: {required:'Please confirm Password', equalTo: '&nbsp;Password not match'}
+                }
+            });
+
+            if($("#frmCont").valid())
+            {
+                ajaxFormSubmit("#frmCont");
+            } 
+            else 
+            {
+                return false;
+            }
+        });
+
+        $(document).on("click",".chk_group",function()
+        {
+
+            var page_name = $(this).attr("data-page");
+            var page_id = $(this).attr("data-page_id");
+
+            if($(this).val()!='1')
+            {
+                var len = $(".chk_"+page_name+"_"+page_id+":checked").length;
+                if($(this).prop("checked"))
+                {
+                    $( ".chk_"+page_name+"_"+page_id).first().prop('checked',true);
+                    $( ".chk_"+page_name+"_"+page_id).first().prop('disabled',true);
+                }
+                else if(len<2)
+                {
+                    //$( ".chk_"+page_name+"_"+page_id).first().prop('checked',false);
+                    $( ".chk_"+page_name+"_"+page_id).first().prop('disabled',false);
+                }
+            }
+        });
+        $(document).on('change','.chk_group',function(e){
+            var count=$(".chk_group").length;
+            var checked_count=$('input[name="actions[cPass-sd][]"]:checked').length;
+            (count==checked_count)?$("#selectAll").prop('checked',true):$("#selectAll").prop('checked',false);
+        });
+
+        $(document).on("click","#selectAll",function()
+        {
+            $(".chk_group").prop('checked', $(this).prop("checked"));
+        });
+    });
+</script>

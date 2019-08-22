@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Pista.js Examples</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../jquery.pista.js" type="text/javascript" charset="utf-8"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  <div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/chart-graph/jQuery-Zepto-Plugin-For-Pretty-Line-Charts-Pista-js.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+    <div class="content">
+    <h1 style="margin-top:150px;">jQuery Pista.js Examples</h1>
+  <h3>Basic chart</h3>
+    <div id="basic"></div>
+    
+
+    <h3>Multi lines chart</h3>
+    <div id="multi"></div>    
+    
+
+    <h3>Curve lines chart</h3>
+    <div id="curve"></div>
+    
+    
+
+    <h3>Chart with goal</h3>
+    <div id="goal"></div>
+    
+    
+
+    <h3>Custom Y</h3>
+    <div id="custom"></div>
+    
+    
+    <h3>Colored Background</h3>
+    <div id="fill"></div>
+    
+    
+    
+    <script>
+
+    $(document).ready(function(){
+      var data= [   { name:"first",
+          data:[
+              {value:12, date:"12/14/2014"},
+              {value:32, date:"12/15/2014"},
+              {value:56, date:"12/17/2014"},
+              {value:45, date:"12/19/2014"}
+            
+            ]
+          }
+      ]
+    
+      // Basic
+      options={
+        height: 150,
+        width: 600,
+      }
+      $("#basic").pista(data, options);
+      
+    
+    data= [   { name:"first",
+      data:[
+          {value:12, date:"12/14/2014"},
+          {value:32, date:"12/15/2014"},
+          {value:56, date:"12/17/2014"},
+          {value:45, date:"12/19/2014"}
+        
+        ]
+      },
+      { name:"second",
+      data:[
+          {value:13, date:"12/13/2014"},
+          {value:30, date:"12/15/2014"},
+          {value:26.6, date:"12/18/2014"},
+          {value:33, date:"12/19/2014"}
+        
+        ]
+      }
+  ]
+  // Multiple lines
+  options={
+    height: 150,
+    width: 600,
+  }
+  $("#multi").pista(data, options);
+      
+      
+      
+      // Curve chart
+      options={
+        height: 150,
+        width: 600,
+        lines:{curve:true}
+      }
+      $("#curve").pista(data, options);
+      
+      // Goal chart
+      options={
+        height: 150,
+        width: 600,
+        goal: {show:true, value:23},
+      }
+      $("#goal").pista(data, options);
+      
+      
+      // Goal chart
+      options={
+        height: 150,
+        width: 600,
+	      y:{margin:0.2, min:0, max:100}
+      }
+      $("#custom").pista(data, options);
+      
+      
+      // Goal chart
+      options={
+        height: 150,
+        width: 600,
+        lines:{fill:true, fillOpacity:0.3}
+      }
+      $("#fill").pista(data, options);
+      
+    });
+    </script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>

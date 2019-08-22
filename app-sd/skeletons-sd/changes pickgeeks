@@ -1,0 +1,54 @@
+1)  User Template = Done
+2)  Sign-up.lib.php = Done
+3)  Units/logout-sd/index.php = Done
+4)  Login-sd.lib.php  
+5)  ForgetPassword-sd.skd - remain to constant and change message
+6)  Login-sd.lib.php
+7)  ResetPassword-sd.skd - remain to constant, Slug should be passed in encoded string 
+8)  Reset password template changes
+9)  Admin Manage content remove header and footer = Done
+10) footer-sd.skd 
+11) ajax.faq.php
+12) delete content page not working
+13) Freelancer search page should be Freelancers and in Jobs also change title Jos = Done
+14) ajax.freelancer_search-sd.php 
+15) Change search category page design
+16) search page if data is empty hr line issue
+17) Freelancer search page without login Add to favourite list not working
+18) Service search page without login Add to favourite list not working
+19) put icon for linked in footer page
+20) admin side content-sd.lib.php, content-sd.skd and form of content = Done
+21) header-sd.skd = Done
+-----------------------------------
+22) contact-us form validation
+23) Contact us request -> manage contacts
+24) Category -> a) category b) subcategory
+25) Skills 
+-----------
+26) Service Detail page design changes and if no addons then button will be removed and add Buy button
+27) If user has not complete his/her profile then go for edit profile and message should be complete your 		profile 
+
+
+
+-------------- 
+ Upload List |
+--------------
+1)  Admin Side - Manage abuse keyword module
+2)  Tables tbl_adminrole and tbl_adminsection and language_constant
+3)  front = footer-sd.skd
+4)  contactus-sd.skd
+5)  pickgeeks\app-sd\skeletons-sd\freelancer_profile-sd\addEditportfolio-sd.skd
+6)  pickgeeks\app-sd\skeletons-sd\home-sd\customer-services-loop.skd
+7)  Style.css
+8)  Responsive.css
+9)  pickgeeks\app-sd\skeletons-sd\service_confirmation_order-sd\addOn_loop-sd.skd
+10) Content-sd.skd
+ 
+
+
+
+
+
+
+
+

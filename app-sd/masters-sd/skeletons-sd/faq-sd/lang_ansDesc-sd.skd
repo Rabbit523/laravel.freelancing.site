@@ -1,0 +1,13 @@
+ <div class="form-group">
+    <label class="control-label col-md-3"><font color="#FF0000">*</font>%F_TITLE%: &nbsp;</label>
+    <div class="col-md-9">
+        <textarea class="ckeditor form-control textarea-bg required" name="%F_NAME%" id="%F_NAME%" data-msg-required="Please enter answer" data-error-container="#editor_error" style="display: none;">%F_VALUE%</textarea>
+        <div id="editor_error"></div>
+        <span for="%F_NAME%" class="help-block"></span>
+    </div>
+</div>
+
+<script type="text/javascript">$(function () {
+    loadCKE("%F_NAME%");
+});
+</script>

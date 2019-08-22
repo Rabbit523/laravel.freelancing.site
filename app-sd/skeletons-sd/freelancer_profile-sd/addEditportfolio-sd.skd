@@ -1,0 +1,64 @@
+<div class="portfolioSection">
+   <div class="modal fade" id="add_portfolio" role="dialog" tabindex="-1">
+      <div class="modal-dialog">
+         <!-- Modal content-->
+         <form name="portfolioFrm" id="portfolioFrm" method="post" enctype="multipart/form-data">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                  </button>
+                  <h4 class="modal-title">
+                     {ADD_PROJECT_LBL}
+                  </h4>
+               </div>
+               <div class="modal-body add_portfolio">
+
+                     <div class="form-group text-center">
+                        <div class="file-input-wrapper">
+                           <label for="upload-file" class="file-input-button">
+                           {CHOOSE_IMG_LBL}
+                           </label>
+                           <input id="upload-file" type="file" name="portFolioimage" class="imgData" accept="image/*" />
+                           <input type="hidden" name="old_image" id="old_image" value="%OLD_IMG%">
+                           <img height='100' width='100' class="hide imgPrev"/>
+                           %PORTFOLIO_IMG%
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label>{PROJECT_TITLE_LBL}</label>
+                        <input class="form-control" name="projectTitle" id="projectTitle" value="%PROJECT_TITLE%"/>
+                     </div>
+                     <div class="form-group">
+                        <label>{PROJECT_DURATION_LBL}</label>
+                        <select class="form-control" name="projectDuration" id="projectDuration">
+                            <option value=''>Select Duration</option>
+                            <option value="1 day or less" %PROJECT_DURATION1%>1 day or less</option>
+                            <option value="Less than 1 week" %PROJECT_DURATION2%>Less than 1 week</option>
+                            <option value="1 to 2 weeks" %PROJECT_DURATION3%>1 to 2 weeks</option>
+                            <option value="3 to 4 weeks" %PROJECT_DURATION4%>3 to 4 weeks</option>
+                            <option value="1 to 6 month" %PROJECT_DURATION5%>1 to 6 month</option>
+                            <option value="More than 6 month" %PROJECT_DURATION6%>More than 6 month</option>
+                        </select>
+                     </div>
+                     <div class="form-group">
+                        <label>{PROJECT_SKILL_LBL}</label>
+                        <select data-placeholder="Skill List"  class="form-control skill_choose" multiple tabindex="4" name="project_skill_name[]" id="project_skill_name">%PROJECT_SKILL_LIST%</select>
+                     </div>
+                     <div class="form-group">
+                        <label>{PROJECT_DESC_LBL}</label>
+                        <textarea class="form-control" name="projectDesc" id="projectDesc">%PROJECT_DESC%</textarea>
+                     </div>
+               </div>
+               <div class="modal-footer">
+                  <div class="theme-button">
+                     <input type="hidden" name="action" id="action" value="addPortfolio">
+                     <input type="hidden" name="id" id="id" value="%ID%">
+                     <button type="submit" name="addPorfolio" id="addPorfolio" class="btn btn-system">{FD_SAVE}</button>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,1 @@
+<option value="%PLATFORM_ID%"  %SELECTED% %IS_DISABLED%>%PLATFORM_NAME%</option>

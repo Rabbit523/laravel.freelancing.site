@@ -1,0 +1,138 @@
+<!-- new design -->
+<li class="cif-item pbox">
+   <div class="media">
+      <div class="media-left">
+         <div class="cif-img-wrap">
+            <div class="cif-img">
+               <img src="%IMAGE%" />
+            </div>
+            <div class="cif-title-wrap mobile-view">
+               <h3 class="cif-title">
+                  <a href="%USER_PROFILE_URL%" target="_blank">%NAME%</a>
+               </h3>
+               <span class="cif-lvl">({CMJ_PRO})</span>
+            </div>
+            <div class="star-ratings-sprite">
+               <span style="width:%RATINGS%%" class="star-ratings-sprite-rating"></span>
+            </div>
+            <div class="cif-location">
+               <i class="fa fa-map-marker"></i> %LOCATION%
+            </div>
+         </div>
+      </div>
+      <div class="media-body">
+         <div class="cif-title-wrap desktop-view">
+            <h3 class="cif-title">
+               <a href="%USER_PROFILE_URL%" target="_blank">%NAME%</a>
+            </h3>
+            <span class="cif-lvl">({CMJ_PRO})</span>
+         </div>
+         <div class="cif-earn">
+            {CMJ_TOTAL_EARNED} : 
+            <div class="amount-wrap">{CURRENCY_SYMBOL}%EARNED%</div>
+         </div>
+         <ul class="cif-list clearfix">
+            <li>
+               {CMJ_COMPLETED_JOBS} : <span>%COMPLETED_JOB%</span>
+            </li>
+            <li>
+               {CMJ_SERVICE_SOLD} : <span>%SOLD_SERVICE%</span>
+            </li>
+            <li>
+               {CMJ_RESPONSE_TIME} : <span>%RESPONSE_TIME%</span>
+            </li>
+            <li>
+               {J_JOB_STATUS_LBL} : <span>%INV_STATUS%</span>
+            </li>
+            <li>
+               {MEMBER_SINCE} : <span>%USER_SINCE%</span>
+            </li>
+         </ul>
+         <ul class="cif-list invitation-status clearfix">
+            <li>
+               Invitation sent date : <span>%SENT_DATE%</span>
+            </li>
+            <li>
+               Invitation status : <span>%INVITATION_STATUS%</span>
+            </li>
+         </ul>
+         <ul class="cif-skills">
+            %SKILLS%
+         </ul>
+      </div>
+   </div>
+</li>
+<!-- new design end -->
+
+<!-- old design -->
+<? php /* <li class="card-block">
+   <div class="media">
+      <div class="media-right">
+         <div class="posted_service">
+            <img src="%IMAGE%" />
+         </div>
+         <div class="text-center">
+            <div class="star-ratings-sprite">
+               <span style="width:%RATINGS%%" class="star-ratings-sprite-rating"></span>
+            </div>
+         </div>
+      </div>
+      <div class="media-body">
+         <h4 class="card-title">
+            <a href="%USER_PROFILE_URL%" target="_blank">%NAME%</a>
+         </h4>
+         <div class="category_subcategory">
+            <span>
+            %PROF_TITLE%
+            </span>
+         </div>
+
+         <ul class="project-desc list-inline">
+            <li>
+               {CMJ_PRO}
+            </li>
+            <li>
+               {CMJ_COMPLETED_JOBS} : %COMPLETED_JOB%
+            </li>
+            <li>
+               {CMJ_SERVICE_SOLD} : %SOLD_SERVICE%
+            </li>
+            <li>
+               {CMJ_TOTAL_EARNED} : {CURRENCY_SYMBOL}%EARNED%
+            </li>
+            <li>
+               {CMJ_RESPONSE_TIME} : %RESPONSE_TIME%
+            </li>
+            <li>
+               {J_JOB_STATUS_LBL} : %INV_STATUS%
+            </li>
+
+         </ul>
+         <ul class="project-desc list-inline">
+            <li>
+               {MEMBER_SINCE} %USER_SINCE%
+            </li>
+            <li>
+               <i class="fa fa-globe" aria-hidden="true">
+               </i>
+               %LOCATION%
+            </li>
+         </ul> 
+         <ul class="project-desc list-inline">
+            <li>
+               Invitation sent date : %SENT_DATE%
+            </li>
+            <li>
+               Invitation status : %INVITATION_STATUS%
+            </li>
+         </ul>
+         <div class="services">
+            <label>{JOB_SKILLS_LBL}</label><br>
+            <ul class="list-inline">
+               %SKILLS%
+            </ul>
+         </div>
+      </div>
+   </div>
+</li> */ ?>
+<!-- old design end -->

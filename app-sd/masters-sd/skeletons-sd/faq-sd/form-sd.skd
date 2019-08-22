@@ -1,0 +1,71 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+    <div class="form-body">
+        
+        <!-- <div class="form-group">
+            <label for="page_title" class="control-label col-md-3"><font color="#FF0000">*</font>Question: &nbsp;</label>
+            <div class="col-md-4">
+                <textarea class="form-control logintextbox-bg required" name="question" id="question">%QUESTION%</textarea>
+            </div>
+        </div> -->
+        %LANG_QUESTION%
+        
+        <div class="form-group">
+            <label for="page_title" class="control-label col-md-3"><font color="#FF0000">*</font>FAQ Category: &nbsp;</label>
+            <div class="col-md-4">
+                <select name="faqCategoryId" id="faqCategoryId" class="form-control">
+                    %CATEGORY%
+                </select>  
+            </div>
+        </div>
+        <!-- <div class="form-group">
+            <label class="control-label col-md-3"><font color="#FF0000">*</font>Answer: &nbsp;</label>
+            <div class="col-md-9">
+                <textarea class="ckeditor form-control textarea-bg required" name="ansDesc" id="ansDesc" data-error-container="#editor_error" style="display: none;">%ANS_DESC%</textarea>
+                <div id="editor_error"></div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">$(function () {
+                loadCKE("ansDesc");
+            });
+        </script> -->
+        %LANG_ANSDESC%
+
+        <!-- <div class="form-group">
+            <label for="meta_keyword" class="control-label col-md-3">Answer: &nbsp;</label>
+            <div class="col-md-4">
+                <input type="file" class="form-control logintextbox-bg" name="ansImg" id="ansImg">
+                <img src="%IMG%" height="100" width="100" class="%CLASS%">
+                <input type="hidden" name="oldImg" id="oldImg" value="%OLD_IMG%">
+            </div>
+        </div> -->
+        
+        <div class="form-group">
+            <label class="control-label col-md-3 ex_label_toggle_btn">Status: &nbsp;</label>
+            <div class="col-md-4">
+                <div class="radio-list" data-error-container="#form_2_Status: _error">
+                    <label class="">
+                        <input class="radioBtn-bg required" id="y" name="isActive" type="radio" value="y" %STATIC_A%>
+                        Active</label>
+                    <span for="status" class="help-block"></span>
+                    <label class="">
+                        <input class="radioBtn-bg required" id="n" name="isActive" type="radio" value="n" %STATIC_D%>
+                        Inactive</label>
+                    <span for="status" class="help-block"></span> </div>
+                <div id="form_2_Status: _error"></div>
+            </div>
+        </div>
+
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="type" id="type" value="%TYPE%">
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="id" id="id" value="%ID%">
+        <div class="padtop20"></div>
+    </div>
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <button type="submit" name="submitAddForm" class="btn green" id="submitAddForm">Submit</button>
+            <button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,52 @@
+<section class="above-fold-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-7">
+                <div class="section-desc">
+                    <div class="left-section">
+                        <h1>%SLIDER_HEADING%</h1>
+                        <h4>%SLIDER_CONTENT%</h4>
+                        <form class="form" action="#" method="post">
+                            <div class="form-group">
+                                <input class="form-control input-lg" placeholder="%INPUT_LABLE%" type="text" id="searchKeyword" name="searchKeyword">
+                                <a href="javascript:void(0)" data-url="%FIRST_DATA_URL%" class="btn btn-system topSearch" id="full"><i class="fa fa-search"></i></a>
+                                <input type="hidden" name="user_type" class="search_user_type" value="%USER_TYPE%">
+                                <!-- <button class="btn btn-system">
+                                    <i class="fa fa-search"></i>
+
+                                </button> -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-5">
+                <div class="mockup">
+                    <img src="%SLIDER_IMAGE%" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="above-overlay"></div>
+</section>
+ <?/* <div id="first-slider" style="display: none;">
+    <div id="carousel-example-generic" class="carousel slide carousel-fade">
+        <ol class="carousel-indicators">
+            %INDICATOR_LOOP_DATA%
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            %SLIDER_LOOP%
+        </div>
+        <div class="slider-content">
+            %SEARCH_SECTION%
+        </div>
+        <a class="left carousel-control %LEFT_RIGHT_CLASS%" href="#carousel-example-generic" role="button" data-slide="prev">
+            <img src="{SITE_IMG}icon/left.png" alt="" class="fa-angle-left">
+            <span class="sr-only">{PREVIOUS_LABEL}</span>
+        </a>
+        <a class="right carousel-control %LEFT_RIGHT_CLASS%" href="#carousel-example-generic" role="button" data-slide="next">
+            <img src="{SITE_IMG}icon/right.png" alt="" class="fa-angle-right">
+            <span class="sr-only">{NEXT_LABEL}</span>
+        </a>
+    </div>
+</div> */?>

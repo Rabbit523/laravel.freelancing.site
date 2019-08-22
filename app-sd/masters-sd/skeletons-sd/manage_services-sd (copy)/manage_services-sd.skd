@@ -1,0 +1,256 @@
+<div class="modal fade" id="delete_service" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <form name="reportFrm" id="reportFrm" action="" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                    </button>
+                    <div class="media">
+                        <div class="media-body">
+                            <h3>
+                                Service Delete
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Reason</label>
+                        <textarea class="form-control" rows="5" name="report_reason" id="report_reason"></textarea>
+                        <input type="hidden" name="serviceId" id="serviceId" value="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="theme-button">
+                        <input type="hidden" name="action" id="action" value="report_user">
+                        <button name="deleteService" id="deleteService" type="submit" class="btn btn-system btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () 
+    {
+        OTable = $('#example123').dataTable({
+        "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                "fnServerData": function (sSource, aoData, fnCallback)
+                {
+                    $.ajax({
+                        "dataType": 'json',
+                        "type": "POST",
+                        "url": sSource,
+                        "data": aoData,
+                        "success": fnCallback
+                    });
+                },
+                "aaSorting" : [],
+                "aoColumns": [
+                    { "sName": "serviceTitle", 'sTitle' : 'Services Title'},
+                    { "sName": "servicesCategory", 'sTitle' : 'Category Name'},
+                    { "sName": "userName", 'sTitle' : 'Freelancer'}
+                   
+<?php if (in_array('status', $this->Permission)) { ?>
+                    , { "sName": "isActive", 'sTitle' : 'Status', bSortable:true, bSearchable:false}<?php } ?>
+<?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+                    , {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}<?php } ?>
+                ],
+                "fnServerParams"
+                : function(aoData){
+                    setTitle(aoData, this)
+                    aoData.push( { name: "filtering_type", value: $("#filtering_type").val() });
+                },
+                "fnDrawCallback"
+                : function(oSettings) 
+                {
+                    $('.make-switch').bootstrapSwitch();
+                    $('.make-switch').bootstrapSwitch('setOnClass', 'success');
+                    $('.make-switch').bootstrapSwitch('setOffClass', 'danger');
+                }
+        });
+
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+
+    $.validator.addMethod('pagenm', function (value, element) 
+    {
+        return /^[a-zA-Z0-9][a-zA-Z0-9\_\-]*$/.test(value);
+    }, 
+    'Page name is not valid. Only alphanumeric,space and _ are allowed'
+    );
+    
+    $(document).on('click', '#deleteService', function (e) 
+    {
+        e.preventDefault();
+        
+        $("#reportFrm").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'span',
+            rules: 
+            {
+                report_reason: {required: true},
+            },
+            messages:
+            {
+                report_reason: {required: '&nbsp;Please enter service delete reason'}
+            },
+            highlight: function (element) 
+            {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element) 
+            {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorPlacement: function (error, element) 
+            {
+                if (element.attr("data-error-container")) 
+                {
+                    error.appendTo(element.attr("data-error-container"));
+                } 
+                else 
+                {
+                    error.insertAfter(element);
+                }
+            }
+        });
+        
+        if ($("#reportFrm").valid()) 
+        {
+            ajaxFormSubmit("#reportFrm");
+            location.reload();
+        } 
+        else 
+        {
+            return false;
+        }
+    });
+
+        $(document).on('change', '#filtering_type', function(e) 
+        {
+            OTable.fnDraw();
+        });
+
+    });
+
+
+$(document).on("click",".delete_image",function(){
+    confirm("Are you sure you want to delete ?")
+    {
+        var id = $(this).attr("data-id");
+        $(this).parent().hide();
+        $.post("ajax.<?php echo $this->module; ?>.php",{'action':"delete_image","id":id},function(data){
+        },'json');
+    }
+});
+
+$(document).on("click","#servicesCategory",function(){
+    var catId = $(this).val();
+    $.post("ajax.<?php echo $this->module; ?>.php",{"action":"load_sub","cat_id":catId},function(data){
+        $("#servicesSubCategory").html(data);
+    });
+});
+
+$(document).on("click",".openQuestionModal",function(){
+    $("#myModal").modal("show");
+});
+
+$(document).on('click',".chooseQuestion",function(){
+   
+    var val = [];
+        $(':checkbox:checked').each(function(i){
+          val[i] = $(this).val();
+        });
+   $("#addedQuestion").val(val);
+   $("#myModal").modal("hide");
+});
+
+
+$(document).on("change",".file_upload",function(){
+    var a = $(this).val();
+    $("#old_image").val(a);
+});
+
+    $(document).on('focus','#bidsFromLocation',function(){
+        var places = document.getElementById('bidsFromLocation');
+        var option = {};
+        autocomplete= new google.maps.places.Autocomplete(places,option);
+    });
+
+    $(document).on("click",".sr_delete", function() {
+        var srId = $(this).attr('data-id');
+        $('#serviceId').val(srId);
+        $('#delete_service').modal('show');
+    });
+
+</script>
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+               
+                <div class="nav navbar-right panel_toolbox">
+                   <a href="ajax.manage_services-sd.php?action=export_excel" class="btn btn-success btn-sm add-back chng-btn" title="Download"><i class="fa fa-download"></i></a>
+                </div>
+                <div class="nav navbar-right panel_toolbox">
+                   <a href="ajax.manage_services-sd.php?action=export_csv" class="btn btn-warning btn-sm add-back chng-btn" title="Export As CSV"><i class="fa fa-file-excel-o"></i></a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content">
+                <div class="actions portlet-toggler">
+                    <div class="btn-group"></div>
+                </div>
+            </div>
+            <div class="portlet-body portlet-toggler ">
+                <table id="example123" class="table table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Delete confirmation modal -->
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <textarea class="form-control" name="reason" id="reason"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

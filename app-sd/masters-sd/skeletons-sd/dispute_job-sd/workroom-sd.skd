@@ -1,0 +1,118 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+    <h2 style="display: inline-block;">Workroom</h2>
+  	<a href="{SITE_ADM_MOD}dispute_job-sd" class="btn btn-primary btn-sm pull-right">Back</a>
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-tabs tabs-left" width="justify">
+                <li class="message active"><a data-toggle="tab" id="message_href" href="#message">Messages</a></li>
+                <li class="files" data-id="files"><a id="dispute_href" data-toggle="tab" href="#files">Files</a></li>
+                <li class="milestones" data-id="milestone"><a id="milestone_href" data-toggle="tab" href="#milestone">Terms &amp; Milestones</a></li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <form name="frmCont" id="frmCont" method="post" enctype="multipart/form-data">
+                <div class="tab-content">                                
+                    <div class="tab-pane active" id="message">
+  						<h2 class="title-name">Messages</h2>
+  						<div class="msg-detail">
+  							%MESSAGE%
+						</div>
+                    </div>   
+
+
+                    <div class="tab-pane" id="files">
+  						<h2 class="title-name">Files</h2>
+  						<div class="pro-filter">
+							<ul class="filttering">
+								<li>
+									<a class="btn filter-button active" data-filter="all">All </a>
+								</li>
+								<li>
+									<a class="btn filter-button" data-filter="jpeg">JPEG </a>
+								</li>
+								<li>
+									<a class="btn filter-button" data-filter="jpg">JPG </a>
+								</li>
+								<li>
+									<a class="btn filter-button" data-filter="pdf">PDF </a>
+								</li>
+								<li>
+									<a class="btn filter-button" data-filter="png">PNG </a>
+								</li>
+								<li>
+									<a class="btn filter-button" data-filter="psd">PSD </a>
+								</li>
+								<li>
+									<a class="btn filter-button" data-filter="svg">SVG </a>
+								</li>
+							</ul>
+						</div>
+						<div class="date-wise-division">
+							<p class="divider text-center">
+								Yesterday
+							</p>
+						</div>
+						<ul class="gallery-list">
+							%FILEDATA%
+						</ul>
+                    </div>    
+                    <div class="tab-pane" id="milestone">
+  						<h2 class="title-name">Terms &amp; Milestones</h2>
+  						<div class="table-responsive">
+							<table class="table terms-milestone-table">
+								<thead>
+									<tr>
+										<th class="tbl-num">
+											Name
+										</th>
+										<th class="tbl-date">
+											 Date of created
+										</th>
+										<th class="tbl-desc">
+											Description
+										</th>
+										<th class="tbl-amount">
+											Amount
+										</th>
+										<th class="tbl-action">
+											Status
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									%MILESTONE%
+								</tbody>
+							</table>
+						</div>
+                    </div>                                 
+                </div>
+            </form>
+       	</div> 
+    </div>
+</form>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+    $(".filter-button").click(function() {
+        var value = $(this).attr('data-filter');
+
+        if(value == "all") {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+            $('.pro-filter .filter-button').removeClass('active');
+            $(this).addClass('active');
+        }
+        else {
+            //$('.filter[filter-item="'+value+'"]').removeClass('hidden');
+            //$(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('2000');
+            $('.filter').filter('.'+value).show('2000');
+
+            $('.pro-filter .filter-button').removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+    
+});
+</script>

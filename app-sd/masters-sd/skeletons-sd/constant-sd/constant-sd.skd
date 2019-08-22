@@ -1,0 +1,167 @@
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                <div class="nav navbar-right panel_toolbox portlet-toggler">
+                    <a href="ajax.<?php echo $this->module; ?>.php?action=export_excel" class="btn chng-btn btn-warning" title="Export as excel"><i class="fa fa-file-excel-o"></i></a>
+                    <a href="ajax.<?php echo $this->module; ?>.php?action=import_data" class="btn chng-btn btn-info btn-add" title="Import Data(excel)"><i class="fa fa-upload"></i></a>
+                   <?php if (in_array('add', $this->Permission)) { ?>
+                    <a href="ajax.<?php echo $this->module; ?>.php?action=add" class="btn btn-success btn-add" title="Add"><i class="fa fa-plus"></i></a>
+                <?php } ?>
+
+            </div>
+                <!-- <div class="nav navbar-right panel_toolbox btn-back">
+                    <a href="<?php echo SITE_ADM_MOD; ?>faq_category-sd" class="btn btn-success btn-sm" title="Back"><i class="fa fa-arrow-left"></i></a>
+                </div>  -->
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="actions portlet-toggler">
+
+                    <div class="btn-group"></div>
+                </div>
+            </div>
+            <div class="portlet-body portlet-toggler ">
+                <table id="example123" class="table table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        OTable = $('#example123').dataTable({
+            "bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+            "fnServerData": function (sSource, aoData, fnCallback) {
+                $.ajax({
+                    "dataType": 'json',
+                    "type": "POST",
+                    "url": sSource,
+                    "data": aoData,
+                    "success": fnCallback
+                });
+            },
+            "aaSorting" : [],
+            "aoColumns": [
+            { "sName": "Id", "sTitle" : 'Category Id', bVisible: false},
+            { "sName": "constant", 'sTitle' : 'Constant'},
+            { "sName": "value", 'sTitle' : 'Value'},
+            { "sName": "createdDate", 'sTitle' : 'Inserted Date'}
+            <?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+                , {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}
+            <?php } ?>
+            ],
+            "fnServerParams"
+            : function(aoData){setTitle(aoData, this)},
+            "fnDrawCallback"
+            : function(oSettings) {
+                $('.make-switch').bootstrapSwitch();
+                $('.make-switch').bootstrapSwitch('setOnClass', 'success');
+                $('.make-switch').bootstrapSwitch('setOffClass', 'danger');
+            }
+        });
+        $('.dataTables_filter').css({float: 'right'});
+        $('.dataTables_filter input').addClass("form-control input-inline");
+
+        $(document).on('click', '#submitImportForm', function(e) {
+            e.preventDefault();
+
+            $("#frmImportConstant").validate({
+                ignore: [],
+                errorClass: 'help-block',
+                errorElement: 'span',
+                highlight: function (element) {
+                    $(element).closest('.form-group').addClass('has-error');
+                },
+                unhighlight: function (element) {
+                    $(element).closest('.form-group').removeClass('has-error');
+                },
+                rules: {
+                    file: { required: true, extension: 'xls|xlsx' }
+                },
+                messages: {
+                    file: { required: 'Please select file', extension: 'Please select valid file' }
+                },
+                errorPlacement: function (error, element) {
+                    error.insertAfter(element);
+                }
+            });
+
+            if ($("#frmImportConstant").valid()) {
+                ajaxFormSubmit("#frmImportConstant");
+            } else {
+                return false;
+            }
+        });
+            
+        
+    });
+
+    $(document).on('click', '#submitAddForm', function (e) {
+            e.preventDefault();
+            for (var instanceName in CKEDITOR.instances) {
+                CKEDITOR.instances[instanceName].updateElement();
+            }
+            
+            $("#frmCont").validate({
+                ignore: [],
+                errorClass: 'help-block',
+                errorElement: 'span',
+                highlight: function (element) {
+                    $(element).closest('.form-group').addClass('has-error');
+                },
+                unhighlight: function (element) {
+                    $(element).closest('.form-group').removeClass('has-error');
+                },
+                errorPlacement: function (error, element) {
+                    if (element.attr("data-error-container")) {
+                        error.appendTo(element.attr("data-error-container"));
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                rules: {
+                    constant: {required: true}
+                },
+                messages: {
+                    constant: {required: '&nbsp;Please enter Constant Name'}
+                }
+            });
+            
+            if ($("#frmCont").valid()) {
+                ajaxFormSubmit("#frmCont");
+            } else {
+                return false;
+            }
+        });
+
+    $(document).on('input','#constant',function(e){
+        var final = '';
+        var val = $(this).val().toUpperCase();
+        val = val.split("");
+
+        $(val).each(function(i,v){
+            if(v == " "){
+                v = '_';
+            }
+            final += v; 
+        });
+        $(this).val(final);
+    });
+</script>

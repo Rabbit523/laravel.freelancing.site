@@ -1,0 +1,48 @@
+   <div class="Addons" id="1">
+      <span class="delete-adon">
+        <a href="javascript:void(0);" class="remove_div" name="remove_div[]" id="remove_div%ID%" data-id="%DATA_ID%" title="Delete"><i class="fa fa-times"></i></a>
+      </span>
+      <div class="row">
+         <div class="col-md-4 col-sm-4">
+            <div class="form-group">
+               <label>
+               {F_ENTER_ADDON_TITLE_LBL} :
+               </label>
+               <input class="form-control addon_text" name="addon_title[]" id="addon_title" value="%ADDON_TITLE%"/>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-3">
+            <div class="form-group">
+               <label>
+               {F_ENTER_ADDON_PRICE_LBL} :
+               </label>
+               <input class="form-control addon_price" name="addon_price[]" id="addon_price" type="number" min="1" value="%ADDON_PRICE%" maxlength="5" />
+            </div>
+         </div>
+         <div class="col-md-5 col-sm-5">
+            <div class="form-group">
+               <label>
+               {F_NO_DAYS_REQUIRED_LBL} :
+               </label>
+               <input class="form-control addon_dur" name="addon_days[]" id="addon_days" type="number" min="1" value="%ADDON_DAYS%" maxlength="3" />
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12 col-sm-12">
+            <div class="form-group">
+               <label>
+               {F_ADDON_DESC_LBL} :
+               </label>
+              <textarea class="form-control addon_desc" rows="3" name="addon_desc[]" id="addon_desc">%ADDON_DESC%</textarea>
+            </div>
+         </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="form-group">
+            <button class="btn btn-danger remove_div" name="remove_div[]" id="remove_div1"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+      </div> -->
+   </div>

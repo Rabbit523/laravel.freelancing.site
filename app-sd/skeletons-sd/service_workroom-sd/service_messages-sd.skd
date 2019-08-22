@@ -1,0 +1,13 @@
+<li class="%USER_CLASS%">
+   <div class="msg-inner-detail">
+      <p class="conversion">
+         %MESSAGE%
+      </p>
+      <a href="javascript:void(0)" data-id="%MSG_ID%" class="%NO_DELETE% single_msg_delete garbage-img">
+        <img src="{SITE_IMG}icon/garbage.png" alt="">
+      </a>  
+   </div>
+   <span class="msg-date">
+    %TIME%
+    </span>
+</li>

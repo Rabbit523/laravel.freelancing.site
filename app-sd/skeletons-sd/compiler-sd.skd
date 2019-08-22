@@ -1,0 +1,54 @@
+<?php
+	$main->put("module", $module);
+
+	require_once(DIR_THEME.'theme.template.php');
+
+	$head->title = $winTitle;
+	$head->metaTag = $metaTag;
+
+  	/* Loading template files */
+	$canonical = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+	$canonical = '<link rel="canonical" href="'.$canonical.'" />';
+	/* for head  start*/
+	$search = array('%METATAG%','%TITLE%',"%CANONICAL%");
+	$replace = array($metaTag,$winTitle,$canonical);
+	$head_content=str_replace($search,$replace,$head->compile());
+	$head_content = ($head_content);
+	/* for head  end*/
+
+	
+    /* Outputting the data to the end user */
+
+/*$xml=simplexml_load_file(SITE_TMPL."set-compiler.xml") or die("Error: Cannot create object");
+$childModule = $xml->childModule;
+$is_module_ava = 'no';
+$is_auth_ava = 'no';
+
+foreach($childModule as $items)
+{
+	foreach($items as $key=>$item)
+	{
+		if($key=='moduleName' && $module == $item){
+			$is_module_ava = 'yes';
+		}
+		
+		if($key=='reqAuthXml' && $reqAuthXml == $item){
+			$is_auth_ava = 'yes';
+		}		
+	}
+}
+
+if($is_module_ava == 'no' || $is_auth_ava == 'no')
+{	
+	$msgType = $_SESSION["msgType"] = disMessage(array('type' => 'err', 'var' => 'Something went wrong. Please try again'));
+    redirectPage(SITE_URL);
+
+}*/
+
+    $session_user_type = ((isset($_SESSION["pickgeeks_userType"]) && $_SESSION["pickgeeks_userType"] == '') || (!isset($_SESSION["pickgeeks_userType"]) && isset($_SESSION["pickgeeks_userId"]))) ? 'y' : 'n';
+
+	$search = array('%HEAD%','%SITE_HEADER%','%BODY%','%FOOTER%','%MESSAGE_TYPE%',"%SESSION_USER_TYPE%");
+	$replace = array($head_content,$objHome->getHeaderContent($last_page),$pageContent,$objHome->getFooterContent(),$msgType,$session_user_type);
+	$page_content=str_replace($search,$replace,$page->compile());
+    echo ($page_content);
+	exit;

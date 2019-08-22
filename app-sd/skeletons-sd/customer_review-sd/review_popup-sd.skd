@@ -1,0 +1,26 @@
+<div class="star-rating">
+  <div class="stars">
+    <p>{C_REQ_CLARIFICATION_LBL}</p>
+    <div class="star-ratings-sprite">
+         <span style="width:%REQ_CLARIFICATION%%" class="star-ratings-sprite-rating"></span>
+    </div>
+  </div>
+  <div class="stars">
+    <p>{C_ON_TIME_PAYMENT_LBL}</p>
+    <div class="star-ratings-sprite">
+       <span style="width:%ON_TIME_PAYMENT%%" class="star-ratings-sprite-rating"></span>
+    </div>
+  </div>
+  <div class="stars">
+    <p>{C_ON_TIME_RESPONSE}</p>
+    <div class="star-ratings-sprite">
+       <span style="width:%ON_TIME_RESPONSE%%" class="star-ratings-sprite-rating"></span>
+    </div>
+  </div>
+  <div class="stars">
+    <p>{C_COMMUNICATION_LBL}</p>
+    <div class="star-ratings-sprite">
+       <span style="width:%COMMUNICATION_RATE%%" class="star-ratings-sprite-rating"></span>
+    </div>
+  </div>
+</div>

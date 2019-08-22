@@ -1,0 +1,17 @@
+<div class="fl-experience-item">
+  <div class="media">
+      <div class="media-left">
+          <div class="fl-experience-icon">
+              <i class="fa fa-briefcase" aria-hidden="true"></i>
+          </div>
+      </div>
+      <div class="media-body fl-experience-info">
+          <div class="fl-experience-heading">
+              <h4 class="main-title">%TITLE% <span>%CMP_NAME%</span></h4>
+              <div class="experience-years">%DURATION%</div>
+              <div class="experience-location"><span><i class="fa fa-map-marker"></i></span>%LOCATION%</div>
+          </div>
+          <div class="fl-experience-sort-info">%DESC%</div>
+      </div>
+  </div>
+</div>

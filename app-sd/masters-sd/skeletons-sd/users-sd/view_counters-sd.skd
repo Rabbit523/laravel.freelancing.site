@@ -1,0 +1,78 @@
+<div class="table-responsive">
+	<table class="table table-bordered">
+	    <tbody>
+	      <tr>
+	        <th>Jobs posted</th>
+	        <td>%JOBS_POSTED%</td>
+	      </tr>	      
+	      <tr>
+	        <th>Jobs accepted</th>
+	        <td>%JOBS_ACCEPTED%</td>
+	      </tr>
+	      <tr>
+	      	<th>Jobs rejected</th>
+	      	<td>%JOBS_REJECTED%</td>
+	      </tr>
+	       <tr>
+	      	<th>Pending jobs</th>
+	      	<td>%PENDING_JOBS%</td>
+	      </tr>
+	      <tr>
+	      	<th>Completed jobs</th>
+	      	<td>%COMPLETED_JOBS%</td>
+	      </tr>
+	      <tr>
+	      	<th>Private job requests sent</th>
+	      	<td>%PRIVATE_JOB_REQUESTS_SENT%</td>
+	      </tr>
+	      <tr>
+	      	<th>Private job requests received</th>
+	      	<td>%PRIVATE_JOB_REQUESTS_RECEIVED%</td>
+	      </tr>
+	      <tr>
+	      	<th>Live jobs</th>
+	      	<td>%LIVE_JOBS%</td>
+	      </tr>
+	      <tr>
+	        <th>Services posted</th>
+	        <td>%SERVICES_POSTED%</td>
+	      </tr>
+	      <tr>
+	      	<th>Service orders</th>
+	      	<td>%SERVICE_ORDERS%</td>
+	      </tr>
+	      <tr>
+	      	<th>Completed services</th>
+	      	<td>%COMPLETED_SERVICES%</td>
+	      </tr>	     	     
+	      <tr>
+	      	<th>Pending services</th>
+	      	<td>%PENDING_SERVICES%</td>
+	      </tr>  	       
+	      <tr>
+	      	<th>Sold services</th>
+	      	<td>%SOLD_SERVICES%</td>
+	      </tr>
+	       <tr>
+	      	<th>Live services</th>
+	      	<td>%LIVE_SERVICES%</td>
+	      </tr>
+	      <tr>
+	      	<th>Revenue earned</th>
+	      	<td>%REVENUE_EARNED%</td>
+	      </tr>
+	      <tr>
+	      	<th>Commission paid</th>
+	      	<td>%COMMISSION_PAID%</td>
+	      </tr>
+	      <tr>
+	      	<th>Redeem request</th>
+	      	<td>%REDEEM_REQUEST%</td>
+	      </tr>
+	      <tr>
+	      	<th>Redeem amount</th>
+	      	<td>%REDEEM_AMOUNT%</td>
+	      </tr>
+	    </tbody>
+    </table>
+</div>

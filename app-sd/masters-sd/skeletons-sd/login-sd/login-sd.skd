@@ -1,0 +1,101 @@
+<div class="login">
+  <div class="login_wrapper">
+
+    <!-- BEGIN LOGO -->
+    <div class="logo">
+      <?php if(!empty(SITE_LOGO)) {?>
+        <img src="{SITE_IMG}{SITE_LOGO}" alt="{SITE_NM}" title="{SITE_NM}" class="admin_login_logo" />
+      <?php } ?>
+    </div>
+    <!-- END LOGO -->
+
+    <!-- BEGIN LOGIN -->
+
+    <div class="animate form login_form">
+      <section class="login_content login_sec">
+        <form class="login-form" name="loginform" id="loginform" action="" method="post">
+          <h1>Login Form</h1>
+          <div class="form-group">
+            <input type="text" class="form-control" autocomplete="off" name="uName" placeholder="Username" value="<?php echo $this->uName; ?>"  />
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" type="password" autocomplete="off" name="uPass" placeholder="Password" value="<?php echo $this->uPass; ?>" />
+          </div>
+          <!-- <div class="checkbox login-rem">
+            <label for="remember">
+              <input name="remember" id="remember" value="remember" type="checkbox" <?php echo $this->rememberme_checked; ?>>Remember Me
+            </label>
+          </div> -->
+          <div>
+            <input type="hidden" name="submitLogin" value="submit">
+            <button type="submit" name="submitLogin" class="btn btn-success pull-right">Login</button>
+            <a id="forgot_pass" class="pass-for-link" href="javascript:void(0);">Forgot password?</a>
+          </div>
+          <div class="clearfix"></div>
+          <div class="separator"></div>
+          <p>Copyright &copy; <?php echo date('Y'); ?> <a target="_blank" href="https://www.minttm.com" title="" style="margin: 0;">MintTM</a>. All Rights Reserved.</p>
+        </form>
+      </section>
+
+      <section class="login_content forgot_sec" style="display: none;">
+        <form class="forget-form" name="forgotpass" id="forgotpass" action="" method="post">
+          <h3>Forgot Password ?</h3>
+          <p>Enter your Email address below to reset your password.</p>
+
+          <div class="form-group">
+            <input class="form-control placeholder-no-fix" type="email" autocomplete="off" placeholder="Email" name="uEmail"/>
+          </div>
+          <div class="form-actions">
+              <button type="button" id="back-btn" class="btn pull-left">Back</button>
+              <button type="submit" name="submitEmail" class="btn green pull-right">Reset Password</button>
+            </div>
+          </form>
+          <!-- END FORGOT PASSWORD FORM -->
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(document).on('click', '#forgot_pass, #back-btn', function(e) {
+      $('.login_sec').toggle();
+            $('.forgot_sec').toggle();
+    });
+
+    $('#loginform').validate({
+      ignore: [],
+      errorClass: 'help-block',
+      errorElement: 'span',
+      
+      rules: {
+        uName: { required: true }, uPass: { required: true }
+      },
+      messages: {
+        uName: { required: 'Please enter User Name' }, uPass: { required: 'Please enter Password' }
+      },
+      errorPlacement: function(error, element) {
+        error.attr('style', 'color: #b94a48; margin-top: -20px; margin-bottom: 25px; text-align: left;');
+        error.insertAfter(element);
+      }
+    });
+
+    $('#forgotpass').validate({
+      ignore: [],
+      errorClass: 'help-block',
+      errorElement: 'span',
+      rules: {
+        uEmail: { required: true, email: true }
+      },
+      messages: {
+        uEmail: { required: 'Please enter Email Id', email: 'Please enter valid Email Id' }
+      },
+      errorPlacement: function(error, element) {
+        error.attr('style', 'color: #b94a48; margin-top: -20px; margin-bottom: 25px; text-align: left;');
+        error.insertAfter(element);
+      }
+     
+    });
+  });
+</script>

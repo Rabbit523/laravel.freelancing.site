@@ -1,0 +1,70 @@
+<section class="dashboard-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- sidenav mobile view -->
+                <div class="tablet-view">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn">&times;</a>
+                        <ul class="dashboard-navbar">
+                            <li class="%PROFILE_ACTIVE%">
+                                <a href="{SITE_URL}profile">Dashboard</a>
+                            </li>
+                            <li  class="%MYJOBS_ACTIVE%">
+                                <a href="{SITE_URL}c/my-jobs">{POSTED_JOBS}</a>
+                            </li>
+                            <li  class="%REVIEW_ACTIVE%">
+                                <a href="{SITE_URL}c/review">{F_NAV_MY_REVIEW_LBL}</a>
+                            </li>
+                            <li  class="%FINANCIAL_ACTIVE%">
+                                <a href="{SITE_URL}c/financial-dashboard">{CST_FIN_DASHBOARD}</a>
+                            </li>
+                            <li  class="%SER_ORDER_ACTIVE%">
+                                <a href="{SITE_URL}c/service-order">{F_NAV_SERVICE_ORDER_LBL}</a>
+                            </li>
+                            <li  class="%SAVED_FREELANCER_ACTIVE%">
+                                <a href="{SITE_URL}c/saved-freelancer">{F_NAV_SAVED_FREELANCER_LBL}</a>
+                            </li>
+                            <li  class="%FAVORITE_SRE_ACTIVE%">
+                                <a href="{SITE_URL}c/favorite-services">{F_NAV_FAV_SERVICE_LBL}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dashboard-btn">
+                        <a href="javascript:void(0)" id="dashboardMenu" class="btn btn-bar btn-primary">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <h4>Dashboard</h4>
+                    </div>
+                </div>
+                <!-- sidenav mobile view --> 
+
+                <ul class="dashboard-navbar tablet-hide">
+                    <li class="%PROFILE_ACTIVE%">
+                        <a href="{SITE_URL}profile">Dashboard</a>
+                    </li>
+                    <li class="%MYJOBS_ACTIVE%">
+                        <a href="{SITE_URL}c/my-jobs">{POSTED_JOBS}</a>
+                    </li>
+                    <li class="%REVIEW_ACTIVE%">
+                        <a href="{SITE_URL}c/review">{F_NAV_MY_REVIEW_LBL}</a>
+                    </li>
+                    <li class="%FINANCIAL_ACTIVE%">
+                        <a href="{SITE_URL}c/financial-dashboard">{CST_FIN_DASHBOARD}</a>
+                    </li>
+                    <li class="%SER_ORDER_ACTIVE%">
+                        <a href="{SITE_URL}c/service-order">{F_NAV_SERVICE_ORDER_LBL}</a>
+                    </li>
+                    <li class="%SAVED_FREELANCER_ACTIVE%">
+                        <a href="{SITE_URL}c/saved-freelancer">{F_NAV_SAVED_FREELANCER_LBL}</a>
+                    </li>
+                    <li class="%FAVORITE_SRE_ACTIVE%">
+                        <a href="{SITE_URL}c/favorite-services">{F_NAV_FAV_SERVICE_LBL}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

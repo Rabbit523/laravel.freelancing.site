@@ -1,0 +1,18 @@
+<li class="gallery-item  filter %EXT%">
+   <div class="media">
+      <div class="media-left">
+         <a href="%LINK%" class="file-name" download>
+            <div class="img-preview">
+                  %IMG%
+            </div>
+         </a>
+      </div>
+      <div class="media-body">
+         <span>%IMAGE_NAME%</span>
+         <span class="time">%TIME%</span>
+      </div>
+      <span class="download">
+         <a href="%LINK%" class="file-name" download><i class="fa fa-download"></i> Download</a>
+      </span>
+   </div>
+</li>

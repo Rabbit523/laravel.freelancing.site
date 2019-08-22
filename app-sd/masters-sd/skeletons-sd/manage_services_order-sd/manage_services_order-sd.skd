@@ -1,0 +1,224 @@
+<script type="text/javascript">
+    $(function () 
+    {
+        OTable = $('#example123').dataTable({
+        "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                "fnServerData": function (sSource, aoData, fnCallback)
+                {
+                    $.ajax({
+                        "dataType": 'json',
+                        "type": "POST",
+                        "url": sSource,
+                        "data": aoData,
+                        "success": fnCallback
+                    });
+                },
+                "aaSorting" : [],
+                "aoColumns": [
+                    { "sName": "serviceTitle", 'sTitle' : 'Services Title', bSortable: true, bSearchable: true},
+                    { "sName": "freelancer", 'sTitle' : 'Freelancer Name'},
+                    { "sName": "customerName", 'sTitle' : 'Customer Name'},
+                    { "sName": "paid amount", 'sTitle' : 'Paid Amount'},
+                    { "sName": "orderDate", 'sTitle' : 'Order Date'},
+                    { "sName": "userName", 'sTitle' : 'Order Status'}
+
+<?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+                    , {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}<?php } ?>
+                ],
+                "fnServerParams"
+                : function(aoData){
+                    setTitle(aoData, this)
+                    aoData.push( { name: "orderStatus", value: $("#orderStatus").val() });
+                },
+                "fnDrawCallback"
+                : function(oSettings) 
+                {
+                    $('.make-switch').bootstrapSwitch();
+                    $('.make-switch').bootstrapSwitch('setOnClass', 'success');
+                    $('.make-switch').bootstrapSwitch('setOffClass', 'danger');
+                }
+        });
+
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+
+    
+    
+    
+
+
+});
+$(document).on("click",".btn-refundView",function(){
+    var id = $(this).attr("data-id");
+    $("#serviceId").val(id);
+    $("#refundModal").modal("show");
+});
+
+$(document).on("click","#respondRequest",function(e){
+    e.preventDefault();
+    $("#respondRequestFrm").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'span',
+            rules: 
+            {
+                /*refundStatus: {required: true},*/
+                rejectReason: 
+                    {
+                        required: 
+                        {
+                            depends: function (element) {
+                                return $('#refundStatusR').is(':checked');
+                            }
+                        }
+                    }
+            },
+            messages:
+            {
+                /*refundStatus: {required: '&nbsp;Please select Status'},*/
+                rejectReason: {required: '&nbsp;Please enter reason for reject request'}
+            },
+            highlight: function (element) 
+            {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element) 
+            {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorPlacement: function (error, element) 
+            {
+                if (element.attr("data-error-container")) 
+                {
+                    error.appendTo(element.attr("data-error-container"));
+                } 
+                else 
+                {
+                    error.insertAfter(element);
+                }
+            }
+    });
+    if($("#respondRequestFrm").valid())
+    {
+        $("#respondRequestFrm").submit();
+    }
+});
+$(document).on("change",".refundStatus",function(){
+    var status = $("input[name=refundStatus]:checked").val();
+    (status=='r') ? $(".rejectReasonDiv").css("display","block") : $(".rejectReasonDiv").css("display","none");
+});
+
+$(document).on('change', '#orderStatus', function(e) 
+{
+    OTable.fnDraw();
+});
+
+</script>
+
+
+<div class="modal fade" id="refundModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <form name="respondRequestFrm" id="respondRequestFrm" method="post" action="">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Refund Request</h4>
+        </div>
+        <div class="modal-body">
+            <div class='row'>
+                <div class='col-md-4'>
+                    <label>Select Status :- </label>
+                </div>
+                <div class='col-md-3'>
+                    <input type='radio' name='refundStatus' id='refundStatusA' class="refundStatus" value='a'> Accept
+                </div>
+                <div class='col-md-3'>
+                    <input type='radio' name='refundStatus' id='refundStatusR' class="refundStatus" value='r'> Reject
+                </div>
+             </div>
+             <div class="row" style="padding:8px"></div>
+             <div class="row rejectReasonDiv" style="display: none">
+                <div class="col-md-4">
+                    <label>Enter Rejection Reason :- </label>
+                </div>
+                <div class="col-md-6">
+                    <textarea name="rejectReason" id="rejectReason" class="form-control"></textarea>
+                </div>
+             </div>
+        </div>
+        <div class="modal-footer">
+            <input type="hidden" name="serviceId" id="serviceId">
+            <input type="hidden" name="action" id="action" value="RequestFrm">
+          <button type="submit" name="respondRequest" id="respondRequest" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+      </form>
+    </div>
+</div>
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content">
+                <div class="actions portlet-toggler">
+                    <div class="btn-group"></div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <select name='orderStatus' id='orderStatus' class='form-control input-inline'>
+                                        <option value=''>All Status</option>
+                                        <option value='no'>New Order</option>
+                                        <option value='ip'>In Progress</option>
+                                        <option value='ar'>Ask for Refund</option>
+                                        <option value='cls'>Closed</option>
+                                        <option value='p'>Payment Pending</option>
+                                        <option value='c'>Completed</option>
+                                        <option value='ud'>Under Dispute</option>
+                                        <option value='ds'>Dispute Solved</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                            </div>
+                            <div class="col-md-5">
+                                <div class="nav navbar-right panel_toolbox">
+                                   <a href="ajax.manage_services_order-sd.php?action=export_excel" class="btn btn-success btn-sm add-back chng-btn" title="Download"><i class="fa fa-download"></i></a>
+                                </div>
+                                <div class="nav navbar-right panel_toolbox">
+                                   <a href="ajax.manage_services_order-sd.php?action=export_csv" class="btn btn-warning btn-sm add-back chng-btn" title="Export As CSV"><i class="fa fa-file-excel-o"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="portlet-body portlet-toggler ">
+                <table id="example123" class="table table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,460 @@
+<div class="modal fade" id="delete_job" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <form name="reportFrm" id="reportFrm" action="" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                    </button>
+                    <div class="media">
+                        <div class="media-body">
+                            <h3>
+                                Job Delete
+                            </h3>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Reason</label>
+                        <textarea class="form-control" rows="5" name="report_reason" id="report_reason"></textarea>
+                        <input type="hidden" name="jobId" id="jobId" value="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="theme-button">
+                        <input type="hidden" name="action" id="action" value="report_user">
+                        <button name="deleteJob" id="deleteJob" type="submit" class="btn btn-system btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal fade" id="reject_job" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <form name="frmReject" id="frmReject" action="" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                    </button>
+                    <div class="media">
+                        <div class="media-body">
+                            <h3>
+                                Give Reason To Reject Job
+                            </h3>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Reason</label>
+                        <textarea class="form-control" rows="5" name="rejectDesc" id="rejectDesc"></textarea>
+                        <input type="hidden" name="jobId" id="jobId" value="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="theme-button">
+                        <input type="hidden" name="action" id="action" value="reject_job">
+                        <button name="rejectJob" id="rejectJob" type="submit" class="btn btn-system btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () 
+    {
+        OTable = $('#example123').dataTable({
+                "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                'columnDefs': [{
+                                 'targets': 0,
+                                 'searchable':false,
+                                 'orderable':false,
+                                 'className': 'dt-body-center',
+                                 'render': function (data, type, full, meta){
+                                     return '<input type="checkbox" name="id[]"  value="' 
+                                        + $('<div/>').text(data).html() + '">';
+                                 }
+                              }],
+                "fnServerData": function (sSource, aoData, fnCallback)
+                {
+                    $.ajax({
+                        "dataType": 'json',
+                        "type": "POST",
+                        "url": sSource,
+                        "data": aoData,
+                        "success": fnCallback
+                    });
+                },
+                "aaSorting" : [],
+                "aoColumns": [
+                    { "sName": "id", 'sTitle' : "<input name='select_all' value='1' id='example-select-all' type='checkbox' />"},
+                    { "sName": "jobTitle", 'sTitle' : 'Job Title'},
+                    { "sName": "category_name", 'sTitle' : 'Category Name'},
+                    { "sName": "username", 'sTitle' : 'Who Has posted a job'},
+                    { "sName": "budget", 'sTitle' : 'Budget'},
+                    { "sName": "jobType", 'sTitle' : 'Job Type'},
+                    { "sName": "jobStatus", 'sTitle' : 'Job Status'}
+<?php if (in_array('status', $this->Permission)) { ?>
+                    ,{ "sName": "isActive", 'sTitle' : 'Status (Active,Deactive)',"sWidth":'8%' ,bSortable:true, bSearchable:false}<?php } ?>
+<?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+    
+                    ,{"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}<?php } ?>
+                ],
+
+                "fnServerParams"
+                : function(aoData){
+                    setTitle(aoData, this)
+                    aoData.push( { name: "filterSubCategory", value: $("#filterSubCategory").val()} );  
+                    aoData.push( { name: "filterCategory", value: $("#filterCategory").val() } ); 
+                    aoData.push( { name: "filterSkill", value: $("#filterSkill").val() } ); 
+                    aoData.push( { name: "filterJobStatus", value: $("#filterJobStatus").val() } ); 
+                    aoData.push( { name: "filterFeatured", value: $("#filterFeatured").val() } ); 
+                },
+                "fnDrawCallback"
+                : function(oSettings) 
+                {
+                    $('.make-switch').bootstrapSwitch();
+                    $('.make-switch').bootstrapSwitch('setOnClass', 'success');
+                    $('.make-switch').bootstrapSwitch('setOffClass', 'danger');
+                }
+        });
+     $(document).on('change', '#filterCategory', function(e) {
+        e.preventDefault();
+        var catId = $(this).val();
+        $.post("ajax.<?php echo $this->module; ?>.php",{"action":"load_sub","cat_id":catId},function(data){
+            $("#filterSubCategory").html(data);
+
+            OTable.fnDraw();
+        });
+    });
+    $(document).on('change', '#filterSubCategory', function(e) {
+        e.preventDefault();
+        OTable.fnDraw();
+    });
+     $(document).on('change', '#filterSkill', function(e) {
+        e.preventDefault();
+        OTable.fnDraw();
+    });
+    $(document).on('change', '#filterJobStatus', function(e) {
+        e.preventDefault();
+        OTable.fnDraw();
+    });
+    $(document).on('change', '#filterFeatured', function(e) {
+        e.preventDefault();
+        OTable.fnDraw();
+    });
+// Handle click on "Select all" control
+   $('#example-select-all').on('click', function(){
+        
+      // var rows = OTable.rows().nodes();
+      $('input[type="checkbox"][name="id[]"]').prop('checked', this.checked);
+      
+   });
+
+   // Handle click on checkbox to set state of "Select all" control
+   $('#example123 tbody').on('change', 'input[type="checkbox"][name="id[]"]', function(){
+      // If checkbox is not checked
+      if(!this.checked){
+         var el = $('#example-select-all').get(0);
+         // If "Select all" control is checked and has 'indeterminate' property
+         if(el && el.checked && ('indeterminate' in el)){
+            // Set visual state of "Select all" control 
+            // as 'indeterminate'
+            el.indeterminate = true;
+         }
+      }
+   });
+  
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+
+    $.validator.addMethod('pagenm', function (value, element) 
+    {
+        return /^[a-zA-Z0-9][a-zA-Z0-9\_\-]*$/.test(value);
+    }, 
+    'Page name is not valid. Only alphanumeric,space and _ are allowed'
+    );
+    $('#bidsFromLocation').selectpicker();
+   
+    $(document).on('click', '#deleteJob', function (e) 
+    {
+        e.preventDefault();
+        $("#reportFrm").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'span',
+            rules: 
+            {
+                report_reason: {required: true}
+            },
+            messages:
+            {
+                report_reason: {required: '&nbsp;Please enter reason'}
+            },
+            highlight: function (element) 
+            {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element) 
+            {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorPlacement: function (error, element) {
+                if (element.attr("data-error-container")) {
+                    error.appendTo(element.attr("data-error-container"));
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+        });
+    
+        if ($("#reportFrm").valid()) 
+        {
+            ajaxFormSubmit("#reportFrm");
+            location.reload();
+        } 
+        else 
+        {
+            return false;
+        }
+    });
+ $(document).on('click', '#submitAddForm', function (e) 
+    {
+        e.preventDefault();
+        $("#frmCont").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'span',
+            rules: 
+            {
+                jobTitle: { required : true},
+                jobCategory : { required : true},
+                jobSubCategory : { required : true},
+                skills : { required : true},
+                description : { required : true},
+                estimatedDuration : { required : true}
+            },
+            messages:
+            {
+                jobTitle: { required: '&nbsp;Please enter job title'},
+                jobCategory : { required : '&nbsp;Please enter job category'},
+                jobSubCategory : { required : '&nbsp;Please enter job title'},
+                skills : { required :  '&nbsp;Please enter skill'},
+                description : { required : '&nbsp;Please enter description'},
+                estimatedDuration : { required : '&nbsp;Please enter estimated duration'}
+
+            },
+            highlight: function (element) 
+            {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element) 
+            {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorPlacement: function (error, element) {
+                if (element.attr("data-error-container")) {
+                    error.appendTo(element.attr("data-error-container"));
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+        });
+    
+        if ($("#frmCont").valid()) 
+        {
+            ajaxFormSubmit("#frmCont");
+        } 
+        else 
+        {
+            return false;
+        }
+    });
+});
+$(document).on("click",".reject", function() {
+    var jobId = $(this).attr('data-id');
+    $('#jobId').val(jobId);
+    $('#reject_job').modal('show');
+});
+ $(document).on('click', '#rejectJob', function (e) 
+ {
+        e.preventDefault();
+        $("#frmReject").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'span',
+            rules: 
+            {
+                rejectDesc: {required: true}
+            },
+            messages:
+            {
+                rejectDesc: {required: '&nbsp;Please enter reason'}
+            },
+            highlight: function (element) 
+            {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element) 
+            {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorPlacement: function (error, element) {
+                if (element.attr("data-error-container")) {
+                    error.appendTo(element.attr("data-error-container"));
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+        });
+    
+        if ($("#frmReject").valid()) {
+            id=$('#jobId').val();
+            rejectDesc = $('#rejectDesc').val();
+             $.post("ajax.<?php echo $this->module; ?>.php",{"action":"reject","jobId":id,"rejectDesc":rejectDesc},function(data){
+              toastr['success']("Job has been Rejected successfully");
+              $('#reject_job').modal('hide');
+                setTimeout(function(){
+                  window.location.href = "{SITE_ADM_MOD}manage_jobs-sd/";
+               },1000);
+             },'json');
+        }else {
+            return false;
+        }
+});
+
+
+$(document).on("change",".file_upload",function(){
+    var a = $(this).val();
+    $("#old_file").val(a);
+});
+
+
+$(document).on("click",".delete_image",function(){
+    confirm("Are you sure you want to delete ?")
+    {
+        var id = $(this).attr("data-id");
+        $(this).parent().hide();
+        $.post("ajax.<?php echo $this->module; ?>.php",{'action':"delete_image","id":id},function(data){
+        },'json');
+    }
+});
+
+/*$(document).on("click",".jb_delete", function() {
+    var jobId = $(this).attr('data-id');
+    $('#jobId').val(jobId);
+    $('#delete_job').modal('show');
+});*/
+
+ $(document).on('focus','#bidsFromLocation',function(){
+        var places = document.getElementById('bidsFromLocation');
+        var option = {};
+        autocomplete= new google.maps.places.Autocomplete(places,option);
+    });
+ $(document).on('click','.restFilter',function(){
+    location.reload();
+});
+
+</script>
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                
+                <div class="nav navbar-right panel_toolbox">
+                   <a href="ajax.manage_jobs-sd.php?action=export_excel" class="btn btn-success btn-sm add-back chng-btn" title="Download"><i class="fa fa-download"></i></a>
+                </div>
+                <div class="nav navbar-right panel_toolbox">
+                   <a href="ajax.manage_jobs-sd.php?action=export_csv" class="btn btn-warning btn-sm add-back chng-btn" title="Export as CSV"><i class="fa fa-file-excel-o"></i></a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+           <div class="x_content">
+               <div class="actions portlet-toggler">
+                    <div class="form-group clearfix">
+                     <div class="nav navbar-right panel_toolbox portlet-toggler">
+                       <a href="javascript:;" class="btn chng-btn btn-default btn-sm restFilter" title="Download"><i class="fa fa-refresh"></i> Reset Filter</a>
+                     </div>
+                     <br><br>
+                        <div class="col-md-3 col-sm-4 col-xs-8  ">
+                            <label class="control-label filtered-label">Filter By :&nbsp;</label>
+                            <select name="filterCategory" id="filterCategory" class="form-control">
+                                <option value='' >Select Category</option>
+                                    %CATEGORY_OPTIONS%
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-8  ">
+                        <label class="control-label filtered-label">Filter By :&nbsp;</label>
+                            <select name="filterSubCategory" id="filterSubCategory" class="form-control">
+                                <option value=''>Select Sub Category</option>
+                              %SUB_CATEGORY%
+                                
+                            </select>
+                        </div>
+                     <div class="col-md-3 col-sm-4 col-xs-8  ">
+                        <label class="control-label filtered-label">Filter By :&nbsp;</label>
+                        <select name="filterSkill" id="filterSkill" class="form-control">
+                            <option value=''>Select Skill</option>
+                            %JOB_SKILL%                                
+                        </select>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-8  ">
+                        <label class="control-label filtered-label">Filter By :&nbsp;</label>
+                            <select name="filterJobStatus" id="filterJobStatus" class="form-control">
+                                <option value=''>Select Job Status</option>
+                                <option value="p">Pending</option>
+                                <option value="h">Hired</option>
+                                <option value="ip">In Progress</option>
+                                <option value="co">Completed</option>
+                                <option value="c">Closed</option>
+                                <option value="ud">Under Dispute</option>
+                                <option value="dsp">Dispute Solved and Job In Progress</option>
+                                <option value="dsco">Dispute Solved and Job Completed</option>
+                                <option value="dsc">Dispute Solved and Job Closed</option>
+                           </select>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-8  ">
+                        <label class="control-label filtered-label">Filter By :&nbsp;</label>
+                            <select name="filterFeatured" id="filterFeatured" class="form-control">
+                                <option value=''>Select</option>
+                                <option value="y">Only Featured Jobs</option>                                
+                            </select>
+                    </div>
+                </div>
+                    <p><button name="dltAll" id="dltAll" data-url = "ajax.<?php echo $this->module; ?>.php">Delete All</button></p>
+                    <div class="btn-group"></div>
+                </div>
+            </div>
+            <div class="portlet-body portlet-toggler ">
+                <table id="example123" class="table table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+
+        </div>
+    </div>
+</div>

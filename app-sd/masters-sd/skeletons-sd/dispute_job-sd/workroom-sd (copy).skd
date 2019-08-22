@@ -1,0 +1,351 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+    <h2>Workroom</h2>
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-tabs tabs-left" width="justify">
+                <li class="message active"><a data-toggle="tab" id="message_href" href="#message">Messages</a></li>
+                <li class="files" data-id="files"><a id="dispute_href" data-toggle="tab" href="#files">Files</a></li>
+                <li class="milestones" data-id="milestone"><a id="milestone_href" data-toggle="tab" href="#milestone">Terms &amp; Milestones</a></li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <form name="frmCont" id="frmCont" method="post" enctype="multipart/form-data">
+                <div class="tab-content">                                
+                    <div class="tab-pane active" id="message">
+  						<h2 class="title-name">Messages</h2>
+  						<div class="msg-detail">
+
+							<div class="media">
+								<div class="media-body">
+									<div class="msg-inner-detail customer">
+										<p class="conversion">
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy textLorem Ipsum is simply dummy text of the printing and typesetting industry.
+										</p>
+										<span class="msg-date">
+											<b>Customer</b> 05/04/2017 8:00 am
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-body">
+									<div class="msg-inner-detail customer">
+										<p class="conversion">
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy textLorem Ipsum is simply dummy text of the printing and typesetting industry.
+										</p>
+										<span class="msg-date">
+											<b>Customer</b> 05/04/2017 8:00 am
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-body">
+									<div class="msg-inner-detail user">
+										<p class="conversion">
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy textLorem Ipsum is simply dummy text of the printing and typesetting industry.
+										</p>
+										<span class="msg-date">
+											<b>Freelancer</b>. 05/04/2017 9:00 am
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-body">
+									<div class="msg-inner-detail customer">
+										<p class="conversion">
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy textLorem Ipsum is simply dummy text of the printing and typesetting industry.
+										</p>
+										<span class="msg-date">
+											05/04/2017 6:00 pm
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-body">
+									<div class="msg-inner-detail user">
+										<p class="conversion">
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy textLorem Ipsum is simply dummy text of the printing and typesetting industry.
+										</p>
+										<span class="msg-date">
+											05/04/2017 8:00 pm
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-body">
+									<div class="msg-inner-detail customer">
+										<p class="conversion">
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy textLorem Ipsum is simply dummy text of the printing and typesetting industry.
+										</p>
+										<span class="msg-date">
+											05/04/2017 7:00 pm
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+                    </div>   
+
+
+                    <div class="tab-pane" id="files">
+  						<h2 class="title-name">Files</h2>
+  						<div class="pro-filter">
+							<ul class="filttering">
+								<li>
+									<a class="btn filter-button active" data-filter="all">All </a>
+								</li>
+								<li>
+									<a class="btn filter-button" data-filter="jpeg">JPEG </a>
+								</li>
+								<li>
+									<a class="btn filter-button" data-filter="jpg">JPG </a>
+								</li>
+								<li>
+									<a class="btn filter-button" data-filter="pdf">PDF </a>
+								</li>
+								<li>
+									<a class="btn filter-button" data-filter="png">PNG </a>
+								</li>
+								<li>
+									<a class="btn filter-button" data-filter="psd">PSD </a>
+								</li>
+								<li>
+									<a class="btn filter-button" data-filter="svg">SVG </a>
+								</li>
+							</ul>
+						</div>
+						<div class="date-wise-division">
+							<p class="divider text-center">
+								Yesterday
+							</p>
+						</div>
+						<ul class="gallery-list">
+							<li class="gallery-item  filter psd" style="display: block;">
+								<a href="files/photoshop.png" class="file-name" download="">
+								<div class="img-preview">
+									<img src="http://192.168.5.28/pickgeeks/dspaces-sd/profile/no_user_image.png">
+								</div>
+								<span>untitled1.psd</span>
+								<i class="fa fa-download"></i>
+								</a>
+								<span class="time-right">
+									2:00:00 p.m.
+								</span>
+							</li>
+							<li class="gallery-item  filter psd" style="display: block;">
+								<a href="images/gallery/photoshop.png" class="file-name" download="">
+								<div class="img-preview">
+									<img src="http://192.168.5.28/pickgeeks/dspaces-sd/profile/no_user_image.png">
+								</div>
+								<span>untitled2.psd</span>
+								<i class="fa fa-download"></i>
+								</a>
+								<span class="time-right">
+									2:00:00 p.m.
+								</span>
+							</li>
+							<li class="gallery-item  filter pdf" style="display: block;">
+								<a href="files/pdfurl-guide.pdf" class="file-name" download="">
+								<div class="img-preview">
+									<img src="http://192.168.5.28/pickgeeks/dspaces-sd/profile/no_user_image.png">
+								</div>
+								<span>pdfurl-guide.pdf</span>
+								<i class="fa fa-download"></i>
+								</a>
+								<span class="time-right">
+									2:00:00 p.m.
+								</span>
+							</li>
+							<li class="gallery-item  filter jpg" style="display: block;">
+								<a href="images/gallery/jpg.png" class="file-name" download="">
+								<div class="img-preview">
+									<img src="http://192.168.5.28/pickgeeks/dspaces-sd/profile/no_user_image.png">
+								</div>
+								<span>gallery-1.jpg</span>
+								<i class="fa fa-download"></i>
+								</a>
+								<span class="time-right">
+									2:00:00 p.m.
+								</span>
+							</li>
+							<li class="gallery-item  filter jpeg" style="display: block;">
+								<a href="images/gallery/jpg.png" class="file-name" download="">
+								<div class="img-preview">
+									<img src="http://192.168.5.28/pickgeeks/dspaces-sd/profile/no_user_image.png">
+								</div>
+								<span>gallery-2.jpeg</span>
+								<i class="fa fa-download"></i>
+								</a>
+								<span class="time-right">
+									2:00:00 p.m.
+								</span>
+							</li>
+							<li class="gallery-item  filter png" style="display: block;">
+								<a href="images/gallery/gallery-3.jpg" class="file-name" download="">
+								<div class="img-preview">
+									<img src="http://192.168.5.28/pickgeeks/dspaces-sd/profile/no_user_image.png">
+								</div>
+								<span>gallery-3.jpg</span>
+								<i class="fa fa-download"></i>
+								</a>
+								<span class="time-right">
+									2:00:00 p.m.
+								</span>
+							</li>
+							<li class="gallery-item  filter jpg" style="display: block;">
+								<a href="images/gallery/jpg.png" class="file-name" download="">
+								<div class="img-preview">
+									<img src="http://192.168.5.28/pickgeeks/dspaces-sd/profile/no_user_image.png">
+								</div>
+								<span>gallery-8.jpg</span>
+								<i class="fa fa-download"></i>
+								</a>
+								<span class="time-right">
+									2:00:00 p.m.
+								</span>
+							</li>
+							<li class="gallery-item  filter svg" style="display: block;">
+								<a href="images/gallery/svg.png" class="file-name" download="">
+								<div class="img-preview">
+									<img src="http://192.168.5.28/pickgeeks/dspaces-sd/profile/no_user_image.png">
+								</div>
+								<span>gallery-5.jpg</span>
+								<i class="fa fa-download"></i>
+								</a>
+								<span class="time-right">
+									2:00:00 p.m.
+								</span>
+							</li>
+							<li class="gallery-item  filter png" style="display: block;">
+								<a href="images/gallery/gallery-9.jpg" class="file-name" download="">
+								<div class="img-preview">
+									<img src="http://192.168.5.28/pickgeeks/dspaces-sd/profile/no_user_image.png">
+								</div>
+								<span>gallery-9.jpg</span>
+								<i class="fa fa-download"></i>
+								</a>
+								<span class="time-right">
+									2:00:00 p.m.
+								</span>
+							</li>
+						</ul>
+                    </div>    
+                    <div class="tab-pane" id="milestone">
+  						<h2 class="title-name">Terms &amp; Milestones</h2>
+  						<div class="table-responsive">
+												<table class="table terms-milestone-table">
+													<thead>
+														<tr>
+															<th class="tbl-num">
+																Name
+															</th>
+															<th class="tbl-date">
+																 Date of completion
+															</th>
+															<th class="tbl-desc">
+																Description
+															</th>
+															<th class="tbl-amount">
+																Amount
+															</th>
+															<th class="tbl-action">
+																Action
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row">
+																lorem ipsum
+															</th>
+															<td>
+																01-May-2017
+															</td>
+															<td>
+																Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+															</td>
+															<td>
+																$60
+															</td>
+															<td>
+                                                                <div class="theme-button">
+                                                                    <a href="#">Ask for Payment</a>
+                                                                </div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">
+																lorem ipsum dolor
+															</th>
+															<td>
+																01-May-2017
+															</td>
+															<td>
+																Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus.
+															</td>
+															<td>
+																$60
+															</td>
+															<td>
+																<button type="button" class="btn btn-primary btn-common">
+																	Pay Now
+																</button>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">
+																lorem ispum dolor sit
+															</th>
+															<td>
+																01-May-2017
+															</td>
+															<td>
+																It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+															</td>
+															<td>
+																$60
+															</td>
+															<td>
+																<div class="theme-button">
+                                                                    <a href="#">Ask for Payment</a>
+                                                                </div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+                    </div>                                 
+                </div>
+            </form>
+       	</div> 
+    </div>
+</form>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+    $(".filter-button").click(function() {
+        var value = $(this).attr('data-filter');
+
+        if(value == "all") {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+            $(this).addClass('active');
+        }
+        else {
+            //$('.filter[filter-item="'+value+'"]').removeClass('hidden');
+            //$(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('2000');
+            $('.filter').filter('.'+value).show('2000');
+
+            $('.pro-filter .filter-button').removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+    
+});
+</script>

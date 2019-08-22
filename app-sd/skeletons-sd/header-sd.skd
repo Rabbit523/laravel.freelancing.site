@@ -1,0 +1,67 @@
+<header class="sub-header index-header">
+<!-- Navigation -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">
+                        {TOGGLE_NAVIGATION}
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                </button>
+                <a class="navbar-brand" href="{SITE_URL}" title="{SITE_NM}">
+                <div class="logo-header">
+                    <?php if(!empty(SITE_LOGO)){ ?>
+                        <!--<img src="images/pickgeeks-logo.png" />-->
+                        <img src="{SITE_IMG}{SITE_LOGO}" />
+                    <?php } ?>
+                </div>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <!-- <a href="#" data-toggle="dropdown">{BTN_BUY} <i class="fa fa-angle-down"></i></a> -->
+                        <!-- <ul class="dropdown-menu"> -->
+                            <li><a href="{SITE_URL}search/service/">{BTN_BROWSE_SERVICES}</a></li>
+                            <!-- <li><a href="{SITE_URL}c/post-job">{BTN_POST_JOB}</a></li> -->
+                            <!-- <li><a href="{SITE_URL}search/freelancer/">{BTN_FIND_FREELANCER}</a></li> -->
+                        <!-- </ul> -->
+                    </li>
+                    <li>
+                        <!-- <a href="#" data-toggle="dropdown">{BTN_SELL} <i class="fa fa-angle-down"></i></a> -->
+                        <!-- <ul class="dropdown-menu"> -->
+                            <li><a href="{SITE_URL}search/jobs/">{BTN_BROWSE_JOBS}</a></li>
+                            <!-- <li><a href="{SITE_URL}post-services">{BTN_POST_SERVICES}</a></li> -->
+                        <!-- </ul> -->
+                    </li>
+                   <!--  <li>
+                        <a href="{SITE_URL}Signup/Work">{BTN_BECOME_FREELANCER}</a>
+                    </li> -->
+                    <li>
+                        <a href="{SITE_URL}signup">{BTN_SIGN_UP}</a>
+                    </li>
+                    <li>
+                        <a href="{SITE_URL}SignIn">{BTN_SIGN_IN}</a>
+                    </li>
+                    <!-- <li>
+                        <div class="language-selection">
+                          <select class="form-control change_language">
+                            <option value="Default">English</option>
+                            %L_CONTENT%
+                          </select>
+                        </div>
+                    </li> -->
+                    <li class="post-a-job-wrap">
+                        <a href="{SITE_URL}c/post-job">{C_POST_JOB_LBL}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

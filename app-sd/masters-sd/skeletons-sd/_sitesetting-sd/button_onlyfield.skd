@@ -1,0 +1,1 @@
+<button type="%TYPE%" name="%NAME%" class="%CLASS%" id="%ID%" %SRC%  %EXTRA% >%VALUE%</button>

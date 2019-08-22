@@ -1,0 +1,9 @@
+<div class="transaction">
+    <div class="media">
+        <div class="pull-left">
+        </div>
+        <div class="media-body text-center">
+            <p class="brand-nm">{NO_FEEDBACKS}</p>
+        </div>
+    </div>
+</div>

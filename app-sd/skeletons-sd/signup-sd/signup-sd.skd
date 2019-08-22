@@ -1,0 +1,106 @@
+<?php /* <section class="inner-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="sign-form sign-up-user">
+                    <div class="sign-option">
+                       <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12 pnone">
+                                <div class="customer-right common">
+                                    <div class="customer-text">
+                                        <h2>{SIGNUP_CUSTOMER_HEADLINE}</h2>
+                                        <p>{SIGNUP_CUSTOMER_DESC}</p>
+                                        <a href="{SITE_URL}Signup/Hire">{SIGNUP_CUSTOMER_BTN_CAPTION}</a>
+                                    </div>
+                                    <div class="freelancer-img">
+                                        <img src="{SITE_IMG}freelancer.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 pnone">
+                                <div class="freelancer-left common">
+                                    <div class="freelancer-text">
+                                    <h2>{SIGNUP_FREELANCER_HEADLINE}</h2>
+                                    <p>{SIGNUP_FREELANCER_DESC}</p>
+                                    <a href="{SITE_URL}Signup/Work">{SIGNUP_FREELANCER_BTN_CAPTION}</a>
+                                    </div>
+                                    <div class="online-work-img">
+                                        <img src="{SITE_IMG}online-work.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> */ ?>
+
+<?php /* <section class="inner-section">
+    <div class="sign-form sign-up-user">
+        <div class="sign-option">
+            <div class="row">    
+                <div class="col-md-6 pnone">
+                    <div class="customer-right common">
+                        <div class="customer-text">
+                            <h2>{SIGNUP_CUSTOMER_HEADLINE}</h2>
+                            <p>{SIGNUP_CUSTOMER_DESC}</p>
+                            <a href="{SITE_URL}Signup/Hire">{SIGNUP_CUSTOMER_BTN_CAPTION}</a>
+                        </div>
+                        <div class="freelancer-img">
+                            <span class="freelancer-img-wrap"></span>
+                            <img src="{SITE_IMG}hiring-freelancer.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 pnone">
+                    <div class="freelancer-left common">
+                        <div class="freelancer-text">
+                            <h2>{SIGNUP_FREELANCER_HEADLINE}</h2>
+                            <p>{SIGNUP_FREELANCER_DESC}</p>
+                            <a href="{SITE_URL}Signup/Work">{SIGNUP_FREELANCER_BTN_CAPTION}</a>
+                        </div>
+                        <div class="online-work-img">
+                            <span class="freelancer-img-wrap"></span>
+                            <img src="{SITE_IMG}looking-online-job.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> */ ?>
+
+<section class="inner-section new-signup-section">
+    <div class="sign-form sign-up-user">
+        <div class="sign-option">
+            <div class="customer-right common">
+                <div class="customer-text">
+                    <h2>{SIGNUP_CUSTOMER_HEADLINE}</h2>
+                    <p>{SIGNUP_CUSTOMER_DESC}</p>
+                    <a href="{SITE_URL}Signup/Hire">{SIGNUP_CUSTOMER_BTN_CAPTION}</a>
+                </div>
+                <div class="freelancer-img">
+                    <span class="freelancer-img-wrap"></span>
+                    <img src="{SITE_IMG}hiring-freelancer.png" alt="">
+                </div>
+            </div>
+
+            <div class="freelancer-left common">
+                <div class="freelancer-text">
+                    <h2>{SIGNUP_FREELANCER_HEADLINE}</h2>
+                    <p>{SIGNUP_FREELANCER_DESC}</p>
+                    <a href="{SITE_URL}Signup/Work">{SIGNUP_FREELANCER_BTN_CAPTION}</a>
+                </div>
+                <div class="online-work-img">
+                    <span class="freelancer-img-wrap"></span>
+                    <img src="{SITE_IMG}looking-online-job.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

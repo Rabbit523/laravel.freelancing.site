@@ -1,0 +1,13 @@
+<li class="media  fl-certi-item">
+  <div class="media-left media-middle">
+      <div class="fl-certi-thumb">
+          <img src="{SITE_UPD}certificate.png" />
+      </div>
+  </div>
+  <div class="media-body media-middle fl-certi-info">
+      <div class="fl-certi-heading">
+        <h4 class="main-title">%TITLE%</h4>
+      </div>
+
+  </div>
+</li>

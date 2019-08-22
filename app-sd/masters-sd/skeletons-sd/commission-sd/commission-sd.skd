@@ -1,0 +1,143 @@
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                <div class="nav navbar-right panel_toolbox portlet-toggler">
+                    <?php if (in_array('add', $this->Permission)) { ?>
+                        <a href="ajax.<?php echo $this->module; ?>.php?action=add" class="btn btn-success btn-add" title="Add"><i class="fa fa-plus"></i></a>
+                    <?php } ?>
+                </div>
+                <!-- <div class="nav navbar-right panel_toolbox btn-back">
+                    <a href="<?php echo SITE_ADM_MOD; ?>commission-sd" class="btn btn-success btn-sm" title="Back"><i class="fa fa-arrow-left"></i></a>
+                </div>  -->
+                <div class="clearfix"></div>
+                
+            </div>
+            <div class="x_content">
+                <div class="actions portlet-toggler">
+                    
+                    <div class="btn-group"></div>
+                </div>
+            </div>
+            <div class="portlet-body portlet-toggler">
+                <table id="example123" class="table table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+         $('#minPrice').keyup(function (){
+            this.value = this.value.replace(/[^0-9]/g,'');
+          });
+
+
+        OTable = $('#example123').dataTable({
+        "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                "fnServerData": function (sSource, aoData, fnCallback) {
+                    $.ajax({
+                        "dataType": 'json',
+                        "type": "POST",
+                        "url": sSource,
+                        "data": aoData,
+                        "success": fnCallback
+                    });
+                },
+                "aaSorting" : [],
+                "aoColumns": [
+                { "sName": "id", "sTitle" : 'Commission Id', bVisible: false},
+                { "sName": "minPrice", "sTitle" : 'Minimum Price'},
+                { "sName": "maxPrice", 'sTitle' : 'Maximum Price'},
+                { "sName": "specificAmount", 'sTitle' : 'Specific Commission(%)'},
+                { "sName": "createdDate", 'sTitle' : 'Inserted Date'}
+<?php if (in_array('status', $this->Permission)) { ?>
+                    , { "sName": "isActive", 'sTitle' : 'Status', bSearchable:false}
+<?php } ?>
+<?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+                    , {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}
+<?php } ?>
+                ],
+                "fnServerParams"
+                : function(aoData){setTitle(aoData, this)},
+                "fnDrawCallback"
+                : function(oSettings) {
+                $('.make-switch').bootstrapSwitch();
+                $('.make-switch').bootstrapSwitch('setOnClass', 'success');
+                $('.make-switch').bootstrapSwitch('setOffClass', 'danger');
+            }
+
+    });
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+
+    
+    $(document).on('click', '#submitAddForm', function (e) {
+        e.preventDefault();
+        for (var instanceName in CKEDITOR.instances) {
+            CKEDITOR.instances[instanceName].updateElement();
+        }
+        
+
+
+        $("#frmCont").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'span',
+            highlight: function (element) {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element) {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorPlacement: function (error, element) {
+                if (element.attr("data-error-container")) {
+                    error.appendTo(element.attr("data-error-container"));
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+            rules: {
+                minPrice: {required: true, digits: true },
+                maxPrice: {required: true,  digits: true
+                    },
+                specificAmount: {required: true, digits: true,min:1,max:100}
+
+            },
+            messages: {
+                minPrice: {
+                    required: '&nbsp;Please enter Minimum Price',
+                    digits:'&nbsp;Please enter only digits'
+                },
+                maxPrice: {
+                    required: '&nbsp;Please enter Maximum Price',
+                    digits:'&nbsp;Please enter only digits'},
+                specificAmount: {required: '&nbsp;Please enter Specific Commission',digits:'&nbsp;Please enter only digits'}
+            }
+        });
+        
+        if ($("#frmCont").valid()) {
+            ajaxFormSubmit("#frmCont");
+        } else {
+            return false;
+        }
+        
+    });
+    });
+</script>

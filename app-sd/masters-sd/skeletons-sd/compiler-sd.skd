@@ -1,0 +1,49 @@
+<?php
+	$main->put("module", $module);
+	$main->put("breadcrumb",$objHome->getBreadcrumb($breadcrumb));
+	//$main->set("breadcrumb",getBreadcrumb($breadcrumb));
+	
+	require_once(DIR_ADMIN_THEME.'theme.template-sd.php');
+	
+	$head->styles = $styles;
+	$head->scripts = $scripts;
+	$head->title = $winTitle;
+	$head->metaTag = $metaTag;
+  
+  /*$xml=simplexml_load_file(SITE_ADMIN_TMPL."set-compiler.xml") or die("Error: Cannot create object");
+$childModule = $xml->childModule;
+$is_module_ava = 'no';
+$is_auth_ava = 'no';
+
+foreach($childModule as $items)
+{
+	foreach($items as $key=>$item)
+	{
+		if($key=='moduleName' && $module == $item){
+			$is_module_ava = 'yes';
+		}
+		
+		if($key=='reqAuthXml' && $reqAuthXml == $item){
+			$is_auth_ava = 'yes';
+		}		
+	}
+}
+
+if($is_module_ava == 'no' || $is_auth_ava == 'no')
+{	
+	$toastr_message = $_SESSION["toastr_message"] = disMessage(array('type' => 'suc', 'var' => 'Something went wrong. Please try again'));
+	redirectPage(SITE_ADMIN_URL);
+}
+*/
+  	/* Loading template files */
+	
+	$page->put("head", $head->compile());	
+	$page->put("site_header",($header_panel!=false)?$site_header->compile():'');
+	$page->put("left",($left_panel!=false)?$objHome->getLeftMenu():'');
+	$page->put("body", $pageContent);
+	$page->put("footer",($footer_panel!=false)?$footer->compile():'');
+
+    /* Outputting the data to the end user */
+	
+    $page->publish();
+	

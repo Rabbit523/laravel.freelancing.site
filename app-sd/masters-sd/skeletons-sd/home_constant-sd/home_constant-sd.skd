@@ -1,0 +1,173 @@
+<script type="text/javascript">
+$(function () {
+
+    /*Load datatable start*/
+    var datatable_status = $('#datatable').hasClass('initialized');
+    if(datatable_status == false)
+    {
+        OTable = $('#table_%load_tab%').dataTable({
+                        "destroy": true,
+                        "bProcessing": true,
+                        "bServerSide": true,
+                        "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                        "fnServerData": function (sSource, aoData, fnCallback) 
+                        {
+                            aoData.push(
+                            {
+                            'name': 'action-table',
+                            'value': '%load_tab%'
+                            });
+                            $.ajax({
+                                "dataType": 'json',
+                                "type": "POST",
+                                "url": sSource,
+                                "data": aoData,
+                                "success": fnCallback
+                            });
+                        },
+                        "aaSorting" : [],
+                        "aoColumns": [
+                            { "sName": "id", "sTitle" : 'Content Id', bVisible: false},
+                            { "sName": "value", "sTitle" : 'Content Name', bVisible: true}
+                            <?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+                                , {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}
+                            <?php } ?>
+                        ],
+                        "fnServerParams"
+                        : function(aoData){setTitle(aoData, this);
+                            flag=true;
+                        },
+                        "fnDrawCallback"
+                        : function(oSettings) {
+                            
+                        }
+                });
+    }
+
+    /*Load datatable end*/
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+
+    $.validator.addMethod('pagenm', function (value, element) {
+        return /^[a-zA-Z0-9][a-zA-Z0-9\_\-]*$/.test(value);
+    }, 'Page name is not valid. Only alphanumeric,space and _ are allowed'
+            );
+
+
+    /*tab change start*/
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
+      var target = $(e.target).attr("href") // activated tab
+      page_name = target.substring(1);
+      var flag = $('#table_'+page_name).data('tab-status');
+   
+            if(flag == false/* && page_name == 'after_login'*/)
+            {
+                OTable = $('#table_'+page_name).dataTable({
+                        "destroy": true,
+                        "bProcessing": true,
+                        "bServerSide": true,
+                        "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                        "fnServerData": function (sSource, aoData, fnCallback) 
+                        {
+                            aoData.push(
+                            {
+                            'name': 'action-table',
+                            'value': page_name
+                            });
+                            $.ajax({
+                                "dataType": 'json',
+                                "type": "POST",
+                                "url": sSource,
+                                "data": aoData,
+                                "success": fnCallback
+                            });
+                            $('.dataTables_length select').addClass("form-control");
+                            $('.dataTables_filter input').addClass("form-control input-inline");
+                        },
+                        "aaSorting" : [],
+                        "aoColumns": [
+                            { "sName": "id", "sTitle" : 'Content Id', bVisible: false},
+                            { "sName": "value", "sTitle" : 'Content Name', bVisible: true}
+                            <?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+                                , {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}
+                            <?php } ?>
+                        ],
+                        "fnServerParams"
+                        : function(aoData){setTitle(aoData, this);
+                            $('#table_'+page_name).data('tab-status',"true");
+                        },
+                        "fnDrawCallback"
+                        : function(oSettings) {
+                        }
+                });     
+            }     
+    });
+
+    /*tab change end*/
+});
+
+$(document).on('click', '#submitAddForm', function (e) {
+
+        var page_name = $('a[data-toggle="tab"]').closest('li.active').find('a').attr('href').substr('1');
+        var table_nm = '#table_'+page_name;
+        e.preventDefault();
+        for (var instanceName in CKEDITOR.instances) {
+            CKEDITOR.instances[instanceName].updateElement();
+        }
+        
+        $("#"+page_name+"_frmSubAdminType").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'span',
+            rules: {
+                value: {required: true}
+            },
+            messages: {
+                value: {required: '&nbsp;Please enter value'}
+            },
+            errorPlacement: function (error, element) {
+                if (element.attr("data-error-container")) {
+                    error.appendTo(element.attr("data-error-container"));
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+        
+        if ($("#"+page_name+"_frmSubAdminType").valid()) 
+        {
+            ajaxFormSubmit("#"+page_name+"_frmSubAdminType");
+            var table1 = $(table_nm).dataTable();
+            table1.fnDraw();
+        } 
+        else 
+        {
+            return false;
+        }
+});
+</script>
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="ex_shownavtabs_btn"><span><i class="fa fa-bars"></i></span></div>
+        <div class="ex_content_div">
+            <ul class="nav nav-tabs ex_tabs_home">
+                %tab_loop%
+            </ul>
+        </div>
+        <div class="tab-content" data-tab-status="false">
+            %tab_div_loop%
+        </div>
+    </div>
+</div>

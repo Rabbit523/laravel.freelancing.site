@@ -1,0 +1,207 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+	<div class="form-body">
+		
+		<div class="form-group">
+			<label for="page_title" class="control-label col-md-3"><font color="#FF0000">*</font>Language: &nbsp;</label>
+			<div class="col-md-4">
+				<select  class="form-control" id="language" name="language">
+					<option value="">English</option>
+					%LANGUAGE%
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="page_title" class="control-label col-md-3"><font color="#FF0000">*</font>Title: &nbsp;</label>
+			<div class="col-md-4">
+				<input type="text" class="form-control logintextbox-bg required" name="title" id="title" value="%TITLE%">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="meta_keyword" class="control-label col-md-3"><font color="#FF0000">*</font>Content: &nbsp;</label>
+			<div class="col-md-4">
+				<textarea class="form-control textarea-bg required" name="content" id="content">%CONTENT%</textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="meta_desc" class="control-label col-md-3">Icon: &nbsp;</label>
+			<div class="col-md-4">
+                <input type="file" class="form-control logintextbox-bg" name="testiImage" id="testiImage" accept="image/*" />
+                <div id="image_error_div"></div>
+                <img id="img_preview" src="%OLD_IMAGE_SRC%" style="margin-top: 20px;height: 50%; width: 50%;display: %IMAGE_SHOW_CLASS%;">
+            </div>
+		</div>
+		<div class="form-group">
+			<label for="meta_desc" class="control-label col-md-3">App Icon: &nbsp;</label>
+			<div class="col-md-4">
+                <input type="file" class="form-control logintextbox-bg" name="appImage" id="appImage" accept="image/*" />
+                <div id="app_image_error_div"></div>
+                <img id="app_img_preview" src="%APP_OLD_IMAGE_SRC%" style="margin-top: 20px;height: 50%; width: 50%;display: %IMAGE_SHOW_CLASS%;">
+            </div>
+		</div>
+	   
+		<div class="flclear clearfix"></div>
+		<input type="hidden" name="type" id="type" value="%TYPE%">
+		<div class="flclear clearfix"></div>
+		<input type="hidden" name="id" id="id" value="%ID%">
+        <input type="hidden" name="old_icon_image" id="old_icon_image" value="%OLD_IMAGE%" />
+        <input type="hidden" name="old_app_icon_image" id="old_app_icon_image" value="%OLD_APP_IMAGE%" />
+		<div class="padtop20"></div>
+	</div>
+	<div class="form-actions fluid">
+		<div class="col-md-offset-3 col-md-9">
+			<button type="submit" name="submitAddForm" class="btn green" id="submitAddForm">Submit</button>
+			<button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+		</div>
+	</div>
+</form>
+
+<div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<form class="avatar-form" action="<?php echo SITE_ADM_INC.'crop-sd.php'; ?>" enctype="multipart/form-data" method="post">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" id="avatar-modal-label">Change Slider</h4>
+				</div>
+				<div class="modal-body">
+					<div class="avatar-body">
+
+						<!-- Upload image and data -->
+						<div class="avatar-upload">
+							<input type="hidden" class="avatar-src" name="avatar_src" id="avatar_src" />
+							<input type="hidden" class="avatar-data" name="avatar_data" id="avatar_data" />
+						</div>
+
+						<!-- Crop and preview -->
+						<div class="row">
+							<div class="col-md-12">
+								<div class="avatar-wrapper"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button id="btnCrop" name="btnCrop" type="submit" class="btn btn-primary">Crop</button>
+					<button type="button" class="btn btn-default btn_close" data-dismiss="modal">Close</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(document).on('click','.btn_close',function(event) {
+			$('#slider_video').val('');
+			$('#testiImage').val('');
+		});
+
+		$(document).on('change', '#testiImage',function(event) {
+			var _this = $(this);
+			var value = _this.val();
+			var allowedFiles = ["jpg", "jpeg", "png"];
+			var extension = value.split('.').pop().toLowerCase();
+			if(value && value!='') {
+				if ($.inArray(extension, allowedFiles) < 0) {
+					toastr['info']("Please select valid image. (e.g. jpg, jpeg, png)");
+				} else if (this.files[0].size > 4194304) {
+					toastr['info']("Image size must be less then 4MB");
+				} else {
+					var url = URL.createObjectURL(event.target.files[0]);
+					$('.avatar-wrapper').empty().html('<img class="img-responsive" src="' + url + '">');
+					//$('#avatar-modal').modal('show');
+				}
+			}else {
+				event.preventDefault();
+			}
+			event.stopImmediatePropagation();
+		});
+
+		$('#avatar-modal').on('hidden.bs.modal', function() {
+			$('.avatar-wrapper img').cropper('destroy');
+			$('.avatar-wrapper').empty();
+		});
+
+		$('#avatar-modal').on('shown.bs.modal', function(e) {
+			$('.avatar-wrapper img').cropper({
+				aspectRatio: 16/9,
+				strict: true,
+				crop: function(e) {
+					var json = [
+						'{"x":' + e.x,
+						'"y":' + e.y,
+						'"height":' + e.height,
+						'"width":' + e.width,
+						'"rotate":' + e.rotate + '}'
+					].join();
+					$('.avatar-data').val(json);
+				}
+			});
+			e.stopImmediatePropagation();
+		});
+
+		$(document).on('click', '#btnCrop', function(e) {
+			e.preventDefault();
+			var avatarForm = $('.avatar-form');
+			var frmCont = $('#frmCont');
+			var url = avatarForm.attr('action');
+			console.log(frmCont[0]);
+			var data =  new FormData(frmCont[0]);
+
+			data.append('avatar_src', $('#avatar_src').val());
+			data.append('avatar_data', $('#avatar_data').val());
+
+			$.ajax(url, {
+				type: 'post',
+				data: data,
+				dataType: 'json',
+				processData: false,
+				contentType: false,
+				beforeSend: function() {
+					addOverlay();
+				},
+				success: function(data) {
+					if(data.state==200) {
+						
+						$('#slider_image').val(data.image);
+						$('#img_preview').attr('src',data.source);
+						if(!$('#img_preview').is(":visible")) { $('#img_preview').show(); }
+						$('#avatar-modal').modal('hide');
+					}
+				},
+				complete: function() {
+					removeOverlay();
+				}
+			});
+			e.stopImmediatePropagation();
+		});
+		$(document).on('change', '#language',function(event) {
+			url = "ajax.<?php echo $this->module; ?>.php";
+			language_id = $(this).val();
+			id = $("#id").val();
+
+			$.ajax(url, {
+				type: 'post',
+				data: {"language_id" : language_id, 'action':'getContent', 'id':id},
+				dataType: 'json',
+				beforeSend: function() {
+					addOverlay();
+				},
+				success: function(data) {
+					if(typeof data.code != 'undefined') {
+						toastr['info']("something went wrong");
+					} else {
+						$('#title').val(data.title);
+						$('#content').val(data.content);
+					}
+				},
+				complete: function() {
+					removeOverlay();
+				}
+			});
+		});
+		$(document).on('click', '.btn-toggler',function(event) {
+			window.location.reload();
+		});
+	});
+</script>

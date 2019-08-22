@@ -1,0 +1,156 @@
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php echo $this->breadcrumb; ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                <div class="nav navbar-right panel_toolbox portlet-toggler">
+	                <?php if (in_array('add', $this->Permission)) { ?>
+	                    <a href="ajax.<?php echo $this->module; ?>.php?action=add" class="btn btn-success btn-add" title="Add"><i class="fa fa-plus"></i></a>
+	                <?php } ?>
+                </div>
+               <!--  <div class="nav navbar-right panel_toolbox btn-back">
+                    <a href="<?php echo SITE_ADM_MOD; ?>newsletter-sd" class="btn btn-success btn-sm" title="Back"><i class="fa fa-arrow-left"></i></a>
+                </div>  -->
+                <div class="clearfix"></div>
+            </div>
+            <div class="portlet-body portlet-toggler">
+                <table id="example123" class="table table-bordered table-hover"></table>
+            </div>
+            <div class="portlet-body portlet-toggler pageform" style="display:none;"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(function() {
+	OTable= $('#example123').dataTable( {
+		bProcessing: true,
+		bServerSide: true,
+		sAjaxSource: "ajax.<?php echo $this->module;?>.php",
+		fnServerData: function (sSource, aoData, fnCallback) {
+			$.ajax({
+			   dataType: 'json',
+			   type: "POST",
+			   url: sSource,
+			   data: aoData,
+			   success: fnCallback
+			});
+		 },
+		 aaSorting : [],
+		 aoColumns: [
+		 	{ sName: "id", sTitle : 'Newsletter Id', bVisible: false},
+		 	{ sName: "newsletter_name", sTitle : 'Newsletter Name'},
+			{ sName: "newsletter_subject", sTitle : 'Newsletter Subject'}
+
+			<?php if(in_array('status',$this->Permission)){ ?>
+				,{ "sName": "status", 'sTitle' : 'Status' ,bSearchable:false}
+			<?php } ?>
+			<?php if(in_array('edit',$this->Permission) || in_array('delete',$this->Permission) || in_array('view',$this->Permission) ){ ?>
+				,{ "sName": "operation", 'sTitle' : 'Operation' ,bSortable:false,bSearchable:false}
+			<?php } ?>
+		],
+		fnServerParams: function(aoData){setTitle(aoData, this)},
+		fnDrawCallback: function( oSettings ) {
+		}
+	});
+	$('.dataTables_filter').css({float:'right'});
+	$('.dataTables_filter input').addClass("form-control input-inline");
+
+	$(document).on('click', '#submitAddForm', function (e) {
+		e.preventDefault();
+		
+		for(var instanceName in CKEDITOR.instances) {
+			CKEDITOR.instances[instanceName].updateElement();
+		}
+
+		$("#frmCont").validate({
+			ignore:[],
+			errorClass: 'help-block',
+			errorElement: 'span',
+            highlight: function (element) {
+			   $(element).closest('.form-group').addClass('has-error');
+			},
+			unhighlight: function (element) {
+				$(element).closest('.form-group').removeClass('has-error');
+			},
+			errorPlacement: function (error, element) {
+				if (element.attr("data-error-container")) {
+					error.appendTo(element.attr("data-error-container"));
+				} else {
+					error.insertAfter(element);
+				}
+            },
+            rules: {
+                 newsletter_name: {required: true,remote:{
+                        url:"<?php echo SITE_ADM_MOD.$this->module ?>/ajax.<?php echo $this->module;?>.php",
+                        type: "post",
+                        async:false,
+                        data: {ajaxvalidate:true,newsletter_name: function() {return $("#newsletter_name").val();},id: function() {return $("#id").val();}},
+                        complete: function(data){
+                            return data;
+                        }
+                        }},
+                 newsletter_subject: {required: true},
+                 newsletter_content : {required: true}
+             },
+             messages: {
+                 newsletter_name: {required: 'Please enter Newsletter Name',remote:"Newsletter Name already exist"},
+                 newsletter_subject: {required: '&nbsp;Please enter Newsletter Subject'},
+               	newsletter_content : { required: '&nbsp;Please enter Newsletter Content'}              
+             },
+		});
+
+		if($("#frmCont").valid()){
+			ajaxFormSubmit("#frmCont");
+		}else{
+			return false;
+		}
+	});
+	$(document).on('click', '#submitAddForm1', function (e) {
+		e.preventDefault();
+		
+		for(var instanceName in CKEDITOR.instances) {
+			CKEDITOR.instances[instanceName].updateElement();
+		}
+
+		$("#frmCont1").validate({
+			ignore:[],
+			errorClass: 'help-block',
+			errorElement: 'span',
+            highlight: function (element) {
+			   $(element).closest('.form-group').addClass('has-error');
+			},
+			unhighlight: function (element) {
+				$(element).closest('.form-group').removeClass('has-error');
+			},
+			errorPlacement: function (error, element) {
+				if (element.attr("data-error-container")) {
+					error.appendTo(element.attr("data-error-container"));
+				} else {
+					error.insertAfter(element);
+				}
+            },
+            rules: {
+                 'emails[]': {required: true}
+             },
+             messages: {
+                 'emails[]': {required: 'Please select Email Ids'}
+             }
+		});
+
+		if($("#frmCont1").valid()){
+			ajaxFormSubmit("#frmCont1");
+		}else{
+			return false;
+		}
+	});
+});
+</script>

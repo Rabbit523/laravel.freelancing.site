@@ -1,0 +1,7 @@
+<li class="chat-msg-%MSG_CLASS%">
+   <div class="msg-body-sender">
+      <p>%MSG%</p>
+      <a href="javascript:;" title="Delete Message" data-id="%MSG_ID%" data-type="single" class="delete_chat"><i class="fa fa-trash-o"></i></a>
+   </div>
+   <span class="msg-time">%TIME%</span>
+</li>  

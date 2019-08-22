@@ -1,0 +1,98 @@
+<!-- video section -->
+%TOP_HOMEPAGE_SECTION%
+<!-- End video-->
+
+<!-- start featured jobs -->
+<section class="home-featured-jobs common-section %FEATURED_JOB_CLASS%">
+    <div class="container">
+        <h2 class="main-title">{FEATURED_JOBS_LABEL}</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="job-list-wrap">
+                    <div class="row">
+                        <!-- <div class="col-md-4 col-sm-6" style="display: none;">
+                            <div class="fjob-box">
+                                <div class="fjob-featured">Featured</div>
+                                <h4 class="fjob-title"><a href="#">Write an informative title of the job</a></h4>
+                                <ul class="fjob-breadcrumb">
+                                    <li>Graphics Designing</li>
+                                    <li>Custom Designs</li>
+                                </ul>
+                                <div class="fjob-price-wrap">
+                                    Est.Budget : <div class="amount-wrap">100<span>KWD</span></div>
+                                    <span class="level-label">Beginner</span>
+                                </div>
+                                <div class="fjob-desc">Compare the experience level to your requirements so that you will get a chance to get a job</div>
+                                <div class="fjob-skills"><p>Graphic Designers, UI Designers, Web Designers</p></div>
+                                <ul class="fjob-post">
+                                    <li><span>Posted</span>: 23 hours ago</li>
+                                    <li><span>Total no. of applicants</span>: 0</li>
+                                </ul>
+                            </div>
+                        </div> -->
+                        %FEATURED_JOB_LIST%
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
+        </div>
+        <div class="row %JOB_CLASS%">
+            <div class="view-more-button">
+                <div class="">
+                    <a class="btn btn-primary" href="{SITE_URL}search/jobs/">{SEE_ALL_JOBS_LABEL}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end featured jobs -->
+
+<!-- start top skills section -->
+<section class="top-skills-section common-section">
+    <div class="container">
+        <h2 class="main-title">
+            {TOP_SKILLS}
+        </h2>
+        <ul class="clearfix">
+            %SKILL_LIST%
+        </ul>
+    </div>
+</section>
+<!-- end top skills section -->
+
+<!--start browse top skills-->
+<section class="browse-skills %SKILL_LIST_CLASS%" style="display: none;">
+   <div class="container">
+      <h2>{TOP_SKILLS}</h2>
+      <div class="row">
+         %SKILL_LIST%
+      </div>
+   </div>
+</section>
+<!--end browse top skills-->
+<!--start newsletter-->
+<section class="newsletter-section" style="display: none;">
+   <div class="container">
+      <h2>{SUBSCRIBE_TO_NEWSLETTER}</h2>
+      <p>{NEWSLETTER_DESC}</p>
+      <form class="form" action="#" method="post" name="newsletterFrm" id="newsletterFrm_demo">
+         <div class="row">
+            <div class="col-md-7 col-sm-8">
+               <div class="form-group">
+                  <div class = "input-group">
+                      <input class="form-control input-lg" name="email" id="email" placeholder="{NEWSLETTER_EMAIL_PLACE_HOLDER}"/>
+                      <span class = "input-group-btn">
+                        <input type="hidden" name="action" id="action" value="subscribeUser">
+                        <button type="submit" name="newsletterSubscriber" id="newsletterSubscriber" class="btn btn-primary btn-lg btn-block"><span class="large-icon">{SUBSCRIBE_BTN_CAPTION}</span><span class="small-icon"><i class="fa fa-paper-plane"></i></span></button>
+                      </span>
+                    </div>
+                </div>
+               <p class="privacy">{NEWSLETTER_BOTTOM_LINE_DESC}</p>
+            </div>
+         </div>
+      </form>
+   </div>
+</section>
+<!--end newsletter-->

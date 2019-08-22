@@ -1,0 +1,149 @@
+<script type="text/javascript">
+    $(function () {
+       
+
+        OTable = $('#example123').dataTable({
+        "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                "fnServerData": function (sSource, aoData, fnCallback) {
+                    $.ajax({
+                        "dataType": 'json',
+                        "type": "POST",
+                        "url": sSource,
+                        "data": aoData,
+                        "success": fnCallback
+                    });
+                },
+                "aaSorting" : [],
+                "aoColumns": [
+                { "sName": "id", "sTitle" : 'Id', bVisible: false},
+                { "sName": "susername", 'sTitle' : 'Disputer Name'},
+                { "sName": "listingTypeName", 'sTitle' : 'User Type'},
+                { "sName": "listingTypeName", 'sTitle' : 'Status'},
+                { "sName": "insertedDate", 'sTitle' : 'Inserted Date', bSearchable:false,"sWidth":"15%"}
+<?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+                    , {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false,"width":"30%"}
+<?php } ?>
+                ],
+                "fnServerParams": function(aoData) {
+                setTitle(aoData, this)
+                aoData.push({ name: "filtering_type", value: $("#filtering_type").val() });
+                },
+                "fnDrawCallback"
+                : function(oSettings) {
+                $('.make-switch').bootstrapSwitch();
+                $('.make-switch').bootstrapSwitch('setOnClass', 'success');
+                $('.make-switch').bootstrapSwitch('setOffClass', 'danger');
+            }
+    });
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+    $(document).on('change', '#filtering_type', function(e) 
+    {
+        OTable.fnDraw();
+    });
+
+
+    $(document).on('keypress','#payToDisputer', function(e) {
+        if ((e.which != 46 || $(this).val().indexOf('.') != -1) && (e.which < 48 || e.which > 57)) {
+            e.preventDefault();
+        }  
+    });
+
+    $(document).on('keypress','#payToEntityOwner', function(e) {
+        if ((e.which != 46 || $(this).val().indexOf('.') != -1) && (e.which < 48 || e.which > 57)) {
+            e.preventDefault();
+        } 
+    });
+    
+    $(document).on('keyup', '#payToDisputer', function(e) 
+    {
+       $price = parseFloat($('#budget').val());    
+       $pay_disputer = parseFloat($('#payToDisputer').val()); 
+       if($pay_disputer > $price){
+            alert('Price cannot greater to service purchase');
+            $('#payToDisputer').val('0');
+       }
+    });
+
+    $(document).on('keyup', '#payToEntityOwner', function(e) 
+    {
+       $price = parseFloat($('#budget').val());    
+       $pay_owner = parseFloat($('#payToEntityOwner').val()); 
+       
+       if($pay_owner > $price){
+            alert('Price cannot greater to service purchase');
+            $('#payToEntityOwner').val('0');
+       }
+    });
+    
+    $(document).on('click', '#submitAddForm', function (e) {
+        e.preventDefault();        
+        $pay_owner = parseFloat($('#payToEntityOwner').val()); 
+        $pay_disputer = parseFloat($('#payToDisputer').val()); 
+        $price = parseFloat($('#budget').val());    
+        var total = $pay_owner + $pay_disputer;
+        if(total > $price){
+            alert('Aggregate amount payable to users should not be greater than this service purchase');
+            return false;
+        }       
+        if ($("#frmCont").valid()) {
+            ajaxFormSubmit("#frmCont");
+        } else {
+            return false;
+        }
+    });
+    
+    
+    });
+</script>
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                <div class="nav navbar-right panel_toolbox btn-back">
+                    <a href="<?php echo SITE_ADM_MOD; ?>listing_dispute-sd" class="btn btn-success btn-sm" title="Back"><i class="fa fa-arrow-left"></i></a>
+                </div> 
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="actions portlet-toggler">
+                    
+                    <div class="btn-group"></div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-9">
+                                
+                            </div>
+                            <div class="col-md-3">
+                                <select name='filtering_type' id='filtering_type' class='form-control input-inline'>
+                                    <option selected='' value='0'>Dispute Status</option>
+                                    <option value='P'>Pending</option>
+                                    <option value='S'>Solved</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portlet-body portlet-toggler ">
+                <table id="example123" class="table table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+        </div>
+    </div>
+</div>

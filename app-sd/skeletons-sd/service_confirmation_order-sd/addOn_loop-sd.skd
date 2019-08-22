@@ -1,0 +1,17 @@
+<!-- <div class="adons">
+   <h6>{CSO_ADD_ONS}</h6>
+   <p class="adon clearfix">
+      %TITLE%
+      <span class="work-days">{ADDITIONAL_LABEL} %DAYS% {WORKING_DAYS}</span>
+      <span class="price">%PRICE%</span>
+      <span class="remove"><a href="javascript:void(0)" class="cancel_addOn" data-id="%ADDON_ID%" data-price="%PRICE%" data-order-id="%ORDER_ID%"><i class="fa fa-times-circle"></i></a></span>
+   </p>
+   <p>%DESC%</p>
+</div> -->
+<li class="osi-addons-item">
+   	<div class="osia-col osia-title">%TITLE%</div>
+   	<div class="osia-col osia-day">%DAYS% {CMJ_DAYS}</div>
+   	<div class="osia-col osia-price"><div class="amount-wrap">%PRICE%</div></div>
+   	<span class="remove"><a href="javascript:void(0)" class="osi-remove addons-remove cancel_addOn" data-id="%ADDON_ID%" data-price="%ROW_PRICE%" data-order-id="%ORDER_ID%">x</a></span>
+</li>     
+

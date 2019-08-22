@@ -1,0 +1,3 @@
+<ul class="sub-menu nav child_menu">
+	%SUBMENU_ITEMS%
+</ul>

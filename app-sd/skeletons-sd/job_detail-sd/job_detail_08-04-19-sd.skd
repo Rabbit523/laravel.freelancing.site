@@ -1,0 +1,679 @@
+<section class="detail-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="job-detail-wrap">
+                    <div class="pbox ">
+                        <div class="service-featured %FEATURED_TAG_CLASS%"><span><i class="fa fa-star"></i></span></div>
+                        <div class="pbox-header no-padding">
+                            <h1 class="pbox-title">%TITLE%</h1>
+                            <div class="pbox-breadcrumb">%CATEGORY_NAME% <span><i class="fa fa-angle-right"></i></span> %SUBCAT_NAME%</div>
+                        </div>
+                        <div class="pbox-body no-padding">
+                            <div class="pbox-body-panel">
+                                <h3 class="pbox-body-title">{ABOUT_JOB}</h3>
+                                <div class="pbox-body-info">
+                                    <p>%DESC%</p>
+                                </div>
+                            </div>
+                            <div class="pbox-body-panel">
+                                <h3 class="pbox-body-title">{EXTRA_INFORMATION_ABOUT_JOB}</h3>
+                                <div class="pbox-body-info">
+                                    <ul class="job-details-list">
+                                        <li><label>{J_JOB_STATUS_LBL}</label>:<span>%JOB_STATUS%</span></li>
+                                        <li><label>{J_NO_OF_APPLICANTS_LBL}</label>:<span>%APPLICANTS%</span></li>
+                                        <li><label>{J_REQUIRED_SKILL_LBL}</label>:<span>%SKILLS%</span></li>
+                                        <li><label>{J_BIDDING_DEADLINE_LBL}</label>:<span>%REMAIN_DAYS%</span></li>
+                                        <li><label>{J_BIDS_ACCEPTED_FROM_LBL}</label>:<span> %COUNTRY%</span></li>
+                                      </ul>
+                                </div>
+                            </div>
+                            <div class="pbox-body-panel">
+                                <div class="pbox-body-info">
+                                    <div class="job-details-button %INVITATION%">
+                                        <a class="btn btn-primary" href="{SITE_URL}c/my-jobs/job-invitation/%JOB_SLUG%"> {CMJ_VIEW_INVITED_FREELANCER} </a>
+                                    </div>
+                                    <div class="job-details-button %BID_HIDE%">
+                                        <a class="btn btn-primary" href="{SITE_URL}proposals/%JOB_SLUG%">{CMJ_VIEW_BIDS}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="pbox-body-panel">
+                                <h3 class="pbox-body-title">{ATTACHMENTS_LABEL}</h3>
+                                <div class="pbox-body-info">
+                                    <ul class="job-attachment-list">
+                                        %FILES%
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pbox job-bid-wrap">
+                    <div class="pbox-body no-padding">
+                        <div class="bid-details-wrap">
+                            <div class="amount-wrap">750<span>KWD</span></div>
+                            <div class="job-action-wrap">
+                                <div class="job-action-item job-save-wrap"><a href=""><i class="fa fa-heart-o"></i></a><span>10</span></div>
+                                <div class="job-action-item job-report-wrap"><a href=""><i class="fa fa-flag-o"></i></a><span>Report</span></div>
+                            </div>
+                            <ul class="bid-details-list">
+                                <li><label>Est.time</label><span>3 to 4 Weeks</span></li>
+                                <li><label>Posted</label><span>51 Minutes ago</span></li>
+                            </ul>
+                            <div class="place-bid-wrap">
+                                <a href="" class="btn btn-primary btn-lg btn-block">Place a Bid</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pbox user-details-card">
+                    <div class="pbox-body no-padding">
+                        <div class="user-details-wrap">
+                            <div class="user-avatar-wrap">
+                                <div class="user-avatar">
+                                    <img src="%USER_IMAGE%">
+                                </div>
+                                <span class="user-label user-online" title="online"></span>
+                            </div>
+                            <div class="user-info-wrap">
+                                <h3 class="user-title">Vishal Patel</h3>
+                                <div class="star-ratings-sprite">
+                                    <span style="width:70%" class="star-ratings-sprite-rating"></span>
+                                </div>
+                                <div class="user-location-wrap">
+                                    <i class="fa fa-map-marker"></i> Rajkot, Gujarat, India
+                                </div>
+                                <div class="user-chat-btn-wrap">
+                                    <a href="#" class="btn btn-primary btn-bordered ">
+                                        <i class="fa fa-comments-o"></i> Live Chat
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="user-work-wrap">
+                                <ul class="user-work-lists">
+                                    <li><label>Member Since</label> <span>Mar, 2019</span></li>
+                                    <li><label>Amount spent</label><span>28KWD</span></li>
+                                    <li><label>Posted Jobs</label> <span>26</span></li>
+                                    <li><label>Open Jobs</label> <span>6</span></li>
+                                </ul>
+                            </div>
+                            <div class="user-desc-wrap">
+                                <p>Praesent vel dapibus urna, nec imperdiet nunc. Sed vel tortor consequat, placerat nulla in, venenatis massa. <a href="#">Read More...</a></p>
+                                <a href="#">View all reviews and ratings</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Page Content -->
+<section class="detail_page">
+  <div class="container">
+    <div class="profile">
+      <div class="featurette-job job-detail-section">
+        <div class="sub_featured">
+          <div class="row">
+            <div class="col-md-9 col-sm-8">
+              <div class="service_info">
+                <h1 class="main-heading">
+                  %TITLE%
+                </h1>
+                <div class="featured %FEATURED_TAG_CLASS%">
+                  <span>
+                   {FEATURED_LBL}
+                 </span>
+               </div>
+               <div class="row">
+                <div class="col-md-12">
+                  <div class="group-service">
+                    <div class="service_category">
+                      <span>
+                        %CATEGORY_NAME% <i class="fa fa-angle-right"></i> %SUBCAT_NAME%
+                      </span>
+                    </div>
+                    <div class="group-info-mobile">
+                        <div class="service_price">
+                            <span class="service_orignal_price">%BUDGET%</span>
+                        </div>
+                        <div class="buy_now">
+                            <a href="javascript:void(0)" class="%LOGIN_CLASS% %ALREADY_APPLIED% %DISABLE_CLASS%" data-credit="%PLAN_CREDIT%" id="place_bid" data-hired="%HIRED_IN_STATUS%" data-status="%BID_STATUS%">{J_PLACE_BIDS_LBL}</a>
+                            <input type="hidden" value="1" id='is_disp'>
+                        </div>
+                        <ul class="extra-info clearfix">
+                            <li>
+                                <p><i class="fa fa-graduation-cap" aria-hidden="true"></i></p>
+                                {J_EXP_LBL} <span class="total_days" data-days="3">%EXP_LEVEL%</span>
+                            </li>
+                            <li>
+                                <p><i class="fa fa-clock-o" aria-hidden="true"></i></p>
+                                {J_EST_TIME_LBL} <span>%EST_TIME%</span>
+                            </li>
+                        </ul>
+                        <ul class="sale-fav clearfix">
+                            <li>
+                                <a href="javascript:void(0)" id="save_job">
+                                    <i class="%SAVE_JOB_CLASS%" aria-hidden="true"></i>
+                                    <span>1</span>
+                                </a>
+                                <a href="javascript:void(0)" data-id="%JOB_ID%" class="reportJob">
+                                    <i class="fa fa-flag" aria-hidden="true"></i>
+                                    <span>{SERVICE_REPORT_LBL}</span>
+                                </a>
+                            </li>
+                            <li>
+                                {POSTED_LABEL} <span>%TIME_AGO%</span>
+                            </li>
+                        </ul>
+                    </div>
+              <div class="service_desc">
+                <div class="job-detail-desc">
+                  <h4>
+                    <!-- {J_DETAILS_LBL} -->
+                    {ABOUT_JOB}
+                  </h4>
+                  <p>%DESC%</p>
+                </div>
+                <div class="job-detail-desc">
+                  <h4>{EXTRA_INFORMATION_ABOUT_JOB}</h4>
+                  <ul class="recevied_addons">
+                    <li>
+                      <label>{J_JOB_STATUS_LBL} : </label><span>&nbsp;%JOB_STATUS%</span>
+                    </li>
+                    <li>
+                      <label>{J_NO_OF_APPLICANTS_LBL} : </label><span>&nbsp;%APPLICANTS%</span>
+                    </li>
+                    <li>
+                      <label>{J_REQUIRED_SKILL_LBL} : </label><span>&nbsp;%SKILLS%</span>
+                    </li>
+                    <li>
+                      <label>{J_BIDDING_DEADLINE_LBL} : </label><span>&nbsp; %REMAIN_DAYS%</span>
+                    </li>
+                    <li>
+                      <label>{J_BIDS_ACCEPTED_FROM_LBL} : </label><span>&nbsp; %COUNTRY%</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="theme-button %INVITATION%">
+                  <a href="{SITE_URL}c/my-jobs/job-invitation/%JOB_SLUG%"> {CMJ_VIEW_INVITED_FREELANCER} </a>
+                </div>
+                 <div class="theme-button %BID_HIDE%">
+                  <a href="{SITE_URL}proposals/%JOB_SLUG%">{CMJ_VIEW_BIDS}</a>
+                </div>
+                <div class="attached_file %FILES_SHOW%">
+                  <h4>{ATTACHMENTS_LABEL}</h4>
+                  <ul>
+                    %FILES%
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-4">
+      <div class="service_sidebar">
+        <div class="group-info">
+          <div class="service_price">
+           <span class="service_orignal_price">%BUDGET%</span>
+         </div>
+         <div class="buy_now">
+            <input type="hidden" name="job_type" id="job_type" value="%JOB_TYPE%">
+            <a href="javascript:void(0)" class="%LOGIN_CLASS% %ALREADY_APPLIED% %DISABLE_CLASS%" data-credit="%PLAN_CREDIT%" id="place_bid" data-hired="%HIRED_IN_STATUS%" data-status="%BID_STATUS%">{J_PLACE_BIDS_LBL}</a>
+         </div>
+         <ul class="extra-info">
+           <li>
+            <p><i class="fa fa-graduation-cap" aria-hidden="true"></i></p>
+            {J_EXP_LBL} <span class="total_days" data-days="3">%EXP_LEVEL%</span>
+          </li>
+          <li>
+            <p><i class="fa fa-clock-o" aria-hidden="true"></i></p>
+            {J_EST_TIME_LBL} <span>%EST_TIME%</span>
+          </li>
+        </ul>
+        <ul class="sale-fav clearfix">
+         <li>
+          <a href="javascript:void(0)" id="save_job">
+           <i class="%SAVE_JOB_CLASS%" aria-hidden="true"></i>
+           <span>1</span>
+         </a>
+         <a href="javascript:void(0)" data-id="%JOB_ID%" class="reportJob">
+           <i class="fa fa-flag" aria-hidden="true"></i>
+           <span>{FD_REPORT}</span>
+         </a>
+       </li>
+       <li>
+        {POSTED_LABEL} <span>%TIME_AGO%</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="serive_PickGeeks">
+    <div class="media">
+     <div class="media-right">
+      <div class="service_free_img">
+        <img src="%USER_IMAGE%">
+      </div>
+    </div>
+    <div class="media-body">
+      <h5>
+       %USERNAME%
+     </h5>
+     <ul>
+       <li>
+        <div class="star-ratings-sprite">
+          <span style="width:%AVG_REVIEW%%" class="star-ratings-sprite-rating">
+          </span>
+        </div>
+      </li>
+      <li>
+        <i class="fa fa-map-marker" aria-hidden="true">
+        </i>
+        %LOCATION%
+      </li>
+    </ul>
+  </div>
+</div>
+
+<ul class="recevied_addons">
+  <li>
+    <label><!-- {J_JOINED_ON_LBL} -->{MEMBER_SINCE} : </label><span> %JOINED_DATE%</span>
+  </li>
+  <li>
+    <label><!-- {J_AMNT_SPENT_TILL_NW_LBL} --> {AMOUNT_SPENT} : </label><span> %TOTAL_AMOUNT%</span>
+  </li>
+  <li>
+    <label><!-- {J_NO_OF_JOBS_POSTED_LBL} -->{POSTED_JOBS} : </label><span> %POSTED_JOB%</span>
+  </li>  
+  <li>
+    <label><!-- {J_NO_OF_OPEN_JOBS_LBL} -->{CUST_OPEN_JOB} : </label><span> %OPEN_JOBS%</span>
+  </li>
+  <li><a href="%REVIEW_LINK%"><b>View all reviews and ratings</b></a></li>  
+</ul>
+</div>
+<p>
+  <!-- <a href="customer-review-ratings.html">View all reviews and ratings </a> -->
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="bid_job" role="dialog" tabindex="-1">
+  <form name="frmJobDetail" id="frmJobDetail" action="" method="POST">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+          <h4 class="modal-title">
+            {J_SUBMIT_PROPOSAL_LBL}
+          </h4>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group">
+          </div>
+          <div class="form-group">
+            <label>
+              {J_ENTER_BID_AMNT_LBL} ({CURRENCY_SYMBOL})
+            </label>
+            <input class="form-control" name="budget" id="budget"/>
+          </div>
+          <div class="form-group">
+            <label>
+              {J_EST_TIME_DURATION_LBL}
+            </label>
+            <select class="form-control" name="estDuration" id="estDuration">
+              <option value="1 day or less">{J_ONE_DAY_OR_LESS_LBL}</option>
+              <option value="Less than 1 week">{J_LESS_THAN_ONE_WEEK_LBL}</option>
+              <option value="1 to 2 week">{J_ONE_TO_TWO_WEEK_LBL}</option>
+              <option value="3 to 4 week">{J_THREE_TO_FOUR_WEEK_LBL}</option>
+              <option value="1 to 6 month">{J_ONE_TO_SIX_MONTH_LBL}</option>
+              <option value="More than 6 month">{J_MORE_THEN_SIX_MONTH_LBL}</option>
+              <option value="Ongoing">{J_ONGOING_LBL}</option>
+              <option value="Not sure">{J_NOT_SURE_LBL}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>
+              {J_JOB_DESC_LBL}
+            </label>
+            <textarea class="form-control" placeholder="Enter bid description" name="bidDesc" id="bidDesc"></textarea>
+          </div>
+          <div class="form-group">
+            <p>
+              <label>
+                {J_ESCROW_REQUIRED_LBL} :
+              </label>
+              <div class="form-group radio-inline">
+                <input type="radio" id="escrowy" value="y" name="escrowReq" class="ipEscrow"/>
+                <label for="escrowy">
+                  {J_ESCROW_YES_LBL}
+                </label>
+              </div>
+              <div class="form-group radio-inline">
+                <input type="radio" id="escrown" value="n" name="escrowReq" class="ipEscrow"/>
+                <label for="escrown">
+                  {J_ESCROW_NO_LBL}
+                </label>
+              </div>
+            </p>
+            <label class="lbl_escrow_error"></label>
+            <input type="hidden" name="jobId" id="jobId" value="%JOB_ID%">
+          </div>
+          %QUESTION%
+        </div>
+        <div class="modal-footer">
+          <div class="theme-button-default">
+            <a href="{SITE_URL}" data-dismiss="modal">{FD_CANCEL}</a>
+          </div>
+          <div class="theme-button">
+            <button type="submit" id="sbmJobDetail" name="sbmJobDetail" value="submit" class="btn btn-block btn-system">{FD_SUBMIT}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="modal fade" id="delete" role="dialog" data-backdrop="static" tabindex="-1">
+ <div class="modal-dialog">
+  <!-- Modal content-->
+  <div class="modal-content">
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">
+     &times;
+   </button>
+   <h4 class="modal-title">
+     {J_REMOVE_LBL}
+   </h4>
+ </div>
+ <div class="modal-body">
+  <form>
+   <p>
+     {J_SURE_ABOUT_BID_CONFIRMATION_LBL}
+   </p>
+   %WARNING%
+ </form>
+</div>
+<div class="modal-footer">
+  <div class="theme-button-default" data-dismiss="modal">
+   <a href="javascript:void(0)">{FD_CANCEL}</a>
+ </div>
+ <div class="theme-button bid_confirm" data-dismiss="modal">
+   <a href="javascript:void(0)">{SUBMIT_BID}</a>
+ </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="modal fade" id="report_job" role="dialog" tabindex="-1">
+ <div class="modal-dialog">
+  <!-- Modal content-->
+  <form name="reportFrm" id="reportFrm" method="post">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal">
+      &times;
+    </button>
+    <div class="media">
+      <div class="media-body">
+       <h3>
+        %TITLE%
+      </h3>
+
+    </div>
+  </div>
+</div>
+<div class="modal-body">
+ <div class="form-group">
+  <label>
+   {J_SUBMIT_BID_LBL}
+ </label>
+ <input type="hidden" name="jobId" id="jobId" value="%JOB_ID%">
+ <textarea class="form-control" name="report_reason" id="report_reason" pattern="^[a-zA-Z][\sa-zA-Z]*"></textarea>
+</div>
+</div>
+<div class="modal-footer">
+ <div class="theme-button-default" data-dismiss="modal">
+  <a href="#">{CMJ_CLOSED}</a>
+</div>
+<div class="theme-button">
+  <input type="hidden" name="action" id="action" value="report_job">
+  <button name="reportJob" id="reportJob" class="btn btn-system">{FD_SUBMIT}</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+<!-- /.container -->
+<script type="text/javascript">
+  url = "{SITE_URL}ajaxJobDetail";
+  $(document).ready(function(){
+    jQuery.validator.addMethod("trimReq", function(value, element)
+    {
+      return $.trim(value) == '' ? false : true;
+    }, "{PLEASE_ENTER_FIELD_VALUE}");
+    jQuery.validator.addMethod("answerReq", function(value, element)
+    {
+      return $.trim(value) == '' ? false : true;
+    }, "&nbsp;{PLEASE_ENTER_YOUR_ANSWER}");
+    //$.validator.addMethod("answerReq", $.validator.methods.required, '&nbsp;Please enter your answer');
+    $.validator.addClassRules("answerReq", { answerReq: true});
+
+    $(document).on('click', '#sbmJobDetail', function (e) {
+
+      $("#frmJobDetail").validate({
+        ignore: [],
+        errorClass: 'help-block',
+        errorElement: 'label',
+        highlight: function (element)
+        {
+          $(element).closest('.form-group').addClass('has-error');
+          if($(element).hasClass('answerReq')){
+            $(element).parent().addClass('has-error');
+          }
+        },
+        unhighlight: function (element)
+        {
+          $(element).closest('.form-group').removeClass('has-error');
+          if($(element).hasClass('answerReq')) {
+            $(element).parent().removeClass('has-error');
+          }
+        },
+        rules:
+        {
+          budget:{required:true,number:true},
+          bidDesc:{required:true,trimReq : true},
+          location:{required:true,startingSpaceNotAllow:true},
+          aboutme : {required:true}
+
+        },
+        messages:
+        {
+          budget: {required:"{PLEASE_ENTER_BID_AMOUNT}"},
+          bidDesc: {required:"{FP_PLEASE_ENTER_DESCRIPTION}",trimReq : "{FP_PLEASE_ENTER_DESCRIPTION}"},
+          location:{ required:"{FP_PLEASE_ENTER_LOCATION}"},
+          aboutme: { required:"{CP_PLEASE_ENTER_OVERVIEW}"}
+        }
+      });
+
+      
+
+      if(!$("input[type='radio']:checked").val()){
+        $('.lbl_escrow_error').html("Please select escrow");
+        $('.lbl_escrow_error').css("color","#a94442");
+        return false;
+      }
+      else{
+        $('.lbl_escrow_error').html("");
+            //return true;
+          }
+          $(".ipEscrow").on('change',function(){
+            $('.lbl_escrow_error').html("");
+          });
+
+          if($("#sbmJobDetail").valid())
+          {
+            $("#sbmJobDetail").submit();
+          }
+        });
+
+    $('#bid_job').on('hidden.bs.modal', function () {
+      var _this = $(this);
+      var form = _this.find('form');
+      var form_id = _this.find('form').attr('id');
+
+      form[0].reset();
+      $('#'+form_id+' .form-group').each(function(index, element) {
+        if($(element).hasClass('has-error')) {
+          $(element).removeClass('has-error')
+        }
+      });
+      $('#'+form_id+' .help-block').each(function(index, element) {
+        $(element).remove();
+      });
+    });
+    $(document).on("click","#place_bid", function(e){
+
+      var status = $(this).attr("data-status");
+      var credit = $(this).attr("data-credit");
+      var hired_in_status_val = $(this).attr("data-hired");
+      var job_type = $("#job_type").val();
+      
+      if($(this).hasClass('not_login')){
+        toastr["error"]("{PLEASE_LOGIN_TO_CONTINUE}");
+        return false;
+      }
+
+      if($(this).hasClass('already_applied')){
+        toastr["error"]("{YOU_HAVE_ALREADY_PLACED_A_BID}");
+        return false;
+      }
+
+      if($(this).hasClass('owner')){
+        toastr["error"]("{YOU_CAN_NOT_BID_ON_YOUR_OWN_JOB}.");
+        return false;
+      }
+
+      if(hired_in_status_val == 'y'){
+        toastr["error"]("{YOU_CANT_PLACE_A_BID}","{JOB_CLOSED_FOR_BIDS}");
+        return false;
+      }
+      // Private job is not accepted 
+      if(job_type=="pr"){
+        addOverlay();
+        var jobId = $("#jobId").val();
+
+        $.ajax({
+          url: url,
+          type: 'post', 
+          data: {"action":"private_job_status","job_id":jobId},        
+          dataType : "json", 
+          async : false,                
+          success:function(data)
+          {
+            removeOverlay();
+            if(data.status=="false"){
+              $("#is_disp").val("0");
+              toastr["error"]("{BID_INVITATION_NOT_ACCEPTED}.");
+            }
+          }
+        });
+      }      
+      if($("#is_disp").val()=="1"){
+        if(credit == "0") {
+          toastr['error']('{J_PLEASE_UPGRADE_YOUR_PLAN_LBL}');
+        } else {
+         $('#delete').modal("show");  
+        }
+      }      
+   });
+
+    $(document).on("click",".bid_confirm", function(e){
+      $('#delete').modal("hide");
+      $('#bid_job').modal("show");
+    });
+
+    $(document).on("click","#save_job",function(e){
+      jobId = $("#jobId").val(),$this = $(this);
+      addOverlay();
+      $.post(url,{"action":"save_job","job_id":jobId},
+        function(data)
+        {
+          removeOverlay();
+          if(data["type"]=="success"){
+            $this.find('i').removeClass('fa fa-heart-o').addClass('fa fa-heart');
+          }
+          toastr[data.type](data.msg);
+        },'json');
+    });
+
+
+    $(document).on("click",".reportJob",function(){
+      $("#report_job").modal("show");
+    });
+
+    $(document).on("click",'#reportFrm [name="reportJob"]',function()
+    {
+     $("#reportFrm").validate({
+      ignore: [],
+      errorClass: 'help-block',
+      errorElement: 'label',
+      normalizer: function(value) {
+       return $.trim(value);
+     },
+     highlight: function (element)
+     {
+      $(element).closest('.form-group').addClass('has-error');
+    },
+    unhighlight: function (element)
+    {
+      $(element).closest('.form-group').removeClass('has-error');
+    },
+    rules:
+    {
+      report_reason:{
+       required:true,
+       normalizer: function(value) {
+         value = value.replace("something", "new thing");
+         return $.trim(value);
+       }
+     },
+   },
+
+   messages:
+   {
+    report_reason:{required:"{PLEASE_ENTER_REPORT_REASON}"}
+  },
+});
+
+     if($("#reportFrm").valid())
+     {
+       addOverlay();
+       $("#reportFrm").submit();
+     }
+   });
+  });
+</script>

@@ -1,0 +1,78 @@
+<script type="text/javascript">
+    $(document).on('focus','#60',function(){
+          var places = document.getElementById('60');
+          var option = {};
+          autocomplete= new google.maps.places.Autocomplete(places,option);
+        });
+    $(document).on('submit', '#frmSS', function (e) {
+        $("#frmSS").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'span',
+            highlight: function (element) {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element) {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorPlacement: function (error, element) {
+                if (element.attr("data-error-container")) {
+                    error.appendTo(element.attr("data-error-container"));
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+        if ($("#frmSS").valid()) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+</script>
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        %SUBADMIN_MSG%
+        <div class="ex_shownavtabs_btn"><span><i class="fa fa-bars"></i></span></div>
+        <div class="ex_content_div">
+            <ul class="nav nav-tabs ex_tabs_home">
+                %TAB_LOOP%
+            </ul>
+        </div>
+        <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" name="frmSS" id="frmSS" class="form-horizontal form-label-left" enctype="multipart/form-data">
+            <div class="tab-content" data-tab-status="false">
+                %TAB_DIV_LOOP%
+            </div>
+            %BTN_CONTENT%
+        </form>
+    </div>
+</div>   	
+
+<script type="text/javascript"> 
+    $(document).on("click",".delete_image",function(){        
+        $constant = $(this).attr("data-constant");
+        $.ajax({
+            "dataType": 'json',
+            "type": "POST",
+            "url": "ajax.sitesettings-sd.php",
+            "data": {"action":"delete_image","constant":$constant},
+            success: function(res){
+                if(res.status==true){
+                    window.location.reload(true);                    
+                }
+            }
+        });
+    });
+</script>

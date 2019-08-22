@@ -1,0 +1,38 @@
+<li class="media">
+  <div class="media-body">
+    <div class="row">
+        <div class="col-md-8">
+            <h2><a href="#">%PROJECT_NAME%</a></h2>
+            <p>%REVIEW%</p>
+            <div class="freelancer-details">
+                <div class="media">
+                    <div class="media-left">
+                        <div class="freelancer-img">
+                            <img src="%CUST_IMG%" alt="">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div>
+                            %CUST_NAME%
+                            <p class="date-time"> <span class="seperator-l">|</span> %POSTED_DATE%</p>
+                            <!-- <p><label>{F_COST_LBL}</label> : %COST%</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stars">
+                <label>{C_AVG_STAR_RATING_LBL}</label>
+                <div class="star-ratings-sprite">
+                    <span style="width:%AVG_RATE%%" class="star-ratings-sprite-rating"></span>
+                </div>
+            </div>
+            <!-- <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#fullReview"> -->
+            <button class="btn btn-primary btn-block all_review" data-user-id="%FREELANCER_ID%" data-id="%RID%">
+              {SEE_FULL_REVIEW}
+            </button>
+        </div>
+    </div>
+  </div>
+</li>

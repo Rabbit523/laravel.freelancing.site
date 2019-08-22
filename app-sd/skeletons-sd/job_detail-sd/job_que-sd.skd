@@ -1,0 +1,14 @@
+<div class="form-group">
+   <label class="media">
+      <div class="pull-left">
+          <i class="fa fa-quora" aria-hidden="true">
+          </i>
+          . %ID%:
+      </div>
+      <div class="media-body">
+         %QUE%
+      </div>
+   </label>
+   <textarea class="answerReq form-control " id="ans[%ID%]" name="ans[%ID%]" placeholder="Type answer here..."></textarea>
+   
+</div>

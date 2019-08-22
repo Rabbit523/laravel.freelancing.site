@@ -1,0 +1,122 @@
+<!-- Dashboard Navigation -->
+%SUB_HEADER_CONTENT%
+<!-- Dashboard Navigation End -->
+<section class="main-dashboard">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="main-heading">{RECEIVED_INV_LBL}</h1>
+                <div class="panel panel-default theme-box">
+                    <div class="panel-body">
+                        <div class="fl-job-bid-wrap fjb-invite-wrap">
+                            <ul class="fjb-lists" >
+                                %LOOP_DATA%
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php /*<section class="main-dashboard">
+    <div class="container">
+        <div class="profile">
+            <div class="featurette-job dashboard-my-jobs">
+                <div class="sub_featured">
+                    <div class="theme-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="job_feed_heading">
+                                    <h1 class="main-heading">{RECEIVED_INV_LBL}</h1>
+                                </div>
+                                <ul class="dash-job job_data">
+                                %LOOP_DATA%
+                                </ul>
+                                <div class="view-more-button %LOAD_CLASS%">
+                                    <div class="theme-button">
+                                     <a href="javascript:void(0)" class="load_more_data" data-page="1">{VIEW_MORE_INV_LBL}</a>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> */ ?>
+ 
+<script type="text/javascript">
+  var url = "{SITE_URL}ajaxFreelancerjobInvitation";
+  $(document).on("click",".load_more_data",function()
+  {
+    var pageNo = $(this).attr("data-page");
+    var p_no = parseInt(pageNo)+1;
+    $.post(url,{"action":"load_more_data","page_no":p_no},function(data){
+      $(".job_data").append(data.content);
+      $(".load_more_data").addClass(data.btn);
+      $(".load_more_data").attr("data-page",data.pageno);
+    },'json');
+  });
+
+  $(document).on("click",".respond_action",function(){
+    var data_action = $(this).attr("data-action"),jobId = $(this).attr("data-id");
+    if(data_action=='a')
+    {
+
+      swal({
+        title: "Confirmation!",
+        text: "{FJ_ARE_YOU_SURE_TO_WANT_TO_ACCEPT_THIS_BID}?",
+        showCancelButton: true,
+        closeOnConfirm: false,
+        inputPlaceholder: "{CMJ_WRITE_SOMETHING}"
+      },
+      function (inputValue) {
+        if(inputValue)
+        {
+          $.post(url,{"action":"respond_invitation",jobId:jobId,status:data_action},function(data){
+                  //swal(data.initial, data.msg);
+                  swal({
+                    title: data.initial,
+                    text: data.msg,
+                    type: "success",
+                    confirmButtonText: "Ok",
+                    closeOnConfirm: true
+                  });
+                  $(".respond_action").hide();
+                },'json');
+          $(this).parent().hide();
+        }
+      });
+    }
+    else
+    {
+      swal({
+        title: "Confirmation!",
+        text: "{FJ_ARE_YOU_SURE_TO_WANT_TO_REJECT_THIS_BID}?",
+        showCancelButton: true,
+        closeOnConfirm: false,
+        inputPlaceholder: "{CMJ_WRITE_SOMETHING}"
+      },
+      function (inputValue) {
+        if(inputValue)
+        {
+          $.post(url,{"action":"respond_invitation",jobId:jobId,status:data_action},function(data){
+            //swal(data.initial, data.msg);
+            swal({
+                    title: data.initial,
+                    text: data.msg,
+                    type: "success",
+                    confirmButtonText: "Ok",
+                    closeOnConfirm: true
+                  });
+            $(".respond_action").hide();
+          },'json');
+          $(this).parent().hide();
+        }
+      });
+    }
+  });
+</script>

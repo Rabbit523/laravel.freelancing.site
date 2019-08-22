@@ -1,0 +1,21 @@
+<footer>
+  <div class="footer-inner">
+    <?php //echo $this->fotoerPanel;?>
+    <div class="pull-left ex_copyright_text">
+        Copyright &copy; <?php echo date('Y'); ?>  <?php echo SITE_NM; ?>, All Rights Reserved.<br />
+        Thank you for partnering with <a href="<?php echo PARTNER_WEBSITE_LINK; ?>" target="_blank"><?php echo PARTNER_NAME; ?></a>. <a href="<?php echo REQUEST_SUPPORT_LINK?>" target="_blank">Request Support</a>
+    </div>
+    <div class="pull-right ex_logo_text">
+        <a href="<?php echo PARTNER_WEBSITE_LINK; ?>" target="_blank" title="<?php echo SITE_NM; ?>" class="footer-logo">
+            <?php if(!empty(SITE_FAVICON)){ ?> 
+                <img src="<?php echo SITE_IMG.FOOTER_LOGO; ?>" alt="<?php echo SITE_NM; ?>"/>
+            <?php } ?>
+        </a>
+    </div>
+    <div class="clearfix"></div>
+  
+  </div>
+  
+</footer>
+
+

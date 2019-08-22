@@ -1,0 +1,118 @@
+<li class="fjb-item %DELETED_JOB_MAIN_CLASS%">
+    <div class="service-featured %FEATURED_LBL_CLASS%"><span><i class="fa fa-star"></i></span></div>
+    <h3 class="fjb-title"><a href="%DETAIL_LINK%">%JOB_TITLE%</a></h3>
+    <ul class="post-breadcrumbs clearfix">
+        <li>%CATEGORY%</li>
+        <li>%SUBCATEGORY%</li>
+    </ul>
+    <ul class="fjb-details-list">
+        <li>{FJ_EST_BUDGET} : <span class="amount-wrap">%BUDGET%</span></li>
+        <!-- <li>Bid Amount : <span class="amount-wrap">%BID_AMOUNT%</span></li> -->
+    </ul>
+    <div class="fjb-desc">%JOB_DESC%</div>
+    <ul class="fjb-cat">
+        %SKILL_LIST%
+    </ul>
+    <ul class="fjb-details-list">
+        <li><span>%USER_LVL%</span></li>
+        <li>{FJ_NO_OF_APPLICANTS} : <span>%APPLICANTS%</span></li>
+        <li>{FJ_BIDDING_DEADLINE} : <span>%REMAIN_DAYS%</span></li>
+        <li>{FJ_INVITATION_RECEIVED_ON} : <span>%INV_REC_DATE%</span></li>
+    </ul>
+    
+    <div class="fjb-status">
+        <div class="fjb-status-item"><span class="badge badge-pill %INV_STATUS_CLASS%">%INV_STATUS%</span></div>
+        <div class="fjb-status-item fjb-post-time">Posted : <span>%POSTED_TIME%</span></div>
+        <div class="fjb-invite-action %JOB_ACTION_CLASS%">
+            <button class="btn btn-primary respond_action" data-action="a" data-id="%JOB_ID%">{FD_ACCEPT}</button>
+            <button class="btn btn-secondary respond_action" data-action="r" data-id="%JOB_ID%">{FD_REJECT}</button>
+       </div>
+    </div>
+    <div class="fjb-user-profile">
+        <div class="profile-img-wrap">
+        <div class="profile-img">
+            <img src="%CUST_IMG%" title="%CUST_NAME%">
+        </div>
+        </div>
+        <div class="profile-details">
+            <div class="profile-name"><a href="#">%CUST_NAME%</a></div>
+        </div>
+    </div>
+</li>
+
+<?php /*<li class="card-block %DELETED_JOB_MAIN_CLASS%">
+   <div class="%FEATURED_LBL_CLASS%">
+      <span class="">
+      %FEATURED_LBL%
+      </span>
+   </div>
+   <div class="pull-right jobAction %JOB_ACTION_CLASS%">
+      <button class="btn btn-system respond_action" data-action="a" data-id="%JOB_ID%">{FD_ACCEPT}</button>
+      <button class="btn btn-system respond_action" data-action="r" data-id="%JOB_ID%">{FD_REJECT}</button>
+   </div>
+   
+   <h4 class="card-title">
+      <a href="%DETAIL_LINK%">%JOB_TITLE%</a>
+      <div class="like active">
+         <a href="#"></a>
+      </div>
+   </h4>
+   <div class="category_subcategory">
+      <span>
+      %CATEGORY%
+      <i class="fa fa-angle-right" aria-hidden="true">
+      </i>
+      %SUBCATEGORY%
+      </span>
+   </div>
+   <ul class="project-desc list-inline">
+      <li>
+         %USER_LVL%
+      </li>
+      <li>
+         {FJ_EST_BUDGET} : %BUDGET%
+      </li>
+      <li>
+         %POSTED_TIME%
+      </li>
+      <li>
+         %INV_STATUS%
+      </li>
+   </ul>
+   <p>
+      %JOB_DESC%
+   </p>
+   <ul class="recevied_addons">
+      <li>
+         <label>{FJ_NO_OF_APPLICANTS} : </label>
+         <span>%APPLICANTS%</span>
+      </li>
+      <li>
+         <label>{FJ_BIDDING_DEADLINE} : </label>
+         <span>%REMAIN_DAYS%</span>
+      </li>
+      <li>
+         <label>{FJ_INVITATION_RECEIVED_ON} : </label>
+         <span>%INV_REC_DATE%</span>
+      </li>
+   </ul>
+   <div class="services bottom-line">
+      <ul class="list-inline">        
+         %SKILL_LIST%
+      </ul>
+   </div>
+   <div class="PickGeeks_detail">
+      <ul>
+         <li>
+            <div class="PickGeeks_img">
+               <img src="%CUST_IMG%">
+            </div>
+         </li>
+         <li>
+            <h5>
+               <a href="#">%CUST_NAME%</a>
+            </h5>
+         </li>
+      </ul>
+   </div>
+</li> */ ?>

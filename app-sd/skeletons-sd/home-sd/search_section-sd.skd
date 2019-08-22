@@ -1,0 +1,38 @@
+<div class="banner-section">
+  <div class="container">
+    <div class="banner-desc">
+      <h1>%SLIDER_HEADING%</h1>
+      <p>%SLIDER_CONTENT%</p>
+      <div class="input-group">
+
+        <input class="form-control input-lg" placeholder="%TEXT_PLACEHOLDER%" type="text" id="searchKeyword" name="searchKeyword">
+        <span class="input-group-btn">
+          <div class="theme-button">
+            <a href="javascript:void(0)" data-url="%FIRST_DATA_URL%" class="topSearch" id="full">{F_SEARCH_LBL}</a>
+          </div>
+        </span>
+        <div class="auto_complete_results">
+
+        </div>
+      </div>
+    </div>
+    <div class="mobile-view">
+      <h1>%SLIDER_HEADING%</h1>
+      <div class="row">
+        <div class="col-xs-12">
+          <form>
+            <div class="input-group">
+              <input class="form-control" name="MsearchKeyword" id="MsearchKeyword" type="text" placeholder="%TEXT_PLACEHOLDER%"/>
+              <div class="input-group-btn">
+                <div class="theme-button">
+                  <a href="javascript:void(0)" data-url="%FIRST_DATA_URL%" class="topMSearch" id="mobile"><i class="fa fa-search"></i></a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

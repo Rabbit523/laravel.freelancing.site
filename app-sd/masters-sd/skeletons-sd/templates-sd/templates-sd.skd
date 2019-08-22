@@ -1,0 +1,118 @@
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                <div class="nav navbar-right panel_toolbox btn-back">
+                    <a href="<?php echo SITE_ADM_MOD; ?>templates-sd" class="btn btn-success btn-sm" title="Back"><i class="fa fa-arrow-left"></i></a>
+                </div>  
+                
+                <div class="clearfix"></div>
+            </div>
+            <div class="portlet-body portlet-toggler">
+                
+                <table id="example123" class="table table-bordered table-hover"></table>
+            </div>
+            <div class="portlet-body portlet-toggler pageform" style="display:none;"></div>
+        </div>   
+    </div>
+</div>    
+<script type="text/javascript">
+$(function() {
+	OTable= $('#example123').dataTable( {
+		bProcessing: true,
+		bServerSide: true,		
+		sAjaxSource: "ajax.<?php echo $this->module;?>.php",
+		fnServerData: function (sSource, aoData, fnCallback) {
+			$.ajax({
+			   dataType: 'json',
+			   type: "POST",
+			   url: sSource,
+			   data: aoData,
+			   success: fnCallback
+			});
+		 },
+		 aaSorting : [],
+		 aoColumns: [	
+		 	{ sName: "id", sTitle : 'Template Id', bVisible: false},		
+		 	{ sName: "constant", sTitle : 'Constant'},			
+			{ sName: "types", sTitle : 'Types'},			
+			{ sName: "description", sTitle : 'Description', bSearchable:false}			
+			<?php if(in_array('status',$this->Permission)){ ?>
+				,{ "sName": "status", 'sTitle' : 'Status' ,bSearchable:false}
+				<?php } ?>
+			<?php if(in_array('edit',$this->Permission) || in_array('delete',$this->Permission) || in_array('view',$this->Permission) ){ ?>
+				,{ "sName": "operation", 'sTitle' : 'Operation' ,bSortable:false,bSearchable:false}
+				<?php } ?>
+		],
+		fnServerParams: function(aoData){setTitle(aoData, this)},
+		fnDrawCallback: function( oSettings ) {
+			$('.make-switch').bootstrapSwitch();
+			$('.make-switch').bootstrapSwitch('setOnClass', 'success');
+			$('.make-switch').bootstrapSwitch('setOffClass', 'danger');
+
+		}		
+	});
+	$('.dataTables_filter').css({float:'right'});
+	$('.dataTables_filter input').addClass("form-control input-inline"); 
+
+	$.validator.addMethod('pagenm',function (value, element) { 
+		return /^[a-zA-Z0-9][a-zA-Z0-9\-\_]*$/.test(value); 
+		},'Page name is not valid. Only alphanumeric and -,_ are allowed'
+	);
+	$(document).on('submit','#frmCont', function(e){
+		$("#frmCont").on('submit', function() {
+			 CKEDITOR.config.autoParagraph = false;
+			for(var instanceName in CKEDITOR.instances) {
+				CKEDITOR.instances[instanceName].updateElement();
+			}
+		})
+		$("#frmCont").validate({
+			ignore:[],
+			errorClass: 'help-block',
+			errorElement: 'span',
+            highlight: function (element) {
+			   $(element).closest('.form-group').addClass('has-error');
+			},
+			unhighlight: function (element) {
+				$(element).closest('.form-group').removeClass('has-error');
+			},
+			errorPlacement: function (error, element) { 
+				 
+				if (element.attr("data-error-container")) { 
+					error.appendTo(element.attr("data-error-container"));
+				} else {
+					error.insertAfter(element);
+				}
+            },
+            rules: {
+                subject: {required: true},
+                description: {required: true},
+                templates: {required: true}
+
+            },
+            messages: {
+                subject: {required: '&nbsp;Please enter Subject'},
+                description: {required: '&nbsp;Please enter Description'},
+                templates: {required: '&nbsp;Please enter Template Content'}
+            }
+		});
+		if($("#frmCont").valid()){
+			return true;
+		}else{
+			return false;
+		}
+	});
+});			
+</script>

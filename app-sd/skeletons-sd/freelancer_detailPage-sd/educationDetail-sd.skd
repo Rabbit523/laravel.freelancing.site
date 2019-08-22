@@ -1,0 +1,17 @@
+<div class="fl-edu-item">
+  <div class="media">
+    <div class="media-left">
+      <div class="fl-edu-icon">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="media-body fl-edu-info">
+      <div class="fl-edu-heading">
+          <h4 class="main-title">%DEGREE% <span>%INSTITUTE%</span></h4>
+          <div class="edu-years">%START_YR% - %END_YR%</div>
+          <div class="edu-department">%AREA_STUDY%</div>
+      </div>      
+      <div class="fl-edu-sort-info">%DESC%</div>
+    </div>
+  </div>
+</div>

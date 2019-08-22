@@ -1,0 +1,90 @@
+<script type="text/javascript">
+    $(function () {
+        $(document).on('submit', '#frmCP', function (e) {
+            $("#frmCP").on('submit', function () {
+                for (var instanceName in CKEDITOR.instances) {
+                    CKEDITOR.instances[instanceName].updateElement();
+                }
+            })
+            $("#frmCP").validate({
+                ignore: [],
+                errorClass: 'help-block',
+                errorElement: 'span',
+                highlight: function (element) {
+                    $(element).closest('.form-group').addClass('has-error');
+                },
+                unhighlight: function (element) {
+                    $(element).closest('.form-group').removeClass('has-error');
+                },
+                errorPlacement: function (error, element) {
+                    if (element.attr("data-error-container")) {
+                        error.appendTo(element.attr("data-error-container"));
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                rules: {
+                    opasswd: {
+                        required: true
+                    },
+                    passwd: {
+                        required: true,
+                        minlength: 6,
+                        maxlength: 12
+                    },
+                    cpasswd: {
+                        required: true,
+                        equalTo: "#passwd"
+                    }
+                },
+                messages: {
+                    opasswd: {
+                        required: "&nbsp;Please enter Current Password"
+                    },
+                    passwd: {
+                        required: "&nbsp;Please enter New Password",
+                       minlength: "New Password length should be greater than or equal to 6 characters",
+                        maxlength: "New Password length should be less than or equal to 12 characters"
+                    },
+                    cpasswd: {
+                        required: "&nbsp;Please confirm New Password",
+                        equalTo: "&nbsp;Password not matched"
+                    }
+
+                }
+            });
+            if ($("#frmCP").valid()) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+    });
+</script>	
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+            <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content">              
+                    <div class="form-body">
+                        <?php echo $this->getForm; ?>
+                    </div>  
+           </div>
+        </div>   
+    </div>
+</div>

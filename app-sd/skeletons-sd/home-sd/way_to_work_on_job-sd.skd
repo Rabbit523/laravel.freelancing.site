@@ -1,0 +1,27 @@
+<? php /*
+<div class="col-md-3 col-sm-4 rb-border">
+	<div class="job-item">
+		<div class="job-icon">
+			<img src="%JOB_IMAGE%" alt="">
+		</div>
+		<h2>%JOB_NAME%</h2>
+		<p>%JOB_DESC%</p>
+	</div>
+</div> */ ?>
+
+<li class="wtw-item">
+    <div class="wtw-item-wrap">
+        <div class="media">
+            <div class="pull-left">
+                <img src="%JOB_IMAGE%" class="media-object">
+            </div>
+            <div class="media-body work-job-block-body">
+                <h4 class="wtw-item-title">%JOB_NAME%</h4>
+                <p>%JOB_DESC%</p>
+            </div>
+        </div>
+    </div>
+</li>
+
+
+

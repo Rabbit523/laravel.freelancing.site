@@ -1,0 +1,94 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+    <div class="form-body">
+        
+       <!--  <div class="form-group">
+            <label for="content_type" class="control-label col-md-3"><font color="#FF0000">*</font>Page Select Content: &nbsp;</label>
+            <div class="col-md-4">
+                <select class="form-control" name="content_type" id="content_type">%CONTENT_TYPE%</select>
+            </div>
+        </div> -->
+        %LANG_PAGETITLE%
+        <div class="form-group">
+            <label for="page_title" class="control-label col-md-3"><font color="#FF0000">*</font>Page Slug: &nbsp;</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control logintextbox-bg required" name="page_slug" id="page_slug" value="%PAGE_SLUG%">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="meta_keyword" class="control-label col-md-3">Meta Title: &nbsp;</label>
+            <div class="col-md-4">
+                <textarea class="form-control textarea-bg" name="metaTitle" id="metaTitle">%META_TITLE%</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="meta_keyword" class="control-label col-md-3">Meta Keyword: &nbsp;</label>
+            <div class="col-md-4">
+                <textarea class="form-control textarea-bg" name="metaKeyword" id="metaKeyword" maxlength="160">%META_KEYWORD%</textarea>
+                <span><span id="metakeyword_characters">%TOTAL_META_KEYWORD%</span> characters remaining</span>
+                <span class="metakeywordError help-block"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="meta_desc" class="control-label col-md-3">Meta Description: &nbsp;</label>
+            <div class="col-md-4">
+                <textarea class="form-control textarea-bg" name="metaDesc" id="metaDesc" maxlength="160">%META_DESCRIPTION%</textarea>
+                <span><span id="metaDesc_characters">%TOTAL_META_DESC%</span> characters remaining</span>
+                <span class="metaDescError help-block"></span>
+            </div>
+        </div>
+        <!-- <div class="padtop10 flclear"></div>
+        <div class="form-group">
+            <label class="control-label col-md-3"><font color="#FF0000">*</font>Page Description: &nbsp;</label>
+            <div class="col-md-9">
+                <textarea class="ckeditor form-control textarea-bg" name="pageDesc" id="pageDesc" data-error-container="#editor_error" style="display: none;">%PAGE_DESCRIPTION%</textarea>
+                <div id="editor_error"></div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                loadCKE("pageDesc");
+        });</script> -->
+        %LANG_PAGEDESC%
+       
+        <div class="form-group">
+            <label class="control-label col-md-3">Status: &nbsp;</label>
+            <div class="col-md-4">
+                <div class="radio-list" data-error-container="#form_2_Status: _error">
+                    <label class="radio-inline">
+                        <input class="radioBtn-bg required" id="y" name="isActive" type="radio" value="y" %STATIC_A%>
+                        Active</label>
+                    <label class="radio-inline">
+                        <input class="radioBtn-bg required" id="n" name="isActive" type="radio" value="n" %STATIC_D%>
+                        Inactive</label>
+                    <span for="status" class="help-block"></span> </div>
+                <div id="form_2_Status: _error"></div>
+            </div>
+        </div>
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="type" id="type" value="%TYPE%">
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="id" id="id" value="%ID%">
+        <div class="padtop20"></div>
+    </div>
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <button type="submit" name="submitAddForm" class="btn green" id="submitAddForm">Submit</button>
+            <button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $("#metaKeyword").keyup(function(e){
+        var max_size=160;
+        var length=$(this).val().length;
+        $("#metakeyword_characters").html(max_size-length);
+        checkempty("#metaKeyword",($(this).val()).replace(/^\s+|\s+$/g,''),'.metakeywordError','Summary');
+    });    
+    $("#metaDesc").keyup(function(e){
+        var max_size=160;
+        var length=$(this).val().length;
+        $("#metaDesc_characters").html(max_size-length);
+        checkempty("#metaDesc",($(this).val()).replace(/^\s+|\s+$/g,''),'.metaDescError','Summary');
+    }); 
+</script>

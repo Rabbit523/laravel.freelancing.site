@@ -1,0 +1,13 @@
+<!-- <div class="col-md-3 col-sm-4">
+	<p><a href="%URL%">%CAT_NAME%</a></p>
+</div> -->
+<div class="col-md-4 col-sm-6">
+	<div class="category-item">
+	  <a href="%URL%">
+	    <div class="category-img">
+	      <img src="%SUB_CAT_IMAGE%" alt="">
+	    </div>
+	    <h4>%SUB_CAT_NAME%</h4>
+	  </a>
+	</div>
+</div>

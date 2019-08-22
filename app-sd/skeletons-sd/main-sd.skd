@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="cache-control" content="no-cache">
+<head>
+  %HEAD%
+  <style type="text/css">
+  #overlayDocument {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('<?php echo SITE_ADM_IMG; ?>ajax-modal-loading.gif') 50% 50% no-repeat rgb(249,249,249);
+    background-size: 60px 60px;
+    opacity: .8;
+  }
+
+  #overlayModel {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('<?php echo SITE_IMG; ?>payment_proc.gif') 50% 50% no-repeat rgb(249,249,249);
+    background-size: 60px 60px;
+    opacity: .8;
+  }
+</style>
+</head>
+
+<body class='homepage <?php echo add_home_class() ?>'>
+  <div class="loading hide">
+   <div>
+    <img src="{SITE_IMG}loadingGraphic.gif" alt="processing"/>
+    <span>{YOU_ARE_NOT_LOGGED_IN}</span>
+  </div>
+</div>
+<!-- <div class="hidden-header"></div> -->
+%SITE_HEADER%
+<!-- Your share button code -->
+<div id="main-content">
+  %BODY%
+</div>
+<!-- {GOOGLE_ANALYTIC_CODE} -->
+%FOOTER%
+
+<script type="text/javascript" src="{SITE_ADM_PLUGIN}bootstrap-toastr/toastr.min.js"></script>
+<script type="text/javascript">
+  toastr.options = {
+    "closeButton": true,
+    "debug": false,
+      //"positionClass": "toast-top-full-width",
+      "positionClass": "toast-top-right",
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    }
+
+    function initilizeRaty(control_name, score) {
+      $(control_name).raty({
+        scoreName: 'star_ratings',
+        score: score,
+        readOnly: true,
+        half: true,
+        starHalf: '<?php echo SITE_PLUGIN ?>raty/images/star-half.png',
+        starOff: '<?php echo SITE_PLUGIN ?>raty/images/star-off.png',
+        starOn: '<?php echo SITE_PLUGIN ?>raty/images/star-on.png',
+        hints: ['Bad', 'Poor', 'Regular', 'Good', 'Excellent']
+      });
+    }
+    function addOverlay() {
+      $('<div id="overlayDocument"></div>').appendTo(document.body);
+    }
+    function removeOverlay() {
+      $('#overlayDocument').remove();
+    }
+
+    function processing() {
+      $('<div id="overlayModel"></div>').appendTo(document.body);
+    }
+
+    function removeProcessing() {
+      $('#overlayModel').remove();
+    }
+
+    function chkIsLogin (objThis){
+      var attrTarget=objThis.data('target');
+      if(attrTarget=='#loginModal'){
+        $(".loading").removeClass('hide');
+        $(".loading").show();
+        setTimeout(function() { $(".loading").hide(); }, 5000);
+      }
+    }
+    function loadCKE(id) {
+      var instance = CKEDITOR.instances[id];
+      if (instance) {
+        CKEDITOR.remove(instance);
+      }
+      CKEDITOR.replace(id,{
+        filebrowserUploadUrl: '<?php echo SITE_URL;?>requires-sd/upload.php',
+        toolbar : 'MyToolbar'
+      });
+    }
+
+    $(document).ready(function(){
+      var userType = "%SESSION_USER_TYPE%";
+      if(userType=='y')
+      {
+        $("#userTypeSelectionModal").modal("show");
+      }
+
+      
+
+
+    });
+
+    $(document).on('click','.noti-item a',function(e){
+      e.preventDefault();
+
+        var id= $(this).attr('data-id');
+        var link = $(this).attr('href');
+        $.ajax({
+          type: "POST",
+          url: '<?php echo SITE_MOD;?>notification-sd/ajax.notification-sd.php',
+          data: {'action':'view','id':id},
+          success: function(resultData){
+              if(link != ''){
+                window.location.href = link;
+              }
+          } ,
+          dataType: 'json'
+        });  
+
+      });
+
+
+    </script>
+    %MESSAGE_TYPE%
+  </body>
+  </html>
+<!-- <script>
+  $(document).ready(function() {
+        window.history.pushState(null, "", window.location.href);
+        window.onpopstate = function() {
+            window.history.pushState(null, "", window.location.href);
+        };
+    });
+</script>
+
+ -->

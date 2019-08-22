@@ -1,0 +1,163 @@
+@media (max-width: 1400px){
+   .form-body{
+   	padding-bottom: 40px;
+   }
+}
+@media (max-width: 1024px){
+   
+}
+@media (min-width:768px) and (max-width:1280px){
+    
+   
+}
+@media (min-width:640px) and (max-width:1024px){
+    .ex_content_div{
+    	width: 50%;
+    	
+    }
+}
+@media (max-width: 1024px){
+	.ex_shownavtabs_btn{
+	   	display: block;
+   	    padding:15px 3px 5px;
+	    text-align: right;
+	    font-size: 20px;
+	    color: #13b5ea;
+	 }
+	 .ex_tabs_home li{
+	 	width: 100%;
+	 }
+	 .nav-tabs.ex_tabs_home>li.active> a{
+	 	border:none;
+        background-color: #d8d9da36;
+    	border: 1px solid #fbfbfb;
+	    margin: 0;
+	    border-radius: 0;
+	 }
+	 .ex_content_div{
+	 	position: absolute;
+	  	z-index: 9;
+	  	right: 0;
+	    box-shadow: 1px 1px 10px #eee;
+	 }
+	 .nav-tabs.ex_tabs_home>li.active> a:before{
+	 	content: none;
+	 }
+}
+@media(max-width:991px ){
+  footer{
+   	position: relative;
+   }
+   footer{
+   	padding-left: 20px;
+   }
+   .footer-inner .ex_logo_text{
+   	    float: none!important;
+	    clear: both;
+	    width: 100%;
+	    text-align: center;
+   }
+   footer .footer-inner .footer-logo{
+    margin: 0 auto;
+   }
+   .footer-inner .ex_copyright_text{
+   		float: none!important;
+	    clear: both;
+	    text-align: center;
+	    margin-bottom: 15px;
+   }
+    div.dataTables_info{
+    	text-align: center;
+   		width: 100%;
+    }
+  	div.dataTables_paginate{
+  	    width: 100%;
+	    text-align: center;
+  	}
+}
+@media(max-width:768px ){
+	.form-horizontal .control-label{
+		text-align: left;
+    font-size: 13px;
+	}
+   .dataTables_filter .input-inline.custom_datatable_search{
+    display: block!important;
+  }
+  .dataTables_filter .temp_filter_class{
+    display: none;
+  }
+}
+@media (min-width: 768px){
+   
+}
+@media (max-width:767px){
+	.x_title h2{
+		display: block;
+		width: 69%;
+	}
+  .dataTables_length{
+    width: auto;
+  }
+}
+@media (max-width: 640px){
+    .x_panel .x_title h2{
+    	width: 64%;
+    }
+    .panel_toolbox > li{
+    	float: right;
+    }
+    .block_content h2 a{
+    	font-size: 14px;
+    }
+    .tile-stats .count ,.tile-stats h3{
+    	font-size: 20px;
+    }
+    .form-horizontal .control-label{
+      font-size: 11px;
+    }
+    
+}
+@media( max-width : 585px ) {
+
+   
+}
+@media (max-width:480px){
+    
+    
+}
+/*responsive sidebar nav after login*/
+@media (max-width:412px){
+    ul.to_do p{
+    	font-size: 10px;
+    }
+    .page-title {
+    	font-size: 20px;
+    }
+    .block_content h2 a{
+      font-size: 12px;
+    }
+}
+@media screen and (max-height: 450px) {
+  
+}
+
+/*responsive sidebar nav after login*/
+@media (max-width:360px){
+  ul.to_do p{
+    font-size: 9px;
+  }
+  .x_panel{
+    padding: 10px 0;
+  }
+}
+@media(max-width:320px){
+    .x_content .form-group img{
+    	height: 100%;
+	    width: 100%;
+	    overflow: hidden;
+    }
+    .dataTables_paginate .pagination li a{
+    	padding: 5px!important;
+    }
+    
+}

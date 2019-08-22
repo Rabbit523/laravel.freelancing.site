@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteBase /pickgeeks_mabilis/
+RewriteRule ^(.*)$ app-sd/$1 [L]
+
+
+</ifModule>
+

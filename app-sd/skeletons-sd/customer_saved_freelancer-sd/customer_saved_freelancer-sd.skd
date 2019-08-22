@@ -1,0 +1,192 @@
+<!-- Dashboard Navigation -->
+%SUB_HEADER_CONTENT%
+<!-- Dashboard Navigation End -->
+
+<!-- Page Content -->
+<section class="main-dashboard">
+    <div class="container">
+        <div class="">
+            <div class="">
+                <div class="sub_featured">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="saved-fl-wrap">
+                                <div class="main-heading-wrap">
+                                    <h1 class="main-heading">
+                                        {C_SAVED_FREELANCER_LBL}
+                                    </h1>
+                                    <div class="main-heading-tool pull-right %RM_HIDE%">
+                                        <div class="remove_saved unsave">
+                                            <label class="signin-check">{C_REMOVE_ALL_LBL}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    %FREELANCERS%
+                                </div>
+                                <div class="text-center %LOAD_CLASS%">
+                                    <div class="">
+                                        <a href="javascript:void(0);" class="btn btn-primary load_more_data" data-page="1" >{C_VIEW_MORE_FREELANCER_LBL}</a>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="freelancer_id" id="freelancer_id">
+                            </div>
+                        </div>
+                    </div>
+                    <?php /* <div class="theme-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="job_feed_heading">
+                                    <h1 class="main-heading">
+                                        {C_SAVED_FREELANCER_LBL}
+                                    </h1>
+                                    <div class="row %RM_HIDE%">
+                                        <div class="col-md-12">
+                                            <div class="remove_saved unsave">
+                                                <label class="signin-check">{C_REMOVE_ALL_LBL}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="dash-job">
+                                    <div class="data_freelancer">
+                                        %FREELANCERS%
+                                    </div>
+                                </ul>
+                                <div class="view-more-button %LOAD_CLASS%">
+                                    <div class="">
+                                        <a href="javascript:void(0);" class="btn btn-primary load_more_data" data-page="1" >{C_VIEW_MORE_FREELANCER_LBL}</a>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="freelancer_id" id="freelancer_id">
+                            </div>
+                        </div>
+                    </div> */ ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.container -->
+
+<div class="modal fade" id="delete" role="dialog" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4>
+                    {C_REMOVE_LBL}
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <p>
+                        {C_CONFIRM_MSG_LBL}
+                    </p>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="footer-btn">
+                    <a href="#" class="btn btn-secondary" data-dismiss="modal">{CP_CANCEL}</a>
+                </div>
+                <div class="footer-btn">
+                    <a href="javascript:void(0)" data-dismiss="modal" class="fRemove btn btn-primary">{C_REMOVE_LBL}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteAll" role="dialog" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4>
+                    {CP_REMOVE}
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <p>
+                        {C_CONFIRM_ALL_MSG_LBL}
+                    </p>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="footer-btn">
+                    <a class="btn btn-secondary" href="#" data-dismiss="modal">{CP_CANCEL}</a>
+                </div>
+                <div class="footer-btn">
+                    <a href="javascript:void(0)" data-dismiss="modal" class="RemoveAll btn btn-primary">{CP_REMOVE}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+url = "{SITE_URL}ajaxSavedFreelancer";
+    $(document).ready(function(e){
+        $(document).on("click",".fa-heart",function(e){
+            $("#delete").modal("show");
+            var id = $(this).parent().attr("data-id");
+            $("#freelancer_id").val(id);
+        });
+
+        $(document).on("click",'.fRemove',function(e){
+            fid = $("#freelancer_id").val(); 
+            addOverlay();
+            $.post(url,{"action":"delete_fid","fid_id":fid},
+             function(data){
+               if(data['type'] == "true"){
+                  $('.freelancerid_'+fid).hide();  
+                  toastr['success']('{CP_SAVED_FREELANCER_HAS_BEEN_REMOVED_SUCCESSFULLY}');
+               }
+               removeOverlay();
+            },'json');   
+        });
+
+        $(document).on("click",".remove_saved",function(e){
+            $("#deleteAll").modal("show");
+        });
+        
+        $(document).on("click",".RemoveAll",function(e){
+            addOverlay();
+            $.post(url,{"action":"delete_all"},
+             function(data){
+                if(data['type'] == "true"){
+                  $('.dash-job').hide();
+                  $('.remove_saved').hide();
+                    if(data['type'] == "true"){
+                        removeOverlay();
+                        toastr['success']('{CP_FREELANCER_HAS_BEEN_REMOVED_SUCCESSFULLY}');
+                        location.reload(true);
+                    }
+                }
+            },'json');    
+        });
+
+        $(document).on("click",".load_more_data",function(e){
+
+            var pageNo = $(this).attr("data-page");
+            var p_no = parseInt(pageNo)+1;
+            
+            //addOverlay();
+            $.post(url,{"action":"load_more_data","page_no":p_no},function(data){
+                //removeOverlay();
+                $(".data_freelancer").append(data.content);
+                $(".load_more_data").addClass(data.btn);
+                $(".load_more_data").attr("data-page",data.pageno);
+            },"JSON");
+
+        });
+    });
+</script>

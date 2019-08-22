@@ -1,0 +1,302 @@
+
+
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                <div class="nav navbar-right panel_toolbox portlet-toggler">
+                   <a href="ajax.users-sd.php?action=export_excel" class="btn chng-btn btn-success btn-sm" title="Download"><i class="fa fa-download"></i></a>
+                </div>
+                <div class="nav navbar-right panel_toolbox portlet-toggler">
+                   <a href="ajax.users-sd.php?action=export_csv" class="btn chng-btn btn-warning btn-sm" title="Export as CSV"><i class="fa fa-file-excel-o"></i></a>
+                </div>
+                <div class="nav navbar-right panel_toolbox btn-back">
+                    <a href="<?php echo SITE_ADM_MOD; ?>users-sd" class="btn btn-success btn-sm" title="Back"><i class="fa fa-arrow-left"></i></a>
+                </div> 
+                
+                <div class="clearfix"></div>
+            </div>
+            
+                
+                
+                    <label class="control-label filtered-label">Filter By :&nbsp;</label>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-8">
+                            <select name="filterLocation" id="filterLocation" class="form-control">
+                                <option value='' >Select User Location</option>
+                            %USER_LOCATION_OPTIONS%
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-8  ">
+                            <select name="filterCompany" id="filterCompany" class="form-control">
+                                <option value=''>Select User Type</option>
+                                <option value='c'>Customer</option>
+            <option value='f'>Freelancer</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-8">
+                            <div class="btn-group"></div>
+                            <button name="dltAll" id="dltAll" data-url = "ajax.<?php echo $this->module; ?>.php">Delete All</button> 
+                        </div>
+                        <div class="col-md-1 col-sm-4 col-xs-8">
+                            <div class="form-group clearfix">
+                                 <div class="nav navbar-right panel_toolbox portlet-toggler">
+                                   <a href="javascript:;" class="btn chng-btn btn-default btn-sm restFilter" title="Download"><i class="fa fa-refresh"></i> Reset Filter</a>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+           
+           <!--  <div class="x_content">
+               <div class="actions portlet-toggler">
+                    <div class="form-group clearfix">
+                     <div class="nav navbar-right panel_toolbox portlet-toggler">
+                       <a href="javascript:;" class="btn chng-btn btn-default btn-sm restFilter" title="Download"><i class="fa fa-refresh"></i> Reset Filter</a>
+                     </div>
+                        <div class="col-md-3 col-sm-4 col-xs-8  ">
+                            <label class="control-label filtered-label">Filter By :&nbsp;</label>
+                            <select name="filterLocation" id="filterLocation" class="form-control">
+                                <option value='' >Select User Location</option>
+                                    %USER_LOCATION_OPTIONS%
+                            </select>
+                        </div>
+                         <div class="col-md-3 col-sm-4 col-xs-8  ">
+                        <label class="control-label filtered-label">Filter By :&nbsp;</label>
+                            <select name="filterCompany" id="filterCompany" class="form-control">
+                                <option value=''>Select User Type</option>
+                                 %USER_TYPE_OPTIONS%
+                                
+                            </select>
+                        </div>
+                 </div>
+                    <div class="btn-group"></div>
+                </div>
+                <button name="dltAll" id="dltAll" data-url = "ajax.<?php echo $this->module; ?>.php">Delete All</button> 
+             </div>  -->
+            <div class="portlet-body portlet-toggler ">
+                <table id="example123" class="table table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+        </div>
+    </div>
+</div>
+<div id="login_history_popup" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <table>
+            <thead>
+                <tr><td>User Name</td></tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default close_user_pop" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="delete_reason" tabindex="-1" >
+    <div class="modal-dialog" >
+        <!-- Modal content-->
+        <form name="reportuser" id="reportuser" action="" method="post">
+            <div class="modal-content">
+                <div class="modal-header">                    
+                    <div class="media">
+                        <div class="media-body">
+                            <h3 class="pull-left">
+                                User Delete
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Reason</label>
+                        <textarea class="form-control" rows="5" name="reason" id="reason"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="theme-button">
+                        <input type="hidden" name="userId" id="userId">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button name="deleteSubmit" id="deleteSubmit" type="submit" class="btn btn-system btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+
+        OTable = $('#example123').dataTable({
+                "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                'columnDefs': [{
+                                 'targets': 0,
+                                 'searchable':false,
+                                 'orderable':false,
+                                 'className': 'dt-body-center',
+                                 'render': function (data, type, full, meta){
+                                     return '<input type="checkbox" name="id[]"  value="' 
+                                        + $('<div/>').text(data).html() + '">';
+                                 }
+                              }],
+                "fnServerData": function (sSource, aoData, fnCallback) {
+                    $.ajax({
+                        "dataType": 'json',
+                        "type": "POST",
+                        "url": sSource,
+                        "data": aoData,
+                        "success": fnCallback
+                    });
+                },
+                "aaSorting" : [],
+                "aoColumns": [
+                { "sName": "id", 'sTitle' : "<input name='select_all' value='1' id='example-select-all' type='checkbox' />"},
+                { "sName": "firstName", 'sTitle' : 'First Name'},
+                { "sName": "lastName", 'sTitle' : 'Last Name'},
+                { "sName": "email", 'sTitle' : 'Email Id'},
+                { "sName": "location", 'sTitle' : 'Location','sWidth' : '15%'},
+                { "sName": "userType", 'sTitle' : 'User Type','sWidth' : '15%'},
+                { "sName": "createdDate", 'sTitle' : 'Registered On'}
+<?php if (in_array('status', $this->Permission)) { ?>
+                    ,  { "sName": "isActive", 'sTitle' : 'Status', bSortable:true, bSearchable:false}
+<?php } ?>
+<?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+                    , {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}
+<?php } ?>
+                ],
+                "fnServerParams"
+                : function(aoData){setTitle(aoData, this)
+                    aoData.push( {"name":"filterLocation", "value": $('#filterLocation').val() } );
+                    aoData.push( {"name":"filterCompany", "value": $('#filterCompany').val() } );},
+                "fnDrawCallback"
+                : function(oSettings) {
+                $('.make-switch').bootstrapSwitch();
+                $('.make-switch').bootstrapSwitch('setOnClass', 'success');
+                $('.make-switch').bootstrapSwitch('setOffClass', 'danger');
+
+            }
+
+    });
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+     $(document).on('change', '#filterLocation', function(e) {
+            OTable.fnDraw();
+        });
+     $(document).on('change', '#filterCompany', function(e) {
+            OTable.fnDraw();
+        });
+    $.validator.addMethod('date_validation', function (value, element) {
+        return /^\d{4}-\d{2}-\d{2}$/.test(value);
+    }, 'Birthdate format is not valid'
+            );
+
+        $(document).on('click', '#deleteSubmit', function (e) {
+            e.preventDefault();
+            
+            $("#reportuser").validate({
+                ignore: [],
+                errorClass: 'help-block',
+                errorElement: 'span',
+                highlight: function (element) {
+                    $(element).closest('.form-group').addClass('has-error');
+                },
+                unhighlight: function (element) {
+                    $(element).closest('.form-group').removeClass('has-error');
+                },
+                errorPlacement: function (error, element) {
+                    if (element.attr("data-error-container")) {
+                        error.appendTo(element.attr("data-error-container"));
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                rules: {
+                    reason: {required: true},
+                },
+                messages: {
+                    reason: {required: '&nbsp;Please enter delete reason'}
+                }
+            });
+            
+            if ($("#reportuser").valid()) {
+                ajaxFormSubmit("#reportuser");
+                location.reload();
+            } else {
+                return false;
+            }
+            
+        });
+        $(document).on('click','.user_popup_show', function (e) {    
+            $("#myModal_autocomplete").modal('hide');            
+        });
+
+        $(document).on('click','.user_delete', function(e) {
+            var id = $(this).attr('data-id');
+            $('#userId').val(id);
+            $('#delete_reason').modal('show');
+        });
+        // Handle click on "Select all" control
+   $('#example-select-all').on('click', function(){
+        
+      // var rows = OTable.rows().nodes();
+      $('input[type="checkbox"][name="id[]"]').prop('checked', this.checked);
+      
+   });
+
+   // Handle click on checkbox to set state of "Select all" control
+   $('#example123 tbody').on('change', 'input[type="checkbox"][name="id[]"]', function(){
+      // If checkbox is not checked
+      if(!this.checked){
+         var el = $('#example-select-all').get(0);
+         // If "Select all" control is checked and has 'indeterminate' property
+         if(el && el.checked && ('indeterminate' in el)){
+            // Set visual state of "Select all" control 
+            // as 'indeterminate'
+            el.indeterminate = true;
+         }
+      }
+   });
+          
+    });
+
+$(document).on('click','.restFilter',function(){
+    location.reload();
+});
+
+    
+</script>

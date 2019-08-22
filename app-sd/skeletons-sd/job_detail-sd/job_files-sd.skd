@@ -1,0 +1,20 @@
+<li class="media">
+    <div class="media-left media-middle">
+        <div class="job-attachment-file">
+            <img src="%FILE_IMAGE%">
+        </div>
+    </div>
+    <div class="media-body media-middle">
+        <div>%FILE_NAME%</div>
+        <a class="job-attachment-download" href="%FILE_LINK%" title="%FILE_NAME%" target="_blank"><i class="fa fa-download"></i> Download</a>
+    </div>
+</li>
+<!-- <li>
+	<a href="%FILE_LINK%" title="%FILE_NAME%" target="_blank">
+		<div class="file-img">
+			<img src="%FILE_IMAGE%" alt="">
+		</div>
+		<p>%FILE_NAME%</p>
+	</a>
+</li> -->
+

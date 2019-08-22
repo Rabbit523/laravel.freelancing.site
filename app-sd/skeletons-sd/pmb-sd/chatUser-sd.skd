@@ -1,0 +1,28 @@
+<div class="col-md-12">
+   <div class="user-intro">
+      <div class="current-user-wrap">
+         <div class="media">
+            <div class="media-left media-top">
+               <span class="chat-backarrow">
+                  <a href="{SITE_URL}pmb" class="pull-left">
+                     <i class="fa fa-angle-left"></i>
+                  </a>
+               </span> 
+               <div class="current-user-img %SHOW_IMAGE%">
+                  <img src="%IMG%" class="media-object" alt="%NAME%">
+               </div>
+            </div>
+            <div class="media-body media-top chat-body-dd">
+               <div class="current-user-name">
+                  <h4 class="media-heading"><a href="javascript:;">%NAME%</a></h4>
+                  <!-- <p class="chat-head-p">%PRO_TITLE%</p> -->
+                  <p class="chat-head-p">%LOCATION%</p>
+               </div>
+               <div class="msg-settings pull-right">
+                  <a href="javascript:;" class="help-dd delete_chat" data-id="%ID%" data-type="all" title="Delete Conversation"><i class="fa fa-trash-o"></i></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

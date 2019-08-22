@@ -1,0 +1,32 @@
+<div class="star-rating">
+  <div class="stars">
+    <p>{F_WORK_CLARIFICATION_LBL}</p>
+    <div class="star-ratings-sprite">
+         <span style="width:%WORK_RATE%%" class="star-ratings-sprite-rating"></span>
+    </div>
+  </div>
+  <div class="stars">
+    <p>{F_PUNCTUALITY_LBL}</p>
+    <div class="star-ratings-sprite">
+       <span style="width:%PUNCTUALITY_RATE%%" class="star-ratings-sprite-rating"></span>
+    </div>
+  </div>
+  <div class="stars">
+    <p>{F_EXPERTISE_LBL}</p>
+    <div class="star-ratings-sprite">
+       <span style="width:%EXP_RATE%%" class="star-ratings-sprite-rating"></span>
+    </div>
+  </div>
+  <div class="stars">
+    <p>{F_COMMUNICATION_LBL}</p>
+    <div class="star-ratings-sprite">
+       <span style="width:%COMMUNICATION_RATE%%" class="star-ratings-sprite-rating"></span>
+    </div>
+  </div>
+  <div class="stars">
+    <p>{F_WORK_QUALITY_LBL}</p>
+    <div class="star-ratings-sprite">
+       <span style="width:%QUALITY_RATE%%" class="star-ratings-sprite-rating"></span>
+    </div>
+  </div>
+</div>

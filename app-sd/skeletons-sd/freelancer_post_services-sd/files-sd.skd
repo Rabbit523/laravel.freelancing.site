@@ -1,0 +1,11 @@
+<li class="attchFile_%ID%" data_id="%ID%">
+    <div class="file">
+        <a href="javascript:void(0)" title="%FILE_NAME%">
+            <div class="attachment-img">
+                <img src="%ATT_SYMBOL%">
+                <span data_id="%ID%" class="delAttachment"><i class="fa fa-times"></i></span>
+            </div>
+            <!-- <p>%FILE_NAME%</p> -->
+        </a>
+    </div>
+</li>

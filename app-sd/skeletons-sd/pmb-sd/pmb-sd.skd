@@ -1,0 +1,208 @@
+<section class="section-messagebox">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="messagebox-pack">
+               <div class="row">
+                  <div class="col-md-4 col-sm-5 col-xs-12">
+                     <div class="chat-list-pack clearfix">
+                        <div class="chat-search">
+                           <div class="chathead">
+                              <h4>{USERS_LABEL} Chat Users</h4>
+                           </div>
+                        </div>
+                        <div class="chat-list scrollbar">
+                           %USER_LIST%
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-8 col-sm-7 col-xs-12 main-chat-border">
+                     <div class="chat-msgbox" id="main-chat">
+                        <div class="chatbox-head">
+                           <div class="row" id="chat_user">
+                              %CHAT_USER%
+                           </div>
+                           <!-- <div class="row">
+                              <div class="col-md-12">
+                                 <h4>
+                                    <span class="chat-backarrow">
+                                       <a href="{SITE_URL}pmb" class="pull-left">
+                                          <i class="fa fa-arrow-left"></i>
+                                       </a>
+                                    </span> 
+                                    <a href="javascript:;" class="chatUserNm">%FIRSTUSER%</a>
+                                 </h4>
+                              </div>
+                           </div> -->
+                        </div>
+                        <div class="chatbox-body">                           
+                           <div class="chat-msgs scrollbar">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <p class="chat-time"> </p>
+                                    <div class="chat-msgs-ul" id="chat_room">
+                                       <ul>
+                                          %MSG_LIST%
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="write-msg %SHOW_INPUT_MSG%">
+                              <form class="form">
+                                 <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                       <div class="form-group">
+                                          <textarea  class="form-control msg-write-input" placeholder="Type your Message here" data-id="%USER_ID%" name="msg" id="msg"></textarea>
+                                          <p class="entermsg">{PRESS_ENTER_TO_SEND_MESSAGE}</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="chat-new-msgbox" id="new-chat">
+                        <div class="chatbox-head">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <h4>
+                                    <span class="chat-backarrow"><a href="messagebox.php" class="pull-left"><i class="fa fa-arrow-left"></i></a></span>{NEW_MESSAGE}
+                                 </h4>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="chatbox-body write-msg">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <form class="form">
+                                    <div class="row">
+                                       <div class="col-md-12">
+                                          <div class="new-msg-name">
+                                             <div class="form-group">
+                                                <input  class="form-control msg-write-input" type="text" placeholder="{TYPE_NAME_OF_PERSON_WHOM_YOU_WANT_TO_SEND_MESSAGE}">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                           <div class="chat-msgs">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="write-msg">
+                              <form class="form">
+                                 <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                       <div class="form-group">
+                                          <input  class="form-control msg-write-input" type="text" placeholder="{TYPE_YOUR_MESSAGE_HERE}">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<script type="text/javascript">
+   var url = "{SITE_URL}ajaxPmb";
+   $(document).ready(function(){
+      $(document).on("click",".load_chat",function(){
+
+         $(this).parent().parent().parent().parent().parent().siblings().removeClass("msg-active");      
+         $(this).parent().parent().parent().parent().parent().addClass("msg-active");
+         var id = $(this).attr("data-id");
+         $.post(url,{"action":"load_chat",id:id},function(data){
+            $("#chat_room").html(data.chat_room);
+            $("#chat_user").html(data.chat_user);
+            $("#chatUserNm").text(data.chat_username);
+            $("#msg").attr("data-id",id);
+            console.log(data.chat_room);
+         },'json');
+      });   
+
+      $(document).on("keypress","#msg",function(e){
+         if (e.keyCode == 13 && e.shiftKey)
+         {
+            $(this).val($(this).val()+' \n');
+            return false;
+         }
+         var key = e.which;
+         if(key == 13){
+            var msg = $("#msg").val(),id = $(this).attr("data-id");
+            if(msg.trim()=='')
+            {
+               toastr['warning']('{FSO_PLEASE_ENTER_MESSAGE}');
+            }               
+            else
+            {
+               $.post(url,{"action":"send_message","id":id,"msg":msg},function(data){
+                  $("#chat_room").html(data.chat_room);
+                  $("#msg").val('');
+               },'json');
+            }
+         }
+      });
+
+      $(document).on("click",".delete_chat",function(){
+         var id = $(this).attr("data-id"),msgType = $(this).attr("data-type");
+         swal({
+            title: "Confirmation!",
+            text: "{ARE_YOU_SURE_YOU_WANT_TO_DELETE_CHAT}?",
+            showCancelButton: true,
+            closeOnConfirm: false
+         }, 
+         function (inputValue) {
+            if (inputValue) 
+            {
+               $.post(url,{"action":"delte_message",id:id,msgType:msgType},function(data){
+                  $("#chat_room").html(data.chat_room);
+                  /*$("").html(data.chat_room);*/
+                  if (typeof data.last_msg.id !== "undefined") {
+                     $('.load_chat[data-id="'+data.receiverId+'"]').closest('.media-body').find('p').html('<p>'+data.last_msg.message+'<span class="pull-right msglist-time">'+data.last_msg.createdDate+'</span></p>');
+                  }else{
+                     $('.load_chat[data-id="'+data.receiverId+'"]').closest('.media-body').find('p').html('{NO_MESSAGE_FOUND}');
+                  }
+
+               },'json');
+
+               swal("done!", "{YOUR_MESSAGE_HAS_BEEN_DELETED}.", "success");
+
+            }
+         });
+      });
+
+      $(document).ready(function(){ resizeContent(); }); $(window).resize(function() { resizeContent(); }); $(window).resize(function() { resizeContent(); }); function resizeContent() { var headerHeight= $('.navbar-default').height(); var chatHeader= $('.chatbox-head').outerHeight()+42; var chatUserHead= $('.user-intro').outerHeight()+42; var chatFooter= $('.write-msg').height(); var height = $(window).height(); $('div.chat-msgs').css('height',(height-(headerHeight+chatHeader+chatFooter))+'px'); } 
+
+
+   });
+</script>
+<script type="text/javascript">
+   $(document).ready(function(){
+
+      if ($(window).width() < 768) {
+         $(".old-chat-option").click(function(){
+            $(this).closest(".col-sm-5.col-xs-12").hide();
+            $(".section-messagebox .messagebox-pack .current-user-wrap a").closest(".chat-msgbox").show();
+         });
+      }
+      else{
+
+      }
+
+ });
+</script>
+
+<script>
+   $(".chat-msgs.scrollbar").mCustomScrollbar();
+</script>

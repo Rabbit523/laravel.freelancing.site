@@ -1,0 +1,58 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+    <div class="form-body">
+        
+        <div class="form-group">
+            <label for="email" class="control-label col-md-3">User Name: &nbsp;</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="email" id="email" value="%USER_EMAIL%" readonly="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tagline" class="control-label col-md-3">Listing URL: &nbsp;</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="tagline" id="tagline" value="%TAGLINE%" readonly="">
+            </div>
+        </div>
+        <div class="padtop10 flclear"></div>
+        <div class="form-group">
+            <label class="control-label col-md-3"><font color="#FF0000">*</font>Comments: &nbsp;</label>
+            <div class="col-md-9">
+                <textarea class="ckeditor form-control textarea-bg" name="comments" id="comments" data-error-container="#editor_error" style="display: none;">%COMMENTS%</textarea>
+                <div id="editor_error"></div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">$(function (e) {
+                loadCKE("comments");
+            
+            });
+        </script>
+        
+        <div class="form-group">
+            <label class="control-label col-md-3">Status: &nbsp;</label>
+            <div class="col-md-4">
+                <div class="radio-list" data-error-container="#form_2_Status: _error">
+                    <label class="radio-inline">
+                        <input class="radioBtn-bg required" id="y" name="isActive" type="radio" value="y" %STATIC_A%>
+                        Active</label>
+                    <label class="radio-inline">
+                        <input class="radioBtn-bg required" id="n" name="isActive" type="radio" value="n" %STATIC_D%>
+                        Inactive</label>
+                    <span for="status" class="help-block"></span> </div>
+                <div id="form_2_Status: _error"></div>
+            </div>
+        </div>
+
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="type" id="type" value="%TYPE%">
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="id" id="id" value="%ID%">
+        <div class="padtop20"></div>
+    </div>
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <button type="submit" name="submitAddForm" class="btn green" id="submitAddForm">Submit</button>
+            <button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+        </div>
+    </div>
+</form>

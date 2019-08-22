@@ -1,0 +1,204 @@
+<!-- Page Content -->
+<section class="main-dashboard">
+    <div class="container">
+        <div class="profile">
+            <div class="featurette-job">
+                <div class="sub_featured">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="ctm-received-proposal-wrap">
+                                <div class="panel panel-default theme-box">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">{RECEIVED_PROPOSAL}</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="ctrp-job-title"><a href="#">Compare the experience level to your</a></h3>
+                                        <ul class="ctrp-lists liststyle-none clearfix received_jobbid">
+                                            %FREELANCERS%
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                          <?php /*  <div class="theme-form">
+                              <div class="job_feed_heading">
+                                  <h1 class="main-heading">
+                                      {RECEIVED_PROPOSAL}
+                                  </h1>
+                              </div>
+                              <ul class="dash-job received_jobbid">
+                                  %FREELANCERS%
+                              </ul>
+                            </div> */ ?>
+                            <input type="hidden" name="bid_id" id="bid_id" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.container -->
+<div class="modal fade" id="delete" role="dialog" data-backdrop="static" tabindex="-1">
+   <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+               &times;
+            </button>
+            <h4 class="modal-title">
+                {BID_ACCEPTED}
+            </h4>
+         </div>
+         <div class="modal-body">
+            <form>
+               <p>
+                  {THE_BID_HAS_BEEN_ACCEPTED}
+               </p>
+            </form>
+         </div>
+         <div class="modal-footer">
+            <div class="footer-btn stay_here" data-dismiss="modal">
+               <a class="btn btn-secondary" href="javascript:void(0)">{STAY_HERE}</a>
+            </div>
+            <div class="footer-btn service_delete" data-dismiss="modal">
+               <a  href="{SITE_URL}workroom/%JOB_SLUG%" class="go_workroom btn btn-primary">{FSO_WORKROOM}</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade" id="delete_rej" role="dialog" data-backdrop="static" tabindex="-1">
+   <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+               &times;
+            </button>
+            <h4 class="modal-title">
+                {BID_REJECTED}
+            </h4>
+         </div>
+         <div class="modal-body">
+            <form>
+               <p>
+                  {ARE_YOU_SURE_YOU_WANT_TO_REJECT_THIS_BID}
+               </p>
+            </form>
+         </div>
+         <div class="modal-footer">
+            <div class="footer-btn " data-dismiss="modal">
+               <a class="btn btn-secondary" href="javascript:void(0)">{FD_CANCEL}</a>
+            </div>
+            <div class="footer-btn  service_delete" data-dismiss="modal">
+               <a href="javascript:void(0)" class="bidReject btn btn-primary">{OKAY_LABEL}</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade" id="mdl_hire_user" role="dialog" data-backdrop="static" tabindex="-1">
+   <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+               &times;
+            </button>
+            <h4 class="modal-title">
+                {HIRE_FREELANCER_LABEL}
+            </h4>
+         </div>
+         <div class="modal-body">
+            <form>
+               <p>
+                  {ARE_YOU_SURE_YOU_WANT_TO_HIRE_THIS_FREELANCER}?
+               </p>
+            </form>
+         </div>
+         <div class="modal-footer">
+            <div class="footer-btn " data-dismiss="modal">
+              <a class="btn btn-secondary" href="javascript:void(0)">{FD_CANCEL}</a>
+            </div>
+            <div class="footer-btn " data-dismiss="modal">
+              <a href="javascript:void(0)" class="hire_confirm btn btn-primary">{OKAY_LABEL}</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script type="text/javascript">
+    url="{SITE_URL}ajaxProposal";
+    $(document).ready(function($)
+    {
+      $(".expand_div_toggle").click(function()
+      {
+         $(this).next().slideToggle("slow");
+
+          if ($(".expand_div_toggle").text() == "More")
+          {
+            $(".expand_div_toggle").html("Less")
+          }
+          else
+          {
+            $(".expand_div_toggle").text("More")
+          }
+      });
+
+      $(document).on("click",".accept_bid",function(e){
+        var a = $(this).attr('data-id');
+        addOverlay();
+        $.post(url,{'action':'acceptBid','id':a},function(data){
+          removeOverlay();
+        },'json');
+        $('#delete').modal("show");
+
+      });
+
+      $(document).on("click",".reject_bid",function(e){
+        var a = $(this).attr('data-id');
+        $('#bid_id').val(a);
+        $('#delete_rej').modal("show");
+      });
+
+      $(document).on("click",".go_workroom",function(e){
+          window.location.href="{SITE_URL}job/workroom/%JOB_SLUG%";
+      });
+
+      $(document).on("click",".hire_freelancer",function(e){
+          var id =  $(this).attr('data-id');
+          $('#bid_id').val(id);
+          $('#mdl_hire_user').modal("show");
+      });
+
+      $(document).on("click",".hire_confirm",function(e){
+          bid_id = $('#bid_id').val();
+
+          addOverlay();
+          $.post(url,{'action':'hire_freelancer_act','bid_id':bid_id},function(data){
+
+            if(data.status=="insuff"){
+              window.location.href = "{SITE_URL}c/wallet";
+            }
+            else{
+              removeOverlay();
+              location.reload();
+            }
+          },'json');
+      });
+
+      $(document).on("click",".stay_here",function(e){
+          window.location.href="{SITE_URL}proposals/%JOB_SLUG%";
+      });
+      $(document).on("click",".bidReject",function(e){
+            id = $('#bid_id').val();
+            $.post(url,{'action':'rejectBid','id':id},function(data){
+            },'json');
+            window.location.href="{SITE_URL}proposals/%JOB_SLUG%";
+      });
+    });
+</script>

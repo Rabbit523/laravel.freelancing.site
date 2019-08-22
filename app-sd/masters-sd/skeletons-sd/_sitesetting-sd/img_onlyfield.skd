@@ -1,0 +1,1 @@
+<img src="%SRC%" class="%CLASS%" id="%ID%" alt="%ALT%" width="%WIDTH%" height="%HEIGHT%" %EXTRA% >

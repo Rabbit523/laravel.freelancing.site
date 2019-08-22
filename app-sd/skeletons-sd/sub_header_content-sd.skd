@@ -1,0 +1,76 @@
+<section class="dashboard-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- sidenav mobile view -->
+                <div class="tablet-view">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn">&times;</a>
+                        <ul class="dashboard-navbar">
+                            <li class="%PROFILE_ACTIVE%">
+                                <a href="{SITE_URL}f/profile">Dashboard</a>
+                            </li>
+                            <li class="%REVIEW_ACTIVE%">
+                                <a href="{SITE_URL}f/review">{NAV_MY_REVIEW_LBL}</a>
+                            </li>
+                            <li class="%INVITATION_ACTIVE%">
+                                <a href="{SITE_URL}job-invitations">{NAV_RECEIVED_INV_LBL}</a>
+                            </li>
+                            <li class="%FINANCIAL_ACTIVE%">
+                                <a href="{SITE_URL}financial-dashboard">{NAV_FINANCIAL_DASHBOARD_LBL}</a>
+                            </li>
+                            <li class="%CREDIT_ACTIVE%">
+                                <a href="{SITE_URL}creditPlan">{NAV_CREDIT_PACKAGE_LBL}</a>
+                            </li>
+                            <li class="%JOB_ACTIVE%">
+                                <a href="{SITE_URL}my-jobs">{JOBS_SORTING_LBL}</a>
+                            </li>
+                            <li class="%SERVICE_ACTIVE%">
+                                <a href="{SITE_URL}f/services-order">{FMS_POSTED_SERVICES}</a>
+                            </li>
+                            <li class="%POSTED_SERVICE_ACTIVE%">
+                                <a href="{SITE_URL}my-services">{NAV_MY_SERVICES_LBL}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dashboard-btn">
+                        <a href="javascript:void(0)" id="dashboardMenu" class="btn btn-bar btn-primary">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <h4>Dashboard</h4>
+                    </div>
+                </div>
+                <!-- sidenav mobile view -->
+
+                <ul class="dashboard-navbar tablet-hide">
+                    <li class="%PROFILE_ACTIVE%">
+                        <a href="{SITE_URL}f/profile">Dashboard</a>
+                    </li>
+                    <li class="%JOB_ACTIVE%">
+                        <a href="{SITE_URL}my-jobs">{JOBS_SORTING_LBL}</a>
+                    </li>
+                    <li class="%SERVICE_ACTIVE%">
+                        <a href="{SITE_URL}f/services-order">{NAV_SERVICE_ORDER_LBL}</a>
+                    </li>
+                    <li class="%POSTED_SERVICE_ACTIVE%">
+                        <a href="{SITE_URL}my-services">{FMS_POSTED_SERVICES}</a>
+                    </li>
+                    <li class="%INVITATION_ACTIVE%">
+                        <a href="{SITE_URL}job-invitations">{NAV_RECEIVED_INV_LBL}</a>
+                    </li>
+                    <li class="%REVIEW_ACTIVE%">
+                        <a href="{SITE_URL}f/review">{NAV_MY_REVIEW_LBL}</a>
+                    </li>
+                    <li class="%FINANCIAL_ACTIVE%">
+                        <a href="{SITE_URL}financial-dashboard">{NAV_FINANCIAL_DASHBOARD_LBL}</a>
+                    </li>
+                    <li class="%CREDIT_ACTIVE%">
+                        <a href="{SITE_URL}creditPlan">{NAV_CREDIT_PACKAGE_LBL}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+<div class="media">
+	<div class="media-body">
+		<div class="msg-inner-detail %CLASS%">
+			<p class="conversion">
+				%MESSAGES%
+				
+			</p>
+			<span class="msg-date">
+				<b>%USER_NAME%</b> %TIME%
+			</span>
+		</div>
+	</div>
+</div>

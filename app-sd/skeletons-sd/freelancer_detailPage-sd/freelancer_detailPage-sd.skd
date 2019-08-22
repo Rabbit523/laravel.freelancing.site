@@ -1,0 +1,492 @@
+<section class="main-dashboard">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dashboard-wrap freelancer-details-profile">
+                    %PERSONAL_DETAIL%
+                    <!-- <div class="row">
+                        <div class="col-md-12">
+                            <div class="personal-dashboard-wrap">
+                                <div class="box box-primary theme-box">
+                                    <div class="box-body ">
+                                        <div class="profile-before-edit media">
+                                            <div class="media-left">
+                                                <div class="user-switch-wrap">
+                                                    <div class="user-avatar-wrap">
+                                                        <div class="user-avatar">
+                                                            <img src="%USER_IMG%" class="preview_profile">
+                                                        </div>
+                                                    </div>
+                                                    <div class="invite-wrap">
+                                                        <a href="" class="btn btn-primary btn-block btn-bordered">Invite</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="user-details-wrap">
+                                                    <div class="personal-details-wrap">
+                                                        <div class="user-title-wrap">
+                                                            <h3 class="user-name">Vishal Patel</h3>
+                                                            <div class="star-ratings-sprite">
+                                                                <span style="width:80%" class="star-ratings-sprite-rating"></span>
+                                                            </div>
+                                                            <ul class="user-since-detail liststyle-none">
+                                                                <li>Member since 12 February,2019</li>
+                                                                <li>Last Seen 5 hours ago</li>
+                                                            </ul>
+                                                            <div class="user-profile-action">
+                                                                <div class="save_PickGeeks">
+                                                                    <a href="#" class="save_freelancer" data-slug="%DATA_SLUG%" title="Save">
+                                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="Report_PickGeeks">
+                                                                    <a href="javascript:void(0)" class="report_user_check" data-slug="%DATA_SLUG%" title="Report">
+                                                                        <i class="fa fa-flag-o" aria-hidden="true"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="user-location-detail liststyle-none">
+                                                            <li><span><i class="fa fa-map-marker"></i></span>Rajkot, Gujarat, India</li>
+                                                            <li><span><i class="fa fa-briefcase"></i></span>Manager - Business Intelligence and Optimization</li>
+                                                            <li><span><i class="fa fa fa-bookmark"></i></span>Beginner</li>
+                                                            <li><span><i class="fa fa-share-alt"></i></span><a href="">http://192.168.5.6/pickgeeks_yousef/f/profile/vkpatel-f</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="work-detail-wrap">
+                                                        <ul class="work-detail-total liststyle-none">
+                                                            <li>Completed Jobs : <span>0</span></li>
+                                                            <li>Sold Services : <span>0</span></li>
+                                                            <li>Earned : <span class="kwdamount">240<sub>KWD</sub></span></li>
+                                                            <li>Response Time : <span>10 Minute(s)</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="row">
+                        <div class="col-md-3">
+                            <div class="dashboard-sidebar">
+                                <div class="box box-primary theme-box ">
+                                    <div class="box-body">
+                                        <div class="myskills-box">
+                                            <h4 class="skills-title">{MY_SKILL_BTN_LBL}</h4>
+                                            <ul class="skills-list clearfix">
+                                                %SKILL_LIST%
+                                            </ul>
+                                        </div>
+                                        <div class="myskills-box">
+                                            <h4 class="skills-title">{MY_LANG_BTN_LBL}</h4>
+                                            <ul class="skills-list">
+                                               %LANG_LIST%
+                                            </ul>
+                                        </div>
+                                        <div class="myskills-box">
+                                            <h4 class="skills-title">{F_CAT_LBL}</h4>
+                                            <ul class="skills-list">
+                                                %SUBCAT_LIST%
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">{OVERVIEW_LBL}</h3>
+                                    <div class="box-tools pull-right">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#overview"></a>
+                                    </div>
+                                </div>
+                                <div id="overview" class="panel-collapse collapse in" >
+                                    <div class="box-body" >
+                                        <p>%OVERVIEW%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Video</h3>
+                                    <div class="box-tools pull-right">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#our-video"></a>
+                                    </div>
+                                </div>
+                                <div id="our-video" class="panel-collapse collapse in" >
+                                    <div class="box-body" >
+                                        %VIDEO_IFRAME%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sawlii-tabs-wrap">
+                                <ul class="nav nav-tabs">
+                                   <li class="active"><a data-toggle="tab" href="#tab_1" aria-expanded="true">{NAV_MY_SERVICES_LBL}</a></li>
+                                    <li><a data-toggle="tab" href="#tab_2" aria-expanded="false">{FD_PORTFOLIO}</a></li>
+                                    <li><a data-toggle="tab" href="#tab_3" aria-expanded="false">{FD_EDUCATION_DETAILS}</a></li>
+                                    <li><a data-toggle="tab" href="#tab_4" aria-expanded="false">{FD_CERTIFICATIONS}</a></li>
+                                    <li><a data-toggle="tab" href="#tab_5" aria-expanded="false">{FD_EXPERIENCE}</a></li>
+                                    <li><a data-toggle="tab" href="#tab_6" aria-expanded="false">{FD_REVIEWS}</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab_1">
+                                        <div class="panel panel-default theme-box no-bg no-padding">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">{FD_SERVICES}</h4>
+                                            </div>
+                                            <div class="panel-body">
+                                                %MY_SERVICES%
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab_2">
+                                        <div class="panel panel-default theme-box no-bg no-padding">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">{FD_PORTFOLIO}</h4>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="fl-portfolio ">
+                                                    %PORTFOLIO_SECTION%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab_3">
+                                        <div class="panel panel-default theme-box no-bg no-padding">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">{EDUCATION_TITLE}</h4>   
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="fl-edu">
+                                                     %EDUCATION_DETAIL%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab_4">
+                                        <div class="panel panel-default theme-box no-bg no-padding">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">{FD_CERTIFICATIONS}</h4>
+                                            </div>
+                                            <div class="panel-body">
+                                                <ul class="fl-certi">
+                                                    %CERTIFICATION_DETAIL%
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab_5">
+                                        <div class="panel panel-default theme-box no-bg no-padding">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">{FD_EXPERIENCE}</h4>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="fl-experience">
+                                                    %EXP_DETAIL%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab_6">
+                                        <div class="panel panel-default theme-box no-bg no-padding">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">{FD_REVIEWS}</h4>
+                                                <div class="panel-tools pull-right">
+ <a href="{SITE_URL}f/profile" class="addRecord">{VIEW_ALL_REVIEWS_LBL}<i class="fa fa-angle-right"></i></a>
+                                                   
+<!-- <a href="{SITE_URL}f/review/%SLUG%" class="addRecord">{VIEW_ALL_REVIEWS_LBL}<i class="fa fa-angle-right"></i></a>-->
+                                                </div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <ul class="fl-avg-review clearfix">
+                                                    <li class="fl-avg-review-item">
+                                                      <label>{PUNCTUALITY_LBL}</label>
+                                                      <div class="star-ratings-sprite">
+                                                          <span style="width:%PUN_REVIEW%%" class="star-ratings-sprite-rating"></span>
+                                                      </div>
+                                                    </li>
+                                                    <li class="fl-avg-review-item">
+                                                      <label>{WORK_CLARIFICATION_LBL}</label>
+                                                      <div class="star-ratings-sprite">
+                                                          <span style="width:%WORK_REVIEW%%" class="star-ratings-sprite-rating"></span>
+                                                      </div>
+                                                    </li>
+                                                    <li class="fl-avg-review-item">
+                                                      <label>{COMMUNICATION_LBL}</label>
+                                                      <div class="star-ratings-sprite">
+                                                          <span style="width:%COMM_REVIEW%%" class="star-ratings-sprite-rating"></span>
+                                                      </div>
+                                                    </li>
+                                                    <li class="fl-avg-review-item">
+                                                      <label>{WORK_QUALITY_LBL}</label>
+                                                      <div class="star-ratings-sprite">
+                                                          <span style="width:%QUAT_REVIEW%%" class="star-ratings-sprite-rating"></span>
+                                                      </div>
+                                                    </li>
+                                                    <li class="fl-avg-review-item">
+                                                      <label>{EXPERTISE_LBL}</label>
+                                                      <div class="star-ratings-sprite">
+                                                          <span style="width:%EXP_REVIEW%%" class="star-ratings-sprite-rating"></span>
+                                                      </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Page Content -->
+<? /*<section class="main-dashboard">
+   <div class="container">
+      <div class="profile freelancer-profile public-profile">
+        <div class="theme-form">
+         <div class="row">
+            <div class="col-md-9 col-md-push-3 col-sm-8 col-sm-push-4">
+               %PERSONAL_DETAIL%
+            </div>
+            <div class="col-md-3 col-md-pull-9 col-sm-4 col-sm-pull-8">
+              <div class="basic-info desktop-img">
+                <div class="profile-img">
+                   <img src="%USER_IMG%" class="preview_profile">
+                   <span class="camera">
+                    <input type="file" name="profile_image" id="profile_image" class="inputfile inputfile-1" >
+                  </span>
+                </div>
+                <div class="invite_PickGeeks %OWNER_LOGIN%">
+                  <a href="#" data-toggle="modal" data-target="#invite_user">
+                     {FD_INVITE}
+                  </a>
+               </div>
+              </div>
+              <div class="skills %SKILL_CLASS%">
+                <h3>
+                  {MY_SKILL_BTN_LBL}
+                </h3>
+                <ul class="skill_listing">
+                  <!-- %SKILL_LIST% -->
+                  %SKILL_LIST%
+                  <!-- <li>
+                    <p>Web Designers 
+                      <a href="javascript:void(0);" data-id="28" data-item-type="skill" class="delete_data" title="delete">
+                        <img src="{SITE_IMG}icon/cancel.png" alt="">
+                      </a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>Graphic Designers 
+                      <a href="javascript:void(0);" data-id="28" data-item-type="skill" class="delete_data" title="delete">
+                        <img src="{SITE_IMG}icon/cancel.png" alt="">
+                      </a>
+                    </p>
+                  </li> -->
+                </ul>
+              </div>
+              <div class="skills %LANG_CLASS%">
+                 <h3>
+                    {MY_LANG_BTN_LBL}
+                 </h3>
+                 <ul class="skill_listing">
+                    <!-- %LANG_LIST% -->
+                    %LANG_LIST%
+                    <!-- <li>
+                      <p>English - Conversational 
+                        <a href="javascript:void(0);" data-id="3" data-item-type="lang" class="delete_data" title="delete">
+                          <img src="{SITE_IMG}icon/cancel.png" alt="">
+                        </a>
+                      </p>
+                    </li>
+                    <li>
+                      <p>Hindi - Conversational 
+                        <a href="javascript:void(0);" data-id="3" data-item-type="lang" class="delete_data" title="delete">
+                          <img src="{SITE_IMG}icon/cancel.png" alt="">
+                        </a>
+                      </p>
+                    </li> -->
+                  </ul>
+              </div>
+              <div class="skills">
+                 <h3>Category</h3>
+                 <div class="subcategory">
+                    <ul class="skill_listing">
+                      %SUBCAT_LIST%
+                      <!-- <li>
+                        <p>Ecommerce Development 
+                            <a href="javascript:void(0);" data-id="2" data-item-type="subcat" class="delete_data" title="delete"> 
+                                <img src="{SITE_IMG}icon/cancel.png" alt="">
+                            </a>
+                        </p>
+                      </li>
+                      <li>
+                        <p>Web Development
+                            <a href="javascript:void(0);" data-id="2" data-item-type="subcat" class="delete_data" title="delete"> 
+                                <img src="{SITE_IMG}icon/cancel.png" alt="">
+                            </a>
+                        </p>
+                      </li> -->
+                   </ul>
+                 </div>
+              </div>
+              <div class="skills">
+               <h3>Video</h3>
+               <div class="%VIDEO_CLASS%">
+                 <div class="add_video">
+                    <iframe width="100%" height="170" src="%VIDEO_LINK%">
+                    </iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
+       </div>
+      </div>
+   </div>
+</section>
+*/ ?>
+%SHARE_LINK_MODAL%
+<script>
+$(document).ready(function(){
+
+    getAccordion("#dasTabs",992);
+    
+  $('body').on('hidden.bs.modal', '.modal', function () {
+    $(this).removeData('bs.modal');
+  });
+
+
+
+  var url = "{SITE_URL}AjaxPublicFprofile";
+
+  $(document).on("click",".save_freelancer",function(){
+    $(this).find('i').removeClass("fa fa-heart-o").addClass("fa fa-heart");
+    var slug = $(this).attr("data-slug");
+    $.post(url,{"action":"saveFreelancer","slug":slug},function(data){
+      if(data.type=="error")
+      {
+         window.location.href = "{SITE_URL}SignIn";
+         toastr[data.type](data.msg);
+      }
+      else
+      {
+         toastr[data.type](data.msg);
+      }
+    },'json');
+  });
+
+  $(document).on("click","#reportUser",function(){
+
+       $("#reportFrm").validate({
+          ignore: [],
+          errorClass: 'help-block',
+          errorElement: 'label',
+          normalizer: function(value) {
+                   return $.trim(value);
+                  },
+          highlight: function (element)
+          {
+              $(element).closest('.form-group').addClass('has-error');
+          },
+          unhighlight: function (element)
+          {
+              $(element).closest('.form-group').removeClass('has-error');
+          },
+          rules:
+          {
+                report_reason:{
+                  required:true,
+                   normalizer: function(value) {
+                         value = value.replace("something", "new thing");
+                         return $.trim(value);
+                   }
+                }
+           },
+          messages:
+          {
+                report_reason:{required:"Please enter report reason"}
+           },
+      });
+
+       if($("#reportFrm").valid())
+       {
+           addOverlay();
+           $("#reportFrm").submit();
+       }
+  });
+
+  $(document).on("click","#inviteUser",function(){
+
+       $("#inviteFrm").validate({
+          ignore: [],
+          errorClass: 'help-block',
+          errorElement: 'label',
+          highlight: function (element)
+          {
+              $(element).closest('.form-group').addClass('has-error');
+          },
+          unhighlight: function (element)
+          {
+              $(element).closest('.form-group').removeClass('has-error');
+          },
+          rules:
+          {
+                jobId:{required:true}
+           },
+
+          messages:
+          {
+                jobId:{required:"Please select job"}
+           },
+      });
+
+       if($("#inviteFrm").valid())
+       {
+           addOverlay();
+           $("#inviteFrm").submit();
+       }
+  });
+
+  $(document).on("click",".report_user_check",function(){
+    var s = $(this).attr("data-slug");
+    $.post(url,{"action":"check_report",s:s},function(data){
+        if(data.content == 'modal')
+        {
+          $("#report_PickGeeks").modal("show");
+        }
+        else
+        {
+          window.location.href = "{SITE_URL}SignIn";
+        }
+    },'json');
+  });
+
+  /*Add to favourite */
+   $(document).on("click",".save_service",function(){
+      $(this).find('i').removeClass("fa fa-heart-o").addClass("fa fa-heart");
+      var id = $(this).attr("data-id");
+      $.post(url,{"action":"saveServices","id":id,"fId":"%FREELANCER_ID%"},function(data){
+         if(data.type == 'error')
+         {
+            window.location.href = "{SITE_URL}SignIn";
+            toastr[data.type](data.msg);
+         }
+         else
+         {
+            toastr[data.type](data.msg);
+         }
+      },'json');
+   });
+});
+</script>

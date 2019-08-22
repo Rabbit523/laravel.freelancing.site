@@ -1,0 +1,136 @@
+<form id="frmCP" name="frmCP" method="post" action="" autocomplete="off" class="form-horizontal form-label-left">
+    <div class="form-body"><div class="flclear clearfix"></div>
+        <!-- <input type="hidden" name="passvalue" id="passvalue" value="%PASS_VALUE%"> -->
+        <div class="form-group">
+            <label for="page_id" class="control-label col-md-3"><font color="#FF0000">*</font>Select PageId: &nbsp;</label>
+            <div class="col-md-4">
+                <select name="page_id" id="page_id" class="form-control">
+                    %PAGE_ID%
+                </select>  
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tab_constant" class="control-label col-md-3"><font color="#FF0000">*</font>Enter Tab Constant: &nbsp;</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control logintextbox-bg required" name="tab_constant" id="tab_constant" value="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tab_name" class="control-label col-md-3"><font color="#FF0000">*</font>Enter Tab name: &nbsp;</label>
+            <div class="col-md-4">
+              <input type="text" class="form-control logintextbox-bg required" name="tab_name" id="tab_name" value="">
+            </div>
+        </div>
+        <div class="form-group main_wrapper">
+            <div class="field_wrapper">
+            <label for="constant" class="control-label col-md-3"><font color="#FF0000">*</font>Enter Constant: &nbsp;</label>
+                <div class="col-md-2">
+                    <input type="text" class="form-control logintextbox-bg required" name="field_constant[]" id="constant1" value="">
+                </div>
+            <label for="value" class="control-label col-md-3"><font color="#FF0000">*</font>Enter value: &nbsp;</label>
+            <div class="col-md-2">
+                <input type="text" class="form-control logintextbox-bg required" name="field_value[]" id="constVal" value="">
+            </div>
+            <a class="add_button" title="Add field"><img src="{SITE_ADM_IMG}add-icon.png"/></a>
+            </div>
+        </div>
+       <!--  <div class="form-group">
+            <label for="value" class="control-label col-md-3"><font color="#FF0000">*</font>Enter value: &nbsp;</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control logintextbox-bg required" name="value" id="value" value="">
+            </div>
+        </div> -->
+        <div class="padtop20"></div>
+    </div>
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <button type="submit" name="submitChange" id="submitChange" class="btn green" >Submit</button>
+            <button type="button" name="cn" class="btn default" id="cn" onclick="location.href = '<?php echo SITE_ADM_MOD; ?>home-sd/'">Cancel</button>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+<script>
+
+$(document).ready(function()
+{
+    /*var maxField = 10;*/
+    var id=2;
+    var addButton = $('.add_button'); 
+
+    var wrapper = $('.field_wrapper'); 
+
+    var mainwrapper = $('.main_wrapper'); 
+
+
+    var fieldHTML = '<div class="mainclass"><label for="constant" class="control-label col-md-3"><font color="#FF0000">*</font>Enter Constant: &nbsp;</label><div class="col-md-2"><input class="form-control logintextbox-bg required" type="text" name="field_constant[]" value="" id="constant'+id+'"/></div><label for="constant" class="control-label col-md-3"><font color="#FF0000">*</font>Enter value: &nbsp;</label><div class="col-md-2"><input class="form-control logintextbox-bg required" type="text" name="field_value[]" value="" id="constVal"/></div><a class="remove_button" title="Remove field"><img src="{SITE_ADM_IMG}remove-icon.png" style="margin-top:14px;"/></a></div>';  
+
+    var x = 1; 
+    $(addButton).click(function(){ 
+       /* if(x < maxField)
+        {
+            x++; */
+            $(wrapper).append(fieldHTML); 
+            id++;
+        /*}*/
+    });
+     
+    $(document).on("blur","input",function(e){ 
+        var constantChk=$(this).val();
+        var constantId=$(this).attr('id');
+        var url = '<?php echo SITE_ADM_MOD;?>add_constant-sd/ajax.add_constant-sd.php';
+
+        if(constantId!="tab_constant" && constantId!="tab_name" && constantId!="constVal"){
+
+            $.ajax({
+                  type: "POST",
+                  url: url,
+                  data:{
+                        action: "chkConstant",
+                        constantVal: constantChk
+                    },
+                success: function(resultData){
+                    if(resultData==200){
+                        /*$("#constantId").val("");*/
+                        $('#'+constantId).val('');
+                        toastr["error"]("This constant already exist");
+                        
+                    }
+                   }
+            });
+        }
+
+       
+    });
+
+        $(wrapper).on('click', '.remove_button', function(e){ 
+            e.preventDefault();
+            /*alert($(this).parent('div').attr("class"));*/
+            $(this).parent('div').remove(); 
+            x--; 
+        });
+
+        $(document).on("Click","#ra",function(){ 
+             $(this).parent('mainwrapper').remove(); 
+        });
+
+        
+});
+
+
+
+</script>
+<style type="text/css">
+    .remove_button
+{ 
+    
+}
+  .mainclass
+{ 
+    margin-top:14px; 
+}
+</style>

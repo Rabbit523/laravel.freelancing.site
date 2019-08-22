@@ -1,0 +1,204 @@
+<section class="inner-section signup-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="sign-form">
+                    <div class="theme-form">
+                        <div class="sign_up_main">
+                            <div class="sign_up_header">
+                                <h3>
+                                    {SIGNUP_HEADING}
+                                </h3>
+                            </div>
+                            <div class="sign_up_form">
+                                <div class="sign_social">
+                                    <a href="javascript:void(0)" onclick="facebookLogin('%USRE_TYPE%')" class="social-facebook" title="Facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="javascript:void(0)" id="login_google2" class="customGPlusSignIn social-google" data-user-type="%USRE_TYPE%" title="Google">
+                                        <i class="fa fa-google"></i>
+                                    </a>
+                                </div>
+                                <form class="form" method="post" action = "{SITE_MOD}signup-sd/index.php" name="signUpFrm" id="signUpFrm">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-sm-12 right">
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" name="firstName" id="firstName" placeholder="{SIGNUP_LBL_FIRST_NAME}"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-12 left">
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" name="lastName" id="lastName" placeholder="{SIGNUP_LBL_LAST_NAME}"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control location" name="location" id="location" placeholder="{SIGNUP_LBL_LOCATION}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="userName" id="userName" placeholder="{SIGNUP_LBL_USERNAME}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="{SIGNUP_LBL_EMAIL}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="pwd" id="pwd" placeholder="{SIGNUP_LBL_PWD}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="cpwd" id="cpwd" placeholder="{SIGNUP_LBL_CPWD}"/>
+                                    </div>
+                                   
+                                    <div class="row">
+                                       <!--  <div class="col-md-12">
+                                            <div id="RecaptchaField1" class="g-recaptcha">
+                                            </div>
+                                        </div>  -->
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="g-recaptcha" data-sitekey="{RECAPTCHA_KEY}"></div>
+                                            <div class="form-group">
+                                                 <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="userType" id="userType" value="%USRE_TYPE%">
+                                    </div>
+                                    <label class="signin-check">{SIGNUP_LBL_NEWSLETTER}
+                                        <input type="checkbox" name="subscribe" id="term3">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="signin-check">{I_AGREE_TO_ALL} <a href="{SITE_URL}content/terms-and-conditions">{TERMS_CONDITIONS}</a> {AND_LABEL} <a href="{SITE_URL}content/privacy-policy">{PRIVACY_POLICY}</a>.
+                                        <input type="checkbox" name="terms" id="term4" class="ipAgree">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="lbl_agree_error"></label>
+                                    <div class="get_started">
+                                        <button type="submit" name="submitAddData" id="submitAddData" class="btn btn-block btn-system">{GET_STARTED}</button>
+                                        <input type="hidden" name="action" id="action" value="submitAddForm">
+                                    </div>
+                                </form>
+                            </div>
+                            <? php /* <div class="col-sm-6">
+                                <div class="signin-mockup">
+                                    <img src="{SITE_IMG}signup.png" alt="">
+                                </div> */ ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+$(document).ready(function(){
+
+
+    $(document).on('focus','#location',function(){
+        var places = document.getElementById('location');
+        var option = {};
+        autocomplete= new google.maps.places.Autocomplete(places,option);
+    });
+
+    jQuery.validator.addMethod("alphanumeric", function(value, element)
+    {
+            return this.optional(element) || /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/.test(value);
+    }, "{ONLY_LETTERS_ARE_ALLOWED}");
+
+
+    jQuery.validator.addMethod("properNumber", function(value, element, param) {
+                    var reg = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+                       return reg.test(value);
+                }, "{PLEASE_ENTER_A_VALID_EMAIL_ADDRESS}");
+
+    jQuery.validator.addMethod("spaceNotAllow", function(value, element)
+    {
+        return this.optional(element) || /^\S*$/.test(value);
+    }, "{SPACE_IS_NOT_ALLOWED}");
+
+    jQuery.validator.addMethod("startingSpaceNotAllow", function(value, element)
+    {
+        return this.optional(element) || /^\S.*$/.test(value);
+    }, "{SPACE_IS_NOT_ALLOWED}");
+
+     $(document).on('click', '#submitAddData', function (e) {
+
+        $("#signUpFrm").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'label',
+            highlight: function (element)
+            {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element)
+            {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            rules:
+            {
+                firstName:{required:true,minlength:2,alphanumeric:true},
+                lastName:{required:true,minlength:2,alphanumeric:true},
+                userName:{required:true,minlength:2,
+                    normalizer: function(value) {
+                        value = value.replace("something", "new thing");
+                        return $.trim(value);
+                      },remote: '<?php echo SITE_MOD.'signup-sd/ajax.signup-sd.php';?>'
+                },
+                /*captcha:{required:true,maxlength:5},*/
+                email:{required:true,email:true,properNumber:true,remote: '<?php echo SITE_MOD.'signup-sd/ajax.signup-sd.php';?>'},
+                location:{required:true, startingSpaceNotAllow:true},
+                pwd:{required:true, minlength:6},
+                cpwd:{required:true,equalTo: "#pwd"},
+                hiddenRecaptcha:
+                {
+                 required: function()
+                  {
+                    if(grecaptcha.getResponse() == '')
+                    {
+                         return true;
+                    } else
+                    {
+                         return false;
+                    }
+                  }
+                }
+
+             },
+
+            messages:
+            {
+                firstName:{required:"{PLEASE_ENTER_FIRST_NAME}", minlength:"{CP_PLEASE_ENTER_AT_LEAST_CHARACTERS}",alphanumeric:"{CP_PLEASE_ENTER_VALID_FIRST_NAME}"},
+                lastName:{required:"{CP_PLEASE_ENTER_LAST_NAME}", minlength:"{CP_PLEASE_ENTER_AT_LEAST_CHARACTERS}",alphanumeric:"{CP_PLEASE_ENTER_VALID_LAST_NAME}"},
+                userName:{required:"{PLEASE_ENTER_USER_NAME}", minlength:"{CP_PLEASE_ENTER_AT_LEAST_CHARACTERS}",remote:"{USERNAME_ALREADY_EXIST}"},
+                /*captcha:{required:"Please enter captcha code", maxlength:"Please enter only 5 digits"},*/
+                email: { required:"{PLEASE_ENTER_EMAIL_ADDRESS}", email:"{PLEASE_ENTER_A_VALID_EMAIL_ADDRESS}",remote:"{EMAIL_ALREADY_EXIST}" },
+                location:{required:"Please enter location"},
+                pwd: { required:"{FAS_PLEASE_ENTER_PASSWORD}", minlength:"{MINIMUM_CHARACTERS_REQUIRED}"},
+                cpwd: {required:"{FAS_PLEASE_ENTER_PASSWORD}" ,equalTo:"{PASSWORD_DOESNT_MATCH}" },
+                hiddenRecaptcha: {required:"{PLEASE_ENTER_CAPTCHA_CODE}"}
+            }
+        });
+
+       	if($("#signUpFrm").valid())
+        {
+            if(!$("input[type='checkbox']:checked").val()){
+                $('.lbl_agree_error').html("{KINDLY_AGREE_TO_OUR_TERMS_AND_CONDITIONS}");
+                $('.lbl_agree_error').css("color","#ff0000");
+                return false;
+            }
+            else{
+                $('.lbl_agree_error').html("");
+                return true;
+            }
+            addOverlay();
+            $("#signUpFrm").submit();
+        }
+
+    });
+
+    $(".ipAgree").change(function(){
+    	if(this.checked){
+    		$('.lbl_agree_error').html("");
+    	}
+    });
+});
+</script>

@@ -1,0 +1,11 @@
+<div class="col-md-12 col-sm-12">
+<div class="col-md-10">
+	<h5><b>%FEES_TYPE% ($%PRICE%)</b></h5>
+	<h6>%DESCRIPTION%</h6>
+</div>
+<div class="col-md-2">
+<label for="%FEES_ID%">
+	<input type="checkbox" name="extra_fees[]" id="%FEES_ID%" value="%FEES_ID%" %FEES_CHECK% class="extra_fees_check" placeholder="%PRICE%" disabled="disabled">
+	</label>
+</div>
+</div>

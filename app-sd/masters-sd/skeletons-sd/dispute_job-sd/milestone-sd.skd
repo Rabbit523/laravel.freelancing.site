@@ -1,0 +1,17 @@
+<tr>
+    <th scope="row">
+     	%TITLE%
+    </th>
+    <td>
+      	%DATE%
+    </td>
+    <td>
+   		%DESC%			
+    </td>
+    <td>
+      	%AMOUNT%
+    </td>
+    <td>
+   		<label class="label label-success" style="font-size: 12px;">%STATUS%</label>	
+    </td>
+</tr>

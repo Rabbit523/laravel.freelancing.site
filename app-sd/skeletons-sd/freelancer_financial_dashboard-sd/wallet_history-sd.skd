@@ -1,0 +1,6 @@
+<tr>
+  <td>%TRANSACTOIN_ID%</td>
+  <td>%PAYMENT_STATUS%</td>
+  <td>%DATE%</td>
+  <td>%AMNT%</td>
+</tr>

@@ -1,0 +1,7 @@
+<tr>
+   <td>%SERVICE_TITLE%</td>
+   <td>%PAID_AMOUNT%</td>
+   <td scope="row">%PAYMENT_DATE%</td>
+   <td>%PAYMENT_STATUS%</td>
+</tr>
+                           

@@ -1,0 +1,123 @@
+<li class="flu-search-item pbox">
+    <div class="pbox-body no-padding">
+        <div class="flu-media">
+            <div class="media">
+                <div class="media-left">
+                    <div class="flu-img">
+                        <img src="%IMG%" title="%FREELANCER_NAME%">
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div class="flu-title-wrap">
+                        <h4 class="flu-title">
+                            <a href="{SITE_URL}f/profile/%SLUG%">%FREELANCER_NAME%</a>
+                        </h4>
+                        <span class="flu-level">(%USER_LVL%)</span>
+                    </div>
+                    <div class="star-ratings-sprite">
+                        <span style="width:%RATING%%" class="star-ratings-sprite-rating"></span>
+                    </div>
+                    <div class="flu-details">
+                        <i class="fa fa-map-marker"></i> %LOCATION%
+                    </div>
+                    <ul class="flu-skills clearfix desktop-view">
+                        %SKILLS%
+                    </ul>
+                </div>
+                <span class="like active %SAVE_RIGHTS%">
+                    <a href="javascript:void(0)" class="save_freelancer" data-id="%ID%"><i class="%SAVE_CLASS%"></i></a>
+                </span>
+            </div>
+        </div>
+        <div class="flu-earning">
+            <ul class="extra-info">
+                <li>
+                    <label>{CSF_EARNED} :</label>
+                    <span>%EARNED%</span>
+                </li>
+                <li>
+                    <label>{FP_SOLD_SERVICES} :</label>
+                    <span>%SOLD_SERVICES%</span>
+                </li>
+                <li>
+                    <label>{FP_COMPLETED_JOBS} :</label>
+                    <span>%COMPLETED_JOBS%</span>
+                </li>
+                <li class="%RESPONSE_TIME_CLASS%">
+                    <label>{CSF_RESPONSE_TIME} : </label>
+                    <span>%RESPONSE_TIME%</span>
+                </li>
+                <li>
+                    <label>{FD_PORTFOLIO} :</label>
+                    <span>%PORTFOLIO%</span>
+                </li>
+            </ul>
+        </div>
+        <ul class="flu-skills clearfix mobile-view">
+            %SKILLS%
+        </ul>
+    </div>
+</li>
+
+<?php /*
+<li class="card-block">
+   <div class="like active %SAVE_RIGHTS%">
+      <a href="javascript:void(0)" class="save_freelancer" data-id="%ID%"><i class="%SAVE_CLASS%"></i></a>
+   </div>
+   <div class="media">
+      <div class="pull-left">
+         <div class="posted_service">
+            <img src="%IMG%" title="%FREELANCER_NAME%"/>
+         </div>
+         <div class="star-ratings-sprite">
+            <span style="width:%RATING%%" class="star-ratings-sprite-rating">
+            </span>
+         </div>
+      </div>
+      <div class="media-body">
+         <h4 class="card-title">
+            <a href="{SITE_URL}f/profile/%SLUG%">%FREELANCER_NAME%</a>
+         </h4>
+         <div class="category_subcategory">
+            <span>
+            %PROFESSIONAL_TITLE%
+            </span>
+         </div>
+         <ul class="project-desc list-inline">
+            <li>
+               {FP_COMPLETED_JOBS} : %COMPLETED_JOBS%
+            </li>
+            <li>
+               {FP_SOLD_SERVICES} : %SOLD_SERVICES%
+            </li>
+            <li>
+               {CSF_EARNED} : %EARNED%
+            </li>
+            <li class="%RESPONSE_TIME_CLASS%">
+               {CSF_RESPONSE_TIME} : %RESPONSE_TIME%
+            </li>
+            <li>
+               {FD_PORTFOLIO} : %PORTFOLIO%
+            </li>
+         </ul>
+         <p class="%DESC_CLASS%">
+            %DESC%
+         </p>
+         <ul class="project-desc list-inline">
+            <li class="theme-color">
+               %USER_LVL%
+            </li>
+            <li>
+               <i class="fa fa-globe" aria-hidden="true">
+               </i>
+               %LOCATION%
+            </li>
+         </ul>
+         <div class="services">
+            <ul class="list-inline">
+               %SKILLS%
+            </ul>
+         </div>
+      </div>
+   </div>
+</li> */ ?>

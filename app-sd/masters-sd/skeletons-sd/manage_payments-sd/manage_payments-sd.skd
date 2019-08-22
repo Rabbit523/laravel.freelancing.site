@@ -1,0 +1,150 @@
+<script type="text/javascript">
+    $(function () {
+        OTable = $('#example123').dataTable({
+        "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                "fnServerData": function (sSource, aoData, fnCallback) {
+                    $.ajax({
+                        "dataType": 'json',
+                        "type": "POST",
+                        "url": sSource,
+                        "data": aoData,
+                        "success": fnCallback
+                    });
+                },
+                "aaSorting" : [],
+                "aoColumns": [
+                    { "sName": "id", "sTitle" : 'Content Id', bVisible: false},
+                    { "sName": "firstName", "sTitle" : 'User Name'},
+                    { "sName": "amount", "sTitle" : 'Amount'},
+                    { "sName": "transactionId", "sTitle" : 'Transaction Id'},
+                    { "sName": "walletDate", "sTitle" : 'Payment Date'},
+                    { "sName": "Operation", "sTitle" : 'Operation', bSortable: false, bSearchable: false}
+                   
+                    
+                ],
+                "fnServerParams": function(aoData) {
+                setTitle(aoData, this)
+                aoData.push( { name: "filtering_type", value: $("#filtering_type").val() });
+                },
+                "fnDrawCallback"
+                : function(oSettings) {
+                
+
+            }
+
+    });
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+
+    $.validator.addMethod('pagenm', function (value, element) {
+        return /^[a-zA-Z0-9][a-zA-Z0-9\_\-]*$/.test(value);
+    }, 'Page name is not valid. Only alphanumeric,space and _ are allowed'
+            );
+    
+    $(document).on('click', '#submitAddForm', function (e) {
+        e.preventDefault();
+        for (var instanceName in CKEDITOR.instances) {
+            CKEDITOR.instances[instanceName].updateElement();
+        }
+        
+        $("#frmSubAdminType").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'span',
+            rules: {
+                categoryName: {required: true}
+            },
+            messages: {
+                categoryName: {required: '&nbsp;Please enter Category Name'}
+            },
+            errorPlacement: function (error, element) {
+                if (element.attr("data-error-container")) {
+                    error.appendTo(element.attr("data-error-container"));
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+        
+        if ($("#frmSubAdminType").valid()) {
+            ajaxFormSubmit("#frmSubAdminType");
+        } else {
+            return false;
+        }
+        
+    });
+    $(document).on('click', '.add-back', function (e) {
+        if($(this).attr("title")=="Add" || $(this).attr("title")=="Edit")
+        {          
+            $(".chng-btn").hide();
+        }
+        else
+        {
+            $(".chng-btn").show();
+        }
+        
+    });
+    $(document).on('change', '#filtering_type', function(e) 
+        {
+            OTable.fnDraw();
+        });
+});
+</script>
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                <div class="nav navbar-right panel_toolbox">
+                   <a href="ajax.manage_payments-sd.php?action=export_excel" class="btn btn-success btn-sm add-back chng-btn"><i class="fa fa-dowload"></i> Export as Excel</a>
+                </div>
+                <div class="nav navbar-right panel_toolbox">
+                   <a href="ajax.manage_payments-sd.php?action=export_csv" class="btn btn-warning btn-sm add-back chng-btn"><i class="fa fa-dowload"></i> Export as CSV</a>
+                </div>
+                <div class="clearfix"></div>
+            </div> 
+            <div class="x_content">
+                <div class="actions portlet-toggler">
+                    
+                    <div class="btn-group"></div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-9">
+
+                            </div>
+                            <div class="col-md-3">
+                                <select name='filtering_type' id='filtering_type' class='form-control input-inline'>
+                                    <option selected='' value=''>All Payments</option>
+                                    <option value='paypal'>Paypal</option>
+                                    <option value='listing'>Listing</option>
+                                    <option value='refund'>Refund</option>
+                                    <option value='fromBuyer'>Buyer</option>
+                                    <option value='fromSeller'>Seller</option>
+                                    <option value='listingCommission'>Commission</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portlet-body portlet-toggler">
+                <table id="example123" class="table table-striped table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+        </div>
+    </div>
+</div>

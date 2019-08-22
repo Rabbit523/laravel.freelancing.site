@@ -1,0 +1,121 @@
+<li class="fl-posted-service media services_%SERVICE_ID%">
+    <div class="media-left">
+        <div class="flps-image">
+            <a href="#"><img src="%SERVICES_IMG%" title="%SERVICES_TITLE%" alt="images"></a>
+        </div>
+    </div>
+    <div class="media-body">
+        <div class="flps-title-wrap">
+            <h4 class="flps-title">
+                <a href="{SITE_URL}service/%SLUG%" target="_blank">%SERVICES_TITLE%</a>
+            </h4>
+            <span class="flps-delivery">{FMS_DELIVERY_IN} <span>%DELIVERY_DAYS%</span></span>
+        </div>
+        <ul class="post-breadcrumbs">
+            <li>%SERVICES_CATEGORY%</li>
+            <li>%SERVICES_SUBCATEGORY%</li>
+        </ul>
+        <div class="flps-bdgt">{FMS_PRICE} : <div class="amount-wrap">%PRICE%</div></div>
+
+        <div class="flps-status-wrap">
+            <div class="flps-status status-item flps-active">%STATUS%</div>
+            <div class="flps-posted status-item">{FMS_POSTED_ON} : <span>%POSTED_DATE%</span></div>
+            <div class="flps-operation status-item"><span>%APPROVAL_STATUS%</span></div>
+            <div class="flps-posted status-item">{ADDONS_LBL} : <span>%TOTAL_ADDONS%</span></div>
+        </div>
+         <div class="flps-featured-wrap clearfix">
+            <div class="flps-featured">
+                <div class="add-feature flps-f-item %MAKE_FEATURED_CLASS%"  id="make_feature_%SERVICE_ID%">
+                    <label class="sawlii-check">Mark as Featured
+                        <input type="checkbox" class="%MAKE_FEATURED_CLASS% make_featured" name="feature" id="feature" data-id="%SERVICE_ID%" >
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="mark-feature flps-f-item %FEATURED_DIV_CLASS%">
+                    <label>{FMS_FEATURED_PRICE_DETAIL} <div class="amount-wrap">%FEATURED_FEES%<span>{CURRENCY_SYMBOL}</span></div></label>
+                    <button class="payNow btn btn-primary btn-sm" data-id="%SERVICE_ID%" data-price="%FEATURED_FEES%">{FMS_PAY_NOW}</button>
+                </div>
+                <div class="item-featured flps-f-item %FEATURED_CLASS%" id="featured_div_%SERVICE_ID%">
+                    <label class="">Featured <i class="fa fa-check-square"></i></label>
+                </div>
+                <div class="item-edits flps-f-item %SHOW_EDIT%">
+                  <a class="edit %EDIT_RIGHTS% " href="{SITE_URL}post-services/%SLUG%" title="Edit"><i class="fa fa-edit"></i></a>
+               </div>
+            </div>
+        </div>
+    </div>
+</li>
+<?/*
+<li class="card-block services_%SERVICE_ID%" style="display: none;">
+   <div class="rejected %REJECTED_CLASS%">
+      <label class="label label-danger">Rejected</label>
+   </div>
+   <div class="row %FEATURED_CLASS%">
+      <div class="col-md-12">
+         <div class="featured">
+            <span>
+            {FMS_FEATURED}
+            </span>
+         </div>
+      </div>
+   </div>
+   <div class="media">
+      <div class="media-left">
+         <div class="posted_service">
+            <img src="%SERVICES_IMG%" title="%SERVICES_TITLE%"/>
+         </div>
+      </div>
+      <div class="media-body">
+         <h4 class="card-title">
+            <a href="{SITE_URL}service/%SLUG%" target="_blank">%SERVICES_TITLE%</a>
+         </h4>
+         <div class="edit_remove">
+            <a class="edit %EDIT_RIGHTS%" href="{SITE_URL}post-services/%SLUG%" title="Edit">
+               <img src="{SITE_IMG}/icon/edit.png" alt="">
+            </a>
+         </div>
+         <div class="category_subcategory">
+            <span>
+            %SERVICES_CATEGORY%
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            %SERVICES_SUBCATEGORY%
+            </span>
+         </div>
+         <ul class="project-desc list-inline">
+            <li>
+               {FMS_PRICE} : %PRICE%
+            </li>
+            <li>
+               {FMS_POSTED_ON} : %POSTED_DATE%
+            </li>
+            <li>
+               %STATUS%
+            </li>
+            <li>
+               %APPROVAL_STATUS%
+            </li>
+         </ul>
+         <p class="delivery">{FMS_DELIVERY_IN} <span>%DELIVERY_DAYS%</span></p>
+         <h5 class="%ADD_ON_CLASS%">
+            {FMS_ADD_ONS}
+         </h5>
+         <ul class="addons-list %ADD_ON_CLASS%">
+            %ADD_ON_DETAIL%
+         </ul>
+         <div class="featured-class %FEATURED_DIV_CLASS%">
+            <h5>
+               {FMS_FEATURED_PRICE_DETAIL}
+            </h5>
+            <ul>
+               <li>
+                  <p>{FMS_PRICE} : {CURRENCY_SYMBOL}%FEATURED_FEES%</p>
+               </li>
+               <li class="feature-btn">
+                  <button class="payNow btn btn-system" data-id="%SERVICE_ID%" data-price="%FEATURED_FEES%">{FMS_PAY_NOW}</button>
+               </li>
+            </ul>
+         </div>
+         <button class="btn btn-system %MAKE_FEATURED_CLASS% make_featured pull-right" data-id="%SERVICE_ID%">{FMS_MAKE_FEATURED}</button>
+      </div>
+   </div>
+</li> */?>

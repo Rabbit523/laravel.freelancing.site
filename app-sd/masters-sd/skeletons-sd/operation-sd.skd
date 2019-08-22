@@ -1,0 +1,1 @@
+<span><a href="%HREF%" class="%CLASS%" %EXTRA%>%VALUE%</a></span>

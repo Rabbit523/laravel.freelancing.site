@@ -1,0 +1,110 @@
+
+%SUB_HEADER_CONTENT%
+
+<section class="main-dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel theme-box">
+            <div class="panel-heading">
+                <h4 class="panel-title">{FD_SERVICES}</h4>
+                <div class="panel-tools pull-right">
+                    <a href="{SITE_URL}post-services">{FP_ADD_MORE} <i class="fa fa-plus"></i></a>
+                </div>
+            </div>
+            <div class="panel-body">
+              <div class="fl-services ">
+                %MY_SERVICES%
+              </div>
+            </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+</section>
+
+
+<style type="text/css">
+  /*.edit_remove{
+    display: block!important;
+  }*/
+</style>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+
+      if($(window).width() <= 567){
+        $(".all-sections-btn a").click(function(){
+          $(".all-sections ul.nav").slideToggle();
+        });
+      }
+      else{
+        return false;
+      }
+      $(".all-sections ul.nav li a").click(function(){
+        $(".all-sections ul.nav").hide();
+      });
+
+    });
+  </script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+
+      if(($(window).width() >= 768) && ($(window).width() <= 991)){
+        $(".all-sections-btn a").click(function(){
+          $(".all-sections ul.nav").slideToggle();
+        });
+      }
+      else{
+        return false;
+      }
+      $(".all-sections ul.nav li a").click(function(){
+        $(".all-sections ul.nav").hide();
+      });
+
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).on("click",".add_portfolio_btn",function(){
+      $(".img_pre").remove();
+      $("#projectTitle").val("");
+      $("#projectDuration").val("");
+      $("#project_skill_name").val("");
+      $("#projectDesc").val("");
+    });
+
+     /*Add to favourite */
+   $(document).on("click",".save_service",function(){
+      var url = "{SITE_URL}ajaxServiceSearch";
+      $(this).find('i').removeClass("fa fa-heart-o").addClass("fa fa-heart");
+      var id = $(this).attr("data-id");
+      $.post(url,{"action":"saveServices","id":id},function(data){
+         if(data.type == 'error')
+         {
+            window.location.href = "{SITE_URL}SignIn";
+            toastr[data.type](data.msg);
+         }
+         else
+         {
+            toastr[data.type](data.msg);
+         }
+      },'json');
+   });
+
+
+    $(function(){
+      var hash = window.location.hash;
+      hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+      $('.nav-tabs a').click(function (e) {
+        $(this).tab('show');
+        var scrollmem = $('body').scrollTop() || $('html').scrollTop();
+        window.location.hash = this.hash;
+        $('html,body').scrollTop(scrollmem);
+      });
+    });
+  </script>
+
+  

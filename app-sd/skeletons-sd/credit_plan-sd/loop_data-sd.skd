@@ -1,0 +1,51 @@
+<div class="col-md-4 col-sm-6">
+   <div class="package-plan-wrap free-plan %DIV_COLOR_CLASS% div_%TITLE% %ACTIVE_CLASS%">
+      <div class="package-plan-name">
+         <h2>%TITLE%</h2>
+      </div>
+      <div class="package-plan-price">
+         <div class="price-wrap">
+            <span class="price">%PRICE%</span>
+            <span>/</span>
+            <span class="validity">Per Month</span>
+         </div>
+      </div>
+      <div class="package-plan-credits">
+         <h4>%TOTAL_CREDIT_LBL% :  %USABLE_CREDIT%</h4>
+      </div>
+      <div class="package-subscribe-date %UPGRADE_DATE_CLASS% %SUBSCRIBE_DETAIL%">
+         <h4>{SUBSCRIBED_ON_LABEL}: <span>%UPGRADE_DATE%</span></h4>
+      </div>
+      <div class="package-plan-btn">
+         <a href="javascript:void(0)" class="subscribe" data-id="%PLAN_ID%">%CURRENT_CLASS%</a>
+      </div>
+   </div>
+</div>
+
+<?php /* <div class="col-md-4 col-sm-6">
+   <div class="box1 %DIV_COLOR_CLASS% div_%TITLE% %ACTIVE_CLASS%" >
+      <div class="box-heading">
+         <!-- <h1>%ACTIVE_ICON% %TITLE%</h1> -->
+         <h2>%TITLE%</h2>
+         <div class="price-month">
+            <p class="price">
+               %PRICE%
+            </p>
+            <!-- <span>%PRICE%</span> -->
+            <p class="month">Per Month</p>
+            <!-- <p class="date %SUBSCRIBE_DETAIL%">Subscribed on : <span>%SUBSCRIBED_DATE%</span></p> -->
+         </div>
+         <!-- <div class="price-month">
+            <span>%PRICE%</span>
+            <p>/month</p>
+            <p class="date %SUBSCRIBE_DETAIL%">Subscribed on : <span>%SUBSCRIBED_DATE%</span></p> 
+            <p class="date %SUBSCRIBE_DETAIL%">Next Subscribe on : <span>%NEXT_SUBSCRIBED_DATE%</span></p> 
+         </div> -->
+      </div>
+      <ul>
+         <li><b>%TOTAL_CREDIT_LBL%</b> : %USABLE_CREDIT% </li>
+         <li class="%UPGRADE_DATE_CLASS% %SUBSCRIBE_DETAIL%"><p class="date">{SUBSCRIBED_ON_LABEL}: <span>%UPGRADE_DATE%</span></p></li>
+      </ul>
+      <div class="upgrade"><a href="javascript:void(0)" class="subscribe" data-id="%PLAN_ID%">%CURRENT_CLASS%</a></div>
+   </div>
+</div> */ ?>

@@ -1,0 +1,102 @@
+<li class="media">
+    <div class="media-body">
+        <div class="row">
+            <div class="col-md-8">
+                <h2><a href="#">%PROJECT_NAME%</a></h2>
+                <p>%REVIEW%</p>
+                <div class="freelancer-details">
+                  <div class="media">
+                      <div class="media-left">
+                          <div class="freelancer-img">
+                              <img src="%CUST_IMG%" alt="">
+                          </div>
+                      </div>
+                      <div class="media-body">
+                          <div>
+                              %CUST_NAME%
+                              <p class="date-time"> <span class="seperator-l">|</span> %POSTED_DATE%</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+            <div class="stars">
+                  <label>{C_AVG_STAR_RATING_LBL}</label>
+                  <div class="star-ratings-sprite">
+                      <span style="width:%AVG_RATE%%" class="star-ratings-sprite-rating"></span>
+                  </div>
+              </div>
+              <button class="btn btn-primary btn-block all_review" data-toggle="modal" data-target="#fullReview">
+              {SEE_FULL_REVIEW}
+            </button>
+          </div>
+        </div>
+    </div>
+</li>
+
+<? php /*<li class="media">
+  <div class="media-body">
+     <h2><a href="#">%PROJECT_NAME%</a></h2>
+     <p class="date-time">%POSTED_DATE%</p>
+     <p>%REVIEW%</p>
+     <div class="star-rating">
+        <div class="row">
+           <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="stars">
+                <p>{C_AVG_STAR_RATING_LBL}</p>
+                <div class="star-ratings-sprite">
+                     <span style="width:%AVG_RATE%%" class="star-ratings-sprite-rating"></span>
+                </div>
+              </div>
+           </div>
+           <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="stars">
+              <p>{C_REQ_CLARIFICATION_LBL}</p>
+              <div class="star-ratings-sprite">
+                 <span style="width:%REQ_CLARIFICATION%%" class="star-ratings-sprite-rating"></span>
+              </div>
+            </div>
+           </div>
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="stars">
+              <p>{C_ON_TIME_PAYMENT_LBL}</p>
+              <div class="star-ratings-sprite">
+                 <span style="width:%ON_TIME_PAYMENT%%" class="star-ratings-sprite-rating"></span>
+              </div>
+            </div>
+           </div>
+           <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="stars">
+              <p>{C_ON_TIME_RESPONSE}</p>
+              <div class="star-ratings-sprite">
+                 <span style="width:%ON_TIME_RESPONSE%%" class="star-ratings-sprite-rating"></span>
+              </div>
+            </div>
+           </div>
+        <div class="row">
+           <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="stars">
+              <p>{C_COMMUNICATION_LBL}</p>
+              <div class="star-ratings-sprite">
+                 <span style="width:%COMMUNICATION_RATE%%" class="star-ratings-sprite-rating"></span>
+              </div>
+            </div>
+           </div>
+        </div>
+     </div>
+     <div class="freelancer-details">
+      <div class="media">
+          <div class="media-right">
+            <div class="freelancer-img">
+                <img src="%CUST_IMG%" alt="">
+            </div>
+          </div>
+          <div class="media-body">
+              <p>%CUST_NAME%</p>
+              <p><label>cost</label> : %COST%</p>
+          </div>
+      </div>
+     </div>
+  </div>
+</li> */ ?>

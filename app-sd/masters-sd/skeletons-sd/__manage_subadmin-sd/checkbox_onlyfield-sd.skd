@@ -1,0 +1,5 @@
+<div class="checkbox">
+	<label>
+		<input type="checkbox" class="%CLASS%" id="%ID%" name="%NAME%" value="%VALUE%" %CHECKED% %EXTRA% > %DISPLAY_VALUE%
+	</label>
+</div>

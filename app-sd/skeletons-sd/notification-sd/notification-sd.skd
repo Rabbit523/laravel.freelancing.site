@@ -1,0 +1,53 @@
+<section class="main-dashboard">
+    <div class="container">
+        <div class="profile">
+            <div class="featurette-job">
+                <div class="sub_featured">
+                    <div class="page-title">
+                        <h1 class="main-title">{NOTIFICATIONS_LABEL}</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="notification-box">
+                                <div class="notification-sec">
+                                    <ul>
+                                        %NOTIFICATION% 
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="noti-mockup">
+                                <img src="{SITE_IMG}notification.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(document).on("click",".delete_record",function(){      
+      var id = $(this).parent().parent().parent().parent().attr("class");
+      var id = id.split("_")[1];
+      $('.toast-top-full-width').html('');
+      $(".noti_"+id).hide();
+      $.ajax({
+        type: "POST",
+        url: '<?php echo SITE_MOD;?>notification-sd/ajax.notification-sd.php',
+        data: {'action':'delete','id':id},
+        success: function(resultData){
+          console.log(resultData);
+          if(resultData=='true'){
+            
+            $("#"+id).hide();
+          }           
+        } ,
+        dataType: 'json'
+      });  
+    });
+  });
+</script>

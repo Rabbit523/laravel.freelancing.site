@@ -1,0 +1,29 @@
+<div class="modal fade" id="categories" role="dialog" tabindex="-1">
+   <div class="modal-dialog">
+      <!-- Modal content-->
+      <form name="categoryFrm" id="categoryFrm" method="post">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">
+               &times;
+               </button>
+               <h4 class="modal-title">
+                  {FD_ADD_SUBCATEGORIES}
+               </h4>
+            </div>
+            <div class="modal-body">
+                  %CATEGORY_DATA%
+            </div>
+            <div class="modal-footer">
+               <div class="theme-button-default">
+                  <a href="#" data-dismiss="modal">{FD_CANCEL}</a>
+               </div>
+               <div class="theme-button">
+                  <input type="hidden" name="action" value="addCategory">
+                  <button type="submit" name="addCategory" class="btn btn-system" id="addCategory">{FD_SAVE}</button>
+               </div>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>

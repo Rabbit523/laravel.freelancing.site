@@ -1,0 +1,106 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+    <div class="form-body">
+        <div class="form-group">
+            <label for="first_name" class="control-label col-md-3"><font color="#FF0000">*</font>First Name: &nbsp;</label> 
+            <div class="col-md-4">
+                <input type="text" class="form-control logintextbox-bg " name="first_name" id="first_name" value="%FIRST_NAME%" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="last_name" class="control-label col-md-3"><font color="#FF0000">*</font>Last Name: &nbsp;</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control logintextbox-bg " name="last_name" id="last_name" value="%LAST_NAME%" />
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="address" class="control-label col-md-3">Address: &nbsp;</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control " name="address" id="address_google" value="%ADDRESS%"  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="profile_img" class="control-label col-md-3">Profile Image: &nbsp;</label>
+            <div class="col-md-4">
+            <img src="%IMAGE%" alt="image" height="100px" width="100px" />
+                <input type="file" class="form-control logintextbox-bg " name="profile_img" id="profile_img"  />
+                <input type="hidden" class="form-control logintextbox-bg " name="profile_img_old" id="profile_img_old"  value="%PROFILE_IMG%" />
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="birthDate" class="control-label col-md-3 ">Date Of Birth: &nbsp;</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control logintextbox-bg" name="birthDate" id="birthDate" value="%BIRTH_DATE%" placeholder="YYYY-mm-dd" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  class="control-label col-md-3">Gender: &nbsp;</label>
+            <div class="col-md-4"> 
+                <div class="radio-list"> 
+                    <label class="radio-inline"> 
+                        <input class="radioBtn-bg" id="m" name="gender" type="radio" value="m" %GENDER_M%> Male
+                    </label>
+                    <label class="radio-inline"> 
+                        <input class="radioBtn-bg" id="f" name="gender" type="radio" value="f" %GENDER_F%> Female
+                    </label>
+                    <label class="radio-inline"> 
+                        <input class="radioBtn-bg" id="n" name="gender" type="radio" value="n" %GENDER_N%> Rather not say
+                    </label>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-3">Status: &nbsp;</label>
+            <div class="col-md-4"> 
+                <div class="radio-list" data-error-container="#form_2_Status: _error"> 
+                    <label class="radio-inline"> 
+                        <input class="radioBtn-bg required" id="a" name="status" type="radio" value="a" %STATUS_A%> Active
+                    </label>
+                    <label class="radio-inline"> 
+                        <input class="radioBtn-bg required" id="d" name="status" type="radio" value="d" %STATUS_D%> Deactive
+                    </label>
+                    <span for="status" class="help-block"></span>
+                </div>
+                <div id="form_2_Status: _error"></div>
+            </div>
+        </div>
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="type" id="type" value="%TYPE%"><div class="flclear clearfix"></div>
+        <input type="hidden" name="id" id="id" value="%ID%"><div class="padtop20"></div>
+    </div>
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <button type="submit" name="submitAddForm" class="btn green" id="submitAddForm">Submit</button><button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $( function() 
+    {
+        $("#birthDate").datepicker({
+            dateFormat: 'd M yy',
+            changeMonth: true,
+            changeYear: true,
+            maxDate: 0,
+            onSelect: function(dateText, inst) {
+                var dateArr = dateText.split(' ');
+                var suffix = "";
+                switch(inst.selectedDay) {
+                    case '1': case '21': case '31': suffix = 'st'; break;
+                    case '2': case '22': suffix = 'nd'; break;
+                    case '3': case '23': suffix = 'rd'; break;
+                    default: suffix = 'th';
+                }
+                $("input[name=birthDate]").val(dateArr[0] + suffix +' '+ dateArr[1]+' '+ dateArr[2]);
+            }
+           
+        }); 
+    });   
+        
+   
+</script>

@@ -1,0 +1,10 @@
+<li class="%SELECT_CLASS%">
+    <div class="sub-category-icon">
+	  <img src="%CAT_IMAGE%" alt="">
+	</div>
+	<h4>
+	  <a href="%URL%" class="cat_name" data-id="%CAT_ID%">
+	    %CAT_NAME%
+	  </a>
+	</h4>
+</li>

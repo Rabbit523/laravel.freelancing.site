@@ -1,0 +1,20 @@
+<form action="" method="post" name="frmImportConstant" id="frmImportConstant" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+    <div class="form-body">
+        <div class="form-group">
+            <label for="file" class="control-label col-md-3"><font color="#FF0000">*</font>Select File: &nbsp;</label>
+            <div class="col-md-4">
+                <input type="file" name="file" id="file" class="form-control required" accept=".xls, .xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+            </div>
+        </div>
+
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="type" id="type" value="import_constant">
+        <div class="padtop20"></div>
+    </div>
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <button type="submit" name="submitImportForm" class="btn green" id="submitImportForm">Import</button>
+            <button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+        </div>
+    </div>
+</form>

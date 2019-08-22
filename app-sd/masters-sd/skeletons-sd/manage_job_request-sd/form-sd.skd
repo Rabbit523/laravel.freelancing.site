@@ -1,0 +1,205 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+    <div class="form-body">
+        
+        <div class="form-group">
+            <label for="jobtitle" class="control-label col-md-3">{MEND_SIGN}Job Title: &nbsp;</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control logintextbox-bg" name="jobTitle" id="jobTitle" value="%JOB_TITLE%" placeholder="Enter job title here">
+                </div>
+        </div>      
+        
+        <div class="form-group">
+            <label for="jobCategory" class="control-label col-md-3">{MEND_SIGN}Job Category: &nbsp;</label>
+                <div class="col-md-4">  
+                    <select class="form-control" name="jobCategory" id="jobCategory">
+                        <option value="">--select category--</option>
+                        %CATEGORY%                        
+                    </select>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="jobSubCategory" class="control-label col-md-3">{MEND_SIGN}Job Sub Category: &nbsp;</label>
+                <div class="col-md-4">  
+                    <select class="form-control" name="jobSubCategory" id="jobSubCategory">
+                        %SUB_CATEGORY%                        
+                    </select>
+                </div>
+        </div>  
+
+        <div class="form-group">
+            <label for="skills" class="control-label col-md-3">{MEND_SIGN}Job skills: &nbsp;</label>
+                <div class="col-md-4">
+                    <select class="select2_multiple form-control selectpicker" name="skills[]" id="skills" multiple>
+                            %SKILLS%
+                    </select>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description" class="control-label col-md-3">{MEND_SIGN}Description: &nbsp;</label>
+                <div class="col-md-4">
+                    <textarea class="form-control" name="description" id="description">
+                        %DESC%
+                    </textarea>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="file" class="control-label col-md-3">{MEND_SIGN}File: &nbsp;</label>
+                <div class="col-md-4">
+                    <input type="file" class="form-control logintextbox-bg file_upload" name="job_file" id="job_file" value="" accept=".pdf,.doc" >
+                    <input type="hidden" name="old_file" id="old_file" value="%OLD_FILE%">                    
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="jobtitle" class="control-label col-md-3">{MEND_SIGN}Budget($): &nbsp;</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control logintextbox-bg" name="budget" id="budget" value="%BUDGET%" placeholder="Enter budget">
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="jobtitle" class="control-label col-md-3">{MEND_SIGN}Experience Level: &nbsp;</label>
+                <div class="col-md-4">
+                    <div class="radio-list" data-error-container="#form_2_Status: _error">
+                    <label class="">
+                        <input class="radioBtn-bg" id="y" name="expLevel" type="radio" value="f" %FRESHER%>
+                        Fresher</label>
+                    <span for="status" class="help-block"></span>
+                    <label class="">
+                        <input class="radioBtn-bg" id="n" name="expLevel" type="radio" value="e" %EXP%>
+                        Experience</label>
+                    <span for="status" class="help-block"></span> </div>
+                <div id="form_2_Status: _error"></div>
+                   <!--  <input type="text" class="form-control logintextbox-bg" name="expLevel" id="expLevel" value="%EXPLEVEL%" placeholder="Enter experience level"> -->
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="estimatedDuration" class="control-label col-md-3">{MEND_SIGN}Estimated Duration: &nbsp;</label>
+                <div class="col-md-4">
+                    <select class="form-control" name="estimatedDuration" id="estimatedDuration">
+                        <option value="5-10 Days">5-10 Days</option>
+                        <option value="5-10 Days">5-10 Days</option>
+                        <option value="10-15 Days">10-15 Days</option>
+                        <option value="15-30 Days">15-30 Days</option>
+                        <option value="1-3 Month">1-3 Month</option>
+                        <option value="Upto 3 Month">Upto 3 Month</option>
+                    </select>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="biddingDeadline" class="control-label col-md-3">{MEND_SIGN}Bidding Deadline: &nbsp;</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control logintextbox-bg datepicker" name="biddingDeadline" id="biddingDeadline" value="%BID_DEADLINE%" placeholder="Enter bidding deadline">
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-3">Job Type: &nbsp;</label>
+            <div class="col-md-4">
+                <div class="radio-list" data-error-container="#form_2_Status: _error">
+                    <label class="">
+                        <input class="radioBtn-bg" id="y" name="jobType" type="radio" value="pu" %PUBLIC%>
+                        Public</label>
+                    <span for="status" class="help-block"></span>
+                    <label class="">
+                        <input class="radioBtn-bg" id="n" name="jobType" type="radio" value="pr" %PRIVATE%>
+                        Private</label>
+                    <span for="status" class="help-block"></span> </div>
+                <div id="form_2_Status: _error"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="bidsFromLocation" class="control-label col-md-3">{MEND_SIGN}Bids From Location: &nbsp;</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control logintextbox-bg" name="bidsFromLocation" id="bidsFromLocation" value="%BID_FRM_LOCATION%" placeholder="Enter bids from location">
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="bidsFromLocation" class="control-label col-md-3">{MEND_SIGN}Choose Question: &nbsp;</label>
+            <div class="col-md-4">
+                <a href="javascript:void(0)" class="btn btn-primary openQuestionModal">Click here</a>
+                <input type="hidden" name="addedQuestion" id="addedQuestion">
+            </div>
+        </div>
+
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Question list</h4>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                    %QUESTIONS%
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default chooseQuestion">Choose</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-3">Featured: &nbsp;</label>
+            <div class="col-md-4">
+                <div class="radio-list" data-error-container="#form_2_Status: _error">
+                    <label class="">
+                        <input class="radioBtn-bg" id="y" name="featured" type="radio" value="y" %FEATURED_Y%>
+                        Yes</label>
+                    <span for="status" class="help-block"></span>
+                    <label class="">
+                        <input class="radioBtn-bg" id="n" name="featured" type="radio" value="n" %FEATURED_N%>
+                        No</label>
+                    <span for="status" class="help-block"></span> </div>
+                <div id="form_2_Status: _error"></div>
+            </div>
+        </div> 
+
+        <div class="form-group">
+            <label class="control-label col-md-3">Hide From Search: &nbsp;</label>
+            <div class="col-md-4">
+                <div class="radio-list" data-error-container="#form_2_Status: _error">
+                    <label class="">
+                        <input class="radioBtn-bg" id="y" name="hideFrmSearch" type="radio" value="y" %HIDE_FRM_SEARCH_Y%>
+                        Yes</label>
+                    <span for="status" class="help-block"></span>
+                    <label class="">
+                        <input class="radioBtn-bg" id="n" name="hideFrmSearch" type="radio" value="n" %HIDE_FRM_SEARCH_N%>
+                        No</label>
+                    <span for="status" class="help-block"></span> </div>
+                <div id="form_2_Status: _error"></div>
+            </div>
+        </div>
+
+        <div class="flclear clearfix"></div>
+            <input type="hidden" name="type" id="type" value="%TYPE%">
+        <div class="flclear clearfix"></div>
+            <input type="hidden" name="id" id="id" value="%ID%">
+        <div class="padtop20"></div>
+    
+    </div>
+
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <button type="submit" name="submitAddForm" class="btn green" id="submitAddForm">Submit</button>
+            <button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+        </div>
+    </div>
+    
+</form>
+<script type="text/javascript">
+    $('#skills').selectpicker();
+
+</script>

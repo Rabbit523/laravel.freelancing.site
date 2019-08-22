@@ -1,0 +1,114 @@
+<div class="col-md-4 col-sm-6">
+     <div class="service-box">
+         <div class="service-featured %FEATURED_CLASS%"><span><i class="fa fa-star"></i></span></div>
+         <div class="service-img">
+             <a href="{SITE_URL}service/%SLUG%">
+                 <img src="%SERVICE_IMG%" title="%SERVICE_TITLE%">
+             </a>
+             <div class="save-service %SAVE_RIGHTS%">
+                 <a href="javascript:void(0)" title="Saved" class="save_service" data-id="%SERVICE_ID%">
+                     <i class="%SAVE_CLASS%"></i>
+                 </a>
+             </div>
+         </div>
+         <div class="service-desc">
+             <h4 class="service-title">
+                <a href="{SITE_URL}service/%SLUG%" target="_blank">%SERVICE_TITLE%</a>
+            </h4>
+             <div class="services-cat">%SUBCATEGORY%</div>
+             <div class="price-sales-wrap">
+                <div class="ps-wrap price-wrap"><div class="amount-wrap">%PRICE%</div></div>
+                <div class="ps-wrap sales-wrap">{FD_SERVICE_SOLD} <span>%SOLD_SERVICE%</span></div>
+             </div>
+            <div class="freelancer-details">
+               <div class="media">
+                   <div class="media-left media-top">
+                      <div class="freelancer-img">
+                         <a href="{SITE_URL}f/profile/%USER_SLUG%" target="_blank">
+                             <img src="%FREELANCER_IMG%" title="%FREELANCER_NAME%" alt="%FREELANCER_NAME%"/>
+                         </a>
+                      </div>
+                   </div>
+                   <div class="media-body media-top">
+                      <h5><a href="{SITE_URL}f/profile/%USER_SLUG%" target="_blank">%FREELANCER_NAME%</a></h5>
+                      <div class="user-location">%LOCATION%</div>
+                      <p class="rating"><i class="fa fa-star"></i>%FREELANCER_RATE%</p>
+                   </div>
+               </div>
+            </div>
+         </div>
+     </div>
+</div>
+<!-- ======== Old Data ========== -->
+<li class="card-block" style="display: none;">
+   <div class="like active %SAVE_RIGHTS%">
+      <a href="javascript:void(0)" class="save_service" data-id="%SERVICE_ID%"><i class="%SAVE_CLASS%"></i></a>
+   </div>
+
+   <div class="row %FEATURED_CLASS%">
+      <div class="col-md-12">
+         <div class="featured">
+            <span>
+            {FMS_FEATURED}
+            </span>
+         </div>
+      </div>
+   </div>
+   <div class="media">
+      <div class="pull-left">
+         <div class="posted_service">
+            <img src="%SERVICE_IMG%" title="%SERVICE_TITLE%">
+         </div>
+      </div>
+      <div class="media-body">
+         <div class="row">
+            <div class="col-md-12">
+               <h4 class="card-title">
+                  <a href="{SITE_URL}service/%SLUG%" target="_blank">%SERVICE_TITLE%</a>
+               </h4>
+            </div>
+         </div>
+         <div class="category_subcategory">
+            <span>
+            %CATEGORY%
+            <i class="fa fa-angle-right"></i>
+            %SUBCATEGORY%
+            </span>
+         </div>
+         <ul class="project-desc list-inline">
+            <li>
+               {CSO_PRICE} : %PRICE%
+            </li>
+            <li>
+               {FD_SERVICE_SOLD} : %SOLD_SERVICE%
+            </li>
+         </ul>
+         <div class="PickGeeks_detail">
+            <ul>
+               <li>
+                  <div class="PickGeeks_img">
+                     <img src="%FREELANCER_IMG%" title="%FREELANCER_NAME%" alt="%FREELANCER_NAME%">
+                  </div>
+               </li>
+               <li>
+                  <h5>
+                     <a href="{SITE_URL}f/profile/%USER_SLUG%" target="_blank">%FREELANCER_NAME%</a>
+                  </h5>
+                  (%FREELANCER_EXP_LVL%)
+               </li>
+               <li>
+                  <div class="star-ratings-sprite">
+                     <span style="width:%FREELANCER_RATE%%" class="star-ratings-sprite-rating">
+                     </span>
+                  </div>
+               </li>
+               <li class="loc">
+                  <i class="fa fa-map-marker" aria-hidden="true">
+                  </i>
+                  %LOCATION%
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</li>

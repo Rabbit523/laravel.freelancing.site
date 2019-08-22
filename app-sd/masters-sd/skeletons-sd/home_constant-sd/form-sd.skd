@@ -1,0 +1,24 @@
+<form action="" method="post" name="%TAB_NAME%_frmSubAdminType" id="%TAB_NAME%_frmSubAdminType" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+    <div class="form-body">
+
+        <div class="form-group">
+            <label for="email" class="control-label col-md-3"><font color="#FF0000">*</font>Constant Name: &nbsp;</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control logintextbox-bg" name="value" id="value" value="%VALUE%">
+            </div>
+        </div>
+        <div class="padtop10 flclear"></div>
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="type" id="type" value="%TYPE%">
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="id" id="id" value="%ID%">
+        <div class="padtop20"></div>
+    </div>
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <input type="hidden" name="tab_name" id="tab_name" value="%TAB_NAME%">
+            <button type="submit" name="submitAddForm" class="btn green" id="submitAddForm" data-id="%TAB_NAME%">Submit</button>
+            <button type="button" name="cn" class="btn btn-toggler add-back" id="cn" data-tab-id="%TAB_NAME%">Cancel</button>
+        </div>
+    </div>
+</form>

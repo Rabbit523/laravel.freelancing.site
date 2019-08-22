@@ -1,0 +1,4 @@
+<div class='alert alert-default alert-dismissable sel_user_%ID%'>
+    <a href='' class='close user_remove' data_id="%ID%" data-dismiss='alert' aria-label='close'>×</a>
+    <span>%QUE_ID%.</span>%QUESTION%
+</div>

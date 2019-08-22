@@ -1,0 +1,42 @@
+<li class="card-block">
+   <div class="row %FEATURED_CLASS%">
+      <div class="col-md-12">
+         <div class="featured">
+            <span>
+            {FD_FEATURED}
+            </span>
+         </div>
+      </div>
+   </div>
+   <div class="media">
+      <div class="pull-left">
+         <div class="posted_service">
+            <img src="%SERVICES_IMG%">
+         </div>
+      </div>
+      <div class="media-body">
+         <h4 class="card-title">
+            <a href="#">%SERVICE_TITLE%</a>
+         </h4>
+         <div class="like active %FAV_CLASS%">
+            <a href="javascript:void(0)" class="save_service" data-id="%SERVICE_ID%"><i class="%FAV_TEST%"></i></a>
+         </div>
+         <div class="category_subcategory">
+            <span>
+            %CATEGORY%
+            <i class="fa fa-angle-right" aria-hidden="true">
+            </i>
+            %SUB_CATEGORY%
+            </span>
+         </div>
+         <ul class="project-desc list-inline">
+            <li>
+               {FD_PRICE} : %PRICE%
+            </li>
+            <li>
+               {FD_SERVICE_SOLD} : %SOLD%
+            </li>
+         </ul>
+      </div>
+   </div>
+</li>

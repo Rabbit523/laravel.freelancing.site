@@ -1,0 +1,245 @@
+<script type="text/javascript" src="{SITE_JS}URI.js"></script>
+<!--start inner section-->
+<div class="sub-category-section detail-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-4">
+        <div class="box box-primary">
+          <div class="box-header">
+              <h3 class="box-title">{ALL_CATEGORIES}</h3>
+          </div>
+          <div class="box-body">
+            <ul class="category-listing">
+              %CATEGORY_LIST%
+              <!-- <li class="active">
+                <div class="sub-category-icon">
+                  <img src="{SITE_IMG}icons/2.png" alt="">
+                </div>
+                <h4>
+                  <a href="javascript:void(0);">
+                    Graphics Designing
+                  </a>
+                </h4>
+              </li>
+              <li>
+                <div class="sub-category-icon">
+                  <img src="{SITE_IMG}icons/3.png" alt="">
+                </div>
+                <h4>
+                  <a href="javascript:void(0);">
+                    Mobile Development
+                  </a>
+                </h4>
+              </li>
+              <li>
+                <div class="sub-category-icon">
+                  <img src="{SITE_IMG}icons/4.png" alt="">
+                </div>
+                <h4>
+                  <a href="javascript:void(0);">
+                    Web Development
+                  </a>
+                </h4>
+              </li>
+              <li>
+                <div class="sub-category-icon">
+                  <img src="{SITE_IMG}icons/5.png" alt="">
+                </div>
+                <h4>
+                  <a href="javascript:void(0);">
+                    Virtual Assistant
+                  </a>
+                </h4>
+              </li>
+              <li>
+                <div class="sub-category-icon">
+                  <img src="{SITE_IMG}icons/6.png" alt="">
+                </div>
+                <h4>
+                  <a href="javascript:void(0);">
+                    Sales &amp; Marketing
+                  </a>
+                </h4>
+              </li>
+              <li>
+                <div class="sub-category-icon">
+                  <img src="{SITE_IMG}icons/7.png" alt="">
+                </div>
+                <h4>
+                  <a href="javascript:void(0);">
+                    Web Designing
+                  </a>
+                </h4>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9 col-sm-8">
+        <div class="box box-primary no-padding no-bg">
+          <div class="box-header">
+              <h3 class="box-title">%SELECTED_CAT_NAME%</h3>
+          </div>
+          <div class="box-body category-body">
+            <div class="row">
+              %SUB_CAT_LIST%
+              <?/* 
+              <div class="col-md-4 col-sm-6">
+                <div class="category-item">
+                  <a href="javascript:void(0);">
+                    <div class="category-img">
+                      <img src="{SITE_IMG}services/1.jpg" alt="">
+                    </div>
+                    <h4>Logo Design</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="category-item">
+                  <a href="javascript:void(0);">
+                    <div class="category-img">
+                      <img src="{SITE_IMG}services/2.jpg" alt="">
+                    </div>
+                    <h4>Web &amp; Mobile Design</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="category-item">
+                  <a href="javascript:void(0);">
+                    <div class="category-img">
+                      <img src="{SITE_IMG}services/3.jpg" alt="">
+                    </div>
+                    <h4>3D Mockup &amp; Product Design</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="category-item">
+                  <a href="javascript:void(0);">
+                    <div class="category-img">
+                      <img src="{SITE_IMG}services/4.jpg" alt="">
+                    </div>
+                    <h4>Tshirt Design</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="category-item">
+                  <a href="javascript:void(0);">
+                    <div class="category-img">
+                      <img src="{SITE_IMG}services/5.jpg" alt="">
+                    </div>
+                    <h4>Presentation Design</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="category-item">
+                  <a href="javascript:void(0);">
+                    <div class="category-img">
+                      <img src="{SITE_IMG}services/6.jpg" alt="">
+                    </div>
+                    <h4>Infographic Design</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="category-item">
+                  <a href="javascript:void(0);">
+                    <div class="category-img">
+                      <img src="{SITE_IMG}services/7.jpg" alt="">
+                    </div>
+                    <h4>Cartoons &amp; Comics</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="category-item">
+                  <a href="javascript:void(0);">
+                    <div class="category-img">
+                      <img src="{SITE_IMG}services/8.jpg" alt="">
+                    </div>
+                    <h4>Business Cards &amp; Stationary</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="category-item">
+                  <a href="javascript:void(0);">
+                    <div class="category-img">
+                      <img src="{SITE_IMG}services/9.jpg" alt="">
+                    </div>
+                    <h4>Banner Ads</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="category-item">
+                  <a href="javascript:void(0);">
+                    <div class="category-img">
+                      <img src="{SITE_IMG}services/10.jpg" alt="">
+                    </div>
+                    <h4>Architecture &amp; Floor Plans</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="category-item">
+                  <a href="javascript:void(0);">
+                    <div class="category-img">
+                      <img src="{SITE_IMG}services/11.jpg" alt="">
+                    </div>
+                    <h4>Social Media Design</h4>
+                  </a>
+                </div>
+              </div> */?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--end inner section-->
+
+<script type="text/javascript">
+   var url = "{SITE_URL}ajaxCategorySearch";
+   
+   $(document).ready(function(){
+      $(document).on("click",".search_record",function(){
+         search_record(1);
+      });
+      $(document).on("input","#keyword",function(){
+         search_record(1);
+      });
+   });
+
+   function search_record(p_no,loadType='load') 
+   {
+
+       var query_param = $("#filters-search select").serialize()+"&"+$("#filters-search input").serialize()+"&action=load_seach_data&page_no="+p_no;
+       var new_serialized_url = URI(url+'/?'+query_param),
+           curr_uri = URI(window.location.href),
+           new_serialized_params = new_serialized_url.search(true);
+
+       ((new_serialized_params.keyword!= '' && new_serialized_params.keyword!=undefined) ? curr_uri.setSearch("keyword", new_serialized_params.keyword) : curr_uri.removeSearch("keyword"));
+
+       history.pushState({}, null, '?'+curr_uri._parts.query);
+       $.ajax({
+           url: url,
+           type: 'POST',
+           dataType: 'json',
+           data: query_param,
+           success : function(data)
+           {     
+             (loadType=='load_append') ? $('#category_search').append(data.content) : $('#category_search').html(data.content);
+             (data.btn=='') ? $(".load_more_data").removeClass("hide") : $(".load_more_data").addClass(data.btn);
+             $(".load_more_data").attr("data-page",data.pageno);
+           }
+       });
+   }
+
+   
+</script>

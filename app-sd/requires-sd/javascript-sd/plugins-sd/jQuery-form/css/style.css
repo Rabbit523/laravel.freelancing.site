@@ -1,0 +1,80 @@
+#imgArea {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+#imgArea img {
+    outline: medium none;
+    vertical-align: middle;
+    width: 100%;
+}
+#imgChange {
+    background: #1265ce none repeat scroll 0 0;
+    bottom: 0;
+    color: #FFFFFF;
+    display: block;
+    height: 30px;
+    left: 0;
+    line-height: 32px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+#imgChange input[type="file"] {
+    bottom: 0;
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+/* Progressbar */
+.progressBar {
+    background: #ebebeb none repeat scroll 0 0;
+    border: 1px solid #1265ce;
+    color: #000;
+    left: 0;
+    /*padding: 3px 0;*/
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: none;
+}
+.progressBar .bar {
+    background-color: #1265ce;
+    width: 0%;
+    height: 14px;
+}
+.progressBar .percent {
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: -2px;
+    width: 100%;
+}
+
+.remove_profile_picture {
+    background: red none repeat scroll 0 0;
+    padding: 0 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+.remove_profile_picture a {
+    color: #fff;
+    font-size: 16px;
+}
+
+.remove_profile_picture a:hover {
+    color: #000 !important;
+}

@@ -1,0 +1,50 @@
+<!-- BEGIN SIDEBAR -->
+<div class="col-md-3 left_col menu_fixed">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title">
+
+            <!-- BEGIN LOGO -->
+                <div class="custom" style="">
+                    <a href="<?php echo SITE_ADMIN_URL;?>" class="site_title">
+                        <?php if(!empty(SITE_FAVICON)){ ?>
+                            <i class=""><img src="<?php echo SITE_IMG; ?><?php echo SITE_FAVICON; ?>" height="28px;" /></i> 
+                        <?php } ?>
+                        <span><?php $sitename = explode("-",SITE_NM);
+                         echo $sitename[0]; ?></span>
+                    </a>
+                </div>
+            <!-- END LOGO 
+             BEGIN RESPONSIVE MENU TOGGLER  -->
+            <a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <img src="<?php echo SITE_ADM_IMG ?>menu-toggler.png" alt=""/>
+            </a>
+            <!-- END RESPONSIVE MENU TOGGLER -->
+
+        </div>
+        <div class="clear"></div><div class="clear"></div>
+        <!-- BEGIN SIDEBAR MENU -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section active">
+                
+                <ul class="nav side-menu page-sidebar-menu"  >
+                    <li class="sidebar-toggler-wrapper">
+                        <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                        <div class="sidebar-toggler hidden-phone">
+                        </div>
+                        <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                    </li>
+                    <li class="start">
+                        <a href="<?php echo SITE_ADM_MOD; ?>home-sd">
+                            <i class="fa fa-home"></i>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <?php echo $this->getMenuList; ?>
+                </ul>
+                <!-- END SIDEBAR MENU -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END SIDEBAR -->
+

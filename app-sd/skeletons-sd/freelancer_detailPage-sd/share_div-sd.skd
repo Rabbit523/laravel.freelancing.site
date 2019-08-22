@@ -1,0 +1,16 @@
+<div class="form-group">
+      <strong class="control-label">{FD_LINK} :-</strong>
+      <label>%URL%</label>
+   </div>
+
+   <div class="share_fg">
+      <ul class="list-inline">
+         <li>
+            <a href="javascript:void(0);" class="wbshare-icon facebook" onclick="window.open('http://www.facebook.com/dialog/feed?display=popup&amp;app_id={FB_APP_ID}&amp;link=%URL%&amp;name=%USERNM%&amp;caption=%USERNM% ')" title="Share Via Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+
+         </li>
+         <li>
+            <a href="https://plus.google.com/share?url=%LINK%" class="google" onclick="javascript:window.open(this.href, '%URL%', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Share Via Google"><i class="fa fa-google-plus"></i></a>
+         </li>
+      </ul>
+</div>

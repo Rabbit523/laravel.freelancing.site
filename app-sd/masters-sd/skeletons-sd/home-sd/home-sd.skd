@@ -1,0 +1,273 @@
+<!-- bootstrap-progressbar -->
+<link href="<?php echo SITE_ADMIN_VENDOR; ?>bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+      Dashboard <small>statistics and more</small>
+    </h3>
+        <!-- <ul class="page-breadcrumb breadcrumb">
+      <li> <a href="{SITE_ADMIN_URL}units-sd/home-sd/"><i class="fa fa-home"></i> Home</a> </li>
+      <li>Dashboard</li>
+    </ul> -->
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+    <div class="col-md-3">
+        <div class="filter-date form-group">
+            <b>Filter by Date</b><input type="text" name="datepicker" id="datepicker" class="form-control">
+        </div>
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+
+<!-- <div class="row tile_count">
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+      <span class="count_top "><a href={SITE_ADM_MOD}users-sd><i class="fa fa-users"></i> Total Users</span></a>
+      <div class="count">%TOTAL_USERS%</div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+      <span class="count_top"><a href={SITE_ADM_MOD}manage_jobs-sd><i class="fa fa-gavel"></i> Total no. of Jobs</span></a>
+      <div class="count">%TOTAL_JOBS%</div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+      <span class="count_top"><a href={SITE_ADM_MOD}manage_services_order-sd><i class="fa fa-list"></i> Total no. of Service Orders</span></a>
+      <div class="count">%TOTAL_SERVICE_ORDERS%</div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+      <span class="count_top"><a href={SITE_ADM_MOD}new_listing_request-sd><i class="fa fa-money"></i> Total Revenue Earned</span></a>
+      <div class="count green">%TOTAL_REVENUE%</div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+      <span class="count_top"><a href={SITE_ADM_MOD}new_listing_request-sd><i class="fa fa-money"></i> Net Profit</span></a>
+      <div class="count">%NET_PROFIT%</div>
+    </div>
+
+</div> -->
+
+<div class="row top_tiles">
+    <div class="animated tot-users flipInY col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="tile-stats ex_home_tiles">
+            <div class="icon"><img src="{SITE_ADM_IMG}group.png"></div>
+            <div class="count b_theme_color" id="user">%TOTAL_USERS%</div>
+            <h3>Total Users</h3>
+            <p class="b_theme_color">Active Users available in site</p>
+        </div>
+    </div>
+    <div class="animated tot-jobs flipInY col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="tile-stats ex_home_tiles">
+            <div class="icon"><img src="{SITE_ADM_IMG}briefcase.png"></div>
+            <div class="count b_theme_color" id="jobs">%TOTAL_JOBS%</div>
+            <h3>Total Jobs</h3>
+            <p class="b_theme_color">Total Jobs placed till date</p>
+        </div>
+    </div>
+    <div class="animated tot-service-orders flipInY col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="tile-stats ex_home_tiles">
+            <div class="icon"><img src="{SITE_ADM_IMG}telemarketer.png"></div>
+            <div class="count b_theme_color" id="services">%TOTAL_SERVICE_ORDERS%</div>
+            <h3>Service Orders</h3>
+            <p class="b_theme_color">Total Service Orders Placed till date</p>
+        </div>
+    </div>
+    <div class="animated tot-rev flipInY col-lg-3 col-md-4 col-sm-6 col-xs-12">
+       <div class="tile-stats ex_home_tiles">
+            <div class="icon"><img src="{SITE_ADM_IMG}coin.png"></div>
+            <div class="count green" id="revenue">%TOTAL_REVENUE%</div>
+            <h3>Total Revenue</h3>
+            <p class="b_theme_color">Total Turnover till date</p>
+        </div>
+    </div>
+    <div class="animated tot-profit flipInY col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="tile-stats ex_home_tiles">
+            <div class="icon"><img src="{SITE_ADM_IMG}bars.png"></div>
+            <div class="count green" id="net_profit">%NET_PROFIT%</div>
+            <h3>Net Profit</h3>
+            <p class="b_theme_color">Total Profit earned from revenue</p>
+        </div>
+    </div>
+    <div class="animated tot-jobs flipInY col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="tile-stats ex_home_tiles">
+            <div class="icon"><img src="{SITE_ADM_IMG}laptop.png"></div>
+            <div class="count b_theme_color" id="activejob">%TOTAL_ACTIVE_JOBS%</div>
+            <h3>Live Jobs</h3>
+            <p class="b_theme_color">Total in Progress Jobs</p>
+        </div>
+    </div>
+    <div class="animated tot-service-orders flipInY col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="tile-stats ex_home_tiles">
+            <div class="icon"><img src="{SITE_ADM_IMG}email.png"></div>
+            <div class="count b_theme_color" id="activeorder">%TOTAL_ACTIVE_ORDERS%</div>
+            <h3>Live orders</h3>
+            <p class="b_theme_color">Total in Progress Service Orders</p>
+        </div>
+    </div>
+    <div class="animated tot-redeem flipInY col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="tile-stats ex_home_tiles">
+            <div class="icon"><img src="{SITE_ADM_IMG}refresh.png"></div>
+            <div class="count b_theme_color" id="redeemreq">%TOTAL_REDEEM_REQUEST%</div>
+            <h3>Redeem Request</h3>
+            <p class="b_theme_color">Total Pending Redeem Requests</p>
+        </div>
+    </div>
+</div>
+
+<div class="row ">
+    <div class="col-md-8 col-sm-6 col-xs-12 %NOTIFIDCATION_CLASS%">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Recent Activities <small><a href="{SITE_ADM_MOD}notification-sd" title="See all Activities">See all</a></small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="dashboard-widget-content">
+
+                    <ul class="list-unstyled timeline widget">
+                        %NOTIFIDCATION%
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-xs-12">
+
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Useful Quick Links </h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="">
+                    <ul class="to_do">
+                        <li>
+                            <a href="{SITE_ADM_MOD}sitesetting-sd">
+                                <p>
+                                    <i class="fa fa-long-arrow-right"></i> &emsp; Common Site Settings <i class="fa fa-chevron-right pull-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{SITE_ADM_MOD}users-sd">
+                                <p>
+                                    <i class="fa fa-delicious"></i> &emsp; Manage Website Users <i class="fa fa-chevron-right pull-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{SITE_ADM_MOD}manage_category-sd">
+                                <p>
+                                    <i class="fa fa-circle-o"></i> &emsp; Manage Categories <i class="fa fa-chevron-right pull-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{SITE_ADM_MOD}manage_subcategory-sd">
+                                <p>
+                                    <i class="fa fa-circle"></i> &emsp; Manage Sub Categories <i class="fa fa-chevron-right pull-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{SITE_ADM_MOD}manage_job_request-sd">
+                                <p>
+                                    <i class="fa fa-ge"></i> &emsp; Manage Job Requests <i class="fa fa-chevron-right pull-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{SITE_ADM_MOD}manage_service_request-sd">
+                                <p>
+                                    <i class="fa fa-long-arrow-right"></i> &emsp; Manage Service Requests <i class="fa fa-chevron-right pull-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{SITE_ADM_MOD}dispute_job-sd">
+                                <p>
+                                    <i class="fa fa-circle-o"></i> &emsp; Manage Job Disputes <i class="fa fa-chevron-right pull-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{SITE_ADM_MOD}dispute_service-sd">
+                                <p>
+                                    <i class="fa fa-delicious"></i> &emsp; Manage Service Disputes <i class="fa fa-chevron-right pull-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{SITE_ADM_MOD}service_commission-sd">
+                                <p>
+                                    <i class="fa fa-circle-o"></i> &emsp; Manage Service Commissions <i class="fa fa-chevron-right pull-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{SITE_ADM_MOD}commission-sd">
+                                <p>
+                                    <i class="fa fa-ge"></i> &emsp; Manage Escrow Commissions <i class="fa fa-chevron-right pull-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).on("click",".tot-users",function(){
+            window.location.href = "{SITE_ADM_MOD}users-sd/";
+        });
+        $(document).on("click",".tot-service-orders",function(){
+            window.location.href = "{SITE_ADM_MOD}manage_services_order-sd/";
+        });
+        $(document).on("click",".tot-jobs",function(){
+            window.location.href = "{SITE_ADM_MOD}manage_jobs-sd/";
+        });
+        $(document).on("click",".tot-redeem",function(){
+            window.location.href = "{SITE_ADM_MOD}redeem_request-sd/";
+        });
+    });
+</script>
+<script type="text/javascript">
+    $('#datepicker').daterangepicker({
+        locale: {
+           format: 'YYYY-MM-DD'
+        }
+    });
+    $('#datepicker').on('apply.daterangepicker', function(ev, picker) {
+        var from=$('#datepicker').val();
+        date = from.split(" - ");
+        $.ajax({
+                type:"post",
+                url:"{SITE_ADM_MOD}home-sd/ajax.home-sd.php",
+                data:{'date':date,'action':'filter'},
+                dataType:'json',
+                success:function(data){
+                   $('#user').html(data['getUsers']);
+                   $('#jobs').html(data['getJobs']);
+                   $('#services').html(data['getServices']);
+                   $('#revenue').html(data['getRevenue']);
+                   $('#net_profit').html(data['getNetProfit']);
+                   $('#activejob').html(data['getActiveJobs']);
+                   $('#activeorder').html(data['getActiveOrders']);
+                   $('#redeemreq').html(data['getRedeemRequ']);
+                   // $('#author').html(data['getAuthor']);
+                   // $('#plan').html(data['getPlan']);
+                   // $('#earn').html(data['earnings_count']);
+                }
+        });
+
+    }); 
+</script>

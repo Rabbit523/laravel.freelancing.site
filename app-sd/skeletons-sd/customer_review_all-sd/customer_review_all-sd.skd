@@ -1,0 +1,87 @@
+<section class="main-dashboard">
+  <div class="container">
+    <div class="profile">
+      <div class="">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="review_rating reviews">
+              <h1 class="main-heading">{C_REVIEW_TITLE_LBL}</h1>
+              <div class="review-box">
+                <ul class="review_data">
+                   %REVIEW_LOOP%
+                </ul>
+              </div>
+            </div>
+            <div class="view-more-button %LOAD_CLASS%">
+              <div class="theme-button">
+                <a href="javascript:void(0)" class="load_more_data" data-page="1">{C_VIEW_MORE_BTN_LBL}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- full review modal -->
+<div id="fullReview" class="modal fade full-review" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <img src="{SITE_IMG}icon/cancel.png" alt="">
+        </button>
+        <h4 class="modal-title">{ALL_REVIEWS}</h4>
+      </div>
+      <div class="modal-body all_review_div">
+          <div class="star-rating">
+            <div class="stars">
+              <p>{C_REQ_CLARIFICATION_LBL}</p>
+              <div class="star-ratings-sprite">
+                   <span style="width:%REQ_CLARIFICATION%%" class="star-ratings-sprite-rating"></span>
+              </div>
+            </div>
+            <div class="stars">
+              <p>{C_ON_TIME_PAYMENT_LBL}</p>
+              <div class="star-ratings-sprite">
+                 <span style="width:%ON_TIME_PAYMENT%%" class="star-ratings-sprite-rating"></span>
+              </div>
+            </div>
+            <div class="stars">
+              <p>{C_ON_TIME_RESPONSE}</p>
+              <div class="star-ratings-sprite">
+                 <span style="width:%ON_TIME_RESPONSE%%" class="star-ratings-sprite-rating"></span>
+              </div>
+            </div>
+            <div class="stars">
+              <p>{C_COMMUNICATION_LBL}</p>
+              <div class="star-ratings-sprite">
+                 <span style="width:%COMMUNICATION_RATE%%" class="star-ratings-sprite-rating"></span>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- full review modal -->
+
+<script type="text/javascript">
+  var url = "{SITE_URL}ajaxCustomerReviewAll";
+  $(document).on("click",".load_more_data",function()
+  {
+    var pageNo = $(this).attr("data-page");
+    var p_no = parseInt(pageNo)+1;   
+    addOverlay();     
+    $.post(url,{"action":"load_more_data","page_no":p_no},function(data){
+      removeOverlay();
+      $(".review_data").append(data.content);
+      $(".load_more_data").addClass(data.btn);
+      $(".load_more_data").attr("data-page",data.pageno);
+    },'json');
+  });
+</script>

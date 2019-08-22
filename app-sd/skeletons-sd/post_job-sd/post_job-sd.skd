@@ -1,0 +1,760 @@
+<!-- Page Content -->
+<section>
+    <div class="main-dashboard">
+        <div class="container">
+            <div class="profile">
+                <div class="featurette-job">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="theme-form">
+                                <h2 class="main-heading">
+                                    {C_POST_JOB_LBL}
+                                </h2>
+                                <form name="frmJobPost" method="POST" action="" enctype="multipart/form-data" id="frmJobPost">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="form-group">
+                                                <label>
+                                                    {C_JOB_TITLE} :
+                                                </label>
+                                                <input class="form-control" type="text" name="jobTitle" id="jobTitle" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <label>
+                                                {C_SELECT_CATEGORY_LBL} :
+                                            </label>
+                                            <div class="form-group">
+                                                <select class="form-control" name="jobCategory" id="jobCategory">
+                                                    %CATEGORY%
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <label>
+                                                {C_SELECT_SUBCATEGORY_LBL} :
+                                            </label>
+                                            <div class="form-group">
+                                                <select class="form-control" name="jobSubCategory" id="jobSubCategory">
+                                                    <option value="">---Select Sub Category---</option>
+                                                    %SUB_CATEGORY%
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <label>
+                                                    {C_ENTER_BUDGET_LBL} ({CURRENCY_SYMBOL}) :
+                                                </label>
+                                                <input class="form-control" type="text" name="budget" id="budget" maxlength="6" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <label>
+                                                    {C_EXP_LVL_LBL} :
+                                                </label>
+                                                <select class="form-control" name="expLevel" id="expLevel">
+                                                <option value="b">{CMJ_BEGINNER}</option>
+                                                <option value="i">{INTERMEDIATE_LABEL}</option>
+                                                <option value="p">{PRO_LABEL}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label>
+                                                {C_JOB_DESC_LBL} :
+                                            </label>
+                                            <textarea rows="3" name="description" id="description" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6" id="skills">
+                                        <div class="form-group">
+                                            <label>
+                                                {C_SKILLS_LIST_LBL} :
+                                            </label>
+                                            <select class="form-control skill_choose_skillList" multiple="multiple" name="skill[]" id="skill" data-error-container="#skill_error">
+                                                %SKILLS%
+                                            </select>
+                                            <div id="skill_error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group post_job">
+                                            <label>
+                                                {C_BIDDING_DEADLINE_LBL} :
+                                            </label>
+                                            <input type="text" name="biddingDeadline" class="form-control datepicker" id="biddingDeadline"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label>
+                                                {C_ESTIMATED_JOB_TIME_LBL} :
+                                            </label>
+                                            <select class="form-control" name="estimatedDuration" id="estimatedDuration">
+                                                <option>{C_ONE_DAY_OR_LESS_LBL}</option>
+                                                <option>{C_LESS_THEN_ONE_WEEK}</option>
+                                                <option>{C_ONE_TO_TWO_WEEK_LBL}</option>
+                                                <option>{C_THREE_TO_FOUR_WEEK_LBL}</option>
+                                                <option>{C_ONE_TO_SIX_MONTH_LBL}</option>
+                                                <option>{C_MORE_THEN_SIX_MONTH_LBL}</option>
+                                                <option>{C_ONGOING_LBL}</option>
+                                                <option>{C_NOT_SURE_LBL}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label>
+                                                {C_SELECT_JOB_TYPE_LBL} :
+                                            </label>
+                                            <select class="form-control" name="jobType" id="jobType">
+                                                <option value="pu">{C_JOB_TYPE_PUBLIC_LBL}</option>
+                                                <option value="pr">{C_JOB_TYPE_PRIVATE_LBL}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row invited_users hide">
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label>
+                                                Invited User List
+                                                <span>Add User</span>
+                                            </label>
+                                            <span class="extra-note invited_user"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label>
+                                                {C_ACCEPT_BID_FROM_LBL} :
+                                            </label>
+                                            <select class="form-control selectpicker" title="All location" multiple name="bidsFromLocation[]" id="bidsFromLocation" data-live-search="true">
+                                                %COUNTRY%
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label>
+                                                {C_GET_TO_KNOW_YOUR_FREELANCER_LBL} -
+                                                <a href="javascript:void(0);" data-toggle="modal" id="askQuestion" data-target="#ask_question" type="button">{C_ASK_QN_LBL}</a>
+                                                <p class="tooltip-content">
+                                                    <i class="fa fa-question-circle"></i>
+                                                    <span>If you will ask questions to your freelancers, you will get more information about your freelancers</span>
+                                                </p>
+                                            </label>
+                                                
+                                            </div>
+                                            <div class="extra-note sel_question"></div>
+                                            <input type="hidden" name="questions[]" id="questions">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <label class="featured_yn">
+                                                {WANT_TO_MAKE_JOB_FEATURED_LBL}
+                                            </label>
+                                            <div class="material-switch ">
+                                                <input id="someSwitchOptionPrimary" name="featured" class="sp_switch_featured" type="checkbox"/>
+                                                <label for="someSwitchOptionPrimary" class="label-primary">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <label class="featured_yn">
+                                                    {HIDE_JOB_FROM_SEARCH_LBL}
+                                                </label>
+                                                <div class="material-switch ">
+                                                    <input id="someSwitchOptionPrimary1" name="hideFrmSearch" type="checkbox"/>
+                                                    <label for="someSwitchOptionPrimary1" class="label-primary">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row featured_job_opt hide">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <label>
+                                                    {FEATURED_DURATION_DAYS}:
+                                                </label>
+                                                <!-- <input class="form-control" type="text" name="featuredDuration" id="featuredDuration" maxlength="2" value = '1' /> -->
+                                                <div class="sp-quantity">
+                                                    <div class="sp-minus"> <a class="ddd" href="javascript:void(0)">-</a>
+                                                    </div>
+                                                    <div class="sp-input">
+                                                        <input type="text" name="featuredDuration" id="featuredDuration" class="quntity-input" value="1">
+                                                    </div>
+                                                    <div class="sp-plus"> <a class="ddd" href="javascript:void(0)">+</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="red_error err_dur"></label>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <label>
+                                                    {PER_DAY_AMOUNT} ({CURRENCY_SYMBOL}):
+                                                </label>
+                                                <input class="form-control" type="text" name="perDayAmount" id="perDayAmount" value="{JOB_FEATURED_FEES}" readonly/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="post-serviceimg form-group">
+                                                <label>
+                                                    {C_ADD_FILES_LBL}
+                                                </label>
+                                                <div class="file-input-wrapper">
+                                                    <label for="upload-file" class="file-input-button">
+                                                        {C_UPLOAD_FILE_LBL}
+                                                    </label>
+                                                    <input id="upload-file" type="file" name="">
+                                                </div>
+                                                <ul class="file-names clearfix" id="attchments"></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="theme-button">
+                                            <input type="hidden" name="action" id="action" value="saveData">
+                                            <input type="button" name="submitFrmJob" value="Submit" id="addJob" class="btn btn-block btn-system">
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="frmToken" id="frmToken" value="%RANDOM%">
+                                    
+
+                                    <!-- start job type private -->
+                                    <div id="privateJob" class="modal fade" role="dialog">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close pr_email_cancel" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">{C_JOB_INV_LBL}</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- <form class="form" action="#" id="jobInvitation" method="post"> -->
+                                                <div class="form-group" id="parent_usr_skill">
+                                                    <label class="control-label">{C_SELECT_USERS_LBL} :</label>
+                                                    <select class="form-control usr_skill" multiple="multiple" name="invitations[]" id="invitations">
+                                                        %USERS%
+                                                    </select>
+                                                    <!-- <textarea class="form-control usr_skill txtarEmails" name="txtarEmails"></textarea> -->
+                                                    <label id="invitations_error" class="help-block hide">{C_PLEASE_SELECT_USERS_LBL}</label>
+                                                    <label class="wrong_email_error help-block red_error"></label>
+                                                </div>
+                                                <!-- </form> -->
+                                            </div>
+                                            <div class="modal-footer">
+                                                <!-- <div class="theme-button-default" data-dismiss="modal">
+                                                    <a href="javascript:void()" id="pr_email_cancel">Cancel</a>
+                                                </div> -->
+                                                <div class="theme-button" data-dismiss="modal">
+                                                    <button type="button" class="btn btn-block btn-system" id="invite">{ADD_LABEL}</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end job type private -->
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="tip-section">
+                            <div class="tip-box">
+                                <div class="box-corner"></div>
+                                <h3>USEFUL TIPS</h3>
+                                <ol>
+                                    <li>
+                                        {WRITE_AN_INFORMATIVE_TITLE_OF_THE_JOB}
+                                    </li>
+                                    <li>
+                                        {UPLOAD_MORE_INFORMATION_REGARDING}
+                                    </li>
+                                    <li>
+                                        {COMPARE_THE_EXPERIENCE_LEVEL}
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="ask_question" role="dialog">
+                                        <div class="modal-dialog">
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">
+                                                        &times;
+                                                    </button>
+                                                    <h4 class="modal-title">
+                                                        {C_SUGGESTED_QN_LBL}
+                                                    </h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <ul class="question_lsit checkboxes" >
+                                                        %QUESTION%
+                                                    </ul>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <!-- <div class="theme-button-default" data-dismiss="modal">
+                                                        <a href="javascript:void(0)">Cancel</a>
+                                                    </div> -->
+                                                    <div class="theme-button" data-dismiss="modal">
+                                                        <button type="button" class="btn btn-block btn-system" id="addQue">{C_ADD_THIS_QN_LBL}</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+</section>
+<!-- /.container -->
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+        var deadline_days = "%MAX_DEADLINE_DAYS%";
+        var url = "{SITE_URL}ajaxPostJob";
+        $days = "+"+deadline_days+"D";
+        $('.datepicker').datepicker({
+            format: 'DD-MM-YYYY',
+            minDate: 0, maxDate: $days            
+       });
+
+        /* Delete file attachments */
+        $(document).on("click",".delAttachment", function(e){
+            var id = $(this).attr("data_id");
+            e.preventDefault();
+            if (confirm("{FPS_ARE_YOU_SURE_YOU_WANT_TO_DELETE_THIS_ATTACHMENT}?")) {
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    dataType: "json",
+                    data:{'action':'file_delete','id':id},
+                    beforeSend: function () {
+                       addOverlay();
+                   },
+                   success: function (response) {
+                    if(response['status'] == 'true'){
+                        $('.attchFile_'+id).remove();
+                        toastr['success']('{FPS_ATTACHMENT_DELETED_SUCCESSFULLY}.');
+                    } else {
+                        toastr['error']('{THERE_IS_AN_ISSUE_DELETING_THIS_ATTACHMENT}.');
+                    }
+                },
+                complete: function (xhr) {
+                    removeOverlay();
+                    return false;
+                }
+            });
+            }
+        });
+        /* End code */
+
+        $(document).on("change",".sp_switch_featured",function(e){
+           if($(".sp_switch_featured").prop("checked")==true){
+            $(".featured_job_opt").removeClass("hide");
+        }
+        else{
+            $(".featured_job_opt").addClass("hide");
+        }
+    });
+        $(document).on("keydown","#featuredDuration",function(event){
+           var charCode = event.which || event.keyCode || event.charCode;
+           return false;
+       });
+        $(document).on("click",".sp-plus",function(e){
+           var dur = $("#featuredDuration").val();
+           if(dur>30){
+                $("#featuredDuration").val("30");
+                return false;
+            }
+           var price = $("#perDayAmount").val();
+           $("#perDayAmount").val(dur*"{JOB_FEATURED_FEES}");
+       });
+        $(document).on("click",".sp-minus",function(e){
+
+           var dur = $("#featuredDuration").val();
+           if(dur<1){
+            $("#featuredDuration").val("1");
+            return false;
+        }
+        var price = $("#perDayAmount").val();
+        $("#perDayAmount").val(dur*"{JOB_FEATURED_FEES}");
+    });
+
+        $(document).on("change","#featuredDuration",function(e){
+
+           var total_fetured_amount = ($("#featuredDuration").val())*"{JOB_FEATURED_FEES}";
+           if(!isNaN(total_fetured_amount)){
+            $("#perDayAmount").val(total_fetured_amount);
+        }
+        else{
+            toastr['error']("{INVALID_VALUE_FOR_FEATURED_DAYS}","{CMJ_INVALID_VALUE}");
+            $("#perDayAmount").val("{JOB_FEATURED_FEES}");
+            $("#featuredDuration").val("1");
+        }
+    });
+        $(document).on("click","#invite",function(e){
+            var userList = $('#invitations').val();
+            if(userList == null){
+                $('#invitations_error').removeClass('hide');
+                $('#invitations').parent().addClass('has-error');
+            } else {
+                $.post("<?php echo SITE_MOD.$this->module; ?>/ajax.<?php echo $this->module; ?>.php",
+                    {"action":"sel_invitations","user_id":userList},
+                    function(data){
+                        console.log(data.result.ndata.length);
+                        if(data.result.ndata.length>0){
+                            $('.wrong_email_error').html("{FEW_OF_THE_EMAILS_ARE_NOT_AVAILABLE_AT}");
+                        }
+                        else{
+                            $('.wrong_email_error').html("");
+                            $('.invited_user').html(data.result.pdata);
+                            $("#privateJob").modal("hide");
+                        }
+                    },"json");
+            }
+        });
+
+        $(document).on("click","#pr_email_cancel",function(e){
+            $('.wrong_email_error').html("");
+        });
+
+        $(document).on("click",".pr_email_cancel",function(e){
+            $('.wrong_email_error').html("");
+        });
+
+
+        $(document).on("change","#invitations",function(e){
+            var userList = $('#invitations').val();
+            if(userList != null){
+                $('#invitations_error').addClass('hide');
+                $('#invitations').parent().removeClass('has-error');
+            }
+        });
+
+        /* File upload using ajax */
+        $('#upload-file').change(function(event) {
+            var file_data = $(this).prop('files')[0];
+            var fileTagId = $(this).attr('id');
+            var ImageId = fileTagId.split(',');
+            var img = ImageId[1];
+
+            var imagPath = $(this).val();
+            var files = event.target.files;
+            var fileName = files[0].name;
+            var lastdotval = imagPath.lastIndexOf(".");
+            var res = imagPath.substr(lastdotval + 1, 4);
+
+            if (this.files[0].size > 5242880) {
+                toastr['info']("{UPLOADED_DOCUMENT_SIZE_MUST_BE_LESS_THEN}");
+                return false;
+            }
+            if (res != 'png' && res != 'PNG' && res != 'JPG' && res != 'jpg' && res != 'JPEG' && res != 'jpeg' && res != 'csv' && res != 'doc' && res != 'docx' && res != 'pdf' && res != 'PDF') {
+                toastr["error"]("Please select a valid file");
+                return false;
+
+            } else {
+                token = $('#frmToken').val();
+                var img_form_data = new FormData();
+                img_form_data.append("file", file_data);
+                img_form_data.append("action", "move_image");
+                img_form_data.append("token",token);
+                img_form_data.append("extention",res);
+
+                $.ajax({
+                    url: url,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: img_form_data,
+                    type: 'post',
+                    dataType: 'json',
+                    beforeSend: function () {
+                        addOverlay();
+                    },
+                    success:function(data)
+                    {
+                        $('#attchments').append(data);
+                    },
+                    complete: function (xhr) {
+                        removeOverlay();
+                    }
+                });
+
+            }
+        });
+        /* End code */
+
+        $(document).on("change","#jobType",function() {
+            var jobType = $('#jobType').val();
+            if(jobType == 'pr'){
+                $('#privateJob').modal('show');
+                $('.invited_users').removeClass('hide');
+            } else {
+                $('.invited_users').addClass('hide');
+            }
+        });
+
+
+        $(document).on("click","#addJob",function(e){
+            var questions = $('.sel_question').text();
+
+            $("#frmJobPost").validate({
+                ignore: [],
+                errorClass: 'help-block',
+                errorElement: 'label',
+                errorPlacement: function (error, element) {
+                    if (element.attr("data-error-container")) {
+                        error.appendTo(element.attr("data-error-container"));
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                highlight: function (element)
+                {
+                    $(element).closest('.form-group').addClass('has-error');
+                },
+                unhighlight: function (element)
+                {
+                    $(element).closest('.form-group').removeClass('has-error');
+                },
+                rules:
+                {
+                    jobTitle:{required:true,startingSpaceNotAllow:true},
+                    jobCategory:{required:true},
+                    jobSubCategory : {required:true},
+                    budget:{required:true,digits:true,zeroNotAllowed:true},
+                    description:{required:true},
+                    "skill[]" : {required: true},   
+                    biddingDeadline : { required: true}
+                },
+                messages:
+                {
+                    jobTitle:{required:"{PLEASE_ENTER_JOB_TITLE}",startingSpaceNotAllow:"{FPS_SPACE_IS_NOT_ALLOWED}"},
+                    jobCategory:{required:"{FPS_PLEASE_SELECT_CATEGORY}"},
+                    jobSubCategory:{ required: "{PLEASE_SELECT_SUB_CATEGORY}"},
+                    budget:{required:"{PLEASE_ENTER_BUDGET}",digits:"{FPS_PLEASE_ENTER_NUMBER_ONLY}"},
+                    description:{required:"{FP_PLEASE_ENTER_DESCRIPTION}",startingSpaceNotAllow:"{FPS_SPACE_IS_NOT_ALLOWED}"},
+                    "skill[]" : {required:"{PLEASE_SELECT_SKILLS}"},
+                    biddingDeadline: { required:"{PLEASE_SELECT_BIDDING_DEADLINE}"}
+
+                },
+                focusInvalid: false,
+                invalidHandler: function(form, validator) {
+                if (!validator.numberOfInvalids())
+                    return;
+                    $('html, body').animate({
+                        scrollTop: ($(validator.errorList[0].element).offset().top-100)
+                    }, 1000);
+                }
+            });
+
+            if($("#frmJobPost").valid())
+            {
+
+                var skills = $("#skill").val();
+
+                var skills_arr = String(skills).split(",");
+                var skill_single = final_str = '';
+
+                for(var i=0; i<skills_arr.length;i++){
+                    skill_single = parseInt(skills_arr[i]);
+                    if(isNaN(skill_single)){
+                        final_str += String(skills_arr[i])+ ", ";
+                    }
+                }
+                if(final_str!=''){
+                    final_str = final_str.substring(0,final_str.length - 2);
+                    toastr['error']("{THESE_SKILLS} ("+final_str+") {ARE_NOT_APPROVED_ON_THIS_PLATFORM}","Invalid Skills");
+                    return false;
+                }
+
+                if($("#featuredDuration").val()=="" || $("#featuredDuration").val()== null){
+                    toastr['error']("{MINIMUM_FEATURED_DURATION_DAYS_SHOULD}");
+                    return false;
+                }
+                if($("#jobType").val()=='pr'){
+                    if($('#invitations').val()==null || $('#invitations').val()==""){
+                        toastr['error']("{PLEASE_SELECT_ATLEAST_ONE_FREELANCER}","{NO_FREELANCERS}");
+                        return false;
+                    }
+                    else{
+                        
+                        addOverlay();
+                        $("#frmJobPost").submit();
+                    }
+                }
+                else{
+
+                    addOverlay();
+                    $("#frmJobPost").submit();
+                }
+            }
+        });
+
+        jQuery.validator.addMethod("startingSpaceNotAllow", function(value, element)
+        {
+            return this.optional(element) || /^\S.*$/.test(value);
+        }, "{SPACE_IS_NOT_ALLOWED}");
+
+        jQuery.validator.addMethod("zeroNotAllowed", function(value, element)
+        {
+            if(value!=0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }, "{BUDGET_SHOULD_BE_MORE_THAN_ZERO}");
+
+        $(document).on("click",".que_remove",function() {
+            var dataId = $(this).attr('data_id');
+            $('#que_'+dataId).attr('checked',false);
+        });
+
+        $(document).on("click",".user_remove",function() {
+            var dataId = $(this).attr('data_id');
+            arr = $('#invitations').val();
+            alert();
+            
+            //console.log("Before Array "+arr);
+
+            for(i=0; i < arr.length; i++) {
+                if(arr[i] == dataId) {
+                    arr.splice(i,1);
+                }
+            }
+            if(arr.length == 0){
+                $('#invitations').val("").trigger("change");
+            } else {
+                $('#invitations').val(arr).trigger("change");
+            }
+
+        });
+
+        /* Select Job Sub Category */
+        $(document).on("change","#jobCategory",function(){
+            var catId = $(this).val();
+            addOverlay();
+            $.post("<?php echo SITE_MOD.$this->module; ?>/ajax.<?php echo $this->module; ?>.php",
+                {"action":"load_sub","cat_id":catId},
+                function(data){
+                    $("#jobSubCategory").html(data);
+                    //removeOverlay();
+                });
+            $.post("<?php echo SITE_MOD.$this->module; ?>/ajax.<?php echo $this->module; ?>.php",
+                {"action":"load_skills","cat_id":catId},
+                function(data){
+                    //$("#jobSubCategory").html(data);
+                    $('#skills select').html(data);
+                    removeOverlay();
+                });
+        });
+        /* End code */
+        $(document).ready(function(){
+            $("#jobSubCategory").html("<option value=''>---{SELECT_SUB_CATEGORY}---</option>");
+            $("#jobCategory").trigger("change");
+        });
+
+        $(document).on("keypress",".select2-search__field",function(inputValue){
+            var inputValue = event.which;
+            // allow letters and whitespaces only.
+            if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)) {
+                return false;
+            }
+        });
+
+        /* Adding questions */
+        $(document).on("click","#addQue",function(){
+            var selected = [];
+            $('.checkboxes input:checked').each(function() {
+                selected.push($(this).attr('data_id'));
+            });
+            selected = selected.toString();
+            if(selected!=''){
+                $.post("<?php echo SITE_MOD.$this->module; ?>/ajax.<?php echo $this->module; ?>.php",
+                    {"action":"sel_question","que_id":selected},
+                    function(data){
+                        $('.sel_question').html(data.result);
+                    },"json");
+                $("#questions").val(selected);
+            } else if(selected == ''){
+                $('.sel_question').html('');
+            }
+
+        });
+        /* End code */
+
+        $('#bidsFromLocation').selectpicker();
+        //$('#skill').select2();
+
+        $(".skill_choose_skillList").select2({
+            //tags:true,
+            placeholder: " --Select Skills-- ",
+            dropdownParent: $('#skills')
+        });
+        $("#jobType").change(function(){
+                var id = $(this).attr("data_id");
+            var exp_level = $("#expLevel").val();
+            $.ajax({
+            url: url,
+            type: "POST",
+            dataType: "json",
+            data:{'action':'get_invitations','id':id,'expLevel':exp_level},
+            success:function(data){
+            console.log(data);
+            $('#invitations').html(data.result);
+            }
+        });
+        });
+        
+
+        $('#invitations').select2({
+            //tags:true,
+            dropdownParent: $('#parent_usr_skill'),
+            
+        });
+
+
+        /*$(document).on('focus','#bidsFromLocation',function(){
+              var places = document.getElementById('location');
+              var option = {};
+              autocomplete= new google.maps.places.Autocomplete(places,option);
+          });*/
+
+          $(document).on('keypress','#budget',function(){
+              var b_length = $("#budget").val().length;
+              if(b_length>5){
+                return false;
+            }
+            return true;
+        });
+
+      });
+  </script>

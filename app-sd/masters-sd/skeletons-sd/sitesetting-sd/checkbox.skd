@@ -1,0 +1,13 @@
+<div class="form-group">
+      <label for="%NAME%" class="control-label col-md-3">%LABEL%&nbsp;</label>
+	  <div class="col-md-4">    
+	    	<input type="checkbox" class="" id="chVal" name="" value="" onchange="checkval()" %CHECKED%  %EXTRA% />
+	    	<input type="hidden" name="%NAME%" id="chkVal">
+	  </div>
+</div>
+<script>
+function checkval(){
+	if(document.getElementById("chVal").checked == true){
+		document.getElementById('chkVal').value = "on";}
+	else{document.getElementById('chkVal').value = "off";}}
+</script>

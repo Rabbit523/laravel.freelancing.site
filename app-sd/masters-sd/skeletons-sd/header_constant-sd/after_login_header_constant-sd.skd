@@ -1,0 +1,127 @@
+<script type="text/javascript">
+   /* $(function () {
+        OTable = $('#example123').dataTable({
+
+        "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                "fnServerData": function (sSource, aoData, fnCallback) {
+                    $.ajax({
+                        "dataType": 'json',
+                        "type": "POST",
+                        "url": sSource,
+                        "data": aoData,
+                        "success": fnCallback
+                    });
+                },
+                "aaSorting" : [],
+                "aoColumns": [
+                    { "sName": "id", "sTitle" : 'Content Id', bVisible: false},
+                    { "sName": "page_name", "sTitle" : 'Page Name', bVisible: true}
+ 
+                    
+                    <?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+                        , {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}
+                    <?php } ?>
+                ],
+                "fnServerParams"
+                : function(aoData){setTitle(aoData, this)},
+                "fnDrawCallback"
+                : function(oSettings) {
+                
+
+            }
+
+
+        
+
+    });*/
+
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+
+    $.validator.addMethod('pagenm', function (value, element) {
+        return /^[a-zA-Z0-9][a-zA-Z0-9\_\-]*$/.test(value);
+    }, 'Page name is not valid. Only alphanumeric,space and _ are allowed'
+            );
+    
+    
+    $(document).on('click', '.add-back', function (e) {
+        if($(this).attr("title")=="Add" || $(this).attr("title")=="Edit")
+        {          
+            $(".chng-btn").hide();
+        }
+        else
+        {
+            $(".chng-btn").show();
+        }
+        
+    });
+
+    /*tab change*/
+   /* $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      var target = $(e.target).attr("href") // activated tab
+      page_name = target.substring(1);
+      $.post("index.php",{"action":"load_skd","page_name":page_name},function()
+      {
+           
+      });
+});*/
+</script>
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#before_login">Before Login</a></li>
+            <li><a data-toggle="tab" href="#after_login">After Login</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="before_login" class="tab-pane fade in active">
+                <div class="x_panel">
+                     <div class="x_title">
+                        <h2>Before Login Header</h2>
+                        <div class="nav navbar-right panel_toolbox">
+                            <?php if (in_array('add', $this->Permission)) { ?>
+                                    <a href="ajax.<?php echo $this->module; ?>.php?action=add" class="btn btn-success btn-add add-back chng-btn" title="Add"><i class="fa fa-plus"></i> </a>
+                            <?php } ?>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="portlet-body portlet-toggler">
+                        <table id="before_login" class="table table-striped table-bordered table-hover">
+                        </table>
+                    </div>
+                    <div class="portlet-toggler pageform" style="display:none;"></div>
+                </div>
+            </div>
+            <div id="after_login" class="tab-pane fade in">
+                <div class="x_panel">
+                     <div class="x_title">
+                        <h2>After Login header</h2>
+                        <div class="nav navbar-right panel_toolbox">
+                           <?php if (in_array('add', $this->Permission)) { ?>
+                                    <a href="ajax.<?php echo $this->module; ?>.php?action=add" class="btn btn-success btn-add add-back chng-btn" title="Add"><i class="fa fa-plus"></i> </a>
+                                <?php } ?>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="portlet-body portlet-toggler">
+                        <table id="after_login" class="table table-striped table-bordered table-hover">
+                        </table>
+                    </div>
+                    <div class="portlet-toggler pageform" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

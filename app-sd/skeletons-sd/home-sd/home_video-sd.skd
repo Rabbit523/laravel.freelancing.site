@@ -1,0 +1,12 @@
+<section class="video-section">
+   <div class="homepage-hero-module">
+      <div class="video-container">
+   	  		<div class="overlay-video"></div>
+            <video autoplay loop class="fillWidth">
+                <source src="%SRC%" type="video/mp4" />{YOUR_BROWSER_DOES_NOT_SUPPORT}
+                <source src="%SRC%" type="video/webm" />{YOUR_BROWSER_DOES_NOT_SUPPORT}
+            </video>
+        </div> 
+    </div> 
+    %SEARCH_SECTION%
+</section>

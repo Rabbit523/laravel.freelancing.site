@@ -1,0 +1,15 @@
+<div class="categories">
+    <div class="row">
+        <div class="service-heading">
+            <div class="media-left">
+                <div class="icon-pc">
+                    <img src="%CAT_IMG%" title="%CATEGORY_NAME%"/>
+                </div>
+            </div>
+            <div class="media-body">
+                <h3>%CATEGORY_NAME%</h3>
+            </div>
+        </div>
+        %LOOP_DATA%
+    </div>
+</div>

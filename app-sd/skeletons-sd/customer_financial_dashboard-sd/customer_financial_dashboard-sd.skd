@@ -1,0 +1,832 @@
+<!-- Dashboard Navigation -->
+%SUB_HEADER_CONTENT%
+<!-- Dashboard Navigation End -->
+
+<!-- Main Dashboard -->
+<section class="main-dashboard financial-dashboard">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="financial-dashboard-wrap">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="financial-statistics-wallet clearfix">
+                                <div class="financial-statistics-wrap">
+                                    <ul class="financial-statistics clearfix">
+                                        <li class="sts-item sts-red">
+                                            <div class="sts-item-wrap">
+                                                <div class="amount-wrap">%TOTAL_INCOME%</div>
+                                                <label class="sts-label">{TOTAL_INCOME}</label>
+                                            </div>
+                                        </li>
+                                        <li class="sts-item sts-green">
+                                            <div class="sts-item-wrap">
+                                                <div class="amount-wrap">%TOTAL_EXPENSES%</div>
+                                                <label class="sts-label">{TOTAL_EXPENSES}</label>
+                                            </div>
+                                        </li>
+                                        <li class="sts-item sts-pink">
+                                            <div class="sts-item-wrap">
+                                                <div class="amount-wrap">%TOTAL_EXPENSES_FROM_JOBS%</div>
+                                                <label class="sts-label">Job Expenses</label>
+                                            </div>
+                                        </li>
+                                        <li class="sts-item sts-purple">
+                                            <div class="sts-item-wrap">
+                                                <div class="amount-wrap">%TOTAL_EXPENSES_FROM_SERVICE%</div>
+                                                <label class="sts-label">Service Expenses</label>
+                                            </div>
+                                        </li>
+                                        <li class="sts-item sts-yellow">
+                                            <div class="sts-item-wrap">
+                                                <div class="amount-wrap">%ONHOLD_AMOUNT%</div>
+                                                <label class="sts-label">{C_SERVICE_ONHOLD_AMNT_TITLE_LBL}</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="financial-wallet mobile-view">
+                                    <div class="box box-primary">
+                                        <div class="box-header">
+                                            <h3 class="box-title">{F_NAV_WALLET_LBL}</h3>
+                                            <div class="box-tools pull-right">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#financialWallet"></a>
+                                            </div>
+                                        </div>
+                                        <div id="financialWallet" class="panel-collapse collapse in" >
+                                            <div class="box-body" >
+                                                <div class="wallet-wrap">
+                                                    <div class="wallet-amount-wrap">
+                                                        <label class="wallet-amount-label">{C_TOTAL_WALLET_AMNT_LBL}</label>
+                                                        <div class="amount-wrap">%WALLET_AMOUNT%</div>
+                                                    </div>
+                                                    <div class="wallet-btn-wrap">
+                                                        <button type="button" name="" id="AddtoWallet" class="btn btn-primary btn-block wallet-btn">{F_ADD_AMNT_WALLET_LBL}</button>
+                                                        <button type="button" name="" id="RedeemRequest" class="btn btn-secondary btn-block wallet-btn %REDEEM_HIDE%">{F_REQUEST_REDEEM_LBL}</button>
+                                                    </div>
+                                                    <input type="hidden" name="realUserId" id="realUserId" value="%REAL_USER_ID%">
+                                                    <input type="hidden" name="oppositeUserId" id="oppositeUserId" value="%OPPOSITE_USER_ID%">
+                                                    <div class="secure-payment-wrap text-center">
+                                                        <div class="secure-payment-text"><span><i class="fa fa-lock"></i> 100%</span> Secure Payment By:</div>
+                                                        <ul class="clearfix payment-cards">
+                                                            <li><i class="fa fa-cc-paypal"></i></li>
+                                                            <li><i class="fa fa-cc-visa"></i></li>
+                                                            <li><i class="fa fa-cc-mastercard"></i></li>
+                                                            <li><i class="fa fa-cc-amex"></i></li>
+                                                            <li><i class="fa fa-cc-diners-club"></i></li>
+                                                            <li><i class="fa fa-cc-discover"></i></li>
+                                                            <li><i class="fa fa-cc-jcb"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="financial-statistics-chart">
+                                <div class="box box-primary">
+                                    <div class="box-header">
+                                        <h3 class="box-title">{INCOME_AND_EXPENSES}</h3>
+                                        <div class="box-tools pull-right">
+                                            <select class="form-group" id="map_data">
+                                                <option value="month">Month</option>
+                                                <option value="year">Year</option>
+                                            </select>
+                                            <!-- <a data-toggle="collapse" data-parent="#accordion" href="#financialChart"></a> -->
+                                        </div>
+                                    </div>
+                                    <div id="financialChart" class="panel-collapse collapse in" >
+                                        <div class="box-body" >
+                                            <div class="financial-chart-wrap">
+                                                <canvas id="canvas"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 desktop-view">
+                            <div class="financial-wallet">
+                                <div class="box box-primary">
+                                    <div class="box-header">
+                                        <h3 class="box-title">{F_NAV_WALLET_LBL}</h3>
+                                        <div class="box-tools pull-right">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#financialWallet"></a>
+                                        </div>
+                                    </div>
+                                    <div id="financialWallet" class="panel-collapse collapse in" >
+                                        <div class="box-body" >
+                                            <div class="wallet-wrap">
+                                                <div class="wallet-amount-wrap">
+                                                    <label class="wallet-amount-label">{C_TOTAL_WALLET_AMNT_LBL}</label>
+                                                    <div class="amount-wrap">%WALLET_AMOUNT%</div>
+                                                </div>
+                                                <div class="wallet-btn-wrap">
+                                                    <button type="button" name="" id="AddtoWallet" class="btn btn-primary btn-block wallet-btn">{F_ADD_AMNT_WALLET_LBL}</button>
+                                                    <button type="button" name="" id="RedeemRequest" class="btn btn-secondary btn-block wallet-btn %REDEEM_HIDE%">{F_REQUEST_REDEEM_LBL}</button>
+                                                </div>
+                                                <input type="hidden" name="realUserId" id="realUserId" value="%REAL_USER_ID%">
+                                                <input type="hidden" name="oppositeUserId" id="oppositeUserId" value="%OPPOSITE_USER_ID%">
+                                                <div class="secure-payment-wrap text-center">
+                                                    <div class="secure-payment-text"><span><i class="fa fa-lock"></i> 100%</span> Secure Payment By:</div>
+                                                    <ul class="clearfix payment-cards">
+                                                        <li><i class="fa fa-cc-paypal"></i></li>
+                                                        <li><i class="fa fa-cc-visa"></i></li>
+                                                        <li><i class="fa fa-cc-mastercard"></i></li>
+                                                        <li><i class="fa fa-cc-amex"></i></li>
+                                                        <li><i class="fa fa-cc-diners-club"></i></li>
+                                                        <li><i class="fa fa-cc-discover"></i></li>
+                                                        <li><i class="fa fa-cc-jcb"></i></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="sawlii-tabs-wrap financial-transactions-wrap">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#financialTab" data-toggle="tab" aria-expanded="true">{FINANCIAL_HISTORY}</a></li>
+                                    <li class=""><a href="#walletTab" data-toggle="tab" aria-expanded="false">{C_WALLET_LBL}</a></li>
+                                    <li class=""><a href="#paytransHistoryTab" data-toggle="tab" aria-expanded="false">{F_PAYMENT_HISTORY_TITLE_LBL}</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="financialTab">
+                                        <div class="box box-primary">
+                                            <div class="box-header">
+                                                <h3 class="box-title">{JOB_HISTORY}</h3>
+                                                <div class="box-tools pull-right">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#jobIncome"></a>
+                                                </div>
+                                            </div>
+                                            <div id="jobIncome" class="panel-collapse collapse in" >
+                                                <div class="box-body" >
+                                                    <div class="transaction-table">
+                                                        <div class="transaction-total-wrap">
+                                                            <div class="trans-total-item">{SF_TOTAL_PAID_FOR_JOB} : <div class="amount-wrap">%TOTAL_EXPENSES_FROM_JOBS%</div></div>
+                                                            <div class="trans-total-item">{F_TOTAL_PENDING_EARN_FRM_JOB} : <div class="amount-wrap">%TOTAL_PENDING_EXPENSES_FROM_JOB%</div></div>
+                                                        </div>
+                                                        <div class="table-responsive">
+                                                            <table>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="ft-title">{SF_JOB_TITLE}</th>
+                                                                        <th class="ft-name">{SF_FREELANCER_NAME}</th>
+                                                                        <th class="ft-milestone">{SF_NO_OF_MILESTONES}</th>
+                                                                        <th class="ft-date">{SF_DATE}</th>
+                                                                        <th class="ft-status">{SF_STATUS}</th>
+                                                                        <th class="ft-total">{SF_PENDING_AMOUNT}<small>({CURRENCY_SYMBOL})</small></th>
+                                                                        <th class="ft-total">{SF_PAID_AMOUNT}<small>({CURRENCY_SYMBOL})</small></th>
+                                                                        <th class="ft-total">{ADMIN_FEES}<small>({CURRENCY_SYMBOL})</small></th>
+                                                                        <th class="ft-total">{SF_TOTAL_AMOUNT}<small>({CURRENCY_SYMBOL})</small></th>
+                                                                        <th class="ft-action">{SF_VIEW}</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    %FINANCIAL_JOB_DATA%
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box box-primary">
+                                            <div class="box-header">
+                                                <h3 class="box-title">{SERVICE_HISTORY}</h3>
+                                                <div class="box-tools pull-right">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#serviceIncome"></a>
+                                                </div>
+                                            </div>
+                                            <div id="serviceIncome" class="panel-collapse collapse in" >
+                                                <div class="box-body" >
+                                                    <div class="transaction-table">
+                                                        <div class="transaction-total-wrap">
+                                                            <div class="trans-total-item">{SF_TOTAL_PAID_FOR_SERVICE} : <div class="amount-wrap">%TOTAL_EXPENSES_FROM_SERVICE%</div></div>
+                                                            <div class="trans-total-item">{F_TOTAL_PENDING_EARN_AMNT_LBL} : <div class="amount-wrap">%TOTAL_PENDING_EXPENSES_FROM_SERVICE%</div></div>
+                                                        </div>
+                                                        <div class="table-responsive">
+                                                            <table>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="ft-title">{SF_SERVICE_TITLE}</th>
+                                                                        <th class="ft-name">{SF_FREELANCER_NAME_LABEL}</th>
+                                                                        <th class="ft-date">{SF_DATE}</th>
+                                                                        <th class="ft-status">{SF_STATUS}</th>
+                                                                        <th class="ft-total">{SF_PENDING_AMOUNT}<small>({CURRENCY_SYMBOL})</small></th>
+                                                                        <th class="ft-total">{SF_PAID_AMOUNT}<small>({CURRENCY_SYMBOL})</small></th>
+                                                                        <th class="ft-action">{SF_VIEW}</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    %FINANCIAL_SERVICE_DATA%
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="walletTab">
+                                        <div class="box box-primary">
+                                            <div class="box-header">
+                                                <h3 class="box-title">{WALLET_TRANSACTION_HISTORY}</h3>
+                                            </div>
+                                            <div class="box-body" >
+                                                <div class="transaction-table">
+                                                    <div class="transaction-total-wrap">
+                                                        <div class="trans-total-item">{F_TOTAL_CREDIT_AMNT}: <div class="amount-wrap">%WALLET_AMOUNT%</div></div>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="ft-tid">{F_TRANSACTION_LBL}</th>
+                                                                    <th class="ft-date">{F_PAYMENT_STATUS}</th>
+                                                                    <th class="ft-status">{F_DATE_LBL}</th>
+                                                                    <th class="ft-total">{F_AMOUNT_LBL}({CURRENCY_SYMBOL})</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                 %WALLET_HISTORY%
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box box-primary">
+                                            <div class="box-body" >
+                                                <div class="transaction-table">
+                                                    <div class="transaction-total-wrap">
+                                                        <div class="trans-total-item">{F_REDEEM_REQUEST_LBL}: <div class="amount-wrap">%TOTAL_REDEEM_AMOUNT%</div></div>
+                                                        </div>
+                                                    <div class="table-responsive">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="ft-tid">{F_TRANSACTION_REDEEM_LBL}</th>
+                                                                    <th class="ft-date">{F_TRANSACTION_DATE_REDEEM_LBL}</th>
+                                                                    <th class="ft-date">{F_TRANSACTION_REQ_SENT_DATE_REDEEM_LBL}</th>
+                                                                    <th class="ft-status">{F_AMOUNT_REDEEM_LBL}({CURRENCY_SYMBOL})</th>
+                                                                    <th class="ft-total">{F_STATUS_LBL}</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    %REDEEM_HISTORY% 
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box box-primary">
+                                            <div class="box-body" >
+                                                <div class="transaction-table">
+                                                    <div class="transaction-total-wrap">
+                                                        <div class="trans-total-item">{F_ONHOLD_AMNT_TITLE_LBL} : <div class="amount-wrap">%TOTAL_JOB_ONHOLD_AMNT%</div></div>
+                                                        </div>
+                                                    <div class="table-responsive">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="ft-title">{F_ONHOLD_JOB_TITLE_LBL}</th>
+                                                                    <th class="ft-total">{F_ONHOLD_AMNT_LBL}<small>({CURRENCY_SYMBOL})</small></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                               %JOB_HOLD_HISTORY% 
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box box-primary">
+                                            <div class="box-body" >
+                                                <div class="transaction-table">
+                                                    <div class="transaction-total-wrap">
+                                                        <div class="trans-total-item">{F_SER_ONHOLD_AMNT_LBL} : <div class="amount-wrap">%TOTAL_SERVICES_ONHOLD_AMNT%</div></div>
+                                                        </div>
+                                                    <div class="table-responsive">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="ft-title">{F_ONHOLD_SER_TITLE}</th>
+                                                                    <th class="ft-total">{F_SER_AMNT_LBL} ({CURRENCY_SYMBOL})</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                %SERVICES_HOLD_HISTORY%
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="paytransHistoryTab">
+                                        <div class="box box-primary">
+                                            <div class="box-header">
+                                                <h3 class="box-title">{CW_FEATURED_JOB_PAYMENT}</h3>
+                                                <div class="box-tools pull-right">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#creditPackage"></a>
+                                                </div>
+                                            </div>
+                                            <div id="creditPackage" class="panel-collapse collapse in" >
+                                                <div class="box-body" >
+                                                    <div class="transaction-table">
+                                                        <div class="transaction-total-wrap">
+                                                            <div class="trans-total-item">{CW_PAID_AMOUNT} : <div class="amount-wrap">%FEATUREDFEES_TOTAL%</div></div>
+                                                        </div>
+                                                        <div class="table-responsive">
+                                                            <table>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="ft-title">{FPH_SERVICE}</th>
+                                                                        <th class="ft-date">{FPH_AMOUNT} ({CURRENCY_SYMBOL})</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    %FEATUREDFEES_HISTORY%
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box box-primary">
+                                            <div class="box-header">
+                                                <h3 class="box-title">{CW_DISPUTE_REFUND}</h3>
+                                                <div class="box-tools pull-right">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#desputeRefund"></a>
+                                                </div>
+                                            </div>
+                                            <div id="desputeRefund" class="panel-collapse collapse in" >
+                                                <div class="box-body" >
+                                                    <div class="transaction-table">
+                                                        <div class="transaction-total-wrap">
+                                                            <div class="trans-total-item">{CW_PAID_AMOUNT} : <div class="amount-wrap">%DISPUTE_REFUND_TOTAL%</div></div>
+                                                        </div>
+                                                        <div class="table-responsive">
+                                                            <table>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="ft-title">{CW_SERVICE_JOB_TITLE}</th>
+                                                                        <th class="ft-date">{CW_REFUND_DATE}</th>
+                                                                        <th class="ft-total">{CW_AMOUNT}({CURRENCY_SYMBOL})</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    %DISPUTE_REFUND_HISTORY%
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Main Dashboard End -->
+
+<!-- wallet Amount Modal -->
+<div class="modal fade in" id="walletTransfer" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+      <form method="post" name="walletAmntFrm" id="walletAmntFrm">
+        <input type="hidden" name="action" value="">
+        <input type="hidden" name="chkpoint" value="">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">×</button>
+              <h4 class="modal-title">{C_WALLET_AMNT_TRANSFER_LBL} </h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">{CURRENCY_SYMBOL}</span>
+                    <input type="number" name="WalletAmount" class="form-control" id="WalletAmount" placeholder="Enter Amount" maxlength="10" aria-describedby="basic-addon1">
+                  </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-system" name="transferToWallet" id="transferToWallet" value="transferToWallet">{CW_SUBMIT}</button>
+            </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Reddem request modal -->
+
+<div class="modal fade in" id="RedeemRequestModal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+      <form method="post" name="redeemFrm" id="redeemFrm">
+        <input type="hidden" name="action" value="">
+        <input type="hidden" name="chkpoint" value="">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">×</button>
+              <h4 class="modal-title">{C_REQUEST_FOR_REDEEM_MODAL_LBL}</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">{CURRENCY_SYMBOL}</span>
+                    <input type="number" name="amountRedeem" class="form-control" id="amountRedeem" placeholder="Enter Amount" maxlength="10" aria-describedby="basic-addon1">
+                </div>
+              </div>
+              <p>{C_REDEEM_AMNT_NOTE_LBL}</p>
+            </div>
+            <div class="modal-footer">
+              <input type="hidden" name="action" id="action" value="SendRedeemRequest">
+              <button type="submit" class="btn btn-system" name="reedemForm" value="sendRedeemRequest" id="sendRedeemRequest">{CW_SUBMIT}</button>
+            </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var url = "{SITE_URL}ajaxCustomerWallet";
+  $(document).ready(function(){
+    /*wallet modal*/
+    $(document).on("click","#AddtoWallet",function(){
+      $("#walletTransfer").modal("show");
+    });
+
+    /*Redeem modal */
+
+    $(document).on("click","#RedeemRequest",function(){
+      $("#RedeemRequestModal").modal("show");
+    });
+
+    /*wallet validation*/
+    $(document).on("click","#transferToWallet",function(){
+        $("#walletAmntFrm").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            validClass: "valid-class",
+            errorElement: 'label',
+            highlight: function (element)
+            {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element)
+            {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            rules:
+            {
+                WalletAmount:{required:true,minlength:1,digits:true,min:1}
+            },
+            messages:
+            {
+                WalletAmount:{required:"{CW_PLEASE_ENTER_AMOUNT}",digits:"{CW_PLEASE_ENTER_ONLY_NUMBER}",min : '{CW_PLEASE_ENTER_AMOUNT_GREATER_THAN} {CURRENCY_SYMBOL}1'}
+            },
+            errorPlacement: function(error, element) {
+                if(element.parent('.input-group').length) {
+                    error.insertAfter(element.parent());
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+            onError : function(){
+                $('.input-group.error-class').find('.help-block.form-error').each(function() {
+                  $(this).closest('.form-group').addClass('error-class').append($(this));
+                });
+            }
+        });
+        if($("#walletAmntFrm").valid())
+        {
+            addOverlay();
+        }
+    });
+
+    /*Redeem validation*/
+
+    $(document).on("click","#sendRedeemRequest",function(){
+       $("#redeemFrm").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'label',
+            highlight: function (element)
+            {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element)
+            {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            rules:
+            {
+                amountRedeem:{required:true,minlength:1,digits:true,remote: url }
+            },
+            messages:
+            {
+                amountRedeem:{required:"{CW_PLEASE_ENTER_AMOUNT}",digits:"{CW_PLEASE_ENTER_ONLY_NUMBER}",remote:"{CW_INSUFFICIENT_AMOUNT_FOR_REDEEM}"}
+            },
+            errorPlacement: function(error, element) {
+                if(element.parent('.input-group').length) {
+                    error.insertAfter(element.parent());
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+            onError : function(){
+                $('.input-group.error-class').find('.help-block.form-error').each(function() {
+                  $(this).closest('.form-group').addClass('error-class').append($(this));
+                });
+            }
+        });
+        if($("#redeemFrm").valid())
+        {
+          $("#redeemFrm").submit();
+        }
+    });
+    $(document).on("click",".send-rem",function(){
+        var id = $(this).attr("data-id");
+        addOverlay();
+        $.post(url,{"action":"send_reminder","id":id},function(data){
+            removeOverlay();
+            toastr['success']('{CW_REMINDER_MAIL_HAS_BEEN_SENT_SUCCESSFULLY}.');
+        },'json');
+    });
+  });
+    $(document).on("change","#map_data",function(){
+        url = "{SITE_URL}ajaxCustomerFinancialDashboard";
+        $type = $(this).val();
+        $realUserId = $("#realUserId").val();
+        $oppositeUserId = $("#oppositeUserId").val();
+        addOverlay();
+        $.post(url,{"action":"updateChart","type":$type,"realUserId":$realUserId,"oppositeUserId":$oppositeUserId},function(data){
+            removeOverlay();
+            if(data.status=="success"){                   
+                chartData(data.content.heading,data.content.income,data.content.expense,data.content.scales_name);                
+            }else{
+                toastr['success']('{SOMETHING_WENT_WRONG}.');
+            }
+        },'json');
+    });
+   $(document).on("click","#sendRedeemRequest",function(){
+       $("#redeemFrm").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'label',
+            highlight: function (element)
+            {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element)
+            {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            rules:
+            {
+                amountRedeem:{required:true,minlength:1,digits:true,remote: url }
+            },
+            messages:
+            {
+                amountRedeem:{required:"{CW_PLEASE_ENTER_AMOUNT}",digits:"{CW_PLEASE_ENTER_ONLY_NUMBER}",remote:"{CW_INSUFFICIENT_AMOUNT_FOR_REDEEM}"}
+            },
+            errorPlacement: function(error, element) {
+                if(element.parent('.input-group').length) {
+                    error.insertAfter(element.parent());
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+            onError : function(){
+                $('.input-group.error-class').find('.help-block.form-error').each(function() {
+                  $(this).closest('.form-group').addClass('error-class').append($(this));
+                });
+            }
+        });
+        if($("#redeemFrm").valid())
+        {
+          $("#redeemFrm").submit();
+        }
+    });
+</script>
+<script> 
+    $(document).ready(function(){
+        chartData(%CHART_HEADING%,%CHART_INCOME%,%CHART_ENPENSE%,"%SCALES_NAME%");        
+    });
+    function chartData(chart_heading,chart_income,chart_enpense,scales_name){
+        console.log();
+        var DAYS = chart_heading;
+        var config = {
+            type: 'line',
+            data: {
+                labels: chart_heading, 
+                datasets: [{
+                    label: 'Income',
+                    backgroundColor: window.chartColors.green,
+                    borderColor: window.chartColors.green,
+                    data: chart_income,
+                    fill: false,
+                }, {
+                    label: 'Expenses',
+                    fill: false,
+                    backgroundColor: window.chartColors.grey,
+                    borderColor: window.chartColors.grey,
+                    data: chart_enpense,
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: ''
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: true,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: scales_name
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'KWD'
+                        }
+                    }]
+                }
+            }
+        };
+        var ctx = document.getElementById('canvas').getContext('2d');
+        window.myLine = new Chart(ctx, config);
+    }     
+</script>
+
+<? /* <section class="main-dashboard">
+   <div class="container">
+      <div class="profile">
+         <div class="featurette-job">
+            <div class="sub_featured">
+               <div class="theme-form">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="job_feed_heading">
+                           <h1 class="main-heading">{SF_FINANCIAL_DASHBOARD}</h1>
+                           <div class="row">
+                              <div class="col-md-6">
+                                 <h4>
+                                    {SF_TOTAL_PAID_FOR_JOB} :
+                                    <span>
+                                    %TOTAL_EARNINGS_FROM_JOBS%
+                                    </span>
+                                 </h4>
+                              </div>
+                              <div class="col-md-6">
+                                 <h4 class="pull-right">
+                                    {SF_TOTAL_PENDING_AMOUNT_TO_PAID}:
+                                    <span>
+                                    %TOTAL_PENDING_EARNINGS_FROM_JOBS%
+                                    </span>
+                                 </h4>
+                              </div>
+                           </div>
+                        </div>
+                        <div class=" table-responsive">
+                           <table class="table table-striped table-bordered">
+                              <thead class="thead-default">
+                                 <tr>
+                                    <th>
+                                       {SF_JOB_TITLE}
+                                    </th>
+                                    <th>
+                                       {SF_FREELANCER_NAME}
+                                    </th>                                    
+                                    <th>
+                                       {SF_NO_OF_MILESTONES}
+                                    </th>                                    
+                                    <th>
+                                       {SF_PENDING_AMOUNT}($)
+                                    </th>
+                                    <th>
+                                       {SF_PAID_AMOUNT}($)
+                                    </th>
+                                    <th>
+                                       {ADMIN_FEES}($)
+                                    </th>
+                                    <th>
+                                       {SF_TOTAL_AMOUNT}($)
+                                    </th>
+                                    <th>
+                                       {SF_DATE}
+                                    </th>
+                                    <th>
+                                       {SF_STATUS}
+                                    </th>
+                                    <th>
+                                       {SF_VIEW}
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 %FINANCIAL_JOB_DATA%
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="table-content">
+                           <div class="job_feed_heading">
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <h4>
+                                       {SF_TOTAL_PAID_FOR_SERVICE} :
+                                       <span>
+                                       %TOTAL_EARNINGS_FROM_SERVICE%
+                                       </span>
+                                    </h4>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <h4 class="pull-right">
+                                       {SF_TOTAL_PENDING_AMOUNT_TO_PAY}:
+                                       <span>
+                                       %TOTAL_PENDING_EARNINGS_FROM_SERVICE%
+                                       </span>
+                                    </h4>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class=" table-responsive">
+                           <table class="table table-striped table-bordered">
+                              <thead class="thead-default">
+                                 <tr>
+                                    <th>
+                                       {SF_SERVICE_TITLE}
+                                    </th>
+                                    <th>
+                                       {SF_FREELANCER_NAME_LABEL}
+                                    </th>
+                                    <th>
+                                       {SF_PENDING_AMOUNT}($)
+                                    </th>
+                                    <th>
+                                       {SF_PAID_AMOUNT}($)
+                                    </th>
+                                    <th>
+                                       {SF_DATE}
+                                    </th>
+                                    <th>
+                                       {SF_STATUS}
+                                    </th>
+                                    <th>
+                                       {SF_VIEW}
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 %FINANCIAL_SERVICE_DATA%
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section> */ ?>
+

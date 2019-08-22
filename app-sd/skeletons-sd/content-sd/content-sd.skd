@@ -1,0 +1,28 @@
+<!-- <section class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-left head_services">
+                <h1 class="tblock bordered-left ">%PAGE_TITLE%</h1>
+            </div>
+        </div>
+        %CONTENT%
+    </div>
+</section> -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contact_us contact-form">
+                    <div class="theme-form">
+                        <div class="cont-nm">
+                            <h1>%PAGE_TITLE%</h1>
+                            <div class="panel_toolbox btn-back" style="display: block;"></div>
+                     <!-- <a href="javascript:window.history.back()" class="btn btn-primary btn-sm" title="Back"><i class="fa fa-arrow-left"></i></a> -->
+                        </div>  
+                        <div role="tabpanel" class="tab-pane active" id="terms-service">%CONTENT%</div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>

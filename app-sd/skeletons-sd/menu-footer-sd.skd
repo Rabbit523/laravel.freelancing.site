@@ -1,0 +1,14 @@
+<section class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>{COPYRIGHT_COPY}</p>   
+                </div>
+                <div class="col-md-6">
+                    <ul class="copyright-list">
+                        %PAGE_ITEMS%
+                    </ul>  
+                </div>
+            </div>
+        </div>
+    </section>

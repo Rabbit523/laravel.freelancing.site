@@ -1,0 +1,78 @@
+<section class="main-dashboard">
+   <div class="container">
+      <div class="profile">
+         <div class="featurette-job">
+            <div class="sub_featured">
+               <div class="theme-form">
+                  <div  class="row">
+                     <div class="col-md-12">
+                        <h1 class="main-heading">{F_PAYMENT_HISTORY_TITLE_LBL}</h1>
+                        <div class=" table-responsive" >
+                           <table class="table table-striped table-bordered">
+                              <thead class="thead-default">
+                                 <tr>
+                                    <th>{F_PH_SER_TITLE_LBL}</th>
+                                    <th>{F_PH_PAID_LBL} ({CURRENCY_SYMBOL})</th>
+                                    <th>{F_PH_PAYMENT_DATE_LBL}</th>
+                                    <th>{F_PH_STATUS_LBL}</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 %LOOP_DATA%
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+               <div class="theme-form">
+                  <div  class="row">
+                     <div class="col-md-12">
+                        <h1 class="main-heading">{FPH_CREDIT_PACKAGE_PAYMENT}</h1>
+                        <div class=" table-responsive" >
+                           <table class="table table-striped table-bordered">
+                              <thead class="thead-default">
+                                 <tr>
+                                    <th>{FPH_PACKAGE}</th>
+                                    <th>{FPH_AMOUNT} ({CURRENCY_SYMBOL})</th>
+                                    <th>{FPH_PAYMENT_DATE}</th>
+                                    <th>{F_PH_STATUS_LBL}</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 %CREDIT_PACKAGE_DATA%
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="theme-form">
+                  <div  class="row">
+                     <div class="col-md-12">
+                        <h1 class="main-heading">{FPH_SERVICE_FEATURED_PAYMENT}</h1>
+                        <div class=" table-responsive" >
+                           <table class="table table-striped table-bordered">
+                              <thead class="thead-default">
+                                 <tr>
+                                    <th>{FPH_SERVICE}</th>
+                                    <th>{FPH_AMOUNT} ({CURRENCY_SYMBOL})</th>
+                                    <th>{FPH_PAYMENT_DATE}</th>
+                                    <th>{F_PH_STATUS_LBL}</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 %SERVICE_DATA%
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

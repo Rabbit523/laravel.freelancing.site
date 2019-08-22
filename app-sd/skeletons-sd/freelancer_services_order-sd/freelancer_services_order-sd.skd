@@ -1,0 +1,444 @@
+<script type="text/javascript" src="{SITE_JS}URI.js"></script>
+
+<!-- Dashboard Navigation -->
+%SUB_HEADER_CONTENT%
+<!-- Dashboard Navigation End -->
+
+<section class="main-dashboard">
+    <div class="container">
+        <div class="">
+            <div class=" service-order">
+                <div class=" after-login-wrap">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                            <div id="sidebarMenu" class="left-sidebar filters-search">
+                                <div class="panel panel-default theme-box" id="filters-search">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">{FS_FILTERS}</h4>
+                                        <div class="panel-tools pull-right">
+                                            <a href="{SITE_URL}f/services-order">{FMS_CLEAR} <i class="fa fa-refresh" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="filter-box">
+                                            <h5 class="filter-title">{CSO_ORDER_STATUS}</h5>
+                                            <div class="filter-body">
+                                                <ul class="filter-lists">
+                                                    <li>
+                                                      <input type="radio" id="test1" name="status" value="new_order" %NEWORDER_STATUS% />
+                                                      <label for="test1">
+                                                        {C_SO_NEW_ORDER_LBL}
+                                                      </label>
+                                                    </li>
+                                                    <li>
+                                                      <input type="radio" id="test3" name="status" value="in_progress" %INPRO_STATUS%/>
+                                                      <label for="test3">
+                                                        {C_SO_IN_PROGRESS_LBL}
+                                                      </label>
+                                                    </li>
+                                                   <li>
+                                                     <input type="radio" id="test4" name="status" value="ask_refund" %AR_STATUS%/>
+                                                     <label for="test4">
+                                                       {FSO_ASKED_FOR_REFUND}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test5" name="status" value="closed" %CLOSED_STATUS%/>
+                                                     <label for="test5">
+                                                       {CMJ_CLOSED}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test6" name="status" value="payment_pending" %PENDING_STATUS%/>
+                                                     <label for="test6">
+                                                       {C_SO_PAYMENT_PENDING}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test7" name="status" value="completed" %COMP_STATUS%/>
+                                                     <label for="test7">
+                                                       {C_SO_COMPLETED_LBL}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test8" name="status" value="under_dispute" %UD_STATUS%/>
+                                                     <label for="test8">
+                                                       {C_SO_UNDER_DISPUTE_LBL}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test9" name="status" value="dispute_solved" %DS_STATUS%/>
+                                                     <label for="test9">
+                                                       {C_SO_DISPUTE_IS_SOLVED}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test10" name="status" value="dispute_solved_closed" %DSC_STATUS%/>
+                                                     <label for="test10">
+                                                       {C_SO_DISPUTE_IS_SOLVED_AND_CLOSED}
+                                                     </label>
+                                                   </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-menu">
+                                <button><i class="fa fa-sliders" aria-hidden="true"></i>{FMS_FILTER}</button>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-8">
+                            <div class="panel panel-default theme-box">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">{C_SO_SERVICE_ORDER_LBL}</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="fl-service-lists-wrap">
+                                        <ul class="fl-service-order-list" id="services_data">
+                                            %LOOP_DATA%
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                         <?php /* <div class="theme-box">
+                            <div class="panel no-bg">
+                             <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 {C_SO_SERVICE_ORDER_LBL}
+                               </h4>
+                             </div>
+                             <div class="panel-body">
+                               <ul class="dash-job" id="services_data">
+                                %LOOP_DATA%
+                               </ul>
+                             </div>
+                            </div>
+                          </div> */ ?>
+                        <div class="view-more-button %LOAD_CLASS%">
+                          <div class="theme-button">
+                           <a href="javascript:void(0)" class="load_more_data %LOAD_CLASS%" data-page="1">{C_SO_VIEW_MORE_ORDER_LBL}</a>
+                         </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="giveDeadline" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <form method="post" name="deadlineFrm" id="deadlineFrm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">{FSO_GIVE_DEADLINE}</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>
+              {C_SO_START_DATE_LBL}
+            </label>
+            <input class="form-control datepicker start_date" type="text" name="start_date" id="start_date" placeholder>
+          </div>
+          <div class="form-group">
+            <label>
+              {CSO_END_DATE}
+            </label>
+            <input class="form-control datepicker end_date" type="text" name="end_date" id="end_date" placeholder>
+          </div>
+          <div class="form-group">
+            <label class="end_date_hint"></label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="footer-btn" data-dismiss="modal">
+            <a href="#" class="btn btn-secondary" data-dismiss="modal">{FD_CANCEL}</a>
+          </div>
+          <div class="footer-btn">
+            <input type="hidden" name="action" id="action" value="saveDeadline">
+            <input type="hidden" name="sId" id="sId" value="">
+            <button type="submit" name="saveDeadline" id="saveDeadline" class="btn btn-primary">{FD_SAVE}</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- start deadline details -->
+<div id="deadlineDetail" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+   <form method="post" name="replyFrm" id="replyFrm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">{C_SO_DEADLINE_DETAIL_LBL}</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered deadline_detail_table">
+
+        </table>
+      </div>
+      <div class="modal-footer footer_deadlineDetail">
+        <div class="theme-button-default" data-dismiss="modal">
+          <a href="#" data-dismiss="modal">{FD_CANCEL}</a>
+        </div>
+        <div class="theme-button">
+          <input type="hidden" name="orderId" id="orderId">
+          <input type="hidden" name="action" id="action" value="saveMsg">
+          <button type="submit" name="sendReply" id="sendReply" class="btn btn-system">{FD_SUBMIT}</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+<!-- end deadline details -->
+
+<script type="text/javascript">
+
+  var url = "{SITE_URL}ajaxFreelancerServicesOrder";
+  $(document).ready(function(){
+      $('.datepicker').datepicker({ dateFormat: 'yy-mm-dd'});
+      $(document).on("click",".load_more_data",function()
+      {
+        var pageNo = $(this).attr("data-page");
+        var p_no = parseInt(pageNo)+1;
+        var status = $("input[name=status]:checked").val();
+        if(status == undefined)
+        {
+          status = '';
+        }
+        else
+        {
+          status = status;
+        }
+        addOverlay();
+        $.post(url,{"action":"load_more_data","page_no":p_no,"status":status},function(data){
+          removeOverlay();
+          $("#services_data").append(data.content);
+          $(".load_more_data").addClass(data.btn);
+          $(".load_more_data").attr("data-page",data.pageno);
+        },'json');
+      });
+
+      $.validator.addMethod('checkGreaterThan', function (value, element) {        
+        $start = $("input[name='start_date']").val();
+        $end = $("input[name='end_date']").val();       
+        if($start>$end){
+          return false;
+        }else{
+          return true;
+        }
+      }, "Please provide valid date");
+    });
+  function search_record(p_no)
+  {
+    var query_param = $("#filters-search input").serialize()+"&action=load_seach_data&page_no="+p_no;
+    var new_serialized_url = URI(url+'/?'+query_param),
+    curr_uri = URI(window.location.href),
+    new_serialized_params = new_serialized_url.search(true);
+
+    ((new_serialized_params.status!=undefined) ? curr_uri.setSearch("status", new_serialized_params.status) : curr_uri.removeSearch("status"));
+    history.pushState({}, null, '?'+curr_uri._parts.query);
+    $.ajax({
+      url: url,
+      type: 'POST',
+      dataType: 'json',
+      data: query_param,
+      beforeSend: function () {
+        addOverlay();
+      },
+      success : function(data)
+      {
+        console.log();
+        $('#services_data').html(data.content);
+        $(".load_more_data").addClass(data.btn);
+        $(".load_more_data").attr("data-page",data.pageno);
+      },
+      complete: function (xhr) {
+        removeOverlay();
+      }
+    });
+  }
+
+  $(document).on('change', 'input[name=status]:radio', function(e) {
+   var pageNo = $(".load_more_data").attr("data-page");
+   search_record(pageNo);
+ });
+
+  $(document).on("click",".give_deadline",function(){
+    var a = $(this).attr("data-id");
+    $("#giveDeadline").modal("show");
+    addOverlay();
+    $.post(url,{"action":"deadline_load","id":a},function(data){
+      removeOverlay();
+      $("#sId").val(data.id);
+      $("#start_date").val(data.start_date);
+      $("#end_date").val(data.end_date);
+
+      $("#start_date").attr("data-start-id",data.id);
+      $("#end_date").attr("data-end-id",data.id);
+    },'json');
+  });
+
+  $(".start_date").datepicker({
+    dateFormat: 'yy-mm-dd',
+    minDate:0,
+    onSelect: function(dateText) {
+      var id = $(this).attr("data-start-id");
+      addOverlay();
+      $.post(url,{"action":"get_end_date","id":id,"start_date":$(this).val()},function(data){
+        removeOverlay();
+        $(".end_date_hint").html("<span class='glyphicon glyphicon-hand-right'></span>  Note:- ");
+        $(".end_date_hint").append(data.note);
+      },'json');
+    }
+  });
+  $(".end_date").datepicker({
+    dateFormat: 'yy-mm-dd',
+    minDate:0
+  });
+
+  $(document).on("change","#start_date",function(){
+    var date = $(this).val();
+    if(date == '' || date == null)
+    {
+      $(".end_date_hint").html('');
+    }
+  })
+
+  /*deadline form validation*/
+  
+  $(document).on("click","#saveDeadline",function(){
+
+    $("#deadlineFrm").validate({
+      ignore: [],
+      errorClass: 'help-block',
+      errorElement: 'label',
+      highlight: function (element)
+      {
+        $(element).closest('.form-group').addClass('has-error');
+      },
+      unhighlight: function (element)
+      {
+        $(element).closest('.form-group').removeClass('has-error');
+      },
+      rules:
+      {
+        start_date:{required:true},
+        end_date:{
+          required:true,
+          checkGreaterThan: true,
+        }
+      },
+
+      messages:
+      {
+        start_date:{required:"{FSO_PLEASE_ENTER_START_DATE}"},
+        end_date:{required:"{FSO_PLEASE_ENTER_END_DATE}"}
+      }
+    });
+   if($("#deadlineFrm").valid())
+   {
+     addOverlay();
+     $("#deadlineFrm").submit();
+   }
+ });
+
+  /*Reply message*/
+
+  $(document).on("click","#sendReply",function(){
+   $("#replyFrm").validate({
+    ignore: [],
+    errorClass: 'help-block',
+    errorElement: 'label',
+    highlight: function (element)
+    {
+      $(element).closest('.form-group').addClass('has-error');
+    },
+    unhighlight: function (element)
+    {
+      $(element).closest('.form-group').removeClass('has-error');
+    },
+    rules:
+    {
+      reply:{required:true}
+    },
+
+    messages:
+    {
+      reply:{required:"{FSO_PLEASE_ENTER_MESSAGE}"}
+    }
+  });
+
+
+   if($("#replyFrm").valid())
+   {
+     addOverlay();
+     $("#replyFrm").submit();
+   }
+ });
+
+
+  /*dedaline detail */
+
+  $(document).on("click",".deadline_detail",function(){
+    $("#deadlineDetail").modal("show");
+    var id = $(this).attr("data-id");
+    $(".deadline_detail_table").attr("id","table_"+id);
+    $("#orderId").val(id);
+    $.post(url,{"action":"deadline_detail","id":id},function(data){
+      $("#table_"+id).html(data.content);
+      if(data.btn=='')
+      {
+        if($(".footer_deadlineDetail").hasClass("hide"))
+        {
+          $(".footer_deadlineDetail").removeClass("hide");
+        }
+      }
+      else
+      {
+        $(".footer_deadlineDetail").addClass("hide");
+      }
+   // (data.btn!='') ? $(".modal-footer").addClass(data.btn) : $(".modal-footer").removeClass("hide");
+ },'json');
+  });
+
+  $(document).on("click",".start_service",function(){
+    var id = $(this).attr("data-id"),$this = $(this);
+    swal({
+      title: "Confirmation!",
+      text: "{FSO_ARE_YOU_SURE_YOU_WANT_TO_START_SERVICE}?",
+      showCancelButton: true,
+      closeOnConfirm: false,
+      inputPlaceholder: "{CMJ_WRITE_SOMETHING}"
+    },
+    function (inputValue) {
+     /* */
+     if(inputValue)
+     {
+      //addOverlay();
+      $.post(url,{"action":"start_services","id":id},function(data){
+
+      },'json');
+      //removeOverlay();
+        //swal("Nice!", "Service work time started");
+        swal({
+          title: "Nice!",
+          text: "{FSO_YOUR_TIME_FOR_THIS_SERVICE_STARTS_NOW}!",
+          type: "success",
+          confirmButtonText: "Ok",
+          closeOnConfirm: true
+        });
+        $this.hide();
+        $(".give_deadline").hide();
+      }
+    });
+    /**/
+  });
+</script>

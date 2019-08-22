@@ -1,0 +1,679 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="personal-dashboard-wrap">
+            <div class="box box-primary theme-box">
+                <div class="box-body ">
+                    <div class="fl-profile-wrap media">
+                        <div class="media-left">
+                            <div class="user-switch-wrap">
+                                <div class="user-avatar-wrap">
+                                    <div class="user-avatar">
+                                        <img src="%USER_IMG%" class="preview_profile">
+                                    </div>
+                                    <span class="update-camera">
+                                        <a href="javascript:void(0)" id="profile_image_trigger" title="Update Profile Picture"><i class="fa fa-camera"></i></a>
+                                    </span>    
+                                </div>
+                                <div class="switch-wrap">
+                                    <a class="switch-btn btn-flr active" href="%FR_SWITCH_URL%">{FREELANCER_LBL}</a>
+                                    <a class="switch-btn btn-ctm" href="%CS_SWITCH_URL%">{CUSTOMER_LABEL}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-body">
+                            <div class="user-details-wrap">
+                                <div class="personal-details-wrap">
+                                    <div class="user-title-wrap">
+                                        <h3 class="user-name">%USERNAME%</h3>
+                                        <div class="data_edit">
+                                           <a href="#" data-toggle="modal" data-target="#profile_name">
+                                            <i class="fa fa-pencil"></i>
+                                          </a>
+                                        </div>
+                                        <div class="star-ratings-sprite">
+                                            <span style="width:%STAR_RATING%%" class="star-ratings-sprite-rating"></span>
+                                        </div>
+
+                                        <ul class="user-since-detail liststyle-none">
+                                            <li>{JOINED_ON_LBL} %SINCE_DATE%</li>          
+                                            <li>{LAST_SEEN_LBL} %LAST_SEEN%</li>
+                                        </ul>
+                                        <!-- <a href="#" class="user-profile-edit">Edit <i class="fa fa-edit"></i></a> -->
+                                    </div>
+                                    <ul class="user-location-detail liststyle-none">
+                                      <li class="%SHOW_EMAIL%"><span><i class="fa fa-envelope"></i></span>%EMAIL%</li>
+                                        <li>
+                                          <span><i class="fa fa-map-marker"></i></span>%LOCATION%
+                                            <div class="data_edit">
+                                             <a href="#" data-toggle="modal" data-target="#profile_location">
+                                              <i class="fa fa-pencil"></i>
+                                            </a>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <span><i class="fa fa-briefcase"></i></span>%PROTITLE%
+                                          <div class="data_edit">
+                                             <a href="#" data-toggle="modal" data-target="#professional_title">
+                                              <i class="fa fa-pencil"></i>
+                                            </a>
+                                          </div>
+                                        </li>
+                                        <li><span><i class="fa fa fa-bookmark"></i></span>%FRELVL%</li>
+                                        <li class="profile-share"><span><i class="fa fa-share-alt"></i></span>%PROURL%</li>
+                                    </ul>
+                                </div>
+                                <div class="work-detail-wrap">
+                                    <ul class="work-detail-total liststyle-none">
+                                        <li>{COMPLETED_JOBS_LBL} : <span>%COMPLETED_JOB%</span></li>
+                                        <li>{SOLD_SERVICES_LBL} : <span>%SOLD_SERVICE%</span></li>
+                                        <li>{EARNED_LBL} : <span class="kwdamount">%EARNED%</span></li>
+                                        <li>{RESPONSE_TIME_LBL} : <span>%RESPONSE_TIME%</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+  <div class="col-md-4 col-sm-4 col-lg-3">
+      <div class="dashboard-sidebar">
+          <div class="box box-primary theme-box ">
+              <div class="box-body">
+                  <div class="myskills-box">
+                      <h4 class="skills-title">{MY_SKILL_BTN_LBL}</h4>
+                      <ul class="skills-list clearfix">
+                          %SKILL_LIST%
+                          <li>
+                            <a href="#" data-toggle="modal" data-target="#skills" title="Add Skills">
+                              {FP_ADD_MORE_SKILLS}
+                            </a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="myskills-box">
+                      <h4 class="skills-title">{MY_LANG_BTN_LBL}</h4>
+                      <ul class="skills-list clearfix">
+                          %LANG_LIST%
+                          <li>
+                              <a href="#" data-toggle="modal" data-target="#languages" title="Add Language">
+                                {FP_ADD_MORE_LANGUAGES}
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="myskills-box">
+                      <h4 class="skills-title">{F_CAT_LBL}</h4>
+                      <ul class="skills-list clearfix">
+                          %SUBCAT_LIST%
+                          <li>
+                            <a href="javascript:void(0)" class="addRecord" title="Add subcategory" data-entity="categories">
+                              {FP_ADD_MORE_CATEGORIES}
+                            </a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="myskills-box">
+                      <h4 class="skills-title">{FP_VIDEO}</h4>
+                      <ul class="skills-list clearfix">                                                
+                        <div class="add_video">
+                          <!-- %VIDEO_IFRAME% -->
+                          <a href="#" data-toggle="modal" data-target="#myModal">
+                            {PLACE_VIDEO_LBL}
+                          </a>
+                        </div>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-8 col-lg-9 col-sm-8 ">
+      <div class="box box-primary">
+          <div class="box-header">
+              <h3 class="box-title">{OVERVIEW_LBL}</h3>
+              <div class="box-tools pull-right">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#overview_div"></a>
+              </div>              
+          </div>
+          <div id="overview_div" class="panel-collapse collapse in" >
+              <div class="box-body" >
+                  <p>%OVERVIEW%</p>
+                  <div class="data_edit">
+                     <a href="#" data-toggle="modal" data-target="#overview">
+                      <i class="fa fa-pencil"></i>
+                    </a>
+                  </div>
+              </div>              
+          </div>
+      </div>
+      <div class="box box-primary %VIDEO_DIV%">
+          <div class="box-header">
+              <h3 class="box-title">Recently Added Products</h3>
+              <div class="box-tools pull-right">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#our-video"></a>
+              </div>
+          </div>
+          <div id="our-video" class="panel-collapse collapse in" >
+              <div class="box-body" >
+                 %VIDEO_IFRAME%
+              </div>
+          </div>
+      </div>
+      <div class="sawlii-tabs-wrap">
+          <ul class="nav nav-tabs" id="dasTabs">
+              <!--<li class="active"><a data-toggle="tab" href="#tab_1" aria-expanded="true">{NAV_MY_SERVICES_LBL}</a></li>-->
+              <li class="active"><a data-toggle="tab" href="#tab_2" aria-expanded="true">{FD_PORTFOLIO}</a></li>
+              <li><a data-toggle="tab" href="#tab_3" aria-expanded="false">{FD_EDUCATION_DETAILS}</a></li>
+              <li><a data-toggle="tab" href="#tab_4" aria-expanded="false">{FD_CERTIFICATIONS}</a></li>
+              <li><a data-toggle="tab" href="#tab_5" aria-expanded="false">{FD_EXPERIENCE}</a></li>
+              <li><a data-toggle="tab" href="#tab_6" aria-expanded="false">{FD_REVIEWS}</a></li>
+          </ul>
+          <div class="tab-content">
+              <!--<div class="tab-pane fade in active" id="tab_1">-->
+                  <?php /* <div class="panel theme-box no-bg no-padding">
+                      <div class="panel-heading">
+                          <h4 class="panel-title">{FD_SERVICES}</h4>
+                          <div class="panel-tools pull-right">
+                              <a href="{SITE_URL}post-services">{FP_ADD_MORE} <i class="fa fa-plus"></i></a>
+                          </div>
+                      </div>
+                      <div class="panel-body">
+                        <div class="fl-services ">
+                          %MY_SERVICES%
+                        </div>
+                      </div>
+                  </div> */ ?>
+              <!--</div>-->
+              <div class="tab-pane fade in active " id="tab_2">
+                  <div class="panel theme-box no-bg no-padding">
+                      <div class="panel-heading">
+                          <h4 class="panel-title">{FD_PORTFOLIO}</h4>
+                          <div class="panel-tools pull-right">
+                            <a href="javascript:void(0)" data-entity="add_portfolio" title="Add Portfolio" class="add_portfolio_btn addRecord">{FP_ADD_MORE}<i class="fa fa-plus"></i></a>
+                          </div>
+                      </div>
+                      <div class="panel-body">
+                        <div class="fl-portfolio "> 
+                          %PORTFOLIO_SECTION%
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane fade " id="tab_3">
+                <div class="panel  theme-box no-bg no-padding">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">{EDUCATION_TITLE}</h4>
+                    <div class="panel-tools pull-right">
+                      <a href="javascript:void(0)" data-entity="add_education" title="Add Education" class="addRecord">{FP_ADD_MORE} <i class="fa fa-plus"></i></a>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <div class="fl-edu">
+                      %EDUCATION_DETAIL%
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade " id="tab_4">
+                  <div class="panel theme-box no-bg no-padding">
+                      <div class="panel-heading">
+                          <h4 class="panel-title">{FD_CERTIFICATIONS}</h4>
+                          <div class="panel-tools pull-right">
+                              <a href="#" class="addRecord" data-entity="add_certificate" title="Add Certificate">{FP_ADD_MORE} <i class="fa fa-plus"></i></a>
+                          </div>
+                      </div>
+                      <div class="panel-body">
+                          <ul class="fl-certi">
+                            %CERTIFICATION_DETAIL%
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane" id="tab_5">
+                  <div class="panel theme-box no-bg no-padding">
+                      <div class="panel-heading">
+                          <h4 class="panel-title">{FD_EXPERIENCE}</h4>
+                          <div class="panel-tools pull-right">
+                              <a href="javascript:void(0)" class="addRecord" data-entity="add_experience" title="Add Experience">{FP_ADD_MORE}<i class="fa fa-plus"></i></a>
+                          </div>
+                      </div>
+                      <div class="panel-body">
+                          <div class="fl-experience">
+                            %EXP_DETAIL%
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane" id="tab_6">
+                  <div class="panel theme-box no-bg no-padding">
+                      <div class="panel-heading">
+                          <h4 class="panel-title">{FD_REVIEWS}</h4>
+                          <div class="panel-tools pull-right">
+                            <a href="{SITE_URL}f/review/%SLUG%" class="addRecord">{VIEW_ALL_REVIEWS_LBL}<i class="fa fa-angle-right"></i></a>
+                          </div>
+                      </div>
+                      <div class="panel-body">
+                          <ul class="fl-avg-review clearfix">
+                              <li class="fl-avg-review-item">
+                                  <label>{PUNCTUALITY_LBL}</label>
+                                  <div class="star-ratings-sprite">
+                                      <span style="width:%PUN_REVIEW%%" class="star-ratings-sprite-rating"></span>
+                                  </div>
+                              </li>
+                              <li class="fl-avg-review-item">
+                                  <label>{WORK_CLARIFICATION_LBL}</label>
+                                  <div class="star-ratings-sprite">
+                                      <span style="width:%WORK_REVIEW%%" class="star-ratings-sprite-rating"></span>
+                                  </div>
+                              </li>
+                              <li class="fl-avg-review-item">
+                                  <label>{COMMUNICATION_LBL}</label>
+                                  <div class="star-ratings-sprite">
+                                      <span style="width:%COMM_REVIEW%%" class="star-ratings-sprite-rating"></span>
+                                  </div>
+                              </li>
+                              <li class="fl-avg-review-item">
+                                  <label>{WORK_QUALITY_LBL}</label>
+                                  <div class="star-ratings-sprite">
+                                      <span style="width:%QUAT_REVIEW%%" class="star-ratings-sprite-rating"></span>
+                                  </div>
+                              </li>
+                              <li class="fl-avg-review-item">
+                                  <label>{EXPERTISE_LBL}</label>
+                                  <div class="star-ratings-sprite">
+                                      <span style="width:%EXP_REVIEW%%" class="star-ratings-sprite-rating"></span>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Bootstrap Accordion -->
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div>
+          <!-- /Bootstrap Accordion -->
+      </div>
+  </div>
+</div>
+<?/*
+<div class="row">
+  <div class="col-md-12">
+  <div class="basic-info">
+    <div class="profile-img responsive-img">
+      <img src="%USER_IMG%" class="preview_profile">
+              <!-- <span class="delete-pic">
+               <a href="javascript:void(0);" id="remove_profile_image" %USER_IMAGE_VISIBILITY% title="Delete Profile Picture">
+                 <i class="fa fa-trash"></i>
+               </a>
+             </span> -->
+             <span class="camera">
+              <a href="javascript:void(0)" id="profile_image_trigger" title="Update Profile Picture">
+                <i class="fa fa-camera"></i>
+              </a>
+            </span>
+          </div>
+          <div class="mobile-hr profile-button clearfix">
+            <a href="javascript:void(0);" class="btn btn-system btn-block"> &nbsp;{FPS_EDIT}
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="profile-name">
+            <h2>
+              %USERNAME%
+              <div class="edit_remove">
+               <a href="#" data-toggle="modal" data-target="#profile_name">
+                <img src="{SITE_IMG}icon/edit.png" alt="">
+              </a>
+            </div>
+          </h2>
+        </div>
+        <div class="edit_button">
+          <a href="javascript:void(0);">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="star-ratings-sprite">
+         <span style="width:%STAR_RATING%%" class="star-ratings-sprite-rating">
+         </span>
+       </div>
+       <div class="last-seen">
+        <p>
+          {JOINED_ON_LBL}
+          %SINCE_DATE%
+        </p>
+        <span>&middot;</span>
+        <p>
+          {LAST_SEEN_LBL}
+          %LAST_SEEN%
+        </p>
+      </div>
+      <div class="profile_left location">
+        <p>
+         <i class="fa fa-map-marker" aria-hidden="true"></i>
+         %LOCATION%
+       </p>
+       <div class="edit_remove">
+         <a href="#" data-toggle="modal" data-target="#profile_location">
+          <img src="{SITE_IMG}icon/edit.png" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="profile_left">
+      <p>
+       <i class="fa fa-briefcase" aria-hidden="true"></i>
+       %PROTITLE%
+     </p>
+     <div class="edit_remove">
+       <a href="#" data-toggle="modal" data-target="#professional_title">
+        <img src="{SITE_IMG}icon/edit.png" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="profile_left">
+    <p>
+     <i class="fa fa-bookmark" aria-hidden="true"></i>
+     %FRELVL%
+   </p>
+ </div>
+
+</div>
+<div class="other-info dash-info">
+ <div class="professtional-link">
+  %PROURL%
+  <div class="share_link">
+   <a href="#" data-toggle="modal" data-target="#share_link"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+ </div>
+</div>
+<div class="statics-info">
+  <div class="row">
+   <div class="col-md-6">
+    <p>
+      <label>{COMPLETED_JOBS_LBL} : </label>
+      <span>%COMPLETED_JOB%</span>
+    </p>
+  </div>
+  <div class="col-md-6">
+    <p>
+      <label>{SOLD_SERVICES_LBL} : </label>
+      <span>%SOLD_SERVICE%</span>
+    </p>
+  </div>
+</div>
+<div class="row">
+ <div class="col-md-6">
+  <p>
+    <label>{EARNED_LBL} : </label>
+    <span>%EARNED%</span>
+  </p>
+</div>
+<div class="col-md-6">
+  <p>
+    <label>{RESPONSE_TIME_LBL} :</label>
+    <span>%RESPONSE_TIME%</span>
+  </p>
+</div>
+</div>
+</div>
+<div class="professtional-review">
+  <h3>
+   {OVERVIEW_LBL}
+ </h3>
+ <div class="edit_remove">
+   <a href="#" data-toggle="modal" data-target="#overview">
+    <img src="{SITE_IMG}icon/edit.png" alt="">
+  </a>
+</div>
+<p>
+ %OVERVIEW%
+</p>
+</div>
+
+</div>
+<div class="all-sections">
+  <span class="all-sections-btn">
+    <a href="javascript:void(0);">
+      <i class="fa fa-bars"></i>
+    </a>
+  </span>
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#home">{FD_PORTFOLIO}</a></li>
+   <li><a data-toggle="pill" href="#menu1">{FD_EDUCATION_DETAILS}</a></li>
+   <li><a data-toggle="pill" href="#menu2">{FD_CERTIFICATIONS}</a></li>
+   <li><a data-toggle="pill" href="#menu3">{FD_EXPERIENCE}</a></li>
+   <li><a data-toggle="pill" href="#menu4">{FD_REVIEWS}</a></li>
+ </ul>
+ <div class="tab-content">
+   <div id="home" class="tab-pane fade in active">
+     <div class="row">
+      <div class="col-md-12">
+        <div class="portfolio dash-port">
+          <h3 class="main-heading">
+           <a href="javascript:void(0)" data-entity="add_portfolio" title="Add Portfolio" class="add_portfolio_btn addRecord">
+            {FP_ADD_MORE}
+          </a>
+          &nbsp;{FD_PORTFOLIO}
+        </h3>
+        %PORTFOLIO_SECTION%
+      </div>
+    </div>
+  </div>
+</div>
+<div id="menu1" class="tab-pane fade">
+ <div class="row">
+  <div class="col-md-12">
+    <div class="education-detail dash-port">
+      <h3 class="main-heading">
+       <a href="javascript:void(0)" data-entity="add_education" title="Add Education" class="addRecord">
+        {FP_ADD_MORE}
+      </a>
+      &nbsp; {EDUCATION_TITLE}
+    </h3>
+    <ul>
+      %EDUCATION_DETAIL%
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+<div id="menu2" class="tab-pane fade">
+ <div class="row">
+  <div class="col-md-12">
+    <div class="certification dash-port">
+      <h3 class="main-heading">
+       <a href="#" class="addRecord" data-entity="add_certificate" title="Add Certificate">
+        {FP_ADD_MORE}
+      </a>
+      &nbsp;{FD_CERTIFICATIONS}
+    </h3>
+    <ul>
+      %CERTIFICATION_DETAIL%
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+<div id="menu3" class="tab-pane fade">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="education-detail dash-port">
+        <h3 class="main-heading">
+         <a href="javascript:void(0)" class="addRecord" data-entity="add_experience" title="Add Experience">
+          {FP_ADD_MORE}
+        </a>
+        &nbsp;{FD_EXPERIENCE}
+      </h3>
+      <ul>
+        %EXP_DETAIL%
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div id="menu4" class="tab-pane fade">
+  <div class="review-section dash-port">
+    <h3 class="main-heading">
+     <a href="{SITE_URL}f/review/%SLUG%" class="addRecord">{VIEW_ALL_REVIEWS_LBL}</a>
+     &nbsp;{FD_REVIEWS}
+   </h3>
+    <div class="row">
+    <div class="col-md-4">
+      <div class="stars">
+       <p>{PUNCTUALITY_LBL}</p>
+       <div class="star-ratings-sprite">
+        <span style="width:%PUN_REVIEW%%" class="star-ratings-sprite-rating"></span>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="stars">
+        <p>{WORK_CLARIFICATION_LBL}</p>
+        <div class="star-ratings-sprite">
+          <span style="width:%WORK_REVIEW%%" class="star-ratings-sprite-rating"></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="stars">
+       <p>{COMMUNICATION_LBL}</p>
+       <div class="star-ratings-sprite">
+        <span style="width:%COMM_REVIEW%%" class="star-ratings-sprite-rating"></span>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-4">
+      <div class="stars">
+       <p>{WORK_QUALITY_LBL}</p>
+       <div class="star-ratings-sprite">
+        <span style="width:%QUAT_REVIEW%%" class="star-ratings-sprite-rating"></span>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-4">
+      <div class="stars">
+       <p>{EXPERTISE_LBL}</p>
+       <div class="star-ratings-sprite">
+        <span style="width:%EXP_REVIEW%%" class="star-ratings-sprite-rating"></span>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+   <!-- <div class="col-md-3">
+      <div class="skills">
+         <h3>
+            {MY_SKILL_BTN_LBL}
+            <a href="#" data-toggle="modal" data-target="#skills" title="Add Skills"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+         </h3>
+         <ul class="skill_listing">
+            %SKILL_LIST%
+         </ul>
+      </div>
+      <div class="skills">
+         <h3>
+            {MY_LANG_BTN_LBL}
+            <a href="#" data-toggle="modal" data-target="#languages" title="Add Language"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+         </h3>
+         <ul class="lang_listing">
+            %LANG_LIST%
+         </ul>
+      </div>
+      <div class="add_video">
+         <a href="#" data-toggle="modal" data-target="#myModal">
+            <div class="play"><i class="fa fa-play" aria-hidden="true"></i></div>
+            {PLACE_VIDEO_LBL}
+         </a>
+      </div>
+    </div> -->
+  </div> */ ?>
+<style type="text/css">
+  /*.edit_remove{
+    display: block!important;
+  }*/
+</style>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+
+      if($(window).width() <= 567){
+        $(".all-sections-btn a").click(function(){
+          $(".all-sections ul.nav").slideToggle();
+        });
+      }
+      else{
+        return false;
+      }
+      $(".all-sections ul.nav li a").click(function(){
+        $(".all-sections ul.nav").hide();
+      });
+
+    });
+  </script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+
+      if(($(window).width() >= 768) && ($(window).width() <= 991)){
+        $(".all-sections-btn a").click(function(){
+          $(".all-sections ul.nav").slideToggle();
+        });
+      }
+      else{
+        return false;
+      }
+      $(".all-sections ul.nav li a").click(function(){
+        $(".all-sections ul.nav").hide();
+      });
+
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).on("click",".add_portfolio_btn",function(){
+      $(".img_pre").remove();
+      $("#projectTitle").val("");
+      $("#projectDuration").val("");
+      $("#project_skill_name").val("");
+      $("#projectDesc").val("");
+    });
+
+     /*Add to favourite */
+   $(document).on("click",".save_service",function(){
+      var url = "{SITE_URL}ajaxServiceSearch";
+      $(this).find('i').removeClass("fa fa-heart-o").addClass("fa fa-heart");
+      var id = $(this).attr("data-id");
+      $.post(url,{"action":"saveServices","id":id},function(data){
+         if(data.type == 'error')
+         {
+            window.location.href = "{SITE_URL}SignIn";
+            toastr[data.type](data.msg);
+         }
+         else
+         {
+            toastr[data.type](data.msg);
+         }
+      },'json');
+   });
+
+
+    $(function(){
+      var hash = window.location.hash;
+      hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+      $('.nav-tabs a').click(function (e) {
+        $(this).tab('show');
+        var scrollmem = $('body').scrollTop() || $('html').scrollTop();
+        window.location.hash = this.hash;
+        $('html,body').scrollTop(scrollmem);
+      });
+    });
+  </script>
+
+  

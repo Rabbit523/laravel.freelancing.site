@@ -1,0 +1,5 @@
+<li>
+   <p>%ADDON_TITLE%</p>
+   <!-- <span>%DAY_REQUIRED%</span> -->
+   <p class="delivery">{CSO_PAID_AMOUNT} : <span style="margin-right: 20px">%ADDONPRICE%</span> {CSO_DELIVERY_IN} <span>%DAY_REQUIRED% Day(s)</span></p>
+</li>

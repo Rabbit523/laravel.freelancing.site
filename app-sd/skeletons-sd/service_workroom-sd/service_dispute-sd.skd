@@ -1,0 +1,40 @@
+<li>
+   <p>
+      <span>
+      {NAME_LABEL} :
+      </span>
+      %DISPUTER_NAME% <span class="usr-type">(%DISPUTER_TYPE%)</span>
+   </p>
+   <p>
+      <span>
+      {DISPUTE_REASON} :
+      </span>
+      %REASON%
+   </p>
+   <div class="media">
+      <div class="media-left">
+         <span>
+            {FD_DESCRIPTION} :
+         </span>
+      </div>
+      <div class="media-body">
+         %DESC%
+      </div>
+   </div>
+   <p>
+      <span>
+      {STATUS_LABEL} :
+      </span>
+      <label class="status_pen">
+      %DISPUTE_STATUS%
+      </label>
+   </p>
+   <p class="date">
+      <span>
+      {DATE_LABEL} :
+      </span>
+      <label>
+       %DISPUTE_DATE%
+      </label>
+   </p>
+</li>

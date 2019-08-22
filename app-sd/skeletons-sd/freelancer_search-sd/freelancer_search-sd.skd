@@ -1,0 +1,418 @@
+<script type="text/javascript" src="{SITE_JS}URI.js"></script>
+%SEARCH_SECTION%
+<section class="main-dashboard">
+   <div class="container">
+      <div class="" id="filters-search">
+         <div class="">
+            <div class="">
+               <div class="job-find">
+                  <div class="row">
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-3 col-sm-4">
+                    <div id="sidebarMenu" class="left-sidebar filters-search">
+                        <div class="panel panel-default theme-box">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Filters</h4>
+                                <div class="panel-tools pull-right">
+                                    <a href="{SITE_URL}search/freelancer/">Clear <i class="fa fa-refresh" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="filter-box">
+                                    <h5 class="filter-title">{F_CAT_LBL}</h5>
+                                    <div class="filter-body">
+                                        <div class="form-group">
+                                            <select class="form-control category" name="category" id="category" data-id="">
+                                                %CATEGORY%
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-box">
+                                    <h5 class="filter-title">{F_SUB_CAT_LBL}</h5>
+                                    <div class="filter-body">
+                                        <div class="form-group">
+                                            <select class="form-control subcategory" name="subcategory" id="subcategory">
+                                            %SUBCATEGORY%
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-box">
+                                    <h5 class="filter-title">{F_EXP_LBL}</h5>
+                                    <div class="filter-body">
+                                        <ul class="filter-lists">
+                                         <li>
+                                            <input type="radio" id="test1" name="exp_lvl" value="beginner" %BEGINNER_CLASS%>
+                                            <label for="test1">
+                                            {F_BEGINNER_LBL}
+                                            </label>
+                                         </li>
+                                         <li>
+                                            <input type="radio" id="test3" name="exp_lvl" value="intermediate" %IM_CLASS%>
+                                            <label for="test3">
+                                            Intermediate
+                                            </label>
+                                         </li>
+                                         <li>
+                                            <input type="radio" id="test2" name="exp_lvl" value="pro" %PRO_CLASS%>
+                                            <label for="test2">
+                                            {F_PRO_LBL}
+                                            </label>
+                                         </li>
+                                      </ul>
+                                    </div>
+                                </div>
+                                <div class="filter-box">
+                                    <h5 class="filter-title">{F_SKILLS_LBL}</h5>
+                                    <div class="filter-body">
+                                        <div class="form-group">
+                                             <select class="form-control" name="skills" id="skills">
+                                                %SKILLS%
+                                             </select>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="filter-box mobile-view">
+                                    <h5 class="filter-title">{F_LOCATION_LBL}</h5>
+                                    <div class="filter-body">
+                                        <div class="location_search">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control load_ggl_autocomplete" name="location" id="location" value="%LOCATION%"/>
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-box">
+                                    <h5 class="filter-title">{F_AVG_STAR_RATE_LBL}</h5>
+                                    <div class="filter-body">
+                                        <ul class="filter-lists">
+                                            <div class="form-group">
+                                                <input type="number" name="avg_rate" id="avg_rate" min='0' max='5' class="form-control" value="%AVG_RATE%">
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="filter-box">
+                                    <h5 class="filter-title">{F_LAST_ACTIVITY_LBL}</h5>
+                                    <div class="filter-body">
+                                        <ul class="filter-lists">
+                                             <li>
+                                                <input type="radio" id="test33" name="last_activity" value="2M"  %LAST_ACTIVITY_I%/>
+                                                <label for="test33">
+                                                {F_WITHIN_TWO_MONTH_LBL}
+                                                </label>
+                                             </li>
+                                             <li>
+                                                <input type="radio" id="test34" name="last_activity" value="1M" %LAST_ACTIVITY_II%/>
+                                                <label for="test34">
+                                                {F_WITHIN_ONE_MONTH_LBL}
+                                                </label>
+                                             </li>
+                                             <li>
+                                                <input type="radio" id="test35" name="last_activity" value="2W" %LAST_ACTIVITY_III%/>
+                                                <label for="test35">
+                                                {F_WITHIN_TWO_WEEK_LBL}
+                                                </label>
+                                             </li>
+                                             <li>
+                                                <input type="radio" id="test36" name="last_activity" value="all" %LAST_ACTIVITY_IV%/>
+                                                <label for="test36">
+                                                {F_ALL_LBL}
+                                                </label>
+                                             </li>
+                                          </ul>
+                                    </div>
+                                </div>
+                                <div class="filter-box">
+                                    <h5 class="filter-title">{F_ENG_LBL}</h5>
+                                    <div class="filter-body">
+                                        <ul class="filter-lists">
+                                             <li>
+                                                <input type="radio" id="test25" name="eng_lvl" value="Basic" %ENG_LVL_BASIC%/>
+                                                <label for="test25">
+                                                {F_BASIC_LANG_TYPE_LBL}
+                                                </label>
+                                             </li>
+                                             <li>
+                                                <input type="radio" id="test26" name="eng_lvl" value="Conversational" %ENG_LVL_CONV%/>
+                                                <label for="test26">
+                                                {F_CONV_LANG_TYPE_LBL}
+                                                </label>
+                                             </li>
+                                             <li>
+                                                <input type="radio" id="test27" name="eng_lvl" value="Fluent" %ENG_LVL_FLU%/>
+                                                <label for="test27">
+                                                {F_FLUENT_LBL}
+                                                </label>
+                                             </li>
+                                             <li>
+                                                <input type="radio" id="test28" name="eng_lvl" value="Native" %ENG_LVL_NATIVE%/>
+                                                <label for="test28">
+                                                {F_NATIVE_LBL}
+                                                </label>
+                                             </li>
+                                          </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-menu">
+                        <button><i class="fa fa-sliders" aria-hidden="true"></i>{F_FILTER_LBL}</button>
+                    </div>
+                     <div class="seperator" style="display:none"></div>
+                </div>
+                <div class="col-md-9 col-sm-8">
+                    <div class="panel panel-default theme-box no-bg no-padding">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">{FREELANCERS_LABEL}</h4>
+                            <div class="search_sort panel-tools pull-right">
+                                <select class="form-control" name="sorting" id="sorting">
+                                     <option name="">
+                                        {SORT_BY_LBL}
+                                     </option>
+                                     <option value="Newest">
+                                        {F_NEWSEST_SORT_TYPE_LBL}
+                                     </option>
+                                     <option value="lTohRatesave_freelancer">
+                                        {F_LTOH_SORT_TYPE_LBL}
+                                     </option>
+                                     <option value="hTolRatesave_freelancer">
+                                        {F_HTOL_SORT_TYPE_LBL}
+                                     </option>
+                                     <option value="lToHResponsesave_freelancer">
+                                        {F_RESPONSE_TIME_LTOH_LBL}
+                                     </option>
+                                     <option value="hTolResponsesave_freelancer">
+                                        {F_RESPONSE_TIME_HTOL_LBL}
+                                     </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="flu-list-wrap">
+                                <ul class="flu-lists" id="freelancer_data">
+                                    %FREELANCER_DATA%
+                                </ul>
+                            </div>
+                            <div class="view-more-button">
+                              <div class="theme-button">
+                                 <a href="javascript:void(0)" class="load_more_data %LOAD_CLASS%" data-page="1">{C_VIEW_MORE_FREELANCER_LBL}</a>
+                              </div>
+                           </div>
+                        </div>
+                    </div>
+
+
+                    <?php /* <div class="theme-form">
+                        <div class="job_feed_heading">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="row">
+                                    <div class="col-md-8 col-sm-7">
+                                       <h1 class="main-heading">
+                                          {FREELANCERS_LABEL}
+                                       </h1>
+                                    </div>
+                                    <div class="col-md-4 col-sm-5">
+                                       <div class="search_sort">
+                                          <select class="form-control" name="sorting" id="sorting">
+                                             <option name="">
+                                                {SORT_BY_LBL}
+                                             </option>
+                                             <option value="Newest">
+                                                {F_NEWSEST_SORT_TYPE_LBL}
+                                             </option>
+                                             <option value="lTohRatesave_freelancer">
+                                                {F_LTOH_SORT_TYPE_LBL}
+                                             </option>
+                                             <option value="hTolRatesave_freelancer">
+                                                {F_HTOL_SORT_TYPE_LBL}
+                                             </option>
+                                             <option value="lToHResponsesave_freelancer">
+                                                {F_RESPONSE_TIME_LTOH_LBL}
+                                             </option>
+                                             <option value="hTolResponsesave_freelancer">
+                                                {F_RESPONSE_TIME_HTOL_LBL}
+                                             </option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <ul class="dash-job" id="freelancer_data">
+                           %FREELANCER_DATA%
+                        </ul>
+                     </div>
+                     <div class="view-more-button">
+                        <div class="theme-button">
+                           <a href="javascript:void(0)" class="load_more_data %LOAD_CLASS%" data-page="1">{C_VIEW_MORE_FREELANCER_LBL}</a>
+                        </div>
+                     </div> */ ?>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+<script type="text/javascript">
+   var url = "{SITE_URL}ajaxFreelancerSearch";
+   $(document).ready(function(){
+
+      $(document).on("change","#sorting",function(){
+         search_record(1);
+      });
+
+      /*category change*/
+      $(document).on("change",".category",function(){
+         var catId = $(this).val(),divId = $(this).attr("data-id");
+         $.post(url,{"action":"subcateLoad",cat:catId},function(data){
+            (divId=='')  ? $("#subcategory").html(data.content) : $("#Rsubcategory").html(data.content);
+            search_record(1);
+         },'json');
+      });
+      /*sub category change*/
+      $(document).on("change",".subcategory",function(){
+         search_record(1);
+      });
+
+      /*skill change*/
+      $(document).on("change","#skills",function(){
+         search_record(1);
+      });
+
+       $(document).on('change',"#location",function(event) {
+         setTimeout(function() {
+            search_record(1);
+         }, 200);
+       });
+
+       /*$(document).on("keyup","#avg_rate",function(){
+         search_record(1);
+      });*/
+      $(document).on("change","#avg_rate",function(){
+         search_record(1);
+      });
+
+      $(document).on("click",".search",function(){
+         search_record(1);
+      });
+
+      $(document).on('change', 'input[name=last_activity]:radio', function(e) {
+         var pageNo = $(".load_more_data").attr("data-page");
+         search_record(pageNo);
+      });
+
+      $(document).on('change', 'input[name=eng_lvl]:radio', function(e) {
+         var pageNo = $(".load_more_data").attr("data-page");
+         search_record(pageNo);
+      });
+      $(document).on("change","input[type=radio]",function(){
+         search_record(1);
+      });
+
+      $(document).on("click",".save_freelancer",function(){
+         $(this).find('i').removeClass("fa fa-heart-o").addClass("fa fa-heart");
+         var id = $(this).attr("data-id");
+         $.post(url,{"action":"addToSave","id":id},function(data){
+            if(data.type=="error")
+            {
+               window.location.href = "{SITE_URL}SignIn";
+               toastr[data.type](data.msg);
+            }
+            else
+            {
+               toastr[data.type](data.msg);
+            }
+         },'json');
+      });
+
+      $(document).on("click",".load_more_data",function()
+      {
+           var pageNo = $(this).attr("data-page");
+           var p_no = parseInt(pageNo)+1;
+           search_record(p_no,"load_append");
+      });
+});
+
+
+   function search_record(p_no,loadType='load')
+   {
+
+       var query_param = $("#filters-search select").serialize()+"&"+$("#filters-search input").serialize()+"&action=load_seach_data&page_no="+p_no;
+       var new_serialized_url = URI(url+'/?'+query_param),
+           curr_uri = URI(window.location.href),
+           new_serialized_params = new_serialized_url.search(true);
+
+       ((new_serialized_params.category!= '' && new_serialized_params.category!=undefined) ? curr_uri.setSearch("category", new_serialized_params.category) : curr_uri.removeSearch("category"));
+       ((new_serialized_params.subcategory!= '' && new_serialized_params.subcategory!=undefined) ? curr_uri.setSearch("subcategory", new_serialized_params.subcategory) : curr_uri.removeSearch("subcategory"));
+
+       ((new_serialized_params.Rcategory!= '' && new_serialized_params.Rcategory!=undefined) ? curr_uri.setSearch("Rcategory", new_serialized_params.Rcategory) : curr_uri.removeSearch("Rcategory"));
+       ((new_serialized_params.Rsubcategory!= '' && new_serialized_params.Rsubcategory!=undefined) ? curr_uri.setSearch("Rsubcategory", new_serialized_params.Rsubcategory) : curr_uri.removeSearch("Rsubcategory"));
+
+       ((new_serialized_params.skills!= '' && new_serialized_params.skills!=undefined) ? curr_uri.setSearch("skills", new_serialized_params.skills) : curr_uri.removeSearch("skills"));
+       ((new_serialized_params.Rskills!= '' && new_serialized_params.Rskills!=undefined) ? curr_uri.setSearch("Rskills", new_serialized_params.Rskills) : curr_uri.removeSearch("Rskills"));
+
+       ((new_serialized_params.sorting!= '') ? curr_uri.setSearch("sorting", new_serialized_params.sorting) : curr_uri.removeSearch("sorting"));
+       ((new_serialized_params.exp_lvl!= '' && new_serialized_params.exp_lvl!=undefined) ? curr_uri.setSearch("exp_lvl", new_serialized_params.exp_lvl) : curr_uri.removeSearch("exp_lvl"));
+       ((new_serialized_params.Rexp_lvl!= '' && new_serialized_params.Rexp_lvl!=undefined) ? curr_uri.setSearch("Rexp_lvl", new_serialized_params.Rexp_lvl) : curr_uri.removeSearch("Rexp_lvl"));
+
+
+       ((new_serialized_params.location!= '' && new_serialized_params.location!=undefined) ? curr_uri.setSearch("location", new_serialized_params.location) : curr_uri.removeSearch("location"));
+       ((new_serialized_params.Rlocation!= '' && new_serialized_params.Rlocation!=undefined) ? curr_uri.setSearch("Rlocation", new_serialized_params.Rlocation) : curr_uri.removeSearch("Rlocation"));
+
+
+       ((new_serialized_params.avg_rate!= '' && new_serialized_params.avg_rate!=undefined) ? curr_uri.setSearch("avg_rate", new_serialized_params.avg_rate) : curr_uri.removeSearch("avg_rate"));
+       ((new_serialized_params.Ravg_rate!= '' && new_serialized_params.Ravg_rate!=undefined) ? curr_uri.setSearch("Ravg_rate", new_serialized_params.Ravg_rate) : curr_uri.removeSearch("Ravg_rate"));
+
+
+       ((new_serialized_params.last_activity!= '' && new_serialized_params.last_activity!=undefined) ? curr_uri.setSearch("last_activity", new_serialized_params.last_activity) : curr_uri.removeSearch("last_activity"));
+       ((new_serialized_params.Rlast_activity!= '' && new_serialized_params.Rlast_activity!=undefined) ? curr_uri.setSearch("Rlast_activity", new_serialized_params.Rlast_activity) : curr_uri.removeSearch("Rlast_activity"));
+
+
+       ((new_serialized_params.eng_lvl!= '' && new_serialized_params.eng_lvl!=undefined) ? curr_uri.setSearch("eng_lvl", new_serialized_params.eng_lvl) : curr_uri.removeSearch("eng_lvl"));
+       ((new_serialized_params.Reng_lvl!= '' && new_serialized_params.Reng_lvl!=undefined) ? curr_uri.setSearch("Reng_lvl", new_serialized_params.Reng_lvl) : curr_uri.removeSearch("Reng_lvl"));
+
+       ((new_serialized_params.searchKeyword!= '' && new_serialized_params.searchKeyword!=undefined) ? curr_uri.setSearch("searchKeyword", new_serialized_params.searchKeyword) : curr_uri.removeSearch("searchKeyword"));
+
+
+
+       history.pushState({}, null, '?'+curr_uri._parts.query);
+       $.ajax({
+           url: url,
+           type: 'POST',
+           dataType: 'json',
+           data: query_param,
+           beforeSend: function()
+           {
+               $('#freelancer_data').html('<div class="center_loader"><img src="{SITE_UPD}dotdot.gif" width=100 height=100/></div>');
+           },
+           success : function(data)
+           {
+             (loadType=='load_append') ? $('#freelancer_data').append(data.content) : $('#freelancer_data').html(data.content);
+             (data.btn=='') ? $(".load_more_data").removeClass("hide") : $(".load_more_data").addClass(data.btn);
+             $(".load_more_data").attr("data-page",data.pageno);
+           },
+           complete: function()
+           {
+               $('.center_loader').remove();
+           }
+       });
+   }
+
+   /*$(".dropdown-menu li a").click(function(){
+      $(this).parents(".dropdown.fix-width").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+      var dataVal = $(this).attr('data-url');
+      var keyword = $("#keyword").val();
+
+      window.location.href = (keyword!='') ? dataVal+"/?keyword="+keyword : dataVal+"/";
+    }); */
+</script>

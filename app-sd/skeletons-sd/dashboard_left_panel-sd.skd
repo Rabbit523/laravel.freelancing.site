@@ -1,0 +1,255 @@
+
+            <!--<h3 class="dsb-title">Dashboard</h3>-->
+            <!--<div class="sidebar-nav">
+                <ul class="nav nav-list">
+                    <li class="<?php if($currModule == 'dashboard-sd'){echo 'active';}?>" ><a href="{SITE_URL}dashboard">Dashboard</a></li>
+                    <li>
+                        <a class="accordion-heading" data-toggle="collapse" data-target="#submenu1">
+                            <span class="nav-header-primary">Buying... <span class="pull-right"><b class="caret"></b></span></span>
+                        </a>
+        
+                        <ul class="nav nav-list collapse in" id="submenu1">
+                            <li class="<?php if($currModule == 'mybids-sd'){echo 'active';}?>" ><a href="{SITE_URL}mybids" title="My Bids">Bids</a></li>
+                            <li class="<?php if($currModule == 'offers-sd'){echo 'active';}?>" ><a href="{SITE_URL}offers" title="My Offers">Offers</a></li>
+                            <li class="<?php if($currModule == 'my_orders-sd'){echo 'active';}?>" ><a href="{SITE_URL}my_orders" title="My Orders">Orders</a></li>
+                            <li class="<?php if($currModule == 'saved_search-sd'){echo 'active';}?>"><a href="{SITE_URL}saved_search" title="Saved Searches">Saved Searches</a></li>
+                            <li class="<?php if($currModule == 'watched_list-sd'){echo 'active';}?>"><a href="{SITE_URL}watched_list" title="Watched Listings">Watched Listings</a></li>
+                            <li class="<?php if($currModule == 'watched_category-sd'){echo 'active';}?>"><a href="{SITE_URL}watched_category" title="Watched Categories">Watched Categories</a></li>
+                            <li class="<?php if($currModule == 'watched_sellers-sd'){echo 'active';}?>"><a href="{SITE_URL}watched_sellers" title="Watched Sellers">Watched Sellers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="accordion-heading" data-toggle="collapse" data-target="#submenu2">
+                            <span class="nav-header-primary">Selling...<span class="pull-right"><b class="caret"></b></span></span>
+                        </a>
+                        <ul class="nav nav-list collapse in" id="submenu2">
+                            <li class="<?php if($currModule == 'listing-sd'){echo 'active';}?>"><a href="{SITE_URL}listings" title="My Listings">Listings</a></li>
+                            <li class="<?php if($currModule == 'my_orders_sales-sd'){echo 'active';}?>"><a href="{SITE_URL}my_orders_sales" title="My Orders">My Orders</a></li>
+                           <?php /* <li><a href="" title="">Domain Portfolio</a></li> */ ?>
+                            <li class="<?php if($currModule == 'sell-sd'){echo 'active';}?>"><a href="{SITE_URL}sell" title="Create a Listing">Create a Listing</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="accordion-heading" data-toggle="collapse" data-target="#submenu3">
+                            <span class="nav-header-primary">About Me...<span class="pull-right"><b class="caret"></b></span></span>
+                        </a>
+                        <ul class="nav nav-list collapse in" id="submenu3">
+                            <li class="<?php if($currModule == 'public_profile-sd'){echo "active";}?>" ><a href="{SITE_URL}public_profile" title="">Public Profile</a></li>
+                            <li class="<?php if($currModule == 'account_settings-sd'){echo "active";}?>"><a href="{SITE_URL}account_settings/cpass" title="">Account Settings</a></li>
+                            <li><a href="{SITE_URL}logout" title="logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>-->
+            <?php
+            $buyingMenuIn = $sellerMenuIn = $aboutMeIn = '';
+            $currModule = $this->module;            
+            if($currModule == 'listing-sd' || $currModule == 'my_orders_sales-sd')
+                $sellerMenuIn = 'in';
+            elseif($currModule == 'public_profile-sd' || $currModule == 'account_settings-sd')
+                $aboutMeIn = 'in';
+            else
+                $buyingMenuIn = 'in';
+            ?>
+            <div class="desktop-view-sidebar">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-parent="#accordion" href="{SITE_URL}dashboard" class=" accordion-heading <?php if($currModule == 'dashboard-sd'){echo 'active';}?>">{DASHBOARD_LABEL}</a>
+                        </h4>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-parent="#accordion" href="{SITE_URL}message" class=" accordion-heading <?php if($currModule == 'message-sd'){echo 'active';}?>">{NAV_PMB_LBL}</a>
+                        </h4>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-parent="#accordion" href="{SITE_URL}notification" class=" accordion-heading <?php if($currModule == 'notification-sd'){echo 'active';}?>">{NOTIFICATIONS_LABEL}</a>
+                        </h4>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-parent="#accordion" href="{SITE_URL}wallet" class=" accordion-heading <?php if($currModule == 'wallet-sd'){echo 'active';}?>">{MY_WALLET_LABEL}</a>
+                        </h4>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="accordion-heading">{BUYING_LABEL} <span class="pull-right"><b class="caret"></b></span></a>
+                        </h4>
+                      </div>
+                      <div id="collapse1" class="panel-collapse collapse <?php echo $buyingMenuIn;?>">
+                        <div class="panel-body">
+                            <ul class="nav nav-list collapse in" id="submenu1">
+                                <li class="<?php if($currModule == 'mybids-sd'){echo 'active';}?>" ><a href="{SITE_URL}mybids" title="My Bids">{BIDS_LABEL}</a></li>
+                                <li class="<?php if($currModule == 'offers-sd'){echo 'active';}?>" ><a href="{SITE_URL}offers" title="My Offers">{OFFERS_LBL}</a></li>
+                                <li class="<?php if($currModule == 'my_orders-sd'){echo 'active';}?>" ><a href="{SITE_URL}my_orders" title="My Orders">{ORDERS_LBL}</a></li>
+                                <li class="<?php if($currModule == 'saved_search-sd'){echo 'active';}?>"><a href="{SITE_URL}saved_search" title="Saved Searches">{SAVED_SEARCHES_LABEL}</a></li>
+                                <li class="<?php if($currModule == 'watched_list-sd'){echo 'active';}?>"><a href="{SITE_URL}watched_list" title="Watched Listings">{WATCHED_LISTINGS}</a></li>
+                                <li class="<?php if($currModule == 'watched_category-sd'){echo 'active';}?>"><a href="{SITE_URL}watched_category" title="Watched Categories">{WATCHED_CATEGORIES}</a></li>
+                                <li class="<?php if($currModule == 'watched_sellers-sd'){echo 'active';}?>"><a href="{SITE_URL}watched_sellers" title="Watched Sellers">{WATCHED_SELLERS}</a></li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="accordion-heading" >{SELLING__LBL} <span class="pull-right"><b class="caret"></b></span></a>
+                        </h4>
+                      </div>
+                      <div id="collapse2" class="panel-collapse collapse <?php echo $sellerMenuIn;?>">
+                        <div class="panel-body">
+                            <ul class="nav nav-list collapse in" id="submenu2">
+                                <li class="<?php if($currModule == 'listing-sd'){echo 'active';}?>"><a href="{SITE_URL}listings" title="My Listings">{LISTINGS_LABEL}</a></li>
+                                <li class="<?php if($currModule == 'my_orders_sales-sd'){echo 'active';}?>"><a href="{SITE_URL}my_orders_sales" title="My Orders">{MY_ORDERS}</a></li>
+                               <?php /* <li><a href="" title="">Domain Portfolio</a></li> */ ?>
+                                <li class="<?php if($currModule == 'sell-sd'){echo 'active';}?>"><a href="{SITE_URL}sell" title="Create a Listing">{CREATE_A_LISTING}</a></li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="accordion-heading" >{ABOUT_ME} <span class="pull-right"><b class="caret"></b></span></a>
+                        </h4>
+                      </div>
+                      <div id="collapse3" class="panel-collapse collapse <?php echo $aboutMeIn;?>">
+                        <div class="panel-body">
+                            <ul class="nav nav-list collapse in" id="submenu3">
+                                <li class="<?php if($currModule == 'public_profile-sd'){echo "active";}?>" ><a href="{SITE_URL}public_profile" title="">{PUBLIC_PROFILE}</a></li>
+                                <li class="<?php if($currModule == 'account_settings-sd'){echo "active";}?>"><a href="{SITE_URL}account_settings/cpass" title="">{F_ACCOUNT_SETTING_LBL}</a></li>
+                                <li><a href="{SITE_URL}logout" title="Sign Out">{SIGN_OUT_LABEL}</a></li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+            </div>
+
+
+
+
+
+
+
+             <!--<div class="sidebar-nav">
+                <ul class="nav nav-list">
+                    <li class="<?php if($currModule == 'dashboard-sd'){echo 'active';}?>" ><a href="{SITE_URL}dashboard">Dashboard</a></li>
+                    <li>
+                        <a class="accordion-heading" data-toggle="collapse" data-target="#submenu1" >
+                            <span class="nav-header-primary">Buying... <span class="pull-right"><b class="caret"></b></span></span>
+                        </a>
+        
+                        <ul class="nav nav-list collapse in" id="submenu1">
+                            <li class="<?php if($currModule == 'mybids-sd'){echo 'active';}?>" ><a href="{SITE_URL}mybids" title="My Bids">Bids</a></li>
+                            <li class="<?php if($currModule == 'offers-sd'){echo 'active';}?>" ><a href="{SITE_URL}offers" title="My Offers">Offers</a></li>
+                            <li class="<?php if($currModule == 'my_orders-sd'){echo 'active';}?>" ><a href="{SITE_URL}my_orders" title="My Orders">Orders</a></li>
+                            <li class="<?php if($currModule == 'saved_search-sd'){echo 'active';}?>"><a href="{SITE_URL}saved_search" title="Saved Searches">Saved Searches</a></li>
+                            <li class="<?php if($currModule == 'watched_list-sd'){echo 'active';}?>"><a href="{SITE_URL}watched_list" title="Watched Listings">Watched Listings</a></li>
+                            <li class="<?php if($currModule == 'watched_category-sd'){echo 'active';}?>"><a href="{SITE_URL}watched_category" title="Watched Categories">Watched Categories</a></li>
+                            <li class="<?php if($currModule == 'watched_sellers-sd'){echo 'active';}?>"><a href="{SITE_URL}watched_sellers" title="Watched Sellers">Watched Sellers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="accordion-heading" data-toggle="collapse" data-target="#submenu2">
+                            <span class="nav-header-primary">Selling...<span class="pull-right"><b class="caret"></b></span></span>
+                        </a>
+                        <ul class="nav nav-list collapse in" id="submenu2">
+                            <li class="<?php if($currModule == 'listing-sd'){echo 'active';}?>"><a href="{SITE_URL}listings" title="My Listings">Listings</a></li>
+                            <li class="<?php if($currModule == 'my_orders_sales-sd'){echo 'active';}?>"><a href="{SITE_URL}my_orders_sales" title="My Orders">My Orders</a></li>
+                           <?php /* <li><a href="" title="">Domain Portfolio</a></li> */ ?>
+                            <li class="<?php if($currModule == 'sell-sd'){echo 'active';}?>"><a href="{SITE_URL}sell" title="Create a Listing">Create a Listing</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="accordion-heading" data-toggle="collapse" data-target="#submenu3">
+                            <span class="nav-header-primary">About Me...<span class="pull-right"><b class="caret"></b></span></span>
+                        </a>
+                        <ul class="nav nav-list collapse in" id="submenu3">
+                            <li class="<?php if($currModule == 'public_profile-sd'){echo "active";}?>" ><a href="{SITE_URL}public_profile" title="">Public Profile</a></li>
+                            <li class="<?php if($currModule == 'account_settings-sd'){echo "active";}?>"><a href="{SITE_URL}account_settings/cpass" title="">Account Settings</a></li>
+                            <li><a href="{SITE_URL}logout" title="logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>-->
+
+
+            <!--mobile view-->
+            <div class="side-mobile-view">
+                <ul class="nav nav-list sidenav" id="mySidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <li class="<?php if($currModule == 'dashboard-sd'){echo 'active';}?>" ><a href="{SITE_URL}dashboard">{DASHBOARD_LABEL}</a></li>
+                    <li>
+                        <a href="javascript:;">
+                            <span class="nav-header-primary">{BUYING_LABEL}... <span class="pull-right"><b class="caret"></b></span></span>
+                        </a>
+        
+                        <ul class="nav nav-list">
+                            <li class="<?php if($currModule == 'mybids-sd'){echo 'active';}?>" ><a href="{SITE_URL}mybids" title="{BIDS_LABEL}">{BIDS_LABEL}</a></li>
+                            <li class="<?php if($currModule == 'offers-sd'){echo 'active';}?>" ><a href="{SITE_URL}offers" title="{OFFERS_LBL}">{OFFERS_LBL}</a></li>
+                            <li class="<?php if($currModule == 'my_orders-sd'){echo 'active';}?>" ><a href="{SITE_URL}my_orders" title="{ORDERS_LBL}">{ORDERS_LBL}</a></li>
+                            <li class="<?php if($currModule == 'saved_search-sd'){echo 'active';}?>"><a href="{SITE_URL}saved_search" title="{SAVED_SEARCHES_LABEL}">{SAVED_SEARCHES_LABEL}</a></li>
+                            <li class="<?php if($currModule == 'watched_list-sd'){echo 'active';}?>"><a href="{SITE_URL}watched_list" title="{WATCHED_LISTINGS}">{WATCHED_LISTINGS}</a></li>
+                            <li class="<?php if($currModule == 'watched_category-sd'){echo 'active';}?>"><a href="{SITE_URL}watched_category" title="{WATCHED_CATEGORIES}">{WATCHED_CATEGORIES}</a></li>
+                            <li class="<?php if($currModule == 'watched_sellers-sd'){echo 'active';}?>"><a href="{SITE_URL}watched_sellers" title="{WATCHED_SELLERS}">{WATCHED_SELLERS}</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span class="nav-header-primary">{SELLING__LBL}...<span class="pull-right"><b class="caret"></b></span></span>
+                        </a>
+                        <ul class="nav nav-list">
+                            <li class="<?php if($currModule == 'listing-sd'){echo 'active';}?>"><a href="{SITE_URL}listings" title="{LISTINGS_LABEL}">{LISTINGS_LABEL}</a></li>
+                            <li class="<?php if($currModule == 'my_orders_sales-sd'){echo 'active';}?>"><a href="{SITE_URL}my_orders_sales" title="{MY_ORDERS}">{MY_ORDERS}</a></li>
+                           <?php /* <li><a href="" title="">Domain Portfolio</a></li> */ ?>
+                            <li class="<?php if($currModule == 'sell-sd'){echo 'active';}?>"><a href="{SITE_URL}sell" title="{CREATE_A_LISTING}">{CREATE_A_LISTING}</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span class="nav-header-primary">{ABOUT_ME}...<span class="pull-right"><b class="caret"></b></span></span>
+                        </a>
+                        <ul class="nav nav-list">
+                            <li class="<?php if($currModule == 'public_profile-sd'){echo "active";}?>" ><a href="{SITE_URL}public_profile" title="">{PUBLIC_PROFILE}</a></li>
+                            <li class="<?php if($currModule == 'account_settings-sd'){echo "active";}?>"><a href="{SITE_URL}account_settings/cpass" title="">{F_NAV_ACCNT_SETTING_LBL}</a></li>
+                            <li><a href="{SITE_URL}logout" title="logout">{NAV_LOGOUT_LBL}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--<div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a href="#">About</a>
+                  <a href="#">Services</a>
+                  <a href="#">Clients</a>
+                  <a href="#">Contact</a>
+                </div>-->
+                <p onclick="openNav()" class="dashboard-menu">&#9776; {DASHBOARD_MENU}</p>
+            </div>
+        
+
+<!-- <?php 
+$currModule;
+?> -->
+
+<script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>

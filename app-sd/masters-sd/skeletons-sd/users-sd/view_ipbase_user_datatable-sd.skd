@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_content">
+                <div class="actions portlet-toggler">
+                    <div class="btn-group"></div>
+                </div>
+            </div>
+            <div class="portlet-body portlet-toggler ">
+                <table id="example123_useractivity" class="table table-striped table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        OTable = $('#example123_useractivity').dataTable({
+            "bProcessing": true,
+            "bServerSide": true,
+            "bFilter": false,
+            "sAjaxSource": "ajax.<?php echo $this->module;?>.php",
+            "fnServerData": function (sSource, aoData, fnCallback) {
+                $.ajax({
+                   "dataType": 'json',
+                   "type": "POST",
+                   "url": sSource,
+                   "data": aoData,
+                   "success": fnCallback
+                });
+             },
+             "aoColumns": [
+                { "sName": "uId", 'sTitle' : 'id',"bVisible" : false},
+                { "sName": "userName", 'sTitle' : 'User Name'},
+                { "sName": "email", 'sTitle' : 'Email'},
+            ],
+            "fnServerParams": function(aoData) {
+                setTitle(aoData, this);
+                
+                aoData.push({ "name": "action", "value": "ipbase_user" });
+                aoData.push({ "name": "ip", "value": "<?php echo $this->ip; ?>" });
+            },
+           
+        });
+    });
+    
+    
+</script>
+
+

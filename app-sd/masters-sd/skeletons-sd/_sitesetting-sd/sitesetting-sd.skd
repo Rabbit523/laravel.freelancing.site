@@ -1,0 +1,140 @@
+<script type="text/javascript">
+    $(document).on('focus','#60',function(){
+          var places = document.getElementById('60');
+          var option = {};
+          autocomplete= new google.maps.places.Autocomplete(places,option);
+        });
+    $(document).on('submit', '#frmSS', function (e) {
+
+        $("#frmSS").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'span',
+            highlight: function (element) {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element) {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            rules: {
+                1: {required: true},
+                2: {required: true,email:true},
+                3: {extension: "png|jpeg|gif|x-png|jpg|x-png|x-jpeg|pjpeg"},
+                10: {required: true},
+                11: {required: true,email:true},
+                18: {extension: "png|jpeg|gif|x-png|jpg|x-png|x-jpeg|pjpeg|x-icon|ico"},
+                19: {required: true,url:true},
+                20: {required: true,url:true},
+                22: {required: true,url:true},
+                23: {required: true,url:true},
+                28: {required: true},
+                29: {required: true},
+                30: {required: true}, 
+                31: {required: true}, 
+                32: {required: true},
+                33: {required: true},
+                34: {required: true},
+                35: {required: true},
+                36: {required: true},
+                38: {required: true,email:true},
+                39: {required: true},
+                40: {required: true},
+                41: {required: true},
+                42: {required: true},
+                48: {required: true},
+                49: {required: true},
+                50: {required: true},
+                51: {required: true},
+                52: {required: true},
+                53: {required: true},
+                54: {required: true},
+                56: {required: true},
+                59: {required: true},
+                60: {required: true}
+                61: {required: true}
+            },
+            messages: {
+                1: {required: '&nbsp;Please enter Site Name'},
+                2: {required: '&nbsp;Please enter Admin Email', email:'&nbsp;Please enter valid Email Id'},
+                3: {extension:"Please select valid image. (e.g. jpg, jpeg, png, gif)"},
+                10: {required: '&nbsp;Please enter Email From Name'},
+                11: {required: '&nbsp;Please enter From Email', email:'&nbsp;Please enter valid Email Id'},
+                18: {extension:"Please select valid image. (e.g. jpg, jpeg, png, gif, ico)"},
+                19: {required: '&nbsp;Please enter Facebook Link', url:'&nbsp;Please enter valid Link'},
+           
+                20: {required: '&nbsp;Please enter Twitter Link', url:'&nbsp;Please enter valid Link'},
+                
+                22: {required: '&nbsp;Please enter Google Plus Link', url:'&nbsp;Please enter valid Link'},
+                
+                23: {required: '&nbsp;Please enter Linkedin Link', url:'&nbsp;Please enter valid Link'},
+                28: {required: '&nbsp;Please enter SMTP Host'},
+                29: {required: '&nbsp;Please enter SMTP Port'},
+                30: {required: '&nbsp;Please enter SMTP User name'},
+                31: {required: '&nbsp;Please enter SMTP Password'},
+                32: {required: '&nbsp;Please enter Facebook App Id'},
+                33: {required: '&nbsp;Please enter Facebook App Secret Id'},
+                34: {required: '&nbsp;Please enter Google Client Id'},
+                35: {required: '&nbsp;Please enter Google Client Secret Id'},
+                36: {required: '&nbsp;Please enter Google Analytic Code'},
+                38: {required: '&nbsp;Please enter Paypal Account Email',email:'&nbsp;Please enter valid Email Id'},
+                39: {required: '&nbsp;Please enter Paypal App Id'},
+                40: {required: '&nbsp;Please enter Paypal Uusername'},
+                41: {required: '&nbsp;Please enter Paypal Password'},
+                42: {required: '&nbsp;Please enter Paypal Signature'},
+                48: {required: '&nbsp;Please enter Job Featured Fees'},
+                49: {required: '&nbsp;Please enter Service Featured Fees'},
+                50: {required: '&nbsp;Please enter Enable Or Disable Escrow'},
+                51: {required: '&nbsp;Please enter Default Escrow commission'},
+                52: {required: '&nbsp;Please enter Default Service commission'},
+                53: {required: '&nbsp;Please enter Credits To Place a Bid on Job'},
+                54: {required: '&nbsp;Please enter Yes or No'},
+                56: {required: '&nbsp;Please enter Paypal Services Fees'},
+                59: {required: '&nbsp;Please enter No. of featured job display on home page'},
+                60: {required: '&nbsp;Please enter address'}
+                61: {required: '&nbsp;Please enter SMTP Secure'},
+            },
+            errorPlacement: function (error, element) {
+                if (element.attr("data-error-container")) {
+                    error.appendTo(element.attr("data-error-container"));
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+        if ($("#frmSS").valid()) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+</script>
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" name="frmSS" id="frmSS" class="form-horizontal form-label-left" enctype="multipart/form-data">
+                    <div class="form-body">
+                        <?php echo $this->getForm; ?>
+                    </div>  
+                </form> 
+            </div>
+        </div>   
+    </div>
+</div>    	

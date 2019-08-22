@@ -1,0 +1,21 @@
+<div class="listing-inner-box">
+    <div class="listing-item">
+        <h4 class="list-nm"><a href="%SITE_URL%">%SITE_TITLE%</a></h4>
+        <div class="seller-parts">
+            <span>Seller: %SELLER_NAME% </span>
+            <span>%LISTING_ADDED_DATE% </span>
+            <span>%TOTAL_PLACED_COMMENTS%</span>
+            <span>%LISTING_TYPE%</span>
+        </div>
+        <p class="web-price">%TAGLINE%</p>
+        <p>{ESTABLISHED_LABEL} <span>%ESTABLISHED_DATE%</span>  %MONTHLY_REVENUE%</p>
+        <div class="label label-danger deletedListTagStyle %LISTING_DELETED_LABLE%">{LISTING_DELETED}</div>
+    </div>
+    
+    <div class="bids-price">
+        <span class="price">%BID_PRICE%</span><span>%PLACE_BID_OR_OFFER%</span>
+        <span>%TOTAL_BID_PLACES%</span>
+
+        <button class="btn watchListing %WATCH_LIST_CLASS%" listing-id="%LISTING_ID%" id="list_%LISTING_ID%" data-target="%DATA_TARGET%" data-toggle="%DATA_TOGGLE%">%WATCH_LIST_TEXT%</button>
+    </div>
+</div>

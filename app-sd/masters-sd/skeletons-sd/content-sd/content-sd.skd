@@ -1,0 +1,200 @@
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                 <div class="nav navbar-right panel_toolbox portlet-toggler">
+                    <?php if (in_array('add', $this->Permission)) { ?>
+                    <a href="ajax.<?php echo $this->module; ?>.php?action=add" class="btn btn-success btn-sm btn-add" title="Add"><i class="fa fa-plus"></i></a>
+                <?php } ?>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="actions portlet-toggler">
+                    
+                    <div class="btn-group"></div>
+                </div>
+            </div>
+            <div class="portlet-body portlet-toggler ">
+                <table id="example123" class="table table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+        </div>
+    </div>
+ </div>
+
+<script type="text/javascript">
+    $(function () {
+        OTable = $('#example123').dataTable({
+                "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                "fnServerData": function (sSource, aoData, fnCallback) {
+                    $.ajax({
+                        "dataType": 'json',
+                        "type": "POST",
+                        "url": sSource,
+                        "data": aoData,
+                        "success": fnCallback
+                    });
+                },
+                "aaSorting" : [],
+                "aoColumns": [
+                { "sName": "pId", "sTitle" : 'Content Id', bVisible: false},
+                { "sName": "pageTitle", 'sTitle' : 'Page Title','sWidth':'25%'},
+                { "sName": "page_slug", 'sTitle' : 'Page Slug','sWidth':'25%'}
+<?php if (in_array('status', $this->Permission)) { ?>
+                    , { "sName": "isActive", 'sTitle' : 'Status', bSearchable:false}
+<?php } ?>
+<?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+                    , {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}
+<?php } ?>
+                ],
+                "fnServerParams"
+                : function(aoData){setTitle(aoData, this)},
+                "fnDrawCallback"
+                : function(oSettings) {
+                $('.make-switch').bootstrapSwitch();
+                $('.make-switch').bootstrapSwitch('setOnClass', 'success');
+                $('.make-switch').bootstrapSwitch('setOffClass', 'danger');
+
+            }
+    });
+
+
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+
+    $.validator.addMethod('pagenm', function (value, element) {
+        return /^[a-zA-Z0-9][a-zA-Z0-9\_\-\s]*$/.test(value);
+    }, 'Page name is not valid. Only alphanumeric,space and _ are allowed'
+            );
+    
+    $(document).on('click', '#submitAddForm', function (e) {
+        e.preventDefault();
+        CKEDITOR.config.autoParagraph = false;
+        for (var instanceName in CKEDITOR.instances) {
+            CKEDITOR.instances[instanceName].updateElement();
+        }
+        
+        $("#frmCont").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'span',
+            highlight: function (element) {
+               $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element) {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorPlacement: function (error, element) {
+                if (element.attr("data-error-container")) {
+                    error.appendTo(element.attr("data-error-container"));
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+            rules: {
+                pageTitle: {required: true,pagenm:true,remote:{
+                        url:"<?php echo SITE_ADM_MOD.$this->module ?>/ajax.<?php echo $this->module;?>.php",
+                        type: "post",
+                        async:false,
+                        data: {ajaxvalidate:true,pageTitle: function() {return $("#pageTitle").val();},id: function() {return $("#id").val();}},
+                        complete: function(data){
+                            return data;
+                        }
+                    }},
+                pageDesc: {required: true},
+                 
+
+            },
+            messages: {
+                pageTitle: {required: '&nbsp;Please enter Page Title',remote:'Page Title already exist'},
+                pageDesc: {required: '&nbsp;Please enter Page Description'},
+            }
+        });
+        
+        if ($("#frmCont").valid()) {
+            ajaxFormSubmit("#frmCont");
+            removeOverlay();
+        } else {
+            return false;
+        }
+        
+    });
+    });
+        
+    $(document).on('keyup', '.headerOrdering', function (e) {
+     this.value = this.value.replace(/[^0-9]/g,'');
+    });
+    $(document).on('keyup', '.footerOrdering', function (e) {
+     this.value = this.value.replace(/[^0-9]/g,'');
+    });
+
+
+
+    $(document).on('blur', '.headerOrdering', function (e) {
+         $("#toast-container").remove();
+         $(".toast-top-full-width").html('');
+        var recordId = $(this).data('id');
+        var editLink = $(this).data('link');
+        var headerData = $(this).val();
+        $.ajax({
+            url: editLink,
+            type: "POST",
+            dataType: "json",
+            data:{'headerData':headerData},
+            success: function (response) {
+                //console.log(response);
+                if ('' != response.type && '' != response.message) {
+                    toastr[response.type](response.message);
+                    if ('success' == response.type) {
+                        OTable.fnDraw();
+                    }
+                } else {
+                    toastr['error']('There seems to be an issue. Please try again after some time.');
+                }
+            }
+        });
+    });
+
+    $(document).on('blur', '.footerOrdering', function (e) {
+         $("#toast-container").remove();
+         $(".toast-top-full-width").html('');
+        var recordId = $(this).data('id');
+        var editLink = $(this).data('link');
+        var headerData = $(this).val();
+        $.ajax({
+            url: editLink,
+            type: "POST",
+            dataType: "json",
+            data:{'footerData':headerData},
+            success: function (response) {
+                //console.log(response);
+                if ('' != response.type && '' != response.message) {
+                    toastr[response.type](response.message);
+                    if ('success' == response.type) {
+                        OTable.fnDraw();
+                    }
+                } else {
+                    toastr['error']('There seems to be an issue. Please try again after some time.');
+                }
+            }
+        });
+    });
+
+</script>

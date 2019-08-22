@@ -1,0 +1,74 @@
+<div class="col-md-4 col-sm-6" >
+    <div class="fjob-box">
+        <div class="fjob-featured %FEATURED_JOB%"><!-- <i class="fa fa-star" aria-hidden="true"></i> --></div>
+        <h4 class="fjob-title">
+            <a href="{SITE_URL}job/%JOB_SLUG%">%JOB_TITLE%</a>
+        </h4>
+        <ul class="fjob-breadcrumb">
+            <li title="%CATEGORY%">%CATEGORY%</li>
+            <li title="%SUBCATEGORY%">%SUBCATEGORY%</li>
+        </ul>
+        <div class="fjob-price-wrap">
+            Est.Budget : <div class="amount-wrap">%BUDGET%<span>%CUR_CODE%</span></div>
+            <span class="level-label ">%EXP_LVL%</span>
+        </div>
+        <div class="fjob-desc">%DESCRIPTION%</div>
+        <div class="fjob-skills"><p>%SKILL_LIST%</p></div>
+        <ul class="fjob-post">
+            <li><span>{POSTED_LABEL}</span>: %POST_TIME%</li>
+            <li><span>{J_NO_OF_APPLICANTS_LBL}</span>: %APPLICANTS%</li>
+        </ul>
+        <div class="freelancer-details">
+            <div class="media">
+                <div class="media-left media-top">
+                    <div class="freelancer-img">
+                        <a href="{SITE_URL}f/profile/%USER_SLUG%">
+                            <img src="%USER_IMG%"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="media-body media-top">
+                    <h5><a href="javascript:void(0);">%USERNAME%</a></h5>
+                    <div class="user-location">%COUNTRY%</div>
+                    <p class="rating"><i class="fa fa-star"></i> %RATING%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 col-sm-6" style="display: none;">
+    <div class="featured-box ">
+        <div class="%FEATURED_JOB%">
+            <p>{FMS_FEATURED}</p>
+        </div>
+        <div class="%EXP_LVL_TAG%">
+            <p>%EXP_LVL%</p>
+        </div>
+        <h4><a href="{SITE_URL}job/%JOB_SLUG%">%JOB_TITLE%</a></h4>
+
+        <a href="#" data-toggle="tooltip" title="" class="active save-job" data-original-title="Saved"><!-- <i class="fa fa-heart"></i> --></a>
+        <p class="price">%BUDGET% <span>%CUR_CODE%</span></p>
+
+        <span class="subcat">
+            %CATEGORY%
+            <i class="fa fa-angle-right" aria-hidden="true">
+            </i>
+            %SUBCATEGORY%
+        </span>
+
+        <p class="desc">%DESCRIPTION%</p>
+        <!-- <p><a href="javascript:void(0);">Web Design</a>, <a href="javascript:void(0);">Graphic Design</a></p> -->
+        <p class="skills-list">%SKILL_LIST%</p>
+        <ul class="recevied_addons">
+            <li>
+                <label>{POSTED_LABEL} </label>
+                <span>%POST_TIME%</span>
+            </li>
+            <li>
+                <label>{J_NO_OF_APPLICANTS_LBL}</label>
+                <span>%APPLICANTS%</span>
+            </li>
+        </ul>
+    </div>
+</div>

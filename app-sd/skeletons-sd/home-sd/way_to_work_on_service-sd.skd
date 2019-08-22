@@ -1,0 +1,8 @@
+<li>
+	<div class="work-service-box">
+		<div class="work-service-wrap-img">
+			<img src="%SERVICE_ICON%">
+		</div>
+		<div class="work-service-wrap-desc">%SERVICE_NAME%</div>
+	</div>
+</li>

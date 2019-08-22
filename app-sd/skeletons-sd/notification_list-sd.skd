@@ -1,0 +1,19 @@
+<li class="noti-item %UNREAD%">
+  <!-- <a href="javascript:void(0);" class="cancel-noti">
+    <img src="{SITE_URL}frames-sd/images-sd/icon/cancel.png" alt="">
+  </a> -->
+  <a href="%DETAIL_LINK%" data-id="%ID%">
+    <div class="media">
+      <div class="media-left">
+        <div class="noti-img">
+          <!-- <img src="http://192.168.5.28/pickgeeks_sawlii/frames-sd/images-sd/team/4.jpg" alt=""> -->
+          %AVTAR%
+        </div>
+      </div>
+      <div class="media-body">
+        <p>%MESSAGE%</p>
+        <span class="date">%CREATEDDATE%</span>
+      </div>
+    </div>
+  </a>
+</li>

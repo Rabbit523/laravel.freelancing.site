@@ -1,0 +1,126 @@
+<script type="text/javascript">
+    $(function () 
+    {
+        OTable = $('#example123').dataTable({
+        "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                "fnServerData": function (sSource, aoData, fnCallback)
+                {
+                    $.ajax({
+                        "dataType": 'json',
+                        "type": "POST",
+                        "url": sSource,
+                        "data": aoData,
+                        "success": fnCallback
+                    });
+                },
+                "aaSorting" : [],
+                "aoColumns": [
+                    { "sName": "serviceTitle", 'sTitle' : 'Services Title'},
+                    { "sName": "servicesCategory", 'sTitle' : 'Category Name'},
+                    { "sName": "freelanserId", 'sTitle' : 'Freelancer'},
+                    { "sName": "servicesPrice", 'sTitle' : 'Services Price'},
+                    { "sName": "isApproved", 'sTitle' : 'Status'}
+
+<?php if (in_array('edit', $this->Permission) || in_array('delete', $this->Permission) || in_array('view', $this->Permission)) { ?>
+                    , {"sName": "operation", 'sTitle': 'Operation', bSortable: false, bSearchable: false}<?php } ?>
+                ],
+                "fnServerParams"
+                : function(aoData){
+                    setTitle(aoData, this)
+                    aoData.push( { name: "category", value: $("#category").val() });
+                    aoData.push( { name: "subcategory", value: $("#subcategory").val() });
+                    aoData.push( { name: "filtering_type", value: $("#filtering_type").val() });
+                },
+                "fnDrawCallback"
+                : function(oSettings) 
+                {
+                    $('.make-switch').bootstrapSwitch();
+                    $('.make-switch').bootstrapSwitch('setOnClass', 'success');
+                    $('.make-switch').bootstrapSwitch('setOffClass', 'danger');
+                }
+        });
+
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+    $(document).on("click","#category",function(){
+        var catId = $(this).val();
+        
+        $.post("ajax.<?php echo $this->module; ?>.php",{"action":"load_sub","cat_id":catId},function(data){
+            $("#subcategory").html(data);
+            OTable.fnDraw();
+        });
+    });
+    $(document).on("click","#subcategory",function(){
+        OTable.fnDraw();
+    });
+    $(document).on("click","#filtering_type",function(){
+        OTable.fnDraw();
+    });
+});
+
+</script>
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content">
+                <div class="actions portlet-toggler">
+                    <div class="btn-group"></div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <select name='category' id='category' class='form-control input-inline'>
+                                        <option value=''>All Category</option>
+                                        %CAT%
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <select name='subcategory' id='subcategory' class='form-control input-inline'>
+                                        <option value=''>All Subcategory</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <select name='filtering_type' id='filtering_type' class='form-control input-inline'>
+                                        <option selected='' value=''>All Status</option>
+                                        <option value='f'>Featured</option>
+                                        <option value='p'>Pending</option>
+                                        <option value='r'>Rejected</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="portlet-body portlet-toggler ">
+                <table id="example123" class="table table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+
+        </div>
+    </div>
+</div>

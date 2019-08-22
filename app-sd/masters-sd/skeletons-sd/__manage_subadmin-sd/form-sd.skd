@@ -1,0 +1,87 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+
+    <div class="form-body">
+    
+        <div class="form-group">
+            <label for="" class="control-label col-md-3">{MEND_SIGN} User Name :&nbsp;</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control logintextbox-bg" name="txt_uname" id="txt_uname" value="%USERNAME%"  placeholder="Enter Username Here" />
+                </div>
+        </div>
+
+        <div class="form-group" >
+            <label for="" class="control-label col-md-3">{MEND_SIGN} Email :&nbsp;</label>
+                <div class="col-md-4">
+                    <input type="email" class="form-control logintextbox-bg" name="txt_email" id="txt_email" value="%EMAIL%" autocomplete="off"  placeholder="Enter Email Here" />
+                </div>
+        </div>
+
+        <div class="form-group" >
+            <label for="" class="control-label col-md-3">{MEND_SIGN} Password :&nbsp;</label>
+                <div class="col-md-4">
+                    <input type="password" class="form-control logintextbox-bg" name="txt_password" id="txt_password" value="" autocomplete="off"  placeholder="Enter Password Here" />
+                    %NOTE%
+                </div>
+        </div>
+        <div class="form-group" >
+            <label for="" class="control-label col-md-3">{MEND_SIGN}Confirm Password :&nbsp;</label>
+            <div class="col-md-4">
+                <input type="password" class="form-control logintextbox-bg" name="txt_cnf_password" id="txt_cnf_password" value="" autocomplete="off"  placeholder="Enter Password Here" />
+                %NOTE%
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-6">Modules :&nbsp;</label>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <label class="control-label">Set User Accessibility</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-6">Select all :&nbsp;</label>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkBox" id="selectAll">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        %MODULES_LIST%
+
+        <?php if(in_array('status',$this->Permission)){ ?>
+            <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-6">Status: &nbsp;</label>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <div class="radio-list" data-error-container="#form_2_Status: _error">
+                    <label class="radio-inline">
+                        <input class="radioBtn-bg required" id="y" name="isActive" type="radio" value="a" %STATIC_A%>
+                        Active</label>
+                    <label class="radio-inline">
+                        <input class="radioBtn-bg required" id="n" name="isActive" type="radio" value="d" %STATIC_D%>
+                        Inactive</label>
+                    <span for="status" class="help-block"></span> </div>
+                <div id="form_2_Status: _error"></div>
+            </div>
+        </div>
+        <?php } ?>
+
+        <div class="flclear clearfix"></div>
+            <input type="hidden" name="type" id="type" value="%TYPE%">
+        <div class="flclear clearfix"></div>
+            <input type="hidden" name="id" id="id" value="%ID%">
+        <div class="padtop20"></div>
+    
+    </div>
+
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <input type="hidden" name="submitAddForm" value="" />
+            <button type="button" name="" class="btn green" id="submitAddForm">Submit</button>
+            <button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+        </div>
+    </div>
+    
+</form>

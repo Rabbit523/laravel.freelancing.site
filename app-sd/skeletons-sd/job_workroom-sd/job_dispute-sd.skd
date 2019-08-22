@@ -1,0 +1,57 @@
+<li>
+   <p>
+      <span>
+      {NAME_LABEL} :
+      </span>
+      %DISPUTER_NAME%<span class="usr-type">(%DISPUTER_TYPE%)</span>
+   </p>
+   <p>
+      <span>
+      {DISPUTE_REASON} :
+      </span>
+      %REASON%
+   </p>
+   <p>
+      <span>
+      {J_JOB_DESC_LBL} :
+      </span>
+      %DESC%
+   </p>
+   <p>
+      <span>
+      {FMS_STATUS} :
+      </span>
+      <label class="status_pen">
+      %DISPUTE_STATUS%
+      </label>
+   </p>
+   <p class="date">
+      <span>
+      {DATE_LABEL} :
+      </span>
+      <label>
+       %DISPUTE_DATE%
+      </label>
+   </p>
+   <!-- </div> -->
+   <div class="dispute-list">
+      <?php /* <div class="extra-info %ACC_HIDE%">
+         <p>
+            {WOULD_YOU_LIKE_TO_WORK}
+         </p>
+         <div class="text-right">
+            <a type="button" class="btn btn-primary confirm_no_dsp" data-id="%ML_ID%" data-dpid="%ID%">{NO_LABEL}</a>
+            <a type="button" class="btn btn-primary btn-common confirm_dsp" data-id="%ML_ID%" data-dpid="%ID%">{J_ESCROW_YES_LBL}</a>
+         </div>
+      </div>
+      <div class="extra-info %DISPUTER_STATUS%">
+         <p>
+            {WOULD_LIKE_TO_WORK_WITH_YOU}
+         </p>
+         <div class="text-right">
+            <a type="button" class="btn btn-primary disputer_deny" data-id="%ML_ID%" data-dpid="%ID%">{NO_LABEL}</a>
+            <a type="button" class="btn btn-primary btn-common disputer_acc" data-id="%ML_ID%" data-dpid="%ID%">{J_ESCROW_YES_LBL}</a>
+         </div>
+      </div> */ ?>
+   </div>
+</li>

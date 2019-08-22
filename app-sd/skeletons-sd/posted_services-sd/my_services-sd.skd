@@ -1,0 +1,40 @@
+<div class="fl-services-item">
+    <div class="like active %FAV_CLASS%">
+        <a href="javascript:void(0)" class="save_service" data-id="%SERVICE_ID%"><i class="fa fa-heart-o"></i></a>
+     </div>
+    <div class="save-service %SAVE_RIGHTS%">
+       <a href="javascript:void(0)" title="Saved" class="save_service" data-id="%SERVICE_ID%">
+           <i class="%SAVE_CLASS%"></i>
+       </a>
+    </div>
+    <div class="media">
+        <div class="media-left">
+            <div class="fl-service-thumb">
+                <a href="#"><img src="%SERVICES_IMG%" title="%SERVICES_TITLE%" alt="images"></a>
+            </div>
+        </div>
+        <div class="media-body fl-service-info">
+            <div class="fl-service-heading">
+                <a href="#"><h4 class="main-title"><a href="{SITE_URL}service/%SLUG%" target="_blank">%SERVICES_TITLE%</a></h4></a>
+                <span>{FMS_DELIVERY_IN} %DELIVERY_DAYS%</span>
+            </div>
+            <div class="fl-service-price"><label>{FMS_PRICE}:</label>%PRICE%</div>
+            <div class="fl-service-sort-info">%DESCRIPTION%</div>
+            <div class="fls-status-wrap">
+                <div class="fls-status-box">
+                    <span class="fls-status bg-success">%STATUS%</span>
+                    <span class="fls-post-date">{FMS_POSTED_ON} : <span>%POSTED_DATE%</span></span>
+                </div>
+                <ul class="fls-featured-edit">
+                    <li class="mark-ftr add-feature flps-f-item %MAKE_FEATURED_CLASS%"  id="make_feature_%SERVICE_ID%">
+                      <label class="sawlii-check">Mark as Featured
+                          <input type="checkbox" class="%MAKE_FEATURED_CLASS% make_featured" name="feature" id="feature" data-id="%SERVICE_ID%" >
+                          <span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li class="fls-edit"><a class="edit %EDIT_RIGHTS%" href="{SITE_URL}post-services/%SLUG%" title="Edit"><i class="fa fa-edit"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

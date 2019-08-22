@@ -1,0 +1,3 @@
+<div class="radio">
+    <label><input type="radio" name="parentCat" class="parentCat" id="parentCat" value="%PARENT_CAT_ID%"  %SELECTED% %ID_DISABLED%>%PARENT_CAT_NAME%</label>
+</div>

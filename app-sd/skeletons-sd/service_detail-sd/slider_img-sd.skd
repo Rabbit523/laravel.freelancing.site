@@ -1,0 +1,4 @@
+<div>
+   <img data-u="image" src="%IMG%"/>
+   <img data-u="thumb" src="%IMG%"/>
+</div>

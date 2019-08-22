@@ -1,0 +1,31 @@
+<div class="transaction">
+    <div class="media">
+        <div class="pull-left">
+            <span class="%IS_POSSITIVE%"><i class="fa fa-%IS_POSSITIVE%-circle" aria-hidden="true"></i></span>
+        </div>
+        <div class="media-body">
+            <div class="user-img %MARGIN_DELETE_BUTTON%">
+                <img src="%BUYER_PROFILE_IMAGE%"/>
+            </div>
+			<div class="transaction-text">
+				<p class="brand-nm"><a href="%USER_LINK%">%USER_NAME%</a></p>
+				<span class="Reputation %FEEDBACK_HIDE%">
+					  (
+						<span class="Feedback--good " title="{PERCENTAGE_OF_FEEDBACK_THAT_IS_POSITIVE}">                
+							%LISTING_RATTING%%
+						</span>
+					  )
+				</span>
+				<div class="user-rating %FEEDBACK_HIDE%">
+					<img src="../frames-sd/images-sd/flat-icon/star.png"/>
+				</div>
+				<p class="comment">%RATING_COMMENT%</p>
+				<div class="createdDate">%CREATED_DATE%</div>
+				<span class="label label-danger deletedTagStyle %HIDE_FEEDBACK_USER%">{USER_DELETED}</span>
+			</div>
+        </div>
+    </div>
+    <div class="website-sold">
+        <span><a href="%LISTING_LINK%">%LISTING_TYPE%</a> sold for $%SOLD_PRICE% (%SOLD_AGO%)</span>
+    </div>
+</div>

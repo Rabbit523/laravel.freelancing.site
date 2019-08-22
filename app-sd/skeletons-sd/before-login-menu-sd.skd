@@ -1,0 +1,4 @@
+<li><a href="javascript:void(0);" data-toggle="modal" class="loginLink">{RST_SIGN_IN}</a></li>
+<li><a href="javascript:void(0);" data-toggle="modal" id="signupLink">{SIGNUP_HEADING}</a></li>
+<li class="btnsell"><a id="chkLoginLink" class="btn btn-success btn-starts loginLink" href="#" data-toggle="modal" data-href="sell">{START_SELLING}</a></li>
+

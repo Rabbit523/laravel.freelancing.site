@@ -1,0 +1,142 @@
+<li class="ctrp-item">
+    <div class="ctrp-user-wrap">        
+        <div class="ctrp-image-wrap">
+            <div class="ctrp-image">
+                <img src="%USER_IMG%">
+            </div>
+        </div>
+        <div class="ctrp-user-data">    
+            <h5 class="ctrp-user-title"><a href="{SITE_URL}f/profile/%USER_SLUG%">%USER_NAME%</a></h5>
+            <div class="ctrp-user-location"><i class="fa fa-map-marker" aria-hidden="true"></i> %USER_LOCATION%</div>
+            <div class="ctrp-user-rating">
+                <div class="star-ratings-sprite">
+                    <span style="width:%USER_RATINGS%%" class="star-ratings-sprite-rating"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ctrp-invt-wrap">
+        <div class="ctrp-invited %INVITE_HIDE%"><span class="invite-label">{INVITED_LABEL}</span></div>
+        <div class="ctrp-budget">{BID_AMOUNT} : <span class="amount-wrap">%BID_AMOUNT%</span></div>
+    </div>
+    <ul class="ctrp-details-list clearfix">
+      <li>{TIME_DURATUION} : <span>%EST_DURATION%</span></li>
+      <li>{ESCROW_REQUIRED} : <span>%ESCROW_REQ%</span></li>
+      <li>{BID_PLACED} : <span> %BID_DATE%</span></li>
+      <li>{BID_ACCEPTANCE_STATUS} : <span>%ACC_STATUS%</span></li>
+    </ul>
+    <div class="ctrp-desc">%BID_DESC%</div>
+    <div class="ctrp-expand-que expand_btn %SHOW_MORE%">
+        <a href="javascript:void(0);" class="expand_div_toggle">{MORE_LABEL}</a>
+        <div class="expande_div" style="display: none;">
+            <div class="question">
+                <ul>
+                    %QUESTION%
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ctrp-btn-wrap clearfix">
+        <!-- <div class="pull-right %ACC_HIDE% %BID_ACC% %BID_HIRED%"> -->
+        <div class="ctrp-btn %ACC_HIDE% %BID_ACC% %BID_HIRED%">
+            <a href="javascript:void(0)" class="accept_bid btn btn-primary %ACC_HIDE% %BID_ACC% %BID_HIRED%" data-id="%BID_ID%">{FD_ACCEPT}</a>
+        </div>
+        <div class="ctrp-btn %ACC_HIDE% %BID_ACC% %BID_HIRED%">
+            <a href="javascript:void(0)" class="reject_bid btn btn-secondary %ACC_HIDE% %BID_ACC% %BID_HIRED%" data-id="%BID_ID%">{FD_REJECT}</a>
+        </div>
+        <!-- </div> -->
+        <div class="ctrp-btn %HIDE_WORKROOM%">
+            <a href="{SITE_URL}job/workroom/%JOB_SLUG%" class="btn btn-primary">{OPEN_WORKROOM}</a>
+        </div>
+        <div class=" ctrp-btn %HIRE_FREELANCER%">
+            <a href="javascript:void(0)" data-id="%BID_ID%" class="hire_freelancer btn btn-primary">{HIRE_FREELANCER_LABEL}</a>
+        </div>
+    </div>
+</li>
+
+<?php /*
+<li class="card-block">
+    <div class="freelancer-detail">
+        <div class="media">
+            <div class="pull-left">
+                <div class="freelancer-img">
+                    <img src="%USER_IMG%">
+                </div>
+            </div>
+            <div class="pull-right %ACC_HIDE% %BID_ACC% %BID_HIRED%">
+                <div class="theme-button">
+                    <a href="javascript:void(0)" class="accept_bid" data-id="%BID_ID%">{FD_ACCEPT}</a>
+                </div>
+                <div class="theme-button">
+                    <a href="javascript:void(0)" class="reject_bid" data-id="%BID_ID%">{FD_REJECT}</a>
+                </div>
+            </div>
+            <div class="pull-right theme-button %HIDE_WORKROOM%">
+                <a href="{SITE_URL}job/workroom/%JOB_SLUG%">{OPEN_WORKROOM}</a>
+            </div>
+            <div class="pull-right theme-button %HIRE_FREELANCER%">
+                <a href="javascript:void(0)" data-id="%BID_ID%" class="hire_freelancer">{HIRE_FREELANCER_LABEL}</a>
+            </div>
+
+            <div class="media-body">
+                <h4 class="card-title">
+                    <a href="{SITE_URL}f/profile/%USER_SLUG%">%USER_NAME%</a>
+                </h4>
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> %USER_LOCATION%</p>
+                <div class="star-ratings-sprite">
+                    <span style="width:%USER_RATINGS%%" class="star-ratings-sprite-rating">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <h4 class="card-title">
+                <a href="{SITE_URL}job/%JOB_SLUG%">%JOB_TITLE%</a>
+            </h4>
+        </div>
+        <div class="col-md-2 text-right %INVITE_HIDE%">
+            <div class="bid_PickGeeks">
+                <div class="invited">
+                    <a>{INVITED_LABEL}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bid_section">
+        <ul class="list-inline">
+            <li>
+                <label>{BID_AMOUNT} : </label> <span>%BID_AMOUNT%</span>
+            </li>
+            <li>
+                <label>{TIME_DURATUION} : </label> <span>%EST_DURATION%</span>
+            </li>
+            <li>
+                <label>{ESCROW_REQUIRED} : </label> <span>%ESCROW_REQ%</span>
+            </li>
+        </ul>
+        <div class="bid_desc">
+            <p>%BID_DESC%</p>
+        </div>
+
+    </div>
+    <div class="proposals">
+        <p>
+            <label>{BID_PLACED} : </label> <span class="theme-color">%BID_DATE%</span>
+        </p>
+        <p>
+            <label>{BID_ACCEPTANCE_STATUS} : </label> <span class="theme-color">%ACC_STATUS%</span>
+        </p>
+    </div>
+    <div class="expand_btn %SHOW_MORE%">
+        <a href="javascript:void(0);" class="expand_div_toggle">{MORE_LABEL}</a>
+        <div class="expande_div" style="display: none;">
+            <div class="question">
+                <ul>
+                    %QUESTION%
+                </ul>
+            </div>
+        </div>
+    </div>
+</li> */ ?>

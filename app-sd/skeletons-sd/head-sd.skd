@@ -1,0 +1,81 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-signin-client_id" content="{GOOGLE_APP_ID}">
+%METATAG%
+<title>%TITLE%</title>
+%CANONICAL%
+<?php if(!empty(SITE_FAVICON)){ ?>
+	<link rel="shortcut icon" type="image/ico" href="{SITE_IMG}{SITE_FAVICON}">
+<?php } ?>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<link href="{SITE_CSS}bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+<link href="{SITE_CSS}jquery-ui.css" rel="stylesheet">
+<link href="{SITE_CSS}font-awesome.min.css" rel="stylesheet">
+<link href="{SITE_CSS}animate.min.css" rel="stylesheet">
+<link href="{SITE_ADM_PLUGIN}bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css"/>
+<link href="{SITE_CSS}jquery.raty.css" rel="stylesheet">
+<link href="{SITE_CSS}bootstrap_choosen.css" rel="stylesheet">
+<link href="{SITE_CSS}select2.css" rel="stylesheet">
+<link href="{SITE_CSS}bootstrap-select.css" rel="stylesheet">
+<link href="{SITE_CSS}bootstrap-datetimepicker.min.css" rel="stylesheet">
+<link href="{SITE_CSS}jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="{SITE_CSS}owl.carousel.min.css" rel="stylesheet" type="text/css"/>
+<link href="{SITE_CSS}owl.theme.default.css" rel="stylesheet" type="text/css"/>
+<?php if($_SESSION["is_rtl"]=="y"){ ?>
+	<link href="{SITE_CSS}style_rtl.css" rel="stylesheet" type="text/css"/>
+	<link href="{SITE_CSS}new_style_rtl.css" rel="stylesheet" type="text/css"/>
+	<link href="{SITE_CSS}temp_rtl.css" rel="stylesheet" type="text/css"/>
+	<link href="{SITE_CSS}responsive_rtl.css" rel="stylesheet">
+<?php } else { ?>
+	<link href="{SITE_CSS}style.css" rel="stylesheet" type="text/css"/>	
+	<link href="{SITE_CSS}new_style.css" rel="stylesheet" type="text/css"/>	
+	<link href="{SITE_CSS}responsive.css" rel="stylesheet">
+<?php } ?>
+<link href="{SITE_CSS}color.css" rel="stylesheet" type="text/css"/>
+
+<!-- <link href="{SITE_CSS}normalize.css" rel="stylesheet" type="text/css"> -->
+
+<link href="{SITE_CSS}sweetalert.css" rel="stylesheet">
+<script type="text/javascript" src="{SITE_JS}jquery.min.js"></script>
+<script type="text/javascript" src="{SITE_JS}bootstrap.min.js"></script>
+<script type="text/javascript" src="{SITE_JS}jquery-ui.min.js"></script>
+<!-- <script type="text/javascript" src="{SITE_JS}jquery.js"></script> -->
+<script type="text/javascript" src="{SITE_JS}tether.min.js"></script>
+<script type="text/javascript" src="{SITE_JS}chosen.jquery.js"></script>
+<script type="text/javascript" src="{SITE_JS}select2.min.js"></script>
+<script src="{SITE_JS}jquery.validate.min.js" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={GOOGLE_LOC_KEY}&libraries=places"> </script>
+<script src="{SITE_JS}bootstrap-select.js"></script>
+<script src="{SITE_JS}chart.js"></script>
+<script src="{SITE_JS}utils.js"></script>
+<script src="{SITE_JS}owl.carousel.min.js"></script>
+<script src="{SITE_JS}custom.js"></script>
+<script src="{SITE_JS}new_custom.js"></script>
+<script src="{SITE_JS}moment.js"></script>
+<script src="{SITE_JS}accordion.js"></script>
+
+<script src="{SITE_JS}bootstrap-datetimepicker.min.js"></script>
+
+<script src="{SITE_JS}jquery.raty.js"></script>
+
+<script src="{SITE_JS}jquery.mCustomScrollbar.js"></script>
+<script src="{SITE_JS}sweetalert.min.js"></script>
+<link href="{SITE_CSS}typeahead.css" rel="stylesheet">
+<script src="{SITE_JS}typeahead.jquery.min.js"></script>
+<script src="https://apis.google.com/js/api:client.js?onload=renderButton" async defer></script>
+<script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
+
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHTct64hpR0kad6NbJrqatuQNM4i3jPf8 &libraries=places"
+></script> -->
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+<script type="text/javascript">
+	var icontent = ['email','mail','payment','contact'];
+</script>

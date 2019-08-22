@@ -1,0 +1,6 @@
+<li>
+	<label class="signin-check" for='que_%ID%'>%QUE_NO%. %QUESTIONS%
+		<input type='checkbox' id='que_%ID%' data_id='%ID%' %CHECK_STATUS% name='questions[%ID%]' value="%ID%">
+		<span class="checkmark"></span>
+	</label>
+</li>

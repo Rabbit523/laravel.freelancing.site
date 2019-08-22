@@ -1,0 +1,544 @@
+<section id="content" class="user-dashboard">
+%LEFT_PANEL%
+<div class="user-dashboard-main">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 simPro">
+				<div class="main-content usr-profile">
+					<div id="supProfile">
+						<h5 class="main-heading">
+							{LBL_ACCOUNT_SETTING}
+						</h5>
+						<div class="row">
+							<div class="col-md-12">
+									<div class="change-pwd">
+										<h6 class="acc-heading">
+											{BROWSER_NOTIFICATION}
+										</h6>
+										<div class="allow-noti">
+											<p>{ALLOW_BROWSER_NOTIFICATION}? </p>
+											<input type="checkbox" id="browser_noti" name="browser_noti" switch="bool" %PRO_NOTIFY_1%/> 
+												<label for="browser_noti" data-on-label="Yes" data-off-label="No"></label>
+										</div>
+									</div>
+									<form class="form-horizontal" name="frmAccount" id="frmAccount" method="POST">
+									<div class="change-pwd">
+										<h6 class="acc-heading">
+											{LBL_CHANGE_PASSWORD}
+										</h6>
+										<div class="form-group">
+											<label class="control-label col-md-2" for="cpwd">
+												{LBL_CURRENT_PASSWORD}
+											</label>
+											<div  class="col-md-5">
+												<input type="password" class="form-control pwd_text" placeholder="{LBL_CURRENT_PASSWORD}" name="current_pass" id="current_pass"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-md-2" for="pwdn">
+												{LBL_NEW_PASSWORD}
+											</label>
+											<div class="col-md-5">
+												<input type="password" class="form-control pwd_text" placeholder="{LBL_NEW_PASSWORD}" name="new_pass" id="new_pass"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-md-2" for="cpwd1">
+												{LBL_CONFIRMATION_PASSWORD}
+											</label>
+											<div class="col-md-5">
+												<input type="password" class="form-control pwd_text" placeholder="{LBL_CONFIRMATION_PASSWORD}" name="confirm_pass" id="confirm_pass"/>
+											</div>
+										</div>
+										<div class="form-group">
+										<input type="hidden" name="action" value="accountAction"/>
+											<div class="col-sm-offset-2 col-sm-6">
+												<button class="btn btn-system" type="submit" name="btnAccount" id="btnAccount">
+													{SAVE}
+												</button>
+											</div>
+										</div>
+									</div>
+									</form>
+									<!-- <form method="POST" name="paypal_frm" id="paypal_frm" class="clearfix form-horizontal">
+									<div class="change-pwd">
+										<h6 class="acc-heading">
+											{PAYPAL_SETTINGS}
+										</h6>
+										<div class="form-group">
+											<label class="control-label col-md-2" for="paypal_id">
+												{LBL_PAYPAL_ID}
+											</label>
+											<div  class="col-md-5">
+												<input type="email" class="form-control pwd_text" placeholder="{LBL_PAYPAL_ID}" name="paypal_id" id="paypal_id" value="%PAYPAL_ID%" />
+											</div>
+										</div>
+										<div class="form-group">
+										<input type="hidden" name="action" value="PayIdAction"/>
+											<div class="col-sm-offset-2 col-sm-6">
+												<button class="btn btn-system" type="submit" name="btn_paypal" id="btn_paypal">
+													{SAVE}
+												</button>
+											</div>
+										</div>
+									</div>
+									</form> -->
+									<!-- <form method="POST" class="clearfix form-horizontal">
+										<div class="change-pwd">
+											<h6 class="acc-heading">
+												Stripe Settings
+											</h6>
+											<div class="form-group">
+												<label class="control-label col-md-2">
+													Stripe Public Key
+												</label>
+												<div  class="col-md-5">
+													<input type="email" class="form-control" placeholder="Stripe Public Key"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-md-2">
+													Stripe Private Key
+												</label>
+												<div  class="col-md-5">
+													<input type="email" class="form-control" placeholder="Stripe Private Key"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-sm-offset-2 col-sm-6">
+													<button class="btn btn-system" type="submit">
+														{SAVE}
+													</button>
+												</div>
+											</div>
+										</div>
+									</form> -->
+									<div class="change-pwd">
+										<h6 class="acc-heading">
+											{PAYOUT_PREFERENCE}
+										</h6>
+										<label class="radio-inline">
+											<input type="radio" name="optradio" value="paypal" %PAYPAL_PREF%>{LBL_PAYPAL}
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="optradio" value="stripe" checked="checked" %STRIPE_PREF%>{STRIPE}
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="optradio" value="wire" %BANK_PREF%>{WIRE_TRANSFER}
+										</label>
+									</div>
+									<form id="paypal_frm" class="form-horizontal clearfix paypal-txt" method="POST">
+										<div class="change-pwd">
+											<div class="form-group">
+												<label class="control-label col-md-2">
+													{LBL_PAYPAL_ID}
+												</label>
+												<div  class="col-md-5">
+													<input type="text" id="paypal_id" value="%PAYPAL_ID%" name="paypal_id" class="form-control" placeholder="{LBL_PAYPAL_ID}">
+													<input type="hidden" name="action" value="paypal">
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-sm-offset-2 col-sm-6">
+													<button class="btn btn-system" type="submit">
+														{SAVE}
+													</button>
+												</div>
+											</div>
+										</div>
+									</form>
+									<form id="stripe_frm" class="form-horizontal clearfix stripe-txt" method="POST">
+										<div class="change-pwd">
+											<div class="form-group">
+												<label class="control-label col-md-2">
+													{LBL_STRIPE_PUBLIC_KEY}
+												</label>
+												<input type="hidden" name="action" value="stripe">
+												<div  class="col-md-5">
+													<input type="text" name="pk_key" value="%STRIPE_PK_KEY%" class="form-control" placeholder="{LBL_STRIPE_PUBLIC_KEY}">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-md-2">
+													{STRIPE_PRIVATE_KEY}
+												</label>
+												<div  class="col-md-5">
+													<input type="text" name="sk_key" value="%STRIPE_SK_KEY%" class="form-control" placeholder="{STRIPE_PRIVATE_KEY}">
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-sm-offset-2 col-sm-6">
+													<button class="btn btn-system" type="submit">
+														{SAVE}
+													</button>
+												</div>
+											</div>
+										</div>
+									</form>
+									<form id="bank_frm" class="form-horizontal clearfix wire-txt" method="POST">
+										<div class="change-pwd">
+											<div class="form-group">
+												<label class="control-label col-md-2">
+													{BANK_NAME}
+												</label>
+												<input type="hidden" name="action" value="bank">
+												<div  class="col-md-5">
+													<input type="text" value="%BANK_NAME%" name="bank_name" class="form-control" placeholder="{BANK_NAME}"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-md-2">
+													{BANK_BRANCH_NAME}
+												</label>
+												<div  class="col-md-5">
+													<input type="text" value="%BRANCH_NAME%" name="branch_name" class="form-control" placeholder="{BANK_BRANCH_NAME}"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-md-2">
+													{BANK_ACCOUNT_NUMBER}
+												</label>
+												<div  class="col-md-5">
+													<input type="text" value="%ACCOUNT_NO%" name="acc_no" class="form-control" placeholder="{BANK_ACCOUNT_NUMBER}"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-md-2">
+													{BANK_LOCATION}
+												</label>
+												<div  class="col-md-5">
+													<input type="text" value="%BANK_LOCATION%" name="bank_loc" class="form-control" placeholder="{BANK_LOCATION}"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-md-2">
+													{SWIFT_CODE}
+												</label>
+												<div  class="col-md-5">
+													<input value="%SWIFT_CODE%" type="text" name="swift_code" class="form-control" placeholder="{SWIFT_CODE}"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-sm-offset-2 col-sm-6">
+													<button class="btn btn-system" type="submit">
+														{SAVE}
+													</button>
+												</div>
+											</div>
+										</div>
+									</form>
+									<div class="change-pwd">
+										<h6 class="acc-heading">
+											{MANAGE_MAIL_NOTIFICATIONS}
+										</h6>
+										<div class="allow-noti">
+											<p>{NOTIFY_ORDER_REQ_I}.</p>
+											<input type="checkbox" switch="bool" id="order_request_noti" name="order_request_noti" %ORDER_REQUEST_NOTI%/> 
+												<label for="order_request_noti" data-on-label="Yes" data-off-label="No"></label>
+										</div>
+										<div class="allow-noti">
+											<p>{BUYING_REQUEST_NOTI_I}.</p>
+											<input type="checkbox" switch="bool" id="buying_request_noti" name="buying_request_noti" %BUYING_REQUEST_NOTI%/> 
+												<label for="buying_request_noti" data-on-label="Yes" data-off-label="No"></label>
+										</div>
+										<div class="allow-noti">
+											<p>{TRADE_ALERT_NOTI}.</p>
+											<input type="checkbox" switch="bool" id="trade_alert_noti" name="trade_alert_noti" %TRADE_ALERT_NOTI%/> 
+												<label for="trade_alert_noti" data-on-label="Yes" data-off-label="No"></label>
+										</div>
+										<div class="allow-noti">
+											<p>{ORDER_ACCEPT_REJECT_NOTI}.</p>
+											<input type="checkbox" switch="bool" id="order_accept_reject_noti" name="order_accept_reject_noti" %ORDER_ACCEPT_REJECT_NOTI%/> 
+												<label for="order_accept_reject_noti" data-on-label="Yes" data-off-label="No"></label>
+										</div>
+										<div class="allow-noti">
+											<p>{REQUEST_CHANGED_NOTI}.</p>
+											<input type="checkbox" switch="bool" id="request_changed_noti" name="request_changed_noti" %REQUEST_CHANGED_NOTI%/> 
+												<label for="request_changed_noti" data-on-label="Yes" data-off-label="No"></label>
+										</div>
+										<div class="allow-noti">
+											<p>{ORDER_DISPUTE_NOTI}.</p>
+											<input type="checkbox" switch="bool" id="order_dispute_noti" name="order_dispute_noti" %ORDER_DISPUTE_NOTI%/> 
+												<label for="order_dispute_noti" data-on-label="Yes" data-off-label="No"></label>
+										</div>
+									</div>
+									<div class="change-pwd">
+										<h6 class="acc-heading">
+											{SUBSCRIBE_FOR_NEWSLETTER}	
+										</h6>
+										<div class="allow-noti">
+											<p>{WANT_TO_RECEIVE_NOTIFICATION_FROMUS}? </p>
+											 <input type="checkbox" id="ubsubscribe_newsletter" switch="bool" name="ubsubscribe_newsletter" %NEWSLETTER_STATUS% />
+												<label for="ubsubscribe_newsletter" data-on-label="Yes" data-off-label="No"></label>
+										</div>
+									</div>
+									<div class="change-pwd">
+										<h6 class="acc-heading">
+											{DEACTIVATE_ACCOUNT}
+										</h6>
+										<div class="allow-noti">
+											<p class="deactivate">{WANT_TO_DEACTIVATE_ACCOUNT}?</p>
+											<button class="btn btn-system deactive_account">{DEACTIVATE_ACCOUNT}</button>
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<script type="text/javascript">	
+	$(function() {		
+
+		if("%PAY_OUT_PREF%"=="p"){	
+			$('.paypal-txt').show();
+		}else if("%PAY_OUT_PREF%"=="s"){
+			$('.stripe-txt').show();
+		}else if("%PAY_OUT_PREF%"=="b"){
+			$('.wire-txt').show();
+		}
+
+	    $('input[value="paypal"]').on('click', function() {
+	        if ($(this).val() == 'paypal') {
+	            $('.paypal-txt').show();
+	            $('.stripe-txt').hide();
+	            $('.wire-txt').hide();
+	        }
+	        else {
+	            $('.paypal-txt').hide();
+	        }
+	    });
+	    $('input[value="stripe"]').on('click', function() {
+	        if ($(this).val() == 'stripe') {
+	            $('.stripe-txt').show();
+	            $('.paypal-txt').hide();
+	            $('.wire-txt').hide();
+	        }
+	        else {
+	            $('.stripe-txt').hide();
+	        }
+	    });
+	    $('input[value="wire"]').on('click', function() {
+	        if ($(this).val() == 'wire') {
+	            $('.wire-txt').show();
+	            $('.paypal-txt').hide();
+	            $('.stripe-txt').hide();
+	        }
+	        else {
+	            $('.wire-txt').hide();
+	        }
+	    });
+	});
+$(document).on('change', '#browser_noti', function(e) {
+	var status = $(this).is(":checked");
+	addOverlay();
+	$.post('<?php echo get_link("account-settings"); ?>', {action: 'browser_noti_action', sub_status: status}, function(data, textStatus, xhr) {
+		removeOverlay();
+		if(data && data.code && data.code == 200) {
+			showtoast('success', data.message);
+		} else {
+			showtoast('error', '{SOMETHING_WENT_WRONG}')
+		}
+	}, 'json');
+});
+$(document).on('change', '#buying_request_noti', function(e) {
+
+	var status = $(this).is(":checked");
+	addOverlay();
+	$.post('<?php echo get_link("account-settings"); ?>', {action: 'buying_request_noti', sub_status: status}, function(data, textStatus, xhr) {
+		removeOverlay();
+		if(data && data.code && data.code == 200) {
+			showtoast('success', data.message);
+		} else {
+			showtoast('error', '{SOMETHING_WENT_WRONG}')
+		}
+	}, 'json');
+});
+$(document).on('change', '#trade_alert_noti', function(e) {
+	var status = $(this).is(":checked");
+	addOverlay();
+	$.post('<?php echo get_link("account-settings"); ?>', {action: 'trade_alert_noti', sub_status: status}, function(data, textStatus, xhr) {
+		removeOverlay();
+		if(data && data.code && data.code == 200) {
+			showtoast('success', data.message);
+		} else {
+			showtoast('error', '{SOMETHING_WENT_WRONG}')
+		}
+	}, 'json');
+});
+$(document).on('change', '#order_accept_reject_noti', function(e) {
+	var status = $(this).is(":checked");
+	addOverlay();
+	$.post('<?php echo get_link("account-settings"); ?>', {action: 'order_accept_reject_noti', sub_status: status}, function(data, textStatus, xhr) {
+		removeOverlay();
+		if(data && data.code && data.code == 200) {
+			showtoast('success', data.message);
+		} else {
+			showtoast('error', '{SOMETHING_WENT_WRONG}')
+		}
+	}, 'json');
+});
+$(document).on('change', '#request_changed_noti', function(e) {
+	var status = $(this).is(":checked");
+	addOverlay();
+	$.post('<?php echo get_link("account-settings"); ?>', {action: 'request_changed_noti', sub_status: status}, function(data, textStatus, xhr) {
+		removeOverlay();
+		if(data && data.code && data.code == 200) {
+			showtoast('success', data.message);
+		} else {
+			showtoast('error', '{SOMETHING_WENT_WRONG}')
+		}
+	}, 'json');
+});
+$(document).on('change', '#order_dispute_noti', function(e) {
+	var status = $(this).is(":checked");
+	addOverlay();
+	$.post('<?php echo get_link("account-settings"); ?>', {action: 'order_dispute_noti', sub_status: status}, function(data, textStatus, xhr) {
+		removeOverlay();
+		if(data && data.code && data.code == 200) {
+			showtoast('success', data.message);
+		} else {
+			showtoast('error', '{SOMETHING_WENT_WRONG}')
+		}
+	}, 'json');
+});
+$(document).on('change', '#order_request_noti', function(e) {
+	var status = $(this).is(":checked");
+	addOverlay();
+	$.post('<?php echo get_link("account-settings"); ?>', {action: 'order_request_noti', sub_status: status}, function(data, textStatus, xhr) {
+		removeOverlay();
+		if(data && data.code && data.code == 200) {
+			showtoast('success', data.message);
+		} else {
+			showtoast('error', '{SOMETHING_WENT_WRONG}')
+		}
+	}, 'json');
+});
+$(document).on('click', '.deactive_account', function(e) {
+	 if(confirm("{DEACTIVE_ACCOUNT}")){
+	addOverlay();
+	$.post('<?php echo get_link("account-settings"); ?>', {action: 'deactivateUseraccount'}, function(data, textStatus, xhr) {
+		removeOverlay();
+		if(data && data.code && data.code == 200) {
+			showtoast('success', data.message);
+		} else {
+			showtoast('error', '{SOMETHING_WENT_WRONG}')
+		}
+	}, 'json');
+	}
+});
+$(document).on('change', '#ubsubscribe_newsletter', function(e) {
+			var status = $(this).is(":checked");
+			addOverlay();
+			$.post('<?php echo get_link("account-settings"); ?>', {action: 'unsubscribe', sub_status: status}, function(data, textStatus, xhr) {
+				removeOverlay();
+				if(data && data.code && data.code == 200) {
+					showtoast('success', data.message);
+				} else {
+					showtoast('error', '{SOMETHING_WENT_WRONG}')
+				}
+			}, 'json');
+		});
+$(document).ready(function() {
+		$('#frmAccount').validate({
+			ignore: [],
+			errorElement: 'span',
+			errorClass: 'help-block',
+			highlight: function (element) {
+				$(element).closest('.form-group').addClass('has-error');
+			},
+			unhighlight: function (element) {
+				$(element).closest('.form-group').removeClass('has-error');
+			},
+			rules: {
+				current_pass: { required: true},
+				new_pass: { required: true, minlength: 6 },
+				confirm_pass: { required: true,minlength: 6, equalTo: '#new_pass' }
+			},
+			messages: {
+				current_pass: { required: '{ERR_PLEASE_ENTER_CURRENT_PASSWORD}' },
+				new_pass: { required: '{ERR_PLEASE_ENTER_NEW_PASSWORD}', minlength: '{ERR_PASSWORD_LEN_SIX}' },
+				confirm_pass: { required: '{ERR_CONFIRM_NEW}', minlength: '{ERR_PASSWORD_LEN_SIX}', equalTo: '{ERR_PASSWORD_SAME}' }
+			},
+			errorPlacement: function (error, element) {
+				error.insertAfter(element);
+			}
+		});
+		$('#paypal_frm').validate({
+			ignore: [],
+			errorElement: 'span',
+			errorClass: 'help-block',
+			highlight: function (element) {
+				$(element).closest('.form-group').addClass('has-error');
+			},
+			unhighlight: function (element) {
+				$(element).closest('.form-group').removeClass('has-error');
+			},
+			rules: {
+				paypal_id: { required: true, email : true}
+			},
+			messages: {
+				paypal_id: { required: '{ERR_ENTER_PAYPAL_ADDRESS}', email: '{ER_VALID_PAYPAL_EMAIL}' }
+			},
+			errorPlacement: function (error, element) {
+				error.insertAfter(element);
+			}
+		});
+		 jQuery.validator.addMethod("alphanumericForName", function(value, element) {
+                    return this.optional(element) || /^(?=[A-Za-z0-9])([A-Za-z0-9\s]*)(?<=[A-Za-z0-9])/.test(value);
+                }, "Please enter proper data");
+		$('#stripe_frm').validate({
+			ignore: [],
+			errorElement: 'span',
+			errorClass: 'help-block',
+			highlight: function (element) {
+				$(element).closest('.form-group').addClass('has-error');
+			},
+			unhighlight: function (element) {
+				$(element).closest('.form-group').removeClass('has-error');
+			},
+			rules: {
+				pk_key: { required: true,alphanumericForName:true},
+				sk_key: { required: true,alphanumericForName:true}
+			},
+			messages: {
+				pk_key: { required: '{PLEASE_ENTER_PUBLIC_KEY}'},
+				sk_key: { required: '{PLEASE_ENTER_SECRETE_KEY}'},
+			},
+			errorPlacement: function (error, element) {
+				error.insertAfter(element);
+			}
+		});
+		$('#bank_frm').validate({
+			ignore: [],
+			errorElement: 'span',
+			errorClass: 'help-block',
+			highlight: function (element) {
+				$(element).closest('.form-group').addClass('has-error');
+			},
+			unhighlight: function (element) {
+				$(element).closest('.form-group').removeClass('has-error');
+			},
+			rules: {
+				bank_name: { required: true,alphanumericForName:true},
+				branch_name: { required: true,alphanumericForName:true},
+				acc_no: { required: true,alphanumericForName:true},
+				bank_loc: { required: true,alphanumericForName:true},
+				swift_code: { required: true,alphanumericForName:true}
+			},
+			messages: {
+				bank_name: { required: '{PLEASE_ENTER_BANK_NAME}'},
+				branch_name: { required: '{PLEASE_ENTER_BRANCH_NAME}'},
+				acc_no: { required: '{PLEASE_ENTER_ACCOUNT_NUMBER}'},
+				bank_loc: { required: '{PLEASE_ENTER_BANK_LOCATION}'},
+				swift_code: { required: '{PLEASE_ENTER_SWIFT_CODE}'}
+			},
+			errorPlacement: function (error, element) {
+				error.insertAfter(element);
+			}
+		});
+	});
+</script>

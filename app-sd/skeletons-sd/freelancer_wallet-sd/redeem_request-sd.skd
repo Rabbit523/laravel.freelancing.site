@@ -1,0 +1,8 @@
+<tr>
+  <td>%TRANSACTOIN_ID%</td>
+  <td>%TRANSACTION_DATE%</td>
+  <td>%REQUEST_SEND_DATE%</td>
+  <td>%REQUEST_AMNT%</td>
+  <td>%REQUEST_STATUS% <a href="javascript:void(0);" class="%REMIND_CLASS%"><span class="label label-success send-rem" data-id="%REDEEM_ID%">{CW_SEND_REMINDER}</span>
+        </a></td>
+</tr>

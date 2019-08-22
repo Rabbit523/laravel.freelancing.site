@@ -1,0 +1,73 @@
+<!-- <div class="input-group">
+   <div class="input-group-btn">
+      <div class="dropdown fix-width">
+         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          %FIRST_LABEL%
+         <span class="caret"></span>
+         </button>
+         <ul class="dropdown-menu selected-value" aria-labelledby="dropdownMenu1">
+             <li class="%JOB_CLASS%"><a href="javascript:;" data-value="{SLIDER_LIST_II}">{SLIDER_LIST_II}</a></li>
+             <li class="%FREELANCER_CLASS%"><a href="javascript:;" data-value="{SLIDER_LIST_I}">{SLIDER_LIST_I}</a></li>
+             <li class="%SERVICE_CLASS%"><a href="javascript:;" data-value="{SLIDER_LIST_III}">{SLIDER_LIST_III}</a></li>
+         </ul>
+      </div>
+   </div>
+   <input class="form-control" type="text" name="searchKeyword" id="searchKeyword" placeholder="%TEXT_PLACEHOLDER%" value="%KEYWORD%"/>
+   <span class="input-group-btn">
+      <div class="theme-button">
+         <a href="javascript:void(0)" class="btn btn-block search topSearch" data-url="%FIRST_DATA_URL%" id="full"><i class="fa fa-search"></i></a>
+      </div>
+   </span>
+</div> -->
+
+<section class="serchbar-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="searchbar-form filters-search">
+                    <form class="form" action="" method="POST" id="frmMyJobs" name="frmMyJobs">
+                        <div class="input-group">
+                           <span class="input-group-btn">
+                              <!-- <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                               %FIRST_LABEL%
+                              <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu selected-value" aria-labelledby="dropdownMenu1">
+                                <li class="%JOB_CLASS%"><a href="javascript:;" data-value="{SLIDER_LIST_II}">{SLIDER_LIST_II}</a></li>
+                                <li class="%FREELANCER_CLASS%"><a href="javascript:;" data-value="{SLIDER_LIST_I}">{SLIDER_LIST_I}</a></li>
+                                <li class="%SERVICE_CLASS%"><a href="javascript:;" data-value="{SLIDER_LIST_III}">{SLIDER_LIST_III}</a></li>
+                              </ul> -->
+                              <select class="btn search_type" name="search_type" id="search_type">
+                                <!-- <option value="{SLIDER_LIST_I}" %I_SELECTED%>{SLIDER_LIST_I}</option>
+                                <option value="{SLIDER_LIST_II}" %II_SELECTED%>{SLIDER_LIST_II}</option>
+                                <option value="{SLIDER_LIST_III}" %III_SELECTED%>{SLIDER_LIST_III}</option> -->
+                                %TYPE%
+                              </select>
+                           </span>
+                            <!-- <input type="text" class="form-control" placeholder="Find Jobs (eg. Web Design)">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button">Search</button>
+                            </span> -->
+                            <span class="main-input">
+                              <input class="form-control" type="text" name="searchKeyword" id="searchKeyword" placeholder="%TEXT_PLACEHOLDER%" value="%KEYWORD%"/>
+                              <i class="fa fa-search desktop-view"></i>
+                            </span>
+                            <span class="input-group-btn location-input-group desktop-view">
+                             <input type="text" class="form-control load_ggl_autocomplete location" name="location" id="search_location" value="%LOCATION%"/>
+                              <i class="fa fa-map-marker"></i>
+                            </span>
+                           <span class="input-group-btn">
+                                 <<!-- a href="javascript:void(0)" class="btn btn-primary">
+                                    <i class="fa fa-search mobile-view"></i> 
+                                    <span class="desktop-view">Search</span>
+                                 </a> -->
+                                 <a href="javascript:void(0)" class="btn btn-primary search topSearch" data-url="%FIRST_DATA_URL%" id="full"><i class="fa fa-search"></i> <span class="desktop-view">Search</span></a>
+                                <!-- <button class="btn btn-primary search_record" type="button">Search</button> -->
+                           </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

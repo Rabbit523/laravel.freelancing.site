@@ -1,0 +1,215 @@
+<script type="text/javascript">
+    $(function () {
+         var date;
+        $('#date_range').daterangepicker({
+            locale: {
+                format: 'YYYY-MM-DD'
+            }
+        });
+        $('#date_range').on('apply.daterangepicker', function(ev, picker) {
+            var from=$('#date_range').val();
+            date = from.split(" - ");
+            OTable.fnDraw();
+
+         }); 
+
+    
+        OTable = $('#example123').dataTable({
+        "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "ajax.<?php echo $this->module; ?>.php",
+                "fnServerData": function (sSource, aoData, fnCallback) {
+                    aoData.push( { name : "date", value: (date)===null ? '':date} ),
+                    $.ajax({
+                        "dataType": 'json',
+                        "type": "POST",
+                        "url": sSource,
+                        "data": aoData,
+                        "success": fnCallback
+                    });
+                },
+                "aaSorting" : [],
+                "aoColumns": [
+                    { "sName": "id", "sTitle" : 'Content Id', bVisible: false},
+                    { "sName": "firstName", "sTitle" : 'User Name'},
+                    { "sName": "userType", "sTitle" : 'User Type'},
+                    { "sName": "amount", "sTitle" : 'Requested Amount'},
+                    { "sName": "paymentStatus","sTitle" : 'Payment Status',bVisible:true},
+                    { "sName": "createdDate", "sTitle" : 'Date'},
+                    { "sName": "Operation", "sTitle" : 'Operation', bSortable: false, bSearchable: false}
+                   
+                    
+                ],
+                "fnServerParams": function(aoData) {
+                    setTitle(aoData, this)
+                    aoData.push( { name: "filtering_type", value: $("#filtering_type").val() });
+                    aoData.push( { name: "user_type", value: $("#user_type").val() });
+                    aoData.push( { name: "date_range", value: $("#date_range").val() });
+                },
+                
+                "fnDrawCallback"
+                : function(oSettings) {
+          
+            }
+
+    });
+    $('.dataTables_filter').css({float: 'right'});
+    $('.dataTables_filter input').addClass("form-control input-inline");
+
+    $.validator.addMethod('pagenm', function (value, element) {
+        return /^[a-zA-Z0-9][a-zA-Z0-9\_\-]*$/.test(value);
+    }, 'Page name is not valid. Only alphanumeric,space and _ are allowed'
+            );
+    
+    $(document).on('click', '#submitAddForm', function (e) 
+    {
+        e.preventDefault();
+        for (var instanceName in CKEDITOR.instances) {
+            CKEDITOR.instances[instanceName].updateElement();
+        }
+        
+        $("#frmSubAdminType").validate({
+            ignore: [],
+            errorClass: 'help-block',
+            errorElement: 'span',
+            rules: {
+                categoryName: {required: true}
+            },
+            messages: {
+                categoryName: {required: '&nbsp;Please enter Category Name'}
+            },
+            errorPlacement: function (error, element) {
+                if (element.attr("data-error-container")) {
+                    error.appendTo(element.attr("data-error-container"));
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+        
+        if ($("#frmSubAdminType").valid()) {
+            ajaxFormSubmit("#frmSubAdminType");
+        } else {
+            return false;
+        }        
+    });
+    $(document).on('click', '.add-back', function (e) {
+        if($(this).attr("title")=="Add" || $(this).attr("title")=="Edit")
+        {          
+            $(".chng-btn").hide();
+        }
+        else
+        {
+            $(".chng-btn").show();
+        }
+        
+    });
+    $(document).on('change', '#filtering_type', function(e) 
+    {
+        OTable.fnDraw();
+    });
+
+    $(document).on('change', '#user_type', function(e) 
+    {
+        OTable.fnDraw();
+    });
+     
+
+    $(document).on('click', '.decline_payment', function(e) {
+        e.preventDefault();
+        $("#toast-container").remove();
+        //var amount = 
+        if (confirm("Are you sure to decline payment?")) {
+            var $this = $(this);
+            var editLink = $this.attr('href');
+            $.ajax({
+                url: editLink,
+                type: "POST",
+                dataType: "json",
+                beforeSend: function () {
+                    addOverlay();
+                },
+                success: function (response) {
+                    console.log(response);
+                    if ('' != response.type && '' != response.message) {
+                        toastr[response.type](response.message);
+                        if ('success' == response.type) {
+                            OTable.fnDraw();
+                        }
+                    } else {
+                        toastr['error']('There seems to be an issue. Please try again after some time.');
+                    }
+                },
+                complete: function (xhr) {
+                    removeOverlay();
+                    return false;
+                }
+            });
+        }
+    });
+
+    
+});
+</script>
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <?php
+        echo $this->breadcrumb;
+        ?>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><?php echo $this->headTitle; ?></h2>
+                <div class="nav navbar-right panel_toolbox">
+                   <a href="ajax.redeem_request-sd.php?action=export_excel" class="btn btn-success btn-sm add-back chng-btn" title="Download"><i class="fa fa-download"></i></a>
+                </div>
+                <div class="nav navbar-right panel_toolbox">
+                   <a href="ajax.redeem_request-sd.php?action=export_csv" class="btn btn-warning btn-sm add-back chng-btn" title="Export as CSV"><i class="fa fa-file-excel-o"></i></a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="actions portlet-toggler">
+                    <div class="btn-group"></div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" name="date_range" id="date_range" class="form-control" placeholder="Select Date Range">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <select name='user_type' id='user_type' class='form-control input-inline'>
+                                        <option selected='' value=''>All User</option>
+                                        <option value='C'>Customer</option>
+                                        <option value='F'>Freelancer</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <select name='filtering_type' id='filtering_type' class='form-control input-inline'>
+                                        <option selected='' value=''>All Status</option>
+                                        <option value='pending'>Pending</option>
+                                        <option value='paid'>Already Paid</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div> 
+            <div class="portlet-body portlet-toggler">
+                <table id="example123" class="table table-bordered table-hover">
+                </table>
+            </div>
+            <div class="portlet-toggler pageform" style="display:none;"></div>
+        </div>
+    </div>
+</div>

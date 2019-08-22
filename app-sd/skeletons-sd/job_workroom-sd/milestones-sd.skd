@@ -1,0 +1,21 @@
+<tr>
+    <td scope="row" class="text-center">
+        %TITLE%
+    </td>
+    <td class="text-center">
+        %DESC%
+    </td>
+    <td class="text-center">
+        <div class="amount-wrap">%AMOUNT%</div>
+    </td>
+    <td class="text-center">
+        %DATE%
+    </td>
+    <td class="text-center">
+        <a href="javascript:void(0)" class="status %WORK_STATUS% %BTN_HIDE%">%STATUS% <span class="%IS_MSG_DIV%" title="%IS_MSG%" data-toggle="tooltip"><i class="fa fa-info"></i></span></a>
+        <a href="javascript:void(0)" class="status submit_work %SUBMIT_WORK%" data-id="%MILESTONE_ID%">{SUBMIT_WORK}</a>
+        <a href="javascript:void(0)" class="status ask_for_payment %ASK_FOR_PAYMENT%" data-id="%MILESTONE_ID%">{ASK_FOR_PAYMENT}</a>
+        <a href="javascript:void(0)" data-id="%MILESTONE_ID%" class="status pay_to_user %PAY_TO_USER%">{PAY_TO_USER}</a>
+        <a href="javascript:void(0)" class="waiting_milestone %WAITING%">-</a>
+    </td>
+</tr>

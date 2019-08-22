@@ -1,0 +1,154 @@
+<section class="user-profile-demo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="user-profile">
+                     <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="first-part">
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5">
+                                    <div class="user-profilr-part">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <div class="user-img">
+                                                    <img src="%USER_PROFILE_IMAGE%"/>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <h3 class="user">%USER_NAME%</h3>
+                                                <h4 class="user-nm">%USER_FULL_NAME%</h4>
+                                            </div>
+                                        </div>
+                                        <p class="about-me">%ABOUT_ME%</p>
+                                        <p class="feedback">%TOTAL_FEEDBACK_RECEIVE%</p>
+                                        <p class="location">
+                                            <p><span class="loc-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span> <span> {FD_LOCATION}: %LOCATION%</span></p>
+                                            <p><span class="sitepoint-datetime loc-icon" title="Wed, 08 Feb 2017 22:41:19 UTC"><i class="fa fa-clock-o" aria-hidden="true"></i></span> <span> {FMS_ACTIVE}: %LAST_LOGIN%</span></p>
+                                            
+                                            <p><span class="sitepoint-datetime loc-icon" title="Sun, 16 Oct 2016 14:52:19 UTC"><i class="fa fa-calendar-times-o" aria-hidden="true"></i></span> <span> {MEMBER_SINCE}:%MEMBER_SINSE%</span></p>
+
+                                            %HOME_PAGE_URL%
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-sm-7">
+                                    <div class="user-box-main">
+                                        <div class="user-box">
+                                            <h5 class="user-trust">{USER_TRUST}<span class="label label-danger pull-right deletedTagStyle %HIDE_DELETE_USER%">{USER_DELETED}</span></h5>
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                       <p class="verify">{VERIFICATION}:</p>
+                                                    
+                                                        <ul>
+                                                            <li><i class="fa %EMAIL_VERIFY_STATUS%" aria-hidden="true"></i> {NEWSLETTER_EMAIL_PLACE_HOLDER}</li>
+                                                            <li><i class="fa %PHONE_VERIFY_STATUS%" aria-hidden="true"></i> {PHONE_NUMBER}</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <p class="social">Social:</p>
+                                                    
+                                                        <ul class="social-app">
+                                                            <li><i class="fa %FB_VERIFY_STATUS%" aria-hidden="true"></i></i>%FACEBOOK_LINK%</li>
+                                                            <li><i class="fa %TWITTER_VERIFY_STATUS%" aria-hidden="true"></i> %TWITTER_LINK%</li>
+                                                            <li><i class="fa %LINKED_IN_VERIFY_STATUS%" aria-hidden="true"></i> %LINKED_IN_LINK%</li>
+                                                        </ul>
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                            <div class="flippa-history">
+                                                <h5 class="flippa-nm">{SITE_NM_HISTORY}</h5>
+                                                <ul>
+                                                    <li>%TOTAL_COMMENT_PLACED% {COMMENT_PLACED}</li>
+                                                    <li>%TOTAL_BIDS_PLACED%  {PLACED_LABEL}</li>
+                                                    <li>%TOTAL_LISTIGN_PLACED% {LISTINGS_LABEL}, %AVR_LISTING_SOLD%% {SOLD_LABEL}</li>
+                                                </ul>
+                                            </div>
+                                            <div class="watch-btn">
+                                                <button class="btn watchSeller %WATCH_SELLER_CLASS%" seller-id="%SELLER_ID%" data-target="%SELLER_DATA_TARGET%" data-toggle="%SELLER_DATA_TOGGLE%" ><span class="watchSellerText">%WATCH_SELLER_TEXT%</span> <i class="fa fa-eye" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   </div>            
+                   
+                   <div class="second-part">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                               <div class="feedback-box">
+                                    <ul class="listing-tab">
+                                        <li class="active"><a href="#feedback" data-toggle="tab">{FEEDBACK_LABEL}</a></li>
+                                        <li><a href="#listing" data-toggle="tab">{LISTINGS_LABEL}</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <!--Feedback Tab panes -->
+                                        <div class="tab-pane active app-details" id="feedback">
+                                            <div class="feedback-inner-box">
+                                                <h3 class="feedback-nm"> {FEEDBACK_LABEL} <small>%TOTAL_POSITIVE_RESP%</small></h3>
+                                                %FEEDBACKS%
+                                           </div>
+                                        </div>                                            
+                                        <!--Listing Tab panes -->
+                                        <div class="tab-pane app-details" id="listing">
+                                            %LISTING_DETAILS%                                                
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+$('.watchSeller').click(function(){
+    var seller_id = $(this).attr('seller-id');
+    var link = '<?php echo SITE_MOD;?>users-sd/ajax.users-sd.php';
+    $.ajax({
+        url: link,
+        type: "POST",
+        dataType: "json",
+        data:{'action':'watchSeller','sellerId':seller_id},
+        success: function (response) {
+            if(response.data=='inserted'){
+                $(".watchSeller").removeClass('btn-primary');
+                $(".watchSeller").addClass('btn-success');
+                $(".watchSellerText").html('Watched Seller');
+            }
+            else{
+                $(".watchSeller").removeClass('btn-success');
+                $(".watchSeller").addClass('btn-primary');
+                $(".watchSellerText").html('Watch Seller');
+            }
+            
+        }
+    });
+});
+$('.watchListing').click(function(){
+    var listing_id = $(this).attr('listing-id');
+    var seller_id = $(this).attr('seller-id');
+    var link = '<?php echo SITE_MOD;?>users-sd/ajax.users-sd.php';
+    $.ajax({
+        url: link,
+        type: "POST",
+        dataType: "json",
+        data:{'action':'watchListing','listingId':listing_id},
+        success: function (response) {
+            if(response.data=='inserted'){
+                $("#list_"+listing_id).removeClass('btn-default');
+                $("#list_"+listing_id).addClass('btn-success');
+                $("#list_"+listing_id).html('Watched');
+            }
+            else{
+                $("#list_"+listing_id).removeClass('btn-success');
+                $("#list_"+listing_id).addClass('btn-default');
+                $("#list_"+listing_id).html('Watch');
+            }
+            
+        }
+    });
+});
+</script>

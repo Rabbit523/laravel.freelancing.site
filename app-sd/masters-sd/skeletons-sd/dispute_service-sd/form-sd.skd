@@ -1,0 +1,67 @@
+<form action="" method="post" name="frmCont" id="frmCont" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate">
+
+    <div class="form-body">
+        <div class="form-group">
+            <label for="file_status" class="control-label col-md-3">Disputer User Name &nbsp;:</label>
+            <div class="col-md-4">
+                <input name="feesType" id="duser_name" class="form-control" value="%DUSER_NAME%" readonly="readonly">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="file_status" class="control-label col-md-3">Disputer User Type &nbsp;:</label>
+            <div class="col-md-4">
+                <input name="feesType" id="duser_type" class="form-control" value="%DUSER_TYPE%" readonly="readonly">        
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="file_status" class="control-label col-md-3">Disputed User Name &nbsp;:</label>
+            <div class="col-md-4">
+                <input name="feesType" id="user_name" class="form-control" value="%USER_NAME%" readonly="readonly">        
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="file_status" class="control-label col-md-3">Disputed User Type &nbsp;:</label>
+            <div class="col-md-4">
+                <input name="feesType" id="user_type" class="form-control" value="%USER_TYPE%" readonly="readonly">        
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="file_status" class="control-label col-md-3">Total Payable Amount &nbsp;:</label>
+            <div class="col-md-4">
+                <input name="feesType" id="budget" class="form-control" value="%BUDGET%" readonly="readonly">        
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="file_status" class="control-label col-md-3">Pay To User (Dispute Raised By)&nbsp;:</label>
+            <div class="col-md-4">
+                <input type="text" name="payToDisputer" id="payToDisputer" class="form-control" value="%PAY_TO_DISPUTER%">   
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="file_status" class="control-label col-md-3">Pay To User (Dispute Against To)&nbsp;:</label>
+            <div class="col-md-4">
+                <input type="text" name="payToEntityOwner" id="payToEntityOwner" class="form-control" value="%PAY_TO_USER%" >
+            </div>
+        </div>
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="type" id="type" value="%TYPE%">
+        <div class="flclear clearfix"></div>
+        <input type="hidden" name="id" id="id" value="%ID%">
+        <input type="hidden" name="disputerId" id="disputerId" value="%UID%">
+        <input type="hidden" name="disputedId" id="disputedId" value="%DID%">
+        <div class="padtop20"></div>
+    </div>
+    <div class="form-actions fluid">
+        <div class="col-md-offset-3 col-md-9">
+            <button type="submit" name="submitAddForm" class="btn green" id="submitAddForm">Solve Dispute</button>
+            <button type="button" name="cn" class="btn btn-toggler" id="cn">Cancel</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    var budget = %BUDGET%;
+</script>

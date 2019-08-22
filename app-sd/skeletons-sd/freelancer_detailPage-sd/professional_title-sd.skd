@@ -1,0 +1,31 @@
+<div class="modal fade" id="professional_title" role="dialog" tabindex="-1">
+   <div class="modal-dialog">
+      <!-- Modal content-->
+     <form method="post" name="proFrm" id="proFrm"> 
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal">
+	            &times;
+	            </button>
+	            <h4 class="modal-title">
+	               {FD_TITLE}
+	            </h4>
+	         </div>
+	         <div class="modal-body">
+	               <div class="form-group">
+	               		<textarea class="form-control" name="professional_title" id="professional_title">%PRO_TITLE%</textarea>
+	               </div>	            
+	         </div>
+	         <div class="modal-footer">
+	            <div class="theme-button-default">
+	               <a href="#" data-dismiss="modal">{FD_CANCEL}</a>
+	            </div>
+	            <div class="theme-button">
+	            	<input type="hidden" name="action" value="addTitle">
+	               <button type="submit" name="addTitle" id="addTitle" class="btn btn-system">{FD_SAVE}</button>
+	            </div>
+	         </div>
+	      </div>
+	  </form>
+   </div>
+</div>

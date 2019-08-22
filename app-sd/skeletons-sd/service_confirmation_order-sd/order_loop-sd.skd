@@ -1,0 +1,80 @@
+<? /* <tr data-id="%DATA_ID%">
+   <td class="img">
+      <div class="service-img">
+         <img src="%SERVICE_IMG%" alt="%SERVICE_TITLE%" title="%SERVICE_TITLE%">
+      </div>
+   </td>
+   <td class="title">
+      <p><a href="javascript:void(0);">%SERVICE_TITLE%</a></p>
+      %ADDON_LOOP%
+   </td>
+
+   <td class="price">
+      <h4>{CURRENCY_SYMBOL}<span class='totalPrice_%DATA_ID%'>%ONE_QTY_PRICE%</span></h4>
+      <input type="hidden" name="price_%DATA_ID%" id="price_%DATA_ID%" value="%ONE_QTY_PRICE%">
+      <input type="hidden" name="addOnPrice_%DATA_ID%" id="addOnPrice_%DATA_ID%" value="%ADDON_PRICE%">
+
+      <input type="hidden" name="deliveryDays_%DATA_ID%" id="deliveryDays_%DATA_ID%" value="%ONE_QTY_DAY%">
+      <input type="hidden" name="addOndeliveryDays_%DATA_ID%" id="addOndeliveryDays_%DATA_ID%" value="%ADDON_DAY%">
+   </td>
+   <td>
+      <div class="sp-quantity">
+         <div class="sp-minus sp-minus-delivery"> <a class="ddd" href="javascript:void(0)">-</a>
+         </div>
+         <div class="sp-input">
+            <!-- <input id="quantity_%DATA_ID%" data-id="%DATA_ID%" class="quantity" size="30" min="1" name="quantity[]" value="%QTY%" /> -->
+            <input type="text" name="quantity[]" id="noDayDelivery" value="%QTY%" class="quntity-input" step="1" >
+         </div>
+         <div class="sp-plus sp-plus-delivery"> <a class="ddd" href="javascript:void(0)">+</a>
+         </div>
+     </div>
+   </td>
+   <td style="text-align: center;">
+      {FMS_DELIVERY_IN} %DELIVERED_DAY% {DAY_S}
+      <br>
+   </td>
+   <!-- <td>
+      <span class='totalDays_%DATA_ID%'>%TOTAL_DAYS%</span> Days
+   </td> -->
+   <td class="cancel-order">
+      <a href="javascript:void(0);" data-id="%ORDER_ID%" class="CancelOrder">{FD_CANCEL}</a>
+   </td>
+   <input type="hidden" name="id[]" id="id" value="%ORDER_ID%">
+</tr> */ ?>
+
+<li class="osi-item">
+   <div class="media">
+       <div class="media-left">
+           <div class="osi-img-wrap">
+               <img src="%SERVICE_IMG%" alt="%SERVICE_TITLE%" title="%SERVICE_TITLE%">
+           </div>
+       </div>
+       <div class="media-body">
+           <h3 class="osi-title"><a href="javascript:void(0);">%SERVICE_TITLE%</a></h3>
+           <div class="osi-ddate">{FMS_DELIVERY_IN} %DELIVERED_DAY% {DAY_S}</div>
+           <div class="osi-amount-wrap">
+               <div class="amount-wrap">
+                  <span class='totalPrice_%DATA_ID%'>%ONE_QTY_PRICE%</span>
+                  <input type="hidden" name="price_%DATA_ID%" id="price_%DATA_ID%" value="%ONE_QTY_PRICE%">
+                  <input type="hidden" name="addOnPrice_%DATA_ID%" id="addOnPrice_%DATA_ID%" value="%ADDON_PRICE%">
+                  <input type="hidden" name="deliveryDays_%DATA_ID%" id="deliveryDays_%DATA_ID%" value="%ONE_QTY_DAY%">
+                  <input type="hidden" name="addOndeliveryDays_%DATA_ID%" id="addOndeliveryDays_%DATA_ID%" value="%ADDON_DAY%">
+               </div>
+               <div class="sp-quantity">
+                  <div class="sp-minus sp-minus-delivery"> <a class="ddd" href="javascript:void(0)">-</a>
+                  </div>
+                  <div class="sp-input">
+                     <input type="text" name="quantity[]" id="noDayDelivery" value="%QTY%" class="quntity-input quantity" step="1" >
+                  </div>
+                  <div class="sp-plus sp-plus-delivery"> <a class="ddd" href="javascript:void(0)">+</a>
+                  </div>
+               </div>
+           </div>
+       </div>
+       <input type="hidden" name="id[]" id="id" value="%ORDER_ID%">
+   </div>
+   <a href="javascript:void(0);" data-id="%ORDER_ID%" class="CancelOrder osi-remove">x</a>
+   <ul class="osi-addons-lists liststyle-none">
+      %ADDON_LOOP%
+   </ul>
+</li>

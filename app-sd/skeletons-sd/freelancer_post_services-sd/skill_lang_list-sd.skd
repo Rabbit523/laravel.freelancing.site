@@ -1,0 +1,1 @@
+<li>%ITEM_NM% <a href="javascript:void(0);" data-id="%ITEM_ID%" data-item-type="%ITEM_TYPE%" class="delete_data remove-skill"></a></li>

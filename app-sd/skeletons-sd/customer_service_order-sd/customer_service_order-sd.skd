@@ -1,0 +1,479 @@
+<script type="text/javascript" src="{SITE_JS}URI.js"></script>
+<!-- Dashboard Navigation -->
+%SUB_HEADER_CONTENT%
+<!-- Dashboard Navigation End -->
+
+<section class="main-dashboard">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class=""  id="filters-search">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                            <div id="sidebarMenu" class="left-sidebar filters-search">
+                                <div class="panel panel-default theme-box" id="filters-search">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">{CSO_FILTERS}</h4>
+                                        <div class="panel-tools pull-right">
+                                            <a href="{SITE_URL}c/service-order">Clear <i class="fa fa-refresh" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="filter-box">
+                                            <h5 class="filter-title">{C_SO_ORDER_STATUS_LBL}</h5>
+                                            <div class="filter-body">
+                                                <ul class="filter-lists">
+                                                    <li>
+                                                     <input type="radio" id="test1" name="status" value="new_order" %NEWORDER_STATUS% />
+                                                     <label for="test1">
+                                                       {C_SO_NEW_ORDER_LBL}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test2" name="status" value="ask_refund" %ASK_FOR_REFUND% />
+                                                     <label for="test2">
+                                                       {C_SO_ASK_FOR_REFUND_LBL}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test3" name="status" value="closed" %CLOSED% />
+                                                     <label for="test3">
+                                                       {C_SO_CLOSED_LBL}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test4" name="status" value="in_progress" %IN_PROGRESS% />
+                                                     <label for="test4">
+                                                       {C_SO_IN_PROGRESS_LBL}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test6" name="status" value="payment_pending" %PENDING_STATUS%/>
+                                                     <label for="test6">
+                                                       {C_SO_PAYMENT_PENDING}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test7" name="status" value="completed" %COMP_STATUS%/>
+                                                     <label for="test7">
+                                                       {C_SO_COMPLETED_LBL}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test8" name="status" value="under_dispute" %UD_STATUS%/>
+                                                     <label for="test8">
+                                                       {C_SO_UNDER_DISPUTE_LBL}
+                                                     </label>
+                                                   </li>
+                                                   <li>
+                                                     <input type="radio" id="test9" name="status" value="dispute_solved" %DS_STATUS%/>
+                                                     <label for="test9">
+                                                       {C_SO_DISPUTE_IS_SOLVED}
+                                                     </label>
+                                                   </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-menu">
+                                <button><i class="fa fa-sliders" aria-hidden="true"></i>{C_SO_FILTER_LBL}</button>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-8">
+                            <div class="panel panel-default theme-box ctso-panel">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">{C_SO_SERVICE_ORDER_LBL}</h4>
+                                    <div class="panel-tools pull-right">
+                                        <form class="form form-inline" action="#" method="post">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" name="keyword" id="keyword" placeholder="Search for Service"/>
+                                                <span class="input-group-btn">
+                                                    <a href="javascript:void(0)" class="btn btn-primary search_record"><i class="fa fa-search"></i></a>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="cust-service-lists-wrap">
+                                        <ul class="cust-service-order-list" id="services_data">
+                                            %LOOP_DATA%
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="serviceRejectId" id="serviceRejectId">
+                              <input type="hidden" name="serviceId" id="serviceId">
+                              <div class="text-center %LOAD_CLASS%">
+                                  <div class="">
+                                  <a href="javascript:void(0)" class="btn btn-primary load_more_data %LOAD_CLASS%" data-page="1">{C_SO_VIEW_MORE_ORDER_LBL}</a>
+                                  </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php /* <section class="main-dashboard">
+    <div class="container">
+        <div class="profile"  id="filters-search">
+            <div class="featurette-job dash-receive service-order">
+                <div class="job-find">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                        </div>
+                        <div class="col-md-9 col-sm-8">
+                          <form class="form" action="#" method="post">
+                            <div class="input-group">
+                              <input type="text" class="form-control" name="keyword" id="keyword" placeholder="Search for Service"/>
+                              <span class="input-group-btn">
+                                <div class="theme-button">
+                                  <a href="javascript:void(0)" class="btn btn-block search_record"><i class="fa fa-search"></i></a>
+                                </div>
+                              </span>
+                            </div>
+                          </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub_featured">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                        </div>
+                        <div class="seperator" style="display:none">
+                        </div>
+                        <div class="col-md-9 col-sm-8">
+                            <div class="theme-form">
+                                <div class="job_feed_heading">
+                                    <h1 class="main-heading">
+                                        {C_SO_SERVICE_ORDER_LBL}
+                                    </h1>
+                                </div>
+                                <ul class="dash-job" id="services_data">
+                                    %LOOP_DATA%
+                                </ul>
+                            </div>
+                            <input type="hidden" name="serviceRejectId" id="serviceRejectId">
+                            <input type="hidden" name="serviceId" id="serviceId">
+                            <div class="view-more-button %LOAD_CLASS%">
+                                <div class="theme-button">
+                                <a href="javascript:void(0)" class="load_more_data %LOAD_CLASS%" data-page="1">{C_SO_VIEW_MORE_ORDER_LBL}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> */ ?>
+
+<div id="giveDeadline" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4 class="modal-title">{C_SO_DEADLINE_DETAIL_LBL}</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          <label>{C_SO_START_DATE_LBL} : </label>
+          <span class="start_date"></span>
+        </p>
+        <p>
+          <label>{C_SO_END_DATE_LBL} : </label>
+          <span class="end_date"></span>
+        </p>
+        <p>
+          <label>{C_SO_ACCEPTANCE_STATUS_LBL} : </label>
+          <span class="accStatus"></span>
+        </p>
+        <p class="%REJECT_HIDE%" id="rejectHide">
+          <label> {CSO_REASON_FOR_REJECT} :</label>
+          <span class="rjStatus"></span>
+        </p>
+        <p class="no-deadline hide"><span class="alert alert-info"><strong>{CSO_TIMELINE}</strong> {CSO_HAS_NOT_BEEN_DEFINED_YET}</span></p>
+      </div>
+      <div class="modal-footer">
+        <div class="divAcp">
+          <div class="footer-btn" data-dismiss="modal">
+            <a href="#" data-dismiss="modal" class="reject_Deadline btn btn-secondary">{C_SO_REJECT_LBL}</a>
+          </div>
+          <div class="footer-btn" data-dismiss="modal">
+            <a href="#" data-dismiss="modal" class="acceptService btn btn-primary">{C_SO_ACCEPT_LBL}</a>
+          </div>
+        </div>
+        <div class="divPen hide">
+          <div class="footer-btn" data-dismiss="modal">
+            <a href="#" class="btn btn-secondary" data-dismiss="modal">{C_SO_CLOSE_LBL}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="rejectDeadline" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4 class="modal-title">{C_SO_REJECTING_DEADLINE_LBL}</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          <label>{C_SO_REJECT_REASON_LBL} : </label>
+          <textarea class="form-control" name="rejectReason" id="rejectReason"></textarea>
+        </p>
+      </div>
+      <div class="modal-footer">
+                <!-- <div class="theme-button-default" data-dismiss="modal">
+                    <a href="#" data-dismiss="modal">{C_SO_CANCEL_LBL}</a>
+                  </div> -->
+                  <div class="footer-btn" data-dismiss="modal">
+                    <a href="#" class="btn btn-secondary" data-dismiss="modal" id="sbmRejectReason">Ok</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="refundDetail" class="modal fade" role="dialog" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">{C_SO_REFUND_DETAILS_LBL}</h4>
+                </div>
+                <div class="modal-body refundDetail">
+                  <p class="rfData"></p>
+                </div>
+      <!-- <div class="modal-footer">
+            <div class="theme-button-default" data-dismiss="modal">
+          <a href="javascript:void(0)" data-dismiss="modal">Close</a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+  var url = "{SITE_URL}ajaxCustomerServiceOrder";
+  $(document).ready(function(){
+   $('.datepicker').datepicker({ dateFormat: 'dd-mm-yy' });
+   $(document).on("click",".load_more_data",function()
+   {
+    var pageNo = $(this).attr("data-page");
+    var p_no = parseInt(pageNo)+1;
+    var status = $("input[name=status]:checked").val();
+    if(status == undefined)
+    {
+      status = '';
+    }
+    else
+    {
+      status = status;
+    }
+    $.post(url,{"action":"load_more_data","page_no":p_no,"status":status},function(data){
+      $("#services_data").append(data.content);
+      $(".load_more_data").addClass(data.btn);
+      $(".load_more_data").attr("data-page",data.pageno);
+    },'json');
+  });
+ });
+
+  $(document).on("click",".search_record",function(){
+    search_record(1);
+  });
+
+
+  function search_record(p_no)
+  {
+    var query_param = $("#filters-search input").serialize()+"&action=load_seach_data&page_no="+p_no;
+    var new_serialized_url = URI(url+'/?'+query_param),
+    curr_uri = URI(window.location.href),
+    new_serialized_params = new_serialized_url.search(true);
+
+    ((new_serialized_params.status!=undefined) ? curr_uri.setSearch("status", new_serialized_params.status) : curr_uri.removeSearch("status"));
+    history.pushState({}, null, '?'+curr_uri._parts.query);
+
+    ((new_serialized_params.keyword!='') ? curr_uri.setSearch("keyword", new_serialized_params.keyword) : curr_uri.removeSearch("keyword"));
+    history.pushState({}, null, '?'+curr_uri._parts.query);
+
+    $.ajax({
+      url: url,
+      type: 'POST',
+      dataType: 'json',
+      data: query_param,
+      success : function(data)
+      {
+        $('#services_data').html(data.content);
+        $(".load_more_data").addClass(data.btn);
+        $(".load_more_data").attr("data-page",data.pageno);
+      }
+    });
+  }
+
+  $(document).on('change', 'input[name=status]:radio', function(e) {
+   var pageNo = $(".load_more_data").attr("data-page");
+   search_record(pageNo);
+ });
+
+  $(document).on("click",".acceptService",function() {
+    id = $('#serviceRejectId').val();
+    $.post(url,{'action':'serviceAccept','id':id},function(data){
+      swal({
+        title: "Nice!",
+        text: "{CSO_YOU_HAVE_SUCCESSFULLY_ACCEPTED_DEADLINE}",
+        type: "success",
+        confirmButtonText: "Ok",
+        closeOnConfirm: true
+      });
+      setTimeout(function (){
+       location.reload();
+     }, 2000);
+    },'json');
+  });
+
+  $(document).on("click",".give_deadline",function(){
+    var a = $(this).attr("data-id");
+    var b = $(this).attr("data-userid");
+    $('#serviceRejectId').val(a);
+    $('#serviceId').val(b);
+    $("#giveDeadline").modal("show");
+
+
+    if($(".rjStatus").html()==''){
+      $(".rjStatus").prev().addClass('hide');
+    }
+
+
+
+    $.post(url,{"action":"deadline_load","id":a},function(data){
+     $(".start_date").html('');
+     $(".end_date").html('');
+     $(".accStatus").html('');
+
+     $(".start_date").closest('p').addClass('hide');
+     $(".end_date").closest('p').addClass('hide');
+     $(".accStatus").closest('p').addClass('hide');
+     $(".no-deadline").addClass('hide');
+     $("#rejectHide").addClass('hide');
+     $("#rejectHide").find('label').addClass('hide');
+
+
+     if(data.startDate!=''){
+      $(".start_date").html(data.startDate);
+      $(".start_date").closest('p').removeClass('hide');
+    }
+    if(data.endDate!=''){
+      $(".end_date").html(data.endDate);
+      $(".end_date").closest('p').removeClass('hide');
+    }
+    if(data.accStatus!="no"){
+      $(".accStatus").html(data.accStatus);
+      $(".accStatus").closest('p').removeClass('hide');
+    }
+      // status = $("#rejectValue").val();
+      if(data.btnAcc == "1"){
+        $(".divAcp").addClass("hide");
+        $(".divPen").removeClass("hide");
+        $("#rejectHide").addClass("hide");
+      } else if(data.btnAcc == "2"){
+        $(".divPen").addClass("hide");
+        $(".divAcp").removeClass("hide");
+        $("#rejectHide").addClass("hide");
+      } else if(data.btnAcc == "3"){
+        $(".divAcp").addClass("hide");
+        $(".divPen").removeClass("hide");
+        $(".rjStatus").html(data.rejectReason);
+        $("#rejectHide").removeClass('hide');
+        $("#rejectHide").find('label').removeClass('hide');
+      } else if(data.btnAcc == "4"){
+        $(".divAcp").addClass("hide");
+        $(".divPen").removeClass("hide");
+        $(".no-deadline").removeClass("hide");
+        $("#rejectHide").addClass("hide");
+
+      }
+    },'json');
+  });
+
+  $(document).on("click",".reject_Deadline",function() {
+    $("#rejectDeadline").modal("show");
+
+  });
+
+  $(document).on("click","#sbmRejectReason",function() {
+    reason = $('#rejectReason').val();
+    id = $('#serviceRejectId').val();
+    sownerid = $('#serviceId').val();
+    addOverlay();
+    $.post(url,{"action":"reject_reason","id":id,"reason":reason,"sownerid":sownerid},function(data){
+      if(data['status'] == "1"){
+        $("#rejectHide").removeClass("hide");
+        $(".rjStatus").html(data['rejectReason']);
+        toastr['success']('{C_SO_REJECT_REASON_SUCCESS_LBL}');
+      } else {
+        toastr['error']("{C_SO_REJECT_REASON_ALERT_LBL}");
+      }
+      removeOverlay();
+    },'json');
+  });
+
+
+
+  /*dedaline detail */
+
+  $(document).on("click",".deadline_detail",function(){
+    $("#deadlineDetail").modal("show");
+    var id = $(this).attr("data-id");
+    $(".deadline_detail_table").attr("id","table_"+id);
+    $("#orderId").val(id);
+    addOverlay();
+    $.post(url,{"action":"deadline_detail","id":id},function(data){
+      $("#table_"+id).html(data.content);
+      (data.btn!='') ? $(".modal-footer").addClass(data.btn) : $(".modal-footer").removeClass("hide");
+      removeOverlay();
+    },'json');
+  });
+
+  $(document).on("click",".refund_details",function(){
+    $("#refundDetail").modal("show");
+    var id = $(this).parent().attr("data-id");
+    addOverlay();
+    $.post(url,{"action":"refund_detail","id":id},function(data){
+
+      $('.rfData').html(data['content']);
+      removeOverlay();
+    },'json');
+
+  });
+
+  $(document).on("click",".ask_for_refund",function(){
+    var id = $(this).attr("data-id");
+    swal({
+      title: "{C_SO_ARE_YOU_SURE_LBL}",
+      text: "{C_REFUND_CONFIRMATION_MSG_LBL}",
+      type: "info",
+      showCancelButton: true,
+      confirmButtonClass: 'btn-primary',
+      confirmButtonText: 'Yes'
+    },
+
+    function (inputValue) {
+      $.post(url,{"action":"ask_refund","f_id":id},function(data){
+        if(data['status'] == "true"){
+          toastr['success']('{C_SO_REQUEST_SUCCESSFULL_LBL}');
+        }
+      },'json');
+    });
+  });
+</script>

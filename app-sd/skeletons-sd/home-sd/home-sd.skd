@@ -1,0 +1,591 @@
+<!-- start mockup section -->
+<!-- <section class="above-fold-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-7">
+            	<div class="section-desc">
+                	<div class="left-section">
+                		<h1>%SEARCH_TIITLE%</h1>
+                		<h4>%SEARCH_DESCRIPTION%</h4>
+                		<form class="form" action="#" method="post">
+                			<div class="form-group">
+	                			<input type="text" class="form-control" placeholder="Find freelancers, Jobs or Services">
+	                			<button class="btn btn-system">
+	                				<i class="fa fa-search"></i>
+	                			</button>
+                			</div>
+                		</form>
+                	</div>
+        		</div>
+            </div>
+            <div class="col-md-6 col-sm-5">
+            	<div class="mockup">
+            		<img src="{SITE_IMG}mockup.png" alt="">
+            	</div>
+            </div>
+        </div>
+    </div>
+    <div class="above-overlay"></div>
+</section> -->
+%TOP_HOMEPAGE_SECTION%
+<!-- end mockup section -->
+
+<!-- start service section -->
+<section class="service-section common-section">
+	<div class="container">
+		<h2 class="main-title">
+			{EXPLORE_THE_CATEGORIES}
+		</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="service-mcat-wrap">
+					<div class="row">
+						%HOME_CATEGORY_LIST%
+						<div class="col-md-2 col-sm-4">
+							<div class="service-box yellow">
+								<a href="{SITE_URL}search/sub-category/1">
+									<div class="service-img">
+										<img src="{SITE_IMG}icon/yellow.png" alt="">
+									</div>
+									<h3>{SEE_ALL_CATEGORIES_LABEL}</h3>
+									<!-- <span class="arrow">
+										<i class="fa fa-angle-down"></i>
+									</span> -->
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end service section -->
+
+<!-- start guideline section -->
+<section class="guideline-section common-section work-service-section">
+	<div class="container">
+		<h2 class="main-title">
+			<? php /* {SAWLII_GUIDELINES} */ ?>
+			Pickgeeks Guidline
+		</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="guidline-bg-wrap">	
+					<div class="bg-shape-wrap">
+		                <div class="bg-shape"></div>
+		            </div>
+		        </div>
+	            <!-- <div class="services-blocks">
+	                <ul class="wws-items clearfix">
+	                    <li class="service-left">
+	                        <div class="media media-middle">
+	                            <div class="media-left media-middle">
+	                                <div class="guidline-img"><img src="http://192.168.5.11/pickgeeks_sawlii/dspaces-sd/howit-sd/cab4fe73cdf5ed9dd89e7a715a2965a2.png" alt="" /></div>
+	                            </div>
+	                            <div class="media-body media-middle">
+		                            <div class="service-caption">	
+		                            	<div class="service-heading">Find People</div>
+		                                <div class="service-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu laoreet nulla.</div>
+		                            </div>
+	                            </div>
+	                        </div>
+	                    </li>
+	                    <li class="service-left">
+	                        <div class="media media-middle">
+	                        	<div class="media-left media-middle">
+	                                <div class="guidline-img"><img src="http://192.168.5.11/pickgeeks_sawlii/dspaces-sd/howit-sd/434c4c2e9593156716fd03f679158cbc.png" alt="" /></div>
+	                            </div>
+	                        	<div class="media-body media-middle">
+	                            	<div class="service-caption">	
+		                            	<div class="service-heading">Hire people</div>
+		                                <div class="service-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu laoreet nulla.</div>
+		                            </div>
+	                            </div>
+	                        </div>
+	                    </li>
+	                    <li class="service-left">
+	                        <div class="media media-middle">
+	                            <div class="media-left media-middle">
+	                                <div class="guidline-img"><img src="http://192.168.5.11/pickgeeks_sawlii/dspaces-sd/howit-sd/c17e10da20f7e55618859e2f49670c70.png" alt="" /></div>
+	                            </div>
+	                            <div class="media-body media-middle">
+	                            	<div class="service-caption">	
+		                            	<div class="service-heading">Work with people</div>
+		                                <div class="service-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu laoreet nulla.</div>
+		                            </div>
+	                            </div>
+	                        </div>
+	                    </li>
+	                    <li class="service-left">
+	                        <div class="media media-middle">
+	                       		<div class="media-left media-middle">
+	                                <div class="guidline-img"><img src="http://192.168.5.11/pickgeeks_sawlii/dspaces-sd/howit-sd/2ffd1d97a704c025570e2aa779e3b891.png" alt="" /></div>
+	                            </div>
+	                       		<div class="media-body media-middle">
+	                            	<div class="service-caption">	
+		                            	<div class="service-heading">Pay after work</div>
+		                                <div class="service-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu laoreet nulla.</div>
+		                            </div>
+	                            </div>
+	                        </div>
+	                    </li>
+	                </ul>
+	            </div> -->
+
+	            <div class="services-blocks">
+	                <ul class="wws-items clearfix">
+	                   %GUIDELINES%
+	                </ul>
+	            </div>
+
+				<?php /* <div class="howitwork-wrap">
+					<ul class="howitwork-items">
+						%GUIDELINES%
+					</ul>
+				</div> */ ?>
+			</div>
+		</div>
+	</div>
+	<div class="above-overlay left"></div>
+</section>
+<!-- end guideline section -->
+
+<!-- start way to work section -->
+<section class="workjob-section common-section">
+	<div class="container">
+		<h2 class="main-title">
+			{WAY_TO_WORK_ON_A_JOB}
+		</h2>
+
+		<div class="row">
+            <div class="col-md-12">
+                <div class="way-to-work-wrap">
+                    <ul class="wtw-items">
+                       %WORK_ON_JOB%
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+		<? php /* <div class="row">
+			%WORK_ON_JOB%
+		</div> */ ?>
+	</div>
+</section>
+<!-- end way to work section -->
+
+<!-- start way to service section -->
+<section class="workservice-section common-section">
+	<div class="container">
+		<h2 class="main-title">
+			{WAY_TO_WORK_ON_A_SERVICE}
+		</h2>
+		<div class="row">
+			<div class="col-md-5 col-sm-4 col-xs-12">
+				<div class="service-mockup">
+					<img src="{SITE_IMG}mockup-s.png" alt="">
+				</div>
+			</div>
+
+			<div class="col-md-7 col-sm-8 col-xs-12">
+				<div class="work-service-wrap">
+					<ul>
+						%WORK_ON_SERVICE%
+					</ul>
+				</div>
+			</div>
+
+			<?php /* <div class="col-md-8 col-sm-8 col-xs-12">
+				<ul>
+					%WORK_ON_SERVICE%
+				</ul>
+			</div> */ ?>
+		</div>
+	</div>
+	<div class="above-overlay right"></div>
+</section>
+<!-- end way to service section -->
+
+<!-- start select section -->
+<section class="select-section">
+	<div class="main-select-box">
+		<div class="select-box left-box">
+			<div class="text">
+				<h3>%HIRE_FREELANCER%</h3>
+				<p>%HIRE_FREELANCER_DESC%</p>
+				<a class="btn btn-system" href="{SITE_URL}Signup/Hire">{HIRE_FREELANCER}</a>
+			</div>
+		</div>
+		<div class="select-box right-box clearfix">
+			<div class="text">
+				<h3>%ONLINE_WORK%</h3>
+				<p>%ONLINE_WORK_DESC%</p>
+				<a href="{SITE_URL}Signup/Work" class="btn btn-system">{FIND_WORK}</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end select section -->
+
+<!-- start app section -->
+<section class="app-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 col-sm-9">
+				<div class="app-section-wrap">	
+					<h4>%TAG_LINE%</h4>
+					<h2>%DOWNLOAD_APP_TITLE%</h2>
+					<p>%DOWNLOAD_APP_DESC%</p>
+					<div class="app-button">
+						<a href="javascript:void(0);">
+							<img src="{SITE_IMG}icon/android.png" alt="">
+						</a>
+					</div>
+					<div class="app-button">
+						<a href="javascript:void(0);">
+							<img src="{SITE_IMG}icon/apple.png" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5 col-sm-3">
+				<div class="app-mockup">
+					<img src="{SITE_IMG}app-section.png" alt="">					 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end app section -->
+
+<!-- start top skills section -->
+<section class="top-skills-section common-section">
+	<div class="container">
+		<h2 class="main-title">
+			{TOP_SKILLS}
+		</h2>
+		<ul class="clearfix">
+			%TOP_SKILLS%
+		</ul>
+	</div>
+</section>
+<!-- end top skills section -->
+
+<!-- ====================================================================== -->
+
+
+<!--hire someone perfect-->
+<!-- <section class="category-section">
+	<div class="container">
+		<h1>{HIRE_SOMEONE_PERFECT}</h1>
+		<div class="row">
+			%HOME_CATEGORY_LIST%
+			<div class="col-md-2 col-sm-3">
+				<a href="{SITE_URL}search/category/">
+			        <div class="category-item">
+			            <div class="category-icon">
+			                <img src="{SITE_IMG}icon/see-all.png" title="{SEE_ALL_CATEGORIES_LABEL}"/>
+			            </div>
+			            <p>{SEE_ALL_CATEGORIES_LABEL}</p>
+			        </div>
+			    </a>
+			</div>
+		</div>
+	</div>
+</section> -->
+<!--hire someone perfect-->
+<!--start how it works section-->
+<!-- <section class="works-section %HOW_IT_WORKS_CLASS%">
+	<div class="container">
+		<h2>{HOW_IT_WORKS}</h2>
+		%HOW_IT_WORKS%
+	</div>
+</section> -->
+<!--end how it works section-->
+
+<!-- start work-job-section -->
+
+<!-- <section class="work-job-section">
+	<div class="container">
+		<h2>{WAY_TO_WORK_ON_A_JOB}</h2>
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<div class="media-main">
+					<div class="media">
+					    <div class="media-left">
+					      	<div class="work-no">
+				 				<span>1</span>
+				 			</div>
+					    </div>
+					    <div class="media-body">
+					      <p>{CUSTOMER_POSTS_A_JOB}</p>
+					    </div>
+					</div>
+			 	</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="media-main">
+				 	<div class="media">
+				 		<div class="media-left">
+				 			<div class="work-no">
+				 				<span>2</span>
+				 			</div>
+				 		</div>
+				 		<div class="media-body">
+				 			 <p>{FREELANCER_SEARCHES_A_JOB}</p>
+				 		</div>
+				 	</div>
+			 	</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="media-main">
+				 	<div class="media">
+				 		<div class="media-left">
+				 			<div class="work-no">
+				 				<span>3</span>
+				 			</div>
+				 		</div>
+				 		<div class="media-body">
+				 			 <p>{PLACE_A_BID_AND_SUBMIT_PROPOSAL}</p>
+				 		</div>
+				 	</div>
+			 	</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="media-main">
+				 	<div class="media">
+				 		<div class="media-left">
+				 			<div class="work-no">
+				 				<span>4</span>
+				 			</div>
+				 		</div>
+				 		<div class="media-body">
+				 			 <p>{CUSTOMER_WILL_CHECK_BIDS_FROM_MY_JOBS}</p>
+				 		</div>
+				 	</div>
+			 	</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="media-main">
+				 	<div class="media">
+				 		<div class="media-left">
+				 			<div class="work-no">
+				 				<span>5</span>
+				 			</div>
+				 		</div>
+				 		<div class="media-body">
+				 			 <p>{CREATE_MULTIPLE_MILESTONES_FROM_WORKROOM}</p>
+				 		</div>
+				 	</div>
+			 	</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="media-main">
+				 	<div class="media">
+				 		<div class="media-left">
+				 			<div class="work-no">
+				 				<span>6</span>
+				 			</div>
+				 		</div>
+				 		<div class="media-body">
+				 			 <p>{CAN_ACCEPT_MILESTONES_FROM_WORKROOM}</p>
+				 		</div>
+				 	</div>
+			 	</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="media-main">
+				 	<div class="media">
+				 		<div class="media-left">
+				 			<div class="work-no">
+				 				<span>7</span>
+				 			</div>
+				 		</div>
+				 		<div class="media-body">
+				 			 <p>{ONCE_CUSTOMER_HIRES_FREELANCER_FROM_PROPOSALS}</p>
+				 		</div>
+				 	</div>
+			 	</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="media-main">
+				 	<div class="media">
+				 		<div class="media-left">
+				 			<div class="work-no">
+				 				<span>8</span>
+				 			</div>
+				 		</div>
+				 		<div class="media-body">
+				 			 <p>{GET_PAID_AND_LEAVE_A_REVIEW}</p>
+				 		</div>
+				 	</div>
+			 	</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+<!-- end work-job-section -->
+
+<!-- start work-service-section -->
+<!-- <section class="ps-timeline-sec work-service-section">
+    <div class="container">
+    	<h2>{WAY_TO_WORK_ON_A_SERVICE}</h2>
+        <ol class="ps-timeline">
+            <li>
+                <div class="img-handler-top">
+                	<div class="section-img">
+                    	<img src="{SITE_IMG}icon/browse.png">
+                	</div>
+                </div>
+                <div class="ps-bot">
+                    <p>{CUSTOMER_BROWSE_FOR_SERVICES}</p>
+                </div>
+                <span class="ps-sp-top"></span>
+            </li>
+            <li>
+                <div class="img-handler-bot">
+                	<div class="section-img">
+                    	<img src="{SITE_IMG}icon/schedule.png">
+                    </div>
+                </div>
+                <div class="ps-top">
+                    <p>{FREELANCER_WOULD_SPECIFY}</p>
+                </div>
+                <span class="ps-sp-bot"></span>
+            </li>
+            <li>
+                <div class="img-handler-top">
+                	<div class="section-img">
+                    	<img src="{SITE_IMG}icon/accept.png">
+                    </div>
+                </div>
+                <div class="ps-bot">
+                   {CUSTOMER_WILL_ACCEPT_IT}
+                </div>
+                <span class="ps-sp-top"></span>
+            </li>
+            <li>
+                <div class="img-handler-bot">
+                	<div class="section-img">
+                    	<img src="{SITE_IMG}icon/analytics.png">
+                    </div>
+                </div>
+                <div class="ps-top">
+                    <p>{FREELANCER_CAN_START_SERVICE_FROM_SERVICE_ORDERS}</p>
+                </div>
+                <span class="ps-sp-bot"></span>
+            </li>
+            <li>
+                <div class="img-handler-top">
+                	<div class="section-img">
+                    	<img src="{SITE_IMG}icon/freelancer.png">
+                    </div>
+                </div>
+                <div class="ps-bot">
+                    <p>{FREELANCER_CAN_SUBMIT_WORK_FROM_WORKROOM}</p>
+                </div>
+                <span class="ps-sp-top"></span>
+            </li>
+            <li>
+                <div class="img-handler-bot">
+                	<div class="section-img">
+                    	<img src="{SITE_IMG}icon/thumbs-up.png">
+                    </div>
+                </div>
+                <div class="ps-top">
+                    <p>{CUSTOMER_CAN_REVIEW_THE_SERVICE_AVAILED}</p>
+                </div>
+                <span class="ps-sp-bot"></span>
+            </li>
+        </ol>
+    </div>
+</section> -->
+<!-- end work-service-section -->
+
+<!--start browse top skills-->
+<!-- <section class="browse-skills %SKILL_LIST_CLASS%">
+	<div class="container">
+		<h2>{TOP_SKILLS}</h2>
+		<div class="row">
+			%SKILL_LIST%
+		</div>
+	</div>
+</section> -->
+<!--end browse top skills-->
+<!--start newsletter-->
+<!-- <section class="newsletter-section">
+	<div class="container">
+		<h2>{SUBSCRIBE_TO_NEWSLETTER}</h2>
+		<p>{NEWSLETTER_DESC}</p>
+		<form class="form" action="#" method="post" name="newsletterFrm" id="newsletterFrm">
+			<div class="row">
+				<div class="col-md-7 col-sm-8">
+					<div class="form-group">
+						<div class = "input-group">
+			               <input class="form-control input-lg" name="email" id="email" placeholder="{NEWSLETTER_EMAIL_PLACE_HOLDER}"/>
+			               <span class = "input-group-btn">
+			                  <input type="hidden" name="action" id="action" value="subscribeUser">
+							  <button type="submit" name="newsletterSubscriber" id="newsletterSubscriber" class="btn btn-primary btn-lg btn-block"><span class="large-icon">{SUBSCRIBE_BTN_CAPTION}</span><span class="small-icon"><i class="fa fa-paper-plane"></i></span></button>
+			               </span>
+			            </div>
+					</div>
+					
+					<p class="privacy">{NEWSLETTER_BOTTOM_LINE_DESC}</p>
+				</div>
+			</div>
+		</form>
+	</div>
+</section> -->
+<!--end newsletter-->
+
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$(document).on("click",".save_service",function(){
+			$(this).children().find('i').removeClass("fa fa-heart-o").addClass("fa fa-heart");
+			var id = $(this).attr("data-id");
+			$.post("{SITE_URL}ajaxServiceSearch",{"action":"saveServices","id":id},function(data){
+				toastr[data.type](data.msg);
+			},'json');
+		});  
+
+});
+
+	$(document).on('input','#searchKeyword',function(){
+		var str = $(this).val();
+		if($.trim(str) != ""){
+			$.ajax({
+				url: "{SITE_URL}ajaxFreelancerSearch",
+				cache: false,
+				async : true,
+				type: "GET",
+				dataType: "json",
+				data: { action:"get_typehead", query: $.trim(str),type : 'home' },
+				success: function(result){
+					var strdata = '';
+					$.each(result,function(i,data){
+						if(data.type == 'title'){
+							strdata += '<div class="auto_complete_item auto_complete_title"  data-url="#">'+data.name+'</div>';
+						}else if(data.type == 'subtitle'){
+							strdata += '<div class="auto_complete_item auto_complete_subtitle"  data-url="{SITE_URL}'+data.slug+'">'+data.name+'</div>';
+						}else{
+							strdata += '<div class="auto_complete_item auto_complete_record"  data-url="{SITE_URL}'+data.slug+'">'+data.name+'</div>';
+						}
+					});
+					//console.log(strdata);
+					$('.auto_complete_results').html(strdata);
+					$('.auto_complete_results').css('display','block');
+					$(".auto_complete_results").mCustomScrollbar();
+				}
+			});
+		}else{
+			$('.auto_complete_results').css('display','none');
+			$('.auto_complete_results').html('');
+		}
+	});	
+	$(document).on('click','.auto_complete_subtitle, .auto_complete_record',function(e){
+		window.location.href = $(this).attr('data-url');
+	});
+</script>

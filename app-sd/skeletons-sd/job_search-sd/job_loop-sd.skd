@@ -1,0 +1,125 @@
+<li class="cm-job-item">
+   <div class="cmj-title-wrap">
+      <h4 class="cmj-title">
+         <a href="%JOB_URL%" class="%JOB_CLASS%" %JOB_URL_TARGET% data-msg="%JOB_MSG%">%JOB_TITLE%</a>
+      </h4>
+      <span class="cmj-deadline"> Ending on %BIDDING_DEADLINE%</span>
+   </div>
+   <div class="like active %SAVE_CLASS%">
+      <a href="javascript:void(0)" class="add_favourite" data-id="%JOB_ID%" title="Save Job"><i class="%FAV_CLASS%"></i></a>
+   </div>
+   <ul class="cmj-breadcrumb">
+      <li>%CATEGORY%</li>
+      <li>%SUB_CATEGORY%</li>
+   </ul>
+   <div class="cmj-budget">{FMJ_EST_BUDGET} : <div class="amount-wrap">%BUDGET%</div></div>
+   <div class="cmj-details">%DESC%</div>
+   <ul class="cmj-skills clearfix">
+        %SKILLS%
+   </ul>
+   <ul class="cmj-status clearfix">
+     <li>%JOB_LVL%</li>
+     <li>{POSTED_LABEL} : <span>%POSTED_TIME%</span></li>
+     <li>{TOTAL_NO_OF_APPLICANTS} : <span>%APPLICANTS%</span></li>
+     <li>spent : <span class="amount-wrap">%SPENT_AMOUNT%</span></li>
+   </ul>
+   <div class="cmj-footer">
+      <div class="cmj-action-wrap clearfix">
+         <ul class="cmj-post-status">
+            <li>%CUSTOMER_NAME%</li>
+            <li>
+               <div class="star-ratings-sprite">
+                  <span style="width:%CUSTOMER_RATING%%" class="star-ratings-sprite-rating"></span>
+               </div>
+            </li>
+            <li>
+               <i class="fa fa-map-marker" aria-hidden="true"></i> %LOCATION%
+            </li>
+         </ul>
+         <ul class="cmj-post-action pull-right">
+             <li class="featured">Featured <span><i class="fa fa-check-square"></i></span></li>
+         </ul>
+      </div>
+   </div>
+</li>
+
+<?php /*
+<li class="card-block">
+   <div class="row %FEATURED_LBL_CLASS%">
+      <div class="col-md-12">
+         <div class="featured">
+            <span>
+            {FMS_FEATURED}
+            </span>
+         </div>
+      </div>
+   </div>
+   <h4 class="card-title">
+      <a href="{SITE_URL}job/%JOB_SLUG%" target="_blank" >%JOB_TITLE%</a>
+      <div class="like active">
+         <a href="#"></a>
+      </div>
+   </h4>
+   <div class="like active %SAVE_CLASS%">
+      <a href="javascript:void(0)" class="add_favourite" data-id="%JOB_ID%" title="Save Job"><i class="%FAV_CLASS%"></i></a>
+   </div>
+   <div class="category_subcategory">
+      <span>
+      %CATEGORY%
+      <i class="fa fa-angle-right"></i>
+      %SUB_CATEGORY%
+      </span>
+   </div>
+   <ul class="project-desc list-inline">
+      <li>
+         %JOB_LVL%
+      </li>
+      <li>
+         {FMJ_EST_BUDGET} : %BUDGET%
+      </li>
+      <li>
+         {POSTED_LABEL} %POSTED_TIME%
+      </li>
+   </ul>
+   <p>
+      %DESC%
+   </p>
+   <ul class="recevied_addons">
+      <li>
+         <label>{TOTAL_NO_OF_APPLICANTS} : </label>
+         <span>%APPLICANTS%</span>
+      </li>
+      <li>
+         <label>{BIDDING_DEADLINE_LBL} : </label>
+         <span>%BIDDING_DEADLINE%</span>
+      </li>
+   </ul>
+   <div class="services bottom-line">
+      <ul class="list-inline">
+         %SKILLS%
+      </ul>
+   </div>
+   <div class="PickGeeks_detail">
+      <ul>
+         <li>
+            <h5>
+               %CUSTOMER_NAME%
+            </h5>
+         </li>
+         <li>
+            <div class="star-ratings-sprite">
+               <span style="width:%CUSTOMER_RATING%%" class="star-ratings-sprite-rating" >
+               </span>
+            </div>
+         </li>
+         <li>
+            %SPENT_AMOUNT% spent
+         </li>
+         <li>
+            <i class="fa fa-map-marker" aria-hidden="true">
+            </i>
+            %LOCATION%
+         </li>
+      </ul>
+   </div>
+</li> */ ?>

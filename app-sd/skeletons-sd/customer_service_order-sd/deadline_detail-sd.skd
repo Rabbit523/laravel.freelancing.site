@@ -1,0 +1,42 @@
+<tbody>
+  <tr>
+    <th>
+      {CSO_START_DATE}
+    </th>
+    <td>
+      %START_DATE%
+    </td>
+  </tr>
+  <tr>
+    <th>
+      {CSO_END_DATE}
+    </th>
+    <td>
+      %END_DATE%
+    </td>
+  </tr>
+  <tr>
+    <th>
+      {CSO_ACCEPTANCE_STATUS}
+    </th>
+    <td>
+      %STATUS%
+    </td>
+  </tr>
+  <tr class="%MESSAGE_CLASS%">
+    <th>
+      {CSO_MESSAGE}
+    </th>
+    <td>
+      %MESSAGE%
+    </td>
+  </tr>
+  <tr class="%REPLY_BTN%">
+  <th>
+  {CSO_REPLY}
+  </th>
+  <td>
+    <textarea name="reply" id="reply" class="form-control"></textarea>
+  </td>
+  </tr>
+</tbody>

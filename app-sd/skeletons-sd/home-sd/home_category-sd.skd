@@ -1,0 +1,23 @@
+<div class="col-md-2 col-sm-4">
+    <div class="service-box %CAT_CLASS%">
+      	<a href="%LINK%">
+        	<div class="service-img">
+          		<img src="%IMG%" title="%CATEGORY_NAME%">
+        	</div>
+        	<h3>%CATEGORY_NAME%</h3>
+        	<?php /* <span class="arrow">
+          		<i class="fa fa-angle-down"></i>
+        	</span> */ ?>
+      	</a>
+    </div>
+</div>
+<div class="col-md-2 col-sm-3" style="display: none;">
+    <a href="%LINK%">
+        <div class="category-item">
+            <div class="category-icon">
+                <img src="%IMG%" title="%CATEGORY_NAME%"/>
+            </div>
+            <p>%CATEGORY_NAME%</p>
+        </div>
+    </a>
+</div>

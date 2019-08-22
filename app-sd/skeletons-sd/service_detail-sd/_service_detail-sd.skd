@@ -1,0 +1,692 @@
+<section class="detail_page">
+   <div class="container">
+      <form method="post" name="serviceFrm" id="serviceFrm">
+         <div class="profile">
+            <div class="featurette-job service-detail-page job-detail-section">
+               <div class="sub_featured">
+                  <div class="row">
+                     <div class="col-md-9 col-sm-8">
+                        <div class="responsive_featured %FEATURED_TAG_CLASS%">
+                           <div class="service_sidebar">
+                              <div class="featured">
+                                 <span>
+                                    {FEATURED_LBL}
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="service_info">
+                           <h1>
+                              %SERVICE_TITLE%
+                           </h1>
+                           <div class="group-info-mobile">
+                              <div class="service_price">
+                                 <span class="service_orignal_price">{CURRENCY_SYMBOL}%SERVICE_PRICE%</span>
+                              </div>
+                              <div class="form-group">
+                                 <div class="sp-quantity">
+                                   <div class="sp-minus"> <a class="ddd" href="#">-</a>
+                                   </div>
+                                   <div class="sp-input">
+                                     <input name="quantity" id="quantity" data-price='100' min=1 max=10 maxlength="3" class="quntity-input" value='1'>
+                                  </div>
+                                  <div class="sp-plus"> <a class="ddd" href="#">+</a>
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="buy_now %BUY_NOW_BTN_CLASS% %DELETED_CLASS%">
+                              <input type="hidden" name="action" id="action" value="submitData">
+                              <button type="submit" name="submitData" id="submitData" class="btn btn-system btn-block">{BUY_NOW_LBL}</button>
+                           </div>
+                           <ul class="extra-info">
+                              <li>
+                                 <p><i class="fa fa-paper-plane"></i></p>
+                                 {DELIVERY_IN_LBL} <span >%NO_DELIVERY% day</span>
+                              </li>
+                              <li>
+                                 <p><i class="fa fa-eye"></i></p>
+                                 {VIEWS_LBL} <span>%NO_VIEWS%</span>
+                              </li>
+                           </ul>
+                           <ul class="sale-fav">
+                              <li>
+                                 <a href="javascript:void(0);">
+                                    <i class="fa fa-heart"></i>
+                                    <span>27</span>
+                                 </a>
+                                 <a href="javascript:void(0);" data-toggle="modal" data-target="#report_service">
+                                    <i class="fa fa-flag"></i>
+                                    <span>Report</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 Sales
+                                 <span>20</span>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-12 col-sm-10 col-xs-11">
+                              <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:600px;height:300px;overflow:hidden;visibility:hidden;">
+                                 <!-- Loading Screen -->
+                                 <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+                                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    </div>
+                                    <div style="position:absolute;display:block;background:url('images/slider/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;">
+                                    </div>
+                                 </div>
+                                 <div class="slider_pg" data-u="slides" style="cursor:pointer;position:relative;top:0px;left:0px;width:600px;height:300px;overflow:hidden;">
+                                    %SLIDER_IMG%
+                                 </div>
+                                 <!-- Thumbnail Navigator -->
+                                 <div data-u="thumbnavigator" class="jssort03" style="position:absolute;left:0px;bottom:0px;width:600px;height:60px;" data-autocenter="1">
+                                    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:#000;filter:alpha(opacity=30.0);opacity:0.5;">
+                                    </div>
+                                    <!-- Thumbnail Item Skin Begin -->
+                                    <div data-u="slides" style="cursor: pointer;">
+                                       <div data-u="prototype" class="p">
+                                          <div class="w">
+                                             <div data-u="thumbnailtemplate" class="t">
+                                             </div>
+                                          </div>
+                                          <div class="c">
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!-- Thumbnail Item Skin End -->
+                                 </div>
+                                 <!-- Arrow Navigator -->
+                                 <span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2">
+                                 </span>
+                                 <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2">
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-12 col-sm-12">
+                              <div class="group-service">
+                                 <div class="service_category">
+                                    <span>
+                                       %CATEGORY% <i class="fa fa-angle-right"></i> %SUB_CATEGORY%
+                                    </span>
+                                 </div>
+                                 <div class="service_desc">
+                                    <div class="desc">
+                                       <h4>
+                                          {DETAILS_LBL}
+                                       </h4>
+                                       <p>
+                                        %DESC%
+                                     </p>
+                                  </div>
+                                  <div class="addons-detail %ADDON_CLASS%">
+                                    <h4>
+                                       {ADDONS_LBL}
+                                    </h4>
+                                    <div class="service-adon">
+                                       %ADDON_DETAIL%
+                                    </div>
+                                 </div>
+                                 <h4>
+                                    {MORE_INFO_LBL}
+                                 </h4>
+                                 <p>
+                                    %SERVICE_REQ_DETAIL%
+                                 </p>
+                              </div>
+                                    <!-- <ul class="list-inline">
+                                       <div class="row">
+                                          <div class="col-md-6 col-sm-6">
+                                             <li class="media">
+                                                <div class="pull-left">
+                                                   <i class="fa fa-paper-plane" aria-hidden="true">
+                                                   </i>
+                                                </div>
+                                                <div class="media-body">
+                                                   {DELIVERY_IN_LBL} <span>%NO_DELIVERY% days</span>
+                                                </div>
+                                             </li>
+                                          </div>
+                                          <div class="col-md-6 col-sm-6">
+                                             <li class="media">
+                                                <div class="pull-left">
+                                                   <i class="fa fa-eye" aria-hidden="true">
+                                                   </i>
+                                                </div>
+                                                <div class="media-body">
+                                                   {VIEWS_LBL} :
+                                                   <span>
+                                                   %NO_VIEWS%
+                                                   </span>
+                                                </div>
+                                             </li>
+                                          </div>
+                                       </div>
+                                    </ul> -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-3 col-sm-4">
+                        <div class="service_sidebar ">
+                           <div class="featured %FEATURED_TAG_CLASS%">
+                              <span>
+                                 {FEATURED_LBL}
+                              </span>
+                           </div>
+                           <div class="group-info">
+                              <div class="service_price">
+                               <span class="service_orignal_price">{CURRENCY_SYMBOL}%SERVICE_PRICE%</span>
+                            </div>
+                            <div class="form-group">
+                              <div class="sp-quantity">
+                                <div class="sp-minus"> <a class="ddd" href="#">-</a>
+                                </div>
+                                <div class="sp-input">
+                                  <input name="quantity" id="quantity" min=1 max=10 maxlength="3" class="quntity-input" value='1'>
+                               </div>
+                               <div class="sp-plus"> <a class="ddd" href="#">+</a>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="buy_now %BUY_NOW_BTN_CLASS% %DELETED_CLASS%">
+                           <input type="hidden" name="action" id="action" value="submitData">
+                           <button type="submit" name="submitData" id="submitData" class="btn btn-system btn-block">{BUY_NOW_LBL}</button>
+                        </div>
+                        <ul class="extra-info">
+                           <li>
+                              <p><i class="fa fa-paper-plane"></i></p>
+                              {DELIVERY_IN_LBL} <span>%NO_DELIVERY% day</span>
+                           </li>
+                           <li>
+                              <p><i class="fa fa-eye"></i></p>
+                              {VIEWS_LBL} <span>%NO_VIEWS%</span>
+                           </li>
+                        </ul>
+                        <ul class="sale-fav">
+                           <li>
+                              <a href="javascript:void(0);">
+                                 <i class="fa fa-heart"></i>
+                                 <span>27</span>
+                              </a>
+                              <a href="javascript:void(0);" data-toggle="modal" data-target="#report_service">
+                                 <i class="fa fa-flag"></i>
+                                 <span>Report</span>
+                              </a>
+                           </li>
+                           <li>
+                              Sales
+                              <span>20</span>
+                           </li>
+                        </ul>
+                     </div>
+                           <!-- <div class="quantity-section">
+                              <label>{PURCHASE_QTY_LBL} :</label>
+                              <span class="qty">1</span>
+                           </div> -->
+                           <!-- <div class="quantity-section %ADDON_CLASS%">
+                              <div class="service_price">
+                                 <label>{NO_OF_ADDONS_LBL} :</label>
+                                 <span class="no_of_addOn">0</span>
+                              </div>
+                           </div>
+                           <div class="quantity-section %ADDON_CLASS%">
+                              <div class="service_price">
+                                 <label>{ADDON_PRICE_LBL} :</label>
+                                 {CURRENCY_SYMBOL}<span class="addon_price">0</span>
+                              </div>
+                           </div> -->
+                           <!-- <div class="quantity-section">
+                              <label>{FINAL_PRICE_LBL} :</label>
+                              {CURRENCY_SYMBOL}<span class="service_amount">%SERVICE_PRICE_J%</span>
+                           </div> -->
+                           <!-- <div class="alert alert-danger %DELETED_CSS%">
+                              <span><i class="fa fa-files-o "></i></span>&emsp;This service has been deleted
+                           </div> -->
+                           <!-- <div class="save_service">
+                              <a href="javascript:void(0)" class="saveService %DISABLE_CLASS% %HIDE_CLASS%" data-slug="%SLUG%"><i class="%SAVED_SERVICES_ICON_CLASS%" aria-hidden="true"></i> {SAVE_SERVICES_LBL}</a>
+                           </div>
+                           <div class="Report_PickGeeks">
+                              <a href="javascript:void(0)" data-slug="%SLUG%" class="reportService %DISABLE_CLASS% %HIDE_CLASS%"><i class="%REPORT_CLASS%" aria-hidden="true"></i> {SERVICE_REPORT_LBL}</a>
+                           </div> -->
+                           <!-- <div class="Report_PickGeeks">
+                              <a href="javascript:void(0)" data-slug="%SLUG%" class="favourite_service %DISABLE_CLASS% %HIDE_CLASS%"><i class="%FAV_CLASS%" aria-hidden="true"></i> {ADD_TO_FAV_LBL}</a>
+                           </div> -->
+                           <!-- <ul class="recevied_addons">
+                              <li>
+                                 <label>{NO_OF_FAV_COUNT_LBL} : </label>
+                                 <span>%FAVOURITE_SERVICES%</span>
+                              </li>
+                              <li>
+                                 <label>{SAVED_SERVICE_LBL} : </label>
+                                 <span>%SAVED_SERVICES%</span>
+                              </li>
+                              <li>
+                                 <label>{NO_TIMES_SOLD_LBL} : </label>
+                                 <span>%SOLD_SERVICES%</span>
+                              </li>
+                           </ul> -->
+                           <div class="serive_PickGeeks">
+                              <div class="media">
+                                 <div class="media-left">
+                                    <div class="service_free_img">
+                                       <img src="%FREELANCER_IMG%" title="%FREELANCER_NAME%" />
+                                    </div>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5>
+                                       %FREELANCER_NAME%
+                                    </h5>
+                                    <ul>
+                                       <li>
+                                          (%LEVEL%)
+                                       </li>
+                                       <li>
+                                          <div class="star-ratings-sprite">
+                                             <span style="width:%RATING%%" class="star-ratings-sprite-rating">
+                                             </span>
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="description">
+                                 <p>
+                                    %PROFESSIONAL_VIEW%
+                                 </p>
+                              </div>
+                              <ul class="location-msg">
+                                 <li>
+                                    <i class="fa fa-map-marker" aria-hidden="true">
+                                    </i>
+                                    %LOCATION%
+                                 </li>
+                                 <li>
+                                    <span class="msg %MSG_RIGHTS%"><a href="javascript:void(0);" class="message_send btn btn-default"> Contact<!-- {SEND_MESSAGE_LBL} --></a> </span>
+                                 </li>
+                              </ul>
+                           </div>
+                           <ul class="list-inline social-icons">
+                              <li>{SHARE_LINK_LBL}</li>
+                              <li>
+                                 <!-- <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> -->
+                                 <a href="javascript:void(0);" class="wbshare-icon facebook" onclick="window.open('http://www.facebook.com/dialog/feed?display=popup&amp;app_id={FB_APP_ID}&amp;link=%LINK%&amp;picture=%SERVICE_IMG%&amp;name=%SERVICE_TITLE%&amp;caption=%SERVICE_TITLE% ')" title="Share Via Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                              </li>
+                              <li>
+                                 <!-- <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> -->
+                                 <a href="https://plus.google.com/share?url=%LINK%" class="google" onclick="javascript:window.open(this.href, '%LINK%', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Share Via Google"><i class="fa fa-google-plus"></i></a>
+                              </li>
+                           </ul>
+                           <input type="hidden" name="serviceId" id="serviceId" value="%SLUG%">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>
+</section>
+<div class="modal fade" id="report_service" role="dialog" tabindex="-1">
+   <div class="modal-dialog">
+      <!-- Modal content-->
+      <form name="reportFrm" id="reportFrm" method="post">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">
+                  &times;
+               </button>
+               <div class="media">
+                  <div class="pull-left">
+                     <div class="invite_img">
+                        <img src="%FREELANCER_IMG%" title="%FREELANCER_NAME%"/>
+                     </div>
+                  </div>
+                  <div class="media-body">
+                     <h4>
+                        %FREELANCER_NAME%
+                     </h4>
+                     <p>
+                        %FREELANCER_PROFESSIONAL_TITLE%
+                     </p>
+                     <input type="hidden" name="freelancerId" id="freelancerId" value="%FREELANCER_ID%">
+                  </div>
+               </div>
+            </div>
+            <div class="modal-body">
+               <div class="form-group">
+                  <label>
+                     {REASON_LBL}
+                  </label>
+                  <input type="hidden" name="slug" id="slug" value="%SLUG%">
+                  <textarea class="form-control" name="report_reason" id="report_reason" pattern="^[a-zA-Z][\sa-zA-Z]*"></textarea>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <!-- <div class="theme-button-default" data-dismiss="modal">
+                  <a href="#">Close</a>
+               </div> -->
+               <div class="theme-button">
+                  <input type="hidden" name="action" id="action" value="report_service">
+                  <button name="reportService" id="reportService" class="btn btn-system">{SUBMIT_LBL}</button>
+               </div>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>
+<div class="modal fade" id="send_message" role="dialog" tabindex="-1">
+   <div class="modal-dialog">
+      <form name="msgFrm" id="msgFrm" method="post">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">
+                  &times;
+               </button>
+               <h4>{SEND_MSG_LBL}</h4>
+            </div>
+            <div class="modal-body">
+               <div class="form-group">
+                  <label>{ENTER_MSG_LBL}</label>
+                  <textarea name="msg" id="msg" class="form-control" rows=5></textarea>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <!-- <div class="theme-button-default" data-dismiss="modal">
+                     <a href="#">Close</a>
+                  </div> -->
+                  <div class="theme-button">
+                     <input type="hidden" name="action" id="action" value="send_msg">
+                     <input type="hidden" name="freelancerId" id="freelancerId" value="%FREELANCER_ID%">
+                     <button name="sendMsg" id="sendMsg" class="btn btn-system">{SEND_LBL}</button>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+   <script src="{SITE_JS}jssor.slider-23.1.1.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+      var url = "{SITE_URL}ajaxServiceDetail";
+      jssor_1_slider_init = function() {
+
+         var jssor_1_options = {
+          $AutoPlay: 1,
+          $ArrowNavigatorOptions: {
+           $Class: $JssorArrowNavigator$
+        },
+        $ThumbnailNavigatorOptions: {
+           $Class: $JssorThumbnailNavigator$,
+           $Cols: 9,
+           $SpacingX: 3,
+           $SpacingY: 3,
+           $Align: 260
+        }
+     };
+
+     var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+     /*responsive code begin*/
+     /*remove responsive code if you don't want the slider scales while window resizing*/
+     function ScaleSlider() {
+        if($(window).outerWidth()>991){
+         var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth - 30;
+      }
+      else if ($(window).outerWidth()<991 && $(window).outerWidth()>767){
+
+         var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth + 50;
+      }
+      else{
+         var refSize = $(window).outerWidth()-30;
+      }
+
+      if (refSize) {
+       refSize = Math.min(refSize, 6000);
+       jssor_1_slider.$ScaleWidth(refSize);
+    }
+    else {
+       window.setTimeout(ScaleSlider, 30);
+    }
+ }
+ ScaleSlider();
+ $Jssor$.$AddEvent(window, "load", ScaleSlider);
+ $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+ $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+ /*responsive code end*/
+};
+
+$(document).on("click",".saveService",function(){
+ var slug = $(this).attr("data-slug"),$this = $(this);
+ addOverlay();
+ $.post(url,{"action":"saveService","slug":slug},function(data){
+   removeOverlay();
+   if(data.type == 'error')
+   {
+      window.location.href = "{SITE_URL}SignIn";
+      toastr[data.type](data.msg);
+   }
+   else
+   {
+      $this.find("i").removeClass("fa fa-heart-o").addClass("fa fa-heart");
+      toastr[data.type](data.msg);
+   }
+},'json');
+});
+
+$(document).on("click",".reportService",function(){
+   $("#report_service").modal("show");
+});
+
+$(document).on("click","#reportService",function()
+{
+   $("#reportFrm").validate({
+      ignore: [],
+      errorClass: 'help-block',
+      errorElement: 'label',
+      normalizer: function(value) {
+        return $.trim(value);
+     },
+     highlight: function (element)
+     {
+        $(element).closest('.form-group').addClass('has-error');
+     },
+     unhighlight: function (element)
+     {
+        $(element).closest('.form-group').removeClass('has-error');
+     },
+     rules:
+     {
+      report_reason:{
+         required:true,
+         normalizer: function(value) {
+            value = value.replace("something", "new thing");
+            return $.trim(value);
+         }
+      },
+   },
+
+   messages:
+   {
+      report_reason:{required:"Please enter Report Reason"}
+   },
+});
+
+   if($("#reportFrm").valid())
+   {
+     addOverlay();
+     $("#reportFrm").submit();
+  }
+});
+
+
+
+/*favourite*/
+$(document).on("click",".favourite_service",function(){
+   var slug = $(this).attr("data-slug");
+   var $this = $(this);
+   addOverlay();
+   $.post(url,{"action":"favService","slug":slug},function(data){
+      removeOverlay();
+      if(data.type == 'error')
+      {
+         window.location.href = "{SITE_URL}SignIn";
+         toastr[data.type](data.msg);
+      }
+      else
+      {
+         $this.find("i").removeClass("fa fa-heart-o").addClass("fa fa-heart");
+         toastr[data.type](data.msg);
+      }
+   },'json');
+});
+
+$(document).on("click","#submitData",function(e){
+   e.preventDefault();
+
+   swal({
+      title: "{CONFIRMATION_LBL}",
+      text: "{SAVE_CONFIRM_MSG_LBL}",
+      showCancelButton: true,
+      closeOnConfirm: false
+   },
+   function (inputValue) {
+      if (inputValue)
+      {
+         $("#serviceFrm").submit();
+      }
+   });
+});
+
+$(document).on("change",".addOnSelect",function()
+{
+   if($(this).is(":checked"))
+   {
+      var price = $(".service_amount").text();
+      var addOnPrice = Number($(this).attr("data-id"));
+      var final = Number(price) + Number(addOnPrice);
+      $(".service_amount").text(final);
+      var addON = Number($(".no_of_addOn").text());
+      $(".no_of_addOn").text(addON+1);
+      var priceAddon = Number($(".addon_price").text());
+      $(".addon_price").text((addOnPrice+priceAddon));
+   }
+   else
+   {
+      var price = $(".service_amount").text();
+      var addOnPrice = Number($(this).attr("data-id"));
+      var final = Number(price) - Number(addOnPrice);
+      $(".service_amount").text(final);
+      var addON = Number($(".no_of_addOn").text());
+      $(".no_of_addOn").text(addON- 1);
+      var priceAddon = Number($(".addon_price").text());
+      $(".addon_price").text((addOnPrice-priceAddon));
+   }
+});
+
+$(document).on("change","#quantity",function(){
+   var qty = Number($(this).val());
+   var price = Number($(".service_orignal_price").text());
+   var final_price = price*qty;
+   var addOnPrice = Number($(".addon_price").text());
+   $(".service_amount").text(final_price+addOnPrice);
+   $(".qty").text(qty);
+});
+$(document).on("click",".message_send",function(){
+   $("#send_message").modal("show");
+});
+
+
+jQuery.validator.addMethod("emailsnotallowed", function(value, element)
+{
+
+
+   var re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+
+   var j = 0;
+   $.each(icontent,function(i,val){
+     if(value.indexOf(val) != -1){
+       j++;
+       return false;
+    }
+ });
+
+   var varr = value.split("");
+
+   for(k = 0;k < varr.length -5;k++){
+      var substr = $.trim(value.substring(k, k+5));
+      if(jQuery.isNumeric(substr)){
+         j++;
+         return false;
+      }
+   }
+
+   return !(re.test(value) || j > 0);
+
+}, "Emall ID, Phone Number or Illegal content entered");
+
+$(document).on("click","#sendMsg",function(){
+   $("#msgFrm").validate({
+      ignore: [],
+      errorClass: 'help-block',
+      errorElement: 'label',
+      normalizer: function(value) {
+        return $.trim(value);
+     },
+     highlight: function (element)
+     {
+        $(element).closest('.form-group').addClass('has-error');
+     },
+     unhighlight: function (element)
+     {
+        $(element).closest('.form-group').removeClass('has-error');
+     },
+     rules:
+     {
+      msg:{
+         required:true,
+         emailsnotallowed : true,
+         normalizer: function(value) {
+            value = value.replace("something", "new thing");
+            return $.trim(value);
+         }
+      },
+   },
+
+   messages:
+   {
+      msg:{required:"Please enter message"}
+   },
+});
+
+   if($("#msgFrm").valid())
+   {
+     addOverlay();
+     $("#reportFrm").submit();
+  }
+});
+
+</script>
+<script type="text/javascript">
+   jssor_1_slider_init();
+</script>
+<script type="text/javascript">
+   $(window).keydown(function(event){
+      if(event.keyCode == 13) {
+         event.preventDefault();
+         return false;
+      }
+   });
+   $(document).ready(function(){
+      $("#quantity").on("keypress",function(){
+         if($("#quantity").val().length>=3){
+            return false;
+         }
+      });
+   });
+
+
+
+</script>

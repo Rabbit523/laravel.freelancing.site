@@ -1,0 +1,46 @@
+<!-- Dashboard Navigation -->
+%SUB_HEADER_CONTENT%
+<!-- Dashboard Navigation End -->
+
+<section class="main-dashboard">
+   <div class="container">
+      <div class="profile">
+         <div class="featurette-job">
+            <div class="sub_featured">
+               <div class="page-title">
+                  <h1 class="main-title">{PACKAGE_LABEL}</h1>
+                  <p class="title-info">Select the pack that you would like to buy</p>
+                  <div class="avail-credit-packege">Available Credits : %TOTAL_CREDIT%</div>
+               </div>
+               <div class="membership_plan">
+                  <div id="monthly" class="">
+                     <div class="row">
+                        %PLAN_DETAIL%
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<script type="text/javascript">
+   var url = "{SITE_URL}ajaxCreditPlan";
+   $(document).ready(function(){
+      $(document).on("click",".subscribe",function(){
+         var id = $(this).attr("data-id");
+         addOverlay();
+         $.post(url,{"action":"subscribePlan","planId":id},function(data){
+            removeOverlay();
+            toastr[data.type](data.msg);
+
+            if(data.url!='')
+            {
+               setTimeout(function(){
+                  window.location.href = data.url;
+               },3000);
+            }
+         },'json');
+      })
+   });
+</script>

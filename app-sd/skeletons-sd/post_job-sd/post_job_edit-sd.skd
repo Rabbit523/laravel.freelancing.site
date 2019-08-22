@@ -1,0 +1,593 @@
+<!-- Page Content -->
+<section>
+    <div class="main-dashboard">
+        <div class="container">
+            <div class="profile">
+                <div class="featurette-job">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="theme-form">
+                               <h2 class="main-heading">
+                                Edit Job
+                            </h2>
+                            <form name="frmJobPost" method="POST" action="" enctype="multipart/form-data" id="frmJobPost">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label>
+                                                {C_JOB_TITLE} :
+                                            </label>
+                                            <input class="form-control" type="text" name="jobTitle" id="jobTitle" value="%JOB_TITLE%" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <label>
+                                            {C_SELECT_CATEGORY_LBL} :
+                                        </label>
+                                        <div class="form-group">
+                                            <select class="form-control" name="jobCategory" id="jobCategory">
+                                                %CATEGORY%
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <label>
+                                            {C_SELECT_SUBCATEGORY_LBL} :
+                                        </label>
+                                        <div class="form-group">
+                                            <select class="form-control" name="jobSubCategory" id="jobSubCategory">
+                                                "%SUB_CATEGORY%"
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label>
+                                                {C_ENTER_BUDGET_LBL} ({CURRENCY_SYMBOL}) :
+                                            </label>
+                                            <input class="form-control" type="text" name="budget" id="budget" value="%BUDGET%" maxlength="6" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label>
+                                                {C_EXP_LVL_LBL} :
+                                            </label>
+                                            <select class="form-control jb-explevel" name="expLevel" id="expLevel">
+                                            <option value="b">Beginner</option>
+                                            <option value="i">Intermediate</option>
+                                            <option value="p">Pro</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label>
+                                           {C_JOB_DESC_LBL} :
+                                       </label>
+                                       <textarea rows="3" name="description" id="description" class="form-control">%JOB_DESC%</textarea>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>
+                                        {C_SKILLS_LIST_LBL} :
+                                    </label>
+                                    <select class="form-control skill_choose_skillList" multiple="multiple" name="skill[]" id="skill">
+                                        %SKILLS%
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group post_job">
+                                    <label>
+                                        {C_BIDDING_DEADLINE_LBL} :
+                                    </label>
+                                    <input type="text" name="biddingDeadline" class="form-control datepicker" id="biddingDeadline" value="%BIDDING_DATE%" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>
+                                        {C_ESTIMATED_JOB_TIME_LBL} :
+                                    </label>
+                                    <select class="form-control" name="estimatedDuration" id="estimatedDuration">
+                                        %EST_OPTIONS%
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>
+                                        {C_SELECT_JOB_TYPE_LBL} :
+                                    </label>
+                                    <select class="form-control" name="jobType" id="jobType">
+                                        <option value="pu" %PU_SELECT%>Public</option>
+                                        <option value="pr" %PR_SELECT%>Private</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row invited_users %SHOWINVITED_USERS%">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label>
+                                            Invited User List
+                                            <span>Add User</span>
+                                        </label>
+                                        <span class="extra-note invited_user">%INVITED_USERS%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>
+                                        {C_ACCEPT_BID_FROM_LBL}
+                                    </label>
+                                    <select class="form-control selectpicker" title="All location" multiple name="bidsFromLocation[]" id="bidsFromLocation" data-live-search="true">
+                                        %COUNTRY%
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>
+                                        {C_GET_TO_KNOW_YOUR_FREELANCER_LBL} -
+                                        <a href="javascript:void(0);" data-toggle="modal" id="askQuestion" data-target="#ask_question" type="button">{C_ASK_QN_LBL}</a>
+                                        <p class="tooltip-content">
+                                            <i class="fa fa-question-circle"></i>
+                                            <span>If you will ask questions to your freelancers, you will get more information about your freelancers</span>
+                                        </p>
+                                    </label>
+                                                <!-- <div class="ask_question">
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-primary" id="askQuestion" data-toggle="modal" id="askQuestion" data-target="#ask_question" type="button">{C_ASK_QN_LBL}</button>
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                            <div class="extra-note sel_question">%SEL_QUESTIONS%</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 %FEATURE_HIDE% hide">
+                                            <label class="featured_yn">
+                                                {WANT_TO_MAKE_JOB_FEATURED_LBL}
+                                            </label>
+                                            <div class="material-switch ">
+                                                <input id="someSwitchOptionPrimary" name="featured" type="checkbox" %FEATURED% />
+                                                <label for="someSwitchOptionPrimary" class="label-primary">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <label class="featured_yn">
+                                                    {HIDE_JOB_FROM_SEARCH_LBL}
+                                                </label>
+                                                <div class="material-switch ">
+                                                    <input id="someSwitchOptionPrimary1" name="hideFrmSearch" type="checkbox" %HIDE_SEARCH%/>
+                                                    <label for="someSwitchOptionPrimary1" class="label-primary">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="post-serviceimg form-group">
+                                                <label>
+                                                    {C_ADD_FILES_LBL}
+                                                </label>
+                                                <div class="file-input-wrapper">
+                                                    <label for="upload-file" class="file-input-button">
+                                                        {C_UPLOAD_FILE_LBL}
+                                                    </label>
+                                                    <input id="upload-file" type="file" name="">
+                                                </div>
+                                            </div>
+                                            <div class="file-names clearfix" id="attchments">%FILES%</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="theme-button">
+                                            <input type="hidden" name="action" id="action" value="saveData">
+                                            <input type="button" name="submitFrmJob" value="Submit" id="addJob" class="btn btn-block btn-system">
+                                            <input type="hidden" name="type" value="edit">
+                                            <input type="hidden" name="jobId" id="jobId" value="%JOB_ID%">
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="frmToken" id="frmToken" value="%RANDOM%">
+                                    <div class="modal fade" id="ask_question" role="dialog">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">
+                                                        &times;
+                                                    </button>
+                                                    <h4 class="modal-title">
+                                                        {C_SUGGESTED_QN_LBL}
+                                                    </h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <ul class="question_lsit checkboxes" >
+                                                        %QUESTION%
+                                                    </ul>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <div class="theme-button-default" data-dismiss="modal">
+                                                        <a href="javascript:void(0)">{FD_CANCEL}</a>
+                                                    </div>
+                                                    <div class="theme-button" data-dismiss="modal">
+                                                        <button type="button" class="btn btn-block btn-system" id="addQue">{C_ADD_THIS_QN_LBL}</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="privateJob" class="modal fade" role="dialog">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">{C_JOB_INV_LBL}</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label class="control-label">{C_SELECT_USERS_LBL} :</label>
+                                                    <select class="form-control" multiple="multiple" name="invitations[]" id="invitations">
+                                                        %USERS%
+                                                    </select>
+                                                    <label id="invitations_error" class="help-block hide" >{C_PLEASE_SELECT_USERS_LBL}</label>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="theme-button-default" data-dismiss="modal">
+                                                    <a href="javascript:void()">{FD_CANCEL}</a>
+                                                </div>
+                                                <div class="theme-button" data-dismiss="modal">
+                                                    <button type="button" class="btn btn-block btn-system" id="invite">{FP_UPDATE}</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="tip-section">
+                            <div class="tip-box">
+                                <div class="box-corner"></div>
+                                <h3>{FPS_USEFUL_TIPS}</h3>
+                                <ol>
+                                    <li>
+                                        {WRITE_AN_INFORMATIVE_TITLE_OF_THE_JOB}
+                                    </li>
+                                    <li>
+                                        {UPLOAD_MORE_INFORMATION_REGARDING}
+                                    </li>
+                                    <li>
+                                        {COMPARE_THE_EXPERIENCE_LEVEL}
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- /.container -->
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var url = "{SITE_URL}ajaxPostJob";
+        var mydate = new Date();
+        mydate.setDate(mydate.getDate() + 1);
+        $('.datepicker').datetimepicker({
+            format: 'DD-MM-YYYY',
+            minDate: mydate
+        });
+
+        $(".jb-explevel option[value='%SEL_VAL_LEVEL%']").attr("selected", "selected");
+        /* Delete file attachments */
+        $(document).on("click",".delAttachment", function(e){
+            var id = $(this).attr("data_id");
+            e.preventDefault();
+            if (confirm("{FPS_ARE_YOU_SURE_YOU_WANT_TO_DELETE_THIS_ATTACHMENT}")) {
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    dataType: "json",
+                    data:{'action':'file_delete','id':id},
+                    beforeSend: function () {
+                        addOverlay();
+                    },
+                    success: function (response) {
+                        if(response['status'] == 'true'){
+                            $('.attchFile_'+id).remove();
+                            toastr['success']('{FPS_ATTACHMENT_DELETED_SUCCESSFULLY}');
+                        } else {
+                            toastr['error']('{THERE_IS_AN_ISSUE_DELETING_THIS_ATTACHMENT}');
+                        }
+                    },
+                    complete: function (xhr) {
+                        removeOverlay();
+                        return false;
+                    }
+                });
+            }
+        });
+        /* End code */
+
+        $(document).on("click","#invite",function(e){
+            var userList = $('#invitations').val();
+            if(userList == null){
+                $('#invitations_error').removeClass('hide');
+                $('#invitations').parent().addClass('has-error');
+            } else {
+                $("#privateJob").modal("hide");
+            }
+        });
+        $(document).on("click","#invite",function(e){
+            var userList = $('#invitations').val();
+            if(userList == null){
+                $('#invitations_error').removeClass('hide');
+                $('#invitations').parent().addClass('has-error');
+            } else {
+                $.post("<?php echo SITE_MOD.$this->module; ?>/ajax.<?php echo $this->module; ?>.php",
+                    {"action":"sel_invitations","user_id":userList},
+                    function(data){
+                        console.log(data.result.ndata.length);
+                        if(data.result.ndata.length>0){
+                            $('.wrong_email_error').html("{FEW_OF_THE_EMAILS_ARE_NOT_AVAILABLE_AT}");
+                        }
+                        else{
+                            $('.wrong_email_error').html("");
+                            $('.invited_user').html(data.result.pdata);
+                            $("#privateJob").modal("hide");
+                        }
+                    },"json");
+            }
+        });
+
+
+        $(document).on("change","#invitations",function(e){
+            var userList = $('#invitations').val();
+            if(userList != null){
+                $('#invitations_error').addClass('hide');
+                $('#invitations').parent().removeClass('has-error');
+            }
+        });
+
+        /* File upload using ajax */
+        $('#upload-file').change(function(event) {
+            var file_data = $(this).prop('files')[0];
+            var fileTagId = $(this).attr('id');
+            var ImageId = fileTagId.split(',');
+            var img = ImageId[1];
+
+            var imagPath = $(this).val();
+            var files = event.target.files;
+            var fileName = files[0].name;
+            var lastdotval = imagPath.lastIndexOf(".");
+            var res = imagPath.substr(lastdotval + 1, 4);
+
+            if (this.files[0].size > 5242880) {
+                toastr['info']("{IMAGE_SIZE_MUST_BE_LESS_THEN}");
+                return false;
+            }
+            if (res != 'png' && res != 'PNG' && res != 'JPG' && res != 'jpg' && res != 'JPEG' && res != 'jpeg' && res != 'csv' && res != 'doc' && res != 'docx' && res != 'pdf' && res != 'PDF') {
+                toastr["error"]("{PLEASE_SELECT_A_VALID_FILE}");
+                return false;
+
+            } else {
+                token = $('#frmToken').val();
+                var img_form_data = new FormData();
+                img_form_data.append("file", file_data);
+                img_form_data.append("action", "move_image");
+                img_form_data.append("token",token);
+                img_form_data.append("extention",res);
+
+                $.ajax({
+                    url: url,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: img_form_data,
+                    type: 'post',
+                    dataType: 'json',
+                    beforeSend: function () {
+                        addOverlay();
+                    },
+                    success:function(data)
+                    {
+                        $('#attchments').append(data);
+                    },
+                    complete: function (xhr) {
+                        removeOverlay();
+                    }
+
+                });
+
+            }
+        });
+        /* End code */
+
+        $(document).on("change","#jobType",function() {
+            var jobType = $('#jobType').val();
+            if(jobType == 'pr'){
+                $('#privateJob').modal('show');
+            }
+        });
+
+
+        $(document).on("click",".user_remove",function() {
+            var dataId = $(this).attr('data_id');
+            arr = $('#invitations').val();
+            for(i=0; i < arr.length; i++) {
+                if(arr[i] == dataId) {
+                    arr.splice(i,1);
+                }
+            }
+            if(arr.length == 0){
+                $('#invitations').val("").trigger("change");
+            } else {
+                $('#invitations').val(arr).trigger("change");
+            }
+
+        });
+
+        $(document).on("click","#addJob",function(e){
+            var questions = $('.sel_question').text();
+
+
+            $("#frmJobPost").validate({
+                ignore: [],
+                errorClass: 'help-block',
+                errorElement: 'label',
+                highlight: function (element)
+                {
+                    $(element).closest('.form-group').addClass('has-error');
+                },
+                unhighlight: function (element)
+                {
+                    $(element).closest('.form-group').removeClass('has-error');
+                },
+                rules:
+                {
+                    jobTitle:{required:true,startingSpaceNotAllow:true},
+                    jobCategory:{required:true},
+                    jobSubCategory : {required:true},
+                    budget:{required:true,digits:true,zeroNotAllowed:true},
+                    description:{required:true},
+                    skill : { required:true},
+                    biddingDeadline : { required: true}
+                },
+                messages:
+                {
+                    jobTitle:{required:"{PLEASE_ENTER_JOB_TITLE}",startingSpaceNotAllow:"{SPACE_IS_NOT_ALLOWED}"},
+                    jobCategory:{required:"{FPS_PLEASE_SELECT_CATEGORY}"},
+                    jobSubCategory:{ required: "{PLEASE_SELECT_SUB_CATEGORY}"},
+                    budget:{required:"{PLEASE_ENTER_BUDGET}",digits:"{FPS_PLEASE_ENTER_NUMBER_ONLY}"},
+                    description:{required:"{FP_PLEASE_ENTER_DESCRIPTION}"},
+                    skill : {required:"{PLEASE_SELECT_SKILLS}"},
+                    biddingDeadline: { required:"{PLEASE_SELECT_BIDDING_DEADLINE}"}
+                }
+            });
+
+            if($("#frmJobPost").valid())
+            {
+                addOverlay();
+                $("#frmJobPost").submit();
+            }
+        });
+
+        jQuery.validator.addMethod("startingSpaceNotAllow", function(value, element)
+        {
+            return this.optional(element) || /^\S.*$/.test(value);
+        }, "{SPACE_IS_NOT_ALLOWED}");
+
+        jQuery.validator.addMethod("zeroNotAllowed", function(value, element)
+        {
+            if(value!=0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }, "{BUDGET_SHOULD_BE_MORE_THAN_ZERO}");
+
+        $(document).on("click",".que_remove",function() {
+
+            var dataId = $(this).attr('data_id');
+            $('#que_'+dataId).attr('checked',false);
+
+            // $.post("<?php echo SITE_MOD.$this->module; ?>/ajax.<?php echo $this->module; ?>.php",
+            //     {"action":"que_del","id":dataId},
+            //         function(data){
+            //             location.reload();
+            //         }
+            // );
+        });
+
+        /* Select Job Sub Category */
+        $(document).on("change","#jobCategory",function(){
+            var catId = $(this).val();
+            addOverlay();
+            $.post("<?php echo SITE_MOD.$this->module; ?>/ajax.<?php echo $this->module; ?>.php",
+                {"action":"load_sub","cat_id":catId,'job_id' : %JOB_ID%},
+                function(data){
+                    $("#jobSubCategory").html(data);
+                    removeOverlay();
+                });
+            $.post("<?php echo SITE_MOD.$this->module; ?>/ajax.<?php echo $this->module; ?>.php",
+                {"action":"load_skills","cat_id":catId,'job_id' : %JOB_ID%},
+                function(data){
+                    //$("#jobSubCategory").html(data);
+                    $('.skill_choose_skillList').html(data);
+                    removeOverlay();
+                });
+        });
+        /* End code */
+        $(document).ready(function(){
+            $("#jobCategory").trigger("change");
+        });
+        /* Adding questions */
+        $(document).on("click","#addQue",function(){
+            var selected = [];
+            $('.checkboxes input:checked').each(function() {
+                selected.push($(this).attr('data_id'));
+            });
+            jobId = $('#jobId').val();
+            selected = selected.toString();
+
+            if(selected!=''){
+                addOverlay();
+                $.post("<?php echo SITE_MOD.$this->module; ?>/ajax.<?php echo $this->module; ?>.php",
+                    {"action":"sel_question_edit","que_id":selected,"job_id":jobId},
+                    function(data){
+                        $('.sel_question').html(data.result);
+                        removeOverlay();
+                    },"JSON");
+            } else if(selected == ''){
+                $('.sel_question').html('');
+            }
+        });
+        /* End code */
+
+
+        $('#bidsFromLocation').selectpicker();
+        $('#skill').select2();
+        $('#invitations').select2();
+
+        $(document).on('focus','#bidsFromLocation',function(){
+          var places = document.getElementById('location');
+          var option = {};
+          autocomplete= new google.maps.places.Autocomplete(places,option);
+      });
+        $(document).on('keypress','#budget',function(){
+          var b_length = $("#budget").val().length;
+          if(b_length>5){
+            return false;
+        }
+        return true;
+    });
+    });
+</script>

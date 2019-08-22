@@ -1,0 +1,13 @@
+<div class="panel theme-box no-bg no-padding">
+    <div class="panel-heading">
+        <h4 class="panel-title">{FD_SERVICES}</h4>
+        <div class="panel-tools pull-right">
+            <a href="{SITE_URL}post-services">{FP_ADD_MORE} <i class="fa fa-plus"></i></a>
+        </div>
+    </div>
+    <div class="panel-body">
+      <div class="fl-services ">
+        %MY_SERVICES%
+      </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="item">
+  <div class="service-box">
+    <div class="service-featured"><span><i class="fa fa-star"></i></span></div>
+  <div class="service-img">
+      <a href="%SERVICE_URL%">
+          <img src="%SERVICE_IMG%">
+      </a>
+      <div class="save-service">
+          <a href="javascript:void(0)" data-slug="%SLUG%" class="favourite_service">
+              <span>
+                 <i class="%FAV_CLASS%" aria-hidden="true"></i>
+              </span>
+          </a>
+      </div>
+    </div>
+    <div class="service-desc">
+      <h4 class="service-title"><a href="%SERVICE_URL%">%SERVICE_NAME%</a></h4>
+      <div class="services-cat">%CATEGORY_NAME%</div>
+      <div class="price-sales-wrap">
+         <div class="ps-wrap price-wrap"><div class="amount-wrap">%SERVICE_PRICE%{CURRENCY_SYMBOL}</div></div>
+         <div class="ps-wrap sales-wrap">{SW_TIMES_SOLD_LBL} <span>%SERVICE_ORDER%</span></div>
+      </div>
+      <div class="freelancer-details">
+        <div class="media">
+            <div class="media-left media-top">
+               <div class="freelancer-img">
+                  <a href="%FREELANCER_URL%">
+                      <img src="%FREELANCER_IMG%">
+                  </a>
+               </div>
+            </div>
+            <div class="media-body media-top">
+               <h5><a href="%FREELANCER_URL%">%FREELANCER_NAME%</a></h5>
+               <div class="user-location">%LOCATION%</div>
+               <p class="rating"><i class="fa fa-star"></i> %RATING%</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
